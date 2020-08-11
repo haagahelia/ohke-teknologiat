@@ -1,4 +1,4 @@
-# Ohjelmistokehityksen teknologioita, kevät 2020
+# Ohjelmistokehityksen teknologioita, syksy 2020
 
 Tervetuloa kurssille!
 
@@ -13,8 +13,8 @@ Opettajina kurssilla toimivat Ohto Rainio ja Teemu Havulinna (etunimi.sukunimi@h
 
 ## Opintojakson päivämäärät
 
-<table class="tableizer-table">
-<thead><tr class="tableizer-firstrow"><th>Päivämäärä</th><th>Aihe</th></tr></thead><tbody>
+<table>
+<thead><tr><th>Päivämäärä</th><th>Aihe</th></tr></thead><tbody>
  <tr><td>pe 28.8.</td><td>TBD</td></tr>
  <tr><td>pe 4.9.</td><td>TBD</td></tr>
  <tr><td>pe 11.9.</td><td>TBD</td></tr>
