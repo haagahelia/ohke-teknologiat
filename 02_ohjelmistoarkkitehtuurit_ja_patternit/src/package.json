@@ -1,0 +1,14 @@
+{
+  "name": "arkkitehtuurit",
+  "version": "1.0.0",
+  "description": "Ohjelmistokehityksen harjoituksia",
+  "main": "Reduxperiaatteet.js",
+  "scripts": {
+    "build": "node Reduxperiaatteet.js"
+  },
+  "author": "Ohto Rainio",
+  "license": "MIT",
+  "dependencies": {
+    "redux": "^4.0.5"
+  }
+}
