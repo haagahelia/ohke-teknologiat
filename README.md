@@ -46,7 +46,9 @@ Opettajina kurssilla toimivat Ohto Rainio ja Teemu Havulinna (etunimi.sukunimi@h
 
 1. [ES6 / JavaScript, node, mongo](05_es6_node_mongo)
 
-1. [Azure & koneoppiminen](06_azure_ja_koneoppiminen)
+1. [Koneoppiminen](06_koneoppiminen)
+
+1. [Azure](07_azure)
 
 ## Viestintäkanavat
 
