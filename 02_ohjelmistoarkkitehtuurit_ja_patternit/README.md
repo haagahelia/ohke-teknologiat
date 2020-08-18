@@ -2,25 +2,25 @@
 * [Ohjelmistoarkkitehtuurit ja patternit](#ohjelmistoarkkitehtuurit-ja-patternit)
 <!--Jaksaako tätä tehdä manuaalisesesti...-->
 
-#Ohjelmistoarkkitehtuurit ja patternit
+# Ohjelmistoarkkitehtuurit ja patternit
 
 Arkkitehtuuriperiaatteet ovat samoja riippumatta minkälainen ohjelmistojärjestelmä on kyseessä, olipa kyseessä konsolisovellus, graafinen käyttöliittymä, peli, kirjanpintojärjestelmä, monisäiejärjestelmä, tietokantasovellus, jne. Nämä periaatteet eivät ole myöskään radikaalisti muuttuneet ohjelmointikielten ja järjestelmien laskentatehojen kehittyessä vuosikymmenien aikana. (Martin R., Clean Architecture).
 
 Pienen ohjelman “hakkeroiminen” kasaan siten että se toimii, ei ole kovin vaikeaa. Ohjelman rakentaminen siten, että sen ylläpito ja kehittäminen on helppoa ja kustannustehokasta, on kokonaan eri asia. Huonosti suunnitellun järjestelmän kehityskustannukset ja uuden koodirivin tuottamisen kustannukset kasvavat jopa eksponentiaalisesti järjestelmän koon kasvaessa.
 
-![Hinta per julkaisu](/img/hintaperjulkaisu.png) (mukaillen Martin R., Clean Architecture) 
+![Hinta per julkaisu](img/hintaperjulkaisu.png) (mukaillen Martin R., Clean Architecture) 
 
-![Tuottavuus julkaisuittain](/img/tuottavuusjulkaisuittain.png) (mukaillen Martin R., Clean Architecture) 
+![Tuottavuus julkaisuittain](img/tuottavuusjulkaisuittain.png) (mukaillen Martin R., Clean Architecture) 
 
 Kehittäjän näkökulmasta tämä on turhauttavaa, koska kaikki haluaisivat olla tuottavia ja tehdä uusia ominaisuuksia niin vauhdikkaasti kuin mahdollista. Robert Martin argumentoi kirjassaan, että järjestelmän helppo muokattavuus (=hyvä arkkitehtuuri) on tärkeämpää kuin järjestelmän kyseisen hetken toiminnallisuus. Yksittäiset uudet toiminnallisuudet ovat kuitenkin aina juuri sillä hetkellä niitä kiireellisimpiä asioita saada lisättyä järjestelmään. Arkkitehtuuri on pitkällä tähtäimellä tärkeämpää, muttei ikinä juuri sillä hetkellä kiireellistä. (Martin R., Clean Architecture).
 
 Hyvin rakennettuun järjestelmään muutosten tekeminen on helppoa, eikä muutoksen tehdäkseen tarvitse muuttaa suurta osaa jo olemassa olevista järjestelmän palasista. (Martin R., Clean Architecture).
 
 Robert Martinin mukaan:
->“Hyvän arkkitehtuurin tavoite on minimoida ihmistyö, joka tarvitaan järjestelmän >kehittämiseen ja ylläpitämiseen.”
+>“Hyvän arkkitehtuurin tavoite on minimoida ihmistyö, joka tarvitaan järjestelmän kehittämiseen ja ylläpitämiseen.”
 
 Vastaavasti hyvä arkkitehti on tiimin edistynein koodari jonka tehtävän Martin kuvaa seuraavasti:
->“Hyvän arkkitehdin tehtävä on ohjata muutakin kehitystiimiä sellaisen >arkkitehtuurisuunnittelun (design) toteuttamiseen, mikä maksimoi tuottavuuden.”
+>“Hyvän arkkitehdin tehtävä on ohjata muutakin kehitystiimiä sellaisen arkkitehtuurisuunnittelun (design) toteuttamiseen, mikä maksimoi tuottavuuden.”
 
 Hyvä arkkitehtuuri:
 1. Tekee järjestelmästä helposti ymmärrettävän
@@ -37,7 +37,7 @@ Hyvässä arkkitehtuurissa järjestelmän komponentit ja toiminnnot on jaoteltu 
 
 **Open-Closed periaatteen** mukaan järjestelmän osien tulisi olla avoimia laajennuksille, mutta suljettuja muutoksille. Single Responsibility periaatteen mukaan toimien komponenteille on ensin löydetty omat tehtävänsä. Sitten Open-Closed periaatteen mukaan komponentteja tulee suojella muutoksilta siten, että “pienemmän abstraktiotason” (ei ihan oikea termi tämä) komponentti on riippuvainen “suuremman abstraktiotason” komponentista, mutta ei päinvastoin. Eli, jos webjärjestelmässä on vaikka Controller-luokka, joka tarjoaa tietokannasta kysyttyä dataa eteenpäin, niin Controller-luokan ei tule riippua tätä dataa esittävistä komponenteista (eli esimerkiksi prosessoida dataa sellaiseen muotoon mitä vaikka PDF-näkymä sille datalle edellyttää). Toisena esimerkkinä talousjärjestelmän liiketoimintasäännöt tulisi olla esitettynä omassa komponentissaan ja tämän komponentin ei tulisi riippua esimerkiksi järjestelmän käyttämästä datan tallennusmuodosta tai varsinkaan dataa käyttävistä komponenteista kuten webcontrollerista. Eli tämä businessääntökomponentti on koko järjestelmän kuningas, josta muut ovat riippuvaisia! Komponentti ei muutu, vaikka tietokantatekniikka alta vaihtuisi, tai vaikka dataa ei enää tarjottaisikaan webjärjestelmästä vaan pelkästään PDF-raportteina. Mutta jos tämä komponentti muuttuu, niin sitten muidenkin pitää muuttua ja kyseessä on ihan aito isompi liiketoiminnallinen muutos. Käytännön tasolla oliojärjestelmissä rajapinnat ovat tämän periaatteen toteuttamisessa oleellinen työkalu, tähän liittyy läheisesti myös Dependency Inversion Principle (DIP). (Martin R., Clean Architecture).
 
-![OCP periaate](/img/ocp-principle.png) 
+![OCP periaate](img/ocp-principle.png) 
 
 Ketterän kehityksen suunnittelun periaatteiden mukaisesti ja myös Martinin mukaan arkkitehtuuripäätökset tulisi tehdä mahdollisimman myöhään ja vasta kun on “pakko”, eli kun on maksimaalisesti validointidataa päätöksen tueksi. Tätä ei kuitenkaan tule sekoittaa siihen, että tehdään huonoja ja hätäisiä arkkitehtuuripäätöksiä, tai ettei olla valmiita tarvittaessa tekemään isojakin arkkitehtuurimuutoksia, kun ymmärrys järjestelmästä ja sen tarpeista lisääntyy. Martin listaa mm. seuraavat asiat esimerkkeinä päätöksistä, joiden tekemistä arkkitehtuurisuunnittelun näkökulmasta voi lykätä:
 * Tietokantaratkaisua ei tarvitse lukita kehityksen alkuvaiheessa. Jos järjestelmän arkkitehtuuri on rakennettu hyvin, niin tietokannan toteutustekniikalla ei ole suurta merkitystä.
@@ -46,7 +46,7 @@ Ketterän kehityksen suunnittelun periaatteiden mukaisesti ja myös Martinin muk
 
 (Martin R., Clean Architecture). 
 
-##Eri ohjelmointiparadigmat
+## Eri ohjelmointiparadigmat
 
 On olemassa [kolme pääohjelmointiparadigmaa](https://fi.wikipedia.org/wiki/Luokka:Ohjelmointiparadigmat) (joiden lisäksi on vielä pienemmän tason paradigmoja). Martinin mukaan nämä kolme paradigmaa ovat 
 * strukturoitu ohjelmointi
@@ -64,13 +64,13 @@ Springin *Inversion of Control-periaate* ja *[Dependency Injection-pattern](http
 Olio-paradigman mukaan ohjelmoiduista järjestelmistä tulee monesti rakenteeltaan kerroksellisia. Kerrosten välillä viestitään rajapintojen avulla, mikä mahdollistaa varsinaisten toteutusteknologioiden vaihtamisen ilman, että rajapinnasta riippuviin kerroksiin tarvitsee tehdä muutoksia. Myös esimerkiksi tietyn kerroksen testaaminen on helpompaa, kun alla oleva kerros voidaan testien ajaksi huijata palauttamaan haluttua syötettä.
 
 Tässä luokkakaaviossa on esitetty esimerkkinä kuvitteellisen web-järjestelmän luokkakaavio seuraten löyhästi UML-mallinnuskieltä. Kaavion perusteella olisi tarkoitus saada lukija nopeasti ymmärtämään, että kyseessä on perinteistä oliomallinnusta, kerrosarkkitehtuuria sekä webjärjestelmien MVC-mallin periaatteita seuraava sovellus.
-![UML luokkakaavio](/img/UML-luokkakaavio.png) 
+![UML luokkakaavio](img/UML-luokkakaavio.png) 
 
 Kolmas pääohjelmointiparadigma, **Funktionaalinen ohjelmointi**, perustuu oleellisesti siihen, että muuttujien arvoja ei muuteta (immutability). Tarvittaessa luodaan uusi muuttuja, johon uusi arvo tallentuu. Arkkitehdin näkökulmasta moni ohjelmoinnin ongelma poistuu, jos muuttujan arvo ei ikinä voi muuttua. Tällöin ei voi syntyä ongelmia siitä, että samaa muuttujaa muokataan kahdesta eri paikasta ja eri säikeistä melkein samaan aikaan (concurrent update problem). Täydellisen muokkaamattomuuden toteuttaminen käytännössä saattaa sovelluksesta riippuen vaatia huomattavasti laskenta- ja tallenuskapasiteettia ja siksi sitä ei käytännössä kannata välttämättä seurata täysin kirjaimellisesti. Arkkitehtuurisuunnittelun näkökulmasta on hyvä käytäntö erottaa muuttumattomat komponentit (immutable) sellaisista, joille sallitaan muuttuminen (mutable). Sitten muutoksille sallitut kohdat pyritään toteuttamaan siten, että niissä huomioidaan esimerkiksi transaktiot.
-**[Event Sourcing](https://martinfowler.com/eaaDev/EventSourcing.html)** on hyödyllinen funktionaaliseen paradigmaan liittyvä ohjelmointimalli (pattern). Event Sourcingin ajatuksena on tallentaa kaikki tilan muutokset, varsinaisen uuden tilan sijaan. Esimerkiksi pankkisovelluksessa siis tallennettaisiin pankkitilin alkuperäinen saldo ja sitten kaikki saldoon kohdistuneet operaatiot (otto/talletus ja summa). Tällöin kunkin hetken saldo (tila) pystyttäisiin laskemaan alkuperäisestä saldosta ajamalla kaikki tallennetut operaatiot. Näin toteutettu järjestelmä vaatisi huomattavan paljon muisti- ja laskentatehoa. Kenties voitaisiin kuitenkin tallentaa vaikka aina jokaisen keskiyön saldo ja ainoastaan seuraavan päivän operaatiot, jolloin potentiaalisten samanaikaisuusvirheiden (concurrency errors) määrä vähenisi käytännössä kokonaan, mutta järjestelmä pysyisi kuitenkin myös laskenta- ja tallennuskapasiteetin osalta järkevänä. Tunnetuista ohjelmointikielistä Clojure (https://clojure.org/about/rationale) on suunniteltu ohjelmoitavaksi funktionaalisen paradigman mukaan.
+**[Event Sourcing](https://martinfowler.com/eaaDev/EventSourcing.html)** on hyödyllinen funktionaaliseen paradigmaan liittyvä ohjelmointimalli (pattern). Event Sourcingin ajatuksena on tallentaa kaikki tilan muutokset, varsinaisen uuden tilan sijaan. Esimerkiksi pankkisovelluksessa siis tallennettaisiin pankkitilin alkuperäinen saldo ja sitten kaikki saldoon kohdistuneet operaatiot (otto/talletus ja summa). Tällöin kunkin hetken saldo (tila) pystyttäisiin laskemaan alkuperäisestä saldosta ajamalla kaikki tallennetut operaatiot. Näin toteutettu järjestelmä vaatisi huomattavan paljon muisti- ja laskentatehoa. Kenties voitaisiin kuitenkin tallentaa vaikka aina jokaisen keskiyön saldo ja ainoastaan seuraavan päivän operaatiot, jolloin potentiaalisten samanaikaisuusvirheiden (concurrency errors) määrä vähenisi käytännössä kokonaan, mutta järjestelmä pysyisi kuitenkin myös laskenta- ja tallennuskapasiteetin osalta järkevänä. Tunnetuista ohjelmointikielistä [Clojure](https://clojure.org/about/rationale) on suunniteltu ohjelmoitavaksi funktionaalisen paradigman mukaan.
  (Martin R., Clean Architecture). 
 
-![Event Sourcing](/img/eventsourcing.png) 
+![Event Sourcing](img/eventsourcing.png) 
 
 Kolmen pääparadigman lisäksi kiinnostavaa voi olla nostaa esiin muutamia esimerkkejä käytännön ohjelmointitavoista tai paradigmoista. JavaScript-kieli (ja mm. sitä käyttävä Node.js) [eivät mahdollista säikeiden (Thread) kirjoittamista ohjelmiin](https://www.sohamkamani.com/blog/2016/03/14/wrapping-your-head-around-async-programming/). Sen sijaan JavaScriptissä pitkään kestävät operaatiot (esimerkiksi levylle kirjoittaminen, tietokantahaut, jne.) toteutetaan asynkronisilla takaisinkutsuilla (asynchronous callback). Takaisinkutsumalli on saattanut aiheuttaa ohjelmakoodiin vaikeasti seurattavia toimintoketjuja ja siksi JavaScript-maailmassa yleisempää onkin nykyisin [Promise:jen](https://javascript.info/promise-basics) tai [async/await -syntaksin](https://javascript.info/async-await) käyttäminen. 
 
@@ -78,38 +78,38 @@ Yleensä webjärjestelmässä käyttäjä antaa jonkin uuden syötteen tai tekee
 
 [Reaktiivinen ohjelmointi](https://fi.wikipedia.org/wiki/Reaktiivinen_ohjelmointi) on myös monella tapaa kiinnostava ohjelmointiparadigma esimerkiksi webjärjestelmissä, joissa reagoidaan käyttäjän syötteisiin. Reaktiivisessa ohjelmoinnissa [ohjelma koostetaan virroista](https://stackoverflow.com/questions/1028250/what-is-functional-reactive-programming/1030631#1030631). JavaScriptillä reaktiivista ohjelmointia voi tehdä esimerkiksi [RxJS](https://www.learnrxjs.io/) kirjastolla. Myös esimerkiksi Suomessa [Reaktorilla](https://www.reaktor.com/) työskentelevän [Juha Paanasen](https://github.com/raimohanska) kehittämä [Bacon.js](https://baconjs.github.io/) on tätä paradigmaa toteuttava kirjasto. Virtojen käsitettä on pyritty visualisoimaan [RxJS marbles-sivustolla](https://rxmarbles.com/).
 
-##Esimerkkejä arkkitehtuurikuvauksista
+## Esimerkkejä arkkitehtuurikuvauksista
 
 Hyvässä arkkitehtuurikuvauksessa ja -kaaviossa on esitetty järjestelmän toimintaa ja rakentamista kuvaavat ydinasiat. Arkkitehtuurikuvioissa liikutaan eri abstraktiotasoilla ja voidaan tarkastella järjestelmän toimintaa eri näkökulmista. Niiden perusteella tulisi kuitenkin syntyä kuva niistä periaatteista ja säännöistä joilla kyseinen järjestelmän on rakennettu.
 
 Alla olevassa kuviossa on esitetty kuviteellisen web-järjestelmän arkkitehtuurikaavio. Se on arkkitehdin kuvaus mielestään oleellisista komponenteista ja toiminnoista järjestelmässä. Sen perusteella on tarkoitus saada käsitys järjestelmän ydinkomponenteista ja niiden suhteista. Tämä kaavio ei kuitenkaan ota kantaa esimerkiksi palvelun frontendissä käytettyyn luokkarakenteesen tai ohjelmointiperiaatteisiin (pattern).
-![React app architecture](/img/react-app-architecture.png) 
+![React app architecture](img/react-app-architecture.png) 
 
 Tässä kaaviossa on esitetty vielä yhtenä esimerkkinä komponenttitason järjestelmäarkkitehtuuri muistisairaiden vanhusten seurantaan tarkoitetusta järjestelmästä, jossa bluetooth-rannekkeet lähettävät sijaintitietoa, jota sitten olisi tarkoitus näyttää hoitajan mobiili- ja webclienteissä.
-![IoT architecture](/img/iot-architecture.png) 
+![IoT architecture](img/iot-architecture.png) 
 
 Arkkitehtuuria, järjestelmää ja sen toimintaa voi pyrkiä kuvaamaan myös muunlaisilla kaavioilla kuten esimerkiksi yllä jo olio-ohjelmointiin liittyen käytetyllä luokkakaaviolla sekä sekvenssikaaviolla.
 
-##Käytännön arkkitehtuuritoteutuksia
+## Käytännön arkkitehtuuritoteutuksia
 
 Viime vuosina [isojen yritysten piirissä suosituksi](https://divante.com/blog/10-companies-that-implemented-the-microservice-architecture-and-paved-the-way-for-others/) koko organisaation ja järjestelmän rakentamista ohjaavaksi arkkitehtuurimalliksi on noussut niin kutsuttu Mikropalveluarkkitehtuuri (Micro service architecture). Amazon oli ensimmäisiä tätä mallia soveltaneita yrityksiä. 
 Mikropalveluarkkitehtuurissa isot järjestelmät rakennetaan lukuisista pienistä itsenäisistä palveluista, jotka tarjoavat ulkoisen rajapinnan muiden palveluiden käyttöön. Jokainen mikropalvelu omistaa oman datansa. Esimerkiksi siis käyttäjän tunnistautuminen on oma palvelunsa, ostokori voi olla oma palvelunsa, tuotteiden etsiminen on omansa, jne. Tässä on nähtävissä analogia olio-paradigman mukaiseen ohjelmointiin koko järjestelmän mittakaavassa
 Mikropalveluarkkitehtuuri toteuttaa selkeästi Loose coupling ja High cohesion periaatteita ja se mahdollistaa tiimien sisällä varsin itsenäisen työskentelyn. Mallissa on kuitenkin myös selkeitä haittoja, jotka liittyvät esimerkiksi monen pienen järjestelmän jatkuvaan integrointiin, palveluiden versiointeihin, testaamiseen sekä virheiden paikallistamiseen ja korjaamiseen muiden omistamista palveluista. Mikropalveluiden vastakohtana on perinteisempi monoliittinen arkkitehtuurimalli.
 
-![Mikropalvelu](/img/mikropalvelu.png) 
+![Mikropalvelu](img/mikropalvelu.png) 
 
-##Tietoliikenneprotokollat 
+## Tietoliikenneprotokollat 
 
 Tiedonsiirtoon käytetyt patternit (esim. [publish/subscribe](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern), [request/response](https://en.wikipedia.org/wiki/Request%E2%80%93response)), arkkitehtuurimallit (esim. [REST](https://en.wikipedia.org/wiki/Representational_state_transfer)) sekä protokollapinot (HTTP, TCP/IP, mqtt, ...) ovat myös tärkeitä ohjelmistoarkkitehdin työkaluja. Kun tuntee eri protokollat, osaa valita oman sovelluksen tarpeisiin sopivimman.
 
-##Tehtävät
-###Tehtävä 1:
+## Tehtävät
+### Tehtävä 1:
 
-###Tehtävä 2:
+### Tehtävä 2:
 
-###Seminaaritehtävä 1:
+### Seminaaritehtävä 1:
 
-###Seminaaritehtävä 2:
+### Seminaaritehtävä 2:
 
-###Lähteet:
+### Lähteet:
 Martin R., Clean Architecture, Pearson Education, 2018.
