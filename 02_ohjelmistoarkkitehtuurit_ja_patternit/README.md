@@ -121,7 +121,8 @@ Tiedonsiirtoon käytetyt patternit (esim. [publish/subscribe](https://en.wikiped
 
 ## Tehtävät
 
-### Tehtävä 1: Monivalintakysymyksiä yllä olevasta lukumateriaalista?
+### Tehtävä 1: 
+Monivalintakysymyksiä yllä olevasta lukumateriaalista?
 
 ### Tehtävä 2:
 [Redux](https://redux.js.org/tutorials/essentials/part-1-overview-concepts) on kirjasto, jota käytetään monesti React-sovellusten yhteydessä. Reduxin tarkoitus olisi selkeyttää sovelluksen tilan hallintaa tilanteissa, joissa tila uhkaa hajautua sekavasti eri komponentteihin. 
