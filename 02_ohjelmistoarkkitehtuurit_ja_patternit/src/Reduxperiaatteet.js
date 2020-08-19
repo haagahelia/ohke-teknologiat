@@ -25,10 +25,12 @@ function removeColor(value){
     };
 }
 
-//Pohja reducerille, ota edellinen tila ja Action ja palauta uusi tila
+/*
+Pohja reducerille, ota edellinen tila ja Action ja palauta uusi tila.
+Tämä reducer-funktio on siis "idealtaan samantapainen" kuin funktionaalisen ohjelmoinnin 
+reduce-funktio, eli Array.prototype.reduce(reducer, ?initialValue)
+*/
 function favoriteColors(state, action){ 
-    //tämä reducer-funktio on siis "idealtaan samantapainen" kuin funktionaalisen ohjelmoinnin 
-    //reduce-funktio, eli Array.prototype.reduce(reducer, ?initialValue)
     if(state == undefined){
         state = []
     }
