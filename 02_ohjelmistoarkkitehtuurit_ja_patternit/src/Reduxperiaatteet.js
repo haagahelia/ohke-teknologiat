@@ -1,7 +1,7 @@
 /*Tässä tehtävässä on tarkoitus rakentaa pieni scripti 
 värien lisäämiseen ja poistamiseen säiliöstä Reduxin periaatteiden mukaisesti. 
 Lopulta scriptin pitäisi siis tulosta "keltainen", "vihreä"
-Muista ajaa ensin src-kansiossa komento "npm init"
+Muista ajaa ensin src-kansiossa komento "npm install"
 Voit ajaa tämän tiedoston komennolla "node Reduxperiaatteet.js" tai "npm run build"
 */
 
@@ -26,7 +26,7 @@ function removeColor(value){
 }
 
 //Pohja reducerille
-function favoriteColors(state, action){
+function favoriteColors(state, action){ //tämä on redusoiva funktio
     if(state == undefined){
         state = []
     }
