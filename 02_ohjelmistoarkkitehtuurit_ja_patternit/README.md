@@ -148,35 +148,29 @@ Monivalintakysymyksiä yllä olevasta lukumateriaalista.
 * Kaikille järjestelmän toimijoille (stakeholder tai actor) tulisi rakentaa oma luokka (class).
 * Järjestelmän komponenteilla tai luokilla tulisi olla vain yksi syy muutokseen.
 * Järjestelmän osien tulisi olla avoimia laajennuksille, mutta suljettuja muutoksille.
-
 1. Mitkä seuraavista asioista ovat arkkitehtuurisuunnittelun näkökulmasta suhteellisen epäoleellisia asioita (valitse yksi tai useampi)?
 * Tietokannan toteutustekniikka
 * Järjestelmän eri sidosryhmien tarpeiden ja tavoitteiden ymmärtäminen
 * Järjestelmän lopullinen jakelukanava (web, mobiili, ….)
-
 1. Mikä seuraavista on olio-ohjelmointiparadigman tärkein anti ohjelmistoarkkitehtuureihin (valitse yksi)?
 Kapselointi (encapsulation)
 * Monimuotoisuus (polymorfismi)
 * Event sourcing
 * Ohjelman pilkkominen osiin (decomposition)
-
 1. Spring-sovelluskehys seuraa ennen kaikkea mitä ohjelmointiparadigmaa (valitse yksi)?
 Funktionaalinen ohjelmointi
 * Olio-ohjelmointi
 * Strukturoitu ohjelmointi
 * Reaktiivinen ohjelmointi
-
 1. Mitkä seuraavista ovat mahdollisia arkkitehtuurikaavion näkökulmia (valitse yksi tai useampi)?
 * Sekvenssikaavio
 * Luokkakaavio
 * Komponenttitason järjestelmäarkkitehtuurikaavio
-
 1. Mitkä seuraavista ovat mikropalveluarkkitehtuurin hyötyjä (valitse yksi tai useampi)?
 * Kehitystiimien itsenäisyys
 * Tiimirajat ylittävä helppo virheiden paikallistaminen
 * Palveluiden versioiminen
 * Koko järjestelmän testaaminen
-
 
 ### Tehtävä 2:
 [Redux](https://redux.js.org/tutorials/essentials/part-1-overview-concepts) on kirjasto, jota käytetään monesti React-sovellusten yhteydessä. Reduxin tarkoitus olisi selkeyttää sovelluksen tilan hallintaa tilanteissa, joissa tila uhkaa hajautua sekavasti eri komponentteihin. 
