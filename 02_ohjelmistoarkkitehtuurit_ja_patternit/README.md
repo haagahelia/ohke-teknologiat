@@ -155,13 +155,13 @@ Monivalintakysymyksiä yllä olevasta lukumateriaalista.
 * Järjestelmän lopullinen jakelukanava (web, mobiili, ….)
 
 5. Mikä seuraavista on olio-ohjelmointiparadigman tärkein anti ohjelmistoarkkitehtuureihin (valitse yksi)?
-Kapselointi (encapsulation)
+* Kapselointi (encapsulation)
 * Monimuotoisuus (polymorfismi)
 * Event sourcing
 * Ohjelman pilkkominen osiin (decomposition)
 
 6. Spring-sovelluskehys seuraa ennen kaikkea mitä ohjelmointiparadigmaa (valitse yksi)?
-Funktionaalinen ohjelmointi
+* Funktionaalinen ohjelmointi
 * Olio-ohjelmointi
 * Strukturoitu ohjelmointi
 * Reaktiivinen ohjelmointi
