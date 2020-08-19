@@ -138,35 +138,40 @@ Monivalintakysymyksiä yllä olevasta lukumateriaalista.
 * Järjestelmä on helposti ylläpidettävä
 * Järjestelmä on helposti deployattava
 
-1. Mitkä seuraavista ovat hyvän arkkitehtuurisuunnittelun periaatteita, joita sovelletaan järjestelmän komponenttien suunnittelussa (valitse yksi tai useampi)?
+2. Mitkä seuraavista ovat hyvän arkkitehtuurisuunnittelun periaatteita, joita sovelletaan järjestelmän komponenttien suunnittelussa (valitse yksi tai useampi)?
 * Loose coupling
 * High integrity
 * Low fidelity
 * High cohesion
 
-1. Open-Closed periaatteen (OCP) mukaisesti (valitse yksi tai useampi):
+3. Open-Closed periaatteen (OCP) mukaisesti (valitse yksi tai useampi):
 * Kaikille järjestelmän toimijoille (stakeholder tai actor) tulisi rakentaa oma luokka (class).
 * Järjestelmän komponenteilla tai luokilla tulisi olla vain yksi syy muutokseen.
 * Järjestelmän osien tulisi olla avoimia laajennuksille, mutta suljettuja muutoksille.
-1. Mitkä seuraavista asioista ovat arkkitehtuurisuunnittelun näkökulmasta suhteellisen epäoleellisia asioita (valitse yksi tai useampi)?
+
+4. Mitkä seuraavista asioista ovat arkkitehtuurisuunnittelun näkökulmasta suhteellisen epäoleellisia asioita (valitse yksi tai useampi)?
 * Tietokannan toteutustekniikka
 * Järjestelmän eri sidosryhmien tarpeiden ja tavoitteiden ymmärtäminen
 * Järjestelmän lopullinen jakelukanava (web, mobiili, ….)
-1. Mikä seuraavista on olio-ohjelmointiparadigman tärkein anti ohjelmistoarkkitehtuureihin (valitse yksi)?
+
+5. Mikä seuraavista on olio-ohjelmointiparadigman tärkein anti ohjelmistoarkkitehtuureihin (valitse yksi)?
 Kapselointi (encapsulation)
 * Monimuotoisuus (polymorfismi)
 * Event sourcing
 * Ohjelman pilkkominen osiin (decomposition)
-1. Spring-sovelluskehys seuraa ennen kaikkea mitä ohjelmointiparadigmaa (valitse yksi)?
+
+6. Spring-sovelluskehys seuraa ennen kaikkea mitä ohjelmointiparadigmaa (valitse yksi)?
 Funktionaalinen ohjelmointi
 * Olio-ohjelmointi
 * Strukturoitu ohjelmointi
 * Reaktiivinen ohjelmointi
-1. Mitkä seuraavista ovat mahdollisia arkkitehtuurikaavion näkökulmia (valitse yksi tai useampi)?
+
+7. Mitkä seuraavista ovat mahdollisia arkkitehtuurikaavion näkökulmia (valitse yksi tai useampi)?
 * Sekvenssikaavio
 * Luokkakaavio
 * Komponenttitason järjestelmäarkkitehtuurikaavio
-1. Mitkä seuraavista ovat mikropalveluarkkitehtuurin hyötyjä (valitse yksi tai useampi)?
+
+8. Mitkä seuraavista ovat mikropalveluarkkitehtuurin hyötyjä (valitse yksi tai useampi)?
 * Kehitystiimien itsenäisyys
 * Tiimirajat ylittävä helppo virheiden paikallistaminen
 * Palveluiden versioiminen
