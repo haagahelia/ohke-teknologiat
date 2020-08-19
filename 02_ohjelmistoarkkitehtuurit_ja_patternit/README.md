@@ -1,6 +1,11 @@
 ## Sisällysluettelo
 * [Ohjelmistoarkkitehtuurit ja patternit](#ohjelmistoarkkitehtuurit-ja-patternit)
-<!--Jaksaako tätä tehdä manuaalisesesti...-->
+* [Eri ohjelmointiparadigmat](#eri-ohjelmointiparadigmat)
+* [Esimerkkejä arkkitehtuurikuvauksista](#esimerkkejä-arkkitehtuurikuvauksista)
+* [Käytännön arkkitehtuuritoteutuksia](#käytännön-arkkitehtuuritoteutuksia)
+* [Tietoliikenneprotokollat](#tietoliikenneprotokollat )
+* [Tehtävät](#tehtävät)
+<!--Jaksaako tätä ylläpitää manuaalisesesti...-->
 
 # Ohjelmistoarkkitehtuurit ja patternit
 
