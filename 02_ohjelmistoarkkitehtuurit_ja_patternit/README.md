@@ -41,7 +41,7 @@ Hyvin rakennetussa järjestelmässä arkkitehti on osannut jakaa järjestelmän 
 
 **Single Responsibility periaatteen (SRP)** mukaan järjestelmäkomponentilla (oikeastaan SRP puhuu vain luokista, mutta Common Reuse Principle koskee samalla tavalla myös komponentteja) tulisi olla vain yksi syy muutokseen. Martin täsmentää tätä vielä lisää ja sitoo muutoksen tarpeen nimenomaan yhteen sidosryhmään (stakeholder) ja vielä tarkemmin yhteen toimijaan (actor). 
 Käytännössä siis, jos järjestelmä hoitaa esimerkiksi palkkatietojen laskemista kolmelle eri toimijalle (talousjohtaja, teknologiajohtaja ja operatiivinen johtaja), niin kaikki heistä tarvitsevat kyseistä tietoa eri tarpeeseen ja eri näkökulmasta. Näin ollen saman “Työntekijä”-luokan ei tulisi hoitaa näiden kolmen eri toimijan tarvitsemia asioita, muuten esimerkiksi talousjohtajan tarvitsemat muutokset saattavat tarpeettomasti vaatia muutoksia myös muiden toiminnallisuuksiin ja näin ollen tehdä järjestelmästä vaikeasti muokattavan. 
-Hyvä ratkaisu tähän tarpeeseen olisi erottaa eri toimijoiden tarvitsemat laskennalliset “businesstoiminnot” omiin palveluihinsa (service), jotka ottavat syötteekseen vain kiinteän työntekijän dataobjektin. SRP-periaatteen mukaan toiminnallisuuksien lisäksi omiin komponentteihinsa erotetaan esimerkiksi jonkin asian laskenta ja sen visuaalinen esittäminen, vaikka ne siis liittyvätkin samaan ominaisuuteen (vrt. [kerrosarkkitehtuurit](https://medium.com/@priyalwalpita/software-architecture-patterns-layered-architecture-a3b89b71a057). (Martin R., Clean Architecture).
+Hyvä ratkaisu tähän tarpeeseen olisi erottaa eri toimijoiden tarvitsemat laskennalliset “businesstoiminnot” omiin palveluihinsa (service), jotka ottavat syötteekseen vain kiinteän työntekijän dataobjektin. SRP-periaatteen mukaan toiminnallisuuksien lisäksi omiin komponentteihinsa erotetaan esimerkiksi jonkin asian laskenta ja sen visuaalinen esittäminen, vaikka ne siis liittyvätkin samaan ominaisuuteen (vrt. [kerrosarkkitehtuurit](https://medium.com/@priyalwalpita/software-architecture-patterns-layered-architecture-a3b89b71a057)). (Martin R., Clean Architecture).
 
 **Open-Closed periaatteen (OCP)** mukaan järjestelmän osien tulisi olla avoimia laajennuksille, mutta suljettuja muutoksille. Single Responsibility periaatteen mukaan toimien komponenteille on ensin löydetty omat tehtävänsä. Sitten Open-Closed periaatteen mukaan komponentteja tulee suojella muutoksilta siten, että “pienemmän abstraktiotason” (ei ihan oikea termi tämä) komponentti on riippuvainen “suuremman abstraktiotason” komponentista, mutta ei päinvastoin. 
 Eli, jos webjärjestelmässä on vaikka Controller-luokka, joka tarjoaa tietokannasta kysyttyä dataa eteenpäin, niin Controller-luokan ei tule riippua tätä dataa esittävistä komponenteista (eli esimerkiksi prosessoida dataa sellaiseen muotoon mitä vaikka PDF-näkymä sille datalle edellyttää). 
@@ -118,7 +118,7 @@ Arkkitehtuuria, järjestelmää ja sen toimintaa voi pyrkiä kuvaamaan myös muu
 ## Käytännön arkkitehtuuritoteutuksia
 
 Viime vuosina [isojen yritysten piirissä suosituksi](https://divante.com/blog/10-companies-that-implemented-the-microservice-architecture-and-paved-the-way-for-others/) koko organisaation ja järjestelmän rakentamista ohjaavaksi arkkitehtuurimalliksi on noussut niin kutsuttu Mikropalveluarkkitehtuuri (Micro service architecture). [Amazon oli ensimmäisiä tätä mallia soveltaneita yrityksiä](https://thenewstack.io/led-amazon-microservices-architecture/). 
-Mikropalveluarkkitehtuurissa isot järjestelmät rakennetaan lukuisista pienistä itsenäisistä palveluista, jotka tarjoavat ulkoisen rajapinnan muiden palveluiden käyttöön. Jokainen mikropalvelu omistaa oman datansa. Esimerkiksi siis käyttäjän tunnistautuminen on oma palvelunsa, ostokori voi olla oma palvelunsa, tuotteiden etsiminen on omansa, jne. Tässä on nähtävissä analogia olio-paradigman mukaiseen ohjelmointiin koko järjestelmän mittakaavassa
+Mikropalveluarkkitehtuurissa isot järjestelmät rakennetaan lukuisista pienistä itsenäisistä palveluista, jotka tarjoavat ulkoisen rajapinnan muiden palveluiden käyttöön. Jokainen mikropalvelu omistaa oman datansa. Esimerkiksi siis käyttäjän tunnistautuminen on oma palvelunsa, ostokori voi olla oma palvelunsa, tuotteiden etsiminen on omansa, jne. Tässä on nähtävissä analogia olio-paradigman mukaiseen ohjelmointiin koko järjestelmän mittakaavassa.
 Mikropalveluarkkitehtuuri toteuttaa selkeästi Loose coupling ja High cohesion periaatteita ja se mahdollistaa tiimien sisällä varsin itsenäisen työskentelyn. Mallissa on kuitenkin myös selkeitä haittoja, jotka liittyvät esimerkiksi monen pienen järjestelmän jatkuvaan integrointiin, palveluiden versiointeihin, testaamiseen sekä virheiden paikallistamiseen ja korjaamiseen muiden omistamista palveluista. Mikropalveluiden vastakohtana on perinteisempi monoliittinen arkkitehtuurimalli.
 
 ![Mikropalvelu](img/mikropalvelu.png) 
@@ -130,7 +130,53 @@ Tiedonsiirtoon käytetyt patternit (esim. [publish/subscribe](https://en.wikiped
 ## Tehtävät
 
 ### Tehtävä 1: 
-Monivalintakysymyksiä yllä olevasta lukumateriaalista?
+Monivalintakysymyksiä yllä olevasta lukumateriaalista.
+
+1. Mitkä seuraavista ovat hyvän arkkitehtuurin tunnusmerkkejä tietyssä ohjelmistojärjestelmässä (valitse yksi tai useampi)?
+* Järjestelmä on helposti ymmärrettävä
+* Järjestelmä on helposti jatkokehitettävä
+* Järjestelmä on helposti ylläpidettävä
+* Järjestelmä on helposti deployattava
+
+1. Mitkä seuraavista ovat hyvän arkkitehtuurisuunnittelun periaatteita, joita sovelletaan järjestelmän komponenttien suunnittelussa (valitse yksi tai useampi)?
+* Loose coupling
+* High integrity
+* Low fidelity
+* High cohesion
+
+1. Open-Closed periaatteen (OCP) mukaisesti (valitse yksi tai useampi):
+* Kaikille järjestelmän toimijoille (stakeholder tai actor) tulisi rakentaa oma luokka (class).
+* Järjestelmän komponenteilla tai luokilla tulisi olla vain yksi syy muutokseen.
+* Järjestelmän osien tulisi olla avoimia laajennuksille, mutta suljettuja muutoksille.
+
+1. Mitkä seuraavista asioista ovat arkkitehtuurisuunnittelun näkökulmasta suhteellisen epäoleellisia asioita (valitse yksi tai useampi)?
+* Tietokannan toteutustekniikka
+* Järjestelmän eri sidosryhmien tarpeiden ja tavoitteiden ymmärtäminen
+* Järjestelmän lopullinen jakelukanava (web, mobiili, ….)
+
+1. Mikä seuraavista on olio-ohjelmointiparadigman tärkein anti ohjelmistoarkkitehtuureihin (valitse yksi)?
+Kapselointi (encapsulation)
+* Monimuotoisuus (polymorfismi)
+* Event sourcing
+* Ohjelman pilkkominen osiin (decomposition)
+
+1. Spring-sovelluskehys seuraa ennen kaikkea mitä ohjelmointiparadigmaa (valitse yksi)?
+Funktionaalinen ohjelmointi
+* Olio-ohjelmointi
+* Strukturoitu ohjelmointi
+* Reaktiivinen ohjelmointi
+
+1. Mitkä seuraavista ovat mahdollisia arkkitehtuurikaavion näkökulmia (valitse yksi tai useampi)?
+* Sekvenssikaavio
+* Luokkakaavio
+* Komponenttitason järjestelmäarkkitehtuurikaavio
+
+1. Mitkä seuraavista ovat mikropalveluarkkitehtuurin hyötyjä (valitse yksi tai useampi)?
+* Kehitystiimien itsenäisyys
+* Tiimirajat ylittävä helppo virheiden paikallistaminen
+* Palveluiden versioiminen
+* Koko järjestelmän testaaminen
+
 
 ### Tehtävä 2:
 [Redux](https://redux.js.org/tutorials/essentials/part-1-overview-concepts) on kirjasto, jota käytetään monesti React-sovellusten yhteydessä. Reduxin tarkoitus olisi selkeyttää sovelluksen tilan hallintaa tilanteissa, joissa tila uhkaa hajautua sekavasti eri komponentteihin. 
