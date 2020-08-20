@@ -3,7 +3,7 @@
 
 Kurssin ensimmäisellä viikolla asennamme kurssilla tarvittavat kehitysympäristöt, tutustumme Linux-käyttöjärjestelmän peruskäyttöön ja perehdymme Python-ohjelmointikielen perusteisiin.
 
-Johdannon käytettäviin työkaluihin löydät kurssin [etusivulta](../#Työkalut).
+Johdannon käytettäviin työkaluihin löydät kurssin [etusivulta](../README.md#Työkalut).
 
 **Tulet tekemään osan ensimmäisen viikon työskentelystä itsenäisesti jo ennen lukujärjestykseen merkittyä oppituntia. Kysy kohtaamistasi ongelmista rohkeasti Teamsissa keskustelukanavalla jo ennen ensimmäistä oppituntia.**
 
