@@ -61,6 +61,14 @@ $ sudo apt install python3-pip
 > 
 > https://pypi.org/project/pip/
 
+### Node.js ja npm
+
+Pythonin lisäksi tulemme tällä kurssilla ohjelmoimaan JavaScriptillä, mihin tarvitaan sekä Node.js että npm-paketinhallintasovellus. Nämä voidaan asentaa seuraavasti:
+
+```shell
+$ sudo apt install nodejs
+$ sudo apt install npm
+```
 
 ### Visual Studio Coden asennus
 
@@ -80,6 +88,7 @@ Tulemme käyttämään VS Codessa ainakin seuraavia laajennoksia, jotka voit ase
 Lisäksi suosittelemme muuttamaan editorin asetuksista koodin automaattisen muotoilun päälle tallennettaessa ja liitettäessä koodia:
 
 Avaa "User settings". Etsi hakukentän avulla valinnat `Format on save` sekä `Format on paste` ja aseta rastit molempiin ruutuihin.
+
 
 ### Extra: Guest additions sekä leikepöydän käyttö
 
