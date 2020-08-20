@@ -67,6 +67,26 @@ Liittymisohje kurssin työtilaan löytyy sähköpostitse lähetetystä tiedottee
 * [Teams](https://teams.microsoft.com/)
 * [Teams-lataussivu](https://teams.microsoft.com/downloads)
 
+## Työkalut
+
+Kurssilla käytetään lukuisia eri teknologioita ja työkaluja, joten joudut todennäköisesti tekemään tietokoneellesi lukuisia erilaisia asennuksia. 
+
+Ohjelmistojen asentaminen ja käyttäminen eri käyttöjärjestelmillä poikkeaa toisistaan merkittävästi, minkä lisäksi saman ohjelmiston eri versiot toimivat joskus hyvin eri tavoilla. Asennus- ja yhteensopivuusongelmien minimoimiseksi kurssilla suositellaan vahvasti oman erillisen Linux-virtuaalikoneen asentamista kurssin tehtävien tekemistä varten. Virtuaalikoneeseen tekemäsi asennukset eivät vaikuta tietokoneesi normaaliin käyttöön, ja käyttämällä virtuaalikonetta saat käyttötukea myös kurssin puolesta. 
+
+Linux voidaan asentaa myös tietokoneen pääkäyttöjärjestelmäksi tai "dual boot"-vaihtoehdolla nykyisen käyttöjärjestelmän rinnalle, mutta näitä vaihtoehtoja ei kurssin puolesta tueta.
+
+Mikäli sinulla on valmiiksi käytössäsi Linux tai muu Unix-pohjainen käyttöjärjestelmä, kuten macOS, voit käyttää sitä kurssilla. Myös Raspberry Pi tai etäyhteydellä käytettävät Linux-ympäristöt, kuten [DigitalOcean](https://www.digitalocean.com/github-students/), sopivat kurssin tarkoituksiin, mutta  niihin pystymme tarjoamaan vain vähäistä käyttötukea.
+
+Lisää ohjeita löydät kurssin [ensimmäisen viikon materiaalista](00_linux_ja_python).
+
+## Tehtävät
+
+### Tehtävä 1: 
+
+
+### Tehtävä 2:
+Yksinkertainen Pythonharjoitus...
+
 ## Arviointi
 
 Kurssi arvioidaan asteikolla 0-5. Kurssin arviointi perustuu viikkoaiheiden yhteydessä suoritettuihin tehtäviin (60% arvosanasta) sekä kurssin toisella puoliskolla tehtävään seminaarityöhön (40%).
@@ -77,12 +97,4 @@ Tämän kurssin materiaali perustuu suurelta osin valmiisiin netistä löytyviin
 
 Ohjelmointiongelmiin löytyy usein valmiita tai osittaisia ratkaisuja ympäri Internetiä niin keskustelupalstoilta kuin tutoriaaleista. Huonossa tapauksessa löydät toimivan ratkaisun ongelmaasi, mutta et osaa aivan tulkita mitä löytämäsi koodi tekee ja miksi se ratkaisee ongelmasi. Ammattimaisessa ohjelmistokehityksessä tästä seuraa mahdollisesti suuriakin vahinkoja.
 
-Nettilähteiden hyödyntäminen ja niistä mallin ottaminen on sallittua ja kannustettavaa, mutta et saa vain kopioida ratkaisuja, vaan sinun tulee ymmärtää, miten koodisi toimii. Lisäksi, erityisesti koska kyseessä on korkeakoulun opintojakso, sinun tulee merkitä lähteet lainatessasi esimerkiksi StackOverflow:sta löytämääsi koodia. Lähdeviitteeksi riittää esimerkiksi verkkosivun osoite Java-kommenttina lainatun koodin yhteydessä, tai käyttämäsi lähteen käyttöehtojen mukainen muu lähdeviite.
-
-## Tehtävät
-
-### Tehtävä 1: 
-Mikäli sinulla on käytössäsi Linux tai muu Unixpohjainen käyttöjärjestelmä, niin voit käyttää sitä kurssilla. Mikäli sinulla on Windows, niin [asenna itsellesi Oraclen VirtualBox -ympäristö ja siihen Ubuntu käyttöjärjestelmä](https://itsfoss.com/install-linux-in-virtualbox/). Asenna Ubuntuun itsellesi python... 
-
-### Tehtävä 2:
-Yksinkertainen Pythonharjoitus...
+Nettilähteiden hyödyntäminen ja niistä mallin ottaminen on sallittua ja kannustettavaa, mutta et saa vain kopioida ratkaisuja, vaan sinun tulee ymmärtää, miten koodisi toimii. Lisäksi, erityisesti koska kyseessä on korkeakoulun opintojakso, sinun tulee merkitä lähteet lainatessasi esimerkiksi StackOverflow:sta löytämääsi koodia. Lähdeviitteeksi riittää esimerkiksi verkkosivun osoite kommenttina lainatun koodin yhteydessä, tai käyttämäsi lähteen käyttöehtojen mukainen muu lähdeviite.
