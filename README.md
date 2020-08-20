@@ -20,7 +20,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
 
 <table>
 <thead><tr><th>Päivämäärä</th><th>Aihe</th></tr></thead><tbody>
- <tr><td>pe 28.8.</td><td>Kurssin johdanto, ympäristöt ja perustason python<br>
+ <tr><td>pe 28.8.</td><td>Kurssin johdanto, ympäristöt ja perustason Python<br>
  <a href="00_linux_ja_python">Oppimateriaali ja tehtävät</a>
  </td></tr>
  <tr><td>pe 4.9.</td><td>Tietorakenteet ja algoritmit</td></tr>
