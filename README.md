@@ -20,7 +20,9 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
 
 <table>
 <thead><tr><th>Päivämäärä</th><th>Aihe</th></tr></thead><tbody>
- <tr><td>pe 28.8.</td><td>Kurssin johdanto, ympäristöt ja perustason python</td></tr>
+ <tr><td>pe 28.8.</td><td>Kurssin johdanto, ympäristöt ja perustason python<br>
+ <a href="00_linux_ja_python">Oppimateriaali ja tehtävät</a>
+ </td></tr>
  <tr><td>pe 4.9.</td><td>Tietorakenteet ja algoritmit</td></tr>
  <tr><td>pe 11.9.</td><td>Ohjelmistoarkkitehtuurit ja patternit</td></tr>
  <tr><td>pe 18.9.</td><td>Ohjelmistoarkkitehtuurit ja patternit</td></tr>
@@ -40,6 +42,8 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
 </tbody></table>
 
 ## Aiheet
+
+1. [Linux ja Python](00_linux_ja_python)
 
 1. [Tietorakenteet ja algoritmit](01_tietorakenteet_ja_algoritmit)
 
@@ -78,14 +82,6 @@ Linux voidaan asentaa myös tietokoneen pääkäyttöjärjestelmäksi tai "dual 
 Mikäli sinulla on valmiiksi käytössäsi Linux tai muu Unix-pohjainen käyttöjärjestelmä, kuten macOS, voit käyttää sitä kurssilla. Myös Raspberry Pi tai etäyhteydellä käytettävät Linux-ympäristöt, kuten [DigitalOcean](https://www.digitalocean.com/github-students/), sopivat kurssin tarkoituksiin, mutta  niihin pystymme tarjoamaan vain vähäistä käyttötukea.
 
 Lisää ohjeita löydät kurssin [ensimmäisen viikon materiaalista](00_linux_ja_python).
-
-## Tehtävät
-
-### Tehtävä 1: 
-
-
-### Tehtävä 2:
-Yksinkertainen Pythonharjoitus...
 
 ## Arviointi
 
