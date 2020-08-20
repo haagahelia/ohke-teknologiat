@@ -38,7 +38,8 @@ Suorita Linuxin komentorivikäyttöä koskeva tutoriaali osoitteessa https://ubu
 >
 > https://ubuntu.com/tutorials/command-line-for-beginners
 
-❗ Kurssin ensimmäinen monivalintakysymyksinä toteutettu viikkotehtävä Teamsissa koskee tätä tutoriaalia. Vastaa Teams-tehtävään ennen seuraavan viikon oppituntia.
+
+Huom! Kurssin ensimmäinen kyselynä toteutettu viikkotehtävä Teamsissa koskee tätä tutoriaalia. Vastaa Teams-tehtävään seuratessasi tutoriaalia.
 
 ### Git-asennus
 
@@ -64,9 +65,7 @@ $ sudo apt install python3-pip
 
 ### Visual Studio Coden asennus
 
-Viimeisenä asennuksena suosittelemme asentamaan Visual Studio Code -kehitysympäristön. Se löytyy ilmaiseksi helpoiten Ubuntun ohjelmistokaupasta.
-
-Ohjelmistokaupan voit avata painamalla Windows-painiketta ja kirjoittamalla hakukenttään "Ubuntu Software". Etsi kyseisestä sovelluksesta "Visual Studio Code" ja valitse "install".
+Viimeisenä asennuksena suosittelemme asentamaan Visual Studio Code -kehitysympäristön. Se löytyy ilmaiseksi helpoiten Ubuntun ohjelmistokaupasta. Ohjelmistokaupan voit avata painamalla Windows-painiketta ja kirjoittamalla hakukenttään "Ubuntu Software". Etsi kyseisestä sovelluksesta "Visual Studio Code" ja valitse "install".
 
 Visual Studio Code voidaan asentaa Linuxiin myös [lukuisilla muilla tavoilla](https://code.visualstudio.com/docs/setup/linux).
 
