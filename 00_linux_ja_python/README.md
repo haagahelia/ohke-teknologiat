@@ -29,7 +29,6 @@ Hyvä ohje asennuksiin löytyy esimerkiksi osoitteesta https://itsfoss.com/insta
 
 Mikäli virtuaalikoneen asennuksessa on ongelmia, pyritään pääsääntöisesti ratkaisemaan ne jo ennen ensimmäistä oppituntia Teams-työtilan chatissa.
 
-
 ### Linuxin komentorivikäyttö
 
 Suorita Linuxin komentorivikäyttöä koskeva tutoriaali osoitteessa https://ubuntu.com/tutorials/command-line-for-beginners
@@ -81,3 +80,9 @@ Tulemme käyttämään VS Codessa ainakin seuraavia laajennoksia, jotka voit ase
 Lisäksi suosittelemme muuttamaan editorin asetuksista koodin automaattisen muotoilun päälle tallennettaessa ja liitettäessä koodia:
 
 Avaa "User settings". Etsi hakukentän avulla valinnat `Format on save` sekä `Format on paste` ja aseta rastit molempiin ruutuihin.
+
+### Extra: Guest additions sekä leikepöydän käyttö
+
+Perusasennuksen lisäksi suosittelemme sinua asentamaan VirtualBoxin "guest additions" -lisäosat virtualisoidulle Linux-koneelle. Lisäosien avulla esimerkiksi VirtualBox-ikkunan koon muuttaminen muuttaa automaattisesti virtualisoidun työpöydän resoluutiota ikkunan koon mukaiseksi. Ohjeita lisäosan lisäosan asentamiseksi löydät [Googlella](https://www.google.com/search?q=virtualbox+install+guest+additions).
+
+Virtuaalikoneen ja "host"-koneen välillä on myös mahdollista synkronoida leikepöytä. Tällöin pystyt kopioimaan ja liittämään tekstiä kätevästi eri järjestelmien välillä. Käynnissä olevan virtuaalikoneen "Devices"-valikosta löytyy kohta "Shared clipboard", jonka avulla voit valita leikepöydän toimintalogiikan haluamaksesi.
