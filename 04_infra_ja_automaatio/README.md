@@ -18,10 +18,17 @@ $ pwd //print working directory, tulostaa kansion jossa olet.
 ```
 
 ```shell
-$ ls //Listaa kyseisen kansion tiedostot ja kansiot
-$ ls -l // -l-vivulla komento tulostaa myös mm. tiedostojen luontipäivämäärän ja koon
-$ ls -l | more // Linuxin komentoja voi putkittaa (merkillä |). Putkitus more-komennon kanssa tulostaa kansiorakenteen sivu kerrallaan, josta voi edetä enterillä tiedosto kerrallaan (pagedown/up tai u tai d toimii mahdollisesti hieman unix-järjestelmästä riippuen myös), CTRL^C (tai q) lopettaa.
+$ ls
 ```
+Listaa kyseisen kansion tiedostot ja kansiot
+```shell
+$ ls -l 
+```
+-l-vivulla komento tulostaa myös mm. tiedostojen luontipäivämäärän ja koon
+```shell
+$ ls -l | more
+```
+More Linuxin komentoja voi putkittaa (merkillä |). Putkitus more-komennon kanssa tulostaa kansiorakenteen sivu kerrallaan, josta voi edetä enterillä tiedosto kerrallaan (pagedown/up tai u tai d toimii mahdollisesti hieman unix-järjestelmästä riippuen myös), CTRL^C (tai q) lopettaa.
 
 <!--
 sudo
