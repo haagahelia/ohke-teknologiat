@@ -29,50 +29,75 @@ Hyvä ohje asennuksiin löytyy esimerkiksi osoitteesta https://itsfoss.com/insta
 
 Mikäli virtuaalikoneen asennuksessa on ongelmia, pyritään pääsääntöisesti ratkaisemaan ne jo ennen ensimmäistä oppituntia Teams-työtilan chatissa.
 
-### Linuxin komentorivikäyttö
+### Linuxin komentorivikäyttö ja pakettien asentaminen
 
-Suorita Linuxin komentorivikäyttöä koskeva tutoriaali osoitteessa https://ubuntu.com/tutorials/command-line-for-beginners
+Ubuntussa useat paketit ja ohjelmat asennetaan komentorivityökaluilla. Komentorivin saat auki Ubuntun valikosta nimellä "Terminal", tai näppäinyhdistelmällä `CTRL + ALT + T`.
 
-> *This tutorial will teach you a little of the history of the command line, then walk you through some practical excercises to become familiar with a few basic commands and concepts. We’ll assume no prior knowledge, but by the end we hope you’ll feel a bit more comfortable the next time you’re faced with some instructions that begin “Open a terminal”.*
+Mikäli komentorivin käyttö tuottaa ongelmia, hyvä tutoriaali komentorivin käytöstä löytyy osoitteessa https://ubuntu.com/tutorials/command-line-for-beginners.
+
+Voit myös aina kysyä neuvoa kurssin opettajilta ja muilta opiskelijoilta kurssin Teams-kanavilla!
+
+
+**APT**
+
+Ubuntun asennustyökalu on nimeltään Advanced Package Tool eli APT:
+
+> *APT eli Advanced Package Tool on Debian-projektin kehittämä työkalu Linux-käyttöjärjestelmän pakettienhallinnan helpottamiseen. Se huolehtii mm. asennettavien pakettien riippuvuussuhteista ja niiden päivittämisestä. Se hakee asennettavat paketit netistä. APT-nimitystä käytetään sekä paketinhallintakirjastosta (jota voi käyttää monen käyttöliittymän kautta) että sitä käyttävästä komentorivityökalusta.*
 >
-> https://ubuntu.com/tutorials/command-line-for-beginners
+> Linux.fi-wiki, https://www.linux.fi/wiki/APT
+
+APT:in avulla sovellusten asennus tapahtuu kirjoittamalla komento muodossa:
+
+    apt install ohjelma
+
+Koska ohjelmien asennus vaatii pääkäyttäjäoikeudet, ei normaalilla käyttäjätunnuksella voida suoraan tehdä asennuksia. Yksittäisiä komentoja saa suoritettua pääkäyttäjäoikeuksilla [`sudo`-komennon avulla](https://wiki.ubuntu-fi.org/Sudo). Käytännössä tulet siis tekemään asennukset seuraavasti:
+
+    sudo apt install ohjelma
 
 
-Huom! Kurssin ensimmäinen kyselynä toteutettu viikkotehtävä Teamsissa koskee tätä tutoriaalia. Vastaa Teams-tehtävään seuratessasi tutoriaalia.
+**PIP**
 
-### Git-asennus
+APT-komennon lisäksi Linuxille on lukuisia muita pakettienhallintaohjelmia, joista useat ovat erikoistuneet jonkin tietyn ohjelmointikielen kirjastojen asentamiseen. 
 
-Kurssilla käytetään oppimateriaalin ja esimerkkikoodien jakelussa Git-versionhallintaa. Asenna itsellesi valmiiksi Git-työkalut. Ubuntussa Git-asennus tapahtuu komentorivillä seuraavasti (saat komentorivin auki näppäinyhdistelmällä `CTRL + ALT + T`):
 
-```shell
-$ sudo apt install git
-$ git clone https://github.com/haagahelia/swd4tn023.git
-```
-
-### Python 3 + Pip
-
-Python 3 on esiasennettuna Ubuntun työpöytäversiossa. Lisäksi tarvitset `pip`-pakettienhallintatyökalun, joka voidaan asentaa seuraavasti:
-
-```shell
-$ sudo apt install python3-pip
-```
+Python-kirjastojen asentamisessa käytämme `pip`-työkalua.
 
 > *pip is the package installer for Python. You can use pip to install packages from the Python Package Index and other indexes.*
 > 
 > https://pypi.org/project/pip/
 
-### Node.js ja npm
-
-Pythonin lisäksi tulemme tällä kurssilla ohjelmoimaan JavaScriptillä, mihin tarvitaan sekä Node.js että npm-paketinhallintasovellus. Nämä voidaan asentaa seuraavasti:
+`pip` voidaan asentaa edellä esitellyn `apt`:in ja `sudo`:n avulla seuraavasti:
 
 ```shell
-$ sudo apt install nodejs
-$ sudo apt install npm
+sudo apt install python3-pip
+```
+
+**Node.js ja npm**
+
+Pythonin lisäksi tulemme tällä kurssilla ohjelmoimaan JavaScriptillä, mihin tarvitsemme Node.js:n. Node-paketeille on oma paketinhallintasovellus nimeltä **npm**. Nämä voidaan asentaa apt-komennoilla seuraavasti:
+
+```shell
+sudo apt install nodejs
+sudo apt install npm
+```
+
+### Git-asennus
+
+Kurssilla käytetään oppimateriaalin ja esimerkkikoodien jakelussa Git-versionhallintaa. Asenna itsellesi valmiiksi Git-työkalut. 
+
+```shell
+sudo apt install git
+```
+
+Asennuksen jälkeen voit kloonata tämän repositorion itsellesi:
+
+```shell
+git clone https://github.com/haagahelia/swd4tn023.git
 ```
 
 ### Visual Studio Coden asennus
 
-Viimeisenä asennuksena suosittelemme asentamaan Visual Studio Code -kehitysympäristön. Se löytyy ilmaiseksi helpoiten Ubuntun ohjelmistokaupasta. Ohjelmistokaupan voit avata painamalla Windows-painiketta ja kirjoittamalla hakukenttään "Ubuntu Software". Etsi kyseisestä sovelluksesta "Visual Studio Code" ja valitse "install".
+Viimeisenä asennuksena suosittelemme asentamaan Visual Studio Code -kehitysympäristön. Se löytyy ilmaiseksi helpoiten Ubuntun ohjelmistokaupasta. Ohjelmistokaupan voit avata painamalla Windows-painiketta ja kirjoittamalla hakukenttään "Ubuntu Software". Etsi hakukentän avulla "Visual Studio Code" ja valitse "install".
 
 Visual Studio Code voidaan asentaa Linuxiin myös [lukuisilla muilla tavoilla](https://code.visualstudio.com/docs/setup/linux).
 
@@ -80,12 +105,25 @@ Visual Studio Code voidaan asentaa Linuxiin myös [lukuisilla muilla tavoilla](h
 
 Tulemme käyttämään VS Codessa ainakin seuraavia laajennoksia, jotka voit asentaa etukäteen tai tarpeen mukaan:
 
-1. `Python` koodieditori
+1. `Python`-tuki VS Codelle
+
+    https://marketplace.visualstudio.com/items?itemName=ms-python.python
+
 1. `Pylint` koodin tarkistus
+
+     `pip3 install pylint`
+
 1. `Rope` refaktorointi
+
+     `pip3 install rope`
+
 1. `autopep8` koodin muotoilu
 
-Lisäksi suosittelemme muuttamaan editorin asetuksista koodin automaattisen muotoilun päälle tallennettaessa ja liitettäessä koodia:
+    `pip3 install autopep8`
+
+Huomaa, että pip-asennukset ovat käyttäjäkohtaisia, eli niitä ei tehdä `sudo`-komennon avulla.
+
+Lisäksi suosittelemme muuttamaan VS Code:n asetuksista koodin automaattisen muotoilun päälle tallennettaessa ja liitettäessä koodia:
 
 Avaa "User settings". Etsi hakukentän avulla valinnat `Format on save` sekä `Format on paste` ja aseta rastit molempiin ruutuihin.
 
