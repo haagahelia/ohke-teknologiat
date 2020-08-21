@@ -12,23 +12,23 @@ Linux ja muut Unix-pohjaiset käyttöjärjestelmät, kuten MacOS, ovat kehittäj
 
 Unix-pohjaisten järjestelmien komentorivi on kehittäjille monipuolinen ja voimakas työkalu. Komentorivi mahdollistaa paitsi erilaisten työkalujen nopean asentamisen, tiedostojärjestelmän helpon selaamisen, erilaisten testiympäristöjen pystyttämisen jne. Käydään tässä läpi esimerkkien kautta Unix-järjestelmän kehittäjälle hyödyllisiä perusasioita ja komentoja.
 
+Print working directory, tulostaa kansion jossa olet.
 ```shell
-$ pwd //print working directory, tulostaa kansion jossa olet.
+$ pwd
 /Users/myusername/Documents/
-```
-
-```shell
-$ ls
 ```
 Listaa kyseisen kansion tiedostot ja kansiot
 ```shell
+$ ls
+```
+-l-vivulla ls-komento tulostaa myös mm. tiedostojen luontipäivämäärän ja koon
+```shell
 $ ls -l 
 ```
--l-vivulla komento tulostaa myös mm. tiedostojen luontipäivämäärän ja koon
+Linuxin komentoja voi putkittaa (merkillä |). Putkitus more-komennon kanssa tulostaa kansiorakenteen sivu kerrallaan, josta voi edetä enterillä tiedosto kerrallaan (pagedown/up tai u tai d toimii mahdollisesti hieman unix-järjestelmästä riippuen myös), CTRL^C (tai q) lopettaa.
 ```shell
 $ ls -l | more
 ```
-More Linuxin komentoja voi putkittaa (merkillä |). Putkitus more-komennon kanssa tulostaa kansiorakenteen sivu kerrallaan, josta voi edetä enterillä tiedosto kerrallaan (pagedown/up tai u tai d toimii mahdollisesti hieman unix-järjestelmästä riippuen myös), CTRL^C (tai q) lopettaa.
 
 <!--
 sudo
