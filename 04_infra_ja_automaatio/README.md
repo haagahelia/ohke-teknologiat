@@ -57,11 +57,7 @@ Tiedoston voi luoda tai kaksi tiedostoa yhdistää kolmanteen tiedostoon myös c
 $ cat >luouusitiedosto.txt
 $ cat tiedosto1.txt tiedosto2.txt >yhdistetty.txt
 ```
-Yksi esimerkki komentojen putkittamisesta, on käyttää tr-komentoa yhdessä cat:in kanssa ja konvertoida tiedoston sisältö isoiksi kirjaimiksi (muita konversioita voi tehdä myös tr:llä, kuten lisätä tyhjiä rivejä tiettyihin kohtiin jne) ja tallentaa tulos uuteen tiedostoon.
-```shell
-$ cat tiedosto.txt | tr a-z A-Z > output.txt
-```
-Tiedostoja voi kopioida cp-komennolla. Käyttämällä -R (recursive) -vipua, voi kopioida kokonaisia kansiorakenteita
+Tiedostoja voi kopioida cp-komennolla. Käyttämällä -R (recursive) -vipua voi kopioida kokonaisia kansiorakenteita
 ```shell
 $ cp tiedosto.txt ../ //kopioi tiedoston hierarkiassa edelliseen kansioon
 $ cp -R hakemisto /Users/me/toinenhakemisto //kopioi hakemiston toiseen hakemistoon
@@ -85,7 +81,7 @@ Tyhjän tiedoston voi luoda touch komennolla
 ```shell
 $ touch tiedosto.txt
 ```
-Tiedostoja voi muokata Unix-järjestelmien lukuisilla eri tekstieditoreilla, kuten hyvin perinteinen vi (komennot pitää muistaa aikalailla ulkoa) tai nano:lla tai monesta järjestelmästä löytyvällä emacs:lla. Editoreilla on omat shortcut-komennot eri asioille kuten tiedoston muutosten tallentamiselle ja editorin sulkemiselle. 
+Tiedostoja voi muokata Unix-järjestelmien lukuisilla eri tekstieditoreilla, kuten hyvin perinteinen vi:llä (komennot pitää muistaa aikalailla ulkoa), nano:lla tai monesta järjestelmästä löytyvällä emacs:lla. Editoreilla on omat shortcut-komennot eri asioille kuten tiedoston muutosten tallentamiselle ja editorin sulkemiselle. 
 ```shell
 $ vi tiedosto.txt
 $ nano tiedosto.txt
@@ -95,14 +91,13 @@ Tiedostoja voi etsiä tiedostonimen perusteella find-komennolla. *-merkkiä voi 
 ```shell
 $ find -name tiedo*.txt
 ```
-Tiedostojen sisällä olevaan tekstiä voi etsiä-grep -komennolla. -R etsii rekursiivisesti koko kansiorakenteesta. Grepille annettava etsintäavain tulkitaan [Regular expression -formaatissa](https://en.wikipedia.org/wiki/Regular_expression), eli sitä voi käyttää hyvin monipuoliseen etsintään. Grep-komennon voi myös putkittaa esimerkiksi ls tai find-komennon kanssa.
+Tiedostojen sisällä olevaan tekstiä voi etsiä grep-komennolla. -R etsii rekursiivisesti koko kansiorakenteesta. Grepille annettava etsintäavain tulkitaan [Regular expression -formaatissa](https://en.wikipedia.org/wiki/Regular_expression), eli sitä voi käyttää hyvin monipuoliseen etsintään. 
 ```shell
 $ grep "kissa" tiedosto.txt //sisältääkö sanan kissa
-$ grep -R "kissa" * //etsi tämä kansion kaikista alikansioista ja tiedostoista sanaa kissa
+$ grep -R "kissa" * //etsi tämän kansion kaikista alikansioista ja tiedostoista sanaa kissa
 $ grep -E "koira|kissa" tiedosto.txt // Sovella regex-patternia, eli etsi sekä koiraa, että kissaa.
-$ ls | grep sana //näytä lopulta vain ne rivit ls:n tulosteesta, jotka sisältävät tekstin 'sana'
 ```
-Tiedoston loppun voi tulostaa Tail-komennolla. Tämä komento on erityisen hyödyllinen logitiedostojen seuraamiseen -F-vivulla, jolloin se jää seuraamaan tiedostojen päivittymistä ja jatkaa muutosten tulostamista ruudulla. Tailin voi myös putkittaa grep:in kanssa ja seurata tiedostossa esimerkiksi vain tietyn patternin mukaisia muutoksia. Komennosta voi poistua CTRL^C:llä
+Tiedoston lopun voi tulostaa tail-komennolla. Tämä komento on erityisen hyödyllinen logitiedostojen seuraamiseen -F-vivulla, jolloin se jää seuraamaan tiedostojen päivittymistä ja jatkaa muutosten tulostamista ruudulla. Tailin voi myös putkittaa grep:in kanssa ja seurata tiedostossa esimerkiksi vain tietyn patternin mukaisia muutoksia. Komennosta voi poistua CTRL^C:llä
 ```shell
 $ tail -F server.log
 $ tail -F server.log | grep "ERROR"
@@ -119,7 +114,7 @@ chown-komennolla voi siirtää tiedoston omistajuuden tietylle käyttäjälle.
 ```shell
 $ chown mysqlUser mysqlscript.sh
 ```
-Sudo ("Switch User and Do this command") -komennolla vältetään nykyään käyttäjien tarvetta vaihtaa käyttäjätiliä root-käyttäjäksi suorittaaksen jonkin enemmän käyttöoikeuksia vaativan asian kuten vaikka uuden ohjelman asentamisen. Jos käyttäjälle on myönnetty sudo-oikeudet käyttöjärjestelmään, niin hän voi siis vaihtaa itsensä hetkellisesti superkäyttäjäksi ja ajaa jonkin enemmän oikeuksia vaativan komennon.
+Sudo ("Switch User and Do this command") -komennolla vältetään nykyään käyttäjien tarvetta vaihtaa käyttäjätiliä root-käyttäjäksi suorittaakseen jonkin enemmän käyttöoikeuksia vaativan asian kuten vaikka uuden ohjelman asentamisen. Jos käyttäjälle on myönnetty sudo-oikeudet käyttöjärjestelmään, niin hän voi siis vaihtaa itsensä hetkellisesti superkäyttäjäksi ja ajaa jonkin enemmän oikeuksia vaativan komennon.
 ```shell
 $ sudo apt install mysql
 ```
@@ -127,7 +122,7 @@ Sudo ("Switch User and Do this command") -komennolla vältetään nykyään käy
 ```shell
 $ sudo apt install mysql
 ```
-Processes (ps) komennolla voit listata esimerkiksi kaikki kyseisen käyttäjän käynnissä olevat prosessit. Niihin liittyen voi tulostaa ps-komennolla monipuolisesti tietoja eri prosesseista, kuten niiden muistin ja prosessorin käyttömäärän. Näiden perusteella voi tehdä johtopäätöksiä, jos joki prosessi (esimerkiksi serveri) on jäänyt jumiin tai esimerkiksi jokin ohjelma ikuiseen silmukkaan. 
+Processes (ps) komennolla voi listata esimerkiksi kaikki kyseisen käyttäjän käynnissä olevat prosessit. Niihin liittyen voi tulostaa ps-komennolla monipuolisesti tietoja eri prosesseista, kuten niiden muistin ja prosessorin käyttömäärän. Näiden perusteella voi tehdä johtopäätöksiä, jos joki prosessi (esimerkiksi serveri) on jäänyt jumiin tai esimerkiksi jokin ohjelma ikuiseen silmukkaan. 
 ```shell
 $ ps ux
 ```
@@ -143,12 +138,12 @@ $ sudo passwd username
 ```
 Unix-järjestelmissä on yleensä myös monia tietoliikenteeseen liittyviä käteviä komentoja.
 ```shell
-$ ping 123.343.434 //miten nopeasti osoite vastaa
+$ ping 123.343.434 //miten nopeasti osoite vastaa, voi testata vaikka omaa tuotantopalvelinta
 $ whois haaga-helia.fi //tietoja tunnuksesta
 $ ssh host.jotain.fi  //avataan ssh-etäyhteys etäpalvelimeen
 $ wget https://osoite.fi/kuva.jpeg  //Ladataan tiedosto internetistä
 ```
-Ohjelmistokehittäjä pystyy ajamaan unix-järjestelmissä hyvin monia kehitystyöhön liittyviä ohjelmia. Tässä vielä niistä muutamia esimerkkejä.
+Ohjelmistokehittäjä pystyy ajamaan unix-järjestelmissä lukuisia kehitystyöhön liittyviä ohjelmia. Tässä vielä niistä muutamia esimerkkejä.
 ```shell
 $ node
 $ python
