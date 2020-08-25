@@ -177,7 +177,7 @@ ls -l | grep $1 > tamakansio.txt #ajetaan kyseisen kansion sisällöstä tiedost
 ```
 ```shell
 $ chmod u+x skripti.sh //annetaan käyttäjälle suoritusoikeudet skriptiin, muuten sitä ei voi ajaa.
-$ ./skripti.sh hello //ajetaan skripti ja annetaan sillä parametrina sana "hello"
+$ ./skripti.sh hello //ajetaan skripti ja annetaan sille parametrina sana "hello"
 ```
 
 Unix-pohjaisissa järjestelmissä on komentojen ajastuksen mahdollistava [cron-prosessi](https://opensource.com/article/17/11/how-use-cron-linux). crontab-komennolla voi määritellä ajastettavia komentojan "ajastustauluun" (cron table). crontab-komento luo käyttäjälle ajastustaulutiedoston /var/spool/cron-kansioon. Crontaulun ajastussyntaksi seuraa tiettyä kaavaa. *-merkki tarkoittaa, että kyseinen ajanmääre voi olla mitä vain.
