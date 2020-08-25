@@ -14,6 +14,8 @@ Unix-pohjaisten järjestelmien komentorivi on kehittäjille monipuolinen ja voim
 
 Alkuun mainittakoon yleisesti, että Linux-komentojen keskeyttäminen tarvittaessa tapahtuu CTRL^C:llä (tai vielä voimakkaampi yhdistelmä on CTRL^Z, joka ei anna processille mahdollisuutta yrittää sulavaa siistiä lopettamista).
 
+#### Unix-komentoja
+
 Print working directory, tulostaa kansion jossa olet.
 ```shell
 $ pwd
@@ -91,7 +93,7 @@ Tiedostoja voi etsiä tiedostonimen perusteella find-komennolla. *-merkkiä voi 
 ```shell
 $ find -name tiedo*.txt
 ```
-Tiedostojen sisällä olevaan tekstiä voi etsiä grep-komennolla. -R etsii rekursiivisesti koko kansiorakenteesta. Grepille annettava etsintäavain tulkitaan [Regular expression -formaatissa](https://en.wikipedia.org/wiki/Regular_expression), eli sitä voi käyttää hyvin monipuoliseen etsintään. 
+Tiedostojen sisällä olevaan tekstiä voi etsiä (ja tekstin sisältävän rivin tulostaa) grep-komennolla. -R etsii rekursiivisesti koko kansiorakenteesta. Grepille annettava etsintäavain tulkitaan [Regular expression -formaatissa](https://en.wikipedia.org/wiki/Regular_expression), eli sitä voi käyttää hyvin monipuoliseen etsintään. 
 ```shell
 $ grep "kissa" tiedosto.txt //sisältääkö sanan kissa
 $ grep -R "kissa" * //etsi tämän kansion kaikista alikansioista ja tiedostoista sanaa kissa
@@ -109,6 +111,8 @@ $ diff tiedosto1.txt tiedosto2.txt
 chmod-komennolla voi muokata tiedoston tai kansion oikeuksia, eli kenellä on oikeus tehdä tiedostoon minkälaisia muutoksia. Komennolla voi antaa tietylle tiedostolle oikeuksia kolmella eri tasolla. Eli miten tiedostoa saa käyttää sen luonut käyttäjä, miten käyttäjän kanssa samaan ryhmään kuuluvat käyttäjät ja miten muut. Eli tiedostolle voi antaa omalle käyttäjälleen luku-, suoritus- ja muokkausoikeudet, saman käyttäjäryhmän ihmisille luku- ja suoritusoikeudet ja muille ei mitään oikeuksia (edes tiedoston lukemiseen). Tästä monimutkaisesta komennosta voi lukea lisää vaikka [täältä](https://www.computerhope.com/unix/uchmod.htm).
 ```shell
 $ chmod 750 mysqlscript.sh
+$ chmod u+x mysqlscript.sh //annetaan käyttäjälle (u) suoritus (x=exceute) oikeudet
+
 ```
 chown-komennolla voi siirtää tiedoston omistajuuden tietylle käyttäjälle.
 ```shell
@@ -121,6 +125,14 @@ $ sudo apt install mysql
 Sudo ("Switch User and Do this command") -komennolla vältetään nykyään käyttäjien tarvetta vaihtaa käyttäjätiliä root-käyttäjäksi suorittaaksen jonkin enemmän käyttöoikeuksia vaativan asian kuten vaikka uuden ohjelman asentamisen. Jos käyttäjälle on myönnetty sudo-oikeudet käyttöjärjestelmään, niin hän voi siis vaihtaa itsensä hetkellisesti superkäyttäjäksi ja ajaa jonkin enemmän oikeuksia vaativan komennon.
 ```shell
 $ sudo apt install mysql
+```
+Unix-järjestelmissä voi määritellä ympäristömuuttujia kuten PATH-muuttujan. Käyttöjärjestelmä etsii komentojan PATH-muuttujaan lisätyistä hakemistoista. Path-muuttujan nykyisen sisällön voi tulostaa echo-komennon avulla.
+```shell
+$ echo $PATH
+```
+export-komennolla voit lisätä PATH-muuttujaan uusia hakemistoja. Alla oleva komento siis sanoo, että uusi PATH-ympäristömuuttuja on nykyinen PATH-ympäristömuuttujan arvo ja lisäksi siihen lisätään /usr/me/uusihakemisto-polku.
+```shell
+$ export PATH=$PATH:/usr/me/uusihakemisto
 ```
 Processes (ps) komennolla voi listata esimerkiksi kaikki kyseisen käyttäjän käynnissä olevat prosessit. Niihin liittyen voi tulostaa ps-komennolla monipuolisesti tietoja eri prosesseista, kuten niiden muistin ja prosessorin käyttömäärän. Näiden perusteella voi tehdä johtopäätöksiä, jos joki prosessi (esimerkiksi serveri) on jäänyt jumiin tai esimerkiksi jokin ohjelma ikuiseen silmukkaan. 
 ```shell
@@ -151,6 +163,39 @@ $ java
 $ mysql
 $ mongo
 ```
+
+#### Unix-skriptit ja chron
+
+Unix-pohjaisissa käyttöjärjestelmissä on mahdollista luoda skriptitiedostoja, joiden avulla voi esimerkiksi yhdistää monta komentoa yhdeksi komennoksi. Myös esimerkiksi yksinkertaisen haarautumislogiikan (if-else) ja silkmukoiden toteuttaminen on mahdollista. Tarkemmin skriptien-kirjoittamisesta voi lukea esimerkiksi [tästä perusoppaasta](https://docs.csc.fi/support/tutorials/env-guide/linux-bash-scripts/)
+```shell
+$ nano skripti.sh //luodaan skriptitiedosto
+```
+```bash
+#!/bin/bash #skriptit avataan yleensä tällä kommentilla joka kertoo käytettävän komentorivitulkin 
+echo "Hello World" #tulostetaan huvikseen teksti echo-komennolla
+ls -l | grep $1 > tamakansio.txt #ajetaan kyseisen kansion sisällöstä tiedostoon sellaiset rivit, jotka sisätävät käyttäjän skriptille antaman ensimmäisen parametrin sanan.
+```
+```shell
+$ chmod u+x skripti.sh //annetaan käyttäjälle suoritusoikeudet skriptiin, muuten sitä ei voi ajaa.
+$ ./skripti.sh hello //ajetaan skripti ja annetaan sillä parametrina sana "hello"
+```
+
+Unix-pohjaisissa järjestelmissä on komentojen ajastuksen mahdollistava [cron-prosessi](https://opensource.com/article/17/11/how-use-cron-linux). crontab-komennolla voi määritellä ajastettavia komentojan "ajastustauluun" (cron table). crontab-komento luo käyttäjälle ajastustaulutiedoston /var/spool/cron-kansioon. Crontaulun ajastussyntaksi seuraa tiettyä kaavaa. *-merkki tarkoittaa, että kyseinen ajanmääre voi olla mitä vain.
+```shell
+1 2 3 4 5 /polku/komento argumentit_komennolle
+```
+jossa:
+* 1: Minuutit (0-59)
+* 2: Tunnit (0-23)
+* 3: Päivä (0-31)
+* 4: Kuukausi (0-12 [12 == Joulukuu])
+* 5: Viikonpäivä (0-7 [7 tai 0 == sunnuntai])
+
+```shell
+crontab -e //Komento avaa oletustekstieditorin, johon voi syöttää haluamansa ajastuksen
+5 0 * * * /Users/me/skripti.sh hello //Aja skripti.sh viisi minuuttia keskiyön jälkeen joka päivä
+```
+
 ## Versionhallinta
 
 ## Paketinhallinta ja buildaaminen
@@ -166,3 +211,6 @@ $ mongo
 ## Virtualisointi
 
 ## Palvelimet ja deployaaminen
+
+## Tehtävät
+
