@@ -23,12 +23,12 @@ $ pwd
 ```
 Change directoy komennolla liikutaan kansioissa. Tabulatoria käyttämällä voi automaattitäydentää syötteitään, eli jos aloittaa kirjoittamaan jotain ja painaa tabulaattoria, niin järjestelmä täydentää siihen mahdollisen ainoan vaihtoehdon tai sitten tulostaa syötteen alun perusteella mahdolliset vaihtoehdot. 
 ```shell
-$ cd kansionnimi //siirtyy kansioon kyseisen kansion alla
-$ cd /Users/kansionnimi //siirtyy absoluuttiseen kansioon tiedostorakenteen juuressa
-$ cd .. //Siirtyy hiearkiassa edelliseen kansioon
-$ cd ../kansionnimi //Siirtyy hierarkiassa edelliseen alikansioon ja sen alla olevaan kansioon
-$ cd //siirtyy käyttäjän kotikansioon
-$ cd -//siirtyy kansioon, jossa olit ennen tätä
+$ cd kansionnimi #siirtyy kansioon kyseisen kansion alla
+$ cd /Users/kansionnimi #siirtyy absoluuttiseen kansioon tiedostorakenteen juuressa
+$ cd .. #Siirtyy hiearkiassa edelliseen kansioon
+$ cd ../kansionnimi #Siirtyy hierarkiassa edelliseen alikansioon ja sen alla olevaan kansioon
+$ cd #siirtyy käyttäjän kotikansioon
+$ cd -#siirtyy kansioon, jossa olit ennen tätä
 ```
 Listaa kyseisen kansion tiedostot ja kansiot
 ```shell
@@ -61,13 +61,13 @@ $ cat tiedosto1.txt tiedosto2.txt >yhdistetty.txt
 ```
 Tiedostoja voi kopioida cp-komennolla. Käyttämällä -R (recursive) -vipua voi kopioida kokonaisia kansiorakenteita
 ```shell
-$ cp tiedosto.txt ../ //kopioi tiedoston hierarkiassa edelliseen kansioon
-$ cp -R hakemisto /Users/me/toinenhakemisto //kopioi hakemiston toiseen hakemistoon
+$ cp tiedosto.txt ../ #kopioi tiedoston hierarkiassa edelliseen kansioon
+$ cp -R hakemisto /Users/me/toinenhakemisto #kopioi hakemiston toiseen hakemistoon
 ```
 Tiedostoja voi siirtää tai uudelleennimetä mv-komennolla. 
 ```shell
 $ mv tiedosto.txt tiedostonuusinimi.txt
-$ mv tiedosto.txt ../ //siirtää tiedoston hierarkiassa edelliseen kansioon
+$ mv tiedosto.txt ../ #siirtää tiedoston hierarkiassa edelliseen kansioon
 ```
 Kansioita voi luoda mkdir-komennolla 
 ```shell
@@ -77,7 +77,7 @@ Tiedostoja voi poistaa rm-komennolla -R-vivulla voi poistaa kokonaisia kansiorak
 ```shell
 $ rm tiedosto
 $ rm -R kansiorakenne
-$ yes | rm -R kansiorakenne //jotkin unix-järjestelmät kysyvät joka tiedoston kohalla yes-varmistetta, sen voi automatisoida putkittamalla yes-komennon
+$ yes | rm -R kansiorakenne #jotkin unix-järjestelmät kysyvät joka tiedoston kohalla yes-varmistetta, sen voi automatisoida putkittamalla yes-komennon
 ```
 Tyhjän tiedoston voi luoda touch komennolla
 ```shell
@@ -95,9 +95,9 @@ $ find -name tiedo*.txt
 ```
 Tiedostojen sisällä olevaan tekstiä voi etsiä (ja tekstin sisältävän rivin tulostaa) grep-komennolla. -R etsii rekursiivisesti koko kansiorakenteesta. Grepille annettava etsintäavain tulkitaan [Regular expression -formaatissa](https://en.wikipedia.org/wiki/Regular_expression), eli sitä voi käyttää hyvin monipuoliseen etsintään. 
 ```shell
-$ grep "kissa" tiedosto.txt //sisältääkö sanan kissa
-$ grep -R "kissa" * //etsi tämän kansion kaikista alikansioista ja tiedostoista sanaa kissa
-$ grep -E "koira|kissa" tiedosto.txt // Sovella regex-patternia, eli etsi sekä koiraa, että kissaa.
+$ grep "kissa" tiedosto.txt #sisältääkö sanan kissa
+$ grep -R "kissa" * #etsi tämän kansion kaikista alikansioista ja tiedostoista sanaa kissa
+$ grep -E "koira|kissa" tiedosto.txt # Sovella regex-patternia, eli etsi sekä koiraa, että kissaa.
 ```
 Tiedoston lopun voi tulostaa tail-komennolla. Tämä komento on erityisen hyödyllinen logitiedostojen seuraamiseen -F-vivulla, jolloin se jää seuraamaan tiedostojen päivittymistä ja jatkaa muutosten tulostamista ruudulla. Tailin voi myös putkittaa grep:in kanssa ja seurata tiedostossa esimerkiksi vain tietyn patternin mukaisia muutoksia. Komennosta voi poistua CTRL^C:llä
 ```shell
@@ -111,7 +111,7 @@ $ diff tiedosto1.txt tiedosto2.txt
 chmod-komennolla voi muokata tiedoston tai kansion oikeuksia, eli kenellä on oikeus tehdä tiedostoon minkälaisia muutoksia. Komennolla voi antaa tietylle tiedostolle oikeuksia kolmella eri tasolla. Eli miten tiedostoa saa käyttää sen luonut käyttäjä, miten käyttäjän kanssa samaan ryhmään kuuluvat käyttäjät ja miten muut. Eli tiedostolle voi antaa omalle käyttäjälleen luku-, suoritus- ja muokkausoikeudet, saman käyttäjäryhmän ihmisille luku- ja suoritusoikeudet ja muille ei mitään oikeuksia (edes tiedoston lukemiseen). Tästä monimutkaisesta komennosta voi lukea lisää vaikka [täältä](https://www.computerhope.com/unix/uchmod.htm).
 ```shell
 $ chmod 750 mysqlscript.sh
-$ chmod u+x mysqlscript.sh //annetaan käyttäjälle (u) suoritus (x=exceute) oikeudet
+$ chmod u+x mysqlscript.sh #annetaan käyttäjälle (u) suoritus (x=exceute) oikeudet
 
 ```
 chown-komennolla voi siirtää tiedoston omistajuuden tietylle käyttäjälle.
@@ -140,8 +140,8 @@ $ ps ux
 ```
 ps-komennon ajamisen jälkeen (jossa näkyy prosessi id, eli PID) voi joskus olla tarpeen tappaa jokin prosessi sen prosessi id:n (PID) perusteella. Tähän käytetään kill-komentoa, jonka käytössä kannattaa olla jossain määrin varovainen, sillä voi myös sammuttaa koko käyttöjärjestelmän.
 ```shell
-$ kill 1234 //annetaan prosessille mahdollisuus vielä ajaa jotain komentoja
-$ kill -9 1234 //Jos prosessi ei vielä edellisellä kuollut, niin tällä lähtee.
+$ kill 1234 #annetaan prosessille mahdollisuus vielä ajaa jotain komentoja
+$ kill -9 1234 #Jos prosessi ei vielä edellisellä kuollut, niin tällä lähtee.
 ```
 Käyttäjiä voi lisätä Linux-järjestelmissä useradd-komennolla ja salasana lisätään passwd-komennolla
 ```shell
@@ -150,10 +150,10 @@ $ sudo passwd username
 ```
 Unix-järjestelmissä on yleensä myös monia tietoliikenteeseen liittyviä käteviä komentoja.
 ```shell
-$ ping 123.343.434 //miten nopeasti osoite vastaa, voi testata vaikka omaa tuotantopalvelinta
-$ whois haaga-helia.fi //tietoja tunnuksesta
-$ ssh host.jotain.fi  //avataan ssh-etäyhteys etäpalvelimeen
-$ wget https://osoite.fi/kuva.jpeg  //Ladataan tiedosto internetistä
+$ ping 123.343.434 #miten nopeasti osoite vastaa, voi testata vaikka omaa tuotantopalvelinta
+$ whois haaga-helia.fi #tietoja tunnuksesta
+$ ssh host.jotain.fi  #avataan ssh-etäyhteys etäpalvelimeen
+$ wget https://osoite.fi/kuva.jpeg  #Ladataan tiedosto internetistä
 ```
 Ohjelmistokehittäjä pystyy ajamaan unix-järjestelmissä lukuisia kehitystyöhön liittyviä ohjelmia. Tässä vielä niistä muutamia esimerkkejä.
 ```shell
@@ -168,7 +168,7 @@ $ mongo
 
 Unix-pohjaisissa käyttöjärjestelmissä on mahdollista luoda skriptitiedostoja, joiden avulla voi esimerkiksi yhdistää monta komentoa yhdeksi komennoksi. Myös esimerkiksi yksinkertaisen haarautumislogiikan (if-else) ja silmukoiden toteuttaminen on mahdollista. Tarkemmin skriptien-kirjoittamisesta voi lukea esimerkiksi [tästä perusoppaasta](https://docs.csc.fi/support/tutorials/env-guide/linux-bash-scripts/).
 ```shell
-$ nano skripti.sh //luodaan skriptitiedosto
+$ nano skripti.sh #luodaan skriptitiedosto
 ```
 ```bash
 #!/bin/bash #skriptit avataan yleensä tällä kommentilla joka kertoo käytettävän komentorivitulkin 
@@ -176,8 +176,8 @@ echo "Hello World" #tulostetaan huvikseen teksti echo-komennolla
 ls -l | grep $1 > tamakansio.txt #ajetaan kyseisen kansion sisällöstä tiedostoon sellaiset rivit, jotka sisätävät käyttäjän skriptille antaman ensimmäisen parametrin sanan.
 ```
 ```shell
-$ chmod u+x skripti.sh //annetaan käyttäjälle suoritusoikeudet skriptiin, muuten sitä ei voi ajaa.
-$ ./skripti.sh hello //ajetaan skripti ja annetaan sille parametrina sana "hello"
+$ chmod u+x skripti.sh #annetaan käyttäjälle suoritusoikeudet skriptiin, muuten sitä ei voi ajaa.
+$ ./skripti.sh hello #ajetaan skripti ja annetaan sille parametrina sana "hello"
 ```
 
 Unix-pohjaisissa järjestelmissä on komentojen ajastuksen mahdollistava [cron-prosessi](https://opensource.com/article/17/11/how-use-cron-linux). crontab-komennolla voi määritellä ajastettavia komentojan "ajastustauluun" (cron table). crontab-komento luo käyttäjälle ajastustaulutiedoston /var/spool/cron-kansioon. Crontaulun ajastussyntaksi seuraa tiettyä kaavaa. *-merkki tarkoittaa, että kyseinen ajanmääre voi olla mitä vain.
@@ -192,11 +192,19 @@ jossa:
 * 5: Viikonpäivä (0-7 [7 tai 0 == sunnuntai])
 
 ```shell
-crontab -e //Komento avaa oletustekstieditorin, johon voi syöttää haluamansa ajastuksen
-5 0 * * * /Users/me/skripti.sh hello //Aja skripti.sh viisi minuuttia keskiyön jälkeen joka päivä
+crontab -e #Komento avaa oletustekstieditorin, johon voi syöttää haluamansa ajastuksen
+5 0 * * * /Users/me/skripti.sh hello #Aja skripti.sh viisi minuuttia keskiyön jälkeen joka päivä
 ```
 
-## Versionhallinta
+## Versionhallinta (Git) ja Github-palvelu
+
+Varsinkin kun ohjelmistoja kehitetään tiimeissä, on tärkeää hallita ohjelmiston versiohistoriaa ja mahdollistaa kehittäjille osallistuminen kaikkien komponenttien kehittämiseen silloinkin, kun joku muu saattaa kehittää kyseistä komponenttia myös. Versionhallintasovellukset toimivat arkkitehtuuriosiossa esitellyn "Event sourcing"-periaatteen mukaan, eli versionhallintaan lisätään ("commitoidaan") aina uusi muutos, mutta siellä olevia asioita ei suoraan muokata. Näin ollen versionhallinnassa voidaan aina palata minä tahansa ajanhetkenä sovelluksessa vallinneeseen tilaan.
+
+[Git-sovellus](https://git-scm.com/) on noussut nykyisin ylivoimaisesti suosituimmaksi versionhallintasovellukseksi. Git:iä käytetään monesti yhdessä [Github-palvelun](https://github.com/) kanssa, joka mahdollistaa Git-versionhallintarepositoryjen tallentamisen julkiseen verkkoon ja tarjoaa lisäksi muita käteviä toimintoja, kuten [pull-requestit](https://yangsu.github.io/pull-request-tutorial/#:~:text=What%20is%20a%20Pull%20Request,follow%2Dup%20commits%20if%20necessary.).
+
+Erona ennen suositumpiin versionhallintajärjestelmiin (SVN ja CVS), git on [hajautettu versionhallintajärjestelmä](https://fi.wikipedia.org/wiki/Hajautettu_versionhallintaj%C3%A4rjestelm%C3%A4). Tämä siis tarkoittaa sitä, että jokaisella käyttäjällä on oma paikallinen "kopio", eli repository sovelluksen versionhallinnasta. Tässä omassa repositoryssä käyttäjällä on täydet oikeudet tehdä muutoksia ja hallita omaa versiohistoriaansa. Paikallisen repositoryn lisäksi yleensä käytössä on myös ns. upstream-repository (hostattuna esimerkiksi juuri githubissa), johon käyttäjä voi yrittää tarjota omia paikallisia muutoksiaan tai hakea sieltä muiden tekemiä muutoksia.
+
+[Git-sovelluksen omassa dokumentaatiossa](https://git-scm.com/) kehutaan sen olevan helppokäyttöinen. Rehellisyyden nimissä on kuitenkin sanottava, että varsinkin kun Gittiä käytetään yhdessä remote-repositoryjen kanssa, niin koko paletti on vähintäänkin vaikea, jos ei suorastaan monimutkainen. Gitin monipuoliseen ja tehokkaaseen käyttöön liittyy paljon käsitteitä periaatteita, joiden ymmärtämiseen menee aikaa. Gitin peruskäyttö on kuitenkin melko suoraviivaista.
 
 ## Paketinhallinta ja buildaaminen
 
