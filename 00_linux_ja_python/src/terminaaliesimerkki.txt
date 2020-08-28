@@ -1,0 +1,333 @@
+teemu@virtualbox:~$ python3
+Python 3.8.2 (default, Jul 16 2020, 14:00:26) 
+[GCC 9.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+
+# Laskuoperaatiot ja muuttujien käyttäminen
+
+>>> 1 + 2
+3
+>>> summa = 1 + 2
+>>> summa
+3
+>>> summa
+3
+>>> print(summa)
+3
+>>> 5*5
+25
+>>> nimi = 'Helsinki'
+>>> vakiluku = 648553
+>>> 
+
+# Arvoilla on tyypit, mutta muuttujaan voidaan asettaa mikä vain tyyppi:
+
+>>> type(nimi)
+<class 'str'>
+>>> type(vakiluku)
+<class 'int'>
+>>> vakiluku = "100"
+>>> type(vakiluku)
+<class 'str'>
+>>> vakiluku = 648553
+>>> 
+>>> 
+>>> print(nimi)
+Helsinki
+
+# Numerot voidaan muuntaa merkkijonoiksi str()-funktiolla:
+
+>>> print(nimi + ', ' + vakiluku)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: can only concatenate str (not "int") to str
+>>> str(vakiluku)
+'648553'
+>>> print(nimi + ', ' + str(vakiluku))
+Helsinki, 648553
+
+
+# Merkkijonon käsitteleminen kirjaimien indekseillä ja osamerkkijonoina:
+
+>>> nimi[0]
+'H'
+>>> nimi[1]
+'e'
+>>> nimi[2]
+'l'
+>>> nimi[3]
+'s'
+>>> nimi[-1]
+'i'
+>>> nimi[-2]
+'k'
+>>> nimi[1:-2]
+'elsin'
+
+
+# str.upper() ja str.lower()
+
+
+>>> nimi.upper()
+'HELSINKI'
+>>> nimi.lower()
+'helsinki'
+
+
+# Moniriviset merkkijonot
+
+
+>>> # tämä on kommentti
+>>> """tämä on monirivinen kommentti
+... joka  jatkuu tälle riville"""
+'tämä on monirivinen kommentti\njoka  jatkuu tälle riville'
+>>> monirivinen = """eka
+... toka
+... kolmas
+... """
+>>> monirivinen
+'eka\ntoka\nkolmas"\n'
+>>> monirivinen.split('\n')
+['eka', 'toka', 'kolmas"', '']
+>>> monirivinen.splitlines()
+['eka', 'toka', 'kolmas"']
+
+
+# Listat
+
+
+>>> lista = monirivinen.splitlines()
+>>> lista
+['eka', 'toka', 'kolmas"']
+>>> 
+>>> lista[0]
+'eka'
+>>> lista[1]
+'toka'
+>>> lista[0:-1]
+['eka', 'toka']
+>>> 
+>>> nimet = ['Helsinki', 'Espoo', 'Vantaa']
+>>> print(nimet)
+['Helsinki', 'Espoo', 'Vantaa']
+>>> print(nimet[0])
+Helsinki
+>>> 
+>>> nimet[0] = 'Hki'
+>>> nimet
+['Hki', 'Espoo', 'Vantaa']
+
+
+# Listalle lisääminen
+
+
+>>> nimet.append('Kauniainen')
+>>> nimet
+['Hki', 'Espoo', 'Vantaa', 'Kauniainen']
+
+
+# Listalta poistaminen
+
+
+>>> del nimet[0]
+>>> nimet
+['Espoo', 'Vantaa', 'Kauniainen']
+>>> 
+>>> nimet.remove('Vantaa')
+>>> nimet
+['Espoo', 'Kauniainen']
+
+
+# Listojen ja merkkijonojen pituudet
+
+
+>>> len(nimet)
+2
+>>> print(len(nimet))
+2
+>>> len('merkkijono')
+10
+
+
+# Boolean-logiikka ja ehtorakenteet
+
+
+>>> 'Helsinki' in nimet
+False
+>>> 'Espoo' in nimet
+True
+>>> if 'Espoo' in nimet:
+...     print('Espoo on kaupunki')
+...     print(nimet)
+... 
+Espoo on kaupunki
+['Espoo', 'Kauniainen']
+>>> if 'Helsinki':
+...     print('Helsinki on True')
+... 
+Helsinki on True
+>>> if []:
+...    print('Tyhjä lista on False')
+... 
+>>> if [1, 2, 3]:
+...     print('Epätyhjä lista on True')
+... 
+Epätyhjä lista on True
+>>> 
+>>> 
+>>> "java" in "javascript"
+True
+
+
+# Toistorakenne
+
+
+>>> for kaupunki in nimet:
+...     print(kaupunki.upper())
+... 
+ESPOO
+KAUNIAINEN
+
+
+# Numeroiden läpikäynti
+
+
+>>> for i in range(0, 10):
+...     print(i)
+... 
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+>>> range(0, 10)
+range(0, 10)
+>>> 
+>>> 
+>>> list(range(0, 10))
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+>>> i = 0
+>>> i = 1
+
+
+# Oman funktion määrittely
+
+
+>>> numerot = [123, 456]
+>>> numerot
+[123, 456]
+>>> 
+>>> def laske_summa(lista_numeroita):
+...     summa = 0
+...     for numero in lista_numeroita:
+...         summa += numero
+...     return summa
+... 
+>>> laske_summa
+<function laske_summa at 0x7f83230ed670>
+>>> summa = laske_summa
+>>> summa(numerot)
+579
+>>> tulos = summa(numerot)
+>>> print(tulos)
+579
+
+
+# Pythonissa on valmis 'sum'-funktio:
+
+
+>>> sum(numerot)
+579
+
+
+# Listojen yhdistäminen
+
+
+>>> numerot
+[123, 456]
+>>> numerot + [789, 1012]
+[123, 456, 789, 1012]
+>>> [1, 2, 3] + [4, 5, 6] + [789, 1012]
+[1, 2, 3, 4, 5, 6, 789, 1012]
+
+
+# Funktion ei ole pakko palauttaa arvoa (None-tyyppi)
+
+
+>>> def foo():
+...     pass
+... 
+>>> tulos = foo()
+>>> tulos
+>>> type( foo() )
+<class 'NoneType'>
+>>> foo() == None
+True
+>>> print( foo() )
+None
+
+
+# Dict-esimerkki ja arvojen läpikäynti
+
+
+>>> kaupungit = {
+...     'Helsinki': 648553,
+...     'Espoo': 285018,
+...     'Vantaa': 229593
+... }
+>>> 
+>>> 
+>>> kaupungit.keys()
+dict_keys(['Helsinki', 'Espoo', 'Vantaa'])
+>>> kaupungit.values()
+dict_values([648553, 285018, 229593])
+>>> kaupungit.items()
+dict_items([('Helsinki', 648553), ('Espoo', 285018), ('Vantaa', 229593)])
+>>> list(kaupungit.items())[0]
+('Helsinki', 648553)
+>>> hki = list(kaupungit.items())[0]
+>>> hki
+('Helsinki', 648553)
+>>> type(hki)
+<class 'tuple'>
+>>> nimi, vakiluku = hki
+>>> nimi
+'Helsinki'
+>>> vakiluku
+648553
+>>> 
+>>> kaupungit.items()
+dict_items([('Helsinki', 648553), ('Espoo', 285018), ('Vantaa', 229593)])
+>>> parit = list(kaupungit.items())
+>>> parit
+[('Helsinki', 648553), ('Espoo', 285018), ('Vantaa', 229593)]
+>>> eka = parit[0]
+>>> toka = parit[1]
+>>> kolmas = parit[2]
+
+
+# Arvojen läpikäynti pareittain:
+
+
+>>> kaupunki, vakiluku = parit[0]
+>>> kaupunki
+'Helsinki'
+>>> vakiluku
+648553
+>>> kaupunki, vakiluku = parit[1]
+>>> kaupunki
+'Espoo'
+>>> vakiluku
+285018
+>>> kaupunki, vakiluku = parit[2]
+>>> kaupunki
+'Vantaa'
+>>> vakiluku
+229593
+
+>>> a, b, c = (1, 2, 3)
