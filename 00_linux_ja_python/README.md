@@ -146,7 +146,19 @@ Perusasennuksen lisäksi suosittelemme sinua asentamaan VirtualBoxin "guest addi
 
 Virtuaalikoneen ja "host"-koneen välillä on myös mahdollista synkronoida leikepöytä. Tällöin pystyt kopioimaan ja liittämään tekstiä kätevästi eri järjestelmien välillä. Käynnissä olevan virtuaalikoneen "Devices"-valikosta löytyy kohta "Shared clipboard", jonka avulla voit valita leikepöydän toimintalogiikan haluamaksesi.
 
+
 # Python-intro
+
+Oppitunnilla tavoitteemme on päästä vauhtiin Python-koodin kirjoittamisessa. Tavoitteena ei ole oppia kielen syntaksia tai rakenteita ulkoa, vaan saada käsitys työvaiheista ja saatavilla olevista hyvistä tietolähteistä, jotta pääsette konkreettisesti kirjoittamaan koodia.
+
+Kurssilla käsittelemme Pythonia vertaillen sitä jo valmiiksi tuntemaamme Java-kieleen ja Javan standardikirjastoon.
+
+Jos haluat päästä nopeasti vauhtiin, voit lukea esimerkiksi tutoriaalin "Learn Python in 10 minutes" osoitteessa https://www.stavros.io/tutorials/python/.
+
+Laajempia valmiita oppimateriaaleja löytyy mm. seuraavat:
+
+* The Python Tutorial: https://docs.python.org/3/tutorial/
+* Ohjelmoinnin perusteet Pythonilla (mooc.fi): https://python-k20.mooc.fi/
 
 
 
@@ -167,11 +179,17 @@ Tehtävät saa ratkaista yhteistyössä kaverin kanssa, mutta molempien on osall
 
 Tehtävien toimintalogiikan ja käyttöliittymän ei tarvitse noudattaa täsmällisesti annettuja esimerkkejä, mutta toimintaidean tulee olla samankaltainen.
 
+
+## Tehtävien arviointi
+
+Hyväksyttyyn suoritukseen sinun ei tarvitse toteuttaa kumpaakaan tehtävää täydellisesti. Palauta siis ohjelmat siinä kunnossa mihin saat ne toteutettua. Arviointi skaalataan suuntaa-antavasti siten, että ensimmäisen tehtävän ratkaisulla saat arvosanan 3 ja molemmat tehtävät ratkaisemalla arvosanan 5.
+
+
 ## Tehtävä 1
 
 Kirjoita Python-kielinen ohjelma `postitoimipaikka.py`, joka kysyy  käyttäjältä postinumeron ja kertoo, mihin postitoimipaikkaan kyseinen postinumero kuuluu. 
 
-Tehtävän ratkaisemiseksi sinun tulee kysyä käyttäjältä syötettä ja etsiä postinumeroaineistosta syötettä vastaava arvo.
+Tehtävän ratkaisemiseksi sinun tulee kysyä käyttäjältä syötettä ja etsiä postinumeroaineistosta syötettä vastaava arvo. Voit joko tallentaa postinumeroaineiston koneellesi ja [lukea sen levyltä](https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files) tai toteuttaa ohjelmasi [lukemaan tiedoston suoraan verkosta](https://docs.python.org/3/howto/urllib2.html).
 
 Esimerkkisuoritus:
 
@@ -193,7 +211,8 @@ Esimerkkisuoritus:
     Kirjoita postitoimipaikka: Porvoo
     Postinumerot: 06100, 06401, 06151, 06150, 06101, 06500, 06450, 06400, 06200
 
-Ohjelman olisi hyvä toimia kaupungin nimen kirjainkoosta riippumatta.
+Yritä toteuttaa ohjelma siten, että syötetyn postitoimipaikan kirjainkoolla ei ole merkitystä. Huolehdi myös siitä, että tuntemattoman nimen syöttäminen ei kaada ohjelmaa.
+
 
 ## Postinumeroaineisto
 
@@ -210,7 +229,20 @@ Tässä tehtävässä sinun tulee käyttää postinumerotiedostoa [postcode_map_
 }
 ```
 
-Voit joko tallentaa kyseisen tiedoston itsellesi paikallisesti tai koodata ohjelmasi lukemaan tiedoston sisällön verkosta.
+JSON-muotoisen merkkijonon parsiminen Pythonin tietorakenteiksi onnistuu standardikirjaston `json`-kirjastolla: https://docs.python.org/3/library/json.html:
+
+```python
+>>> import json
+>>>
+>>> json.loads("""{
+...     "74701": "KIURUVESI",
+...     "35540": "JUUPAJOKI",
+...     "74700": "KIURUVESI",
+...     "73460": "MUURUVESI"
+... }""")
+{'74701': 'KIURUVESI', '35540': 'JUUPAJOKI', '74700': 'KIURUVESI', '73460': 'MUURUVESI'}
+>>>
+```
 
 > *Data on postin ja sitä koskee kaikki http://www.posti.fi/liitteet-yrityksille/ehdot/postinumeropalvelut-palvelukuvaus-ja-kayttoehdot.pdf dokumentin käyttöehdot.*
 >
