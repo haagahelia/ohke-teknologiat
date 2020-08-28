@@ -21,7 +21,11 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
 <table>
 <thead><tr><th>Päivämäärä</th><th>Aihe</th></tr></thead><tbody>
  <tr><td>pe 28.8.</td><td>Kurssin johdanto, ympäristöt ja perustason Python<br>
- <a href="00_linux_ja_python">Oppimateriaali ja tehtävät</a>
+ <a href="00_linux_ja_python">Oppimateriaali ja tehtävät</a><br />
+<br />
+Video 1: <a href="https://web.microsoftstream.com/video/3984ea5c-7782-484c-af51-ce6d50b049ad">kurssin yleiset käytännöt ja johdanto 1. tehtävään</a><br />
+Video 2: <a href="https://web.microsoftstream.com/video/bff8f1a1-025d-4c13-8287-7721032be43c">Python-ohjelmointi</a><br /><br />
+<a href="00_linux_ja_python/src/">Lähdekoodit</a>
  </td></tr>
  <tr><td>pe 4.9.</td><td>Tietorakenteet ja algoritmit</td></tr>
  <tr><td>pe 11.9.</td><td>Ohjelmistoarkkitehtuurit ja patternit</td></tr>

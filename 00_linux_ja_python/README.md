@@ -160,7 +160,13 @@ Laajempia valmiita oppimateriaaleja löytyy mm. seuraavat:
 * The Python Tutorial: https://docs.python.org/3/tutorial/
 * Ohjelmoinnin perusteet Pythonilla (mooc.fi): https://python-k20.mooc.fi/
 
+## Oppitunnin tallenteet
 
+[Osa 1: kurssin yleiset käytännöt ja johdanto 1. tehtävään](https://web.microsoftstream.com/video/3984ea5c-7782-484c-af51-ce6d50b049ad)
+
+[Osa 2: Python-ohjelmointi](https://web.microsoftstream.com/video/bff8f1a1-025d-4c13-8287-7721032be43c)
+
+[Lähdekoodit](src/)
 
 # Koodaustehtävä
 
