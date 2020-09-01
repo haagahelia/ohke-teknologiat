@@ -27,7 +27,8 @@ Video 1: <a href="https://web.microsoftstream.com/video/3984ea5c-7782-484c-af51-
 Video 2: <a href="https://web.microsoftstream.com/video/bff8f1a1-025d-4c13-8287-7721032be43c">Python-ohjelmointi</a><br /><br />
 <a href="00_linux_ja_python/src/">Lähdekoodit</a>
  </td></tr>
- <tr><td>pe 4.9.</td><td>Tietorakenteet ja algoritmit</td></tr>
+ <tr><td>pe 4.9.</td><td>Tietorakenteet ja algoritmit<br>
+ <a href="01_tietorakenteet_ja_algoritmit">Oppimateriaali ja tehtävät</a><br /></td></tr>
  <tr><td>pe 11.9.</td><td>Ohjelmistoarkkitehtuurit ja patternit</td></tr>
  <tr><td>pe 18.9.</td><td>Ohjelmistoarkkitehtuurit ja patternit</td></tr>
  <tr><td>pe 25.9.</td><td>Testaaminen</td></tr>
