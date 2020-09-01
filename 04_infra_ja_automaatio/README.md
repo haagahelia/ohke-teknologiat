@@ -202,11 +202,88 @@ Varsinkin kun ohjelmistoja kehitetään tiimeissä, on tärkeää hallita ohjelm
 
 [Git-sovellus](https://git-scm.com/) on noussut nykyisin ylivoimaisesti suosituimmaksi versionhallintasovellukseksi. Git:iä käytetään monesti yhdessä [Github-palvelun](https://github.com/) kanssa, joka mahdollistaa Git-versionhallintarepositoryjen tallentamisen julkiseen verkkoon ja tarjoaa lisäksi muita käteviä toimintoja, kuten [pull-requestit](https://yangsu.github.io/pull-request-tutorial/#:~:text=What%20is%20a%20Pull%20Request,follow%2Dup%20commits%20if%20necessary.).
 
-Erona ennen suositumpiin versionhallintajärjestelmiin (SVN ja CVS), git on [hajautettu versionhallintajärjestelmä](https://fi.wikipedia.org/wiki/Hajautettu_versionhallintaj%C3%A4rjestelm%C3%A4). Tämä siis tarkoittaa sitä, että jokaisella käyttäjällä on oma paikallinen "kopio", eli repository sovelluksen versionhallinnasta. Tässä omassa repositoryssä käyttäjällä on täydet oikeudet tehdä muutoksia ja hallita omaa versiohistoriaansa. Paikallisen repositoryn lisäksi yleensä käytössä on myös ns. upstream-repository (hostattuna esimerkiksi juuri githubissa), johon käyttäjä voi yrittää tarjota omia paikallisia muutoksiaan tai hakea sieltä muiden tekemiä muutoksia.
+Erona ennen suositumpiin versionhallintajärjestelmiin (SVN ja CVS), git on [hajautettu versionhallintajärjestelmä](https://fi.wikipedia.org/wiki/Hajautettu_versionhallintaj%C3%A4rjestelm%C3%A4). Tämä siis tarkoittaa sitä, että jokaisella käyttäjällä on oma paikallinen "kopio", eli repository sovelluksen versionhallinnasta. Tässä omassa repositoryssä käyttäjällä on täydet oikeudet tehdä muutoksia ja hallita omaa versiohistoriaansa. Paikallisen repositoryn lisäksi yleensä käytössä on myös ns. upstream-repository (hostattuna esimerkiksi juuri githubissa), johon käyttäjä voi yrittää tarjota omia paikallisia muutoksiaan tai hakea sieltä muiden tekemiä muutoksia. Gitin ydinajatukseen kuuluu versionhallinnan kolme "tasoa": 
+1. lokaalien muutosten taso
+1. stagingtaso (git add) 
+1. varsinainen versionhallinta (git commit)
+1. (lisäksi vielä mahdollinen upstream-repon taso) (git push).
+
+Esimerkiksi siis muutosten peruuttaminen (undo) tapahtuu eri tavalla riippuen missä tasolla muutokset ovat.
 
 ![Git ja Github](img/git_ja_github.png)
 
-[Git-sovelluksen omassa dokumentaatiossa](https://git-scm.com/) kehutaan sen olevan helppokäyttöinen. Rehellisyyden nimissä on kuitenkin sanottava, että varsinkin kun Gittiä käytetään yhdessä remote-repositoryjen kanssa, niin koko paletti on vähintäänkin vaikea, jos ei suorastaan monimutkainen. Gitin monipuoliseen ja tehokkaaseen käyttöön liittyy paljon käsitteitä periaatteita, joiden ymmärtämiseen menee aikaa. Gitin peruskäyttö on kuitenkin melko suoraviivaista.
+[Git-sovelluksen omassa dokumentaatiossa](https://git-scm.com/) kehutaan sen olevan helppokäyttöinen. Rehellisyyden nimissä on kuitenkin sanottava, että varsinkin kun Gittiä käytetään yhdessä remote-repositoryjen kanssa, niin koko paletti on vähintäänkin vaikea, jos ei suorastaan monimutkainen. Gitissä on lukemattomia komentoja ja saman asian voi monesti tehdä usealla eri komennolla. Gitin monipuoliseen ja tehokkaaseen käyttöön liittyy paljon käsitteitä periaatteita, joiden ymmärtämiseen menee aikaa. Gitin peruskäyttö on kuitenkin melko suoraviivaista.
+
+Esimerkiksi Atlassian-ohjelmistoyhtiö on tehnyt gitin käytöstä [melko hyvän tutoriaalin](https://www.atlassian.com/git/tutorials/setting-up-a-repository) johon voi tutustua (käytettynä yhdessä heidän githubia vastaavan bitbucket-palvelunsa kanssa). Käydään tässä myös läpi Gitin peruskäytössä ohjelmoijalle oleellisimpia ydintoimintoja.
+
+```shell
+#luodaan paikallinen git-repository kansiosta, jossa nyt olemme
+$ git init 
+
+#Lisätään tiedosto staging tasolle lokaalisti
+$ git add README.md
+
+#Lisätään .-asteriksilla kaikki muuttuneet tiedostot tämän kansion alta staging tasolle.
+$ git add .
+
+#Lisätään kaikki staging tason muutokset lokaaliin versionhallintaan.
+$ git commit -m "initial commit"
+
+# Liitetään paikalliselle repositorylle upstream repo githubissa (tyhjä upstream-repo on luotu ensin githubissa)
+git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
+
+#Lisätään kaikki paikalliset versionhallinan muutokset remote-repositoryn (eli origin) master-haaraan (branch)
+$ git push origin master
+$ git push #oletuksena tämänhetkinen paikallinen haara pusketaan originin samaan haaraan, eli ei välttämättä tarvitse erikseen mainita origin master.
+
+#Ladataan jokin repository githubista omalle koneelle, jos ei siis itse perusteta uutta projektia git init:llä.
+$ git clone https://github.com/user/repo.git
+
+#Päivitään kaikki upstream-repon muiden tekemät muutokset itselle nykyisessä haarassa (esim. master).
+#Git pyrkii tekemään ns. fast-forward automergen, mutta mikäli se ei onnistu tässä, niin git tekee omien ja muiden muutosten yhdistämisestä uuden commit:in versionhallintaan (ja kenties pyytää tekemään tiedostojen manuaalista yhdistämistä ensin). Merge-commit pitää sitten myös pushata upstream-repoon.
+$ git pull
+#git pull on sama kuin: 
+$ git fetch #haetaan muutokset
+$ git merge #tehdään yhdistäminen paikallisiin muutoksiin
+#rebase-vivulla käytettynä git pull ottaa remote-repositoryn viimeisimmät muutokset ja lisää lokaalit muutokset niiden "perään" versiohistoriassa. Eli toisin sanoen lokaalit muutokset "rebasetaan" (ja mergataan) uudestaan remote repositoryn masterin viimeisimmästä tilanteesta, eikä siitä tilanteesta jolloin lokaalit muutokset ja remote-repon tiet alunperin erosivat, tällöin ei synny myöskään uutta merge-committia. Rebase:n etuna on versihistorian pysyminen siistinä ja lineaarisena, mutta sen käyttäminen voi alkuun olla vähän outoa. Tästä hieman sekavasta asiasta voi lukea lisää esim täältä: https://www.atlassian.com/git/tutorials/merging-vs-rebasing
+$ git pull --rebase
+
+
+#Luo uusi lokaali haara (branch) ja siirry sinne 
+$ git checkout -b uusihaara
+#myös tämä komentosarja tekee saman asian
+$ git branch uusihaara
+$ git checkout uusihaara
+#Kun olet tehnyt muutoksia omassa haarassasi ja haluat yhdistää muutokset esim master-haaraan, niin
+$ git checkout master #siirry master haaraan
+$ git merge uusihaara #yhdistä muutokset uudesta haarasta masteriin
+$ git branch -d uusihaara #poista uusihaara
+
+#Katso mitä lokaaleja muutoksia olet tehnyt
+$ git status
+#Katsele riveittäin tekemiäsi lokaaleja muutoksia 
+$ git diff #voit myös antaa paramterina tarkemman tiedostonimen
+
+# Tuhoa lokaalit muutoksesi
+$ git checkout . #checkout-komentoa voi käyttää näinkin..
+# Tai
+$ git restore muutettu_tiedosto.txt
+# Jos olet jo lisännyt muutokset staginigiin git add:llä, niin sitten tuhoamiseen pitää käyttää git reset komentoa.
+
+#Jos haluat hetkeksi laittaa lokaalit muutoksesi syrjään ja palata niihin myöhemmin.
+$ git stash #muutoksesi menevät stashiin ja working directorysi on tyhjä
+#...tee mitä haluat... ja sitten kun haluat taas ottaa muutoksesi takaisin stashista
+$ git stash apply
+
+#Tulosta versiohallinan commit-logi ja eri commitien hash-numerot siististi.
+$ git log --oneline
+
+#Älä kokeile tätä kotona! Jos on jostain syystä ihan pakko, niin voit siirtää ensin lokaalin repositorysi tiettyyn committiin ja sitten pakottaa myös upstream-repositoryn HEAD:in osoittamaan siihen. Tämä tuhoaa mahdollisesti versiohistoriaa ja saattaa muutenkin sekoittaa asioita entisestään.
+git reset --hard 8c4c448 #haluamasi commitin hash-numero
+git push --force origin master
+
+```
+
 
 ## Paketinhallinta ja buildaaminen
 
