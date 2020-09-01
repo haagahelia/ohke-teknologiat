@@ -245,7 +245,16 @@ $ git pull
 #git pull on sama kuin: 
 $ git fetch #haetaan muutokset
 $ git merge #tehdään yhdistäminen paikallisiin muutoksiin
-#rebase-vivulla käytettynä git pull ottaa remote-repositoryn viimeisimmät muutokset ja lisää lokaalit muutokset niiden "perään" versiohistoriassa. Eli toisin sanoen lokaalit muutokset "rebasetaan" (ja mergataan) uudestaan remote repositoryn masterin viimeisimmästä tilanteesta, eikä siitä tilanteesta jolloin lokaalit muutokset ja remote-repon tiet alunperin erosivat, tällöin ei synny myöskään uutta merge-committia. Rebase:n etuna on versihistorian pysyminen siistinä ja lineaarisena, mutta sen käyttäminen voi alkuun olla vähän outoa. Tästä hieman sekavasta asiasta voi lukea lisää esim täältä: https://www.atlassian.com/git/tutorials/merging-vs-rebasing
+# rebase-vivulla käytettynä git pull ottaa remote-repositoryn viimeisimmät muutokset ja 
+# lisää lokaalit muutokset niiden "perään" versiohistoriassa. 
+# Eli toisin sanoen lokaalit muutokset "rebasetaan" (ja mergataan) uudestaan 
+# remote repositoryn masterin viimeisimmästä tilanteesta, 
+# eikä siitä tilanteesta jolloin lokaalit muutokset ja remote-repon 
+# tiet alunperin erosivat, tällöin ei synny myöskään uutta merge-committia. 
+# Rebase:n etuna on versihistorian pysyminen siistinä ja lineaarisena, 
+# mutta sen käyttäminen voi alkuun olla vähän outoa. 
+# Tästä hieman sekavasta asiasta voi lukea lisää esim täältä: 
+# https://www.atlassian.com/git/tutorials/merging-vs-rebasing
 $ git pull --rebase
 
 
@@ -268,7 +277,8 @@ $ git diff #voit myös antaa paramterina tarkemman tiedostonimen
 $ git checkout . #checkout-komentoa voi käyttää näinkin..
 # Tai
 $ git restore muutettu_tiedosto.txt
-# Jos olet jo lisännyt muutokset staginigiin git add:llä, niin sitten tuhoamiseen pitää käyttää git reset komentoa.
+# Jos olet jo lisännyt muutokset staginigiin git add:llä, 
+# niin sitten tuhoamiseen pitää käyttää git reset komentoa.
 
 #Jos haluat hetkeksi laittaa lokaalit muutoksesi syrjään ja palata niihin myöhemmin.
 $ git stash #muutoksesi menevät stashiin ja working directorysi on tyhjä
@@ -278,7 +288,10 @@ $ git stash apply
 #Tulosta versiohallinan commit-logi ja eri commitien hash-numerot siististi.
 $ git log --oneline
 
-#Älä kokeile tätä kotona! Jos on jostain syystä ihan pakko, niin voit siirtää ensin lokaalin repositorysi tiettyyn committiin ja sitten pakottaa myös upstream-repositoryn HEAD:in osoittamaan siihen. Tämä tuhoaa mahdollisesti versiohistoriaa ja saattaa muutenkin sekoittaa asioita entisestään.
+#Älä kokeile tätä kotona! Jos on jostain syystä ihan pakko, niin voit siirtää ensin lokaalin 
+#repositorysi tiettyyn committiin ja sitten pakottaa myös 
+#upstream-repositoryn HEAD:in osoittamaan siihen. Tämä tuhoaa mahdollisesti versiohistoriaa ja saattaa
+#muutenkin sekoittaa asioita entisestään.
 git reset --hard 8c4c448 #haluamasi commitin hash-numero
 git push --force origin master
 
