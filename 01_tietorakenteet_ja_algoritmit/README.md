@@ -21,8 +21,8 @@ Vertaa esimerkiksi seuraavia mahdollisia tietorakenteita postinumeroiden ja post
 
 ```json
 [
-	{"postalCode": "74701", "name": "KIURUVESI"},
-	{"postalCode": "35540", "name": "JUUPAJOKI"},
+    {"postalCode": "74701", "name": "KIURUVESI"},
+    {"postalCode": "35540", "name": "JUUPAJOKI"},
     {"postalCode": "74700", "name": "KIURUVESI"},
     {"postalCode": "73460", "name": "MUURUVESI"}
 ]
@@ -64,4 +64,3 @@ Katso seuraavat kolme videota, joka esittelevät ohjelmistokehittäjän perusosa
 [![Data Structures You Must Know (as a Software Developer)](https://img.youtube.com/vi/sVxBVvlnJsM/mq1.jpg)](https://youtu.be/sVxBVvlnJsM)
 
 > *Linked Lists, Arrays, Hash Table, Stack, Queue, Graph, Tree, Binary Search Tree...*
-
