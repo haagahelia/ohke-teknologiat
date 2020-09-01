@@ -69,32 +69,7 @@ Katso seuraavat kolme videota, joka esittelevät ohjelmistokehittäjän perusosa
 
 ## Oppitunti
 
-### Minkälaisten algoritmien kanssa olet päivittäin tekemisissä?
-
-* Suosittelualgoritmi?
-* Hakualgoritmi?
-* Paikannusalgoritmi?
-* Reitinhakualgoritmi?
-* Pakkausalgoritmi?
-* Pelialgoritmit?
-* Kuvanparannusalgoritmit?
-
-### Minkälaisia ongelmanratkaisuperiaatteita eri algoritmit hyödyntävät?
-
-
-* Brute force
-* Divide and conquer
-* Dynamic
-* Evolutionary
-* Graph traversal
-* Greedy
-* Heuristic
-* Learning
-* Mathematical optimization
-	* Modeling
-	* Recursion
-
-https://en.wikipedia.org/wiki/Algorithmic_technique#General_techniques
+Oppitunnin materiaalit päivitetään tänne.
 
 
 ## Tehtävä (Luonnos - tehtävä saattaa vielä muuttua)
