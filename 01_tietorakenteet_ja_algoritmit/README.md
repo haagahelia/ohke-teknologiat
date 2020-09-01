@@ -9,15 +9,13 @@ kuvaa ratkaistavan ongelman tapauksen, ja algoritmin tulee tuottaa tuloste (outp
 
 ## Tavoitteet
 
-Tällä viikolla ohjelmistokehityksen teknologioita -kurssilla on perehtyä tietorakenteiden ja algoritmien peruskäsitteisiin ja opetella arvioimaan karkeasti arilaisten algoritmisten lähestymistapojen soveltuvuutta ohjelmointiongelmiin. 
+Tällä viikolla ohjelmistokehityksen teknologioita -kurssilla tavoitteena on perehtyä tietorakenteiden ja algoritmien peruskäsitteisiin. Opettelemme arvioimaan karkeasti erilaisten algoritmisten lähestymistapojen soveltuvuutta kohtaamiimme ohjelmointiongelmiin. 
 
-Tavoitteenamme ei ole oppia laskemaan tai esittämään algoritmiemme tarkkaa tehokkuutta matemaattisilla kaavoilla, vaan käytämme laskukaavoja apuvälineenä ymmärtääksemme miksi jokin algoritmi suoriutuu samasta tehtävästä tehokkaammin kuin toinen.
+Tavoitteenamme ei ole oppia laskemaan tai esittämään algoritmiemme tarkkaa tehokkuutta matemaattisilla kaavoilla, vaan käytämme laskukaavoja apuvälineenä ymmärtääksemme, miksi jokin algoritmi suoriutuu samasta tehtävästä tehokkaammin kuin toinen. Emme myöskään harjoittele optimoimaan ohjelmiemme suorituskykyä, vaikka suorituskyky toimiikin tärkeänä mittarina tällä viikolla.
 
-Ohjelmointiongelmien ratkaisemisessa myös tietorakenteilla on erittäin merkittävä rooli. Tietorakenteiden sisäinen toteutus, esimerkiksi linkitetty lista vs. taulukkolista, vaikuttaa merkittävästi sen soveltuvuuteen erilaisten ongelmien ratkaisemisessa. 
+Ohjelmointiongelmien ratkaisemisessa algoritmien lisäksi myös tietorakenteilla on erittäin merkittävä rooli. Tietorakenteiden sisäinen toteutus, esimerkiksi linkitetty lista tai taulukkolista, vaikuttaa merkittävästi sen soveltuvuuteen erilaisten ongelmien ratkaisemisessa. 
 
-Tallentaessamme itse tietoa ohjelmiimme voimme myös vaikuttaa suuresti siihen, kuinka helposti ja nopeasti tallentamamme tieto on ohjelmakoodissa saatavilla.
-
-Vertaa esimerkiksi seuraavia mahdollisia tietorakenteita postinumeroiden ja postitoimipaikkojen tietojen tallentamiseksi:
+Tallentaessamme itse tietoa ohjelmiimme voimme itse vaikuttaa suuresti siihen, kuinka helposti ja nopeasti tallentamamme tieto on ohjelmakoodissa saatavilla. Vertaa esimerkiksi seuraavia mahdollisia tietorakenteita postinumeroiden ja postitoimipaikkojen tietojen tallentamiseksi:
 
 ```json
 [
@@ -37,13 +35,13 @@ Vertaa esimerkiksi seuraavia mahdollisia tietorakenteita postinumeroiden ja post
 }
 ```
 
-Jos tarkoituksesi olisi selvittää postinumeroa 74700 vastaava postitoimipaikan nimi, mitä sen selvittäminen vaatisi eri tietorakenteilla? Entä kumpi tietorakenne olisi myöhemmin helpommin laajennettavissa, jos postinumeroalueita varten halutaan tallentaa toimipaikan nimen lisäksi myös muita tietoja?
+Jos tarkoituksesi olisi selvittää postinumeroa 74700 vastaava postitoimipaikan nimi, mitä sen selvittäminen vaatisi eri tietorakenteilla? Entä kumpi tietorakenne olisi myöhemmin helpommin laajennettavissa, jos postinumeroalueita varten halutaan tallentaa toimipaikan nimen lisäksi myös muita tietoja? Olisiko näiden kahden tietorakenteen hyvät puolet jollain tavoin yhdistettävissä?
 
 ## Ennakkotehtävät
 
 Tietojenkäsittelyssä sama ongelma voidaan tyypillisesti ratkaista lukemattomilla erilaisilla tavoilla. Onkin olemassa lukuisia tunnettuja algoritmeja esimerkiksi listan arvojen järjestelemiseksi tai yksittäisen arvon etsimiseksi listalta. 
 
-Katso seuraavat kolme videota, joka esittelevät ohjelmistokehittäjän perusosaamisen kannalta keskeisiä algoritmeja sekä tietorakenteita, sekä iso-O -notaation, jonka avulla vertailemme algoritmien tehokkuutta eri kokoisilla syötteillä:
+Katso seuraavat kolme videota, joka esittelevät ohjelmistokehittäjän perusosaamisen kannalta keskeisiä algoritmeja sekä tietorakenteita. Videoissa tutustut myös iso O -notaatioon, jonka avulla vertailemme algoritmien tehokkuutta eri kokoisilla syötteillä:
 
 ### Video 1: [What Is an Algorithm?](https://youtu.be/PY82qqyWJJs) 7:54
 
@@ -72,6 +70,8 @@ Katso seuraavat kolme videota, joka esittelevät ohjelmistokehittäjän perusosa
 Oppitunnin materiaalit päivitetään tänne.
 
 
+
+
 ## Tehtävä (Luonnos - tehtävä saattaa vielä muuttua)
 
 Tämän viikon tehtävänä on harjoitella vapaavalintaisen järjestämisalgoritmin toteuttamista. Voit valita toteutettavan järjestämisalgoritmin esimerkiksi seuraavista:
@@ -81,16 +81,18 @@ Tämän viikon tehtävänä on harjoitella vapaavalintaisen järjestämisalgorit
 * Kuplalajittelu eli Bubble Sort: https://en.wikipedia.org/wiki/Bubble_sort
 * Pikalajittelu eli Quicksort: https://en.wikipedia.org/wiki/Quicksort
 
-Oikeassa ohjelmistoprojektissa käyttäisit Pythonin valmiita järjestämisfunktioita, joita esitellään esimerkiksi osoitteessa https://docs.python.org/3/howto/sorting.html. Tämän harjoituksen tavoitteena on kuitenkin opetella itse toteuttamaan jokin tunnettu järjestämisalgoritmi.
+Voit valita itsellesi mieluisen algoritmin esimerkiksi tutustumalla ensin niiden tehokkuuteen, tai valita sen, joka vaikuttaa toteutukseltaan sopivan yksinkertaiselta.
+
+**Huom!** Oikeassa ohjelmistoprojektissa käyttäisit Pythonin valmiita järjestämisfunktioita, joita esitellään esimerkiksi osoitteessa https://docs.python.org/3/howto/sorting.html. Tämän harjoituksen tavoitteena on kuitenkin opetella itse toteuttamaan jokin tunnettu järjestämisalgoritmi.
 
 
 ### Järjesteltävä aineisto
 
-MyHelsinki Open API on Helsinki Marketingin tarjoama avoin REST-rajapinta kaupungin tapahtumien, paikkojen ja aktiviteettien tietoihin. Rajapinnan dokumentaatio löytyy Swagger-muodossa osoitteesta http://open-api.myhelsinki.fi/doc. Kyseisessä osoitteessa on dokumentoituna niin resurssien osoitteet, niiden tukemat parametrit kuin palautettujen JSON-objektien rakenne.
+MyHelsinki Open API on Helsinki Marketingin tarjoama avoin REST-rajapinta kaupungin tapahtumien, paikkojen ja aktiviteettien tietoihin. Rajapinnan dokumentaatio löytyy Swagger-muodossa osoitteesta http://open-api.myhelsinki.fi/doc. Kyseisessä osoitteessa on dokumentoituna niin resurssien osoitteet, niiden tukemat parametrit kuin palautettujen JSON-tietueiden rakenne.
 
 Tässä tehtävässä hyödynnetään tapahtumarajapinnan tarjoamaa aineistoa osoitteesta http://open-api.myhelsinki.fi/v1/events/. Tapahtumat palautetaan rajapinnasta epäjärjestyksessä, joten joudut itse huolehtimaan tapahtumien järjestämisestä alkamisajan mukaan. 
 
-Huomaa, että **kaikilla rajapinnan palauttamilla tapahtumilla ei välttämättä ole alkamisaikaa**. Tällaisten tapahtumien kohdalla voit itse päättää, jätätkö tapahtumat huomioimatta vai kehitätkö niille vapaavalintaisen erillisen logiikan. Osalle tapahtumista on annettu nimet useilla eri kielillä, mutta joiltain nimiä puuttuu. Myös tällaisten tapahtumien kohdalla saat päättää miten käsittelet tapahtumat.
+Huomaa, että **kaikilla rajapinnan palauttamilla tapahtumilla ei välttämättä ole alkamisaikaa**. Tällaisten tapahtumien kohdalla voit itse päättää, jätätkö tapahtumat huomioimatta vai kehitätkö niille vapaavalintaisen erillisen logiikan. Osalle tapahtumista on myös annettu nimet useilla eri kielillä, kun taas joiltain nimiä puuttuu. Myös tällaisten tapahtumien kohdalla saat itse päättää, miten käsittelet tapahtumat.
 
 
 ### events_by_date.py
@@ -135,15 +137,18 @@ Kun aineisto on järjestetty, tulosta tapahtumien nimet ja ajankohdat kronologis
   07:15 Tenavakino: Kanelia kainaloon, Tatu ja Patu
   07:30 Taaperotuokio
   07:30 Satutuokio
- 
+  ...
+
 ...
 ```
 
+Arvioi tehtävää ratkaistessasi järjestämiseen kuluvaa aikaa. Miten esimerkiksi aineiston koon kaksinkertaistaminen vaikuttaisi ohjelmasi suoritusaikaan? 
+
 ### Tehtävän arviointi
 
-Ratkaisu, joka sisältää toimivan itse mallin mukaan toteutetun järjestelyalgoritmin, hyväksytään arvosanalla 5. Myös puutteelliset ratkaisut hyväksytään, kunhan niissä osoitetaan selvää yritystä tehtävän ratkaisemiseksi.
+Ratkaisu, joka sisältää toimivan itse mallin mukaan toteutetun järjestelyalgoritmin, hyväksytään arvosanalla 5. Myös puutteelliset ratkaisut hyväksytään eri arvosanoin, kunhan niissä osoitetaan selvää yritystä tehtävän ratkaisemiseksi.
 
-Toiminnallisesti oikeellinen ratkaisu, joka oman järjestelyalgoritmin sijasta hyödyntää Pythonin valmiita [sort-operaatioita](https://docs.python.org/3/howto/sorting.html) oikeuttaa arvosanaan 3.
+Toiminnallisesti oikea ratkaisu, joka oman järjestelyalgoritmin sijasta hyödyntää Pythonin valmiita [sort-operaatioita](https://docs.python.org/3/howto/sorting.html), oikeuttaa arvosanaan 3.
 
 ### Tehtävän palauttaminen
 
