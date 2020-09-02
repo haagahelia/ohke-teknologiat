@@ -190,7 +190,7 @@ Monivalintakysymyksiä yllä olevasta lukumateriaalista.
 
 ### Tehtävä 2 (30% kierroksen arvosanasta):
 
-[DIPTehtava.java](src/DIPTehtava.java) tiedostosta löytyy useampi Java-luokka, jotka kuvaavat yksinkertaista moottoripyörien tai autojen käsittelyyn tehtyä järjestelmää. Sinun tehtäväsi olisi refaktoroida tiedostossa olevat luokat siten, että järjestelmän arkkitehtuuri seuraa Dependency inversion-periaatetta (DIP).
+[DIPTehtava.java](src/DIPTehtava.java) tiedostosta löytyy useampi Java-luokka, jotka kuvaavat yksinkertaista moottoripyörien tai autojen käsittelyyn tehtyä järjestelmää. Sinun tehtäväsi olisi refaktoroida tiedostossa olevat luokat siten, että järjestelmän arkkitehtuuri seuraa Dependency inversion-periaatetta (DIP) ja hyödyntää olioiden monimuotoisuutta.
  
 Kaikki luokat on kirjoitettu tehtävän palautuksen helpottamiseksi samaan
 tiedostoon.
