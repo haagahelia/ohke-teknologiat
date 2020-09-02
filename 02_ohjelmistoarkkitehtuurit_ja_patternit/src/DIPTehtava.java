@@ -144,7 +144,7 @@ class BusinessLuokka {
     Auto auto = new Auto(56000, 2018, true);
 
     /**
-     * Tämä on järjestelmän ydinbusineskseen liittyvä tarpeellinen toiminto.
+     * Tämä on järjestelmän ydinbusinekseen liittyvä tarpeellinen toiminto.
      * 
      * @return Palauta keskimäärin joka vuosi ajetut kilometrit auton käyttöönoton
      *         jälkeen
