@@ -140,7 +140,7 @@ Tiedonsiirtoon käytetyt patternit (esim. [publish/subscribe](https://en.wikiped
 
 ## Tehtävät
 
-### Tehtävä 1: 
+### Tehtävä 1 (30% kierroksen arvosanasta): 
 Monivalintakysymyksiä yllä olevasta lukumateriaalista.
 
 1. Mitkä seuraavista ovat hyvän arkkitehtuurin tunnusmerkkejä tietyssä ohjelmistojärjestelmässä (valitse yksi tai useampi)?
@@ -188,7 +188,21 @@ Monivalintakysymyksiä yllä olevasta lukumateriaalista.
 * Palveluiden versioiminen
 * Koko järjestelmän testaaminen
 
-### Tehtävä 2:
+### Tehtävä 2 (30% kierroksen arvosanasta):
+
+[DIPTehtava.java](src/DIPTehtava.java) tiedostosta löytyy useampi Java-luokka, jotka kuvaavat yksinkertaista moottoripyörien tai autojen käsittelyyn tehtyä järjestelmää. Sinun tehtäväsi olisi refaktoroida tiedostossa olevat luokat siten, että järjestelmän arkkitehtuuri seuraa Dependency inversion-periaatetta (DIP).
+ 
+Kaikki luokat on kirjoitettu tehtävän palautuksen helpottamiseksi samaan
+tiedostoon.
+  
+Tiedoston voi kääntää komennolla: *javac DIPTehtava.java*
+Kun kääntäminen on onnistunut, niin luodun .class-luokan voi ajaa 
+komennolla: *java DIPTehtava*.
+
+Palauta lopuksi sama tiedosto Teamsiin.
+
+### Tehtävä 3 (20% kierroksen arvosanasta):
+
 [Redux](https://redux.js.org/tutorials/essentials/part-1-overview-concepts) on kirjasto, jota käytetään monesti React-sovellusten yhteydessä. Reduxin tarkoitus olisi selkeyttää sovelluksen tilan hallintaa tilanteissa, joissa tila uhkaa hajautua sekavasti eri komponentteihin. 
 Reduxin käyttäminen perustuu omaan pieneen suunnittelumalliin, eli arkkitehtuurimalliin. Malli koostuu kolmesta ydinkomponentista: [Actioneista](https://redux.js.org/basics/actions), [Reducerista](https://redux.js.org/basics/reducers) sekä [Säiliöstä](https://redux.js.org/basics/store) (Store). Tässä mallissa Actionit kertovat mitä halutaan tehdä (ja välittävät tämän tiedon Reducerille). Reducer päättää miten Actionin haluama asia tehdään ja miten uusi tila määritellään. Reducer-komponentin idea pohjautuu funktionaalisen ohjelmoinnin [reduce (toiselta nimeltä fold tai accumulate) funktioon](https://en.wikipedia.org/wiki/Fold_%28higher-order_function%29). (Funktionaalisen ohjelmoinnin Reduce-funktiolle annetaan parametrina lista ja tavoitteena on palauttaa vain yksi redusoitu/acculumoilitu arvo. Redusoivaa funktiota sovelletaan listan alkioihin (tai tässä tapauksessa tämänhetkiseen tila-arvoon) ja lopulta palautetaan lopputulos, joka syntyy redusoivan funktion soveltamisesta yksi kerrallaan listan arvoihin.) Funktionaalisen ohjelmoinnin periaatteiden mukaisesti Reducer ei muokkaa vanhaa tilaa, vaan palauttaa kokonaan uuden tilan, Reducerin tulee muutenkin olla ns. ["puhdas funktio"](https://en.wikipedia.org/wiki/Pure_function) ilman sivuvaikutuksia.
 
@@ -196,8 +210,9 @@ Reduxin käyttäminen perustuu omaan pieneen suunnittelumalliin, eli arkkitehtuu
 
 Reduxia voi käyttää (ja sen periaatteita seurata) myös ilman Reactia. Tiedostossa [Reduxperiaatteet.js](src/Reduxperiaatteet.js) on luotu tiedostopohja, josta löytyy metodipohja Reducer-metodille, kahdelle Action-metodille sekä Redux säiliön luomiselle (lisäksi samassa src-kansiossa on npm:lle tarpeellinen [package.json](src/package.json)). Sinun tehtäväsi on täydentää Reducer-metodia sekä kahta Action metodia siten, että Redux-säiliö palauttaa tiedostossa kuvatun halutun lopputuloksen. Tässä tapauksessa siis lisäämme ja poistamme säiliöön yksinkertaisia väreihin liittyviä tietoja. Tärkeintä tässä tehtävässä olisi tutustua Reduxin arkkitehtuurin toimintaperiaatteita Reduxin dokumentaatiota ja googlea hyödyntäen ja yrittää toteuttaa tämä pieni ohjelma Reduxin arkkitehtuuriperiaatteita seuraten. Reduxista ja sen periaatteista voi lukea myös esim [täältä](https://redux.js.org/introduction/getting-started). (muista ajaa src-kansiossa *npm install* komento alkuun, jolloin npm asentaa Redux-kirjaston, johon on määritelty riippuvuus src-kansion package.json-tiedostossa).
 
+Palauta lopuksi sama tiedosto Teamsiin.
 
-### Tehtävä 3:
+### Tehtävä 4 (20% kierroksen arvosanasta):
 1. Piirrä arkkitehtuurikaavio komponenteista ja teknologioista sekä luokkakaavio luokista ohjelmistoprojekti2-järjestelmästänne mikäli järjestelmänne on arkkitehtuurillisesti riittävän haastava ja kiinnostava. Jos järjestelmänne on arkkitehtuurillisesti hyvin simppeli, niin tätä vaihtoehtoa ei voi tehdä.
 
 1. Toinen vaihtoehto on laatia arkkitehtuurikuvaukset (järjestelmä- ja luokkakaavio) järjestelmästä, jolla toteuttaisit reaaliaikaisesti toimivan web/mobiili-chatalustan, jossa käyttäjät voivat lähetellä viestejä toisilleen eri kanavilla sekä yksityisesti kahden käyttäjä kesken. 
