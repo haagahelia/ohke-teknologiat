@@ -143,6 +143,12 @@ class BusinessLuokka {
      */
     Auto auto = new Auto(56000, 2018, true);
 
+    /**
+     * Tämä on järjestelmän ydinbusineskseen liittyvä tarpeellinen toiminto.
+     * 
+     * @return Palauta keskimäärin joka vuosi ajetut kilometrit auton käyttöönoton
+     *         jälkeen
+     */
     public int laskeKeskimaaraisetKilometritPerVuosi() {
         return auto.getAjetutKilometrit() / (Calendar.getInstance().get(Calendar.YEAR) - auto.getVuosimalli());
     }
