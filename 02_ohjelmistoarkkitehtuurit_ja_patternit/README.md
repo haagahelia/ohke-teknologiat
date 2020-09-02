@@ -36,6 +36,8 @@ Hyvä arkkitehtuuri:
 1. Maksimoi ohjelmoijien tuottavuuden
 (Martin R. Clean Architecture)
 
+## Hyvän arkkitehtuurin periaatteet
+
 Hyvässä arkkitehtuurissa järjestelmän komponentit ja toiminnnot on jaoteltu siten, että komponenttien välillä ei ole tarpeettomia sisäisiä yhteyksiä, jotka hankaloittavat muutosten tekemistä. Tällöin puhutaan komponenttien [“loose coupling”:sta](https://en.wikipedia.org/wiki/Loose_coupling). Toisaalta komponenttien sisällä asioiden tulisi palvella samaa keskeistä tavoitetta tai tarvetta. Komponenttien sisällä pyritään siis saavuttamaan [“high cohesion”](https://en.wikipedia.org/wiki/Cohesion_%28computer_science%29). 
 Hyvin rakennetussa järjestelmässä arkkitehti on osannut jakaa järjestelmän toiminnot siten, että loose coupling ja high cohesion tavoitteet saavutetaan. Tässä suunnittelutyössä Robert Martinin listaamista arkkitehtuurisuunnitelun periaatteista (yhteensä 5 kpl) kenties kaksi oleellisinta ovat **Single Responsibility Principle (SRP)** sekä **Open-Closed Principle (OCP)**. (Martin R., Clean Architecture).
 
@@ -67,7 +69,11 @@ On olemassa [kolme pääohjelmointiparadigmaa](https://fi.wikipedia.org/wiki/Luo
 
 Huomionarvoista on se, että paradigmat eivät oikeastaan tarjoa ohjelmoijalle mitään lisätyökaluja, vaan sen sijaan ainoastaan rajoittavat ohjelmoinnissa sallittuja asioita. 
 
+### Strukturoitu ohjelmointi
+
 **Strukturoidun ohjelmoinnin** ansiosta otettiin käyttöön funktiot, jotka mahdollistivat ohjelmien jakaminen pienempiin “aliohjelmiin”. Isommat tietokoneohjelmat voidaan siis koostaa joukosta pienempiä funktioita, jotka on helpompi rakentaa ja toisaalta myös todentaa virheellisiksi (vrt. yksikkötestaaminen). Tällainen ongelman pilkkominen pienemmiksi osiksi (decomposition) on hyvässä arkkitehtuurisuunnittelussa tärkeä käytäntö.
+
+### Olio-ohjelmointi
 
 **Olio-ohjelmoinnin** periaatteiden mukaan funktioiden lisäksi pyritään saattamaan yhteen myös kyseisiin funktioihin (toimintoihin) liittyvää dataa. Eli hieman yksinkertaistetusti sanottuna, ohjelma koostuu luokista, joihin on koostettu tietty data ja siihen liittyvät toiminnot (funktiot). Luokat eivät paljasta sisäistä toteutustapaansa, vaan tarjoavat ainoastaan rajapinnan, jonka avulla luokkaa voi käyttää. Tätä toimintojen koostamista kutsutaan *[kapseloinniksi](https://fi.wikipedia.org/wiki/Kapselointi) (encapsulation)* ja se on yksi yleensä olio-ohjelmointiin liitetty ominaisuus. 
 
@@ -82,6 +88,8 @@ Olio-paradigman mukaan ohjelmoiduista järjestelmistä tulee monesti rakenteelta
 
 Tässä luokkakaaviossa on esitetty esimerkkinä kuvitteellisen web-järjestelmän luokkakaavio seuraten löyhästi UML-mallinnuskieltä. Kaavion perusteella olisi tarkoitus saada lukija nopeasti ymmärtämään, että kyseessä on perinteistä oliomallinnusta, kerrosarkkitehtuuria sekä webjärjestelmien MVC-mallin periaatteita seuraava sovellus.
 ![UML luokkakaavio](img/UML-luokkakaavio.png) 
+
+### Funktionaalinen ohjelmointi
 
 Kolmas pääohjelmointiparadigma, **Funktionaalinen ohjelmointi**, perustuu oleellisesti siihen, että muuttujien arvoja ei muuteta (immutability). Tarvittaessa luodaan uusi muuttuja, johon uusi arvo tallentuu. 
 Arkkitehdin näkökulmasta moni ohjelmoinnin ongelma poistuu, jos muuttujan arvo ei ikinä voi muuttua. Tällöin ei voi syntyä ongelmia siitä, että samaa muuttujaa muokataan kahdesta eri paikasta ja eri säikeistä melkein samaan aikaan (concurrent update problem). 
@@ -100,7 +108,9 @@ Yleensä webjärjestelmässä käyttäjä antaa jonkin uuden syötteen tai tekee
 Kun käyttäjä esimerkiksi tekee näkymässä muutoksen, niin Reactissa ei suoraan päivitetä tähän liittyviä näkymäkomponentteja, vaan ainoastaan tilamuuttujia. Sitten ne näkymät, jotka ovat kiinnostuneita kyseisten tilamuuttujien arvoista renderöivät oman sisältönsä uudelleen ja päivittyvät näyttämään kuten muutoksen edellyttävät. 
 Näkymät siis määritellään deklaratiivisesti suhteessa tilamuuttujiin, eikä niitä tarvitse päivittää aina kaikkien mahdollisten muutosten yhteydessä erikseen annettavilla imperatiivisilla käskyillä.
 
-[Reaktiivinen ohjelmointi](https://fi.wikipedia.org/wiki/Reaktiivinen_ohjelmointi) on myös monella tapaa kiinnostava ohjelmointiparadigma esimerkiksi webjärjestelmissä, joissa reagoidaan käyttäjän syötteisiin. Reaktiivisessa ohjelmoinnissa [ohjelma koostetaan virroista](https://stackoverflow.com/questions/1028250/what-is-functional-reactive-programming/1030631#1030631). JavaScriptillä reaktiivista ohjelmointia voi tehdä esimerkiksi [RxJS](https://www.learnrxjs.io/) kirjastolla. Myös esimerkiksi Suomessa [Reaktorilla](https://www.reaktor.com/) työskentelevän [Juha Paanasen](https://github.com/raimohanska) kehittämä [Bacon.js](https://baconjs.github.io/) on tätä paradigmaa toteuttava kirjasto. Virtojen käsitettä on pyritty visualisoimaan [RxJS marbles-sivustolla](https://rxmarbles.com/).
+### Muita alatason ohjelmointiparadigmoja
+
+[Reaktiivinen ohjelmointi](https://fi.wikipedia.org/wiki/Reaktiivinen_ohjelmointi) on myös monella tapaa kiinnostava ohjelmointiparadigma esimerkiksi webjärjestelmissä, joissa reagoidaan käyttäjän syötteisiin. Reaktiivisessa ohjelmoinnissa [ohjelma koostetaan virroista](https://stackoverflow.com/questions/1028250/what-is-functional-reactive-programming/1030631#1030631). JavaScriptillä reaktiivista ohjelmointia voi tehdä esimerkiksi [RxJS](https://www.learnrxjs.io/) kirjastolla. Myös esimerkiksi Suomessa [Reaktorilla](https://www.reaktor.com/) työskentelevän [Juha Paanasen](https://github.com/raimohanska) kehittämä [Bacon.js](https://baconjs.github.io/) on [funktionaalista reaktiivista ohjelmointiparadigmaa](https://www.quora.com/What-is-difference-between-Functional-Reactive-Programming-Functional-Programming-and-Reactive-Programming) toteuttava kirjasto. Virtojen käsitettä on pyritty visualisoimaan [RxJS marbles-sivustolla](https://rxmarbles.com/).
 
 ## Esimerkkejä arkkitehtuurikuvauksista
 
