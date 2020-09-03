@@ -63,25 +63,474 @@ Katso seuraavat kolme videota, joka esittelevät ohjelmistokehittäjän perusosa
 
 > *Linked Lists, Arrays, Hash Table, Stack, Queue, Graph, Tree, Binary Search Tree...*
 
+Tätä videota vastaava esittely tärkeistä tietorakenteista löytyy myös tekstimuodossa osoitteesta https://towardsdatascience.com/8-common-data-structures-every-programmer-must-know-171acf6a1a42
 
+
+
+## Postinumerot-tehtävien malliratkaisut
+
+Tehtävien malliratkaisuissa käsitellään lukuisia asioita, joita ei Python-oppitunnilla käsitelty ja joita ei odotettu tai toivottu huomioitavan vielä omissa tehtäväpalautuksissa. 
+
+Vaihtoehtoisten toteutustapojen ja aiheen syventävämmän käsittelyn tavoitteena on, että myös ne, jotka saivat tehtävän täysin oikein, hyötyisivät ongelmien käsittelemisestä vaihtoehtoisista näkökulmista.
+
+### `postitoimipaikka.py`
+
+> *Kirjoita Python-kielinen ohjelma postitoimipaikka.py, joka kysyy käyttäjältä postinumeron ja kertoo, mihin postitoimipaikkaan kyseinen postinumero kuuluu.*
+
+Tämä toteutus ratkaisee tehtävän suoraviivaisesti, mutta on toteutettu ongelmallisesti. Moduulitasolle kirjoitettu koodi tekee logiikan testaamisesta hankalaa. `hae_postinumerot`-funktio voisi olla hyödyllinen myös toisessa Python-moduulissa, mutta moduulitasolle toteutettu logiikka estää tämän funktion hyödyntämisen toisesta moduulista:
+
+```python
+import urllib.request
+import json
+
+def hae_postinumerot():
+    # https://docs.python.org/3/howto/urllib2.html
+    with urllib.request.urlopen('https://raw.githubusercontent.com/theikkila/postinumerot/master/postcode_map_light.json') as response:
+        # https://docs.python.org/3/library/json.html
+        return json.loads(response.read())
+
+postinumerot = hae_postinumerot()
+
+postinumero = input('Kirjoita postinumero: ')
+
+if postinumero in postinumerot:
+    postitoimipaikka = postinumerot[postinumero]
+    print(postitoimipaikka.title())
+else:
+    print('Postitoimipaikkaa ei löytynyt :(')
+```
+
+Parannellussa versiossa aineiston hakeminen, syötteen kysyminen ja muu logiikka on kirjoitettu omaan `main`-funktioonsa. Funktiota kutsutaan moduulin lopussa, mikäli ohjelma on käynnistetty tästä moduulista:
+
+```python
+if __name__ == '__main__':
+    main()
+```
+
+Voit tutustua `__name__`-muuttujaan ja sen `__main__`-erikoisarvoon esimerkiksi osoitteessa https://medium.com/python-features/understanding-if-name-main-in-python-a37a3d4ab0c3.
+
+```python
+import urllib.request
+import json
+
+def hae_postinumerot():
+    # https://docs.python.org/3/howto/urllib2.html
+    with urllib.request.urlopen('https://raw.githubusercontent.com/theikkila/postinumerot/master/postcode_map_light.json') as response:
+        # https://docs.python.org/3/library/json.html
+        return json.loads(response.read())
+
+def main():
+    postinumerot = hae_postinumerot()
+
+    postinumero = input('Kirjoita postinumero: ')
+
+    if postinumero in postinumerot:
+        postitoimipaikka = postinumerot[postinumero]
+        print(postitoimipaikka.title())
+    else:
+        print('Postitoimipaikkaa ei löytynyt :(')
+
+# main-funktio suoritetaan vain, jos tämä moduuli on "pääohjelma"
+if __name__ == '__main__':
+    main()
+```
+
+### `postinumerot.py`
+
+> *Kirjoita Python-kielinen ohjelma postinumerot.py, joka kysyy käyttäjältä postitoimipaikan nimen, ja listaa kaikki kyseisen postitoimipaikan postinumerot.*
+
+Tässä tehtävässä tarkoituksena oli herättää ajatuksia siitä, kannattaako annettua kaupunkia etsiä esimerkiksi toistorakenteella, vai kannattaisiko annettu dict-tietorakenne muuttaa toiseen muotoon, josta halutut tiedot selviäisivät suoraan.
+
+Ensimmäisessä ratkaisuversiossa postinumeroiden hakeminen on toteutettu "imperatiivisesti", eli käymällä tietorakenne toistorakenteen avulla läpi ja poimimalla yksi kerrallaan ehdot täyttäviä postinumeroita uudelle listalle:
+
+```python
+from postitoimipaikka import hae_postinumerot
+
+
+def main():
+    numerot_ja_toimipaikat = hae_postinumerot()
+
+    etsittava = input('Kirjoita postitoimipaikka: ').strip().upper()
+
+    loydetyt = []
+
+    for postinumero, toimipaikka in numerot_ja_toimipaikat.items():
+        if etsittava == toimipaikka:
+            loydetyt.append(postinumero)
+
+    if loydetyt:
+        print('Postinumerot: ' + ', '.join(loydetyt))
+    else:
+        print('Postitoimipaikkaa ei löytynyt :(')
+
+
+if __name__ == '__main__':
+    main()
+```
+
+Yllä oleva ratkaisu toimii ja toteuttaa tehtävänannon. Python-kielessä on kuitenkin myös muita tapoja rakentaa tietorakenteita, kuten listoja ja sanakirjoja. Pystymmekin toteuttamaan postinumeroiden valitsemisen listalle "deklaratiivisemmalla" lähestymistavalla, hyödyntäen list comprehension -syntaksia:
+
+> *List comprehensions provide a concise way to create lists. Common applications are to make new lists where each element is the result of some operations applied to each member of another sequence or iterable, or to create a subsequence of those elements that satisfy a certain condition.*
+>
+> *https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions*
+
+```python
+loydetyt = [
+    numero for numero, toimipaikka in numerot_ja_toimipaikat.items()
+    if toimipaikka == etsittava
+]
+```
+
+Tämän tehtävän kannalta yllä esitetyt ratkaisut ovat tarkoituksenmukaisia ja nopeita, mutta mikäli ohjelmassa kysyttäisiin useita eri postitoimipaikkoja, tulisi alkuperäinen liki 5000 alkion tietorakenne käydä kokonaisuudessaan läpi jokaista käyttäjän syötettä varten. Myöhempiä hakuja voidaan nopeuttaa huomattavasti jäsentämällä sanakirja ensin toiseen muotoon, jossa avaimina ovat toimipaikkojen nimet ja avaimina lista postinumeroista:
+
+```json
+{
+  "SALO": [ "24102", "24280", "24100", "24101", "24130", "24240", "24260" ],
+  "LASSILA": [ "29680" ],
+  "KELTAKANGAS": [ "46860" ],
+  "NAUVO": [ "21661", "21660" ]
+}
+```
+
+Tästä tietorakenteesta voidaan hakea yhtä toimipaikan nimeä vastaavat postinumerot erittäin nopeasti myös useita kertoja:
+
+```python
+from postitoimipaikka import hae_postinumerot
+
+
+def main():
+    numerot_ja_toimipaikat = hae_postinumerot()
+
+    toimipaikat_ja_numerot = {}
+
+    for numero, toimipaikka in numerot_ja_toimipaikat.items():
+        # alustetaan toimipaikka, jos sitä ei ole vielä sanakirjassa:
+        if toimipaikka not in toimipaikat_ja_numerot:
+            toimipaikat_ja_numerot[toimipaikka] = []
+
+        toimipaikat_ja_numerot[toimipaikka].append(numero)
+
+    etsittava = input('Kirjoita postitoimipaikka: ').strip().upper()
+
+    if etsittava in toimipaikat_ja_numerot:
+        postinumerot = toimipaikat_ja_numerot[etsittava]
+        print('Postinumerot: ' + ', '.join(postinumerot))
+    else:
+        print('Postitoimipaikkaa ei löytynyt :(')
+
+
+if __name__ == '__main__':
+    main()
+```
 
 ## Oppitunti
 
-Oppitunnin materiaalit päivitetään tänne.
+### Minkälaisten algoritmien kanssa olet päivittäin tekemisissä?
+
+* Suosittelualgoritmi?
+* Hakualgoritmi?
+* Paikannusalgoritmi?
+* Reitinhakualgoritmi?
+* Pakkausalgoritmi?
+* Pelialgoritmit?
+* Kuvanparannusalgoritmit?
+
+### Minkälaisia ongelmanratkaisuperiaatteita eri algoritmit hyödyntävät?
+
+* Brute force
+* Divide and conquer
+* Dynamic
+* Evolutionary
+* Graph traversal
+* Greedy
+* Heuristic
+* Learning
+* Mathematical optimization
+	* Modeling
+	* Recursion
+
+https://en.wikipedia.org/wiki/Algorithmic_technique#General_techniques
+
+<!-- Tietoa voidaan varastoida tietokoneen muistiin lukuisilla tavoilla. Tapoja, joilla tieto jäsennetään, kutsutaan tietorakenteiksi. Esimerkiksi meille tuttu tietorakenne **lista** mahdollistaa datan tallentamisen, lisäämisen ja etsimisen peräkkäisten arvojen avulla. Listat voidaan toteuttaa "konepellin alla" useilla erilaisilla tavoilla, kuten linkitettynä listana tai taulukkoon perustuvana listana.-->
+
+
+## Teoriaosuus ja "koodiprojekti"
+
+Tämän oppitunnin tavoitteena on kirjoittaa ohjelma, joka lukee listat suomen- ja englanninkielisistä sanoista ja selvittää, mitkä sanat esiintyvät molemmissa kielissä. Aihe on lainattu [Helsingin yliopiston Antti Laaksosen luennolta](https://www.cs.helsinki.fi/u/ahslaaks/tira19/luento1/) ja sovellettu omiin tarpeisiimme.
+
+Aineistona käytämme [Kotimaisten kielten tutkimuskeskuksen nykysuomen sanalistaa](http://kaino.kotus.fi/sanat/nykysuomi/) sekä Linuxin sanalistaa `/usr/share/dict/words`. Nykysuomen sanalista [kotus-sanalista-suomi.txt](src/kotus-sanalista-v1/kotus-sanalista-suomi.txt) sisältää 94&nbsp;110 sanaa ja Linux-jakelusta riippuen englanninkielinen sanalista voi sisältää esimerkiksi 102&nbsp;401 sanaa. Tämä aineisto on riittävän suuri, jotta pystymme huomaamaan merkittäviä eroja erilaisissa tietorakenteissa ja algoritmeissa, joilla yritämme selvittää yhteiset sanat.
+
+
+### 1. Mitkä samat sanat esiintyvät molemmissa kielissä?
+
+Kirjoitetaan Python-skripti, joka lukee kaikki sanat kahdesta tiedostosta listoille. Kun listat on muodostettu, etsitään listalta A kaikki sanat, jotka esiintyvät myös listalla B! Lopuksi tulostetaan löytyneet sanat:
+
+
+```python
+def read_words(file_path):
+    with open(file_path, encoding='utf-8') as file:
+        return file.read().splitlines()
+
+
+def main():
+    finnish_words = read_words('kotus-sanalista-v1/kotus-sanalista-suomi.txt')
+    english_words = read_words('/usr/share/dict/words')
+
+    for word in finnish_words:
+        if word in english_words:
+            print(word)
+
+
+if __name__ == '__main__':
+    main()
+```
+
+* Kuinka kauan algoritmin suoritus kestää?
+* Mistä kesto johtuu?
+* Mikä on algoritmin kokonaisaikavaatimus tällä hetkellä?
+* Mikä on Pythonin `x in list`-operaation aikavaatimus? https://wiki.python.org/moin/TimeComplexity
+
+
+#### Algoritmin tehokkuuden arviointi
+
+> *Algoritmin tehokkuus riippuu siitä, montako askelta se suorittaa. Tavoitteemme on nyt arvioida algoritmin askelten määrää suhteessa syötteen kokoon n. Esimerkiksi jos syötteenä on taulukko, n on taulukon koko, ja jos syötteenä on merkkijono, n on merkkijonon pituus.*
+>
+> *Antti Laaksonen, [Tietorakenteet ja algoritmit -kirja](https://github.com/pllk/tirakirja/raw/master/tirakirja.pdf)*
+
+Koska edellä esitetyssä koodissa käydään aina koko suomenkielinen sanalista läpi, on ulomman toistorakenteen tehokkuus suoraan suhteessa suomenkielisten sanojen määrään (n). Jokaista suomenkielistä sanaa kohden käydään läpi lista englanninkielisiä sanoja `word in english_words` -operaatiolla. Sisäisesti tämä operaatio vertailee etsittävää sanaa kaikkiin englanninkielisen listan sanoihin (m). 
+
+Vertailuoperaatioita tehdään siis jopa n * m kappaletta, joka meidän aineistollamme tarkoittaa jopa 9&nbsp;000&nbsp;000&nbsp;000 vertailuoperaatiota.
+
+Algoritmin tehokkuus  | Vertailujen määrä             | Suoritusaika
+----------------------|-------------------------------|--------------
+O(n * m)              | < 9&nbsp;000&nbsp;000&nbsp;000| noin luokkaa kolme minuuttia
+
+
+### 2. Miten voimme nopeuttaa algoritmin toimintaa?
+
+Tiedämme, että molemmat aineistot ovat aakkosjärjestyksessä. Sen sijaan, että kävisimme listan yksi kerrallaan alusta alkaen läpi,  voimmekin aloittaa etsimisen keskeltä ja rajata etsittävästä aineistosta puolet pois, riippuen siitä, onko etsittävä arvo aakkosissa ennen vai jälkeen keskikohdassa olevaa alkiota!
+
+Kun lista on järjestyksessä, voidaan etsiminen aloittaa keskeltä ja rajata etsimistä aina siten, että pystymme puolittamaan etsittävän alueen! Tätä kutsutaan binäärihauksi eli puolitushauksi: https://www.cs.usfca.edu/~galles/visualization/Search.html
+
+```python
+>>> etsittava = "villa"
+>>> keskikohta = len(finnish_words) // 2 # 47055
+>>> finnish_words[keskikohta]
+'nimivakuus'
+```
+
+Koska yllä olevassa esimerkissä etsitty sana `'villa'` on suurempi kuin keskimmäinen sana `'nimivakuus'`, sanat 0-47055 voidaan rajata pois! Tätä voidaan toistaa niin kauan, kunnes olemme löytäneet etsityn sanan, tai puolittaneet aineiston loppuun.
+
+Muutetaan vaiheessa 1 kehitettyä sovellusta siten, että puolitamme etsittävän aineiston. Toteutetaan siis oma binäärihaku! 
+
+```python
+# tiedosto binary_search.py
+# tutustu myös valmiiseen toteutukseen https://docs.python.org/3/library/bisect.html
+def binary_search(word, list_of_words):
+    left = 0
+    right = len(list_of_words) - 1
+
+    while left <= right:
+        middle = int((left + right) / 2)
+        if list_of_words[middle] < word:
+            left = middle + 1
+        elif list_of_words[middle] > word:
+            right = middle - 1
+        else:
+            return True
+
+    return False
+```
+
+```python
+from binary_search import binary_search
+
+
+def read_words(file_path):
+    with open(file_path, encoding='utf-8') as file:
+        return file.read().splitlines()
+
+
+def main():
+    finnish_words = read_words('kotus-sanalista-v1/kotus-sanalista-suomi.txt')
+    english_words = read_words('/usr/share/dict/words')
+
+    for word in finnish_words:
+        if binary_search(word, english_words):
+            print(word)
+
+
+if __name__ == '__main__':
+    main()
+```
+
+```bash
+python3 -m cProfile -s calls sanalistat.py
+```
+
+* Kuinka kauan ohjelman suoritus kestää tällä kertaa? 
+* Onko ero havaittava edelliseen versioon nähden? 
+* Mikä on puolitushaun aikavaatimus?
+* Mikä on algoritmin kokonaisaikavaatimus nyt?
+* Riittäisikö meille, jos vain toinen aineisto olisi järjestetty?
+
+
+#### Binäärihaun tehokkuuden arviointi
+
+Algoritmimme uudessa versiossa suomenkielinen sanalista käydään edelleen läpi kokonaisuudessaan, eli n kertaa. Englanninkielistä sanalistaa puolestaan ei enää käydä läpi kokonaan jokaista suomenkielistä sanaa kohden, vaan sanalistaa puolitetaan, kunnes aineisto on saatu pilkottua loppuun.
+
+Entä kuinka monta kertaa aineisto voidaan puolittaa, jotta jäljelle jää vielä jotain puolitettavaa?
+
+1. luku kaksi voidaan puolittaa kerran
+1. luku neljä voidaan puolittaa kaksi kertaa
+1. luku kahdeksan voidaan puolittaa kolme kertaa
+1. luku kuusitoista voidaan puolittaa neljä kertaa...
+
+Toisin sanoen, tietty lista voidaan aina puolittaa sen pituuden kaksikantaisen logaritmin verran kertoja. Tämä on valtava parannus aikaisempaan lineaariseen hakuun verrattuna, koska nyt yhden sanan hakeminen esimerkiksi 102&nbsp;401 sanan aineistosta vaatii korkeintaan 17 vertailuoperaatiota! Maksimissaan vertailuja tehdään siis yhteensä enää alle 1&nbsp;600&nbsp;000 kappaletta.
+
+```python
+>>> import math
+>>>
+>>> math.log2(102_401) # maksimimäärä puolitusoperaatioita tämän kokoiselle aineistolle
+16.64387027852469
+```
+
+Algoritmin tehokkuus  | Vertailujen määrä     | Suoritusaika
+----------------------|-----------------------|--------
+O(n * log(m))         | < 1&nbsp;600&nbsp;000 | muutama sekunti
+
+
+**Huom!** Oikeassa ohjelmistoprojektissa käyttäisit Pythonin valmista [bisect](https://docs.python.org/3/library/bisect.html)-moduulia, mutta koska haluamme oppia, toteutamme algoritmin itse.
+
+### 3. Miten käytetty tietorakenne vaikuttaa ohjelman nopeuteen?
+
+Suomenkielisen sanalistan läpikäyntiä voi olla mahdotonta nopeuttaa, koska haluamme yhä käydä kaikki sanat läpi. Sen sijaan voimme yrittää nopeuttaa englanninkielisten sanojen hakua entisestään käyttämällä jotain muuta tietorakennetta kuin listoja.
+
+Olisiko meillä muita tietorakenteita, joita voisimme käyttää listojen sijasta? Mikä tietorakenne olisi nopea hakujen tekemiseen?
+
+Hajautustaulut (sanakirja), toimivat eri periaatteella kuin listat. Listoilla arvot esiintyvät peräkkäin ja esimerkiksi merkkijono 'nimi' voi olla listan ensimmäisenä tai viimeisenä, riippuen listan muusta sisällöstä. Hajautettavat tietorakenteet toimivat puolestaan eri toimintaperiaatteella. Jokaiselle arvolle lasketaan sijainti tietorakenteessa hajautusfunktion avulla, joten teoriassa arvon löytyminen edellyttää vain yhden arvon tarkastamisen tietorakenteesta: O(1):
+
+```python
+>>> hash('python')
+1263623612
+>>> hash('java')
+362104960
+>>> hash('javascript')
+-2131589936
+```
+
+Meidän tarvitsee luoda sanakirja vain siitä listasta, josta etsimme sanoja:
+
+```python
+def read_words(file_path):
+    with open(file_path, encoding='utf-8') as file:
+        return file.read().splitlines()
+
+
+def main():
+    finnish_words = read_words('kotus-sanalista-v1/kotus-sanalista-suomi.txt')
+    english_words = read_words('/usr/share/dict/words')
+
+    english_dict = {word: True for word in english_words}
+    for word in finnish_words:
+        if word in english_dict:
+            print(word)
+
+
+if __name__ == '__main__':
+    main()
+
+```
+
+* Kuinka kauan suoritus kestää tällä kertaa?
+* Mistä ero johtuu?
+* Mikä on dict-tietorakenteen `x in dict`-operaation aikavaatimus? https://wiki.python.org/moin/TimeComplexity
+* Sanakirjan muodostaminen: toistorakenne vs. [dict comprehension](https://www.python.org/dev/peps/pep-0274/)
+
+#### Sanakirjatoteutuksen tehokkuuden arviointi
+
+Sanakirjasta hakeminen vie keskimäärin yhden operaation, vaikka teoreettisesti epätasaisesti jakautuneet sanakirjat voivat vaatia jopa kokonsa verran hakuoperaatiota, mikäli hajautusfunktio toimii tehottomasti. Sanakirjan muodostaminen vie aikaa saman verran kuin sanakirjasta hakeminen, eli englanninkielisen aineiston koko `m` vaikuttaa samassa suhteessa tarvittavien operaatioiden määrään sanakirjaa muodostettaessa. Hakuoperaatioita tehdään edelleen `n` kappaletta, joten tehokkuus on suuruusluokkaa O(m + n) tai O(n).
+
+Algoritmin tehokkuus  | Operaatioiden määrä  | Suoritusaika
+----------------------|----------------------|--------
+O(n)                  | ~200 000             | alle sekunti
+
+### 4. Ongelman muotoilu toisella tavalla
+
+Määritellään ongelma uudelleen joukko-opin näkökulmasta: yhden kielen sanat on joukko sanoja. Kahden kielen yhteiset sanat ovat kahden joukon leikkaus. Käyttämällä [Pythonin joukkoja (set)](https://docs.python.org/3/library/stdtypes.html#set-types-set-frozenset), haluttu osajoukko saadaan selville ilman yhtään itse kirjoitettua toisto-, vertailu- tai hakuoperaatiota:
+
+```python
+>>> {'rodeo', 'mafia', 'villa', 'peruna', 'riisi'} & {'rodeo', 'mafia', 'villa', 'potato', 'rice'}
+{'rodeo', 'mafia', 'villa'}
+```
+
+Joukoiksi muutettuna koodi näyttää esimerkiksi seuraavalta:
+
+```python
+def read_words(file_path):
+    with open(file_path, encoding='utf-8') as file:
+        return file.read().splitlines()
+
+
+def main():
+    finnish_words = read_words('kotus-sanalista-v1/kotus-sanalista-suomi.txt')
+    english_words = read_words('/usr/share/dict/words')
+
+    intersection = set(finnish_words) & set(english_words)
+    for word in intersection:
+        print(word)
+
+
+if __name__ == '__main__':
+    main()
+```
+
+* Mikä on suoritusaika nyt?
+* Mikä on set-tietorakenteen leikkauksen aikavaatimus? https://wiki.python.org/moin/TimeComplexity
+
+
+
+## Lajittelualgoritmit ja suoritusajan kasvu tietomäärän kasvaessa
+
+> *Lajittelualgoritmit eli järjestämisalgoritmit ovat varsin keskeisiä algoritmeja ohjelmistotekniikassa. Lajittelualgoritmin tarkoitus on järjestää lista sovittuun järjestykseen, esimerkiksi numero- tai aakkosjärjestykseen. Lajittelualgoritmeilla on keskeinen merkitys sovelluksissa, jotka käsittelevät suuria tietomääriä. Lajittelualgoritmien nopeutta on tutkittu ohjelmistotekniikassa verrattain paljon niiden merkittävyyden vuoksi. Parhaiden yleiskäyttöisten lajittelualgoritmien asymptoottinen suoritusaika on luokkaa O(nlog n).*
+>
+> https://fi.wikipedia.org/wiki/Lajittelualgoritmi
+
+
+"Parhaiden yleiskäyttöisten lajittelualgoritmien asymptoottinen suoritusaika on luokkaa O(nlog n)", mitä se tarkoittaa? Entä onko esim n<sup>2</sup> merkittävästi huonompi suoritusaika?
+
+Tehokkuus       | Opiskelijoita (n = 50)  | Tapahtumia (n = 4000) | Sanoja (n = 100 000)  | Kansalaisia (n = 5 500 000)
+----------------|---------------------|-------------------|-------------------|------------------------
+O(1)            | 1                   | 1                 | 1                 | 1
+O(n)            | 50                  | 4 000             | 100 000           | 5 500 000
+O(log(n))       | ?                   | ?                 | ?                 | ?
+O(n * log(n))   | ?                   | ?                 | ?                 | ?
+O(n * n)        | ?                   | ?                 | ?                 | ?
 
 
 
 
-## Tehtävä (Luonnos - tehtävä saattaa vielä muuttua)
+## Viikon koodaustehtävä
 
 Tämän viikon tehtävänä on harjoitella vapaavalintaisen järjestämisalgoritmin toteuttamista. Voit valita toteutettavan järjestämisalgoritmin esimerkiksi seuraavista:
 
 * Lisäyslajittelu eli Insertion Sort: https://en.wikipedia.org/wiki/Insertion_sort
-* Lomituslajittelu eli Merge Sort: https://en.wikipedia.org/wiki/Merge_sort
-* Kuplalajittelu eli Bubble Sort: https://en.wikipedia.org/wiki/Bubble_sort
-* Pikalajittelu eli Quicksort: https://en.wikipedia.org/wiki/Quicksort
 
-Voit valita itsellesi mieluisen algoritmin esimerkiksi tutustumalla ensin niiden tehokkuuteen, tai valita sen, joka vaikuttaa toteutukseltaan sopivan yksinkertaiselta.
+	<a title="Simpsons contributor / CC BY-SA (https://creativecommons.org/licenses/by-sa/3.0)" href="https://commons.wikimedia.org/wiki/File:Insertion_sort.gif"><img width="128" alt="Insertion sort" src="https://upload.wikimedia.org/wikipedia/commons/4/42/Insertion_sort.gif"></a>
+
+* Lomituslajittelu eli Merge Sort: https://en.wikipedia.org/wiki/Merge_sort
+
+	<a title="Swfung8 / CC BY-SA (https://creativecommons.org/licenses/by-sa/3.0)" href="https://commons.wikimedia.org/wiki/File:Merge-sort-example-300px.gif"><img width="256" alt="Merge-sort-example-300px" src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif"></a>
+
+* Kuplalajittelu eli Bubble Sort: https://en.wikipedia.org/wiki/Bubble_sort
+
+	<a href="https://commons.wikimedia.org/wiki/File:Bubble-sort-example-300px.gif#/media/File:Bubble-sort-example-300px.gif"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif" alt="Bubble-sort-example-300px.gif"></a>
+
+* Pikalajittelu eli Quicksort: https://en.wikipedia.org/wiki/Quicksort
+	
+	<a href="https://commons.wikimedia.org/wiki/File:Sorting_quicksort_anim.gif#/media/File:Sorting_quicksort_anim.gif"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Sorting_quicksort_anim.gif" alt="Sorting quicksort anim.gif"></a>
+
+Voit valita itsellesi mieluisen algoritmin esimerkiksi tutustumalla ensin niiden tehokkuuteen, tai valita sen, joka vaikuttaa toteutukseltaan sopivan yksinkertaiselta. Muista myös, että voit kysyä Teamsissa neuvoa mihin vain tehtävässä kohtaamaasi haasteeseen liittyen. Todennäköisesti samojen haasteiden parissa kamppailee myös moni muu kurssilainen.
 
 **Huom!** Oikeassa ohjelmistoprojektissa käyttäisit Pythonin valmiita järjestämisfunktioita, joita esitellään esimerkiksi osoitteessa https://docs.python.org/3/howto/sorting.html. Tämän harjoituksen tavoitteena on kuitenkin opetella itse toteuttamaan jokin tunnettu järjestämisalgoritmi.
 
@@ -94,8 +543,11 @@ Tässä tehtävässä hyödynnetään tapahtumarajapinnan tarjoamaa aineistoa os
 
 Huomaa, että **kaikilla rajapinnan palauttamilla tapahtumilla ei välttämättä ole alkamisaikaa**. Tällaisten tapahtumien kohdalla voit itse päättää, jätätkö tapahtumat huomioimatta vai kehitätkö niille vapaavalintaisen erillisen logiikan. Osalle tapahtumista on myös annettu nimet useilla eri kielillä, kun taas joiltain nimiä puuttuu. Myös tällaisten tapahtumien kohdalla saat itse päättää, miten käsittelet tapahtumat.
 
+> *Some examples where you can find direct application of sorting techniques include: Sorting by price, popularity etc in e-commerce websites*
+>
+> *https://u.osu.edu/cstutorials/2016/11/21/7-algorithms-and-data-structures-every-programmer-must-know/*
 
-### events_by_date.py
+### Koodaustehtävä: events_by_date.py
 
 Kirjoita Python-skripti `events_by_date.py`, joka hakee events-rajapinnasta kaikki tapahtumat. Järjestä tapahtumat järjestykseen alkamisaikansa mukaan itse toteuttamallasi vapaasti valittavalla järjestämisalgoritmilla (ks. linkit yllä). Koodisi tulee järjestellä kokonaisia tapahtumatietueita, eli et saa poimia aineistosta järjesteltäväksi esimerkiksi pelkkiä nimiä ja alkamisaikoja.
 
@@ -153,3 +605,15 @@ Toiminnallisesti oikea ratkaisu, joka oman järjestelyalgoritmin sijasta hyödyn
 ### Tehtävän palauttaminen
 
 Palauta koodaamasi lähdekooditiedosto(t) sellaisenaan, eli **ei pakattuna** Teamsissa olevaan palautuslaatikkoon seuraavaan oppituntiin mennessä.
+
+
+----
+
+## Suomenkielisen sanalistan tekijänoikeudet 
+
+    Copyright (C) Kotimaisten kielten tutkimuskeskus 2006
+    Kotimaisten kielten tutkimuskeskuksen nykysuomen sanalista, versio 1
+    Julkaistu 15.12.2006
+
+    Sanalista julkaistaan GNU LGPL -lisenssillä.
+    Lisenssiteksti luettavissa osoitteessa http://www.gnu.org/licenses/lgpl.html
