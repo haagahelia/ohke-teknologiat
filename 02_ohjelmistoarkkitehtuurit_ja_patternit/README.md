@@ -215,7 +215,7 @@ Reduxia voi käyttää (ja sen periaatteita seurata) myös ilman Reactia. Tiedos
 Palauta lopuksi sama tiedosto Teamsiin.
 
 ### Tehtävä 2.4 (20% kierroksen arvosanasta):
-1. Piirrä arkkitehtuurikaavio komponenteista ja teknologioista sekä luokkakaavio luokista ohjelmistoprojekti2-järjestelmästänne mikäli järjestelmänne on arkkitehtuurillisesti riittävän haastava ja kiinnostava. Jos järjestelmänne on arkkitehtuurillisesti hyvin simppeli, niin tätä vaihtoehtoa ei voi tehdä.
+1. Piirrä arkkitehtuurikaavio komponenteista ja teknologioista sekä luokkakaavio luokista ohjelmistoprojekti2-järjestelmästänne mikäli järjestelmänne on arkkitehtuurillisesti riittävän haastava ja kiinnostava. Jos järjestelmänne on arkkitehtuurillisesti hyvin simppeli, niin tätä vaihtoehtoa ei voi tehdä. Et voi myöskään palauttaa samaa kaavioita tiimikaverisi kanssa, eli tehtävä tulee tehdä itsenäisesti, toki asioista voi keskustella tiimikavereiden kanssa.
 
 1. Toinen vaihtoehto on laatia arkkitehtuurikuvaukset (järjestelmä- ja luokkakaavio) järjestelmästä, jolla toteuttaisit reaaliaikaisesti toimivan web/mobiili-chatalustan, jossa käyttäjät voivat lähetellä viestejä toisilleen eri kanavilla sekä yksityisesti kahden käyttäjä kesken. 
 Chattia voi siis käyttää 2-1000 käyttäjää kerrallaan samassa chatissa. 
