@@ -224,7 +224,7 @@ Jos haluat tehtävään vielä lisää haastetta, niin suunnittele arkkitehtuuri
 Arkkitehtuurikaaviot voit piirtää haluamallasi työkalulla, esimerkiksi google-slides riittää ihan hyvin. Palauta tehtävässä lopulta siis kaksi png-kuvatiedostoa arkkitehtuurikaavioista (järjestelmätason arkkitehtuurikaavio sekä luokkatason kaavio) 
 
 ### Seminaaritehtävä 1 (täydennetään seminaarivaiheessa):
-Tutustu [FRP-ohjelmointiin](https://stackoverflow.com/questions/1028250/what-is-functional-reactive-programming/1030631#1030631) ja tee (tietynlainen) ohjelma bacon.js:llä tai RxJS:llä.
+Tutustu [FRP-ohjelmointiin](https://stackoverflow.com/questions/1028250/what-is-functional-reactive-programming/1030631#1030631) ja tee (tietynlainen) ohjelma bacon.js:llä tai RxJS:llä. Myös [Node-RED](https://nodered.org/) sovellusta voi miettiä tähän vaiheeseen.
 
 ### Seminaaritehtävä 2:
 Mikropalveluihin perustuvan pienen palvelun rakentaminen (esim autentikointipalvelu pyörii omana palvelunaan).
