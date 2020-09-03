@@ -201,6 +201,8 @@ komennolla: *java DIPTehtava*.
 
 Palauta lopuksi sama tiedosto Teamsiin.
 
+*Lisäpohdintaa tehtävään: Jos haluat tehtävän tekemisen jälkeen vielä pohtia DIP:tä ja olioiden monimuotoisuutta lisää, niin kokeile toteuttaa myös Moottoripyörän ja Auton ajoneuvoveron laskeminen DIP-arkkitehtuurimallin mukaisesti. Ajoneuvoveron suuruus riippuu nyt käyttämättömistä fieldeistä, eli siitä onko kyseessä kevytmoottoripyörä tai vastaavasti auton tapauksessa farmariauto. Voit vaikka harjoituksen vuoksi toteuttaa laskennat kaavalla, jossa ajoneuvovero määräytyy: (ajoneuvon käyttövuodet)x100 ja kevytmoottoripyörälle lisäksi jaetaan tuo summa kahdella ja farmariautolla kerrotaan 1.2:lla. Tämä siis tarkoittaa, että tarvitset nykyisen BusinessLuokan lisäksi omat businessluokat myös Moottoripyörälle ja Autolle. Näiden businessluokkien tulee myös toteuttaa yhteinen rajapinta, jossa on laskeAjoneuvovero()-metodi. Sovelluksen konfigurointivaiheessa tulee sitten injektoida asianmukaiset toteuttavat luokat paikoilleen, jotta laskenta menee oikein.*
+
 ### Tehtävä 3 (20% kierroksen arvosanasta):
 
 [Redux](https://redux.js.org/tutorials/essentials/part-1-overview-concepts) on kirjasto, jota käytetään monesti React-sovellusten yhteydessä. Reduxin tarkoitus olisi selkeyttää sovelluksen tilan hallintaa tilanteissa, joissa tila uhkaa hajautua sekavasti eri komponentteihin. 
