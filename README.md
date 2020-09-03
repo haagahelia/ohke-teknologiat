@@ -29,8 +29,8 @@ Video 2: <a href="https://web.microsoftstream.com/video/bff8f1a1-025d-4c13-8287-
  </td></tr>
  <tr><td>pe 4.9.</td><td>Tietorakenteet ja algoritmit<br>
  <a href="01_tietorakenteet_ja_algoritmit">Oppimateriaali ja tehtävät</a><br /></td></tr>
- <tr><td>pe 11.9.</td><td>Ohjelmistoarkkitehtuurit ja patternit</td></tr>
- <tr><td>pe 18.9.</td><td>Ohjelmistoarkkitehtuurit ja patternit</td></tr>
+ <tr><td>pe 11.9.</td><td> <a href="02_ohjelmistoarkkitehtuurit_ja_patternit">Ohjelmistoarkkitehtuurit ja patternit</a></td></tr>
+ <tr><td>pe 18.9.</td><td><a href="02_ohjelmistoarkkitehtuurit_ja_patternit">Ohjelmistoarkkitehtuurit ja patternit</a>, vierailija <a href="https://neverthink.tv/">Neverthink.tv:ltä</a></td></tr>
  <tr><td>pe 25.9.</td><td>Testaaminen</td></tr>
  <tr><td>pe 2.10.</td><td>Infra + automaatio</td></tr>
  <tr><td>pe 9.10.</td><td>ES6 / JavaScript, node, mongo</td></tr>
