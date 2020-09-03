@@ -35,7 +35,7 @@ public class DIPTehtava {
 
     private static BusinessLuokka businessLuokkaMoottoripyoralle = DIPConfigurator.konfiguraatioMoottoripyorille();
 
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         System.out.println("Järjestelmän autolla on " + "ajettu keskimäärin vuodessa: "
                 + businessLuokkaAutolle.laskeKeskimaaraisetKilometritPerVuosi() + " kilometriä");
 
@@ -54,13 +54,13 @@ public class DIPTehtava {
 class DIPConfigurator {
 
     public static BusinessLuokka konfiguraatioAutolle() {
-        BusinessLuokka businessLuokkaAutolle = new BusinessLuokka();
+        final BusinessLuokka businessLuokkaAutolle = new BusinessLuokka();
         // TODO: Konfiguroi luokka tässä järjestelmän Autolla
         return businessLuokkaAutolle;
     }
 
     public static BusinessLuokka konfiguraatioMoottoripyorille() {
-        BusinessLuokka businessLuokkaMoottoripyoralle = new BusinessLuokka();
+        final BusinessLuokka businessLuokkaMoottoripyoralle = new BusinessLuokka();
         // TODO: Konfiguroi luokka tässä järjestelmän Moottoripyoralla
         return businessLuokkaMoottoripyoralle;
     }
@@ -80,11 +80,11 @@ interface Ajoneuvo {
  * pelkästään Auto-tyyppiin liittyviä asioita 1 kpl.
  */
 class Auto implements Ajoneuvo {
-    private int km;
-    private int vuosimalli;
-    private boolean onkoFarmari;
+    private final int km;
+    private final int vuosimalli;
+    private final boolean onkoFarmari;
 
-    public Auto(int km, int vuosimalli, boolean onkoFarmari) {
+    public Auto(final int km, final int vuosimalli, final boolean onkoFarmari) {
         this.km = km;
         this.vuosimalli = vuosimalli;
         this.onkoFarmari = onkoFarmari;
@@ -108,11 +108,11 @@ class Auto implements Ajoneuvo {
  * on pelkästään Moottoripyora-tyyppiin liittyviä asioita 1 kpl.
  */
 class Moottoripyora implements Ajoneuvo {
-    private int km;
-    private int vuosimalli;
-    private boolean onkoKevytMoottoripyora;
+    private final int km;
+    private final int vuosimalli;
+    private final boolean onkoKevytMoottoripyora;
 
-    public Moottoripyora(int km, int vuosimalli, boolean onkoKevytMoottoripyora) {
+    public Moottoripyora(final int km, final int vuosimalli, final boolean onkoKevytMoottoripyora) {
         this.km = km;
         this.vuosimalli = vuosimalli;
         this.onkoKevytMoottoripyora = onkoKevytMoottoripyora;
@@ -144,17 +144,19 @@ class BusinessLuokka {
     Auto auto = new Auto(56000, 2018, true);
 
     /**
-     * Tämä on järjestelmän ydinbusinekseen liittyvä tarpeellinen toiminto.
+     * Tämä on järjestelmän ydinbusinekseen liittyvä tarpeellinen toiminto. Tämän
+     * metodin voi olettaa toimivan logiikaltaan oikein, mutta se saattaa tarvita
+     * jotain pientä päivitystä muutujien nimiin.
      * 
      * @return Palauta keskimäärin joka vuosi ajetut kilometrit auton käyttöönoton
      *         jälkeen
      */
     public int laskeKeskimaaraisetKilometritPerVuosi() {
-        return auto.getAjetutKilometrit() / (Calendar.getInstance().get(Calendar.YEAR) - auto.getVuosimalli());
+        return auto.getAjetutKilometrit() / ((Calendar.getInstance().get(Calendar.YEAR) - auto.getVuosimalli()) + 1);
     }
 
     // FIXME: Vinkki, tämmöinen metodi tarvitaan tähän luokkaan.
-    public void setAjoneuvo(Ajoneuvo ajoneuvo) {
+    public void setAjoneuvo(final Ajoneuvo ajoneuvo) {
 
     }
 }
