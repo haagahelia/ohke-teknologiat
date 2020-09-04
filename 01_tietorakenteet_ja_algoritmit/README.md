@@ -82,17 +82,17 @@ Tätä videota vastaava esittely tärkeistä tietorakenteista löytyy myös teks
 
 ### Minkälaisia ongelmanratkaisuperiaatteita eri algoritmit hyödyntävät?
 
-* Brute force
-* Divide and conquer
-* Dynamic
-* Evolutionary
-* Graph traversal
-* Greedy
-* Heuristic
-* Learning
+* Brute force           <!-- Vertaillaan kaikkia toisiinsa -->
+* Divide and conquer    <!-- järjestetään esim. mergesortilla. Pilkotaan reitinhaku a-c paloiksi a-b ja a-c -->
+* Dynamic               <!-- matemaattisempi, esim. reitinhaku pisteestä a pisteeseen b kun tiedetään reitit a-b ja b-c -->
+* Evolutionary          <!-- kokeillaan vastata kyselyyn eri tavoilla ja katsotaan mikä saa parhaan tuloksen. Muutetaan parasta tulosta n. kertaa satunnaisesti ja toistetaan. -->
+* Graph traversal       <!-- verkon läpikäynti, esim. optimaaliset reitit. Shakki, ristinolla! -->
+* Greedy                <!-- esim. paikannus, käytetään vain kolmea satelliittia vaikka olisi yhteys kymmeneen -->
+* Heuristic             <!-- Valitaan suosituin. Valitaan eka. Valitaan halvin. Suositellaan seuraavaa viestiä, jolla on yhteinen tagi. -->
+* Learning              <!-- esim. historiaan perustuva päätöksenteko. Pelit? -->
 * Mathematical optimization
-	* Modeling
-	* Recursion
+  * Modeling            <!-- matemaattinen -->
+  * Recursion           <!-- liittyy divide and conquer -ajatukseen ja graafien läpikäyntiin: esim. pilkotaan kunnes osataan ratkaista -->
 
 https://en.wikipedia.org/wiki/Algorithmic_technique#General_techniques
 
@@ -134,6 +134,21 @@ if __name__ == '__main__':
 * Mistä kesto johtuu?
 * Mikä on algoritmin kokonaisaikavaatimus tällä hetkellä?
 * Mikä on Pythonin `x in list`-operaation aikavaatimus? https://wiki.python.org/moin/TimeComplexity
+
+
+#### Algoritmin tehokkuuden arviointi
+
+> *Algoritmin tehokkuus riippuu siitä, montako askelta se suorittaa. Tavoitteemme on nyt arvioida algoritmin askelten määrää suhteessa syötteen kokoon n. Esimerkiksi jos syötteenä on taulukko, n on taulukon koko, ja jos syötteenä on merkkijono, n on merkkijonon pituus.*
+>
+> *Antti Laaksonen, [Tietorakenteet ja algoritmit -kirja](https://github.com/pllk/tirakirja/raw/master/tirakirja.pdf)*
+
+Koska edellä esitetyssä koodissa käydään aina koko suomenkielinen sanalista läpi, on ulomman toistorakenteen tehokkuus suoraan suhteessa suomenkielisten sanojen määrään (n). Jokaista suomenkielistä sanaa kohden käydään läpi lista englanninkielisiä sanoja `word in english_words` -operaatiolla. Sisäisesti tämä operaatio vertailee etsittävää sanaa kaikkiin englanninkielisen listan sanoihin (m). 
+
+Vertailuoperaatioita tehdään siis jopa n * m kappaletta<!--, joka meidän aineistollamme tarkoittaa jopa 9&nbsp;000&nbsp;000&nbsp;000 vertailuoperaatiota-->.
+
+Algoritmin tehokkuus  | Vertailujen määrä             | Suoritusaika
+----------------------|-------------------------------|--------------
+O(n * m)              | ?                             | ?
 
 
 ### 2. Miten voimme nopeuttaa algoritmin toimintaa?
@@ -205,6 +220,33 @@ python3 -m cProfile -s calls sanalistat.py
 * Riittäisikö meille, jos vain toinen aineisto olisi järjestetty?
 
 
+#### Binäärihaun tehokkuuden arviointi
+
+Algoritmimme uudessa versiossa suomenkielinen sanalista käydään edelleen läpi kokonaisuudessaan, eli n kertaa. Englanninkielistä sanalistaa puolestaan ei enää käydä läpi kokonaan jokaista suomenkielistä sanaa kohden, vaan sanalistaa puolitetaan, kunnes aineisto on saatu pilkottua loppuun.
+
+Entä kuinka monta kertaa aineisto voidaan puolittaa, jotta jäljelle jää vielä jotain puolitettavaa?
+
+1. luku kaksi voidaan puolittaa kerran
+1. luku neljä voidaan puolittaa kaksi kertaa
+1. luku kahdeksan voidaan puolittaa kolme kertaa
+1. luku kuusitoista voidaan puolittaa neljä kertaa...
+
+Toisin sanoen, tietty lista voidaan aina puolittaa sen pituuden kaksikantaisen logaritmin verran kertoja. Tämä on valtava parannus aikaisempaan lineaariseen hakuun verrattuna, koska nyt yhden sanan hakeminen esimerkiksi 102&nbsp;401 sanan aineistosta vaatii korkeintaan 17 vertailuoperaatiota! Maksimissaan vertailuja tehdään siis yhteensä enää alle 1&nbsp;600&nbsp;000 kappaletta.
+
+```python
+>>> import math
+>>>
+>>> math.log2(102_401) # maksimimäärä puolitusoperaatioita tämän kokoiselle aineistolle
+16.64387027852469
+```
+
+Algoritmin tehokkuus  | Vertailujen määrä     | Suoritusaika
+----------------------|-----------------------|--------
+O(n * log(m))         | ?                     | ?
+
+
+**Huom!** Oikeassa ohjelmistoprojektissa käyttäisit Pythonin valmista [bisect](https://docs.python.org/3/library/bisect.html)-moduulia, mutta koska haluamme oppia, toteutamme algoritmin itse.
+
 ### 3. Miten käytetty tietorakenne vaikuttaa ohjelman nopeuteen?
 
 Suomenkielisen sanalistan läpikäyntiä voi olla mahdotonta nopeuttaa, koska haluamme yhä käydä kaikki sanat läpi. Sen sijaan voimme yrittää nopeuttaa englanninkielisten sanojen hakua entisestään käyttämällä jotain muuta tietorakennetta kuin listoja.
@@ -250,7 +292,13 @@ if __name__ == '__main__':
 * Mikä on dict-tietorakenteen `x in dict`-operaation aikavaatimus? https://wiki.python.org/moin/TimeComplexity
 * Sanakirjan muodostaminen: toistorakenne vs. [dict comprehension](https://www.python.org/dev/peps/pep-0274/)
 
+#### Sanakirjatoteutuksen tehokkuuden arviointi
 
+Sanakirjasta hakeminen vie keskimäärin yhden operaation, vaikka teoreettisesti epätasaisesti jakautuneet sanakirjat voivat vaatia jopa kokonsa verran hakuoperaatiota, mikäli hajautusfunktio toimii tehottomasti. Sanakirjan muodostaminen vie aikaa saman verran kuin sanakirjasta hakeminen, eli englanninkielisen aineiston koko `m` vaikuttaa samassa suhteessa tarvittavien operaatioiden määrään sanakirjaa muodostettaessa. Hakuoperaatioita tehdään edelleen `n` kappaletta, joten tehokkuus on suuruusluokkaa O(m + n) tai O(n).
+
+Algoritmin tehokkuus  | Operaatioiden määrä  | Suoritusaika
+----------------------|----------------------|--------
+O(n)                  | ?                    | ?
 
 ### 4. Ongelman muotoilu toisella tavalla
 
