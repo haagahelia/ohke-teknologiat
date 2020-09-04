@@ -146,9 +146,9 @@ Koska edellä esitetyssä koodissa käydään aina koko suomenkielinen sanalista
 
 Vertailuoperaatioita tehdään siis jopa n * m kappaletta, joka meidän aineistollamme tarkoittaa jopa 10&nbsp;000&nbsp;000&nbsp;000 vertailuoperaatiota.
 
-Algoritmin tehokkuus  | Vertailujen määrä             | Suoritusaika
-----------------------|-------------------------------|--------------
-O(n * m)              | jopa 10 000 000 000           | noin 10 minuuttia
+Algoritmin tehokkuus  | Vertailujen määrä | Suoritusaika
+----------------------|-------------------|----------
+O(n * m)              | ~10 000 000 000   | noin 10 minuuttia
 
 
 ### 2. Miten voimme nopeuttaa algoritmin toimintaa?
@@ -240,9 +240,9 @@ Toisin sanoen, tietty lista voidaan aina puolittaa sen pituuden kaksikantaisen l
 16.64387027852469
 ```
 
-Algoritmin tehokkuus  | Vertailujen määrä     | Suoritusaika
-----------------------|-----------------------|--------
-O(n * log(m))         | noin 1 566 354 kertaa | muutaman sekunnin
+Algoritmin tehokkuus  | Vertailujen määrä | Suoritusaika
+----------------------|-------------------|--------
+O(n * log(m))         | ~2 000 000        | muutaman sekunnin
 
 
 **Huom!** Oikeassa ohjelmistoprojektissa käyttäisit Pythonin valmista [bisect](https://docs.python.org/3/library/bisect.html)-moduulia, mutta koska haluamme oppia, toteutamme algoritmin itse.
@@ -298,7 +298,7 @@ Sanakirjasta hakeminen vie keskimäärin yhden operaation, vaikka teoreettisesti
 
 Algoritmin tehokkuus  | Operaatioiden määrä  | Suoritusaika
 ----------------------|----------------------|--------
-O(n)                  | satoja tuhansia      | alle 1 sekunti
+O(n)                  | ~200 000             | alle 1 sekunti
 
 ### 4. Ongelman muotoilu toisella tavalla
 
@@ -344,13 +344,15 @@ if __name__ == '__main__':
 
 "Parhaiden yleiskäyttöisten lajittelualgoritmien asymptoottinen suoritusaika on luokkaa O(nlog n)", mitä se tarkoittaa? Entä onko esim n<sup>2</sup> merkittävästi huonompi suoritusaika?
 
+Seuraava taulukko antaa käsityksen eri operaatioiden määrän suuruusluokista eri aineistojen koolla:
+
 Tehokkuus       | Opiskelijoita (n = 50)| Tapahtumia (n = 4000) | Sanoja (n = 100 000)  | Kansalaisia (n = 5 500 000)
 ----------------|-----------------------|-----------------------|-----------------------|------------------------
 O(1)            | 1                     | 1                     | 1                     | 1
+O(log(n))       | ~6                    | ~12                   | ~17                   | ~22
 O(n)            | 50                    | 4 000                 | 100 000               | 5 500 000
-O(log(n))       | ?                     | ?                     | ?                     | ?
-O(n * log(n))   | ?                     | ?                     | ?                     | ?
-O(n * n)        | ?                     | ?                     | ?                     | ?
+O(n * log(n))   | ~282                  | ~47 000               | ~1 000 000            | ~123 000 000
+O(n * n)        | ~2 500                | ~16 000 000           | ~10 000 000 000       | ~30 000 000 000 000
 
 
 
@@ -441,11 +443,18 @@ Kun aineisto on järjestetty, tulosta tapahtumien nimet ja ajankohdat kronologis
 
 Arvioi tehtävää ratkaistessasi järjestämiseen kuluvaa aikaa. Miten esimerkiksi aineiston koon kaksinkertaistaminen vaikuttaisi ohjelmasi suoritusaikaan? 
 
+
+### Apua tehtävään
+
+Kysy apua Teamsissa yleisellä kanavalla, mikäli jäät jumiin tehtävän kanssa. Voit myös katsoa videotallenteen oppitunnin lopusta, joka saattaa auttaa hahmottamaan JSON-rakenteiden sisäkkäisten arvojen vertailua: https://web.microsoftstream.com/video/a9ab87c2-7442-4769-99a0-c1800056513c
+
+
 ### Tehtävän arviointi
 
 Ratkaisu, joka sisältää toimivan itse mallin mukaan toteutetun järjestelyalgoritmin, hyväksytään arvosanalla 5. Myös puutteelliset ratkaisut hyväksytään eri arvosanoin, kunhan niissä osoitetaan selvää yritystä tehtävän ratkaisemiseksi.
 
 Toiminnallisesti oikea ratkaisu, joka oman järjestelyalgoritmin sijasta hyödyntää Pythonin valmiita [sort-operaatioita](https://docs.python.org/3/howto/sorting.html), oikeuttaa arvosanaan 3.
+
 
 ### Tehtävän palauttaminen
 
