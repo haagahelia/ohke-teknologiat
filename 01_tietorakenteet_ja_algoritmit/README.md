@@ -344,13 +344,13 @@ if __name__ == '__main__':
 
 "Parhaiden yleiskäyttöisten lajittelualgoritmien asymptoottinen suoritusaika on luokkaa O(nlog n)", mitä se tarkoittaa? Entä onko esim n<sup>2</sup> merkittävästi huonompi suoritusaika?
 
-Tehokkuus       | Opiskelijoita (n = 50)  | Tapahtumia (n = 4000) | Sanoja (n = 100 000)  | Kansalaisia (n = 5 500 000)
-----------------|---------------------|-------------------|-------------------|------------------------
-O(1)            | 1                   | 1                 | 1                 | 1
-O(n)            | 50                  | 4 000             | 100 000           | 5 500 000
-O(log(n))       | ?                   | ?                 | ?                 | ?
-O(n * log(n))   | ?                   | ?                 | ?                 | ?
-O(n * n)        | ?                   | ?                 | ?                 | ?
+Tehokkuus       | Opiskelijoita (n = 50)| Tapahtumia (n = 4000) | Sanoja (n = 100 000)  | Kansalaisia (n = 5 500 000)
+----------------|-----------------------|-----------------------|-----------------------|------------------------
+O(1)            | 1                     | 1                     | 1                     | 1
+O(n)            | 50                    | 4 000                 | 100 000               | 5 500 000
+O(log(n))       | ?                     | ?                     | ?                     | ?
+O(n * log(n))   | ?                     | ?                     | ?                     | ?
+O(n * n)        | ?                     | ?                     | ?                     | ?
 
 
 
