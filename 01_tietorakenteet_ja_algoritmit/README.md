@@ -144,11 +144,11 @@ if __name__ == '__main__':
 
 Koska edellä esitetyssä koodissa käydään aina koko suomenkielinen sanalista läpi, on ulomman toistorakenteen tehokkuus suoraan suhteessa suomenkielisten sanojen määrään (n). Jokaista suomenkielistä sanaa kohden käydään läpi lista englanninkielisiä sanoja `word in english_words` -operaatiolla. Sisäisesti tämä operaatio vertailee etsittävää sanaa kaikkiin englanninkielisen listan sanoihin (m). 
 
-Vertailuoperaatioita tehdään siis jopa n * m kappaletta<!--, joka meidän aineistollamme tarkoittaa jopa 9&nbsp;000&nbsp;000&nbsp;000 vertailuoperaatiota-->.
+Vertailuoperaatioita tehdään siis jopa n * m kappaletta, joka meidän aineistollamme tarkoittaa jopa 10&nbsp;000&nbsp;000&nbsp;000 vertailuoperaatiota.
 
 Algoritmin tehokkuus  | Vertailujen määrä             | Suoritusaika
 ----------------------|-------------------------------|--------------
-O(n * m)              | ?                             | ?
+O(n * m)              | jopa 10 000 000 000           | noin 10 minuuttia
 
 
 ### 2. Miten voimme nopeuttaa algoritmin toimintaa?
@@ -242,7 +242,7 @@ Toisin sanoen, tietty lista voidaan aina puolittaa sen pituuden kaksikantaisen l
 
 Algoritmin tehokkuus  | Vertailujen määrä     | Suoritusaika
 ----------------------|-----------------------|--------
-O(n * log(m))         | ?                     | ?
+O(n * log(m))         | noin 1 566 354 kertaa | muutaman sekunnin
 
 
 **Huom!** Oikeassa ohjelmistoprojektissa käyttäisit Pythonin valmista [bisect](https://docs.python.org/3/library/bisect.html)-moduulia, mutta koska haluamme oppia, toteutamme algoritmin itse.
@@ -298,7 +298,7 @@ Sanakirjasta hakeminen vie keskimäärin yhden operaation, vaikka teoreettisesti
 
 Algoritmin tehokkuus  | Operaatioiden määrä  | Suoritusaika
 ----------------------|----------------------|--------
-O(n)                  | ?                    | ?
+O(n)                  | satoja tuhansia      | alle 1 sekunti
 
 ### 4. Ongelman muotoilu toisella tavalla
 
