@@ -302,6 +302,7 @@ git push --force origin master
 
 ```
 
+Isompien projektien versionhallintakäytöntöihin ja branching-strategiaan hyvä ja paljon käytössä oleva malli on [Gitflow](https://nvie.com/posts/a-successful-git-branching-model/). [Lisää aiheesta myös Atlassianin hyvässä dokumentaatiossa](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow).
 
 ## Paketinhallinta ja buildaaminen
 
