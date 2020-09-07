@@ -306,6 +306,120 @@ Isompien projektien versionhallintakäytöntöihin ja branching-strategiaan hyv�
 
 ## Paketinhallinta ja buildaaminen
 
+Ohjelmistoilla on tyypillisesti kymmeniä riippuvuuksia erilaisiin 3rd party kirjastoihin. Lisäksi ohjelmiston buildaaminen on monesti monivaiheinen prosessi, jossa esimerkiksi ensin halutaan alustaa testausympäristö (vaikka testitietokanta), ajaa yksikkötestit, pystyttää testiserveri, ajaa integraatiotestit, tappaa testiserveri, deployata buildattu projekti staging-ympäristöön jne. Näitä tarpeita ratkaisemaan on syntynyt lukuisa määrä paketinhallinta- ja buildaus-työkaluja, kuten [npm](https://docs.npmjs.com/about-npm/) Node.js:lle, [Maven](https://maven.apache.org/) Javalle, [pip](https://pypi.org/project/pip/) pythonille, [gradle](https://gradle.org/) mm. Javalle ja C++:lle, [grunt](https://gruntjs.com/) Javascriptille, jne.
+
+Käsitellään tässä lyhyesti paketinhallintaa ja buildausprosessin automatisointia npm:ää esimerkkinä käyttäen. Muut yllä mainitut työkalut toimivat melko samankaltaisi periaatteita noudattaen ja tärkeintä onkin ymmärtää mitä niillä voi ja kannattaa tehdä ja sitten tarvittaessa googlettaa miten se jollain tietyllä työkalulla tehdään.
+
+Npm on ensisijaisesti paketinhallintasovellus (omilla sivuillaan he käyttävät termiä "worlds largest software registry"). Npm:n avulla on siis helppo ladata muiden luomia ohjelmistokirjastoja npm:n "keskusrepositorystä". Myös niiden julkaiseminen itse on hyvin helppoa. Esimerkiksi siis [express-kirjaston](https://www.npmjs.com/package/express) voi ladata itselleen käyttöön npm:n install-komennon avulla:
+
+```shell
+$ npm install express
+```
+
+Tätä ennen projektista on pitänyt tehdä npm-projekti ajamalla komento (ja vastaamalla kysymyksiin joita komento esittää):
+```shell
+$ npm init
+```
+
+*npm init* Komento luo projektiin package.json-tiedoston, jonka perusteella npm osaa hallita projektia ja sen kirjastoriippuvuuksia. npm init:in jälkeen package.json näyttää suurin piirtein tältä:
+
+```shell
+{
+  "name": "npmtesti",
+  "version": "1.0.0",
+  "description": "npm projekti",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "keywords": [
+    "node",
+    "npm"
+  ],
+  "author": "Ohto Rainio",
+  "license": "MIT"
+}
+```
+
+Kirjastoriippuvuuksia asentaessa hyvä käytäntö on määritellä tarkka versionumero kirjastosta (yleensä se on viimeisin stabiili versio). npm:ssä tämä onnistuu kätevästi *--save-exact*-vivulla. Versioiden päivittäminen aiheuttaa monesti yllättäviä ongelmia ja ohjelman rikkoutumisen. Versioiden päivittäminen tehdään siis mieluummin hallitusti ja harkitusti silloin kuin itse valitaan.
+
+```shell
+$ npm install express --save-exact
+```
+
+Tämä komento lisää expressin viimeisen stabiilin version riippuvuuden package.json-tiedostoon:
+
+```shell
+...
+"dependencies": {
+    "express": "4.17.1"
+  }
+....
+```
+
+npm hallinnoi paketteja tietyn projektin alla *node_modules*-kansiossa, johon se siis tallentaa esimerkiksi express-kirjaston tiedostot yllä olevassa esimerkissä. Lisäksi *-g*-vivulla npm asentaa paketteja käyttäjän kotihakemistoon "globaaliin" node_module-kansioon.
+
+Kirjastoriippuvuuden voi poistaa *uninstall*-komennolla:
+
+```shell
+$ npm uninstall express
+```
+
+Kirjastoriippuvuudet, jotka olisi mahdollista päivittää uudempaan versioon voi tarkistaa:
+
+```shell
+$ npm outdated 
+```
+
+Päivittämisen voi tehdä:
+```shell
+$ npm update express 
+```
+
+npm:n avulla voi myös suorittaa erilaisia buildaukseen liittyviä toimenpiteitä. Esimerkiksi testaamiseen liittyen voi asentaa mocha-kirjaston:
+
+```shell
+#asennetaan --save-dev-vivulla vain development-riippuvuutena devDependencies-haaran alle, 
+#eli itse sovellus ei tarvitse tätä pakettia välttämättä pyöriäkseen.
+$ npm install --save-dev mocha
+```
+
+Lisätään package.json:iin skriptin nimeltä "test" ja se ajaa komennon "mocha"
+```shell
+...
+  "scripts": {
+    "test": "mocha"
+  }
+...
+```
+Ajetaan package.json:in test-skripti, joka siis ajaa mocha-testit.
+```shell
+$ npm test
+```
+
+Buildaustoimenpiteitä voi konfiguroida myös tarkemmin package.json:issa. Alla olevassa esimerkissä ajetaan testiä ennen start-skripti, jolla käynnistetään node-serveri ja testin jälkeen se sammutetaan toisella skriptillä.:
+
+```shell
+...
+  "scripts": {
+    "test": "mocha",
+    "pretest": "npm start",
+    "posttest": "npm stop",
+    "prestart":"echo 'starting server'"
+    "poststop":"echo 'stopping server'"
+    "start": "node server.js",
+    "stop": "node server.stop.js"
+    "omaskripti": "echo 'hello world'"
+  }
+...
+```
+
+Kaikki mahdolliset npm-skriptit on listattu [täällä](https://docs.npmjs.com/misc/scripts). Omiakin skriptejä voi määritellä, ne pitää ajaa kommenolla
+```shell
+$ npm run-script omaskripti
+```
+
+
 ## Jatkuva integrointi (CI/CD)
 
 ## Kontittaminen (docker)
