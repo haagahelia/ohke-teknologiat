@@ -45,6 +45,9 @@ $ ls -l | more
 Linuxissa komennon syötteen voi ajaa myös tiedostoon >-merkillä. 
 ```shell
 $ ls -l > tiedosto.txt
+#Kahdella >>-merkillä syöte lisätään tiedoston loppuun, kuten 
+#tässä käyttäjän kotihakemistossa olevan bashrc-tiedoston loppuun.
+$ echo "export EDITOR=\"/polku/jossa/ohjelma/sijaitsee/ohjelma\"" >> ~/.bashrc
 ```
 Manual komennolla (man) saa esiin tietyn kommennon ohjeen ja näkee mm. mitä lisävipuja komennolle voi antaa.
 ```shell
