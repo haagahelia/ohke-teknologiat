@@ -456,7 +456,7 @@ Kirjoita scripti (lokittaja.sh), joka tarvittaessa luo ja sitten kirjoittaa tied
 
 ### Tehtävä 4.2
 
-Ota testausosiossa kirjoittamasi python-ohjelma ja siihen liittyvät yksikkötestit. Pushaa tämä sovellus itsellesi githubiin ja liitä siihen TravisCI monitorointi seuraavasti: 
+Ota testausosiossa kirjoittamasi python-ohjelma (tai tehtävän mallivastaus tarvittaessa) ja siihen liittyvät yksikkötestit. Pushaa tämä sovellus itsellesi githubiin ja liitä siihen TravisCI monitorointi seuraavasti: 
 
 1. [Kirjaudu github-tunnuksillasi travikseen](https://docs.travis-ci.com/user/tutorial/#to-get-started-with-travis-ci-using-github).
 
