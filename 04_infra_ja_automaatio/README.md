@@ -450,7 +450,11 @@ Jatkuvalla toimituksella (Continuous deployement) tarkoitetaan prosessia ja työ
 
 ## Tehtävät
 
-### Tehtävä 2
+### Tehtävä 4.1
+
+Kirjoita scripti (lokittaja.sh), joka tarvittaessa luo ja sitten kirjoittaa tiedostoon “loki.log” tämän hetken kellonajan ja tekstin “heippa”. Käytä googlea selvittääksesi miten parhaiten saat aikaleiman tulostettua scriptiin. Ajasta scripti chronilla pyörimään minuutin välein. Kirjoita toinen scripti (tyhjentaja.sh), joka tyhjentää loki.log-tiedoston. Ajasta tämä scripti pyörimään chronissa joka keskiyö. Palauta luomasi kaksi linux-skriptiä sekä tiedostossa /var/spool/cron/käyttäjänimesi sijaitseva cron-tiedosto, josta näkyy tekemäsi ajastukset.
+
+### Tehtävä 4.2
 
 Ota testausosiossa kirjoittamasi python-ohjelma ja siihen liittyvät yksikkötestit. Pushaa tämä sovellus itsellesi githubiin ja liitä siihen TravisCI monitorointi seuraavasti: 
 
