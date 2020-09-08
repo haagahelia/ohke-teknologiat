@@ -443,6 +443,74 @@ Jatkuvalla toimituksella (Continuous deployement) tarkoitetaan prosessia ja työ
 
 ## Kontittaminen (docker)
 
+<!--
+https://www.docker.com/101-tutorial
+
+https://labs.play-with-docker.com/
+
+docker run -dp 80:80 docker/getting-started:pwd
+
+Sitten klikataan port 80 kuvaa, niin aukeaa uusi tutoriaali ->
+
+-->
+
+[Docker-konttityökalulla](https://www.docker.com/) on mahdollista luoda omia muusta käyttöjärjestelmästä eristettyjä "kontteja", jotka sisältävät kaiken tarpeellisen, jotta kontti voi pyöriä itsenäisesti. Dockerilla rakennettuja kontteja on sitten helppo siirtää pyörimään esimerkiksi omalta kehityskoneelta johonkin muuhun paikaan, kuten esimerkiksi aws:än pilveen. Kontittamisen avulla ei tarvitse konfiguroida asioita uudestaan uudessa ympäristössä, vaan kontti sisältää jo alunperin kaikean tarpeellisen pyöriäkseen itsenäisesti missä paikassa vain, joka osaa pyörittää docker-kontteja. 
+
+Konttien avulla on helppo jaella siis valmiita ohjelmia, joita muut sitten voivat käyttää helposti. Esimerkiksi mikropalveluarkkitehtuureissa sovellusten eri komponenttien jakeleminen konteissa on yleinen tapa.
+
+Dockerin [voi asentaa esimerkiksi Ubuntille](https://docs.docker.com/engine/install/ubuntu/), mutta sen asentaminen saattaa vaatia hieman jumppaamista, joten suosittelemme tällä kurssilla käyttämään testailuun ensisijaisesti [dockerin tarjoamaa lab-ympäristöä](https://labs.play-with-docker.com/). Jos seminaarivaiheessa haluaa keskittyä dockeriin, niin silloin se pitänee asentaa itselleen.
+
+Docker-kontit määritellään *Dockerfile*:issä, joka voi näyttää esimerkiksi seuraavalta yksinkertaiselle node-sovellukselle (kansiossa /app siis sijaitsee rakentamamme node-sovellus):
+
+```docker
+FROM node:10-alpine
+WORKDIR /app
+COPY . .
+RUN npm install --production
+CMD ["node", "/app/src/index.js"]
+```
+Uuden kontin voi tämän jälkeen rakentaa komennolla:
+
+```shell
+$ docker build -t docker-sovellus .
+```
+
+Tässä tapauksessa kontin rakentaminen ottaa pohjaksi Dockerfile:ssä määrittelemämme node:10-alpine-imagen (joka sisältää mm. npm paketinhallinan, noden jne). Sitten se kopioi konttiin /app-kansion sisällön ja ajaa kontissa komennon *npm install*.
+
+Tämän jälkeen kontin voi käynnistää:
+
+```shell
+$ docker run -dp 3000:3000 docker-sovellus
+```
+Komento siis ajaa Dockerfilessä CMD-rivillä määritellyn komennon eli *node /app/src/index.js*. Näin kontissa pyörii node sovellus ja voimme avata selaimessa osoitteen *localhost:3000/* ja näemme kontissa pyörivän node-sovelluksen etusivun!
+
+![nodesovellus dockerissa](img/docker/docker-node-app.png) 
+
+Tällä sovelluksella ei ole vielä minkäänlaista omaa kiinteää tallennuspaikkaa, eli sovelluksen tallentamat asiat häviävät kun kontti sammutetaan. Kontin sammuttaminen tapahtuu:
+
+```shell
+#Katso kontin ID
+docker ps
+#sammuta kontti tietyllä ID:llä
+docker stop <ID>
+#poista sammutettu kontti
+docker rm <ID>
+```
+
+Jos kontin tallentamaa dataa haluaa säilyttää, niin kontille voidaan luoda "volume", jota docker hallinnoi ja joka siis käytännössä tallentaa docker-kontin asioita paikalliselle levylle.
+
+```shell
+#luo volume
+docker volume create todo-db
+#käynnistä kontti uudestaan volumen kanssa
+docker run -dp 3000:3000 -v todo-db:/etc/todos docker-sovellus
+```
+
+Docker kontteja voi julkaista [docker-hubissa](https://hub.docker.com/) samantapaisesti kuin githubiin voi julkaista koodia. Tämä tapahtuu *docker push*-komennolla sen jälkeen kun olet luonut uuden repositoryn docker-hubissa. Tähän prosessiin voi tutusta tarkemmin [dockerin omassa tutoriaalissa](https://labs.play-with-docker.com/). Docker-hubista löytyy valmis docker-image esimerkiski [MySQL-kannalle](https://hub.docker.com/_/mysql), jonka voi siis vain ajaa käyntiin komennolla *docker run*.
+
+[Docker Composella](https://docs.docker.com/compose/) voi luoda sovelluksia, jotka koostuvat useammasta kontista (esimerkiksi omat kontit tietokannalle ja parille pienelle node-sovellukselle). Jätetään Composen käyttäminen tällä kurssilla seminaariharjoitukseksi halukkaille.
+
+
 ## Github dokumentointi
 
 ## Kehitysympäristöt ja IDE:t
@@ -473,14 +541,14 @@ Ota testausosiossa kirjoittamasi python-ohjelma (tai tehtävän mallivastaus tar
 
 1. [Lisää .travis.yml-tiedosto](https://docs.travis-ci.com/user/languages/python/) oman projektisi development haaraan (projektin juureen) ja pushaa se githubiin. 
 
-1. Paina traviksessa “Trigger a build”:ia tai travis lähtee myös automaattisesti käyntiin jos liittäminen on onnistunut oikein. Development haaran buildia pääset katsomaan branches-välilehden kautta, jos master on sinulla defaulttina.
+1. Paina traviksessa “Trigger a build”:ia tai travis lähtee myös automaattisesti käyntiin jos liittäminen on onnistunut oikein. Development haaran buildia pääset katsomaan traviksessa branches-välilehden kautta, jos master on sinulla defaulttina.
 ![Travis trigger a build](img/travis/travis_install_screenshot5.png) 
 ![Travis trigger a build 2](img/travis/travis_install_screenshot6.png) 
 ![Development haara](img/travis/travis_development_haaran_buildi.png) 
 
 1. Liitää projektiisi ja travikseen koodin testikattavuutta mittaava [Coverage-kirjasto](https://coverage.readthedocs.io/en/coverage-5.2.1/). Coverage kannattaa ensin laittaa pyörimään itsellesi paikallisesti ja sitten lisätä tarvittavat skriptit myös .travis.yml-tiedostoon "script" ja "after_success"-osioihin.
 
-1. Tulosta ja palauta Traviksen tuottama CI-raportti jossa näkyy, että sovellus kääntyy, sille ajetaan ainakin yksi yksikkötesti development-haarassa ja yksikkötestikattavauus rivitasolla on jotain yli 0%, mieluusti lähemmäs 100%. Palauta siis kaksi kuvankaappausta, toisessa näkyy github-tunnuksesi ja kuvankaappaus traviksen buildaukseta development-haarassa ja toisessa saman buildin coverage raportti. Alla esimerkit.
+1. Tulosta ja palauta Traviksen tuottama CI-raportti jossa näkyy, että sovellus kääntyy, sille ajetaan ainakin yksi yksikkötesti development-haarassa ja yksikkötestikattavauus rivitasolla on jotain yli 0%, mieluusti lähemmäs 100%. Palauta siis kaksi kuvankaappausta, toisessa näkyy github-tunnuksesi ja kuvankaappaus traviksen buildauksesta development-haarassa ja toisessa saman buildin coverage raportti. Alla esimerkit.
 ![Travis esimerkki 1](img/travis/travis_ci_tehtavanpalautus_esimerkki1_yleiskuva_development_haarasta.png) 
 ![Travis esimerkki 2](img/travis/travis_tehtavanpalautus_coverage_raportti_esimerkki.png) 
 
