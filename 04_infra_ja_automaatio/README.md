@@ -474,7 +474,7 @@ Ota testausosiossa kirjoittamasi python-ohjelma ja siihen liittyvät yksikkötes
 1. Liitää projektiisi ja travikseen koodin testikattavuutta mittaava [Coverage-kirjasto](https://coverage.readthedocs.io/en/coverage-5.2.1/). Coverage kannattaa ensin laittaa pyörimään itsellesi paikallisesti ja sitten lisätä tarvittavat skriptit myös .travis.yml-tiedostoon "script" ja "after_success"-osioihin.
 
 1. Tulosta ja palauta Traviksen tuottama CI-raportti jossa näkyy, että sovellus kääntyy, sille ajetaan ainakin yksi yksikkötesti development-haarassa ja yksikkötestikattavauus rivitasolla on jotain yli 0%, mieluusti lähemmäs 100%. Palauta siis kaksi kuvankaappausta, toisessa näkyy github-tunnuksesi ja kuvankaappaus traviksen buildaukseta development-haarassa ja toisessa saman buildin coverage raportti. Alla esimerkit.
-![Travis esimerkki 1](img/travis/travis_ci_tehtävänpalautus_esimerkki1_yleiskuva_development_haarasta.png) 
-![Travis esimerkki 2](img/travis/travis_tehtävänpalautus_coverage_raportti_esimerkki) 
+![Travis esimerkki 1](img/travis/travis_ci_tehtavanpalautus_esimerkki1_yleiskuva_development_haarasta.png) 
+![Travis esimerkki 2](img/travis/travis_tehtavanpalautus_coverage_raportti_esimerkki.png) 
 
 
