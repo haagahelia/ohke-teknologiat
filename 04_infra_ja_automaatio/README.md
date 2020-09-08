@@ -268,6 +268,8 @@ $ git checkout -b uusihaara
 # myös tämä komentosarja tekee saman asian
 $ git branch uusihaara
 $ git checkout uusihaara
+#pushaa uusi haara myös remote-repositoryyn
+$ git push --set-upstream origin uusihaara
 # Kun olet tehnyt muutoksia omassa haarassasi ja haluat yhdistää muutokset esim master-haaraan, niin
 $ git checkout master # siirry master haaraan
 $ git merge uusihaara # yhdistä muutokset uudesta haarasta masteriin
@@ -306,7 +308,7 @@ Isompien projektien versionhallintakäytöntöihin ja branching-strategiaan hyv�
 
 ## Paketinhallinta ja buildaaminen
 
-Ohjelmistoilla on tyypillisesti kymmeniä riippuvuuksia erilaisiin 3rd party kirjastoihin. Lisäksi ohjelmiston buildaaminen on monesti monivaiheinen prosessi, jossa esimerkiksi ensin halutaan alustaa testausympäristö (vaikka testitietokanta), ajaa yksikkötestit, pystyttää testiserveri, ajaa integraatiotestit, tappaa testiserveri, deployata buildattu projekti staging-ympäristöön jne. Näitä tarpeita ratkaisemaan on syntynyt lukuisa määrä paketinhallinta- ja buildaus-työkaluja, kuten [npm](https://docs.npmjs.com/about-npm/) Node.js:lle, [Maven](https://maven.apache.org/) Javalle, [pip](https://pypi.org/project/pip/) pythonille, [gradle](https://gradle.org/) mm. Javalle ja C++:lle, [grunt](https://gruntjs.com/) Javascriptille, jne.
+Ohjelmistoilla on tyypillisesti kymmeniä riippuvuuksia erilaisiin 3rd party kirjastoihin. Lisäksi ohjelmiston buildaaminen on monesti monivaiheinen prosessi, jossa esimerkiksi ensin halutaan alustaa testausympäristö (vaikka testitietokanta), ajaa yksikkötestit, pystyttää testiserveri, ajaa integraatiotestit, tappaa testiserveri, deployata buildattu projekti staging-ympäristöön jne. Näitä tarpeita ratkaisemaan on syntynyt lukuisa määrä paketinhallinta- ja buildaus-työkaluja, kuten [npm](https://docs.npmjs.com/about-npm/) Node.js:lle, [Maven](https://maven.apache.org/) ja [gradle](https://gradle.org/) Javalle, [pip](https://pypi.org/project/pip/) pythonille, [grunt](https://gruntjs.com/) Javascriptille, jne.
 
 Käsitellään tässä lyhyesti paketinhallintaa ja buildausprosessin automatisointia npm:ää esimerkkinä käyttäen. Muut yllä mainitut työkalut toimivat melko samankaltaisia periaatteita noudattaen ja tärkeintä onkin ymmärtää mitä niillä voi ja kannattaa tehdä ja sitten tarvittaessa googlettaa, miten se jollain tietyllä työkalulla tehdään.
 
@@ -428,6 +430,14 @@ $ npm publish
 
 ## Jatkuva integrointi (CI/CD)
 
+Jatkuva integrointi (Continuous integration) tarkoittaa oleellisesti sitä, että kun uutta koodia ajetaan versionhallintaan, niin sille suoritetaan samantien erilaisia laatutarkistuksia. Tyypillisesti ajetaan siis järjestelmän yksikkö- ja integraatiotestit ja lisäksi voidaan tehdä esimerkiksi staattista koodianalysointia, automaattista testausta eri käyttöjärjestelmäympäristöissä, suorituskykytestausta yms. Jatkuvan integroinnin avulla nähdään nopeasti jos uusi koodimuutos on rikkonut jotain tai ei muuten ole laadultaan hyväksyttävä. Joillain tiimeillä on työtilassaan esimerkiksi jatkuvasti kaikille näkyvä "radiaattori"-ruutu, josta voi tarkistaa viimeisimmän buildauksen tilan.
+
+Jatkuvan integroinnin työkaluja on tarjolla useita. [Jenkins](https://www.jenkins.io/) on kenties suosituin jatkuvan integroinnin mahdollistava automaatiopalvelinympäristö isoissa projekteissa. Jenkinsiin on tarjolla lukuisia plugineita. [Travis CI](https://travis-ci.org/) on kätevä CI-työkalu käytettynä yhdessä Githubin tai Bitbucketin kanssa. Sen voi konfiguroida buildaamaan projektin aina kun githubiin tulee uuttaa koodia ja tarvittaessa deployaamaan uusimman buildin herokuun automaattisesti.
+
+![Travis yleiskuva](img/travis/travis_yleiskuva.png) 
+
+Jatkuvalla toimituksella (Continuous deployement) tarkoitetaan prosessia ja työkaluja, joilla voidaan automatisoida hyväksytyn buildin siirtäminen suoraan tuotantoon asti. Esimerkiksi [Nexus repositoryn hallinta](https://www.sonatype.com/nexus/repository-pro) on työkalu liittyen Continuous deploymenttiin Java-maailmassa. Toimitusputken automatisoiminen toimimaan mahdollisimman saumattomasti ja pienellä viivellä kehittäjän tekemästä koodista loppukäyttäjän hyödyntämäksi ominaisuudeksi on ketterän ja leanin kehitysfilosofian mukaista toimintaa. Tätä toimintasmallia kuvaava termi Devops (development and operations) on saavuttanut suurta suosioita IT-alalla viime vuosina.
+
 ## Kontittaminen (docker)
 
 ## Github dokumentointi
@@ -439,4 +449,32 @@ $ npm publish
 ## Palvelimet ja deployaaminen
 
 ## Tehtävät
+
+### Tehtävä 2
+
+Ota testausosiossa kirjoittamasi python-ohjelma ja siihen liittyvät yksikkötestit. Pushaa tämä sovellus itsellesi githubiin ja liitä siihen TravisCI monitorointi seuraavasti: 
+
+1. [Kirjaudu github-tunnuksillasi travikseen](https://docs.travis-ci.com/user/tutorial/#to-get-started-with-travis-ci-using-github).
+
+1. Seuraa traviksen ohjeita ja aktivoi python-ohjelmasi githubrepository travikselle. Activate repository tehdään travis-ci:n settings-valikosta (oikealta github-avatariasi klikkaamalla).
+![Travis asennus 1](img/travis/travis_install_screenshot1.png) 
+![Travis asennus 2](img/travis/travis_install_screenshot2.png) 
+![Travis asennus 3](img/travis/travis_install_screenshot3.png) 
+![Travis asennus 4](img/travis/travis_install_screenshot4.png) 
+
+1. Tee projektillesi gitissä uusi "development"-haara ja pushaa se githubiin.
+
+1. [Lisää .travis.yml-tiedosto](https://docs.travis-ci.com/user/languages/python/) oman projektisi development haaraan (projektin juureen) ja pushaa se githubiin. 
+
+1. Paina traviksessa “Trigger a build”:ia tai travis lähtee myös automaattisesti käyntiin jos liittäminen on onnistunut oikein. Development haaran buildia pääset katsomaan branches-välilehden kautta, jos master on sinulla defaulttina.
+![Travis trigger a build](img/travis/travis_install_screenshot5.png) 
+![Travis trigger a build 2](img/travis/travis_install_screenshot6.png) 
+![Development haara](img/travis/travis_development_haaran_buildi.png) 
+
+1. Liitää projektiisi ja travikseen koodin testikattavuutta mittaava [Coverage-kirjasto](https://coverage.readthedocs.io/en/coverage-5.2.1/). Coverage kannattaa ensin laittaa pyörimään itsellesi paikallisesti ja sitten lisätä tarvittavat skriptit myös .travis.yml-tiedostoon "script" ja "after_success"-osioihin.
+
+1. Tulosta ja palauta Traviksen tuottama CI-raportti jossa näkyy, että sovellus kääntyy, sille ajetaan ainakin yksi yksikkötesti development-haarassa ja yksikkötestikattavauus rivitasolla on jotain yli 0%, mieluusti lähemmäs 100%. Palauta siis kaksi kuvankaappausta, toisessa näkyy github-tunnuksesi ja kuvankaappaus traviksen buildaukseta development-haarassa ja toisessa saman buildin coverage raportti. Alla esimerkit.
+![Travis esimerkki 1](img/travis/travis_ci_tehtävänpalautus_esimerkki1_yleiskuva_development_haarasta.png) 
+![Travis esimerkki 2](img/travis/travis_tehtävänpalautus_coverage_raportti_esimerkki) 
+
 
