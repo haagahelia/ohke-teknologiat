@@ -121,13 +121,11 @@ chown-komennolla voi siirtää tiedoston omistajuuden tietylle käyttäjälle.
 ```shell
 $ chown mysqlUser mysqlscript.sh
 ```
-Sudo ("Switch User and Do this command") -komennolla vältetään nykyään käyttäjien tarvetta vaihtaa käyttäjätiliä root-käyttäjäksi suorittaakseen jonkin enemmän käyttöoikeuksia vaativan asian kuten vaikka uuden ohjelman asentamisen. Jos käyttäjälle on myönnetty sudo-oikeudet käyttöjärjestelmään, niin hän voi siis vaihtaa itsensä hetkellisesti superkäyttäjäksi ja ajaa jonkin enemmän oikeuksia vaativan komennon.
-```shell
-$ sudo apt install mysql
-```
 Sudo ("Switch User and Do this command") -komennolla vältetään nykyään käyttäjien tarvetta vaihtaa käyttäjätiliä root-käyttäjäksi suorittaaksen jonkin enemmän käyttöoikeuksia vaativan asian kuten vaikka uuden ohjelman asentamisen. Jos käyttäjälle on myönnetty sudo-oikeudet käyttöjärjestelmään, niin hän voi siis vaihtaa itsensä hetkellisesti superkäyttäjäksi ja ajaa jonkin enemmän oikeuksia vaativan komennon.
 ```shell
-$ sudo apt install mysql
+#&-merkillä laitetaan komento ajautumaan järjestelmässä taustalla, jolloin 
+#terminaalin käyttämistä voi jatkaa muihin asioihin.
+$ sudo apt install mysql &
 ```
 Unix-järjestelmissä voi määritellä ympäristömuuttujia kuten PATH-muuttujan. Käyttöjärjestelmä etsii komentoja PATH-muuttujaan lisätyistä hakemistoista. Path-muuttujan nykyisen sisällön voi tulostaa echo-komennon avulla.
 ```shell
@@ -458,7 +456,7 @@ Sitten klikataan port 80 kuvaa, niin aukeaa uusi tutoriaali ->
 
 Konttien avulla on helppo jaella siis valmiita ohjelmia, joita muut sitten voivat käyttää helposti. Esimerkiksi mikropalveluarkkitehtuureissa sovellusten eri komponenttien jakeleminen konteissa on yleinen tapa.
 
-Dockerin [voi asentaa esimerkiksi Ubuntille](https://docs.docker.com/engine/install/ubuntu/), mutta sen asentaminen saattaa vaatia hieman jumppaamista, joten suosittelemme tällä kurssilla käyttämään testailuun ensisijaisesti [dockerin tarjoamaa lab-ympäristöä](https://labs.play-with-docker.com/). Jos seminaarivaiheessa haluaa keskittyä dockeriin, niin silloin se pitänee asentaa itselleen.
+Dockerin [voi asentaa esimerkiksi Ubuntille](https://docs.docker.com/engine/install/ubuntu/), mutta sen asentaminen virtualbox-ympäristöön saattaa vaatia hieman jumppaamista, joten suosittelemme tällä kurssilla käyttämään testailuun ensisijaisesti [dockerin tarjoamaa lab-ympäristöä](https://labs.play-with-docker.com/). Jos seminaarivaiheessa haluaa keskittyä dockeriin, niin silloin se pitänee asentaa itselleen.
 
 Docker-kontit määritellään *Dockerfile*:issä, joka voi näyttää esimerkiksi seuraavalta yksinkertaiselle node-sovellukselle (kansiossa /app siis sijaitsee rakentamamme node-sovellus):
 
@@ -506,7 +504,16 @@ docker volume create todo-db
 docker run -dp 3000:3000 -v todo-db:/etc/todos docker-sovellus
 ```
 
-Docker kontteja voi julkaista [docker-hubissa](https://hub.docker.com/) samantapaisesti kuin githubiin voi julkaista koodia. Tämä tapahtuu *docker push*-komennolla sen jälkeen kun olet luonut uuden repositoryn docker-hubissa. Tähän prosessiin voi tutusta tarkemmin [dockerin omassa tutoriaalissa](https://labs.play-with-docker.com/). Docker-hubista löytyy valmis docker-image esimerkiski [MySQL-kannalle](https://hub.docker.com/_/mysql), jonka voi siis vain ajaa käyntiin komennolla *docker run*.
+Docker kontteja voi julkaista [docker-hubissa](https://hub.docker.com/) samantapaisesti kuin githubiin voi julkaista koodia. Tämä tapahtuu *docker push*-komennolla sen jälkeen kun olet luonut uuden repositoryn docker-hubissa. Tähän prosessiin voi tutusta tarkemmin [dockerin omassa tutoriaalissa](https://labs.play-with-docker.com/). Docker-hubista löytyy valmis docker-image esimerkiksi [MySQL-kannalle](https://hub.docker.com/_/mysql) tai [Node-RED:lle](https://hub.docker.com/r/nodered/node-red), jonka voi siis vain ajaa käyntiin komennolla *docker run*.
+
+```shell
+docker run -it -p 1880:1880 --name mynodered nodered/node-red
+```
+
+<!--
+docker tag docker-sovellus {username}/docker-sovellus
+docker push {username}/docker-sovellus
+-->
 
 [Docker Composella](https://docs.docker.com/compose/) voi luoda sovelluksia, jotka koostuvat useammasta kontista (esimerkiksi omat kontit tietokannalle ja parille pienelle node-sovellukselle). Jätetään Composen käyttäminen tällä kurssilla seminaariharjoitukseksi halukkaille.
 
@@ -523,7 +530,7 @@ Docker kontteja voi julkaista [docker-hubissa](https://hub.docker.com/) samantap
 
 ### Tehtävä 4.1
 
-Kirjoita scripti (lokittaja.sh), joka tarvittaessa luo ja sitten kirjoittaa tiedostoon “loki.log” tämän hetken kellonajan ja tekstin “heippa”. Käytä googlea selvittääksesi miten parhaiten saat aikaleiman tulostettua scriptiin. Ajasta scripti chronilla pyörimään minuutin välein. Kirjoita toinen scripti (tyhjentaja.sh), joka tyhjentää loki.log-tiedoston. Ajasta tämä scripti pyörimään chronissa joka keskiyö. Palauta luomasi kaksi linux-skriptiä sekä tiedostossa /var/spool/cron/käyttäjänimesi sijaitseva cron-tiedosto, josta näkyy tekemäsi ajastukset.
+Kirjoita scripti (lokittaja.sh), joka tarvittaessa luo ja sitten kirjoittaa tiedostoon *loki.log* tämän hetken kellonajan ja tekstin “heippa”. Käytä googlea selvittääksesi miten parhaiten saat aikaleiman tulostettua scriptiin. Ajasta scripti chronilla pyörimään minuutin välein. Kirjoita toinen scripti (tyhjentaja.sh), joka kopioi *loki.log*-tiedoston sisällön *vanhatlogit.log*-tiedoston loppuun ja sitten poistaa *loki.log*-tiedoston. Ajasta tyhjentaja-scripti pyörimään chronissa joka keskiyö. Palauta luomasi kaksi linux-skriptiä (lokittaja.sh ja tyhjentaja.sh) sekä tiedostossa /var/spool/cron/käyttäjänimesi sijaitseva cron-tiedosto, josta näkyy tekemäsi ajastukset.
 
 ### Tehtävä 4.2
 
