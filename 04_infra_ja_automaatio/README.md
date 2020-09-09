@@ -1,5 +1,4 @@
 ## Sisällysluettelo
-* [Kontittaminen (docker)](#Kontittaminen-\(docker\))
 
 # Ohjelmistokehittäjän infra ja automaatiotyökalut
 
