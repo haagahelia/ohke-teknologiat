@@ -1,4 +1,5 @@
 ## Sisällysluettelo
+* [Kontittaminen (docker)](#Kontittaminen-(docker))
 
 # Ohjelmistokehittäjän infra ja automaatiotyökalut
 
@@ -522,15 +523,26 @@ Hyvä projekti on stabiloitu ja dokumentoitu siten, että myös projektin ulkopu
 
 Githubiin liitettävää README.md-tiedostoa kirjoitetaan [githubin markdown-syntaksin](https://guides.github.com/features/mastering-markdown/) mukaisesti. Esimerkiksi otsikot merkitään markdowniin #-merkillä ja kuvat liitetään syntaksilla \!\[kuvan kuvausteksti\]\(kansiopolku/kuva.png\).
 
-Projektin laajemman dokumentoinnin voi tehdä pelkkää README.md-tiedostoa joustavammalla, monipuolisemmalla ja helpommin muokattavalla [Github-wikillä](https://guides.github.com/features/wikis/).
+Projektin laajemman dokumentoinnin voi tehdä pelkkää README.md-tiedostoa joustavammalla, monipuolisemmalla ja hieman helpommin muokattavalla [Github-wikillä](https://guides.github.com/features/wikis/).
 
 ## Kehitysympäristöt ja IDE:t
+
+Ohjelmistokehittäjän työ tapahtuu aina jonkilaisessa kehitysympäristössä. Alkeellisin kehitysympäristö voi olla pelkkä notepad-tekstieditori ja komentoriviltä ajettava kääntökomento. Kehitystyötä voi kuitenkin nopeuttaa ja helpottaa huomattavasti rakentamalla kyseisen sovelluksen kehittämiseen soveltuvan kehitysympäristön. 
+
+Kehitysympäristössä yleensä oleellisin työkalu on ympäristöön soveltuva IDE (Integrated Development Environment). IDE:jä on tarjolla erilaisiin ohjelmointiympäristöihin lukuisia. Suosittuja ovat esimerkiksi Java-maailmassa Eclipse ja IntelliJ IDEA, JavaScriptille, Pythonille ja monelle muulle kielelle soveltuva Visual Studio Code, Android-ohjelmoinnissa AndroidStudio, IoS-kehityksessä XCode, jne.
+
+IDE:hin on helppo asentaa liitännäisosia, jotka voivat auttaa esimerkiksi koodin formatoinnissa helposti luettavaksi, koodin virheiden etsimisessä, koodin kääntämisessä, testien ajamisessa, versionhallinnan integroimisessa projektiin, debuggaamisessa, jne. IDE:issä on myös esimerkiksi hyödyllisiä pikakomentoja, joiden opetteleminen voi tehdä kehitystyöstä nopeampaa ja mielyttävämpää.
+
+Tässä kuvankaappaus Visual Studio Coden extensions -näkymästä. Oikealla kuvassa näkyy myös hieman miten kyseinen IDE formatoi Github markdownia siistin näköiseksi.
+![extensions](img/docker/visual studio code extensions.png) 
 
 ## Virtualisointi
 
 ## Palvelimet ja deployaaminen
 
-<!--Pilvipalvelut Azure, AWS, heroku, Firebase, IBM watson, ...-->
+<!--
+Palvelimet ovat esimerkiksi linux-käyttöjärjestelmää pyörittäviä koneita, joissa on myös jokin palvelinohjelmisto joka tarjoaa palvelimen sisältöä ulkoverkkoon. 
+Kehittäjän ei itse tarvitse enää tehdä monia asioita, vaan työ on enemmän konfigurointia ja tiettyjen työkalujen tuntemista, Pilvipalvelut Azure, AWS, heroku, Firebase, IBM watson, ...-->
 
 ## Tehtävät
 
