@@ -428,7 +428,6 @@ $ npm login
 $ npm publish
 ```
 
-
 ## Jatkuva integrointi (CI/CD)
 
 Jatkuva integrointi (Continuous integration) tarkoittaa oleellisesti sitä, että kun uutta koodia ajetaan versionhallintaan, niin sille suoritetaan samantien erilaisia laatutarkistuksia. Tyypillisesti ajetaan siis järjestelmän yksikkö- ja integraatiotestit ja lisäksi voidaan tehdä esimerkiksi staattista koodianalysointia, automaattista testausta eri käyttöjärjestelmäympäristöissä, suorituskykytestausta yms. Jatkuvan integroinnin avulla nähdään nopeasti jos uusi koodimuutos on rikkonut jotain tai ei muuten ole laadultaan hyväksyttävä. Joillain tiimeillä on työtilassaan esimerkiksi jatkuvasti kaikille näkyvä "radiaattori"-ruutu, josta voi tarkistaa viimeisimmän buildauksen tilan.
@@ -517,14 +516,21 @@ docker push {username}/docker-sovellus
 
 [Docker Composella](https://docs.docker.com/compose/) voi luoda sovelluksia, jotka koostuvat useammasta kontista (esimerkiksi omat kontit tietokannalle ja parille pienelle node-sovellukselle). Jätetään Composen käyttäminen tällä kurssilla seminaariharjoitukseksi halukkaille.
 
-
 ## Github dokumentointi
+
+Hyvä projekti on stabiloitu ja dokumentoitu siten, että myös projektin ulkopuolinen taho pystyy hyödyntämään sitä helposti. Opensource-henkisissä projekteissa projektin dokumentoiminen tehdään tyypillisesti githubiin liitettävän README.md-tiedoston avulla. Tämä on esimerkiksi [hyvä README.md-template](https://github.com/othneildrew/Best-README-Template) dokumentoinnin pohjaksi. Projektin dokumentoinnissa tärkeintä olisi tarjota ainakin projektin yleiskuvaus, käytetyt tekniikat, asennusohjeet sekä lisenssimalli. Jatkokehitysajatukset olisi hyvä listata [github-issueiden](https://guides.github.com/features/issues/) kautta.
+
+Githubiin liitettävää README.md-tiedostoa kirjoitetaan [githubin markdown-syntaksin](https://guides.github.com/features/mastering-markdown/) mukaisesti. Esimerkiksi otsikot merkitään markdowniin #-merkillä ja kuvat liitetään syntaksilla \!\[kuvan kuvausteksti\]\(kansiopolku/kuva.png\).
+
+Projektin laajemman dokumentoinnin voi tehdä pelkkää README.md-tiedostoa joustavammalla, monipuolisemmalla ja helpommin muokattavalla [Github-wikillä](https://guides.github.com/features/wikis/).
 
 ## Kehitysympäristöt ja IDE:t
 
 ## Virtualisointi
 
 ## Palvelimet ja deployaaminen
+
+<!--Pilvipalvelut Azure, AWS, heroku, Firebase, IBM watson, ...-->
 
 ## Tehtävät
 
@@ -559,4 +565,10 @@ Ota testausosiossa kirjoittamasi python-ohjelma (tai tehtävän mallivastaus tar
 ![Travis esimerkki 1](img/travis/travis_ci_tehtavanpalautus_esimerkki1_yleiskuva_development_haarasta.png) 
 ![Travis esimerkki 2](img/travis/travis_tehtavanpalautus_coverage_raportti_esimerkki.png) 
 
+### Seminaaritehtävä 1 (täydennetään seminaarivaiheessa):
 
+Rakenna CI/CD monitorointi ja tuotantoputki ohjelmistoprojekti 2 -projektillenne.
+
+### Seminaaritehtävä 2 (täydennetään seminaarivaiheessa):
+
+Rakenna dockerin ja docker composen avulla ohjelmistoprojekti 2 -projektistanne konttipohjainen sovellus, joka voidaan deployata AWS:ssään.
