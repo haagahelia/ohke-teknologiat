@@ -38,6 +38,8 @@ Hyvä arkkitehtuuri:
 
 ## Hyvän arkkitehtuurin periaatteet
 
+Hyvän arkkitehtuurin tulisi heijastella järjestelmän tarkoitusta. Eli samoin kuin oikean maailman kirjaston arkkitehtuuri parhaimmillaan suorastaan "huutaa", että tämä on kirjasto ja vastaavasti kauppakeskuksesta näkee heti, että se on suunniteltu kauppakeskukseksi, niin vastaavasti myös ohjelmistoarkkitehtuurista tulisi heti nähdä, että kyseessä on kirjanpitosovellus tai verkkokauppa. Ohjelmistoilla tämä saavutetaan suunnittelemalla järjestelmä ensisijaisesti käyttötapausten (use cases) pohjalta. Ei siis esimerkiksi sen pohjalta, että kyseessä on web-järjestelmä, web on pelkkä jakelukanava asialle. Järjestelmän tiedostojen, luokkien ja funktioiden tulisi siis samalla tavalla "huutaa" järjestelmän käyttötarkoitusta kuin oikeiden rakennusten arkkitehtuurit. (Martin R., Clean Architecture).
+
 Hyvässä arkkitehtuurissa järjestelmän komponentit ja toiminnnot on jaoteltu siten, että komponenttien välillä ei ole tarpeettomia sisäisiä yhteyksiä, jotka hankaloittavat muutosten tekemistä. Tällöin puhutaan komponenttien [“loose coupling”:sta](https://en.wikipedia.org/wiki/Loose_coupling). Toisaalta komponenttien sisällä asioiden tulisi palvella samaa keskeistä tavoitetta tai tarvetta. Komponenttien sisällä pyritään siis saavuttamaan [“high cohesion”](https://en.wikipedia.org/wiki/Cohesion_%28computer_science%29). 
 Hyvin rakennetussa järjestelmässä arkkitehti on osannut jakaa järjestelmän toiminnot siten, että loose coupling ja high cohesion tavoitteet saavutetaan. Tässä suunnittelutyössä Robert Martinin listaamista arkkitehtuurisuunnitelun periaatteista (yhteensä 5 kpl) kenties kaksi oleellisinta ovat **Single Responsibility Principle (SRP)** sekä **Open-Closed Principle (OCP)**. (Martin R., Clean Architecture).
 
@@ -54,7 +56,7 @@ Käytännön tasolla oliojärjestelmissä rajapinnat ovat OCP-periaatteen toteut
 
 Ketterän kehityksen suunnittelun periaatteiden mukaisesti ja myös Martinin mukaan arkkitehtuuripäätökset tulisi tehdä mahdollisimman myöhään ja vasta kun on “pakko”, eli kun on maksimaalisesti validointidataa päätöksen tueksi. Tätä ei kuitenkaan tule sekoittaa siihen, että tehdään huonoja ja hätäisiä arkkitehtuuripäätöksiä, tai ettei olla valmiita tarvittaessa tekemään isojakin arkkitehtuurimuutoksia, kun ymmärrys järjestelmästä ja sen tarpeista lisääntyy. 
 Martin listaa mm. seuraavat asiat esimerkkeinä päätöksistä, joiden tekemistä arkkitehtuurisuunnittelun näkökulmasta voi lykätä:
-* Tietokantaratkaisua ei tarvitse lukita kehityksen alkuvaiheessa. Jos järjestelmän arkkitehtuuri on rakennettu hyvin, niin tietokannan toteutustekniikalla ei ole suurta merkitystä.
+* Tietokantaratkaisua ei tarvitse lukita kehityksen alkuvaiheessa. Jos järjestelmän arkkitehtuuri on rakennettu hyvin, niin tietokannan toteutustekniikan voi valita melko myöhään, eli sitten kun ymmärretään käyttötapausten perusteella mahdollisimman paljon järjestelmän luonteesta.
 * Webpalvelinta ei tarvitse valita alkuvaiheessa. Jos järjestelmän toiminnallisuudet ja arkkitehtuuri suunnitellaan hyvin, niin varsinainen “jakelukanava” (webbi, mobiiliappi, email-muistutukset, ..) ei ole kovin alkuvaiheessa välttämättä niin oleellinen.
 * REST-teknologiaa ei tarvitse valita alkuvaiheessa, koska ylätason arkkitehtuuriratkaisujen ei pitäisi riippua siitä, mikä on järjestelmän rajapinta ulkomaailmaan.
 
@@ -112,6 +114,13 @@ Näkymät siis määritellään deklaratiivisesti suhteessa tilamuuttujiin, eik�
 
 [Reaktiivinen ohjelmointi](https://fi.wikipedia.org/wiki/Reaktiivinen_ohjelmointi) on myös monella tapaa kiinnostava ohjelmointiparadigma esimerkiksi webjärjestelmissä, joissa reagoidaan käyttäjän syötteisiin. Reaktiivisessa ohjelmoinnissa [ohjelma koostetaan virroista](https://stackoverflow.com/questions/1028250/what-is-functional-reactive-programming/1030631#1030631). JavaScriptillä reaktiivista ohjelmointia voi tehdä esimerkiksi [RxJS](https://www.learnrxjs.io/) kirjastolla. Myös esimerkiksi Suomessa [Reaktorilla](https://www.reaktor.com/) työskentelevän [Juha Paanasen](https://github.com/raimohanska) kehittämä [Bacon.js](https://baconjs.github.io/) on [funktionaalista reaktiivista ohjelmointiparadigmaa](https://www.quora.com/What-is-difference-between-Functional-Reactive-Programming-Functional-Programming-and-Reactive-Programming) toteuttava kirjasto. Virtojen käsitettä on pyritty visualisoimaan [RxJS marbles-sivustolla](https://rxmarbles.com/).
 
+<!--RxJS esimerkkejä: 
+https://www.learnrxjs.io/learn-rxjs/concepts/rxjs-primer
+https://www.learnrxjs.io/learn-rxjs/recipes/type-ahead
+import { filter } from 'rxjs/operators';
+filter(keys => keys.length > 2 ),
+-->
+
 ## Esimerkkejä arkkitehtuurikuvauksista
 
 Hyvässä arkkitehtuurikuvauksessa ja -kaaviossa on esitetty järjestelmän toimintaa ja rakentamista kuvaavat ydinasiat. Arkkitehtuurikuvioissa liikutaan eri abstraktiotasoilla ja voidaan tarkastella järjestelmän toimintaa eri näkökulmista. Niiden perusteella tulisi kuitenkin syntyä kuva niistä periaatteista ja säännöistä joilla kyseinen järjestelmän on rakennettu.
@@ -160,7 +169,7 @@ Monivalintakysymyksiä yllä olevasta lukumateriaalista vastattavissa Teamsissa.
 * Järjestelmän komponenteilla tai luokilla tulisi olla vain yksi syy muutokseen.
 * Järjestelmän osien tulisi olla avoimia laajennuksille, mutta suljettuja muutoksille.
 
-4. Mitkä seuraavista asioista ovat arkkitehtuurisuunnittelun näkökulmasta suhteellisen epäoleellisia asioita (valitse yksi tai useampi)?
+4. Mitkä seuraavista asioista ovat arkkitehtuurisuunnittelun näkökulmasta suhteellisen epäoleellisia asioita ja joihin liittyviä päätöksiä voi lykätä suunnittelussa pidemmälle (valitse yksi tai useampi)?
 * Tietokannan toteutustekniikka
 * Järjestelmän eri sidosryhmien tarpeiden ja tavoitteiden ymmärtäminen
 * Järjestelmän lopullinen jakelukanava (web, mobiili, ….)
@@ -222,7 +231,7 @@ Palauta lopuksi sama tiedosto Teamsiin.
 Arkkitehtuurikaavion voit piirtää haluamallasi työkalulla, esimerkiksi google-slides riittää ihan hyvin. Palauta tehtävässä lopulta siis png-kuvatiedostona järjestelmätason arkkitehtuurikaavio.
 
 ### Seminaaritehtävä 1 (täydennetään seminaarivaiheessa):
-Tutustu [FRP-ohjelmointiin](https://stackoverflow.com/questions/1028250/what-is-functional-reactive-programming/1030631#1030631) ja tee (tietynlainen) ohjelma bacon.js:llä tai RxJS:llä. Myös [Node-RED](https://nodered.org/) sovellusta voi miettiä tähän vaiheeseen.
+Tutustu [FRP-ohjelmointiin](https://stackoverflow.com/questions/1028250/what-is-functional-reactive-programming/1030631#1030631) ja tee (tietynlainen) ohjelma RxJS:llä (tai bacon.js:llä). Myös [Node-RED](https://nodered.org/) sovellusta voi miettiä tähän vaiheeseen.
 
 ### Seminaaritehtävä 2:
 Mikropalveluihin perustuvan pienen palvelun rakentaminen (esim autentikointipalvelu pyörii omana palvelunaan).
