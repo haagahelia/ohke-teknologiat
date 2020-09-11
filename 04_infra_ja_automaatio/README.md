@@ -232,7 +232,7 @@ $ git add .
 #Lisätään kaikki staging tason muutokset lokaaliin versionhallintaan.
 $ git commit -m "initial commit"
 
-#git add vaiheen voi hoitaa myös -a -vivulla commit -komennossa: eli tämä on sama kuin git add + git commit
+#git add vaiheen voi hoitaa myös -a -vivulla commit -komennossa: eli tämä on sama kuin git add + git commit, joskin kokonaan uudet ("untracked") tiedostot pitää lisätä git add:lla edelleen
 $ git commit -a -m "second commit"
 
 # Liitetään paikalliselle repositorylle upstream repo githubissa (tyhjä upstream-repo on luotu ensin githubissa)
