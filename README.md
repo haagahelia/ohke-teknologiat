@@ -38,6 +38,9 @@ Video 2: <a href="https://web.microsoftstream.com/video/bff8f1a1-025d-4c13-8287-
  <br/>
  <br />
  <a href="01_tietorakenteet_ja_algoritmit/src/">Lähdekoodit</a>
+ <br /><br />
+ <a href="01_tietorakenteet_ja_algoritmit/malliratkaisu.md">Kotitehtävän malliratkaisu (dokumentti)</a><br />
+ <a href="https://web.microsoftstream.com/video/aac1ced4-5a82-43d7-b7cd-40604760ffc4">Kotitehtävän malliratkaisu (video)</a><br />
  </td></tr>
  <tr><td>pe 11.9.</td><td> <a href="02_ohjelmistoarkkitehtuurit_ja_patternit">Ohjelmistoarkkitehtuurit ja patternit</a></td></tr>
  <tr><td>pe 18.9.</td><td><a href="02_ohjelmistoarkkitehtuurit_ja_patternit">Ohjelmistoarkkitehtuurit ja patternit</a>, vierailija <a href="https://neverthink.tv/">Neverthink.tv:ltä</a></td></tr>

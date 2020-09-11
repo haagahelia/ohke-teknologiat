@@ -175,6 +175,7 @@ Pythonin standardikirjaston avulla aineiston järjestäminen vie suuruusluokkaa 
 
 Python-koodia on mahdollista dokumentoida koodiesimerkein, jotka ovat oikeaa suoritettavaa Python-koodia. Malliratkaisun pidemmässä versiossa on hyödynnetty doctest-moduulia yksittäisten funktioiden testaamiseksi esimerkkikoodien avulla. Katso lisää osoitteesta https://docs.python.org/3/library/doctest.html.
 
+Lähdekooditiedosto löytyy erillisenä tiedostona täältä: [src/events_by_date.py](src/events_by_date.py).
 
 ```python
 import urllib.request
