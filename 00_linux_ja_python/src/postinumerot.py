@@ -16,7 +16,7 @@ def main():
 
     if etsittava in toimipaikat_ja_numerot:
         loydetyt = toimipaikat_ja_numerot[etsittava]
-        print('Postitoimipaikat: ' + ', '.join(loydetyt))
+        print('Postinumerot: ' + ', '.join(loydetyt))
     else:
         print('Postitoimipaikkaa ei löytynyt :(')
 
