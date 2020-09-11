@@ -283,7 +283,8 @@ $ git push --set-upstream origin uusihaara
 # Kun olet tehnyt muutoksia omassa haarassasi ja haluat yhdistää muutokset esim master-haaraan, niin
 $ git checkout master # siirry master haaraan
 $ git merge uusihaara # yhdistä muutokset uudesta haarasta masteriin
-$ git branch -d uusihaara # poista uusihaara, jos se oli esim jollekin yhdelle featurelle.
+$ git branch -d uusihaara # poista uusihaara, jos se oli esim jollekin yhdelle featurelle, vivun -D saattaa joutua myös laittamaan.
+$ git push origin --delete uusihaara #poista uusihaara remotesta myös.
 
 # Katso mitä lokaaleja muutoksia olet tehnyt
 $ git status
