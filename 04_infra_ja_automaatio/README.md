@@ -232,6 +232,9 @@ $ git add .
 #Lisätään kaikki staging tason muutokset lokaaliin versionhallintaan.
 $ git commit -m "initial commit"
 
+#git add vaiheen voi hoitaa myös -a -vivulla commit -komennossa: eli tämä on sama kuin git add + git commit
+$ git commit -a -m "second commit"
+
 # Liitetään paikalliselle repositorylle upstream repo githubissa (tyhjä upstream-repo on luotu ensin githubissa)
 git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
 
@@ -266,6 +269,10 @@ $ git merge # tehdään yhdistäminen paikallisiin muutoksiin
 $ git pull --rebase
 
 
+#Katso missä lokaalissa branchissa olet.
+git branch
+#Katso mitä brancheja projektin remote:ssa on.
+git branch -r
 # Luo uusi lokaali haara (branch) ja siirry sinne 
 $ git checkout -b uusihaara
 # myös tämä komentosarja tekee saman asian
@@ -276,7 +283,7 @@ $ git push --set-upstream origin uusihaara
 # Kun olet tehnyt muutoksia omassa haarassasi ja haluat yhdistää muutokset esim master-haaraan, niin
 $ git checkout master # siirry master haaraan
 $ git merge uusihaara # yhdistä muutokset uudesta haarasta masteriin
-$ git branch -d uusihaara # poista uusihaara
+$ git branch -d uusihaara # poista uusihaara, jos se oli esim jollekin yhdelle featurelle.
 
 # Katso mitä lokaaleja muutoksia olet tehnyt
 $ git status
