@@ -545,13 +545,25 @@ IDE:hin on helppo asentaa liitännäisosia, jotka voivat auttaa esimerkiksi kood
 Tässä kuvankaappaus Visual Studio Coden extensions -näkymästä. Oikealla kuvassa näkyy myös hieman miten kyseinen IDE formatoi Github markdownia siistin näköiseksi.
 ![extensions](img/docker/visual studio code extensions.png) 
 
-## Virtualisointi
-
 ## Palvelimet ja deployaaminen
 
-<!--
-Palvelimet ovat esimerkiksi linux-käyttöjärjestelmää pyörittäviä koneita, joissa on myös jokin palvelinohjelmisto joka tarjoaa palvelimen sisältöä ulkoverkkoon. 
-Kehittäjän ei itse tarvitse enää tehdä monia asioita, vaan työ on enemmän konfigurointia ja tiettyjen työkalujen tuntemista, Pilvipalvelut Azure, AWS, heroku, Firebase, IBM watson, ...-->
+![Pilvi-infra](img/pilvi-infra.png)
+
+Palvelimet ovat esimerkiksi linux-käyttöjärjestelmää pyörittäviä koneita, joissa on myös jokin palvelinohjelmisto joka tarjoaa palvelimen sisältöä ulkoverkkoon. Yksinkertaisimmillaan siis oma tietokoneesi, jossa pyörii vaikka node-palvelin ja sillä on julkinen IP-osoite, voi toimia palvelinkoneena.
+
+Palvelimen voi pystyttää myös jonkun ylläpitämään virtuaalikoneympäristöön. Esimerkiksi [DigitalOcean-palvelusta](https://www.digitalocean.com/) voi ostaa (tai ilmeisesti opiskelijalisenssillä saa ilmaiseksi) virtuaalikoneympäristön, johon voi sitten pystytää oman websovelluksensa ja vaikka sovelluksen käyttämän tietokannan. Virtuaalikone on siis käytännössä oma linux-ympäristö, joka näkyy julkiseen verkkoon ja johon voi ottaa ssh-yhteyden.
+
+Nykyisin pilvipohjaiset palvelinympäristöt tarjoavat monia asioita valmiina ja oman palvelimen pystyttäminen on monesti huomattavasti työläämpää ja tarpeetonta. Oman web-sovelluksen saa pyörimään esimerkiksi [Heroku pilvipalveluun](https://www.heroku.com/)) melko vaivattomasti. Heroku [voi deployata sovelluksesi suoraan githubista](https://devcenter.heroku.com/articles/git) tai sitten voit [deployata herokuun valmiin docker-kontin](https://devcenter.heroku.com/articles/build-docker-images-heroku-yml). Pienellä lisäkonfiguroinnilla Herokun kanssa voi asentaa toimimaan esimerkiksi samassa pilvessä pyörivän [Postgres-tietokannan](https://devcenter.heroku.com/articles/heroku-postgresql).
+
+[Esimerkiksi Amazonin AWS pilvi-infra](https://aws.amazon.com/) tarjoaa Herokua monipuolisemman, mutta samalla myös monimutkaisemman pilviympäristön palvelujen pyörittämiseen. Amazonin infrastruktuurissa on lukuisia erilaisia käsitteitä ja mahdollisuuksia konfiguroida palvelulle erilaisia komponentteja ja esimerkiksi tietovarastoja. Monien sovellusten tuotantopalvelut pyörivät nykyisin Amazonin pilvi-infran päällä. Pilvestä on helppo ostaa lisäkapasiteettiä aina tarpeen mukaan.
+
+Amazonin ohella esimerkiksi [Microsoftin Azure](https://azure.microsoft.com/en-us/) tarjoaa monipuolista pilvi-infraa. Azurea, samoin kuin myös esimerkiski AWS:ssää, voi käyttää esimerkiksi tuhansista laitteista koostuvien IoT-järjestelmien pyörittämiseen ja niihin voi liittää esimerkiksi ilman koodausta konfiguroitavia koneoppimistyökaluja. Pilvijärjestelmissä myös esimerkiksi datan visualisointia voi tehdä valmiilla ja ilman ohjelmointia konfiguroitavilla työkaluilla.
+
+[IBM:n watson](https://www.ibm.com/watson) on erikoistunut tarjoamaan "tekoälyä pilvestä". Esimerkiksi [Watson Assistantin](https://www.ibm.com/cloud/watson-assistant/) avulla voi rakentaa luonnollista kieltä tulkitsevia ja käyttäjän kanssa keskustelevia sovelluksia. Watson Assistantin rajapintaan siis lähetetään käyttäjän kysymyksiä ja saadaan ulos esimerkiksi niihin liittyvää intentiotulkintaa.
+
+[Firebase](https://firebase.google.com/docs) on suosittu pilvessä pyörivä tietokantapalvelu, joka on suunniteltu käytettäväksi ennen kaikkea mobiili- ja websovellusten taustalla. Sen avulla esimerkiksi mobiilisovellus ei tarvitse omaa erillistä palvelinta, vaan sovelluksen tarvitsema ulkopuolinen tieto voidaan tallentaa Firebasen pilvipalveluun. Firebasella on omat client-sovellukset eri ohjelmointiympäristöihin, joilla Firebase-kantaan saa helposti yhteyden.
+
+Pilvipalvelujen ansiosta kehittäjän työ on monessa kohtaa tehostunut ja kehittäjien ei itse tarvitse enää tehdä monia asioita itse. Työ on monilta osin enemmän konfigurointia ja tiettyjen työkalujen tuntemista.
 
 ## Tehtävät
 
@@ -585,6 +597,12 @@ Ota testausosiossa kirjoittamasi python-ohjelma (tai tehtävän mallivastaus tar
 1. Tulosta ja palauta Traviksen tuottama CI-raportti jossa näkyy, että sovellus kääntyy, sille ajetaan ainakin yksi yksikkötesti development-haarassa ja yksikkötestikattavauus rivitasolla on jotain yli 0%, mieluusti lähemmäs 100%. Palauta siis kaksi kuvankaappausta, toisessa näkyy github-tunnuksesi ja kuvankaappaus traviksen buildauksesta development-haarassa ja toisessa saman buildin coverage raportti. Alla esimerkit.
 ![Travis esimerkki 1](img/travis/travis_ci_tehtavanpalautus_esimerkki1_yleiskuva_development_haarasta.png) 
 ![Travis esimerkki 2](img/travis/travis_tehtavanpalautus_coverage_raportti_esimerkki.png) 
+
+<!--
+### Tehtävä 4.3
+
+Infraan liittyvä tehtävä? Palvelun deployaus herokuun (docker-konttina?) tms..
+-->
 
 ### Seminaaritehtävä 1 (täydennetään seminaarivaiheessa):
 
