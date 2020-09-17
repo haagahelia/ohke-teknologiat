@@ -1,5 +1,19 @@
 ## Sisällysluettelo
 
+* [Ohjelmistokehittäjän infra ja automaatiotyökalut](#ohjelmistokehittäjän-infra-ja-automaatiotyökalut)
+* [Linuxin ja komentorivin perusteet](#linuxin-ja-komentorivin-perusteet)
+* [Unix-pohjaisten järjestelmien komentorivi](#unix-pohjaisten-järjestelmien-komentorivi)
+* [Unix-komentoja](#unix-komentoja)
+* [Unix-skriptit ja chron](#unix-skriptit-ja-chron)
+* [Versionhallinta (Git) ja Github-palvelu](#versionhallinta-%28Git%29-ja-github-palvelu)
+* [Paketinhallinta ja buildaaminen](#paketinhallinta-ja-buildaaminen)
+* [Jatkuva integrointi (CI/CD)](#jatkuva-integrointi-%28ci/cd%29)
+* [Kontittaminen (docker)](#kontittaminen-%28docker%29)
+* [Github dokumentointi](#github-dokumentointi)
+* [Kehitysympäristöt ja IDEt](#kehitysympäristöt-ja-IDEt)
+* [Palvelimet ja deployaaminen](#palvelimet-ja-deployaaminen)
+* [Tehtävät](#tehtävät)
+
 # Ohjelmistokehittäjän infra ja automaatiotyökalut
 
 Ohjelmistokehittäjän työssä on paljon oheistyökaluja ja tekniikoita, jotka helpottavat kehitystyötä ja parantavat kehitystyön laatua. Tässä osiossa on esitelty näitä asioita.
@@ -153,8 +167,8 @@ $ sudo passwd username
 ```
 Unix-järjestelmissä on yleensä myös monia tietoliikenteeseen liittyviä käteviä komentoja.
 ```shell
-$ ping 123.343.434 #miten nopeasti osoite vastaa, voi testata vaikka omaa tuotantopalvelinta
-$ whois haaga-helia.fi #tietoja tunnuksesta
+$ ping www.haaga-helia.fi #miten nopeasti osoite vastaa, voi testata vaikka omaa tuotantopalvelinta
+$ whois haaga-helia.fi #tietoja tunnuksesta, whois pitää asentaa apt:lla ubuntussa.
 $ ssh host.jotain.fi  #avataan ssh-etäyhteys etäpalvelimeen
 $ wget https://osoite.fi/kuva.jpeg  #Ladataan tiedosto internetistä
 ```
@@ -534,7 +548,7 @@ Githubiin liitettävää README.md-tiedostoa kirjoitetaan [githubin markdown-syn
 
 Projektin laajemman dokumentoinnin voi tehdä pelkkää README.md-tiedostoa joustavammalla, monipuolisemmalla ja hieman helpommin muokattavalla [Github-wikillä](https://guides.github.com/features/wikis/).
 
-## Kehitysympäristöt ja IDE:t
+## Kehitysympäristöt ja IDEt
 
 Ohjelmistokehittäjän työ tapahtuu aina jonkilaisessa kehitysympäristössä. Alkeellisin kehitysympäristö voi olla pelkkä notepad-tekstieditori ja komentoriviltä ajettava kääntökomento. Kehitystyötä voi kuitenkin nopeuttaa ja helpottaa huomattavasti rakentamalla kyseisen sovelluksen kehittämiseen soveltuvan kehitysympäristön. 
 
@@ -543,7 +557,7 @@ Kehitysympäristössä yleensä oleellisin työkalu on ympäristöön soveltuva 
 IDE:hin on helppo asentaa liitännäisosia, jotka voivat auttaa esimerkiksi koodin formatoinnissa helposti luettavaksi, koodin virheiden etsimisessä, koodin kääntämisessä, testien ajamisessa, versionhallinnan integroimisessa projektiin, debuggaamisessa, jne. IDE:issä on myös esimerkiksi hyödyllisiä pikakomentoja, joiden opetteleminen voi tehdä kehitystyöstä nopeampaa ja mielyttävämpää.
 
 Tässä kuvankaappaus Visual Studio Coden extensions -näkymästä. Oikealla kuvassa näkyy myös hieman miten kyseinen IDE formatoi Github markdownia siistin näköiseksi.
-![extensions](img/docker/visual studio code extensions.png) 
+![extensions](img/docker/visual_studio_code_extensions.png) 
 
 ## Palvelimet ja deployaaminen
 
@@ -569,7 +583,7 @@ Pilvipalvelujen ansiosta kehittäjän työ on monessa kohtaa tehostunut ja kehit
 
 ### Tehtävä 4.1
 
-Kirjoita scripti (lokittaja.sh), joka tarvittaessa luo ja sitten kirjoittaa tiedostoon *loki.log* tämän hetken kellonajan ja tekstin “heippa”. Käytä googlea selvittääksesi miten parhaiten saat aikaleiman tulostettua scriptiin. Ajasta scripti chronilla pyörimään minuutin välein. Kirjoita toinen scripti (tyhjentaja.sh), joka kopioi *loki.log*-tiedoston sisällön *vanhatlogit.log*-tiedoston loppuun ja sitten poistaa *loki.log*-tiedoston. Ajasta tyhjentaja-scripti pyörimään chronissa joka keskiyö. Palauta luomasi kaksi linux-skriptiä (lokittaja.sh ja tyhjentaja.sh) sekä tiedostossa /var/spool/cron/käyttäjänimesi sijaitseva cron-tiedosto, josta näkyy tekemäsi ajastukset.
+Kirjoita scripti (lokittaja.sh), joka tarvittaessa luo ja sitten kirjoittaa tiedostoon *loki.log* tämän hetken kellonajan ja tekstin “heippa”. Käytä googlea selvittääksesi miten parhaiten saat aikaleiman tulostettua scriptiin. Ajasta scripti chronilla pyörimään minuutin välein. Kirjoita toinen scripti (tyhjentaja.sh), joka kopioi *loki.log*-tiedoston sisällön *vanhatlogit.log*-tiedoston loppuun ja sitten poistaa *loki.log*-tiedoston. Ajasta tyhjentaja-scripti pyörimään chronissa joka keskiyö. Palauta luomasi kaksi linux-skriptiä (lokittaja.sh ja tyhjentaja.sh) sekä tiedostossa /var/spool/cron/crontabs/kayttajatunnus sijaitseva cron-tiedosto, josta näkyy tekemäsi ajastukset. Vinkki: cron-tiedoston käsittelyyn (palautusta varten) tarvitset todennäköisesti sudo-komentoa.
 
 ### Tehtävä 4.2
 
