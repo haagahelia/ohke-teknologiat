@@ -5,10 +5,10 @@
 * [Unix-pohjaisten järjestelmien komentorivi](#unix-pohjaisten-järjestelmien-komentorivi)
 * [Unix-komentoja](#unix-komentoja)
 * [Unix-skriptit ja chron](#unix-skriptit-ja-chron)
-* [Versionhallinta (Git) ja Github-palvelu](#versionhallinta-%28Git%29-ja-github-palvelu)
+* [Versionhallinta (Git) ja Github-palvelu](#versionhallinta-\(Git\)-ja-github-palvelu)
 * [Paketinhallinta ja buildaaminen](#paketinhallinta-ja-buildaaminen)
-* [Jatkuva integrointi (CI/CD)](#jatkuva-integrointi-%28ci/cd%29)
-* [Kontittaminen (docker)](#kontittaminen-%28docker%29)
+* [Jatkuva integrointi (CI/CD)](#jatkuva-integrointi-\(ci/cd\))
+* [Kontittaminen (docker)](#kontittaminen-\(docker\))
 * [Github dokumentointi](#github-dokumentointi)
 * [Kehitysympäristöt ja IDEt](#kehitysympäristöt-ja-IDEt)
 * [Palvelimet ja deployaaminen](#palvelimet-ja-deployaaminen)
@@ -557,7 +557,7 @@ Kehitysympäristössä yleensä oleellisin työkalu on ympäristöön soveltuva 
 IDE:hin on helppo asentaa liitännäisosia, jotka voivat auttaa esimerkiksi koodin formatoinnissa helposti luettavaksi, koodin virheiden etsimisessä, koodin kääntämisessä, testien ajamisessa, versionhallinnan integroimisessa projektiin, debuggaamisessa, jne. IDE:issä on myös esimerkiksi hyödyllisiä pikakomentoja, joiden opetteleminen voi tehdä kehitystyöstä nopeampaa ja mielyttävämpää.
 
 Tässä kuvankaappaus Visual Studio Coden extensions -näkymästä. Oikealla kuvassa näkyy myös hieman miten kyseinen IDE formatoi Github markdownia siistin näköiseksi.
-![extensions](img/docker/visual_studio_code_extensions.png) 
+![extensions](img/visual_studio_code_extensions.png) 
 
 ## Palvelimet ja deployaaminen
 
