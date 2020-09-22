@@ -1,28 +1,42 @@
+# Testaus
+
+Tämän oppitunnin tavoitteena on tutustua testauksen eri tasoihin yksikkötesteistä järjestelmätesteihin ja tutustua testiautomaation käsitteistöön ja työkaluihin.
+
+Aiheen opiskelun jälkeen osaat kirjoittaa Python-funktioillesi yksikkötestit ja tiedät mistä lähteä liikkeelle, kun sinulle tulee tarve kirjoittaa automatisoituja testejä.
+
 ## Suositeltavat ennakkovideot
 
-Software Testing Explained: How QA is Done Today, https://www.youtube.com/watch?v=oLc9gVM8FBM
+### Video 1: [Software Testing Explained: How QA is Done Today](https://www.youtube.com/watch?v=oLc9gVM8FBM)
 
+[![Software Testing Explained: How QA is Done Today](https://img.youtube.com/vi/oLc9gVM8FBM/mq3.jpg)](https://www.youtube.com/watch?v=oLc9gVM8FBM)
 
-What is Automated Testing?
- https://www.youtube.com/watch?v=Nd31XiSGJLw
+> Tämä video käsittelee testauksen eri tapoja ja käsitteistöä yleisellä tasolla.
 
+### Video 2: [What is Automated Testing?](https://www.youtube.com/watch?v=Nd31XiSGJLw)
+
+[![What is Automated Testing?](https://img.youtube.com/vi/Nd31XiSGJLw/mq3.jpg)](https://www.youtube.com/watch?v=Nd31XiSGJLw)
+
+> *In this video we start diving into the world of quality assurance and discuss automated testing for our web and mobile applications...*
 
 
 ## Oppitunnin tavoitteet
 
-Oppitunnin tavoitteena on oppia erityisesti yksikkötestauksen käsitteet, mutta sovellamme pytest-moduulia myös ohjelmamme ja rajapinnan integraation testaamiseen. 
+Oppitunnin tavoitteena on oppia erityisesti yksikkötestauksen käsitteet, mutta sovellamme pytest-moduulia myös ohjelmamme ja REST-rajapinnan integraation testaamiseen. 
 
-Ohjelman rakenteesta riippuen sen testaaminen voi olla hyvin hankalaa. Ulkoiset riippuvuudet, kuten riippuvuus API-rajapinnasta, vaikuttavat testien tuloksiin, joten testattavan aineiston muuttuessa myös testien tulokset voivat muuttua.
+Ohjelman rakenteesta riippuen sen testaaminen voi olla hyvin hankalaa. Ulkoiset riippuvuudet, kuten riippuvuus REST-rajapinnasta, vaikuttavat testien tuloksiin, joten testattavan aineiston muuttuessa myös testien tulokset voivat muuttua.
+
+Ulkoisten riippuvuuksien vaikutuksen minimoimiseksi testit suoritetaan usein erillisessä QA-ympäristössä (quality assurance), jossa rajapintojen vastaukset toiminta on hallittavissa. Tällä oppitunnilla meillä ei ole käytössä QA-ympäristöä, joten testaamme integraatiota Helsingin kaupungin tuotantorajapintaa vasten.
+
 
 ## Oppitunnin sisältö
 
-Tällä oppitunnilla kokeilemme testausta eri tasoilla hyödyntäen Pythonin `pytest`-moduulia. Testattava ohjelmisto on aikaisemmalta viikolta tuttu ohjelma, joka hakee Helsingin kaupungin REST-rajapinnasta tapahtumat ja näyttää ne käyttäjälle kronologisessa järjestyksessä.
+Tällä oppitunnilla kokeilemme testausta eri tasoilla hyödyntäen Pythonin `pytest`-moduulia. Testattava ohjelmisto on aikaisemmalta viikolta tuttu ohjelma, joka hakee Helsingin kaupungin REST-rajapinnasta tapahtumat ja näyttää ne käyttäjälle järjestyksessä tapahtuman ajankohdan mukaan.
 
-Voit asentaa pytest-moduulin itsellesi komennolla:
+Voit asentaa Pythonin pytest-moduulin itsellesi seuraavalla komennolla:
 
 `pip install pytest`
 
-Pytest-moduulia voidaan käyttää joko järjestelmän luoneella `pytest`-komennolla tai `python`-komennon kautta valitsemalla `-m` -vivulla moduuliksi `pytest`. Voit varmistaa asennuksen toimivuuden esimerkiksi seuraavasti:
+Pytest-moduulia voidaan käyttää joko erillisellä `pytest`-komennolla tai `python3`-komennon kautta valitsemalla `-m` -vivulla moduuliksi `pytest`. Voit varmistaa asennuksen toimivuuden esimerkiksi seuraavasti:
 
 ```
 $ python3 -m pytest
@@ -32,21 +46,30 @@ collected 0 items
 ======= no tests ran in 0.12s ========
 ```
 
-Tässä tapauksessa `pytest` etsi testitiedostoja, mutta koska niitä ei löytynyt, ei suorittanut vielä yhtään testiä.
+```
+$ pytest
+======== test session starts =========
+collected 0 items
 
-## Testauksen tasot
+======= no tests ran in 0.12s ========
+```
 
-Testauksen käsitteistöön kuuluu oleellisena osana eri tasot, joilla erityisesti automatisoitua testausta suoritetaan. Jyväskylän Yliopiston Informaatioteknologian tiedekunnan materiaali kuvaa testauksen tasot selkeänä kokonaisuutena, johon voit tutustua osoitteessa
-http://smarteducation.jyu.fi/projektit/systech/Periaatteet/suunnittelun-periaatteet/testaus/testauksen-tasot.
+Yllä esitetyissä tapauksissa `pytest` etsi testitiedostoja, mutta koska niitä ei löytynyt, ei suorittanut vielä yhtään testiä.
+
+Testejä voitaisiin kirjoittaa myös muita työkaluja, kuten Pythonin unittest-moduulia, hyödyntäen. `pytest` on valittu kurssille siksi, että se ei edellytä minkään ulkoisten riippuvuuksien käyttämistä testikoodeissasi, vaan voit kirjoittaa testit kuten kirjoittaisit mitä tahansa muutakin Python-koodia.
+
+# Testauksen tasot
+
+Testauksen käsitteistöön kuuluu oleellisena osana eri tasot, joilla erityisesti automatisoitua testausta suoritetaan. [Jyväskylän Yliopiston Informaatioteknologian tiedekunnan testaussivusto](http://smarteducation.jyu.fi/projektit/systech/Periaatteet/suunnittelun-periaatteet/testaus/testauksen-tasot) kuvaa testauksen tasot selkeänä kokonaisuutena ja kyseisen sivuston määritelmiä noudatetaan myös tällä oppitunnilla.
 
 
-### Yksikkötestaus
+## Yksikkötestaus
 
-> "Yksikkötestauksella tarkoitetaan pienimmän mahdollisen ohjelman osan, esimerkiksi aliohjelman, toiminnan testaamista. Yksikkötesteillä varmistetaan, että ohjelman pienimmät osat toimivat odotetulla tavalla, ja että mahdolliset virhetilanteet on niiden osalta ennakoitu."
+> *"Yksikkötestauksella tarkoitetaan **pienimmän mahdollisen ohjelman osan**, esimerkiksi aliohjelman, toiminnan testaamista. Yksikkötesteillä varmistetaan, että ohjelman pienimmät osat toimivat odotetulla tavalla, ja että mahdolliset virhetilanteet on niiden osalta ennakoitu."*
 >
-> "Yksikkötestauksen hyödyt näkyvät kehitysprosessin aikana erityisesti silloin, kun jo kirjoitettuun koodiin joudutaan tekemään muutoksia. Automatisoiduilla yksikkötesteillä voidaan nopeasti todeta, aiheuttavatko tehdyt muutokset virheitä."
+> *"Yksikkötestauksen hyödyt näkyvät kehitysprosessin aikana erityisesti silloin, kun jo kirjoitettuun koodiin joudutaan tekemään muutoksia. Automatisoiduilla yksikkötesteillä voidaan **nopeasti** todeta, aiheuttavatko tehdyt muutokset virheitä."*
 >
-> *Jyväskylän Yliopisto, Informaatioteknologian tiedekunta. [Testauksen tasot](http://smarteducation.jyu.fi/projektit/systech/Periaatteet/suunnittelun-periaatteet/testaus/testauksen-tasot)*
+> Jyväskylän Yliopisto, Informaatioteknologian tiedekunta. [Testauksen tasot](http://smarteducation.jyu.fi/projektit/systech/Periaatteet/suunnittelun-periaatteet/testaus/testauksen-tasot)
 
 Katsotaan ensimmäiseksi lajittelualgoritmitehtävän malliratkaisussa olevaa funktiota, joka vaihtaa listalta kahdessa indeksissä olevat alkiot keskenään:
 
@@ -55,7 +78,9 @@ def swap(list, i, j):
     list[i], list[j] = list[j], list[i]
 ```
 
-Tätä funktiota voitaisiin testata esimerkiksi seuraavalla koodilla:
+Miten tätä funktiota voitaisiin testata? 
+
+Tehdään testit ensin kokonaan ilman `pytest`-moduulia Pythonin omilla funktioilla!
 
 ```python
 # tiedosto test_events_by_date.py
@@ -87,7 +112,7 @@ Traceback (most recent call last):
 AssertionError
 ```
 
-Testi voidaan suorittaa `pytest`-moduulilla, joka etsii `test_`-alkuiset tiedostot ja funktiot ja suorittaa ne:
+Testi voidaan suorittaa kutsumalla `test_swap_first_and_last`-funktiota itse, mutta testin automatisoimiseksi käytämme `pytest`-moduulia. Tällä kertaa `pytest` löytää testitiedostomme, etsii sieltä `test_`-alkuiset funktiot ja suorittaa ne:
 
 ```
 $ python3 -m pytest
@@ -99,7 +124,9 @@ src\test_events_by_date.py .      [100%]
 ========= 1 passed in 0.06s ==========
 ```
 
-#### Testidata eli "fixturet"
+Tässä testissä vaihdoimme kahden merkkijonon paikkaa, mikä periaatteessa riittää kyseisen funktion testaamiseksi. Usein tarvitsemme kuitenkin paljon realistisempaa testidataa ohjelmamme testaamiseksi.
+
+## Testidata eli "fixturet"
 
 Testien kirjoittamisen ja onnistumisen kannalta testattava data on avainasemassa. Jos testattava data vaihtelee, myös testien tulokset vaihtelevat. On myös tärkeää käyttää sellaista dataa, joka vastaa riittävän kattavasti oikeassa datassa kohdattavia vaihteluita.
 
@@ -141,29 +168,96 @@ CHRISTMAS_EVENT = {
 }
 ```
 
-Näillä tapahtumilla voimme jo luoda listan, jossa kaikki tapahtumat ovat väärissä paikoissa. Tämän listan voimme puolestaan antaa toteuttamallemme `bubble_sort`-funktiolle, minkä jälkeen listan tulee olla tunnetussa oikeassa järjestyksessä:
+Näillä tapahtumilla voimme jo luoda listan, jossa kaikki tapahtumat ovat väärissä paikoissa, ja testata tapahtumien vaihtamisen keskenään:
+
+```python
+# uusi versio testissä, tällä kertaa vaihdetaan tapahtumia eikä merkkijonoja:
+def test_swap_first_and_last():
+    my_list = [CHRISTMAS_EVENT, UNKNOWN_EVENT, JANUARY_1ST_EVENT]
+
+    events_by_date.swap(my_list, 0, 2)
+
+    assert my_list == [JANUARY_1ST_EVENT, UNKNOWN_EVENT, CHRISTMAS_EVENT]
+```
+
+Oikeita tapahtumia vastaavalla testidatalla voimme testata myös `bubble_sort`-funktion toimintaa. Ensin luodaan testissä käytettävä lista, sen jälkeen kutsutaan testattavaa funktiota ja lopuksi varmistetaan odotettu lopputulos:
 
 ```python
 def test_bubble_sort_with_three_events():
     # Testiaineisto: lista väärässä järjestyksessä
     events = [CHRISTMAS_EVENT, UNKNOWN_EVENT, JANUARY_1ST_EVENT]
 
+    # Testattava operaatio:
     events_by_date.bubble_sort(events)
 
+    # Tuloksen varmistaminen:
     assert events == [UNKNOWN_EVENT, JANUARY_1ST_EVENT, CHRISTMAS_EVENT]
 ```
 
-Tietokantapohjaisessa ohjelmistossa sama ennalta määrätty testidata syötetään tyypillisesti tietokantaan ennen jokaista testiä.
+Tietokantapohjaisessa ohjelmistossa sama ennalta määrätty testidata syötetään tyypillisesti tietokantaan ennen jokaista testiä, jotta jokaisen testin alussa tietokannan sisältämä tila on varmasti sama.
 
-#### Test driven development
+## Testien ajaminen VS Codessa
 
-Aikaisemman viikon malliratkaisussa on havaittu bugi, joka on raportoitu GitHubiin issuena. Bugin seurauksena kaikkien tapahtumien ajankohdat on ilmoitettu UTC-ajassa, eli ne eivät vastaa Suomen paikallisia aikoja.
+VS Codessa on oma erillinen näkymänsä testeille. Tämän näkymän kautta testien suoritusta voidaan nopeuttaa ja tehdä vielä havainnollisemmaksi kuin komentoriviltä:
+
+https://code.visualstudio.com/docs/python/testing
+
+## Test driven development
+
+Tietorakenteet ja algoritmit -aiheen malliratkaisussa on havaittu bugi, joka [on raportoitu GitHubiin issuena](). Bugin seurauksena kaikkien tapahtumien ajankohdat on ilmoitettu UTC-ajassa, eli ne eivät vastaa Suomen paikallisia aikoja.
 
 Tämä on kiusallinen ongelma, joka korjataan seuraavaksi.
 
+Päivämäärien käsittelemiseksi asennamme `dateutil`-paketin, joka helpottaa aikavyöhykkeiden käyttämistä ja merkkijonomuotoisten päivämäärien parsimista:
+
 `pip install python-dateutil`
 
-#### Miten testata koodia, jonka tulos vaihtelee?
+Dateutil-paketin dokumentaatio löytyy osoitteesta https://dateutil.readthedocs.io/en/stable/
+
+### Testin kirjoittaminen
+
+Bugiraportissa todetaan tammikuussa 2022 klo 14 alkavan tapahtuman kellonaikana näkyvän klo 12. Virhe johtuu siitä, että aika poimitaan ISO-muotoillusta merkkijonosta huomioimatta lainkaan aikavyöhykettä. Oikea ajankohta syötteelle '2022-01-01T12:00:00Z' olisikin 1.1.2022 klo 14:00 Suomen aikaa.
+
+Tätä varten voidaan kirjoittaa testi `str_to_datetime`-funktiolle. Huomaa, että emme ole vielä toteuttaneet kyseistä testattavaa funktiota.
+
+```python
+def test_str_to_datetime_in_helsinki_timezone():
+    dt = events_by_date.str_to_datetime('2022-01-01T12:00:00Z')
+
+    assert dt.date() == date(2022, 1, 1)
+    assert dt.time() == time(14, 0)
+```
+
+Kun tarvittava testi on kirjoitettu, voimme ryhtyä toteuttamaan itse `str_to_datetime`-funktiota. Tässä meille tulee avuksi dateutil-kirjaston `parser` ja `tz`, joilla voimme lukea ISO-merkkijonon päiväksi ja käsitellä Helsingin aikavyöhykettä:
+
+```python
+from dateutil import parser, tz
+
+dt = parser.isoparse('2022-01-01T12:00:00Z') # muodostaa datetime-olion
+
+hki_timezone = tz.gettz('Europe/Helsinki') # Helsingin aikavyöhyke
+```
+<!--
+```python
+from dateutil import parser, tz
+
+def str_to_datetime(dt_str):
+    dt = parser.isoparse(dt_str)
+    hki_timezone = tz.gettz('Europe/Helsinki')
+    return dt.astimezone(hki_timezone)
+```
+-->
+
+Kun **yksikkö** eli `str_to_datetime` on testattu toimivaksi, se voidaan ottaa käyttöön myös main-funktiossa. Datetime-oliolta saadaan selvitettyä päivämäärä ja kellonaika kotimaisessa muodossa seuraavien `strftime`-metodikutsujen avulla.
+
+```python
+date = datetime.strftime('%d.%m.%G')
+time = datetime.strftime('%H:%M')
+```
+
+Oikeat muotoilumääreet selviävät datetime-moduulin dokumentaatiosta: https://docs.python.org/3/library/datetime.html#strftime-strptime-behavior
+
+## Miten testata koodia, jonka tulos vaihtelee?
 
 Ohjelmakoodiin toteuttamamme `get_events_by_date` on riippuvainen toisesta funktiosta nimeltä `get_events`, joka tekee REST-kutsun ja parsii vastauksena saadun JSON-olion listaksi sanakirjoja. Koska eri ajankohtina REST-rajapinnasta saadaan eri vastauksia, on tuloksen oikeellisuus vaikea varmistaa. Oikea pyyntö REST-palveluun voi myös viedä tarpeettoman paljon aikaa, joten sitä ei haluta tehdä yksikkötestissä.
 
@@ -173,7 +267,7 @@ Käyttämämme Pytest-moduulin `pytest-mock`-laajennus voidaan asentaa seuraavas
 
 `pip install pytest-mock`
 
-Pystest-mock (https://pypi.org/project/pytest-mock/) lisää testeihin käytettäväksi `mocker`-olion, joka saadaan injektoitua testifunktioon kirjoittamalla testin parametrimuuttujiin `mocker`:
+Pystest-mock (https://pypi.org/project/pytest-mock/) lisää testeihin käytettäväksi `mocker`-olion, joka saadaan **injektoitua** testifunktioon kirjoittamalla testin parametrimuuttujiin `mocker`:
 
 ```python
 # dependency injection huolehtii `mocker`-olion injektoimisesta:
@@ -181,14 +275,14 @@ def test_get_events_by_date_with_mock(mocker):
     pass
 ```
 
-Näin Pytest tietää kutsua tätä testifunktiota aina mocker-olion kanssa. Kun mocker on injektoitu, sen avulla voidaan korvata esimerkiksi funktioita uusilla funktioilla, jotka palauttavat aina haluamamme ennalta määrätyn arvon:
+Koska määrittelimme parametrin `mocker`-nimiseksi, Pytest tietää kutsua tätä testifunktiota aina mocker-olion kanssa. Kun mocker on injektoitu funktioon, sen avulla voidaan korvata tilapäisesti `get_events`-funktion uudella funktiolla, joka palautaa ennalta määrätyn arvon:
 
 ```python
 # Asetetaan get_events palauttamaan aina sama lista:
 mocker.patch('events_by_date.get_events', return_value=palauta_aina_tama_lista)
 ```
 
-Mocker-olio ja injektointi huolehtivat siitä, että funktiota ei korvata pysyvästi, vaan kyseisen testin suorittamisen jälkeen `get_events` on taas ennallaan. `get_events_by_date` voidaan siis testata korvaamalla sen riippuvuus staattisella paluuarvolla, jonka tuloksen tiedämme ennalta:
+Mocker-olio ja injektointi huolehtivat siitä, että `get_events`-funktiota ei korvata pysyvästi, vaan kyseisen testin suorittamisen jälkeen `get_events` palautetaan taas ennalleen. `get_events_by_date` voidaan siis testata korvaamalla sen riippuvuus staattisella paluuarvolla, jonka tuloksen tiedämme ennalta:
 
 ```python
 # dependency injection huolehtii `mocker`-olion injektoimisesta:
@@ -200,7 +294,7 @@ def test_get_events_by_date_with_mock(mocker):
     # Asetetaan get_events palauttamaan yllä oleva lista tapahtumista:
     mocker.patch('events_by_date.get_events', return_value=mock_response)
 
-    # get_events_by_date kutsuu sisäisesti get_events-funktiota, joka palauttaa mock-vastauksen!
+    # get_events_by_date kutsuu sisäisesti get_events-funktiota
     result = events_by_date.get_events_by_date()
 
     # get_events_by_date on nyt palauttanut tunnetut tapahtumat oikeassa järjestyksessä:
@@ -208,17 +302,21 @@ def test_get_events_by_date_with_mock(mocker):
 ```
 
 
-### Integraatiotestaus
+## Integraatiotestaus
 
-> "Integraatiotestauksessa testataan useiden komponenttien yhteistoimintaa tavoitteena löytää virheitä, jotka eivät tulleet esiin yksikkötesteissä. Testeissä suoritetaan tiettyjä suorituspolkuja, jotka hyödyntävät useita eri yksiköitä tai laajempia komponentteja, ja tarkastellaan toiminnan tuloksia."
+> *"Integraatiotestauksessa testataan useiden komponenttien yhteistoimintaa tavoitteena löytää virheitä, jotka eivät tulleet esiin yksikkötesteissä. Testeissä suoritetaan tiettyjä suorituspolkuja, jotka hyödyntävät useita eri yksiköitä tai laajempia komponentteja, ja tarkastellaan toiminnan tuloksia."*
 >
-> *Jyväskylän Yliopisto, Informaatioteknologian tiedekunta. [Testauksen tasot](http://smarteducation.jyu.fi/projektit/systech/Periaatteet/suunnittelun-periaatteet/testaus/testauksen-tasot)*
+> Jyväskylän Yliopisto, Informaatioteknologian tiedekunta. [Testauksen tasot](http://smarteducation.jyu.fi/projektit/systech/Periaatteet/suunnittelun-periaatteet/testaus/testauksen-tasot)
 
+Koska edellisissä testeissä käytimme itse luotua keinotekoista dataa, ei testit välttämättä paljasta kaikkia virheitä, jotka ilmenevät rajapinnan oikeassa datassa. Siksi on tärkeää testata myös oman ohjelmamme ja rajapinnan välistä yhteistoimintaa integraatiotestillä.
 
+Integraatiotestit voivat olla luonteeltaan yksikkötestejä monimutkaisempia ja hitaampia, joten niitä suoritetaan tyypillisesti keskitetyssä CI-järjestelmässä (continuous integration) eikä välttämättä vain kehittäjän omalla työasemalla. Meidänkin tapauksessamme on odotettavaa, että bubble sort -toteutuksen testaaminen vie ainakin minuutin jokaisella testikerralla.
+
+Integraatiotestejä voidaan toteuttaa samoilla teknologioilla kuin yksikkötestejä, ja voisimme esimerkiksi testata `get_events_by_date`-funktiomme seuraavasti:
 
 ```python
 # Tämä testifunktio kutsuu API:a ja lajittelee tapahtumat oikeasti. Se voi olla siis hyvin hidas.
-def test_get_events_by_date_with_real_api_call():
+def test_get_events_by_date_integration_test():
 
     # Nyt rajapintaa kutsutaan oikeasti ja oikeat tapahtumat lajitellaan:
     result = events_by_date.get_events_by_date()
@@ -231,72 +329,51 @@ def test_get_events_by_date_with_real_api_call():
         assert result[i]['event_dates']['starting_day'] == None or result[i]['event_dates']['starting_day'] < result[i + 1]['event_dates']['starting_day']
 ```
 
+Tällä kertaa `get_events`-funktiota ei ole korvattu mock'illa, vaan se hakee tiedot oikeasta REST-rajapinnasta. Koska rajapinta palauttaa ajankohdasta riippuen eri tapahtumat, emme voi olla varmoja, kuinka monta tapahtumaa täsmälleen palautetaan. Testissä voidaan kuitenkin varmistaa, että tapahtumia löytyy ja että niiden päiväykset ovat nyt oikeassa järjestyksessä.
 
-### Järjestelmätestaus
+## Järjestelmätestaus
 
-> "Järjestelmätestauksessa testataan kokonaista ohjelmaa, ja tarkastellaan vastaako ohjelma sille asetettuja vaatimuksia ja käyttötarkoitusta.  Aitoon ympäristöön kuuluvat mm. käytettävä laitteisto, tietokannat ja käyttäjät."
+> *"Järjestelmätestauksessa testataan kokonaista ohjelmaa, ja tarkastellaan vastaako ohjelma sille asetettuja vaatimuksia ja käyttötarkoitusta. Aitoon ympäristöön kuuluvat mm. käytettävä laitteisto, tietokannat ja käyttäjät."*
 >
-> *Jyväskylän Yliopisto, Informaatioteknologian tiedekunta. [Testauksen tasot](http://smarteducation.jyu.fi/projektit/systech/Periaatteet/suunnittelun-periaatteet/testaus/testauksen-tasot)*
+> Jyväskylän Yliopisto, Informaatioteknologian tiedekunta. [Testauksen tasot](http://smarteducation.jyu.fi/projektit/systech/Periaatteet/suunnittelun-periaatteet/testaus/testauksen-tasot)
+
+Järjestelmätestauksella varmistetaan usein monivaiheisia käyttötapauksia. Testattava käyttötapaus voisi pitää sisällään esimerkiksi kirjautumisen järjestelmään, jonkin datan muokkaamisen ja muokatun datan tarkastelemisen. Järjestelmätestejä tehdäänkin usein eri työkaluilla kuin yksikkötestejä. Yksi järjestelmätesteissä hyödyllinen testityökalu on kotimaista alkuperää oleva [Robot Framework](https://robotframework.org/), jolla voidaan erilaisten laajennusten kanssa testata verkkosivuja tai vaikka matkapuhelinverkkoja. Robot Frameworkilla on oma kielensä, jolla testitapaukset voivat näyttää esim. tältä: https://github.com/robotframework/WebDemo/blob/master/login_tests/valid_login.robot.
 
 
-<!--
-## Testaus Pythonilla
+# Tehtävä
 
-* doctest
-* pytest
-* unittest
-* VS Code
+Tällä viikolla harjoitellaan koodin refaktorointia ja yksikkötestausta kirjoittamalla testejä aikaisemmin koodaamallesi `postinumerot.py`-tiedostolle. Mikäli aikaisempi tehtävä jäi sinulta palauttamatta tai et halua käyttää vanhaa koodiasi, voit käyttää myös tehtävän malliratkaisun tiedostoja:
 
-
-* `pip install pytest`
-* `pip install python-dateutil`
-
-## Mock
-
-`pip install pytest-mock`
-
-https://pypi.org/project/pytest-mock/
-
-## Capture
-
-https://docs.pytest.org/en/stable/capture.html
-
-## Dateutil parser
-
-https://dateutil.readthedocs.io/en/stable/parser.html
+* [postinumerot.py](../00_linux_ja_python/src/postinumerot.py)
+* [postitoimipaikka.py](../00_linux_ja_python/src/postitoimipaikka.py).
 
 
-## Datetime
+## Refaktorointi
 
-https://docs.python.org/3/library/datetime.html#datetime.datetime.astimezone
+Mikäli käytät malliratkaisua tai oma toteutuksesi noudattaa malliratkaisun kaltaista arkkitehtuuria, jossa kaikki logiikka on toteutettu `main`-funktioon, joudut refaktoroimaan koodia testaamisen mahdollistamiseksi.
+
+Voit toteuttaa esimerkiksi funktion, joka ottaa parametreinaan etsittävän postitoimipaikan nimen sekä sanakirjan postinumeroista ja postitoimipaikoista ja palauttaa annettua toimipaikkaa vastaavat postinumerot listana:
 
 ```python
-from dateutil import tz, parser
+def etsi_postinumerot(postitoimipaikka, postinumerot_sanakirja):
+    pass # todo
 ```
+Tämän funktion testaaminen on huomattavasti helpompaa kuin main-funktion, koska `etsi_postinumerot` ei kysy käyttäjältä mitään eikä tee tulostuksia.
 
-```python
-def str_to_datetime(dt_str):
-    dt = parser.isoparse(dt_str)
-    hki_timezone = tz.gettz('Europe/Helsinki')
-    return dt.astimezone(hki_timezone)
-```
+## Testien laajuus ja kattavuus
 
-## Pytest
+Testaa toteuttamasi logiikka ainakin tapauksissa, joissa:
 
-1. tiedostonimi test_foo.py
-1. testifunktio
-1. `assert`-komento
+1. annettua nimeä ei löydy lainkaan aineistosta
+1. postitoimipaikan nimellä löytyy yksi postinumero
+1. postitoimipaikan nimellä löytyy useita postinumeroita
 
+Saadaksesi täydet pisteet tehtävästä **sinun ei tarvitse** testata syötteitä pyytäviä tai tulosteita tekeviä kohtia koodista. Voit myös halutessasi käyttää testeissä itse luomaasi testidataa (fixture) tai lukea datan verkosta tai levyltä.
 
+## Tehtävän arviointi
 
-## `pytest` ja `pytest-mock`
+Ratkaisu, joka refaktoroitu ja testattu edellä esitetyillä testitapauksilla hyväksytään arvosanalla 5. Myös puutteelliset ratkaisut hyväksytään eri arvosanoin, kunhan niissä osoitetaan selvää yritystä tehtävän ratkaisemiseksi.
 
-## Mock
+### Tehtävän palauttaminen
 
-## Fixture
-
-## Capture
-
-# Kotitehtävä
-
--->
+Palauta koodaamasi testit sekä testattavat moduulit sellaisenaan, eli **ei pakattuna** Teamsissa olevaan palautuslaatikkoon **seuraavaan oppituntiin mennessä**.
