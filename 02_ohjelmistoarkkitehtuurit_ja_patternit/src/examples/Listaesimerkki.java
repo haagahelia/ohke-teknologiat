@@ -33,9 +33,9 @@ public class Listaesimerkki {
      * @return Metodi palauttaa Mapin, jossa on avaimena parametrina saadun Listan
      *         objekti ja keynä lukumäärä kuinka monta samaa objektia listassa oli.
      */
-    private static Map<Object, Integer> laskeEsiintymat(List<?> list) {
-        Map<Object, Integer> tulos = new HashMap<>();
-        for (Object object : list) {
+    private static <T> Map<T, Integer> laskeEsiintymat(List<T> list) {
+        Map<T, Integer> tulos = new HashMap<>();
+        for (T object : list) {
             if (tulos.containsKey(object)) {
                 tulos.put(object, tulos.get(object) + 1);
             } else {
