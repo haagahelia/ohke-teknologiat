@@ -235,6 +235,8 @@ Palauta lopuksi sama tiedosto Teamsiin.
 
 1. Toinen vaihtoehto on laatia järjestelmätason arkkitehtuurikuvaus järjestelmästä, jolla toteuttaisit reaaliaikaisesti toimivan web/mobiili-chatalustan, jossa käyttäjät voivat lähetellä viestejä toisilleen eri kanavilla sekä yksityisesti kahden käyttäjä kesken. Chattia voi siis käyttää 2-1000 käyttäjää kerrallaan samassa chatissa. Jos haluat tehtävään vielä lisää haastetta, niin suunnittele arkkitehtuuriehdotuksesi siten, että chatti toimisi esimerkiksi isolla festivaalialueella sisäisenä viestintäkanavana [bluetooth mesh-verkon](https://en.wikipedia.org/wiki/Bluetooth_mesh_networking) avulla kaikille siellä paikalla oleville ihmisille vaikka internetyhteyttä ei olisikaan käytettävissä.
 
+Järjestelmäarkkitehtuurikaavion näkökulma (ja abstraktiotaso) tulisi valita siten, että se havainnollistaa järjestelmän mielestäsi oleellisimman yleiskuvan (eli mitkä komponentit ovat oleellisimpia järjestelmän kokonaisarkkitehtuurissa ja miten nämä kompontentit liittyvät toisiinsa).
+
 Arkkitehtuurikaavion voit piirtää haluamallasi työkalulla, esimerkiksi google-slides riittää ihan hyvin. Palauta tehtävässä lopulta siis png-kuvatiedostona järjestelmätason arkkitehtuurikaavio.
 
 ### Seminaaritehtävä 1 (täydennetään seminaarivaiheessa):

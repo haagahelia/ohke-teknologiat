@@ -1,12 +1,18 @@
 public class LentokoneConfig {
 
-    private final Lentokone lentokone = new Lentokone();
-    private final Moottori moottori = new SuperMoottori();
-    lentokone.setMoottori(moottori);
+    private final Lentokone lentokone;
+    private final Lentokone lentokone2;
 
-    private final Lentokone lentokone2 = new Lentokone();
-    private final Moottori moottori2 = new HalpaMoottori();
-    lentokone2.setMoottori(moottori2);
+    public LentokoneConfig() {
+        lentokone = new Lentokone();
+        Moottori moottori = new SuperMoottori();
+        lentokone.setMoottori(moottori);
+
+        lentokone2 = new Lentokone();
+        Moottori moottori2 = new HalpaMoottori();
+        lentokone2.setMoottori(moottori2);
+    }
+
 }
 
 class Lentokone {
