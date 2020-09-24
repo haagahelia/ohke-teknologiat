@@ -1,3 +1,7 @@
+/**
+ * Tämän esimerkin tarkoituksena on havainnollistaa olioiden monimuotoisuutta ja
+ * Dependency Inversion -patternia.
+ */
 public class LentokoneConfig {
 
     private final Lentokone lentokone;
