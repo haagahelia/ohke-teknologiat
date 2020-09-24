@@ -366,7 +366,7 @@ Pip mahdollistaa myös useiden riippuvuuksien asentamisen kerralla `requirements
 $ pip3 freeze > requirements.txt
 $
 $ # Katsotaan tiedoston sisältö:
-$ cat requirementx.txt
+$ cat requirements.txt
 
 autopep8==1.5.4
 pylint==2.5.3
