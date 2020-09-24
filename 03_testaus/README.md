@@ -220,16 +220,16 @@ Dateutil-paketin dokumentaatio löytyy osoitteesta https://dateutil.readthedocs.
 
 ### Testin kirjoittaminen
 
-Bugiraportissa todetaan tammikuussa 2022 klo 14 alkavan tapahtuman kellonaikana näkyvän klo 12. Virhe johtuu siitä, että aika poimitaan ISO-muotoillusta merkkijonosta huomioimatta lainkaan aikavyöhykettä. Oikea ajankohta syötteelle '2022-01-01T12:00:00Z' olisikin 1.1.2022 klo 14:00 Suomen aikaa.
+Bugiraportissa todetaan elokuussa 2021 klo 10 alkavan tapahtuman kellonaikana näkyvän virheellisesti klo 7:00. Virhe johtuu siitä, että aika poimitaan ISO-muotoillusta merkkijonosta huomioimatta lainkaan aikavyöhykettä. Oikea ajankohta syötteelle `'2021-08-13T07:00:00.000Z'` olisikin 13.8.2021 **klo 10:00 Suomen aikaa**.
 
 Tätä varten voidaan kirjoittaa testi `str_to_datetime`-funktiolle. Huomaa, että emme ole vielä toteuttaneet kyseistä testattavaa funktiota.
 
 ```python
 def test_str_to_datetime_in_helsinki_timezone():
-    dt = events_by_date.str_to_datetime('2022-01-01T12:00:00Z')
+    dt = events_by_date.str_to_datetime('2021-08-13T07:00:00.000Z')
 
-    assert dt.date() == date(2022, 1, 1)
-    assert dt.time() == time(14, 0)
+    assert dt.date() == date(2021, 8, 13)
+    assert dt.time() == time(10, 0)
 ```
 
 Kun tarvittava testi on kirjoitettu, voimme ryhtyä toteuttamaan itse `str_to_datetime`-funktiota. Tässä meille tulee avuksi dateutil-kirjaston `parser` ja `tz`, joilla voimme lukea ISO-merkkijonon päiväksi ja käsitellä Helsingin aikavyöhykettä:
@@ -237,7 +237,7 @@ Kun tarvittava testi on kirjoitettu, voimme ryhtyä toteuttamaan itse `str_to_da
 ```python
 from dateutil import parser, tz
 
-dt = parser.isoparse('2022-01-01T12:00:00Z') # muodostaa datetime-olion
+dt = parser.isoparse('2021-08-13T07:00:00.000Z') # muodostaa datetime-olion
 
 hki_timezone = tz.gettz('Europe/Helsinki') # Helsingin aikavyöhyke
 ```
@@ -252,6 +252,10 @@ def str_to_datetime(dt_str):
 ```
 -->
 
+Ratkaisussa tarvitaan myös Pythonin standardikirjaston `datetime`-moduulin dokumentaatiota: https://docs.python.org/3/library/datetime.html.
+
+### Koodin korjaaminen
+
 Kun **yksikkö** eli `str_to_datetime` on testattu toimivaksi, se voidaan ottaa käyttöön myös main-funktiossa. Datetime-oliolta saadaan selvitettyä päivämäärä ja kellonaika kotimaisessa muodossa seuraavien `strftime`-metodikutsujen avulla.
 
 ```python
@@ -260,6 +264,9 @@ time = datetime.strftime('%H:%M')
 ```
 
 Oikeat muotoilumääreet selviävät datetime-moduulin dokumentaatiosta: https://docs.python.org/3/library/datetime.html#strftime-strptime-behavior
+
+Lopulta voimme myös suorittaa koodin ja varmistaa että korjaus tuotti toivotun lopputuloksen.
+
 
 ## Miten testata koodia, jonka tulos vaihtelee?
 
@@ -343,6 +350,7 @@ Tällä kertaa `get_events`-funktiota ei ole korvattu mock'illa, vaan se hakee t
 
 Järjestelmätestauksella varmistetaan usein monivaiheisia käyttötapauksia. Testattava käyttötapaus voisi pitää sisällään esimerkiksi kirjautumisen järjestelmään, jonkin datan muokkaamisen ja muokatun datan tarkastelemisen. Järjestelmätestejä tehdäänkin usein eri työkaluilla kuin yksikkötestejä. Yksi järjestelmätesteissä hyödyllinen testityökalu on kotimaista alkuperää oleva [Robot Framework](https://robotframework.org/), jolla voidaan erilaisten laajennusten kanssa testata verkkosivuja tai vaikka matkapuhelinverkkoja. Robot Frameworkilla on oma kielensä, jolla testitapaukset voivat näyttää esim. tältä: https://github.com/robotframework/WebDemo/blob/master/login_tests/valid_login.robot.
 
+
 # Extra: riippuvuuksien hallinta
 
 Olemme tämän kurssin aikana asennelleet Pythonin kirjastoja yksi kerrallaan `pip3 install` -komennolla. Jotta kirjoittamamme koodi olisi asennettavissa toisen kehittäjän koneelle tai tulvaisuudessa CI- ja tuotantoympäristöihin, täytyy riippuvuudet dokumentoida. Pip-pakettienhallinta mahdollistaa asennettujen riippuvuuksien listaamisen kätevästi `pip3 freeze`-komennolla:
@@ -414,6 +422,7 @@ events_by_date.py      48      3    94%
 
 Voit käyttää myös `coverage html`-komentoa, joka muodostaa raportin staattisen verkkosivun muodossa.
 
+
 # Tehtävä
 
 Tällä viikolla harjoitellaan koodin refaktorointia ja yksikkötestausta kirjoittamalla testejä aikaisemmin koodaamallesi `postinumerot.py`-tiedostolle. Mikäli aikaisempi tehtävä jäi sinulta palauttamatta tai et halua käyttää vanhaa koodiasi, voit käyttää myös tehtävän malliratkaisun tiedostoja:
@@ -442,7 +451,9 @@ Testaa toteuttamasi logiikka ainakin tapauksissa, joissa:
 1. postitoimipaikan nimellä löytyy yksi postinumero
 1. postitoimipaikan nimellä löytyy useita postinumeroita
 
-Saadaksesi täydet pisteet tehtävästä **sinun ei tarvitse** testata syötteitä pyytäviä tai tulosteita tekeviä kohtia koodista. Voit myös halutessasi käyttää testeissä itse luomaasi testidataa (fixture) tai lukea datan verkosta tai levyltä.
+Saadaksesi täydet pisteet tehtävästä **sinun ei tarvitse** testata syötteitä pyytäviä tai tulosteita tekeviä kohtia koodista. Riittää siis, että testaat esimerkiksi pelkän edellä esitetyn `etsi_postinumerot`-funktion, mikäli päädyt refaktoroimaan sellaisen omaan koodiisi.
+
+Voit myös halutessasi käyttää testeissä itse luomaasi testidataa (fixture) tai lukea datan verkosta tai levyltä.
 
 ## Tehtävän arviointi
 
