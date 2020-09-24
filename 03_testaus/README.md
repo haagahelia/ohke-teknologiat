@@ -32,31 +32,8 @@ Ulkoisten riippuvuuksien vaikutuksen minimoimiseksi testit suoritetaan usein eri
 
 Tällä oppitunnilla kokeilemme testausta eri tasoilla hyödyntäen Pythonin `pytest`-moduulia. Testattava ohjelmisto on aikaisemmalta viikolta tuttu ohjelma, joka hakee Helsingin kaupungin REST-rajapinnasta tapahtumat ja näyttää ne käyttäjälle järjestyksessä tapahtuman ajankohdan mukaan.
 
-Voit asentaa Pythonin pytest-moduulin itsellesi seuraavalla komennolla:
-
-`pip install pytest`
-
-Pytest-moduulia voidaan käyttää joko erillisellä `pytest`-komennolla tai `python3`-komennon kautta valitsemalla `-m` -vivulla moduuliksi `pytest`. Voit varmistaa asennuksen toimivuuden esimerkiksi seuraavasti:
-
-```
-$ python3 -m pytest
-======== test session starts =========
-collected 0 items
-
-======= no tests ran in 0.12s ========
-```
-
-```
-$ pytest
-======== test session starts =========
-collected 0 items
-
-======= no tests ran in 0.12s ========
-```
-
-Yllä esitetyissä tapauksissa `pytest` etsi testitiedostoja, mutta koska niitä ei löytynyt, ei suorittanut vielä yhtään testiä.
-
 Testejä voitaisiin kirjoittaa myös muita työkaluja, kuten Pythonin unittest-moduulia, hyödyntäen. `pytest` on valittu kurssille siksi, että se ei edellytä minkään ulkoisten riippuvuuksien käyttämistä testikoodeissasi, vaan voit kirjoittaa testit kuten kirjoittaisit mitä tahansa muutakin Python-koodia.
+
 
 # Testauksen tasot
 
@@ -101,18 +78,35 @@ def test_swap_first_and_last():
 
 Tämä testi luo ensin listan merkkijonoista, minkä jälkeen se yrittää vaihtaa kahden merkkijonon paikkoja. Lopuksi testi hyödyntää `assert` -komentoa varmistaakseen, että lopputulos vastaa odotuksia.
 
-Assert-komento toimii hyvin yksinkertaisesti siten, että jos sen jälkeen on epätosi arvo, aiheutuu `AssertionError`, jonka `pytest` tulkitsee epäonnistuneeksi testiksi:
 
-```
->>> assert 1 < 3 # True, ei aiheuta poikkeusta:
->>> 
->>> assert 1 > 3 # False, aiheuttaa poikkeuksen:
+## assert-komento
+
+Python-kielessä on valmiina [assert-komento](https://docs.python.org/3/reference/simple_stmts.html#the-assert-statement), jolla voidaan hyvin suoraviivaisesti varmistaa että tietyn lausekkeen arvo on `True`. Mikäli arvo on epätosi, aiheuttaa komento `AssertionError`-poikkeuksen.
+
+```python
+assert len('hello') == 5 # True, ei aiheuta poikkeusta
+
+assert len('welcome') == 5 # False, aiheuttaa poikkeuksen:
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 AssertionError
 ```
 
-Testi voidaan suorittaa kutsumalla `test_swap_first_and_last`-funktiota itse, mutta testin automatisoimiseksi käytämme `pytest`-moduulia. Tällä kertaa `pytest` löytää testitiedostomme, etsii sieltä `test_`-alkuiset funktiot ja suorittaa ne:
+Testeissä `assert`-komentoa käytetään hyvin yksinkertaisesti varmistamaan, että testatun koodin tulos on se mitä pitäisi. Jos koodi ei aiheuta poikkeusta, `pytest` tulkitsee testin onnistuneeksi. Jos taas koodista aiheutuu `AssertionError`, `pytest` tulkitsee testin epäonnistuneeksi:
+
+```python
+assert my_list == ['the', 'list', 'must', 'be', 'equal', 'to', 'this']
+```
+
+## Testien suorittaminen pytest-moduulilla
+
+Testi voidaan suorittaa kutsumalla `test_swap_first_and_last`-funktiota itse, mutta testin automatisoimiseksi käytämme `pytest`-moduulia. Pytest huolehtii testitiedostojen ja niiden sisältämien testifunktioiden etsimisestä ja suorittamisesta automaattisesti. Se myös tuottaa selkokielisen raportin testien tuloksista.
+
+Voit asentaa Pythonin pytest-moduulin itsellesi seuraavalla komennolla:
+
+`pip3 install pytest`
+
+Pytest-moduulia voidaan käyttää joko erillisellä `pytest`-komennolla tai `python3`-komennon kautta valitsemalla `-m` -vivulla moduuliksi `pytest`. Voit varmistaa asennuksen toimivuuden esimerkiksi seuraavasti:
 
 ```
 $ python3 -m pytest
@@ -122,13 +116,23 @@ collected 1 item
 src\test_events_by_date.py .      [100%]
 
 ========= 1 passed in 0.06s ==========
+
+# pytest voidaan käynnistää myös omalla komennollaan:
+
+$ pytest
+======== test session starts =========
+collected 1 item
+
+src\test_events_by_date.py .      [100%]
+
+========= 1 passed in 0.06s ==========
 ```
 
-Tässä testissä vaihdoimme kahden merkkijonon paikkaa, mikä periaatteessa riittää kyseisen funktion testaamiseksi. Usein tarvitsemme kuitenkin paljon realistisempaa testidataa ohjelmamme testaamiseksi.
+`test_swap_first_and_last`-testissä vaihdoimme kahden merkkijonon paikkaa, mikä periaatteessa riittää kyseisen funktion testaamiseksi. Usein tarvitsemme kuitenkin paljon realistisempaa testidataa, jotta tiedämme, että koodi toimii esimerkiksi käyttämämme rajapinnan tapahtumia vastaavien tietorakenteiden kanssa.
 
 ## Testidata eli "fixturet"
 
-Testien kirjoittamisen ja onnistumisen kannalta testattava data on avainasemassa. Jos testattava data vaihtelee, myös testien tulokset vaihtelevat. On myös tärkeää käyttää sellaista dataa, joka vastaa riittävän kattavasti oikeassa datassa kohdattavia vaihteluita.
+Testien kirjoittamisen ja hyödyllisyyden kannalta testattava data on avainasemassa. Jos testattava data vaihtelee, myös testien tulokset vaihtelevat. On myös tärkeää käyttää sellaista dataa, joka vastaa riittävän kattavasti oikeassa datassa kohdattavia vaihteluita.
 
 Tapahtumien osalta vaihtelua aiheuttavat ainakin tapahtumat, joilla ei ole tunnettua suomenkielistä nimeä eikä alkupäivämäärää. Tällaisen tapahtuman toimivuutta ohjelmassa voitaisiin testata esimerkiksi seuraavanlaisella tietorakenteella:
 
@@ -204,13 +208,13 @@ https://code.visualstudio.com/docs/python/testing
 
 ## Test driven development
 
-Tietorakenteet ja algoritmit -aiheen malliratkaisussa on havaittu bugi, joka [on raportoitu GitHubiin issuena](). Bugin seurauksena kaikkien tapahtumien ajankohdat on ilmoitettu UTC-ajassa, eli ne eivät vastaa Suomen paikallisia aikoja.
+Tietorakenteet ja algoritmit -aiheen malliratkaisussa on havaittu bugi, joka [on raportoitu GitHubiin issuena](https://github.com/haagahelia/swd4tn023/issues/1). Bugin seurauksena kaikkien tapahtumien ajankohdat on ilmoitettu UTC-ajassa, eli ne eivät vastaa Suomen paikallisia aikoja.
 
 Tämä on kiusallinen ongelma, joka korjataan seuraavaksi.
 
 Päivämäärien käsittelemiseksi asennamme `dateutil`-paketin, joka helpottaa aikavyöhykkeiden käyttämistä ja merkkijonomuotoisten päivämäärien parsimista:
 
-`pip install python-dateutil`
+`pip3 install python-dateutil`
 
 Dateutil-paketin dokumentaatio löytyy osoitteesta https://dateutil.readthedocs.io/en/stable/
 
@@ -265,7 +269,7 @@ Yksikkötesteissä korvataan usein riippuvuuksia mock'eilla, joiden avulla saada
 
 Käyttämämme Pytest-moduulin `pytest-mock`-laajennus voidaan asentaa seuraavasti:
 
-`pip install pytest-mock`
+`pip3 install pytest-mock`
 
 Pystest-mock (https://pypi.org/project/pytest-mock/) lisää testeihin käytettäväksi `mocker`-olion, joka saadaan **injektoitua** testifunktioon kirjoittamalla testin parametrimuuttujiin `mocker`:
 
@@ -339,13 +343,83 @@ Tällä kertaa `get_events`-funktiota ei ole korvattu mock'illa, vaan se hakee t
 
 Järjestelmätestauksella varmistetaan usein monivaiheisia käyttötapauksia. Testattava käyttötapaus voisi pitää sisällään esimerkiksi kirjautumisen järjestelmään, jonkin datan muokkaamisen ja muokatun datan tarkastelemisen. Järjestelmätestejä tehdäänkin usein eri työkaluilla kuin yksikkötestejä. Yksi järjestelmätesteissä hyödyllinen testityökalu on kotimaista alkuperää oleva [Robot Framework](https://robotframework.org/), jolla voidaan erilaisten laajennusten kanssa testata verkkosivuja tai vaikka matkapuhelinverkkoja. Robot Frameworkilla on oma kielensä, jolla testitapaukset voivat näyttää esim. tältä: https://github.com/robotframework/WebDemo/blob/master/login_tests/valid_login.robot.
 
+# Extra: riippuvuuksien hallinta
+
+Olemme tämän kurssin aikana asennelleet Pythonin kirjastoja yksi kerrallaan `pip3 install` -komennolla. Jotta kirjoittamamme koodi olisi asennettavissa toisen kehittäjän koneelle tai tulvaisuudessa CI- ja tuotantoympäristöihin, täytyy riippuvuudet dokumentoida. Pip-pakettienhallinta mahdollistaa asennettujen riippuvuuksien listaamisen kätevästi `pip3 freeze`-komennolla:
+
+```
+$ pip3 freeze
+
+autopep8==1.5.4
+pylint==2.5.3
+pytest==6.0.1
+pytest-mock==3.3.1
+python-dateutil==2.8.1
+rope==0.17.0
+
+# ... ja monia muita riippuvuuksia
+```
+
+Pip mahdollistaa myös useiden riippuvuuksien asentamisen kerralla `requirements.txt` -tiedostojen avulla. Voit lukea lisää näistä tiedostoista [virallisesta dokumentaatiosta](https://pip.pypa.io/en/stable/user_guide/#requirements-files). Tätä omaa projektiamme varten voimme tallentaa riippuvuudet `requirements.txt`-tiedostoon listaamalla ne `freeze`-komennolla ja ohjaamalla `freeze`-komennon tulosteet `requirements.txt`-nimiseen tiedostoon:
+
+```
+$ pip3 freeze > requirements.txt
+$
+$ # Katsotaan tiedoston sisältö:
+$ cat requirementx.txt
+
+autopep8==1.5.4
+pylint==2.5.3
+pytest==6.0.1
+pytest-mock==3.3.1
+python-dateutil==2.8.1
+rope==0.17.0
+```
+
+Myöhemmin samat riippuvuudet on asennettavissa uuteen ympäristöön yksinkertaisesti kutsumalla `install`-komentoa `-r` -vivulla:
+
+```
+$ # Luetaan ensin ohje:
+$ pip3 help install | grep "requirements"
+  pip3 install [options] -r <requirements file> [package-index-options] ...
+  pip also supports installing from "requirements files", which provide
+  -r, --requirement <file>    Install from the given requirements file. This
+
+$ # Nyt asennetaan  riippuvuudet tiedostosta:
+$ pip3 install -r requirements.txt
+```
+
+# Extra: testien kattavuus (coverage)
+
+Yksi tapa mitata testien laatua on testikattavuus (coverage), joka tarkoittaa niiden kirjoitettujen koodirivien osuutta, jotka suoritetaan testien aikana. Testikattavuutta voidaan rivien määrän lisäksi mitata myös erilaisten suorituspolkujen määrillä. Pythonin `coverage`-moduuli auttaa selvittämään, mitkä rivit tulevat suoritetuksi testien aikana. Voit halutessasi tutustua tähän työkaluun itsenäisesti.
+
+```
+$ pip3 install coverage     # asentaminen
+```
+Suoritetaan testit `coverage` -komennolla ja lasketaan testikattavuus testatulle events_by_date-tiedostolle:
+
+```
+$ coverage run --source=events_by_date -m pytest .\test_events_by_date.py
+```
+
+Katsotaan raportti:
+
+```
+$ coverage report
+
+Name                Stmts   Miss  Cover
+---------------------------------------
+events_by_date.py      48      3    94%
+```
+
+Voit käyttää myös `coverage html`-komentoa, joka muodostaa raportin staattisen verkkosivun muodossa.
 
 # Tehtävä
 
 Tällä viikolla harjoitellaan koodin refaktorointia ja yksikkötestausta kirjoittamalla testejä aikaisemmin koodaamallesi `postinumerot.py`-tiedostolle. Mikäli aikaisempi tehtävä jäi sinulta palauttamatta tai et halua käyttää vanhaa koodiasi, voit käyttää myös tehtävän malliratkaisun tiedostoja:
 
 * [postinumerot.py](../00_linux_ja_python/src/postinumerot.py)
-* [postitoimipaikka.py](../00_linux_ja_python/src/postitoimipaikka.py).
+* [postitoimipaikka.py](../00_linux_ja_python/src/postitoimipaikka.py)
 
 
 ## Refaktorointi
@@ -372,7 +446,7 @@ Saadaksesi täydet pisteet tehtävästä **sinun ei tarvitse** testata syötteit
 
 ## Tehtävän arviointi
 
-Ratkaisu, joka refaktoroitu ja testattu edellä esitetyillä testitapauksilla hyväksytään arvosanalla 5. Myös puutteelliset ratkaisut hyväksytään eri arvosanoin, kunhan niissä osoitetaan selvää yritystä tehtävän ratkaisemiseksi.
+Ratkaisu, joka on refaktoroitu testauskuntoon ja testattu edellä esitetyillä kolmella testitapauksella hyväksytään arvosanalla 5. Myös puutteelliset ratkaisut hyväksytään eri arvosanoin, kunhan niissä osoitetaan selvää yritystä tehtävän ratkaisemiseksi.
 
 ### Tehtävän palauttaminen
 
