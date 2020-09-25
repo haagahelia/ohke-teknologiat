@@ -1,4 +1,4 @@
-# Ohjelmistokehityksen teknologioita, syksy 2020
+# Ohjelmistokehityksen teknologioita [![Build Status](https://travis-ci.org/haagahelia/swd4tn023.svg?branch=master)](https://travis-ci.org/haagahelia/swd4tn023)
 
 Tervetuloa kurssille!
 
