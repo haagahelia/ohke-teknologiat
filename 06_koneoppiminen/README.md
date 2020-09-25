@@ -33,11 +33,26 @@ Ohjattu ja ohjaamaton oppiminen toimivat siis alla olevassa kuvassa esitettyjen 
 ![koneoppimisen vaiheet](img/vahvistusoppiminen.png) 
 
 ## Koneoppiminen käytännössä
+<!--
+Koneoppimiseen liitty useita kirjastoja ja työkaluja, joilla kaikilla on oma roolinsa koneoppimismallien rakentamisessa ja havainnollistamisessa.
 
+Jupyter on..
+TensorFlow on kirjasto *moniulotteisten taulukoiden (~tensoreiden)* käsittelyyn eli tensorilaskentaan. TensorFlown *operaatioilla* (esim tf.add()) voidaan muokata tensoreita. Tensorit kulkevat *graafien* läpi, jotka muokkaavat tensoreita operaatioilla. Usein edellisen operaation läpikäyneestä ulostulo-tensorista tulee seuraavaan operaation sisäänmeno-tensori. Graafit tulee ajaa TensorFlow *sessiossa*, joskin TensorFlow 2:ssa ei enää (https://www.tensorflow.org/guide/effective_tf2). TensorFlown käsitteiden ja käytön opettelu vaatii hieman aikaa. (https://colab.research.google.com/notebooks/mlcc/tensorflow_programming_concepts.ipynb). 
+Pandas (Panda on työkalu erityisesti kolumni-muotoisen datan käsittelyyn. Pandas:lla voi ladata dataa (esim CSV-tiedostoista) ja esittää sitä myös graafeina).
+Numpy (https://numpy.org/) Kirjaston numeroiden käsittelyyn Pythonilla.
+sklearn Metriikoiden laskemiseen ja tulostamiseen datasta.
+matplotlib Kirjasto datasettien visualisointiin.
+Keras
+
+Ibm Watson
+
+Koneoppimiskirjastojen rajapinnat eivät ole vielä valitettavasti kehittyneet aivan yhtä korkealle abstraktiotasolle (ja helppokäyttöisiksi) kuin esimerkikiksi webohjelmointiin liittyvät kirjastot. Kuten muussakin ohjelmoinnissa, hyvä tapa lähteä liikkeelle koneoppimismallien rakentamisessa on pyrkiä etsimään esimerkki, joka tekee melkein saman asian jota itse yrittää tehdä ja sitten muokata esimerkkiä omiin tarpeisiin sopivaksi.
+
+-->
 <!---käytetään tällä kurssilla (ainakin ennen seminaaria) googlen colab online-ympäristöä ja esimerkkejä sieltä-->
 
 
-<!--(käydään läpi työkalustack ja eri työkalujen erot, jotka voitaisiin asentaa itselle condalla, ks blogi) Keras, tensorflow, jupyter, ibm watson, kuten esim https://medium.com/@margaretmz/anaconda-jupyter-notebook-tensorflow-and-keras-b91f381405f8-->
+<!--(käydään läpi työkalustack ja eri työkalujen erot, jotka voitaisiin asentaa itselle condalla, ks blogi) Keras, tensorflow, jupyter, pandas, numpy, ibm watson, kuten esim https://medium.com/@margaretmz/anaconda-jupyter-notebook-tensorflow-and-keras-b91f381405f8-->
 
 <!---tensorit selitetään (moniulotteinen taulukko)-->
 

@@ -534,6 +534,7 @@ docker run -it -p 1880:1880 --name mynodered nodered/node-red
 ```
 
 <!--
+node.js + react sovelluksen dockerointi: https://medium.com/bb-tutorials-and-thoughts/dockerizing-react-app-with-nodejs-backend-26352561b0b7
 docker tag docker-sovellus {username}/docker-sovellus
 docker push {username}/docker-sovellus
 -->

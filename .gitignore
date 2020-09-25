@@ -2,6 +2,9 @@
 # Created by https://www.toptal.com/developers/gitignore/api/macos,linux,windows,node,gradle,visualstudiocode,eclipse,intellij,androidstudio,maven
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos,linux,windows,node,gradle,visualstudiocode,eclipse,intellij,androidstudio,maven
 
+#Oikeat vastaukset ei gittiin:
+*OikeaVastaus*
+
 ### Eclipse ###
 .metadata
 bin/
