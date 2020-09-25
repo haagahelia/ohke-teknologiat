@@ -113,7 +113,7 @@ $ python3 -m pytest
 ======== test session starts =========
 collected 1 item
 
-src\test_events_by_date.py .      [100%]
+src/test_events_by_date.py .      [100%]
 
 ========= 1 passed in 0.06s ==========
 
@@ -123,7 +123,7 @@ $ pytest
 ======== test session starts =========
 collected 1 item
 
-src\test_events_by_date.py .      [100%]
+src/test_events_by_date.py .      [100%]
 
 ========= 1 passed in 0.06s ==========
 ```
@@ -268,11 +268,29 @@ Oikeat muotoilumääreet selviävät datetime-moduulin dokumentaatiosta: https:/
 Lopulta voimme myös suorittaa koodin ja varmistaa että korjaus tuotti toivotun lopputuloksen.
 
 
-## Miten testata koodia, jonka tulos vaihtelee?
+## Miten testata koodia, jolla on riippuvuuksia?
 
-Ohjelmakoodiin toteuttamamme `get_events_by_date` on riippuvainen toisesta funktiosta nimeltä `get_events`, joka tekee REST-kutsun ja parsii vastauksena saadun JSON-olion listaksi sanakirjoja. Koska eri ajankohtina REST-rajapinnasta saadaan eri vastauksia, on tuloksen oikeellisuus vaikea varmistaa. Oikea pyyntö REST-palveluun voi myös viedä tarpeettoman paljon aikaa, joten sitä ei haluta tehdä yksikkötestissä.
+> *"Some of the parts of our application may have dependencies for other libraries or objects. To isolate behaviour of our parts we need to substitue external dependencies. Here comes the mocking. We mock external API to have certain behaviours such as proper return values that we previously defined."*
+>
+> Krzysztof Żuraw, 2016. https://krzysztofzuraw.com/blog/2016/mocks-monkeypatching-in-python
 
-Yksikkötesteissä korvataan usein riippuvuuksia mock'eilla, joiden avulla saadaan rajattua testi vain tiettyyn osaan koodista, vaikka testattavalla koodinpätkällä olisikin riippuvuuksia. Riippuvuudet voivat olla niin ulkoisiin rajapintoihin kuin vaikka kellonaikoihin liittyviä.
+Ohjelmakoodiin toteuttamamme `get_events_by_date` on riippuvainen toisesta funktiosta nimeltä `get_events`, joka tekee REST-kutsun ja parsii vastauksena saadun JSON-olion listaksi sanakirjoja:
+
+```
+get_events_by_date -> get_events -> urllib.request.urlopen -> REST-api
+```
+
+Koska eri ajankohtina REST-rajapinnasta saadaan eri vastauksia, on tuloksen oikeellisuus vaikea varmistaa. Oikea pyyntö REST-palveluun ja vastauksen käsittely voi myös viedä tarpeettoman paljon aikaa, joten sitä ei haluta tehdä yksikkötestissä.
+
+Yksikkötesteissä korvataan usein riippuvuuksia mock'eilla, joiden avulla saadaan rajattua testi vain tiettyyn osaan koodista, vaikka testattavalla koodinpätkällä olisikin riippuvuuksia:
+
+```
+get_events_by_date -> get_events=Mock([test0, test1, test2, test3])
+```
+
+Riippuvuudet voivat olla niin ulkoisiin rajapintoihin kuin vaikka kellonaikoihin liittyviä.
+
+### pytest-mock
 
 Käyttämämme Pytest-moduulin `pytest-mock`-laajennus voidaan asentaa seuraavasti:
 
@@ -286,14 +304,19 @@ def test_get_events_by_date_with_mock(mocker):
     pass
 ```
 
-Koska määrittelimme parametrin `mocker`-nimiseksi, Pytest tietää kutsua tätä testifunktiota aina mocker-olion kanssa. Kun mocker on injektoitu funktioon, sen avulla voidaan korvata tilapäisesti `get_events`-funktion uudella funktiolla, joka palautaa ennalta määrätyn arvon:
+Koska määrittelimme parametrin `mocker`-nimiseksi, Pytest tietää, että tätä testiä varten täytyy injektoida mocker-olio. Kun mocker on injektoitu funktioon, sen avulla voidaan korvata tilapäisesti esimerkiksi funktioita uusilla mock-funktioilla, joilla on aina sama paluuarvo:
 
 ```python
-# Asetetaan get_events palauttamaan aina sama lista:
-mocker.patch('events_by_date.get_events', return_value=palauta_aina_tama_lista)
+mocker.patch('moduuli.funktio', return_value=palauta_aina_tama_vastaus)
 ```
 
-Mocker-olio ja injektointi huolehtivat siitä, että `get_events`-funktiota ei korvata pysyvästi, vaan kyseisen testin suorittamisen jälkeen `get_events` palautetaan taas ennalleen. `get_events_by_date` voidaan siis testata korvaamalla sen riippuvuus staattisella paluuarvolla, jonka tuloksen tiedämme ennalta:
+Korvataankin nyt `get_events`-funktion uudella funktiolla, joka palautaa ennalta määrätyn arvon:
+
+```python
+mocker.patch('events_by_date.get_events', return_value=my_list_of_test_events)
+```
+
+Mocker-olio ja injektointi huolehtivat siitä, että `get_events`-funktiota ei korvata pysyvästi, vaan kyseisen testin suorittamisen jälkeen `get_events` ja kaikki muut korvatut funktiot palautetaan taas ennalleen. `get_events_by_date` voidaan siis testata korvaamalla sen riippuvuus staattisella paluuarvolla, jonka tuloksen tiedämme ennalta:
 
 ```python
 # dependency injection huolehtii `mocker`-olion injektoimisesta:
@@ -401,13 +424,14 @@ $ pip3 install -r requirements.txt
 
 Yksi tapa mitata testien laatua on testikattavuus (coverage), joka tarkoittaa niiden kirjoitettujen koodirivien osuutta, jotka suoritetaan testien aikana. Testikattavuutta voidaan rivien määrän lisäksi mitata myös erilaisten suorituspolkujen määrillä. Pythonin `coverage`-moduuli auttaa selvittämään, mitkä rivit tulevat suoritetuksi testien aikana. Voit halutessasi tutustua tähän työkaluun itsenäisesti.
 
+```sh
+$ pip3 install coverage     # coverage-moduulin asentaminen
 ```
-$ pip3 install coverage     # asentaminen
-```
+
 Suoritetaan testit `coverage` -komennolla ja lasketaan testikattavuus testatulle events_by_date-tiedostolle:
 
-```
-$ coverage run --source=events_by_date -m pytest .\test_events_by_date.py
+```sh
+$ coverage run --source=events_by_date -m pytest test_events_by_date.py
 ```
 
 Katsotaan raportti:
