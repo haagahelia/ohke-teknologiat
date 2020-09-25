@@ -202,9 +202,12 @@ Tietokantapohjaisessa ohjelmistossa sama ennalta määrätty testidata syötetä
 
 ## Testien ajaminen VS Codessa
 
-VS Codessa on oma erillinen näkymänsä testeille. Tämän näkymän kautta testien suoritusta voidaan nopeuttaa ja tehdä vielä havainnollisemmaksi kuin komentoriviltä:
+> *Testing in Python is disabled by default. To enable testing, use the Python: **Configure Tests** command on the Command Palette. This command prompts you to select a test framework, the folder containing tests, and the pattern used to identify test files.*
+>
+> Python testing in Visual Studio Code. https://code.visualstudio.com/docs/python/testing
 
-https://code.visualstudio.com/docs/python/testing
+
+VS Codessa on oma erillinen näkymänsä testeille. Tämän näkymän kautta testien suoritusta voidaan nopeuttaa ja tehdä vielä havainnollisemmaksi kuin komentoriviltä. Ota testausominaisuudet käyttöön seuraamalla oppituntia tai ohjeita sivulla: https://code.visualstudio.com/docs/python/testing
 
 ## Test driven development
 
