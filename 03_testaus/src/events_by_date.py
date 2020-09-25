@@ -91,20 +91,24 @@ def main():
 
     for event in events:
         # esim. '2022-01-01T12:00:00Z' tai ''
-        event_start = get_start_time(event)
+        starting_date = get_start_time(event)
 
-        # TODO: kutsu str_to_datetime täällä ja korjaa bugi #1
+        if starting_date:
+            datetime = str_to_datetime(starting_date)
 
-        date = event_start[:10]     # '2022-01-01' tai ''
-        time = event_start[11:16]   # '12:00' tai ''
-        name = get_name(event)
+            # Muotoilun dokumentaatio: https://docs.python.org/3/library/datetime.html#strftime-strptime-behavior
+            date_str = datetime.strftime('%d.%m.%G')
+            time_str = datetime.strftime('%H:%M')
+        else:
+            date_str = 'No date'
+            time_str = '?'
 
-        if date != latest_date:
+        if date_str != latest_date:
             print()
-            print(date)  # tulostetaan uusi päivämäärä
-            latest_date = date
+            print(date_str)
+            latest_date = date_str
 
-        print(f' { time } { name }')
+        print(f" { time_str } { get_name(event) }")
 
 
 if __name__ == "__main__":
