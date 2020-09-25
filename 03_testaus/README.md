@@ -453,12 +453,15 @@ Testaa toteuttamasi logiikka ainakin tapauksissa, joissa:
 
 Saadaksesi täydet pisteet tehtävästä **sinun ei tarvitse** testata syötteitä pyytäviä tai tulosteita tekeviä kohtia koodista. Riittää siis, että testaat esimerkiksi pelkän edellä esitetyn `etsi_postinumerot`-funktion, mikäli päädyt refaktoroimaan sellaisen omaan koodiisi.
 
-Voit myös halutessasi käyttää testeissä itse luomaasi testidataa (fixture) tai lukea datan verkosta tai levyltä.
+Voit oman harkintasi mukaan käyttää testeissä joko itse luomaasi testidataa tai antaa testattavan koodin lukea postinumeroaineiston verkosta tai levyltä. Testiaineiston käyttämisessä `pytest-mock` voi olla avuksi, mutta sitä ei ole välttämätöntä käyttää.
+
+Tehtävän malliratkaisussa tulemme tutustumaan myös siihen, miten ohjelman tulosteet voidaan tarkistaa yksikkötestissä.
+
 
 ## Tehtävän arviointi
 
 Ratkaisu, joka on refaktoroitu testauskuntoon ja testattu edellä esitetyillä kolmella testitapauksella hyväksytään arvosanalla 5. Myös puutteelliset ratkaisut hyväksytään eri arvosanoin, kunhan niissä osoitetaan selvää yritystä tehtävän ratkaisemiseksi.
 
-### Tehtävän palauttaminen
+## Tehtävän palauttaminen
 
 Palauta koodaamasi testit sekä testattavat moduulit sellaisenaan, eli **ei pakattuna** Teamsissa olevaan palautuslaatikkoon **seuraavaan oppituntiin mennessä**.
