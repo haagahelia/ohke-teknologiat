@@ -34,6 +34,11 @@ Tällä oppitunnilla kokeilemme testausta eri tasoilla hyödyntäen Pythonin `py
 
 Testejä voitaisiin kirjoittaa myös muita työkaluja, kuten Pythonin unittest-moduulia, hyödyntäen. `pytest` on valittu kurssille siksi, että se ei edellytä minkään ulkoisten riippuvuuksien käyttämistä testikoodeissasi, vaan voit kirjoittaa testit kuten kirjoittaisit mitä tahansa muutakin Python-koodia.
 
+# Oppitunnin videotallenne ja lähdekoodit
+
+[Katso oppitunnin videotallenne tästä!](https://web.microsoftstream.com/video/87a443b6-5e2e-4d1f-a8c7-71b9b4d10697)
+
+[Oppitunnilla kirjoitetut lähdekoodit](src/)
 
 # Testauksen tasot
 
