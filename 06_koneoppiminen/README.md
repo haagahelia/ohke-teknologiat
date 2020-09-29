@@ -4,7 +4,7 @@
 
 Koneoppimisessa on kyse siitä, että datan avulla tietokone voidaan opettaa ratkaisemaan ongelmia tietyssä toimintaympäristössä ilman varsinaista ohjelmointia. Dataa kyseisestä ongelmakentästä täytyy kuitenkin olla paljon, jotta *koneoppimismalli* voidaan kouluttaa. Ongelmakentän tulee myös olla tarkasti rajattu, eikä samalla datalla koulutettua mallia voida siirtää toisen ongelman ratkaisuun. Termiä *tekoäly* tunnutaan käyttävän monesti myös synonyyminä koneoppimisesta ja toisaalta mikä tahansa tavallinen ohjelmoitu algoritmi saatetaan nykyään luokitella valtamediassa "tekoälyksi". 
 
-Yksinkertaisia ongelmia voi mallintaa lineaarisilla funktioilla. Kerätyn datan perusteella, voimme laskea lineaariselle *tavoitefunktiolle (objective function)* painokertoimet ja tehdä ennusteen uudelle datapisteelle. 
+Yksinkertaisia ongelmia voi mallintaa lineaarisilla funktioilla. Kerätyn datan perusteella, voimme laskea lineaariselle *tavoitefunktiolle (objective function)* painokertoimet ja tehdä ennusteen uudelle datapisteelle. Rakennetun mallin hyvyyttä voidaan mitata esimerkiksi [Root Mean Square Error](https://en.wikipedia.org/wiki/Root-mean-square_deviation):lla (eli lasketaan toteutumien ja ennustefunktion antamien arvojen erotusten (keltaiset viivat kuvassa) neliöiden summa, jaetaan se toteutumien määrällä (3 kpl kuvassa) ja otetaan neliöjuuri tästä).
 ![lineaarinen tavoitefunktio](img/lineaarinen_tavoitefunktio.png)
 
 Usein reaalimaailman asiat ja ilmiöt ovat sen verran monimutkaisia, että lineaarinen ennustemalli olisi hyvin epätarkka. Tällöin voidaan käyttää sen sijaan epälineaarista tavoitefunktiota.
@@ -25,39 +25,58 @@ Koneen opettamiseen on kolme erilaista tapaa, **ohjattu oppiminen, ohjaamaton op
 
 ![Ohjaamaton oppiminen](img/ohjaamaton_oppiminen.png) 
 
-Ohjattu ja ohjaamaton oppiminen toimivat siis alla olevassa kuvassa esitettyjen vaiheiden mukaisesti.
+Ohjattu ja ohjaamaton oppiminen toimivat siis alla olevassa kuvassa esitettyjen vaiheiden mukaisesti. 
 ![koneoppimisen vaiheet](img/koneoppimisen_vaiheet.png) 
 
 **Vahvistusoppimisessa (reinforcement learning)** koneen annetaan itse kokeilla ja tehdä virheitä "keppi ja porkkana"-mallilla. Vahvistusoppimista varten rakennetaan simulaatioympäristö, jossa koneelle annetaan pisteitä sen toiminnasta. Vahvistusoppiminen toimii hyvin esimerkiksi erilaisten pelien, vaikkapa shakin, kouluttamisessa. Tietokone voi pelata miljoonia pelejä itseään vastaan ja "simulaatioympäristö" antaa palautetta yksinkertaisimmillaan vain siitä, voittiko kone pelin. Monessa oikean maailman ongelmassa palautesykli koneen tekemien valintojen ja onnistumisen välillä voi olla hyvin pitkä (helposti vaikka useita viikkoja), jolloin kone oppii hyvin hitaasti. Samaten simulaatioympäristön rakentaminen voi olla haastavaa. Käytännön maailmassa itseajavia autoja pyritään kouluttamaan vahvistusoppimisen avulla. Ihminen voi siis esimerkiksi istua auton kyydissä ja antaa jatkuvasti pisteitä koneen tekemistä valinnoista.
 
-![koneoppimisen vaiheet](img/vahvistusoppiminen.png) 
+![koneoppimisen vaiheet](img/vahvistusoppiminen.png)
+
+### Kuvadatan muokkaaminen
+
+Jotta kone voi oppia esimerkiksi kuvadatasta, pitää kuvadata muokata koneen ymmärtämään matriisimuotoon. Yksinkertainen esimerkki mustavalkoisesta hymynaamakuvasta voisi olla jotain alla olevan kaltaista. Eri harmaan sävyt kuvassa (0-255) on siis esitetty numeroina. Jokainen matriisin solu vastaa yhtä pikseliä kuvassa.
+
+![Hymynaama](img/hymynaama.png)
 
 ## Koneoppiminen käytännössä
-<!--
-Koneoppimiseen liitty useita kirjastoja ja työkaluja, joilla kaikilla on oma roolinsa koneoppimismallien rakentamisessa ja havainnollistamisessa.
 
-Jupyter on..
-TensorFlow on kirjasto *moniulotteisten taulukoiden (~tensoreiden)* käsittelyyn eli tensorilaskentaan. TensorFlown *operaatioilla* (esim tf.add()) voidaan muokata tensoreita. Tensorit kulkevat *graafien* läpi, jotka muokkaavat tensoreita operaatioilla. Usein edellisen operaation läpikäyneestä ulostulo-tensorista tulee seuraavaan operaation sisäänmeno-tensori. Graafit tulee ajaa TensorFlow *sessiossa*, joskin TensorFlow 2:ssa ei enää (https://www.tensorflow.org/guide/effective_tf2). TensorFlown käsitteiden ja käytön opettelu vaatii hieman aikaa. (https://colab.research.google.com/notebooks/mlcc/tensorflow_programming_concepts.ipynb). 
-Pandas (Panda on työkalu erityisesti kolumni-muotoisen datan käsittelyyn. Pandas:lla voi ladata dataa (esim CSV-tiedostoista) ja esittää sitä myös graafeina).
-Numpy (https://numpy.org/) Kirjaston numeroiden käsittelyyn Pythonilla.
-sklearn Metriikoiden laskemiseen ja tulostamiseen datasta.
-matplotlib Kirjasto datasettien visualisointiin.
-Keras
+Koneoppimiseen liitty useita kirjastoja ja työkaluja, joilla kaikilla on oma roolinsa koneoppimismallien rakentamisessa tai havainnollistamisessa.
 
-Ibm Watson
+1. [Python](https://www.python.org/) on ohjelmointikieli, jolla on kirjoitettu lukuisia koneoppimiseen liittyviä kirjastoja ja rajapintoja. Suurin osa koneoppimisohjelmista ohjelmoidaan Pythonilla. 
+1. [Jupyter Notebook](https://jupyter.org/) on työkalu, jolla voi kirjoittaa koodia, tehdä dokumentointia, piirtää graafeja jne. Se on vähän kuin steroideja syönyt tekstieditori. Selkeyttää ja visualisoi koneoppimismallien rakentamista. 
+1. [TensorFlow](https://www.tensorflow.org/) on kirjasto ensisijaisesti *moniulotteisten taulukoiden (~tensoreiden)* käsittelyyn eli tensorilaskentaan. TensorFlow:n ympärille on rakentunut vähitellen kokonainen koneoppimiseen liittyvä ekosysteemi. TensorFlown *operaatioilla* (esim tf.add()) voidaan muokata tensoreita. Tensorit kulkevat *graafien* läpi, jotka muokkaavat tensoreita operaatioilla. Usein edellisen operaation läpikäyneestä ulostulo-tensorista tulee seuraavaan operaation sisäänmeno-tensori. Graafit tulee ajaa TensorFlow *sessiossa*, joskin uudessa [TensorFlow 2:ssa](https://www.tensorflow.org/guide/effective_tf2) ei enää. [TensorFlown käsitteiden](https://colab.research.google.com/notebooks/mlcc/tensorflow_programming_concepts.ipynb) ja käytön opettelu vaatii hieman aikaa. TensorFlown omat tutoriaalit löytyvät [täältä](https://www.tensorflow.org/tutorials). [PyTorch](https://pytorch.org/) on kilpaileva vaihtoehto TensorFlow:lle. 
+1. [Keras](https://keras.io/) on melko korkean abstraktiotason (=helppokäyttöinen) kirjastorajapinta neuroverkkojen rakentamiseen ja siten sitä käytetään esimerkiksi kuvantunnistuksen yhteydessä. Nykyisin Keras sisältyy suoraan TensorFlow:hun.
+1.  [Pandas](https://pandas.pydata.org/) on työkalu erityisesti kolumni-muotoisen datan käsittelyyn. Pandas:lla voi ladata dataa (esim CSV-tiedostoista) ja esittää sitä myös graafeina. 
+1. [Numpy](https://numpy.org/) on kirjasto numeroiden käsittelyyn Pythonilla.
+1. [Scikit-learn](https://scikit-learn.org/stable/) on kirjasto metriikoiden laskemiseen ja tulostamiseen datasta.
+1. [Matplotlib](https://matplotlib.org/) on kirjasto datasettien visualisointiin.
+1. [Google Colaboratory](https://colab.research.google.com/notebooks/intro.ipynb) on selaimessa pyörivä ympäristö, jossa voi ajaa yllä kuvattuja työkaluja asentamatta niitä itse. Colaboratoryssä tehtyjä Notebookkeja voi jakaa Google driven kautta helposti muille. 
+1. [Ibm:n Watson Assistant](https://www.ibm.com/cloud/watson-assistant/) on esimerkiksi yksi koneoppimiseen perustuva helposti käytettävä ja kehittynyt luonnollisen kielen tulkintaan keskittyvä palvelu, jonka voi konfiguroida omiin tarpeisiinsa jopa ilman ohjelmointitaitoja.
 
-Koneoppimiskirjastojen rajapinnat eivät ole vielä valitettavasti kehittyneet aivan yhtä korkealle abstraktiotasolle (ja helppokäyttöisiksi) kuin esimerkikiksi webohjelmointiin liittyvät kirjastot. Kuten muussakin ohjelmoinnissa, hyvä tapa lähteä liikkeelle koneoppimismallien rakentamisessa on pyrkiä etsimään esimerkki, joka tekee melkein saman asian jota itse yrittää tehdä ja sitten muokata esimerkkiä omiin tarpeisiin sopivaksi.
+Jos yllä olevat koneoppimiskirjastot haluaa asentaa oikeasti omalle koneelleen, eikä vain pyörittää niitä selaimessa, niin esimerkiksi [tässä blogissa](https://medium.com/@margaretmz/anaconda-jupyter-notebook-tensorflow-and-keras-b91f381405f8) on siihen hyvät ohjeet.
 
--->
-<!---käytetään tällä kurssilla (ainakin ennen seminaaria) googlen colab online-ympäristöä ja esimerkkejä sieltä-->
+Yleisesti on todettava, että koneoppimiskirjastojen rajapinnat eivät ole vielä valitettavasti kehittyneet aivan yhtä korkealle abstraktiotasolle (ja helppokäyttöisiksi) kuin esimerkikiksi webohjelmointiin liittyvät kirjastot. Kuten muussakin ohjelmoinnissa, hyvä tapa lähteä liikkeelle koneoppimismallien rakentamisessa on pyrkiä etsimään esimerkki, joka tekee melkein saman asian jota itse yrittää tehdä ja sitten muokata esimerkkiä omiin tarpeisiin sopivaksi. Internetistä löytyy paljon esimerkiksi Googlen Colaboratoryllä tehtyjä esimerkkipohjia erilaisiin koneoppimisskenaarioihin.
 
+Tällä kurssilla havainnollistetaan koneoppimista käytännössä seuraavien Colaboratory notebookkien avulla:
 
-<!--(käydään läpi työkalustack ja eri työkalujen erot, jotka voitaisiin asentaa itselle condalla, ks blogi) Keras, tensorflow, jupyter, pandas, numpy, ibm watson, kuten esim https://medium.com/@margaretmz/anaconda-jupyter-notebook-tensorflow-and-keras-b91f381405f8-->
+1. [Pandas-kirjaston perusteet](https://colab.research.google.com/notebooks/mlcc/intro_to_pandas.ipynb#scrollTo=av6RYOraVG1V) <!--datasettinä https://download.mlcc.google.com/mledu-datasets/california_housing_train.csv-->
+1. [TensorFlow:n peruskäsitteet](https://colab.research.google.com/notebooks/mlcc/tensorflow_programming_concepts.ipynb)
+1. [Lineaarisen mallin rakentamienn TensorFlow:lla](https://colab.research.google.com/drive/1gdnOajkVQ66tupq5peMEDoQE3ubkgOl6#scrollTo=ajVM7rkoYXeL)
+1. [Neuroverkon rakentaminen TensoFlow:lla](https://colab.research.google.com/notebooks/mlcc/intro_to_neural_nets.ipynb#scrollTo=AGOM1TUiKNdz)
 
-<!---tensorit selitetään (moniulotteinen taulukko)-->
+Lisäksi sivutaan lyhyesti näitä esimerkkiä:
+1. [Kuvadatan käsittelyä Keraksella ja TensorFlow2:lla](https://colab.research.google.com/github/tensorflow/docs/blob/master/site/en/tutorials/quickstart/beginner.ipynb)
+1. [Facebookin detectron kuvantunnistuskirjaston käyttämistä käytännössä](https://colab.research.google.com/drive/16jcaJoc6bCFAQ96jDe2HwtXj7BMD_-m5)
+1. [Kuvadatasta kissojen ja koirien tunnistamista](https://colab.research.google.com/github/google/eng-edu/blob/master/ml/pc/exercises/image_classification_part1.ipynb)
+1. [Kasvojentunnistusta kuvista](https://colab.research.google.com/github/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/05.14-Image-Features.ipynb)
+
+Koneoppimista voi opiskella lisää esimerkiksi Googlen [Machine Learning Crash Coursella](https://developers.google.com/machine-learning/crash-course/).
 
 
 ## Tehtävät
+
+### Seminaaritehtävä 1 (täydennetään seminaarivaiheessa):
+Kouluta koneoppimismalli jostain datasta ja laadi sillä ennusteita. Voi liittyä ohjelmistoprojekti 2:seen mieluusti.
 
 ### Lähteet:
 * Kananen H., Puolitaival H., Tekoäly bisneksen uudet työkalut, Alma Talent, 2019.
