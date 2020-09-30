@@ -5,10 +5,10 @@
 Koneoppimisessa on kyse siitä, että datan avulla tietokone voidaan opettaa ratkaisemaan ongelmia tietyssä toimintaympäristössä ilman varsinaista ohjelmointia. Dataa kyseisestä ongelmakentästä täytyy kuitenkin olla paljon, jotta *koneoppimismalli* voidaan kouluttaa. Ongelmakentän tulee myös olla tarkasti rajattu, eikä samalla datalla koulutettua mallia voida siirtää toisen ongelman ratkaisuun. Termiä *tekoäly* tunnutaan käyttävän monesti myös synonyyminä koneoppimisesta ja toisaalta mikä tahansa tavallinen ohjelmoitu algoritmi saatetaan nykyään luokitella valtamediassa "tekoälyksi". 
 
 Yksinkertaisia ongelmia voi mallintaa lineaarisilla funktioilla. Kerätyn datan perusteella, voimme laskea lineaariselle *tavoitefunktiolle (objective function)* painokertoimet ja tehdä ennusteen uudelle datapisteelle. Rakennetun mallin hyvyyttä voidaan mitata esimerkiksi [Root Mean Square Error](https://en.wikipedia.org/wiki/Root-mean-square_deviation):lla (eli lasketaan toteutumien ja ennustefunktion antamien arvojen erotusten (keltaiset viivat kuvassa) neliöiden summa, jaetaan se toteutumien määrällä (3 kpl kuvassa) ja otetaan neliöjuuri tästä).
-![lineaarinen tavoitefunktio](img/lineaarinen_tavoitefunktio.png)
+![lineaarinen tavoitefunktio, hävikkifunktio (loss function), optimointifunktio (gradient descent), ](img/lineaarinen_tavoitefunktio.png)
 
 Usein reaalimaailman asiat ja ilmiöt ovat sen verran monimutkaisia, että lineaarinen ennustemalli olisi hyvin epätarkka. Tällöin voidaan käyttää sen sijaan epälineaarista tavoitefunktiota.
-![epälineaarinen tavoitefunktio](img/epalineaarinen_tavoitefunktio.png)
+![epälineaarinen tavoitefunktio, ylisovittaminen (overfitting)](img/epalineaarinen_tavoitefunktio.png)
 
 Edelliset ennustemallit ovat vielä ihmiselle helposti ymmärrettäviä. Kuitenkin vielä epälineaarisia ennustemalleja parempi on yleensä neuroverkkoihin pohjautuva ennustemalli. Neuroverkkoa voi ajatella samanlaisena (mutta monimutkaisena) matemaattisena funktiona, jossa on painokertoimet kuten lineaarisessa ja epälineaarisessa tavoitefunktiossa. Neuroverkoissa painokertointen määrittäminen vain on korkeamman asteen matematiikkaa. Tämä matemaattinen mallinnustapa on saanut inspiraationsa ihmisaivojen neuroverkoista, jotka aktivoituvat (painottuvat) niiden käytön mukaan. Neuroverkkojen yhteydessä puhutaan myös syväoppimisesta (deep learning), mikä viittaa neuroverkon kerrosten syvyyteen. Neuroverkkoja voi käyttää varsin sujuvasti ymmärtämättä niiden tarkkaa matemaattista toteutusta. Kuitenkin neuroverkkojen toimintaa (ja mallin hyvyyttä) säädetään ns. *hyperparametrien* avulla, joiden tehokas käyttö edellyttää jonkin verran ymmärrystä neuroverkkojen toiminnasta.
 ![neuroverkko](img/neuroverkko.png) 
@@ -61,11 +61,11 @@ Tällä kurssilla havainnollistetaan koneoppimista käytännössä seuraavien Co
 
 1. [Pandas-kirjaston perusteet](https://colab.research.google.com/notebooks/mlcc/intro_to_pandas.ipynb#scrollTo=av6RYOraVG1V) <!--datasettinä https://download.mlcc.google.com/mledu-datasets/california_housing_train.csv-->
 1. [TensorFlow:n peruskäsitteet](https://colab.research.google.com/notebooks/mlcc/tensorflow_programming_concepts.ipynb)
-1. [Lineaarisen mallin rakentamienn TensorFlow:lla](https://colab.research.google.com/drive/1gdnOajkVQ66tupq5peMEDoQE3ubkgOl6#scrollTo=ajVM7rkoYXeL)
-1. [Neuroverkon rakentaminen TensoFlow:lla](https://colab.research.google.com/notebooks/mlcc/intro_to_neural_nets.ipynb#scrollTo=AGOM1TUiKNdz)
+1. [Lineaarisen mallin rakentamienn TensorFlow 1:lla](https://colab.research.google.com/drive/1gdnOajkVQ66tupq5peMEDoQE3ubkgOl6#scrollTo=ajVM7rkoYXeL)
+1. [Neuroverkon rakentaminen TensoFlow 1:lla](https://colab.research.google.com/notebooks/mlcc/intro_to_neural_nets.ipynb#scrollTo=AGOM1TUiKNdz)
 
 Lisäksi sivutaan lyhyesti näitä esimerkkiä:
-1. [Kuvadatan käsittelyä Keraksella ja TensorFlow2:lla](https://colab.research.google.com/github/tensorflow/docs/blob/master/site/en/tutorials/quickstart/beginner.ipynb)
+1. [Kuvadatan käsittelyä Keraksella ja TensorFlow2:lla](https://colab.research.google.com/github/tensorflow/docs/blob/master/site/en/tutorials/quickstart/beginner.ipynb) ja [tämä on toinen ehkä vielä parempi step-by-step tutoriaali kuvadatasta ja Keraksesta](https://codelabs.developers.google.com/codelabs/tensorflow-lab2-computervision/#0)
 1. [Facebookin detectron kuvantunnistuskirjaston käyttämistä käytännössä](https://colab.research.google.com/drive/16jcaJoc6bCFAQ96jDe2HwtXj7BMD_-m5)
 1. [Kuvadatasta kissojen ja koirien tunnistamista](https://colab.research.google.com/github/google/eng-edu/blob/master/ml/pc/exercises/image_classification_part1.ipynb)
 1. [Kasvojentunnistusta kuvista](https://colab.research.google.com/github/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/05.14-Image-Features.ipynb)
