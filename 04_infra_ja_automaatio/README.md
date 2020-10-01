@@ -247,7 +247,8 @@ $ git add .
 #Lisätään kaikki staging tason muutokset lokaaliin versionhallintaan.
 $ git commit -m "initial commit"
 
-#git add vaiheen voi hoitaa myös -a -vivulla commit -komennossa: eli tämä on sama kuin git add + git commit, joskin kokonaan uudet ("untracked") tiedostot pitää lisätä git add:lla edelleen
+#git add vaiheen voi hoitaa myös -a -vivulla commit -komennossa: eli tämä on sama kuin git add + git commit
+#joskin kokonaan uudet ("untracked") tiedostot pitää lisätä git add:lla edelleen.
 $ git commit -a -m "second commit"
 
 # Liitetään paikalliselle repositorylle upstream repo githubissa (tyhjä upstream-repo on luotu ensin githubissa)
@@ -339,6 +340,8 @@ Ohjelmistoilla on tyypillisesti kymmeniä riippuvuuksia erilaisiin 3rd party kir
 Käsitellään tässä lyhyesti paketinhallintaa ja buildausprosessin automatisointia npm:ää esimerkkinä käyttäen. Muut yllä mainitut työkalut toimivat melko samankaltaisia periaatteita noudattaen ja tärkeintä onkin ymmärtää mitä niillä voi ja kannattaa tehdä ja sitten tarvittaessa googlettaa, miten se jollain tietyllä työkalulla tehdään.
 
 Npm on ensisijaisesti paketinhallintasovellus (omilla sivuillaan he käyttävät termiä "worlds largest software registry"). Npm:n avulla on siis helppo ladata muiden luomia ohjelmistokirjastoja npm:n "keskusrepositorystä". Myös pakettien julkaiseminen itse on hyvin helppoa. Esimerkiksi siis [express-kirjaston](https://www.npmjs.com/package/express) voi ladata itselleen käyttöön npm:n install-komennon avulla:
+
+<!--Demotaan npm-komentoja ja näytetään package.json:in sisältöä lyhyesti -->
 
 ```shell
 $ npm install express
@@ -444,7 +447,7 @@ Buildaustoimenpiteitä voi konfiguroida myös tarkemmin package.json:issa. Alla 
 
 Kaikki mahdolliset npm-skriptit on listattu [täällä](https://docs.npmjs.com/misc/scripts). Omiakin skriptejä voi määritellä, ne pitää ajaa kommenolla
 ```shell
-$ npm run-script omaskripti
+$ npm run omaskripti
 ```
 
 [Omien pakettien julkaiseminen npm-repositoryyn on myös naurettavan helppoa](https://zellwk.com/blog/publish-to-npm/)! Tarvitset vain [npm-tunnuksen](https://www.npmjs.com/signup) ja sitten:
@@ -457,7 +460,7 @@ $ npm publish
 
 Jatkuva integrointi (Continuous integration) tarkoittaa oleellisesti sitä, että kun uutta koodia ajetaan versionhallintaan, niin sille suoritetaan samantien erilaisia laatutarkistuksia. Tyypillisesti ajetaan siis järjestelmän yksikkö- ja integraatiotestit ja lisäksi voidaan tehdä esimerkiksi staattista koodianalysointia, automaattista testausta eri käyttöjärjestelmäympäristöissä, suorituskykytestausta yms. Jatkuvan integroinnin avulla nähdään nopeasti jos uusi koodimuutos on rikkonut jotain tai ei muuten ole laadultaan hyväksyttävä. Joillain tiimeillä on työtilassaan esimerkiksi jatkuvasti kaikille näkyvä "radiaattori"-ruutu, josta voi tarkistaa viimeisimmän buildauksen tilan.
 
-Jatkuvan integroinnin työkaluja on tarjolla useita. [Jenkins](https://www.jenkins.io/) on kenties suosituin jatkuvan integroinnin mahdollistava automaatiopalvelinympäristö isoissa projekteissa. Jenkinsiin on tarjolla lukuisia plugineita. [Travis CI](https://travis-ci.org/) on kätevä CI-työkalu käytettynä yhdessä Githubin tai Bitbucketin kanssa. Sen voi konfiguroida buildaamaan projektin aina kun githubiin tulee uuttaa koodia ja tarvittaessa deployaamaan uusimman buildin herokuun automaattisesti. Buildin jälkeen Travis voi esimerkiksi postata tiimin slack-kanavalle viestin buildin onnistumisesta. (Sidenote: privaatteja github-repoja pääsee käsittelemään travis-ci.org:in sijaan [travis-ci.com:ssa](https://travis-ci.com/)).
+Jatkuvan integroinnin työkaluja on tarjolla useita. [Jenkins](https://www.jenkins.io/) on kenties suosituin jatkuvan integroinnin mahdollistava automaatiopalvelinympäristö isoissa projekteissa. Jenkinsiin on tarjolla lukuisia plugineita. Myös esimerkiksi JetBrainsin [TeamCity](https://www.jetbrains.com/teamcity/) on vastaava tuote. [Travis CI](https://travis-ci.org/) on kätevä CI-työkalu käytettynä yhdessä Githubin tai Bitbucketin kanssa. Sen voi konfiguroida buildaamaan projektin aina kun githubiin tulee uuttaa koodia ja tarvittaessa deployaamaan uusimman buildin herokuun automaattisesti. Buildin jälkeen Travis voi esimerkiksi postata tiimin slack-kanavalle viestin buildin onnistumisesta. (Sidenote: privaatteja github-repoja pääsee käsittelemään travis-ci.org:in sijaan [travis-ci.com:ssa](https://travis-ci.com/)).
 
 ![Travis yleiskuva](img/travis/travis_yleiskuva.png) 
 
