@@ -10,16 +10,16 @@ Voit ajaa tämän tiedoston komennolla "node Reduxperiaatteet.js" tai "npm run b
 const Redux = require('redux')
 
 //Action 1
-function addColor(value){
-    return{
+function addColor(value) {
+    return {
         type: "", //FIXME
         color: null //FIXME
     };
 }
 
 //Action 2
-function removeColor(value){
-    return{
+function removeColor(value) {
+    return {
         type: "", //FIXME
         color: null //FIXME
     };
@@ -30,19 +30,19 @@ Pohja reducerille, ota edellinen tila ja Action ja palauta uusi tila.
 Tämä reducer-funktio on siis "idealtaan samantapainen" kuin funktionaalisen ohjelmoinnin 
 reduce-funktio, eli Array.prototype.reduce(reducer, ?initialValue)
 */
-function favoriteColors(state, action){ 
-    if(state == undefined){
+function favoriteColors(state, action) {
+    if (state == undefined) {
         state = []
     }
 
-    if(action.type === "ADD"){
+    if (action.type === "ADD") {
         return state.concat(action.color);
-    }else if(action.type === "REMOVE"){
-        return state.filter(function(item){ 
+    } else if (action.type === "REMOVE") {
+        return state.filter(function (item) {
             //selvitä tarvittaessa miten toimii funktionaalisen ohjelmoinnin filter-funktio
-            return null //FIXME
+            return false //FIXME
         });
-    }else{
+    } else {
         return state;
     }
 }
