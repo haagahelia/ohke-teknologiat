@@ -10,6 +10,20 @@ Video:
 
 * [testaustehtävän malliratkaisu](https://web.microsoftstream.com/video/f3903449-9188-47ca-8cc6-7c1b92ef38d9)
 
+Videolla koodissa on seuraava bugi:
+
+```diff
+ def ryhmittele_toimipaikkoihin(postinumerot):
+     toimipaikat = {}
+     for numero, nimi in postinumerot.items():
+-         if nimi in postinumerot:
++         if nimi in toimipaikat:
+             toimipaikat[nimi].append(numero)
+         else:
+             toimipaikat[nimi] = [numero]
+     return toimipaikat
+```
+
 Lähdekoodit:
 
 * [postinumerot.py](https://raw.githubusercontent.com/haagahelia/swd4tn023/testaus-malliratkaisu/03_testaus/src/postinumerot.py)
