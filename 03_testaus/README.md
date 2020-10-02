@@ -4,6 +4,17 @@ Tämän oppitunnin tavoitteena on tutustua testauksen eri tasoihin yksikköteste
 
 Aiheen opiskelun jälkeen osaat kirjoittaa Python-funktioillesi yksikkötestit ja tiedät mistä lähteä liikkeelle, kun sinulle tulee tarve kirjoittaa automatisoituja testejä.
 
+## Malliratkaisu
+
+Video: 
+
+* [testaustehtävän malliratkaisu](https://web.microsoftstream.com/video/f3903449-9188-47ca-8cc6-7c1b92ef38d9)
+
+Lähdekoodit:
+
+* [postinumerot.py](https://raw.githubusercontent.com/haagahelia/swd4tn023/testaus-malliratkaisu/03_testaus/src/postinumerot.py)
+* [test_postinumerot.py](https://raw.githubusercontent.com/haagahelia/swd4tn023/testaus-malliratkaisu/03_testaus/src/test_postinumerot.py)
+
 ## Suositeltavat ennakkovideot
 
 ### Video 1: [Software Testing Explained: How QA is Done Today](https://www.youtube.com/watch?v=oLc9gVM8FBM)
