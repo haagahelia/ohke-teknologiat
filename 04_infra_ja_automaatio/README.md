@@ -306,6 +306,10 @@ $ git push origin --delete uusihaara #poista uusihaara remotesta myös.
 
 # Katso mitä lokaaleja muutoksia olet tehnyt
 $ git status
+
+# Näyttää omat ja originin viimeiset commitit ennen edellistä pullia.
+$ git log
+
 # Katsele riveittäin tekemiäsi lokaaleja muutoksia 
 $ git diff # voit myös antaa paramterina tarkemman tiedostonimen
 
