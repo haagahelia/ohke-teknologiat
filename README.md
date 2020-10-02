@@ -46,9 +46,12 @@ Video 2: <a href="https://web.microsoftstream.com/video/bff8f1a1-025d-4c13-8287-
  <tr><td>pe 18.9.</td><td><a href="02_ohjelmistoarkkitehtuurit_ja_patternit">Ohjelmistoarkkitehtuurit ja patternit</a>, vierailija <a href="https://neverthink.tv/">Neverthink.tv:ltä</a></td></tr>
  <tr><td>pe 25.9.</td><td><a href="03_testaus">Testaus</a><br /><br />
  Video: <a href="https://web.microsoftstream.com/video/87a443b6-5e2e-4d1f-a8c7-71b9b4d10697">oppitunnin videotallenne</a><br /><br />
-<a href="03_testaus/src">Oppitunnilla kirjoitetut lähdekoodit</a>
+<a href="03_testaus/src">Oppitunnilla kirjoitetut lähdekoodit</a><br /><br />
+Kotitehtävän malliratkaisu: <a href="https://raw.githubusercontent.com/haagahelia/swd4tn023/testaus-malliratkaisu/03_testaus/src/postinumerot.py">postinumerot.py</a>, <a href="https://raw.githubusercontent.com/haagahelia/swd4tn023/testaus-malliratkaisu/03_testaus/src/test_postinumerot.py">test_postinumerot.py</a><br /><br />
+Video: <a href="https://web.microsoftstream.com/video/f3903449-9188-47ca-8cc6-7c1b92ef38d9">kotitehtävän malliratkaisu</a>
+
  </td></tr>
- <tr><td>pe 2.10.</td><td>Infra + automaatio</td></tr>
+ <tr><td>pe 2.10.</td><td><a href="04_infra_ja_automaatio">Infra + automaatio</a></td></tr>
  <tr><td>pe 9.10.</td><td>ES6 / JavaScript, node, mongo</td></tr>
  <tr><td>pe 16.10.</td><td>Koneoppiminen</td></tr>
  <tr><td><del>pe 23.10.</del></td><td><del>Intensiiviviikko</del></td></tr>

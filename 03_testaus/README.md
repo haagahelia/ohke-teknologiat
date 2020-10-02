@@ -6,11 +6,16 @@ Aiheen opiskelun jälkeen osaat kirjoittaa Python-funktioillesi yksikkötestit j
 
 ## Malliratkaisu
 
+Lähdekoodit:
+
+* [postinumerot.py](https://raw.githubusercontent.com/haagahelia/swd4tn023/testaus-malliratkaisu/03_testaus/src/postinumerot.py)
+* [test_postinumerot.py](https://raw.githubusercontent.com/haagahelia/swd4tn023/testaus-malliratkaisu/03_testaus/src/test_postinumerot.py)
+
 Video: 
 
 * [testaustehtävän malliratkaisu](https://web.microsoftstream.com/video/f3903449-9188-47ca-8cc6-7c1b92ef38d9)
 
-Videolla koodissa on seuraava bugi:
+Malliratkaisuvideolla koodissa on seuraava bugi, joka jää ratkaisematta:
 
 ```diff
  def ryhmittele_toimipaikkoihin(postinumerot):
@@ -24,10 +29,7 @@ Videolla koodissa on seuraava bugi:
      return toimipaikat
 ```
 
-Lähdekoodit:
 
-* [postinumerot.py](https://raw.githubusercontent.com/haagahelia/swd4tn023/testaus-malliratkaisu/03_testaus/src/postinumerot.py)
-* [test_postinumerot.py](https://raw.githubusercontent.com/haagahelia/swd4tn023/testaus-malliratkaisu/03_testaus/src/test_postinumerot.py)
 
 ## Suositeltavat ennakkovideot
 
