@@ -4,6 +4,31 @@ Tämän oppitunnin tavoitteena on tutustua testauksen eri tasoihin yksikköteste
 
 Aiheen opiskelun jälkeen osaat kirjoittaa Python-funktioillesi yksikkötestit ja tiedät mistä lähteä liikkeelle, kun sinulle tulee tarve kirjoittaa automatisoituja testejä.
 
+## Malliratkaisu
+
+Video: 
+
+* [testaustehtävän malliratkaisu](https://web.microsoftstream.com/video/f3903449-9188-47ca-8cc6-7c1b92ef38d9)
+
+Videolla koodissa on seuraava bugi:
+
+```diff
+ def ryhmittele_toimipaikkoihin(postinumerot):
+     toimipaikat = {}
+     for numero, nimi in postinumerot.items():
+-         if nimi in postinumerot:
++         if nimi in toimipaikat:
+             toimipaikat[nimi].append(numero)
+         else:
+             toimipaikat[nimi] = [numero]
+     return toimipaikat
+```
+
+Lähdekoodit:
+
+* [postinumerot.py](https://raw.githubusercontent.com/haagahelia/swd4tn023/testaus-malliratkaisu/03_testaus/src/postinumerot.py)
+* [test_postinumerot.py](https://raw.githubusercontent.com/haagahelia/swd4tn023/testaus-malliratkaisu/03_testaus/src/test_postinumerot.py)
+
 ## Suositeltavat ennakkovideot
 
 ### Video 1: [Software Testing Explained: How QA is Done Today](https://www.youtube.com/watch?v=oLc9gVM8FBM)
@@ -475,6 +500,7 @@ def etsi_postinumerot(postitoimipaikka, postinumerot_sanakirja):
 ```
 Tämän funktion testaaminen on huomattavasti helpompaa kuin main-funktion, koska `etsi_postinumerot` ei kysy käyttäjältä mitään eikä tee tulostuksia.
 
+
 ## Testien laajuus ja kattavuus
 
 Testaa toteuttamasi logiikka ainakin tapauksissa, joissa:
@@ -489,6 +515,51 @@ Voit oman harkintasi mukaan käyttää testeissä joko itse luomaasi testidataa 
 
 Tehtävän malliratkaisussa tulemme tutustumaan myös siihen, miten ohjelman tulosteet voidaan tarkistaa yksikkötestissä.
 
+## Huom: Sanakirjan sisällön testaaminen
+
+Pythonin sanakirja `dict` on hajautusrakenne, joka ei lisää arvoja muistiin järjestyksessä peräkkäisille paikoille, vaan etsii arvoille paikat avaimien hajautusfunktioiden avulla. Hajautusfunktio nopeuttaa haku- ja lisäysoperaatioita, mutta tyypillisesti sillä kustannuksella, että tietorakenne ei säilytä tietoa arvojen lisäysjärjestyksestä. Sama ilmiö esiintyy mm. Javan HashMap-tietorakenteen kanssa. Tämä vaikeuttaa jossain tapauksissa testaamista, koska sanakirjan sisällön järjestystä ei välttämättä tiedetä ennalta.
+
+Onneksi Python 3:n viimeisimmissä versioissa sanakirja on toteutettu niin, että hajautuksesta huolimatta arvot pidetään lisäysjärjestyksessä. Python 3 saattaa helpottaa koodisi testaamista, koska postinumerot ovat aina lisäysjärjestyksessä!
+
+### Python 3
+
+Alla olevassa koodissa luodaan sanakirja `{"a": 1, "b": 2, "c": 3, "d": 4, "e": 5}`.
+
+Python 3.8:lla arvot `[1, 2, 3, 4, 5]` sekä avaimet `['a', 'b', 'c', 'd', 'e']` saadaan aina siinä järjestyksessä, jossa ne annetaan sanakirjaa luotaessa:
+
+```python
+$ python3
+Python 3.8.2 (default, Jul 16 2020, 14:00:26) 
+>>> 
+>>> print({"a": 1, "b": 2, "c": 3, "d": 4, "e": 5})
+{'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5} # sama järjestys!
+>>> 
+>>> print({"a": 1, "b": 2, "c": 3, "d": 4, "e": 5}.values())
+dict_values([1, 2, 3, 4, 5]) # sama järjestys!
+>>> 
+>>> print({"a": 1, "b": 2, "c": 3, "d": 4, "e": 5}.keys())
+dict_keys(['a', 'b', 'c', 'd', 'e']) # sama järjestys!
+```
+
+### Python 2
+
+Alla olevassa koodissa luodaan sanakirja `{"a": 1, "b": 2, "c": 3, "d": 4, "e": 5}`.
+
+Python 2.7:lla arvot `[1, 3, 2, 5, 4]` sekä avaimet `['a', 'c', 'b', 'e', 'd']` saadaan **eri järjestyksessä**, kuin missä ne annetaan sanakirjaa luotaessa. Järjestys voi myös muuttua hajautustaulun luomisen jälkeen.
+
+```python
+$ python2 
+Python 2.7.18rc1 (default, Apr  7 2020, 12:05:55) 
+>>> 
+>>> print({"a": 1, "b": 2, "c": 3, "d": 4, "e": 5})
+{'a': 1, 'c': 3, 'b': 2, 'e': 5, 'd': 4} # eri järjestys!
+>>> 
+>>> print({"a": 1, "b": 2, "c": 3, "d": 4, "e": 5}.values())
+[1, 3, 2, 5, 4] # eri järjestys!
+>>> 
+>>> print({"a": 1, "b": 2, "c": 3, "d": 4, "e": 5}.keys())
+['a', 'c', 'b', 'e', 'd'] # eri järjestys!
+```
 
 ## Tehtävän arviointi
 
