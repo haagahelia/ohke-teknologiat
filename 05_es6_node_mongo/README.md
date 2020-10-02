@@ -8,6 +8,8 @@ https://github.com/Team-RyTy/tapahtuma-info/blob/master/components/Restaurants.j
 
 Babel : ES6 importit yms?
 
+https://babeljs.io/repl
+
 Geolokaatio : Geolib
 
 # Koodin lukeminen
