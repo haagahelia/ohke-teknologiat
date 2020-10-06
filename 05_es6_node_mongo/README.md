@@ -1,3 +1,301 @@
+# ES6, JavaScript, node (+mongo)
+
+Opintojen tässä vaiheessa olette käyttäneet JavaScriptiä useissa eri tilanteissa. Tämän oppitunnin tarkoituksena on esitellä JavaScript-kielen taustalla olevan ECMAScript-standardin versiossa 6 mukaan tulleita ominaisuuksia käytännössä.
+
+JavaScriptillä voidaan soveltaa monia erilaisia ohjelmointityylejä. Se onkin ns. monen paradigman kieli. Voit siis soveltaa sekä olio-ohjelmointia että esimerkiksi funktionaalista ohjelmointia. Tämän kurssin aikana perehdymme JavaScriptin funktionaaliseen puoleen ja erityisesti funktioihin `map`, `filter` ja `reduce`.
+
+## Oppitunnin tavoitteet
+
+Oppitunnin tavoitteena on oppia erityisesti lukemaan koodia ja ymmärtämään miten yleisimmät JavaScript-kieliset esimerkkikoodit toimivat. Sivuamme funktionaalista ohjelmointia hyödyntämällä funktioiden vaiheittaista suorittamista (currying) ja funktioiden antamista parametreina toisille funktioille.
+
+ES6:n ajoittain erikoiset syntaksit tekevät usein koodista suoraviivaista, mutta toisinaan syntaksien liikakäyttö väärissä tilanteissa hankaloittaa koodin ymmärtämistä ja ylläpitoa. Tämän tunnin jälkeen tunnistat joitakin tilanteita, joissa on tarkoituksenmukaista hyödyntää eri ominaisuuksia.
+
+
+## Ennakkokysymyksiä
+
+Mitä seuraavat esimerkkikoodit tekevät? Mitkä ovat muuttujien arvot ennen näitä rivejä ja näiden rivien jälkeen?
+
+### Array destructuring
+
+```js
+let [ first, last ] = name;
+
+// sama kuin
+let first = name[0];
+let last = name[1];
+```
+https://javascript.info/destructuring-assignment#array-destructuring
+
+### Object destructuring
+
+```js
+let { first, last } = name;
+
+// sama kuin 
+let first = name.first;
+let last = name.last;
+```
+
+```js
+const { PI } = Math;
+
+// sama kuin
+const PI = Math.PI;
+```
+
+https://javascript.info/destructuring-assignment#object-destructuring
+
+### Property value shorthand
+
+```js
+let name = { first, last };
+
+// Luo uuden olion kahden olemassa olevan muuttujan arvoilla. Sama kuin:
+let name = { first: first, last: last };
+```
+
+https://javascript.info/object#property-value-shorthand
+
+### Object destructuring ja Property value shorthand yhdessä
+
+Yhdistämällä kaksi edellistä, voimme luoda esimerkiksi koordinaattipisteen tapahtumaolion sisältä löytyvän `location`-rakenteen avulla:
+
+```js
+let point = { lat, lon } = event.location;
+```
+
+### Array spread
+
+```js
+let data = [ ...colors, 'red', 'green', 'blue', ...fruits, 'apple', 'banana' ];
+```
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+
+
+### Object spread
+
+```js
+let person = { ...name, hobby: 'Kung-fu' };
+
+// luo uuden olion, jossa on kaikki name-olion attribuutit, ja sen lisäksi hobby-attribuutti
+```
+
+> *"copies own enumerable properties from a provided object onto a new object."*
+>
+> [MDN web docs, Spread syntax (...)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+
+### Rest in Object Destructuring
+
+```js
+let { name, ...theRest } = person;
+
+// theRest sisältää kaikki arvot, paitsi ne, jotka poimittiin person-oliosta nimen perusteella
+```
+
+> *"Rest properties collect the remaining own enumerable property keys that are not already picked off by the destructuring pattern."*
+>
+> [MDN web docs, Destructuring assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+
+### Nuolifunktiot
+
+```js
+let multiply = (a, b) => a * b;
+
+// sama kuin:
+function multiply(a, b) {
+    return a * b;
+}
+```
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+
+### Currying
+
+```js
+let multiply = (a) => (b) => a * b;
+
+// sama kuin:
+function multiply(a) {
+    return function(b) {
+        return a * b;
+    }
+}
+```
+
+Milloin funktioiden osittaisesta määrittelystä olisi meille hyötyä? Jos haluamme laskea etäisyyden kahden koordinaatin välillä, voimme ensin lukita ensimmäisen koordinaattipisteen, ja sen jälkeen käyttää palautettua funktiota yhdellä parametriarvolla!
+
+```js
+function getDistanceTo(point) {
+    return function (event) {
+        return geolib.getDistance(point, event.location);
+    }
+}
+
+// sama kuin:
+let getDistanceTo = (point) => (event) => geolib.getDistance(point, event.location);
+```
+
+Funktiota voitaisiin kutsua nyt seuraavasti:
+
+```js
+let distance = getDistanceTo(helsinki)(event);
+```
+
+"Normaaliin" funktiokutsuun nähden yllä oleva kutsu ei tuo juuri parannusta, se jopa tekee koodista vaikeammin luettavaa. Sen sijaan voimme ottaa ensimmäisen funktion palauttaman funktion talteen, ja kutsua sitä eri yhteydessä:
+
+```js
+let distanceToHelsinki = getDistanceTo(helsinki);
+
+events.forEach(event => event.distance = distanceToHelsinki(event));
+```
+
+https://javascript.info/currying-partials
+
+
+
+# Tapahtumien käsitteleminen `map`, `filter` ja `reduce` -operaatioilla
+
+Tunnilla harjoittelemme `map`, `filter` ja `reduce` -operaatioita [MyHelsinki Open API](http://open-api.myhelsinki.fi/doc) -rajapinnan tapahtumien avulla.
+
+## Esivalmistelu: staattisen aineiston hakeminen
+
+> *curl  is  a tool to transfer data from or to a server, 
+> using one of the supported protocols [...].
+> The command is designed to work without user interaction.*
+>
+> `man curl`
+
+curl voidaan asentaa seuraavasti:
+
+    $ sudo apt install curl
+
+`curl`-komennon avulla voimme hakea raakadatan REST-rajapinnasta:
+
+    $ curl http://open-api.myhelsinki.fi/v1/events/
+
+Edellinen komento tulostaa saadun vastauksen suoraan terminaaliin. `python3 -m json.tool` auttaa muotoilemaan JSON-merkkijonot oikein sisennetyiksi merkkijonoiksi:
+
+    $ curl http://open-api.myhelsinki.fi/v1/events/ | python3 -m json.tool
+
+Nyt saimme terminaaliin siistimmin jäsennellyn JSON-tietorakenteen. Voimme ohjata saamamme tulosteet tiedostoksi `>`-operaatiolla seuraavasti:
+
+    $ curl http://open-api.myhelsinki.fi/v1/events/ | python3 -m json.tool > events.json
+
+Huom! `events.json` on iso tiedosto, luokkaa 6-7 megatavua, joten sen käsitteleminen tekstieditorilla on melko raskasta.
+
+## Tapahtuma JSON:in tuominen Node REPL:iin (Read-Evaluate-Print-Loop)
+
+Ilman npm:ää. Ilman riippuvuuksia:
+
+```js
+$ node
+> let jsonFile = require('./events.json')
+> let events = jsonFile['data']
+> events.length
+5527
+```
+
+`events` sisältää nyt meille aikaisemmilta viikoilta tutun listan tapahtumista. Tällä kertaa tapahtumat ovat JavaScript-olioita. Niillä on täysin sama rakenne kuin aikaisemmilla Pythonin sanakirjoilla:
+
+```js
+> // alkamispäivän tarkastaminen satunnaiselta tapahtumalta
+> let e = events[2500]
+> e['event_dates']['starting_day']
+'2020-10-23T07:00:00.000Z'
+>
+> // JavaScriptillä luonnollisempi tapa käsitellä sisäkkäisiä 
+> // rakenteita on pistenotaatio:
+> e.event_dates.starting_day
+'2020-10-23T07:00:00.000Z'
+>
+> // vertailu johonkin muuhun päivämäärään 
+> e.event_dates.starting_day > '2020-10-07T00:00:00.000Z'
+true
+```
+
+### Filter-metodi
+
+```js
+> // filter luo uuden listan, jolle valitaan alkuperäiseltä listalta 
+> // sellaiset arvot, joille antamamme funktio palauttaa `true`:
+> let allTrue = events.filter(e => true);
+> allTrue.length
+5527 // kaikki valittiin!
+> 
+> // vastaavasti jos palautetaan false:
+> let allFalse = events.filter(e => false);
+> allFalse.length
+0 // mitään ei valittu!
+>
+> // valitaan päivämäärän mukaan!
+> let now = new Date().toISOString()
+> now
+'2020-10-09T10:47:00.111Z'
+>
+> let nextWeek = '2020-10-16T10:47:00.111Z';
+```
+
+Seuraavaksi halutaan rajata tapahtumat, joilla on alkuaika, ja joilla se sijoittuu kahden ajankohdan väliin:
+
+```js
+> // Tapahtumat, joilla on alkuaika, ja se sijoittuu kahden ajankohdan väliin:
+> let eventsNextWeek = events
+    .filter(e => e.event_dates.starting_day != null)
+    .filter(e => e.event_dates.starting_day >= now)
+    .filter(e => e.event_dates.starting_day <= nextWeek)
+>
+> eventsNextWeek.length
+612 // enää 612 tapahtumaa!
+```
+
+Miten voisimme siistiä koodia siten, että yllä oleva koodi ei tekisi kolmea filtteriä eikä sääntöjä kirjoitettaisin filter-metodin sisään? Tätä varten voimme kirjoittaa filtteröintifunktion erilleen filtteröinnistä!
+
+```js
+function isBetweenDates(event) {
+    let { starting_day } = event.event_dates;
+    return starting_day != null && starting_day >= now && starting_day <= nextWeek;
+}
+```
+
+Nyt tämä funktio voidaan antaa parametrina `filter`-operaatiolle:
+
+```js
+> // huom! isBetweenDates-funktiota ei kutsuta heti, vaan se annetaan parametrina.
+> // Filter-metodi huolehtii antamamme funktion kutsumisesta.
+> let eventsNextWeek = events.filter(isBetweenDates)
+> eventsNextWeek.length
+612
+```
+
+Yllä olevassa koodissa `isBetweenDates` on "kovakoodattu" vertailemaan tapahtuman alkuaikaa aina samoihin arvoihin `now` ja `nextWeek`. Olisikin paljon parempi, jos voisimme määritellä funktion kahdessa vaiheessa: ensin annetaan päivämäärät, ja sen jälkeen vertaillaan tapahtumaa:
+
+```js
+function isBetweenDates(minDate, maxDate) {
+    return function (event) {
+        let { starting_day } = event.event_dates;
+        return starting_day && minDate <= starting_day && starting_day <= maxDate;
+    }
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Yksikkötestaus JavaScriptillä
+
+
 
 RxJS esimerkin koodaaminen promiseilla? https://stackblitz.com/edit/rxjs-type-ahead?file=index.ts
 
@@ -24,6 +322,88 @@ exports.area = (r) => PI * r ** 2; // mitä tämä tarkoittaa?
 
 exports.circumference = (r) => 2 * PI * r;
 ```
+
+# JavaScription vertailuoperaatiot
+
+
+### Vertailu kahdella yhtäsuuruusmerkillä
+
+```js
+> "0" == false  // nolla merkkijonona ja false
+true
+> [] == false   // tyjä lista ja false
+true
+> 0 == false    // nolla ja false
+true
+> 0 == "0"      // nolla merkkijonona ja nolla
+true
+> 0 == "+00000" // "pitkä nolla" etumerkillä merkkijonona
+true
+> 0 == []       // nolla ja tyhjä lista
+true
+> "0" == []     // molemmat false, mutta silti keskenään erisuuruiset!!
+false
+```
+
+### Vertailu kolmella yhtäsuuruusmerkillä
+
+```js
+> "0" === false
+false
+> [] === false
+false
+> 0 === false
+false
+> 0 === "0"
+false
+> 0 === []
+false
+> "0" === []
+false
+```
+
+### Listojen vertailu
+
+Listoja vertailtaessa `==` ja `===` molemmat tarkastavat, onko kyseessä sama lista. __Listojen sisältöjä ei vertailla.__
+
+```js
+> [1, 2, 3] === [1, 2, 3]
+false
+> [1, 2, 3] == [1, 2, 3]
+false
+```
+
+### Olioiden vertailu
+
+Kuten listoilla, myös olioita vertailtaessa tarkastetaan ovatko oliot **samat**, eikä niiden sisältöä vertailla.
+
+```js
+> { language: "JavaScript" } === { language: "JavaScript" }
+false
+> { language: "JavaScript" } == { language: "JavaScript" }
+false
+```
+
+Eri kielet toimivat vertailujen osalta eri logiikalla. Esimerkiksi Python vertailee tietorakenteiden sisältöä:
+
+```python
+>>> [1, 2, 3] == [1, 2, 3] # Python
+True
+>>> { "language": "JavaScript" } == { "language": "JavaScript" } # Python
+True
+>>>
+```
+
+### deepStrictEqual
+
+Koska olioiden vertaileminen vertailee vain, ovatko oliot samat, joudumme hyödyntämään erillistä vertailulogiikkaa. Node-yksikkötesteissä voimme hyödyntää esimerkiksi `assert`-moduulin `deepStrictEqual`-metodia, joka vertailee rekursiivisesti sille annettuja arvoja:
+
+```js
+assert.deepStrictEqual([1, 2, 3], [1, 2, 3])
+assert.deepStrictEqual({ language: "JavaScript" }, { language: "JavaScript" 
+```
+
+https://nodejs.org/api/assert.html#assert_assert_deepstrictequal_actual_expected_message
 
 # Array spread
 
@@ -88,111 +468,10 @@ const {id, is_verified} = user;
 { name: 'Teemu', id: 42, posts: [] }
 ```
 
-# Aloitus: staattisen aineiston hakeminen
-
-
-    $ # Asennetaan curl
-    $ sudo apt install curl
-
-`curl`-komennon avulla voimme hakea raakadatan REST-rajapinnasta.
-
-    $ curl http://open-api.myhelsinki.fi/v1/events/
-
-`python3 -m json.tool` auttaa muotoilemaan JSON-merkkijonot oikein sisennetyiksi merkkijonoiksi:
-
-    $ curl http://open-api.myhelsinki.fi/v1/events/ | python3 -m json.tool
-
-`>` ohjaa komennon tulosteet tiedostoksi, joten voimme lopulta ohjata ladatun ja muotoillun JSON-tietorakenteen tiedostoon seuraavasti:
-
-    $ curl http://open-api.myhelsinki.fi/v1/events/ | python3 -m json.tool > events.json
-
-events.json on iso tiedosto, luokkaa 6-7 megatavua, joten sen käsitteleminen tekstieditorilla on melko raskasta.
-
-Ilman npm:ää. Ilman riippuvuuksia:
-
-```js
-$ node
-> let jsonFile = require('./events.json')
-> let events = jsonFile['data']
-> events.length
-5527
->
-> // alkamispäivän tarkastaminen satunnaiselta tapahtumalta
-> let e = events[2500]
-> e.event_dates.starting_day
-'2020-10-23T07:00:00.000Z'
->
-> // vertailu johonkin muuhun päivämäärään 
-> e.event_dates.starting_day > '2020-10-07T00:00:00.000Z'
-true
-```
 
 # Filter
 
-```js
-> // filter luo uuden listan, jolle valitaan sellaiset arvot, joille funktio palauttaa `true`:
-> let allTrue = events.filter(e => true);
-> allTrue.length
-5527 // kaikki valittiin!
-> 
->
-> // vastaavasti jos palautetaan false:
-> let allFalse = events.filter(e => false);
-> allFalse.length
-0 
-> // mitään ei valittu!
->
-> // valitaan päivämäärän mukaan!
-> let now = new Date().toISOString()
-> now
-'2020-10-01T11:57:39.687Z'
->
-> let nextWeek = new Date();
-> nextWeek.setDate(nextWeek.getDate() + 7); # kasvatetaan 7 päivää
-> let maxDate = nextWeek.toISOString()
->
-> // nyt meillä on rajat:
-> [now, maxDate]
-[ '2020-10-01T11:57:39.687Z', '2020-10-08T12:01:11.231Z' ]
-```
 
-Seuraavaksi halutaan rajata tapahtumat, joilla on alkuaika, ja joilla se sijoittuu kahden päivän väliin:
-
-```js
-> // tapahtumia yhteensä:
-> events.length
-5527
->
-> // filtteröidään tapahtumat, joilla on ylipäänsä alkuaika:
-> events.filter(e => e.event_dates.starting_day != null).length
-5433
-> 
-> // Tapahtumat, joiden alkuaika on viikon sisällä:
-> let eventsNextWeek = events
-    .filter(e => e.event_dates.starting_day != null)
-    .filter(e => e.event_dates.starting_day > now)
-    .filter(e => e.event_dates.starting_day < maxDate)
-> eventsNextWeek.length
-612 // enää 612 tapahtumaa!
-```
-
-Miten voisimme siistiä koodia siten, että yllä oleva koodi ei tekisi kolmea filtteriä eikä sääntöjä kirjoitettaisin filter-metodin sisään?
-
-Tätä varten voimme kirjoittaa filtteröintifunktion erilleen filtteröinnistä!
-
-```js
-function isNextWeek(event) {
-    let day = event.event_dates.starting_day; 
-    return day != null && day >= now && day <= maxDate;
-}
-```
-
-```js
-> // huom! isNextWeek-funktiota ei kutsuta, vaan se annetaan parametrina:
-> let eventsNextWeek = events.filter(isNextWeek)
-> eventsNextWeek.length
-612
-```
 
 # "Currying" eli funktion kutsumien osissa
 
