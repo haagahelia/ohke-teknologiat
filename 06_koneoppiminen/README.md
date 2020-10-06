@@ -19,7 +19,7 @@ Edelliset ennustemallit ovat vielä ihmiselle helposti ymmärrettäviä. Kuitenk
 
 Koneen opettamiseen on kolme erilaista tapaa, **ohjattu oppiminen, ohjaamaton oppiminen ja vahvistusoppiminen**. Eri tavat soveltuvat erikaltaisten ongelmien ratkaisemiseen.  
 
-**Ohjatussa oppimisessa (supervised learning)** annamme koneelle ison joukon *merkittyä dataa (labelled data)*. Konelle voidaan siis antaa esimerkiksi 1000 kuvaa, joissa esiintyy kissa (tai rikkoutunut putki tai syöpäkasvaimen esivaihe). Tai koneelle voidaan antaa lauseita, joiden on luokiteltu sisältävän vaikka 50% "politiikkaa" ja 30% "luonnonsuojelua". Datan merkitseminen pitää tyypillisesti tehdä manuaalisena käsityönä. Kun kone on siis ajanut esimerkiksi 1000 kissakuvaa neuroverkkoon, niin se osaa tämän rakentamansa *mallin* avulla tunnistaa esiintyykö jossain tuntemattomassa kuvassa kissa. Koulutuksen aikana voidaan säätää mallin *hyperparametereja*, jotka vaikuttavat siitä kuinka hyvä mallista tulee. (Tekoäly bisneksen uudet työkalut, 2019).
+**Ohjatussa oppimisessa (supervised learning)** annamme koneelle ison joukon *merkittyä dataa (labelled data)*. Konelle voidaan siis antaa esimerkiksi 1000 kuvaa, joissa esiintyy kissa (tai rikkoutunut putki tai syöpäkasvaimen esivaihe). Tai koneelle voidaan antaa lauseita, joiden on luokiteltu sisältävän vaikka 50% "politiikkaa" ja 30% "luonnonsuojelua". Datan merkitseminen pitää tyypillisesti tehdä manuaalisena käsityönä. Kun kone on siis ajanut esimerkiksi 1000 kissakuvaa neuroverkkoon, niin se osaa tämän rakentamansa *mallin* avulla tunnistaa esiintyykö jossain tuntemattomassa kuvassa kissa. Koulutuksen aikana voidaan säätää mallin *hyperparametereja*, jotka vaikuttavat siihen kuinka hyvä mallista tulee. (Tekoäly bisneksen uudet työkalut, 2019).
 
 **Ohjaamattomassa oppimisessa (unsupervised learning)** koneelle annetaan vain joukko dataa ja koneen annetaan itse tunnistaa datasta samankaltaisuuksia ja jakaa data joukkoihin. Mallin *hyperparametreja* säätämällä kone saadaan painottamaan datan luokittelussa erilaisia asioita. Ohjaamattoman oppimisen hyvä puoli on se, ettei dataa tarvitse luokitella itse, mutta toisaalta ohjaamaton oppiminen soveltuu vain rajattuihin ongelmiin, kuten poikkeavuuksien löytämiseen, asiakaryhmien luokitteluun jne. Ohjaamattoman oppimisen eräs mielenkiintoinen sovellutus on *K-Nearest Neighbours-algoritmiin* perustuva suosittelu. Jos esimerkiksi verkkokaupan asiakkaat on luokiteltu erilaisiin ryhmiin, niin uusi asiakas voidaan hänen käyttäytymisensä perusteella luokitella kuuluvaksi tiettyyn ryhmään ja suositella hänelle esimerkiksi samoja tuotteita, joita muut sen ryhmän asiakkaat ovat ostaneet. (Tekoäly bisneksen uudet työkalut, 2019).
 
@@ -74,6 +74,59 @@ Koneoppimista voi opiskella lisää esimerkiksi Googlen [Machine Learning Crash 
 
 
 ## Tehtävät
+
+### Tehtävä 6.1 (100% kierroksen arvosanasta): 
+Alta löytyy monivalintakysymyksiä yllä olevasta lukumateriaalista ja luennon perusteella vastattavaksi  (vastaaminen Teams-tehtävään). Kysymykset on luokiteltu kolmeen kategoriaan, helppo, keskivaikea ja vaikea ja niistä saa pisteitä vaikeustason mukaan (helpot = 5 pistettä per oikea vastaus, keskivaikeat = 10, vaikeat = 15). Kysymyksiin voi tutustua tässä etukäteen ennen vastaussession aloittamista.
+
+1. Mitä ennustemallia kannattaa käyttää kuvantunnistuksen yhteydessä? (helppo)
+* Lineaarista mallia
+* Epälineaarista mallia
+* Neuroverkkoa
+
+2. Millä tavalla ristinollapelin tekoäly kannattaisi kouluttaa? (keskivaikea)
+* Vahvistusoppimisella
+* Ohjatulla oppimisella
+* Ohjaamattomalla oppimisella
+
+3. Millä kirjastolla pystyy lukemaan kätevästi dataa CSV-muotoisesta tiedostosta? (helppo)
+* Numpy
+* PyTorch
+* Keras
+* Pandas
+
+4. Mitkä ovat oleellisia vaiheita ohjatun oppimisen koneoppimismallia koulutettaessa? (keskivaikea)
+* Datan esikäsittely
+* Simulaatioympäristön rakentaminen
+* Datan kerääminen
+* Datasetin jakaminen koulutus ja testausdataan
+* Mallin testaaminen
+
+5. Ohjatun oppimisen koneoppimismallia käytännössä rakennettaessa mitkä ovat hyviä menetelmiä tai toimintatapoja? (keskivaikea)
+* Mallin tuottaman virheen tulostaminen tai visualisoiminen
+* Tavoiteltavan ennustearvon (target column) vaihtaminen mallia koulutettaessa.
+* Hyperparametrien säätäminen
+
+6. 
+
+![Lineaarinen ennustemalli](img/lineaarinen_ennuste.png)
+
+Liitteenä olevassa kuviossa on esitetty jostain datasta tehdyt neljä havaintoa. Esimerkiksi siis x arvolle 1 on tehty havainto y = 2 ja lisäksi on tehty havainnot (x=2, y=4), (x=3, y=8), (x=4, y=6). Jos näiden neljän havainnon perusteella koulutettaisiin lineaarinen koneoppimismalli (jossa mallin hävikkifunktio, eli virheiden summa koulutusdatassa olisi pyritty minimoimaan), niin mikä olisi lineaarisen mallin ennuste x:n arvolle 5? Väärästä vastauksesta annetaan -7 pistettä, joten ei välttämättä kannata arvata. (vaikea)
+* 8
+* 10
+* 12
+* En tiedä (0 pistettä).
+
+7. 
+
+![Lineaarinen ennustemalli](img/lineaarinen_ennuste.png)
+
+Liitteenä olevassa kuviossa on esitetty jostain datasta tehdyt neljä havaintoa (sama kuvio kuin kysymyksessä 6). Esimerkiksi siis x arvolle 1 on tehty havainto y = 2 ja lisäksi on tehty havainnot (x=2, y=4), (x=3, y=8), (x=4, y=6). Jos näiden neljän havainnon perusteella koulutettaisiin lineaarinen koneoppimismalli (jossa mallin hävikkifunktio, eli virheiden summa koulutusdatassa olisi pyritty minimoimaan), niin mikä olisi mallin hävikkien summa neljälle historiadatapisteelle. Ei tarvitse laskea siis root mean square erroria, vaan pelkästään jokaisen totetuneen pisteen absoluuttinen virhe suhteessa näiden pisteiden perusteella luotuun optimaaliseen lineaariseen ennustefunktioon, eli siis jokaisen pisteen absoluuttinen poikkeama lineaarisesta ennustekäyrästä. Väärästä vastauksesta annetaan -7 pistettä, joten ei välttämättä kannata arvata. (*tosi* vaikea)
+* 0
+* 2
+* 4
+* 6 
+* En tiedä (0 pistettä).
+
 
 ### Seminaaritehtävä 1 (täydennetään seminaarivaiheessa):
 Kouluta koneoppimismalli jostain datasta ja laadi sillä ennusteita. Voi liittyä ohjelmistoprojekti 2:seen mieluusti.
