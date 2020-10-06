@@ -1,5 +1,10 @@
 ## Sisällysluettelo
 
+* [Johdanto koneoppimiseen](#johdanto-koneoppimiseen)
+* [Miten kone oppii](#miten-kone-oppii)
+* [Koneoppiminen käytännössä](#koneoppiminen-käytännössä)
+* [Tehtävät](#tehtävät)
+
 # Johdanto koneoppimiseen
 
 Koneoppimisessa on kyse siitä, että datan avulla tietokone voidaan opettaa ratkaisemaan ongelmia tietyssä toimintaympäristössä ilman varsinaista ohjelmointia. Dataa kyseisestä ongelmakentästä täytyy kuitenkin olla paljon, jotta *koneoppimismalli* voidaan kouluttaa. Ongelmakentän tulee myös olla tarkasti rajattu, eikä samalla datalla koulutettua mallia voida siirtää toisen ongelman ratkaisuun. Termiä *tekoäly* tunnutaan käyttävän monesti myös synonyyminä koneoppimisesta ja toisaalta mikä tahansa tavallinen ohjelmoitu algoritmi saatetaan nykyään luokitella valtamediassa "tekoälyksi". 
