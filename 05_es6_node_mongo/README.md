@@ -213,7 +213,7 @@ $ node
 true
 ```
 
-### Filter-metodi
+## Filter-metodi
 
 ```js
 > // filter luo uuden listan, jolle valitaan alkuperäiseltä listalta 
@@ -257,7 +257,7 @@ function isBetweenDates(event) {
 }
 ```
 
-Nyt tämä funktio voidaan antaa parametrina `filter`-operaatiolle:
+Nyt `isBetweenDates` voidaan antaa parametrina `filter`-operaatiolle:
 
 ```js
 > // huom! isBetweenDates-funktiota ei kutsuta heti, vaan se annetaan parametrina.
@@ -278,20 +278,120 @@ function isBetweenDates(minDate, maxDate) {
 }
 ```
 
+Tämän funktion avulla voimme ensin luoda filtterin `isNextWeek`, joka annetaan `filter`-operaatiolle. Filter kutsuu ajonaikaisesti luotua `isNextWeek`-funktiota jokaiselle tapahtumalla, ja valikoi uudelle `eventsNextWeek`-listalle ehdot täyttävät tapahtumat:
+
+```js
+let isNextWeek = isBetweenDates('2020-10-09T00:00:00', '2020-10-16T24:00:00');
+let eventsNextWeek = events.filter(isNextWeek);
+```
+
+## Funktion parametrien oletusarvot
+
+JavaScriptin uusimmilla versioilla voimme antaa parametreille oletusarvot, joita käytetään, mikäli funktion kutsussa on jätetty parametriarvo antamatta tai sen arvo on `undefined`:
+
+```js
+function isBetweenDates(minDate = '0000-01-01', maxDate = '9999-12-31') {
+    return function (event) {
+        let { starting_day } = event.event_dates;
+        return starting_day && minDate <= starting_day && starting_day <= maxDate;
+    }
+}
+```
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters
 
 
 
+## Map 
+
+> *The map() method creates a new array populated with the results of calling a provided function on every element in the calling array.*
+>
+> [MDN web docs. Array.prototype.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
+
+Tässä esimerkissä luomme tapahtumia sisältävän listan perusteella uuden, pelkät `id`-arvot sisältävän listan:
+
+```js
+> // map:lle annettava funktio palauttaa jokaista tapahtumaa kohden sen id-arvon:
+> let ids = events.map(event => event.id)
+> ids
+[ 'helmet:214000', 'helmet:216844', 'helmet:216842', 'helmet:211890', 'helmet:214001', ... ]
+```
+
+### Etäisyyden lisääminen kaikille tapahtumille
+
+Toinen, selvästi hyödyllisempi käyttötapaus voisi olla etäisyyden lisääminen tapahtuman tietoihin `map`-operaatiolla:
+
+```js
+const geolib = require('geolib');
+
+const helsinkiCoordinates = { lat: 60.1733244, lon: 24.9410248 };
+
+let eventsWithDistance = events.map(event => {
+    let eventCoordinates = { lat, lon } = event.location;
+    return {
+        ...event, // kopioidaan tapahtuman tiedot palautettavaan olioon
+        distance: geolib.getDistance(helsinkiCoordinates, eventCoordinates)
+    }
+});
+```
+
+Huomaa, että yllä oleva koodi ei muuta alkuperäistä `events`-taulukkoa eikä sillä olevia olioita, vaan se luo uuden listan, joka täytetään kopioilla tapahtumista.
+
+Jotta sijainti olisi helposti vaihdettavissa myös joksikin muuksi kuin Helsingiksi, kannattaa tässäkin tapauksessa etäisyydet lisäävä funktio määritellä kahdessa osassa:
+
+```js
+function addDistanceTo(coordinates) {
+    return function(event) {
+        return {
+            ...event,
+            distance: geolib.getDistance(coordinates, event.location)
+        } 
+    }
+}
+```
+
+Nyt tapahtumille saadaan lisättyä etäisyys Helsingin koordinaateista suoraviivaisesti:
+
+```js
+let addDistanceToHelsinki = addDistanceTo(helsinkiCoordinates);
+let eventsWithDistanceFromHelsinki = events.map(addDistanceToHelsinki);
+```
 
 
+## Tapahtumien järjestäminen: Array.sort
 
+> *"The sort() method sorts the elements of an array in place and returns the sorted array."*
+>
+> *"If compareFunction is supplied, all non-undefined array elements are sorted according to the return value of the compare function. If compareFunction(a, b) returns less than 0, sort a to an index lower than b (i.e. a comes first). If compareFunction(a, b) returns 0, leave a and b unchanged with respect to each other, but sorted with respect to all different elements."*
+>
+> [MDN web docs. Array.prototype.sort()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
 
+### Järjestäminen etäisyyden mukaan
 
+Kun tapahtumille on lisätty uusi attribuutti `distance`, voidaan tätä käyttää hyväksi myös tapahtumien järjestämisessä etäisyyden mukaan:
 
+```js
+eventsWithDistances.sort((event1, event2) => event1.distance - event2.distance);
+```
 
+### Järjestäminen alkamisajan mukaan
 
+Vastaavasti voimme vertailla alkamisaikoja ja järjestää tapahtumat alkamisajan mukaan järjestykseen alkamisajankohtia vertailevalla funktiolla:
 
+```js
+function eventDateComparator(event1, event2) {
+    let event1date = event1.event_dates.starting_day || '';
+    let event2date = event2.event_dates.starting_day || '';
 
+    return event1date.localeCompare(event2date);
+}
 
+events.sort(eventDateComparator);
+```
+
+## Fetch ja Promiset
+
+Asynkroniset fetch- ja json-kutsut palauttavat Promise-oliota. Promise-olion tapahtumankuuntelija asetetaan kutsumalla Promisen then-metodia ja antamalla sille callback-funktio. Peräkkäisiä Promise-oliota voidaan myös ketjuttaa seuraavasti, jolloin ensimmäisenä Promisen then-metodille annettu funktio suoritetaan aina ennen seuraavia kutsuja, ja edellisen then-kuuntelijan palauttama arvo välitetään parametrina seuraavalle kuuntelijalle:
 
 ## Yksikkötestaus JavaScriptillä
 
