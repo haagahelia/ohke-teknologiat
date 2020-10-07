@@ -115,11 +115,13 @@ Alta löytyy monivalintakysymyksiä yllä olevasta lukumateriaalista ja luennon 
 
 ![Lineaarinen ennustemalli](img/mika_kayra_oikein_tehtava.png)
 
-Liitteenä olevassa kuviossa on esitetty jostain datasta tehtyjä havaintoja (mustat pisteet). Mikä kuvioon piirretyistä lineearisista funktioista (ja niitä kuvaavista käyristä) mallintaa datan parhaiten? (keskivaikea)
+Liitteenä olevassa kuviossa on esitetty jostain datasta tehtyjä havaintoja (mustat pisteet). Mikä kuvioon piirretyistä funktioista (ja niitä kuvaavista käyristä) mallintaa datan parhaiten? (keskivaikea)
 
 * Funktio (käyrä) A
 * Funktio (käyrä) B
 * Funktio (käyrä) C
+* Funktio (käyrä) D
+
 
 7. 
 
