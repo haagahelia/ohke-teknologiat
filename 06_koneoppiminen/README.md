@@ -88,16 +88,16 @@ Alta löytyy monivalintakysymyksiä yllä olevasta lukumateriaalista ja luennon 
 * Epälineaarista mallia
 * Neuroverkkoa
 
-2. Millä tavalla ristinollapelin tekoäly kannattaisi kouluttaa? (keskivaikea)
-* Vahvistusoppimisella
-* Ohjatulla oppimisella
-* Ohjaamattomalla oppimisella
-
-3. Millä kirjastolla pystyy lukemaan kätevästi dataa CSV-muotoisesta tiedostosta? (helppo)
+2. Millä kirjastolla pystyy lukemaan kätevästi dataa CSV-muotoisesta tiedostosta? (helppo)
 * Numpy
 * PyTorch
 * Keras
 * Pandas
+
+3. Millä tavalla ristinollapelin tekoäly kannattaisi kouluttaa? (keskivaikea)
+* Vahvistusoppimisella
+* Ohjatulla oppimisella
+* Ohjaamattomalla oppimisella
 
 4. Mitkä ovat oleellisia vaiheita ohjatun oppimisen koneoppimismallia koulutettaessa? (keskivaikea)
 * Datan esikäsittely
@@ -113,6 +113,16 @@ Alta löytyy monivalintakysymyksiä yllä olevasta lukumateriaalista ja luennon 
 
 6. 
 
+![Lineaarinen ennustemalli](img/mika_kayra_oikein_tehtava.png)
+
+Liitteenä olevassa kuviossa on esitetty jostain datasta tehtyjä havaintoja (mustat pisteet). Mikä kuvioon piirretyistä lineearisista funktioista (ja niitä kuvaavista käyristä) mallintaa datan parhaiten? (keskivaikea)
+
+* Funktio (käyrä) A
+* Funktio (käyrä) B
+* Funktio (käyrä) C
+
+7. 
+
 ![Lineaarinen ennustemalli](img/lineaarinen_ennuste.png)
 
 Liitteenä olevassa kuviossa on esitetty jostain datasta tehdyt neljä havaintoa. Esimerkiksi siis x arvolle 1 on tehty havainto y = 2 ja lisäksi on tehty havainnot (x=2, y=4), (x=3, y=8), (x=4, y=6). Jos näiden neljän havainnon perusteella koulutettaisiin lineaarinen koneoppimismalli (jossa mallin hävikkifunktio, eli virheiden summa koulutusdatassa olisi pyritty minimoimaan), niin mikä olisi lineaarisen mallin ennuste x:n arvolle 5? Väärästä vastauksesta annetaan -7 pistettä, joten ei välttämättä kannata arvata. (vaikea)
@@ -121,7 +131,7 @@ Liitteenä olevassa kuviossa on esitetty jostain datasta tehdyt neljä havaintoa
 * 12
 * En tiedä (0 pistettä).
 
-7. 
+8. 
 
 ![Lineaarinen ennustemalli](img/lineaarinen_ennuste.png)
 
