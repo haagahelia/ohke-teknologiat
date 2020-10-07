@@ -81,7 +81,7 @@ Koneoppimista voi opiskella lisää esimerkiksi Googlen [Machine Learning Crash 
 ## Tehtävät
 
 ### Tehtävä 6.1 (100% kierroksen arvosanasta): 
-Alta löytyy monivalintakysymyksiä yllä olevasta lukumateriaalista ja luennon perusteella vastattavaksi  (vastaaminen Teams-tehtävään). Kysymykset on luokiteltu kolmeen kategoriaan, helppo, keskivaikea ja vaikea ja niistä saa pisteitä vaikeustason mukaan (helpot = 5 pistettä per oikea vastaus, keskivaikeat = 10, vaikeat = 15). Kysymyksiin voi tutustua tässä etukäteen ennen vastaussession aloittamista.
+Alta löytyy monivalintakysymyksiä yllä olevasta lukumateriaalista ja luennon perusteella vastattavaksi  (vastaaminen Teams-tehtävään). Kysymykset on luokiteltu kolmeen kategoriaan, helppo, keskivaikea ja vaikea ja niistä saa pisteitä vaikeustason mukaan (helpot = 10 pistettä per oikea vastaus, keskivaikeat = 15, vaikeat = 20). Kysymyksiin voi tutustua tässä etukäteen ennen vastaussession aloittamista.
 
 1. Mitä ennustemallia kannattaa käyttää kuvantunnistuksen yhteydessä? (helppo)
 * Lineaarista mallia
