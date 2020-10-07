@@ -125,7 +125,7 @@ Liitteenä olevassa kuviossa on esitetty jostain datasta tehtyjä havaintoja (mu
 
 ![Lineaarinen ennustemalli](img/lineaarinen_ennuste.png)
 
-Liitteenä olevassa kuviossa on esitetty jostain datasta tehdyt neljä havaintoa. Esimerkiksi siis x arvolle 1 on tehty havainto y = 2 ja lisäksi on tehty havainnot (x=2, y=4), (x=3, y=8), (x=4, y=6). Jos näiden neljän havainnon perusteella koulutettaisiin lineaarinen koneoppimismalli (jossa mallin hävikkifunktio, eli virheiden summa koulutusdatassa olisi pyritty minimoimaan), niin mikä olisi lineaarisen mallin ennuste x:n arvolle 5? Väärästä vastauksesta annetaan -7 pistettä, joten ei välttämättä kannata arvata. (vaikea)
+Liitteenä olevassa kuviossa on esitetty jostain datasta tehdyt neljä havaintoa. Esimerkiksi siis x arvolle 1 on tehty havainto y = 2 ja lisäksi on tehty havainnot (x=2, y=4), (x=3, y=8), (x=4, y=6). Jos näiden neljän havainnon perusteella koulutettaisiin lineaarinen koneoppimismalli (jossa mallin hävikkifunktio, eli virheiden summa koulutusdatassa olisi pyritty minimoimaan), niin mikä olisi lineaarisen mallin ennuste x:n arvolle 5? Väärästä vastauksesta annetaan -5 pistettä, joten ei välttämättä kannata arvata. (vaikea)
 * 8
 * 10
 * 12
@@ -135,7 +135,7 @@ Liitteenä olevassa kuviossa on esitetty jostain datasta tehdyt neljä havaintoa
 
 ![Lineaarinen ennustemalli](img/lineaarinen_ennuste.png)
 
-Liitteenä olevassa kuviossa on esitetty jostain datasta tehdyt neljä havaintoa (sama kuvio kuin kysymyksessä 6). Esimerkiksi siis x arvolle 1 on tehty havainto y = 2 ja lisäksi on tehty havainnot (x=2, y=4), (x=3, y=8), (x=4, y=6). Jos näiden neljän havainnon perusteella koulutettaisiin lineaarinen koneoppimismalli (jossa mallin hävikkifunktio, eli virheiden summa koulutusdatassa olisi pyritty minimoimaan), niin mikä olisi mallin hävikkien summa neljälle historiadatapisteelle. Ei tarvitse laskea siis root mean square erroria, vaan pelkästään jokaisen totetuneen pisteen absoluuttinen virhe suhteessa näiden pisteiden perusteella luotuun optimaaliseen lineaariseen ennustefunktioon, eli siis jokaisen pisteen absoluuttinen poikkeama lineaarisesta ennustekäyrästä. Väärästä vastauksesta annetaan -7 pistettä, joten ei välttämättä kannata arvata. (*tosi* vaikea)
+Liitteenä olevassa kuviossa on esitetty jostain datasta tehdyt neljä havaintoa (sama kuvio kuin kysymyksessä 6). Esimerkiksi siis x arvolle 1 on tehty havainto y = 2 ja lisäksi on tehty havainnot (x=2, y=4), (x=3, y=8), (x=4, y=6). Jos näiden neljän havainnon perusteella koulutettaisiin lineaarinen koneoppimismalli (jossa mallin hävikkifunktio, eli virheiden summa koulutusdatassa olisi pyritty minimoimaan), niin mikä olisi mallin hävikkien summa neljälle historiadatapisteelle. Ei tarvitse laskea siis root mean square erroria, vaan pelkästään jokaisen totetuneen pisteen absoluuttinen virhe suhteessa näiden pisteiden perusteella luotuun optimaaliseen lineaariseen ennustefunktioon, eli siis jokaisen pisteen absoluuttinen poikkeama lineaarisesta ennustekäyrästä. Väärästä vastauksesta annetaan -5 pistettä, joten ei välttämättä kannata arvata. (*tosi* vaikea)
 * 0
 * 2
 * 4
