@@ -125,7 +125,7 @@ Liitteenä olevassa kuviossa on esitetty jostain datasta tehtyjä havaintoja (mu
 
 ![Lineaarinen ennustemalli](img/lineaarinen_ennuste_tehtava.png)
 
-Liitteenä olevassa kuviossa on esitetty jostain datasta tehdyt neljä havaintoa. Esimerkiksi siis x arvolle 1 on tehty havainto y = 4 ja lisäksi on tehty havainnot (x=2, y=2), (x=3, y=8), (x=4, y=6). Jos näiden neljän havainnon perusteella olisi koulutettu lineaarinen koneoppimismalli jota havainnollistaa oranssi käyrä kuvassa, niin mikä olisi mallin hävikkien summa neljälle historiadatapisteelle. Ei tarvitse laskea siis root mean square erroria, vaan pelkästään jokaisen totetuneen pisteen absoluuttinen virhe suhteessa näiden pisteiden perusteella luotuun optimaaliseen lineaariseen ennustefunktioon, eli siis jokaisen pisteen absoluuttinen poikkeama lineaarisesta ennustekäyrästä. (vaikea)
+Liitteenä olevassa kuviossa on esitetty jostain datasta tehdyt neljä havaintoa. Esimerkiksi siis x arvolle 1 on tehty havainto y = 4 ja lisäksi on tehty havainnot (x=2, y=2), (x=3, y=8), (x=4, y=6). Jos näiden neljän havainnon perusteella olisi koulutettu lineaarinen koneoppimismalli jota havainnollistaa oranssi käyrä kuvassa, niin mikä olisi mallin hävikkien summa neljälle historiadatapisteelle. Ei tarvitse laskea siis root mean square erroria, vaan pelkästään jokaisen totetuneen pisteen absoluuttinen virhe suhteessa näiden pisteiden perusteella luotuun optimaaliseen lineaariseen ennustefunktioon, eli siis jokaisen pisteen absoluuttinen poikkeama lineaarisesta ennustekäyrästä. Huomioi laskelmissasi, että kuviossa y-akselin asteikko etenee kahden välein. (vaikea)
 * 0
 * 2
 * 4
