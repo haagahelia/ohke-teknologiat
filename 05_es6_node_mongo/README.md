@@ -2,16 +2,16 @@
 
 Opintojen tässä vaiheessa olette käyttäneet JavaScriptiä useissa eri tilanteissa. Tämän oppitunnin tarkoituksena on esitellä JavaScript-kielen taustalla olevan ECMAScript-standardin versiossa 6 mukaan tulleita ominaisuuksia käytännössä.
 
-JavaScriptillä voidaan soveltaa monia erilaisia ohjelmointityylejä. Se onkin ns. monen paradigman kieli. Voit siis soveltaa sekä olio-ohjelmointia että esimerkiksi funktionaalista ohjelmointia. Tämän kurssin aikana perehdymme JavaScriptin funktionaaliseen puoleen ja erityisesti funktioihin `map`, `filter` ja `reduce`.
+JavaScriptillä voidaan soveltaa monia erilaisia ohjelmointityylejä. Se onkin ns. monen paradigman kieli. Voit siis soveltaa sekä olio-ohjelmointia että esimerkiksi funktionaataulukko ohjelmointia. Tämän kurssin aikana perehdymme JavaScriptin funktionaaliseen puoleen ja erityisesti funktioihin `map`, `filter` ja `reduce`.
 
 ## Oppitunnin tavoitteet
 
-Oppitunnin tavoitteena on oppia erityisesti lukemaan koodia ja ymmärtämään miten yleisimmät JavaScript-kieliset esimerkkikoodit toimivat. Sivuamme funktionaalista ohjelmointia hyödyntämällä funktioiden vaiheittaista suorittamista (currying) ja funktioiden antamista parametreina toisille funktioille.
+Oppitunnin tavoitteena on oppia erityisesti lukemaan koodia ja ymmärtämään miten yleisimmät JavaScript-kieliset esimerkkikoodit toimivat. Sivuamme funktionaataulukko ohjelmointia hyödyntämällä funktioiden vaiheittaista suorittamista (currying) ja funktioiden antamista parametreina toisille funktioille.
 
 ES6:n ajoittain erikoiset syntaksit tekevät usein koodista suoraviivaista, mutta toisinaan syntaksien liikakäyttö väärissä tilanteissa hankaloittaa koodin ymmärtämistä ja ylläpitoa. Tämän tunnin jälkeen tunnistat joitakin tilanteita, joissa on tarkoituksenmukaista hyödyntää eri ominaisuuksia.
 
 
-## Ennakkokysymyksiä
+## ES6 syntaksi
 
 Mitä seuraavat esimerkkikoodit tekevät? Mitkä ovat muuttujien arvot ennen näitä rivejä ja näiden rivien jälkeen?
 
@@ -66,13 +66,29 @@ let point = { lat, lon } = event.location;
 
 ### Array spread
 
+> *"Spread syntax (...) allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected."*
+>
+> [MDN web docs, Spread syntax (...)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+
+
 ```js
-let data = [ ...colors, 'red', 'green', 'blue', ...fruits, 'apple', 'banana' ];
+> let a = [1, 2, 3]
+> let b = [4, 5, 6]
+>
+> [...a, ...b]
+[ 1, 2, 3, 4, 5, 6 ]
+>
+> [...a, ...b, 7, 8, 9]
+[ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
 ```
+
+
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 
 
 ### Object spread
+
+Samankaltainen kuin taulukoiden spread-operaatio, mutta olioille sovellettuna:
 
 ```js
 let person = { ...name, hobby: 'Kung-fu' };
@@ -109,20 +125,52 @@ function multiply(a, b) {
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 
-### Currying
+## Currying
+
+JavaScriptin yhteydessä kasvavassa määrin hyödynnetty tekniikka, joka ei suoraan liity pelkästään ES6:een tai vain JavaScriptiin on "currying":
+
+> *"Currying is an advanced technique of working with functions. It’s used not only in JavaScript, but in other languages as well.*
+>
+> *Currying is a transformation of functions that translates a function from callable as f(a, b, c) into callable as f(a)(b)(c)."*
+>
+> [Kantor, I. Currying. JavaScript.info](https://javascript.info/currying-partials)
+
+Currying-tekniikalla voimme siis pilkkoa useita parametreja sisältäviä funktioita siten, että yksittäisellä funktiokutsulla sidotaan yksi muuttuja. Funktiot palauttavat uusia funktioita, jotka voidaan ottaa tarvittaessa talteen ja kutsua muualla. 
+
+Kutsuessamme toista funktiota, ensimmäisessä funktiokutsussa annetut parametrit ovat edelleen voimassa, koska ne ovat saman "sulkeuman" sisällä:
 
 ```js
-let multiply = (a) => (b) => a * b;
-
-// sama kuin:
 function multiply(a) {
     return function(b) {
+        // tässä funktiossa on voimassa sekä ensin annettu 
+        // 'a' että tälle funktiolle annettava 'b'.
         return a * b;
     }
 }
+
+// yllä oleva määrittely on sama kuin:
+let multiply = (a) => (b) => a * b;
+
+// suoritetaan ensimmäinen funktio kahteen kertaan
+// ja otetaan palautetut funktiot talteen:
+let sentitTuumiksi = multiply(0.393700787);
+let markatEuroiksi = multiply(0.16818792646);
+
+// nyt palautettuja funktioita voidaan hyödyntää uusissa kutsuissa:
+let tuumat = sentitTuumiksi(200);
+let eurot = markatEuroiksi(100);
 ```
 
-Milloin funktioiden osittaisesta määrittelystä olisi meille hyötyä? Jos haluamme laskea etäisyyden kahden koordinaatin välillä, voimme ensin lukita ensimmäisen koordinaattipisteen, ja sen jälkeen käyttää palautettua funktiota yhdellä parametriarvolla!
+Milloin funktioiden osittaisesta määrittelystä on meille erityisesti hyötyä?
+
+"Currytetty" funktio voidaan antaa suoraan esimerkiksi `map`-funktiolle tai `filter`-funktiolle:
+
+```js
+let markat = [200, 123, 99, 10, 4521];
+let eurot = markat.map(markatEuroiksi);
+```
+
+Jos haluamme laskea etäisyyden tietyn koordinaatin ja tapahtuman tapahtumapaikan välillä, voimme ensin lukita ensimmäisen koordinaattipisteen ja sen jälkeen käyttää palautettua funktiota tapahtumaolioiden kanssa!
 
 ```js
 function getDistanceTo(point) {
@@ -133,29 +181,66 @@ function getDistanceTo(point) {
 
 // sama kuin:
 let getDistanceTo = (point) => (event) => geolib.getDistance(point, event.location);
-```
 
-Funktiota voitaisiin kutsua nyt seuraavasti:
+// etäisyysfunktiot Helsinkiin ja Tukholmaan
+let distanceFuncHelsinki = getDistanceTo(helsinki);
+let distanceFuncStockholm = getDistanceTo(stockholm);
 
-```js
-let distance = getDistanceTo(helsinki)(event);
-```
+// etäisyysfunktioiden hyödyntäminen tapahtuman kanssa:
+let distace = distanceFuncHelsinki(events[0]);
 
-"Normaaliin" funktiokutsuun nähden yllä oleva kutsu ei tuo juuri parannusta, se jopa tekee koodista vaikeammin luettavaa. Sen sijaan voimme ottaa ensimmäisen funktion palauttaman funktion talteen, ja kutsua sitä eri yhteydessä:
-
-```js
-let distanceToHelsinki = getDistanceTo(helsinki);
-
-events.forEach(event => event.distance = distanceToHelsinki(event));
+// etäisyyden lisääminen kaikkiin tapahtumiin!
+events.forEach(event => event.distance = distanceFuncHelsinki(event));
 ```
 
 https://javascript.info/currying-partials
 
 
+## Reduce
+
+> *"The reduce() method executes a reducer function (that you provide) on each element of the array, resulting in single output value."*
+>
+> [MDN web docs. Array.prototype.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
+
+Reducen avulla voidaan tyypillisesti selvittää esimerkiksi kokoelman suurin tai pienin arvo, kaikkien arvojen summa tai muita vastaavia operaatioita. Reducen avulla voidaan kuitenkin toteuttaa myös muunlaisia operaatioita, joissa käsitellään yksi kerrallaan kokoelman arvot.
+
+```js
+let tulos = taulukko.reduce(( koottuArvo, nykyinenArvo ) => {
+    /* operaatio, jonka paluuarvoa käytetään seuraavana koottunaArvona */
+}, kokoojanAlkuarvo);
+```
+
+
+Sekä `map` että `filter` on toteutettavissa `reduce`:n avulla. Tällöin koottava arvo on uusi taulukko, ja alkuperäisen taulukon arvot redusoidaan uudelle taulukolle joko ehdon täyttyessä (filter) tai muutettuna (map):
+
+```js
+> // map toteutettuna reducen avulla:
+let tuplattu = [1, 2, 3, 4, 5].reduce((uusiTaulukko, arvo) => { 
+    uusiTaulukko.push(arvo * 2);
+    return uusiTaulukko;
+}, [] );
+> console.log(tuplattu);
+[ 2, 4, 6, 8, 10 ]
+```
+
+```js
+> // filter toteutettuna reducen avulla:
+> let suurempiKuinKolme = [1, 2, 3, 4, 5].reduce((uusiTaulukko, arvo) => {
+    if (arvo > 3) {
+        uusiTaulukko.push(arvo);
+    } 
+    return uusiTaulukko; 
+}, [] );
+> console.log(suurempiKuinKolme);
+[ 4, 5 ]
+```
+
+Reduce onkin erittäin monikäyttöinen operaatio, ja sen avulla onnistuu luontevasti myös esimerkiksi taulukon arvojen ryhmitteleminen tietyn avaimen mukaan. Voit lukea aiheesta lisää Googlesta hakusanoilla "JavaScript reduce group by" tai [tästä artikkelista](https://learnwithparam.com/blog/how-to-group-by-array-of-objects-using-a-key/).
 
 # Tapahtumien käsitteleminen `map`, `filter` ja `reduce` -operaatioilla
 
 Tunnilla harjoittelemme `map`, `filter` ja `reduce` -operaatioita [MyHelsinki Open API](http://open-api.myhelsinki.fi/doc) -rajapinnan tapahtumien avulla.
+
 
 ## Esivalmistelu: staattisen aineiston hakeminen
 
@@ -195,7 +280,7 @@ $ node
 5527
 ```
 
-`events` sisältää nyt meille aikaisemmilta viikoilta tutun listan tapahtumista. Tällä kertaa tapahtumat ovat JavaScript-olioita. Niillä on täysin sama rakenne kuin aikaisemmilla Pythonin sanakirjoilla:
+`events` sisältää nyt meille aikaisemmilta viikoilta tutun taulukon tapahtumista. Tällä kertaa tapahtumat ovat JavaScript-olioita. Niillä on täysin sama rakenne kuin aikaisemmilla Pythonin sanakirjoilla:
 
 ```js
 > // alkamispäivän tarkastaminen satunnaiselta tapahtumalta
@@ -216,7 +301,7 @@ true
 ## Filter-metodi
 
 ```js
-> // filter luo uuden listan, jolle valitaan alkuperäiseltä listalta 
+> // filter luo uuden taulukon, jolle valitaan alkuperäiseltä taulukolta 
 > // sellaiset arvot, joille antamamme funktio palauttaa `true`:
 > let allTrue = events.filter(e => true);
 > allTrue.length
@@ -278,7 +363,7 @@ function isBetweenDates(minDate, maxDate) {
 }
 ```
 
-Tämän funktion avulla voimme ensin luoda filtterin `isNextWeek`, joka annetaan `filter`-operaatiolle. Filter kutsuu ajonaikaisesti luotua `isNextWeek`-funktiota jokaiselle tapahtumalla, ja valikoi uudelle `eventsNextWeek`-listalle ehdot täyttävät tapahtumat:
+Tämän funktion avulla voimme ensin luoda filtterin `isNextWeek`, joka annetaan `filter`-operaatiolle. Filter kutsuu ajonaikaisesti luotua `isNextWeek`-funktiota jokaiselle tapahtumalla, ja valikoi uudelle `eventsNextWeek`-taulukkolle ehdot täyttävät tapahtumat:
 
 ```js
 let isNextWeek = isBetweenDates('2020-10-09T00:00:00', '2020-10-16T24:00:00');
@@ -308,7 +393,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Defa
 >
 > [MDN web docs. Array.prototype.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 
-Tässä esimerkissä luomme tapahtumia sisältävän listan perusteella uuden, pelkät `id`-arvot sisältävän listan:
+Tässä esimerkissä luomme tapahtumia sisältävän taulukon perusteella uuden, pelkät `id`-arvot sisältävän taulukon:
 
 ```js
 > // map:lle annettava funktio palauttaa jokaista tapahtumaa kohden sen id-arvon:
@@ -335,7 +420,7 @@ let eventsWithDistance = events.map(event => {
 });
 ```
 
-Huomaa, että yllä oleva koodi ei muuta alkuperäistä `events`-taulukkoa eikä sillä olevia olioita, vaan se luo uuden listan, joka täytetään kopioilla tapahtumista.
+Huomaa, että yllä oleva koodi ei muuta alkuperäistä `events`-taulukkoa eikä sillä olevia olioita, vaan se luo uuden taulukon, joka täytetään kopioilla tapahtumista.
 
 Jotta sijainti olisi helposti vaihdettavissa myös joksikin muuksi kuin Helsingiksi, kannattaa tässäkin tapauksessa etäisyydet lisäävä funktio määritellä kahdessa osassa:
 
@@ -391,7 +476,12 @@ events.sort(eventDateComparator);
 
 ## Fetch ja Promiset
 
-Asynkroniset fetch- ja json-kutsut palauttavat Promise-oliota. Promise-olion tapahtumankuuntelija asetetaan kutsumalla Promisen then-metodia ja antamalla sille callback-funktio. Peräkkäisiä Promise-oliota voidaan myös ketjuttaa seuraavasti, jolloin ensimmäisenä Promisen then-metodille annettu funktio suoritetaan aina ennen seuraavia kutsuja, ja edellisen then-kuuntelijan palauttama arvo välitetään parametrina seuraavalle kuuntelijalle:
+Asynkroniset fetch- ja json-kutsut palauttavat Promise-oliota. Promise-olion tapahtumankuuntelija asetetaan kutsumalla Promisen `then`-metodia ja antamalla sille callback-funktio, jota kutsutaan, kun promisen operaatio on valmistunut. Peräkkäisiä Promise-oliota voidaan myös ketjuttaa, jolloin ensimmäisenä Promisen `then`-metodille annettu funktio suoritetaan aina ennen seuraavia kutsuja, ja edeltävän funktion palauttama arvo välitetään aina seuraavalle funktiolle. Tästä käytetään myös termiä "putkitus" eli piping.
+
+<!-- TODO -->
+```js
+
+```
 
 ## Yksikkötestaus JavaScriptillä
 
@@ -431,7 +521,7 @@ exports.circumference = (r) => 2 * PI * r;
 ```js
 > "0" == false  // nolla merkkijonona ja false
 true
-> [] == false   // tyjä lista ja false
+> [] == false   // tyjä taulukko ja false
 true
 > 0 == false    // nolla ja false
 true
@@ -439,7 +529,7 @@ true
 true
 > 0 == "+00000" // "pitkä nolla" etumerkillä merkkijonona
 true
-> 0 == []       // nolla ja tyhjä lista
+> 0 == []       // nolla ja tyhjä taulukko
 true
 > "0" == []     // molemmat false, mutta silti keskenään erisuuruiset!!
 false
@@ -462,9 +552,9 @@ false
 false
 ```
 
-### Listojen vertailu
+### Taulukoiden vertailu
 
-Listoja vertailtaessa `==` ja `===` molemmat tarkastavat, onko kyseessä sama lista. __Listojen sisältöjä ei vertailla.__
+Taulukoita vertailtaessa `==` ja `===` molemmat tarkastavat, onko kyseessä sama taulukko. __Taulukoiden sisältöjä ei vertailla.__
 
 ```js
 > [1, 2, 3] === [1, 2, 3]
@@ -475,7 +565,7 @@ false
 
 ### Olioiden vertailu
 
-Kuten listoilla, myös olioita vertailtaessa tarkastetaan ovatko oliot **samat**, eikä niiden sisältöä vertailla.
+Kuten taulukoiden kanssa, myös olioita vertailtaessa tarkastetaan ovatko oliot **samat**, eikä niiden sisältöä vertailla.
 
 ```js
 > { language: "JavaScript" } === { language: "JavaScript" }
@@ -577,7 +667,7 @@ const {id, is_verified} = user;
 
 `isNextWeek` on hyvä funktio, mutta se on sidottu "globaaleihin" arvoihin `now` ja `maxDate`. Kyseiset arvot voitaisiin toki laskea myös tässä funktiossa, mutta mitä jos tarvitsemme samassa ohjelmassa logiikan kuukauden sisällä filtteröintiin?
 
-Voimme kirjoittaa funktion, joka palauttaa funktion! https://javascript.info/currying-partials
+Voimme kirjoittaa funktion, joka palauttaa funktion!
 
 ```js
 // source: https://blog.bitsrc.io/understanding-currying-in-javascript-ceb2188c339
@@ -633,7 +723,7 @@ Miksi tämä on hyödyllistä?
 # Map
 
 ```js
-> // Luodaan uusi lista, jossa on vain tapahtumien id:t
+> // Luodaan uusi taulukko, jossa on vain tapahtumien id:t
 > let ids = events.map(event => event.id)
 > ids.slice(0, 10)
 [ 'helmet:214000',
@@ -701,7 +791,13 @@ Ehkä käytetään currying? `getDistance(point1, point2) => getDistance(point1)
 
 # Tehtävä
 
-Toteuta JavaScriptillä HTTP-palvelu, joka hakee REST-rajapinnasta käyttäjiä ja postauksia, ja palauttaa käyttäjät siten, että kunkin käyttäjän kirjoittamat postaukset ovat listattu käyttäjän yhteyteen.
+Tämän viikon tehtävässä harjoitellaan asynkronista ohjelmointia sekä tunnilla esitettyjen ohjelmointitapojen hyödyntämistä. Haemme tehtävässä dataa verkosta, mutta tällä kertaa yksi HTTP-pyyntö ei riitä, vaan tarvitsemme logiikassa kahden HTTP-pyynnön tuloksia. JavaScriptin asynkronisuus saattaa lisätä tähän haastetta, mutta se myös mahdollistaa kahden pyynnön suorittamisen samanaikaisesti kohtuullisen helposti.
+
+Toteuta JavaScriptillä HTTP-palvelu, joka hakee valmiista REST-rajapinnasta käyttäjiä ja postauksia. Käyttäjät ja postaukset on ryhmiteltävä oman HTTP-palvelusi vastauksessa siten, että kunkin käyttäjän kirjoittamat postaukset ovat koottu käyttäjän yhteyteen omaksi taulukoksi.
+
+## Tehtävän data
+
+Tässä tehtävässä käytetään "dummy" dataa JSON Placeholder -palvelusta:
 
 > *"{JSON} Placeholder*
 >
@@ -711,16 +807,20 @@ Toteuta JavaScriptillä HTTP-palvelu, joka hakee REST-rajapinnasta käyttäjiä 
 >
 > https://jsonplaceholder.typicode.com/
 
-Data tulee hakea dynaamisesti (ei etukäteen) seuraavista osoitteista:
+Data tulee hakea dynaamisesti jokaiselle pyynnölle, **eli ei tallentaa etukäteen** seuraavista osoitteista:
 
 * käyttäjät: https://jsonplaceholder.typicode.com/users
 * postaukset: https://jsonplaceholder.typicode.com/posts
 
 Saat itse valita, palauttaako HTTP-palvelusi datan JSON-muodossa (helpointa) vai muodostatko datan perusteella HTML-sivun esimerkiksi pug-templaten avulla.
 
-Lopputuloksena palvelusi tulee palauttaa lista käyttäjistä, jossa kunkin käyttäjän postaukset ovat ryhmiteltynä käyttäjän alle listaksi. Yksittäisen käyttäjän osalta lopputulos voi olla esimerkiksi seuraava:
+Lopputuloksena palvelusi tulee palauttaa taulukko käyttäjistä, jossa kunkin käyttäjän postaukset ovat ryhmiteltynä käyttäjän alle taulukkoksi. Yksittäisen käyttäjän osalta lopputulos voi olla esimerkiksi seuraava:
 
-```json
+```
+curl http://localhost:3000/users
+```
+
+```js
 [
     {
         "id": 1,
@@ -806,17 +906,30 @@ Lopputuloksena palvelusi tulee palauttaa lista käyttäjistä, jossa kunkin käy
                 "body": "quo et expedita modi cum officia vel magni\ndoloribus qui repudiandae\nvero nisi sit\nquos veniam quod sed accusamus veritatis error"
             }
         ]
-    }
+    },
+    
+    // ...9 muuta käyttäjää...
+
 ]
 ```
 
-Tämän tehtävän ratkaisemiseksi et tarvitse välttämättä ulkoisia kirjastoja tai `npm`-komentoa. Pelkkä Node.js voi riittää. Sinulle saattaa kuitenkin olla hyötyä kirjastoista, kuten express, axios tai node-fetch.
+## Valmiiden kirjastojen käyttäminen
 
-Koska HTTP-pyynnöt ovat JavaScriptissä asynkronisia, JSON-tiedostojen lataaminen voidaan tehdä samanaikaisesti tai yksi kerrallaan. Tämän tehtävän kannalta ei ole merkitystä kumman tavan valitset, mutta harjoituksen vuoksi suosittelen pyrkimään lataamaan tiedostot samanaikaisesti. Tähän ei tarvita erillisiä työkaluja, mutta `Promise.all`-funktiosta voi olla apua.
+Tämän tehtävän ratkaisemiseksi et tarvitse välttämättä ulkoisia kirjastoja tai `npm`-komentoa. Pelkkä Node.js voi hyvin riittää. Sinulle saattaa kuitenkin olla hyötyä kirjastoista, kuten [express](https://www.npmjs.com/package/express), [axios](https://www.npmjs.com/package/axios) tai [node-fetch](https://www.npmjs.com/package/node-fetch). Myös apukirjastojen, kuten [lodash](https://www.npmjs.com/package/lodash) käyttäminen on sallittua.
 
-Vinkki: Käyttäjien ja heidän postauksiensa yhdistämiseksi yksi lähestymistapa on käydä käyttäjät läpi `map`-metodilla ja muodostaa jokaisesta käyttäjästä uusi olio, jolla on lista postauksia. Postauslista puolestaan voidaan rakentaa kullekin käyttäjälle `filter`-metodin avulla, valitsemalla listalta ne postaukset, joiden `userId` vastaa kyseisen käyttäjän `id`:tä.
+## Pyyntöjen samanaikaisuus
+
+Koska HTTP-pyynnöt ovat JavaScriptissä asynkronisia, käyttäjien ja postausten lataaminen voidaan tehdä joko rinnakkain tai yksi kerrallaan. 
+
+Tämän tehtävän kannalta ei ole merkitystä kumman tavan valitset, mutta harjoituksen vuoksi suosittelen pyrkimään lataamaan tiedostot samanaikaisesti rinnakkain. Tähän ei tarvita erillisiä työkaluja, vaan riittää että käsittelet Promiset "tavallisina olioina", joiden then-metodia ei ole pakko kutsua välittömästi. Voit siis itse valita, missä haluat kunkin Promise-olion tulosta käyttää. Myös `Promise.all`-funktiosta voi olla apua.
+
+## Vinkit datan käsittelyyn
+
+Käyttäjien ja heidän postauksiensa yhdistämiseksi yksi lähestymistapa on käydä käyttäjät läpi `map`-metodilla ja muodostaa jokaisesta käyttäjästä uusi olio, jolla on taulukko postauksia. Postaustaulukko puolestaan voidaan rakentaa kullekin käyttäjälle `filter`-metodin avulla, valitsemalla taulukosta ne postaukset, joiden `userId` vastaa kyseisen käyttäjän `id`:tä.
 
 Vaihtoehtoisesti voit myös ratkaista tehtävän täysin ilman `map`, `filter`, `reduce` yms. ES6-metodeja perinteisillä ehto- ja  toistorakenteilla. Oppimisen kannalta suosittelemme kuitenkin tutustumaan tunnilla esitettyihin ratkaisutapoihin.
+
+## Tehtävän palauttaminen
 
 Palauta kaikki ratkaisuusi liittyvät lähdekoodit sekä mahdollinen `package.json` erillisinä tiedostoina Teamsiin ennen seuraavaa oppituntia. Nimeä `.js`-päätteiset tiedostot `.js.txt`-päätteisiksi, mikäli Teams ei hyväksy tiedostojasi tietoturvasyistä.
 
