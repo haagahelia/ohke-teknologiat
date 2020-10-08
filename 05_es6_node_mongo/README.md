@@ -1,40 +1,114 @@
 # ES6, JavaScript, node (+mongo)
 
-Opintojen tässä vaiheessa olette käyttäneet JavaScriptiä useissa eri tilanteissa. Tämän oppitunnin tarkoituksena on esitellä JavaScript-kielen taustalla olevan ECMAScript-standardin versiossa 6 mukaan tulleita ominaisuuksia käytännössä.
+- [ES6, JavaScript, node (+mongo)](#es6-javascript-node-mongo)
+  - [Oppitunnin tavoitteet](#oppitunnin-tavoitteet)
+  - [JavaScriptin ohjelmointityylit](#javascriptin-ohjelmointityylit)
+  - [Uusien ominaisuuksien selaintuki](#uusien-ominaisuuksien-selaintuki)
+  - [ES6](#es6)
+  - [Muut tunnilla käsiteltävät tekniikat](#muut-tunnilla-ksiteltävät-tekniikat)
+- [Tapahtumien käsitteleminen `map`, `filter` ja `reduce` -operaatioilla](#tapahtumien-käsitteleminen-map-filter-ja-reduce--operaatioilla)
+  - [Esivalmistelu: staattisen aineiston hakeminen](#esivalmistelu-staattisen-aineiston-hakeminen)
+  - [Tapahtuma JSON:in tuominen Node REPL:iin (Read-Evaluate-Print-Loop)](#tapahtuma-jsonin-tuominen-node-repliin-read-evaluate-print-loop)
+  - [Filter-metodi](#filter-metodi)
+  - [Map](#map)
+  - [Fetch, Promiset, async ja await](#fetch-promiset-async-ja-await)
+  - [Reduce](#reduce)
+  - [JavaScriptin totuusarvot ja niiden vertailu](#javascriptin-totuusarvot-ja-niiden-vertailu)
+- [Tehtävä](#tehtävä)
+  - [Tehtävän data](#tehtävän-data)
+  - [Valmiiden kirjastojen käyttäminen](#valmiiden-kirjastojen-käyttäminen)
+  - [Pyyntöjen samanaikaisuus](#pyyntöjen-samanaikaisuus)
+  - [Vinkit datan käsittelyyn](#vinkit-datan-käsittelyyn)
+  - [Tehtävän palauttaminen](#tehtävän-palauttaminen)
 
-JavaScriptillä voidaan soveltaa monia erilaisia ohjelmointityylejä. Se onkin ns. monen paradigman kieli. Voit siis soveltaa sekä olio-ohjelmointia että esimerkiksi funktionaataulukko ohjelmointia. Tämän kurssin aikana perehdymme JavaScriptin funktionaaliseen puoleen ja erityisesti funktioihin `map`, `filter` ja `reduce`.
+
+Opintojen tässä vaiheessa olette käyttäneet JavaScriptiä eri kursseilla ja useissa useissa eri tilanteissa. JavaScriptiä on melko suoraviivaista "käyttää" ilman varsinaista ymmärrystä siitä, miten ohjeissa esitetyt syntaksit oikeasti toimivat.
+
+JavaScript-projekteissa käytetään usein erilaisia kielen natiiviominaisuuksiin kuulumattomia ominaisuuksia, kuten JSX-syntaksia:
+
+```jsx
+// https://reactjs.org/docs/introducing-jsx.html
+const element = <h1>Hello, world!</h1>;
+
+// Sama koodi muutettuna JavaScriptiksi https://babeljs.io/repl-työkalulla:
+var element = React.createElement("h1", null, "Hello, world!");
+```
+
+Kaikki koodi, joka kirjoitetaan JavaScriptillä, ei siis ole välttämättä suoraan suoritettavissa ilman erilaisia käännösvaiheita. Kääntäminen tehdään usein taustalla [Babel](http://babeljs.io/)-työkalulla, joka muuttaa esimerkiksi yllä olevan JSX-koodin tavallisiksi JavaScript-rakenteiksi. Samoin Babel osaa muuntaa JavaScriptin modernimmilla versioilla toteutetut syntaksit vanhempien selainten tukemaan muotoon. Muunnoksista johtuen voi joskus olla haastavaa hahmottaa, mitkä asiat ovat "natiivi JavaScriptiä" ja mitkä eri kirjastoihin tai ohjelmistokehyksiin liittyviä ominaisuuksia.
 
 ## Oppitunnin tavoitteet
 
-Oppitunnin tavoitteena on oppia erityisesti lukemaan koodia ja ymmärtämään miten yleisimmät JavaScript-kieliset esimerkkikoodit toimivat. Sivuamme funktionaataulukko ohjelmointia hyödyntämällä funktioiden vaiheittaista suorittamista (currying) ja funktioiden antamista parametreina toisille funktioille.
+Oppitunnin tavoitteena on oppia erityisesti lukemaan koodia ja ymmärtämään, miten yleisimmät JavaScript-kieliset esimerkkikoodit toimivat. Sivuamme funktionaalista ohjelmointia hyödyntämällä funktioiden antamista parametreina toisille funktioille (callback) sekä funktioiden vaiheittaista suorittamista (currying).
 
 ES6:n ajoittain erikoiset syntaksit tekevät usein koodista suoraviivaista, mutta toisinaan syntaksien liikakäyttö väärissä tilanteissa hankaloittaa koodin ymmärtämistä ja ylläpitoa. Tämän tunnin jälkeen tunnistat joitakin tilanteita, joissa on tarkoituksenmukaista hyödyntää eri ominaisuuksia.
 
+Itseopiskelumateriaalina voit hyödyntää hyviä sivustoja kuten:
 
-## ES6 syntaksi
+* https://javascript.info/
+* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/
+* https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d
 
-Mitä seuraavat esimerkkikoodit tekevät? Mitkä ovat muuttujien arvot ennen näitä rivejä ja näiden rivien jälkeen?
+
+## JavaScriptin ohjelmointityylit
+
+JavaScriptillä voidaan soveltaa monia erilaisia ohjelmointityylejä, eli se on monen paradigman kieli. Voit siis soveltaa JavaScriptillä olio-ohjelmointia tai funktionaataulukko ohjelmointia tai halutessasi sekoittaa niitä. Monipuolisuuden heikkoutena JavaScriptillä ei aina ole yhtä vahvoja "parhaita käytäntöjä" kuin yhden paradigman kielillä. Tämän oppitunnin aikana perehdymme erityisesti JavaScriptin funktionaaliseen puoleen: nuolifunktioihin sekä map-, filter- ja reduce-operaatioihin.
+
+
+## Uusien ominaisuuksien selaintuki
+
+Erityisesti verkkoselaimella käytettävien sovellusten kehittämisessä on huomioitava vaihtelevat suoritusympäristöt, joissa selain joko tukee tai ei tue kirjoittamaasi koodia. Selaintuki on perinteisesti ollut merkittävä ongelma, koska JavaScript on jaeltu selaimille suoritettavaksi sellaisenaan. Nykyään selainyhteensopivuus ei ole yhtä merkittävä ongelma, koska myös selaimelle tarkoitettu koodi usein "transpiloidaan", jolloin esimerkiksi koodi:
+
+```js
+let { first, last } = names;
+```
+
+Muuttuu automaattisesti paremmin tuettuun muotoon:
+
+```js
+var _names = names,
+  first = _names.first,
+  last = _names.last;
+```
+
+
+## ES6
+
+Tämän oppitunnin tarkoituksena on esitellä JavaScript-kielen taustalla olevan ECMAScript-standardin versiossa 6 mukaan tulleita ominaisuuksia käytännössä ja pohtia esimerkkien avulla, miten uusi syntaksi voi hyödyttää meitä "oikeassa ohjelmassa".
+
+Syntaksien opetteleminen on tärkeää lähinnä siksi, että ymmärrät kohtaamiasi esimerkkikoodeja ja käyttämiäsi valmiita koodipohjia. Koodin "modernisointi" on muuten usein toisarvoista.
+
 
 ### Array destructuring
 
+> *"Destructuring assignment is a special syntax that allows us to “unpack” arrays or objects into a bunch of variables, as sometimes that’s more convenient. Destructuring also works great with complex functions that have a lot of parameters, default values, and so on."*
+>
+> [Kantor, I. Destructuring assignment. JavaScript.info](https://javascript.info/destructuring-assignment#array-destructuring)
+
 ```js
-let [ first, last ] = name;
+let [ first, last ] = names;
 
 // sama kuin
-let first = name[0];
-let last = name[1];
+let first = names[0];
+let last = names[1];
 ```
-https://javascript.info/destructuring-assignment#array-destructuring
+
 
 ### Object destructuring
 
-```js
-let { first, last } = name;
+> *"We have an existing object at the right side, that we want to split into variables. The left side contains a “pattern” for corresponding properties. In the simple case, that’s a list of variable names in {...}."*
+>
+> [Kantor, I. Object destructuring. JavaScript.info](https://javascript.info/destructuring-assignment#object-destructuring)
 
-// sama kuin 
-let first = name.first;
-let last = name.last;
+
+```js
+let { first, last } = names;
+
+// sama kuin
+let first = names.first;
+let last = names.last;
 ```
+
+Destructuring on usein käytössä myös silloin, kun valitsemme jostain riippuvuudesta tietyt arvot tai funktiot käytettäväksi omassa koodissamme:
 
 ```js
 const { PI } = Math;
@@ -43,18 +117,23 @@ const { PI } = Math;
 const PI = Math.PI;
 ```
 
-https://javascript.info/destructuring-assignment#object-destructuring
-
 ### Property value shorthand
 
+> *"The use-case of making a property from a variable is so common, that there’s a special property value shorthand to make it shorter."*
+>
+> [Kantor, I. Property value shorthand. JavaScript.info](https://javascript.info/object#property-value-shorthand)
+
+
 ```js
-let name = { first, last };
+let first = 'Chuck';
+let last = 'Norris';
+
+let names = { first, last };
 
 // Luo uuden olion kahden olemassa olevan muuttujan arvoilla. Sama kuin:
-let name = { first: first, last: last };
+let names = { first: first, last: last };
 ```
 
-https://javascript.info/object#property-value-shorthand
 
 ### Object destructuring ja Property value shorthand yhdessä
 
@@ -62,6 +141,12 @@ Yhdistämällä kaksi edellistä, voimme luoda esimerkiksi koordinaattipisteen t
 
 ```js
 let point = { lat, lon } = event.location;
+
+// sama kuin
+let point = {
+    lat: event.location.lat,
+    lon: event.location.lon
+};
 ```
 
 ### Array spread
@@ -88,31 +173,48 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spre
 
 ### Object spread
 
-Samankaltainen kuin taulukoiden spread-operaatio, mutta olioille sovellettuna:
-
-```js
-let person = { ...name, hobby: 'Kung-fu' };
-
-// luo uuden olion, jossa on kaikki name-olion attribuutit, ja sen lisäksi hobby-attribuutti
-```
-
 > *"copies own enumerable properties from a provided object onto a new object."*
 >
 > [MDN web docs, Spread syntax (...)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 
-### Rest in Object Destructuring
+Samankaltainen kuin taulukoiden spread-operaatio, mutta olioille sovellettuna:
 
 ```js
-let { name, ...theRest } = person;
+let person = { ...names, hobby: 'Kung-fu' };
 
-// theRest sisältää kaikki arvot, paitsi ne, jotka poimittiin person-oliosta nimen perusteella
+// luo uuden olion, jossa on kaikki names-olion attribuutit, 
+// ja sen lisäksi hobby-attribuutti.
+
+// sama kuin:
+let person = Object.assign({}, names);
+person.hobby = 'Kung-fu';
 ```
+
+
+### Rest in Object Destructuring
+
 
 > *"Rest properties collect the remaining own enumerable property keys that are not already picked off by the destructuring pattern."*
 >
 > [MDN web docs, Destructuring assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 
+```js
+let { name, description, ...theRest } = event;
+
+// theRest sisältää kaikki arvot, paitsi ne, jotka poimittiin event-oliosta attribuuttien nimien perusteella
+```
+
+## Muut tunnilla käsiteltävät tekniikat
+
 ### Nuolifunktiot
+
+> *"An arrow function expression is a compact alternative to a traditional function expression, but is limited and can't be used in all situations."*
+>
+> [MDN web docs, Arrow function expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+
+Nuolifunktioiden kaltaiset anonyymit funktiot ovat yleisiä myös muissa kielissä, kuten Javassa ja Pythonissa. Niissä funktioita kutsutaan "lambdoiksi".
+
+Funktion määrittelystä voidaan nuolifunktioiden avulla jättää pois sana `function` sekä, mikäli funktiossa on vain yksi lauseke, myös `return`-avainsana:
 
 ```js
 let multiply = (a, b) => a * b;
@@ -123,11 +225,9 @@ function multiply(a, b) {
 }
 ```
 
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+### Currying
 
-## Currying
-
-JavaScriptin yhteydessä kasvavassa määrin hyödynnetty tekniikka, joka ei suoraan liity pelkästään ES6:een tai vain JavaScriptiin on "currying":
+Eräs JavaScriptin yhteydessä kasvavassa määrin hyödynnetty tekniikka, joka ei suoraan liity pelkästään ES6:een tai vain JavaScriptiin on "currying":
 
 > *"Currying is an advanced technique of working with functions. It’s used not only in JavaScript, but in other languages as well.*
 >
@@ -163,83 +263,16 @@ let eurot = markatEuroiksi(100);
 
 Milloin funktioiden osittaisesta määrittelystä on meille erityisesti hyötyä?
 
-"Currytetty" funktio voidaan antaa suoraan esimerkiksi `map`-funktiolle tai `filter`-funktiolle:
+"Currytetty" funktio voidaan antaa suoraan esimerkiksi `map`-funktiolle, joista kerromme lisää myöhemmin tässä materiaalissa:
 
 ```js
 let markat = [200, 123, 99, 10, 4521];
 let eurot = markat.map(markatEuroiksi);
 ```
 
-Jos haluamme laskea etäisyyden tietyn koordinaatin ja tapahtuman tapahtumapaikan välillä, voimme ensin lukita ensimmäisen koordinaattipisteen ja sen jälkeen käyttää palautettua funktiota tapahtumaolioiden kanssa!
-
-```js
-function getDistanceTo(point) {
-    return function (event) {
-        return geolib.getDistance(point, event.location);
-    }
-}
-
-// sama kuin:
-let getDistanceTo = (point) => (event) => geolib.getDistance(point, event.location);
-
-// etäisyysfunktiot Helsinkiin ja Tukholmaan
-let distanceFuncHelsinki = getDistanceTo(helsinki);
-let distanceFuncStockholm = getDistanceTo(stockholm);
-
-// etäisyysfunktioiden hyödyntäminen tapahtuman kanssa:
-let distace = distanceFuncHelsinki(events[0]);
-
-// etäisyyden lisääminen kaikkiin tapahtumiin!
-events.forEach(event => event.distance = distanceFuncHelsinki(event));
-```
-
-https://javascript.info/currying-partials
-
-
-## Reduce
-
-> *"The reduce() method executes a reducer function (that you provide) on each element of the array, resulting in single output value."*
->
-> [MDN web docs. Array.prototype.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
-
-Reducen avulla voidaan tyypillisesti selvittää esimerkiksi kokoelman suurin tai pienin arvo, kaikkien arvojen summa tai muita vastaavia operaatioita. Reducen avulla voidaan kuitenkin toteuttaa myös muunlaisia operaatioita, joissa käsitellään yksi kerrallaan kokoelman arvot.
-
-```js
-let tulos = taulukko.reduce(( koottuArvo, nykyinenArvo ) => {
-    /* operaatio, jonka paluuarvoa käytetään seuraavana koottunaArvona */
-}, kokoojanAlkuarvo);
-```
-
-
-Sekä `map` että `filter` on toteutettavissa `reduce`:n avulla. Tällöin koottava arvo on uusi taulukko, ja alkuperäisen taulukon arvot redusoidaan uudelle taulukolle joko ehdon täyttyessä (filter) tai muutettuna (map):
-
-```js
-> // map toteutettuna reducen avulla:
-let tuplattu = [1, 2, 3, 4, 5].reduce((uusiTaulukko, arvo) => { 
-    uusiTaulukko.push(arvo * 2);
-    return uusiTaulukko;
-}, [] );
-> console.log(tuplattu);
-[ 2, 4, 6, 8, 10 ]
-```
-
-```js
-> // filter toteutettuna reducen avulla:
-> let suurempiKuinKolme = [1, 2, 3, 4, 5].reduce((uusiTaulukko, arvo) => {
-    if (arvo > 3) {
-        uusiTaulukko.push(arvo);
-    } 
-    return uusiTaulukko; 
-}, [] );
-> console.log(suurempiKuinKolme);
-[ 4, 5 ]
-```
-
-Reduce onkin erittäin monikäyttöinen operaatio, ja sen avulla onnistuu luontevasti myös esimerkiksi taulukon arvojen ryhmitteleminen tietyn avaimen mukaan. Voit lukea aiheesta lisää Googlesta hakusanoilla "JavaScript reduce group by" tai [tästä artikkelista](https://learnwithparam.com/blog/how-to-group-by-array-of-objects-using-a-key/).
-
 # Tapahtumien käsitteleminen `map`, `filter` ja `reduce` -operaatioilla
 
-Tunnilla harjoittelemme `map`, `filter` ja `reduce` -operaatioita [MyHelsinki Open API](http://open-api.myhelsinki.fi/doc) -rajapinnan tapahtumien avulla.
+Tunnilla harjoittelemme `map`, `filter` ja `reduce` -operaatioita [MyHelsinki Open API](http://open-api.myhelsinki.fi/doc) -rajapinnan tapahtumien avulla. `filter`, `map` ja `reduce` löytyvät suurimmasta osasta ohjelmointikieliä, mukaan lukien Java, Python ja JavaScript.
 
 
 ## Esivalmistelu: staattisen aineiston hakeminen
@@ -363,14 +396,22 @@ function isBetweenDates(minDate, maxDate) {
 }
 ```
 
-Tämän funktion avulla voimme ensin luoda filtterin `isNextWeek`, joka annetaan `filter`-operaatiolle. Filter kutsuu ajonaikaisesti luotua `isNextWeek`-funktiota jokaiselle tapahtumalla, ja valikoi uudelle `eventsNextWeek`-taulukkolle ehdot täyttävät tapahtumat:
+Tämän `isBetweenDates`-funktion avulla voimme ensin luoda uuden funktion `isNextWeek`:
 
 ```js
 let isNextWeek = isBetweenDates('2020-10-09T00:00:00', '2020-10-16T24:00:00');
+```
+
+Kun `isNextWeek` annetaan `filter`-operaatiolle, filter kutsuu antamaamme `isNextWeek`-funktiota jokaiselle tapahtumalle ja valikoi uudelle `eventsNextWeek`-taulukkolle ne tapahtumat, joille `isNextWeek` palauttaa arvon `true`:
+
+```js
 let eventsNextWeek = events.filter(isNextWeek);
 ```
 
-## Funktion parametrien oletusarvot
+Nyt melko monimutkainen operaatio, joka edellyttäisi perinteisesti taulukon luomisen, toistorakenteen, ehtorakenteen ja taulukkoon lisäykset, saadaan toteutettua suoraviivaisesti.
+
+
+### Funktioiden parametrien oletusarvot
 
 JavaScriptin uusimmilla versioilla voimme antaa parametreille oletusarvot, joita käytetään, mikäli funktion kutsussa on jätetty parametriarvo antamatta tai sen arvo on `undefined`:
 
@@ -385,7 +426,31 @@ function isBetweenDates(minDate = '0000-01-01', maxDate = '9999-12-31') {
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters
 
+### Järjestäminen alkamisajan mukaan
 
+JavaScriptin taulukoilla on valmis `sort`-metodi, jonka avulla sen sisältö voidaan järjestää. Tarvitset vain vertailufunktion, joka vertailee kahta tapahtumaa, ja kertoo kumman tulisi olla järjestyksessä ensimmäisenä:
+
+> *"The sort() method sorts the elements of an array in place and returns the sorted array."*
+>
+> *"If compareFunction is supplied, all non-undefined array elements are sorted according to the return value of the compare function. If compareFunction(a, b) returns less than 0, sort a to an index lower than b (i.e. a comes first). If compareFunction(a, b) returns 0, leave a and b unchanged with respect to each other, but sorted with respect to all different elements."*
+>
+> [MDN web docs. Array.prototype.sort()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
+
+Voimme vertailla alkamisaikoja ja järjestää tapahtumat alkamisajan mukaan järjestykseen alkamisajankohtia vertailevalla funktiolla:
+
+```js
+function eventDateComparator(event1, event2) {
+    // jos starting_day on undefined, käytetään tyhjää merkkijonoa:
+    let event1date = event1.event_dates.starting_day || '';
+    let event2date = event2.event_dates.starting_day || '';
+
+    // Palauttaa negatiivisen luvun, nollan tai positiivisen luvun riippuen merkkijonojen aakkosjärjestyksestä.
+    // Tämä toimii, koska starting_day on aina ISO-muotoinen String, kuten "2020-10-16T24:00:00".
+    return event1date.localeCompare(event2date);
+}
+
+events.sort(eventDateComparator);
+```
 
 ## Map 
 
@@ -404,7 +469,19 @@ Tässä esimerkissä luomme tapahtumia sisältävän taulukon perusteella uuden,
 
 ### Etäisyyden lisääminen kaikille tapahtumille
 
-Toinen, selvästi hyödyllisempi käyttötapaus voisi olla etäisyyden lisääminen tapahtuman tietoihin `map`-operaatiolla:
+Meille erityisen hyödyllinen `map`-operaation käyttötapaus voisi olla etäisyyden lisääminen tapahtuman tietoihin. Kaikilla tapahtumilla on koordinaatit, joten meidän tulee vain laskea etäisyys kunkin tapahtuman koordinaattipisteen ja oman pisteemme välillä. Etäisyyden laskeminen on sen verran monimutkainen operaatio, että emme halua toteuttaa sitä omaan koodiimme. Sen sijaan käytämm evalmista `geolib`-kirjastoa:
+
+> *"Library to provide basic geospatial operations like distance calculation, conversion of decimal coordinates to sexagesimal and vice versa, etc."*
+>
+> https://www.npmjs.com/package/geolib
+
+Kirjasto asentuu `npm install`-komennolla seuraavasti:
+
+```
+npm install geolib --save
+```
+
+Nyt `geolib` voidaan ottaa käyttöön myös omassa koodissa:
 
 ```js
 const geolib = require('geolib');
@@ -415,15 +492,63 @@ let eventsWithDistance = events.map(event => {
     let eventCoordinates = { lat, lon } = event.location;
     return {
         ...event, // kopioidaan tapahtuman tiedot palautettavaan olioon
-        distance: geolib.getDistance(helsinkiCoordinates, eventCoordinates)
+        distance: geolib.getDistance(helsinkiCoordinates, eventCoordinates) // lisätään myös distance
     }
 });
 ```
 
 Huomaa, että yllä oleva koodi ei muuta alkuperäistä `events`-taulukkoa eikä sillä olevia olioita, vaan se luo uuden taulukon, joka täytetään kopioilla tapahtumista.
 
-Jotta sijainti olisi helposti vaihdettavissa myös joksikin muuksi kuin Helsingiksi, kannattaa tässäkin tapauksessa etäisyydet lisäävä funktio määritellä kahdessa osassa:
 
+### Currying
+
+Yllä olevassa koodiesimerkissä `map`-operaatiolle annettu funktio on sidottu `helsinkiCoordinates`-muuttujaan. Haluaisimme kuitenkin ohjelmassamme todennäköisesti laskea etäisyyksiä monipuolisesti, joten eri etäisyysfunktiot olisi tarpeen sitoa eri muuttujien arvoihin. 
+
+Voimme ratkaista ongelman soveltaen currying-tekniikkaa! Ensin lukitsemme koordinaattipisteen ja sen jälkeen kutsumme sisempää funktiota tapahtumaolioiden kanssa!
+
+
+```js
+// ensimmäinen funktiokutsu sitoo `point`-muuttujan arvon sulkeumaan:
+function getDistanceTo(point) {
+    // toista funktiota kutsutaan vain tapahtumaolion kanssa:
+    return function (event) {
+        return geolib.getDistance(point, event.location);
+    }
+}
+
+// sama kuin:
+let getDistanceTo = (point) => (event) => geolib.getDistance(point, event.location);
+```
+
+Nyt etäisyysfunktioita voidaan luoda kutsumalla `getDistanceTo`-funktioita eri koordinaattipisteillä. Funktio palauttaa aina uuden funktion, jonka sulkeumassa annettu koordinaattipiste on tallessa:
+
+```js
+// etäisyysfunktiot Helsinkiin ja Tukholmaan
+let distanceFuncHelsinki = getDistanceTo(helsinkiCoordinates);
+let distanceFuncStockholm = getDistanceTo(stockholmCoordinates);
+
+// etäisyysfunktioiden hyödyntäminen tapahtuman kanssa:
+let distaceHki = distanceFuncHelsinki(events[0]);
+let distaceSto = distanceFuncStockholm(events[0]);
+
+// etäisyyden lisääminen kaikkiin tapahtumiin!
+let eventsWithCoordinates = events.map(event => ({ ...event, distance: distanceFuncHelsinki(event) }) );
+events.forEach(event => event.distance = distanceFuncHelsinki(event));
+```
+
+**Pohdittavaa**
+
+JavaScriptin taulukoilla on myös `forEach`-funktio, jonka avulla tietty funktio voidaan suorittaa taulukon jokaiselle arvolle. Miten `forEach`-funktion käyttäminen poikkeaa `map`-funktion käyttämisestä seuraavassa esimerkissä? Mitkä ovat niiden vahvuudet ja heikkoudet?
+
+```js
+// map:
+let eventsWithCoordinates = events.map(event => ({ ...event, distance: distanceFuncHelsinki(event) }) );
+
+// forEach:
+events.forEach(event => event.distance = distanceFuncHelsinki(event));
+```
+
+<!--
 ```js
 function addDistanceTo(coordinates) {
     return function(event) {
@@ -441,80 +566,86 @@ Nyt tapahtumille saadaan lisättyä etäisyys Helsingin koordinaateista suoravii
 let addDistanceToHelsinki = addDistanceTo(helsinkiCoordinates);
 let eventsWithDistanceFromHelsinki = events.map(addDistanceToHelsinki);
 ```
+-->
 
+### Tapahtumien järjestäminen etäisyyden mukaan
 
-## Tapahtumien järjestäminen: Array.sort
-
-> *"The sort() method sorts the elements of an array in place and returns the sorted array."*
->
-> *"If compareFunction is supplied, all non-undefined array elements are sorted according to the return value of the compare function. If compareFunction(a, b) returns less than 0, sort a to an index lower than b (i.e. a comes first). If compareFunction(a, b) returns 0, leave a and b unchanged with respect to each other, but sorted with respect to all different elements."*
->
-> [MDN web docs. Array.prototype.sort()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
-
-### Järjestäminen etäisyyden mukaan
-
-Kun tapahtumille on lisätty uusi attribuutti `distance`, voidaan tätä käyttää hyväksi myös tapahtumien järjestämisessä etäisyyden mukaan:
+Kun tapahtumille on lisätty uusi attribuutti `distance`, voidaan tätä käyttää hyväksi myös tapahtumien järjestämisessä etäisyyden mukaan. Seuraavan koodiesimerkin nuolifunktio vertailee kahta tapahtumaa niiden `distance`-attribuutin mukaan:
 
 ```js
+// Jos etäisyys 1 on pienempi kuin etäisyys 2, on tuloksena negatiivinen luku:
 eventsWithDistances.sort((event1, event2) => event1.distance - event2.distance);
 ```
 
-### Järjestäminen alkamisajan mukaan
+Katso lisätietoa järjestämisestä ylempää kodasta "Järjestäminen alkamisajan mukaan".
 
-Vastaavasti voimme vertailla alkamisaikoja ja järjestää tapahtumat alkamisajan mukaan järjestykseen alkamisajankohtia vertailevalla funktiolla:
 
-```js
-function eventDateComparator(event1, event2) {
-    let event1date = event1.event_dates.starting_day || '';
-    let event2date = event2.event_dates.starting_day || '';
-
-    return event1date.localeCompare(event2date);
-}
-
-events.sort(eventDateComparator);
-```
-
-## Fetch ja Promiset
+## Fetch, Promiset, async ja await
 
 Asynkroniset fetch- ja json-kutsut palauttavat Promise-oliota. Promise-olion tapahtumankuuntelija asetetaan kutsumalla Promisen `then`-metodia ja antamalla sille callback-funktio, jota kutsutaan, kun promisen operaatio on valmistunut. Peräkkäisiä Promise-oliota voidaan myös ketjuttaa, jolloin ensimmäisenä Promisen `then`-metodille annettu funktio suoritetaan aina ennen seuraavia kutsuja, ja edeltävän funktion palauttama arvo välitetään aina seuraavalle funktiolle. Tästä käytetään myös termiä "putkitus" eli piping.
 
-<!-- TODO -->
+Katso seuraavat videot `fetch`-funktion ja sen palauttamien `Promise`-olioiden käyttämisestä:
+
+**[Google Chrome Developers: Using the Fetch API](https://youtu.be/Ri7WRoRcl_U)**
+
+[![Google Chrome Developers: Using the Fetch API](https://img.youtube.com/vi/Ri7WRoRcl_U/mqdefault.jpg)](https://youtu.be/Ri7WRoRcl_U)
+
+> *"The Fetch API is a modern replacement for XMLHttpRequest. It includes much of the code you used to write for yourself: handling redirection and error codes, and decoding the result. This video gives you an easy introduction."*
+
+&nbsp;
+
+**[Google Chrome Developers: Intro to Promises (incl async/await)](https://youtu.be/7unX6hn5NA8)**
+
+[![Google Chrome Developers: Intro to Promises (incl async/await)](https://img.youtube.com/vi/7unX6hn5NA8/mqdefault.jpg)](https://youtu.be/7unX6hn5NA8)
+
+> *"Promises make asynchronous programming much easier than the traditional event-listener or callback approaches. This video explains promises, promise-chaining, and complex error-handling."*
+
+
+
+## Reduce
+
+> *"The reduce() method executes a reducer function (that you provide) on each element of the array, resulting in single output value."*
+>
+> [MDN web docs. Array.prototype.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
+
+Reducen avulla voidaan tyypillisesti selvittää esimerkiksi kokoelman suurin tai pienin arvo, kaikkien arvojen summa tai muita vastaavia operaatioita. Reducen avulla voidaan kuitenkin toteuttaa myös muunlaisia operaatioita, joissa käsitellään yksi kerrallaan kokoelman arvot.
+
 ```js
-
+let tulos = taulukko.reduce(( koottuArvo, nykyinenArvo ) => {
+    /* operaatio, jonka paluuarvoa käytetään seuraavana koottunaArvona */
+    return X;
+}, kokoojanAlkuarvo);
 ```
 
-## Yksikkötestaus JavaScriptillä
+Sekä `map` että `filter` on toteutettavissa `reduce`:n avulla. Tällöin koottava arvo on uusi taulukko, ja alkuperäisen taulukon arvot redusoidaan uudelle taulukolle joko ehdon täyttyessä (filter) tai muutettuna (map):
 
-
-
-RxJS esimerkin koodaaminen promiseilla? https://stackblitz.com/edit/rxjs-type-ahead?file=index.ts
-
-
-https://github.com/Team-RyTy/tapahtuma-info/blob/master/components/Eventlist.js
-
-https://github.com/Team-RyTy/tapahtuma-info/blob/master/components/Restaurants.js
-
-Babel : ES6 importit yms?
-
-https://babeljs.io/repl
-
-Geolokaatio : Geolib
-
-# Koodin lukeminen
-
-Yksi tämän oppitunnin tavoitteista on oppia lukemaan koodia. Esimerkkejä seuraamalla ja kopioimalla saamme toteutettua logiikkaa, mutta emme aina välttämättä ymmärrä kaikkia ohjelmointirakenteita omassa koodissamme. Mitä esimerkiksi seuraavassa esimerkissä olevat kaksi kohtaa tarkoittavat? Miten kertoisit sanallisesti, mitä riveillä tapahtuu? Osaisitko kirjoittaa samat rivit "perinteisempään" muotoon?
-
-```javascript
-// https://nodejs.org/api/modules.html#modules_modules_commonjs_modules
-const { PI } = Math; // mitä tämä tarkoittaa?
-
-exports.area = (r) => PI * r ** 2; // mitä tämä tarkoittaa?
-
-exports.circumference = (r) => 2 * PI * r;
+```js
+> // map toteutettuna reducen avulla:
+let tuplattu = [1, 2, 3, 4, 5].reduce((uusiTaulukko, arvo) => { 
+    uusiTaulukko.push(arvo * 2);
+    return uusiTaulukko;
+}, [] );
+> console.log(tuplattu);
+[ 2, 4, 6, 8, 10 ]
 ```
 
-# JavaScription vertailuoperaatiot
+```js
+> // filter toteutettuna reducen avulla:
+> let suurempiKuinKolme = [1, 2, 3, 4, 5].reduce((uusiTaulukko, arvo) => {
+    if (arvo > 3) {
+        uusiTaulukko.push(arvo);
+    } 
+    return uusiTaulukko; 
+}, [] );
+> console.log(suurempiKuinKolme);
+[ 4, 5 ]
+```
 
+Reduce onkin erittäin monikäyttöinen operaatio, ja sen avulla onnistuu luontevasti myös esimerkiksi taulukon arvojen ryhmitteleminen tietyn avaimen mukaan. Voit lukea aiheesta lisää Googlesta hakusanoilla "JavaScript reduce group by" tai [tästä artikkelista](https://learnwithparam.com/blog/how-to-group-by-array-of-objects-using-a-key/).
+
+## JavaScriptin totuusarvot ja niiden vertailu
+
+Kuten kurssin aikaisemmalla oppitunnilla todettiin, JavaScriptissä vertailuoperaatiot tehdään usein kolmella merkillä eli `===` tai `!==`. Kolmen merkin vertailuoperaatiot tarkastavat, että vertailtavien arvojen tyyppi on sama. Mikäli tyyppitarkastus jätetään tekemättä, JavaScript vertailee tyhjiä ja nollaan vertautuvia arvoja epäloogisesti.
 
 ### Vertailu kahdella yhtäsuuruusmerkillä
 
@@ -531,11 +662,13 @@ true
 true
 > 0 == []       // nolla ja tyhjä taulukko
 true
-> "0" == []     // molemmat false, mutta silti keskenään erisuuruiset!!
+> "0" == []     // molemmat ovat false, mutta silti keskenään erisuuruiset!! 🤯
 false
 ```
 
 ### Vertailu kolmella yhtäsuuruusmerkillä
+
+Vertailu kolmella merkillä on helpommin arvattavissa, koska sekä tyypin että arvon tulee olla sama:
 
 ```js
 > "0" === false
@@ -589,204 +722,17 @@ True
 Koska olioiden vertaileminen vertailee vain, ovatko oliot samat, joudumme hyödyntämään erillistä vertailulogiikkaa. Node-yksikkötesteissä voimme hyödyntää esimerkiksi `assert`-moduulin `deepStrictEqual`-metodia, joka vertailee rekursiivisesti sille annettuja arvoja:
 
 ```js
-assert.deepStrictEqual([1, 2, 3], [1, 2, 3])
-assert.deepStrictEqual({ language: "JavaScript" }, { language: "JavaScript" 
+const assert = require('assert');
+
+assert.deepStrictEqual([1, 2, 3], [1, 2, 3]):
+assert.deepStrictEqual({ language: "JavaScript" }, { language: "JavaScript" });
 ```
 
 https://nodejs.org/api/assert.html#assert_assert_deepstrictequal_actual_expected_message
 
-# Array spread
-
-```js
-> let a = [1, 2, 3]
-> let b = [4, 5, 6]
-> [...a, ...b]
-[ 1, 2, 3, 4, 5, 6 ]
-> [...a, ...b, 7, 8, 9]
-[ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
-```
-
-# Array destructuring
-
-```js
-> let [first, second, third, ...rest] = [1, 2, 3, 4, 5, 6, 7]
-> first
-1
-> second
-2
-> third
-3
-> rest
-[ 4, 5, 6, 7 ]
-```
-
-# Object methods
-
-Object.keys() https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
-
-Object.values() https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values
-
-# Object initializer
-
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer
-
-```js
-const a = 'foo';
-const b = 42;
-const c = {};
-const object2 = { a: a, b: b, c: c };
-const object3 = { a, b, c };
-```
-
-# Object spread ja destructuring
-
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment:
-
-```js
-const user = {
-    id: 42,
-    is_verified: true
-};
-
-const {id, is_verified} = user;
-```
-
-```js
-> const user = {name: 'Teemu', id: 42};
->
-> const userWithPosts = { ...user, posts: [] }
-{ name: 'Teemu', id: 42, posts: [] }
-```
-
-
-# Filter
 
 
 
-# "Currying" eli funktion kutsumien osissa
-
-`isNextWeek` on hyvä funktio, mutta se on sidottu "globaaleihin" arvoihin `now` ja `maxDate`. Kyseiset arvot voitaisiin toki laskea myös tässä funktiossa, mutta mitä jos tarvitsemme samassa ohjelmassa logiikan kuukauden sisällä filtteröintiin?
-
-Voimme kirjoittaa funktion, joka palauttaa funktion!
-
-```js
-// source: https://blog.bitsrc.io/understanding-currying-in-javascript-ceb2188c339
-function multiply(a, b, c) {
-    return a * b * c;
-}
-multiply(1,2,3); // 6
-```
-Voidaan siis kirjoittaa muotoon:
-
-```js
-// source: https://blog.bitsrc.io/understanding-currying-in-javascript-ceb2188c339
-function multiply(a) {
-    return (b) => {
-        return (c) => {
-            return a * b * c
-        }
-    }
-}
-log(multiply(1)(2)(3)) // 6
-```
-
-`isNextWeek` voidaan siis toteuttaa myös funktiolla, joka palauttaa funktion:
-
-```js
-function createDateFilter(min, max) {
-    return function(event) {
-        let day = event.event_dates.starting_day; 
-        return day != null && day >= min && day <= max;
-    }
-}
-```
-
-Nyt kutsutaan siis ensin `createDateFilter`-funktiota kahdella päivämäärällä, ja tämän palauttamaa uutta funktiota kutsutaan tapahtumaoliolla:
-
-```js
-createDateFilter(now, maxDate)(events[100])
-> false
-```
-
-Miksi tämä on hyödyllistä?
-
-```js
-> let nextWeekFilter = createDateFilter(now, nextWeek)
-> let nextMonthFilter = createDateFilter(now, nextMonth)
-> // jne.
->
-> let nextWeekEvents = events.filter(nextWeekFilter)
-> nextWeekEvents.length
-612
-```
-
-# Map
-
-```js
-> // Luodaan uusi taulukko, jossa on vain tapahtumien id:t
-> let ids = events.map(event => event.id)
-> ids.slice(0, 10)
-[ 'helmet:214000',
-  'helmet:216844',
-  'helmet:216842',
-  'helmet:211890',
-  'helmet:214001',
-  'helmet:216843',
-  'helmet:211891',
-  'helmet:211896',
-  'helmet:211889',
-  'helmet:212889' ]
-
-```
-
-Käydään tapahtumia läpi ja logitetaan
-
-
-# Filter -> Map -> Reduce
-
-filter, map ja reduce löytyvät suurimmasta osasta ohjelmointikieliä, mukaan lukien Java, Python ja JavaScript.
-
-```js
-> let ids = events.map(event => event.id)
-```
-
-Kirjoitetaan operaatiot eri moduuliin kuin mitä suoritetaan!
-
-https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d
-
-Filtteröidään päivämäärien mukaan, tagien mukaan jne.
-
-Mäpätään tapahtumien nimiin?
-
-Etsitään jokin redusoitava asia tapahtumista?
-
-Ketjutetaan ja rajoitetaan määrä: `slice()`
-
-Reducella voidaan vaikka koota tapahtumat tagien mukaan!
-
-
-# JSON ja Noden http-serveri
-
-Tarjoillaan redusoitu data HTTP:n yli selaimelle.
-
-
-# Pakettien asennus / npm init
-
-npm init...
-
-## node-fetch
-
-Asennetaan fetch ja haetaan data oikeasta rajapinnasta -> asynkronisuus!
-
-## Async / await
-
-Tarvitaan monta eri endpointtia ja parametreja: lisätään Express
-
-## Halutaan filtteröidä etäisyyden mukaan ja näyttää etäisyys annettuun pisteeseen:
-
-Lisätään `geolib`. Käytetään ...event -syntaksia mäppäyksessä.
-
-Ehkä käytetään currying? `getDistance(point1, point2) => getDistance(point1)(point2)`
 
 
 # Tehtävä
@@ -857,58 +803,12 @@ curl http://localhost:3000/users
                 "title": "qui est esse",
                 "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
             },
-            {
-                "userId": 1,
-                "id": 3,
-                "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
-                "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
-            },
-            {
-                "userId": 1,
-                "id": 4,
-                "title": "eum et est occaecati",
-                "body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
-            },
-            {
-                "userId": 1,
-                "id": 5,
-                "title": "nesciunt quas odio",
-                "body": "repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque"
-            },
-            {
-                "userId": 1,
-                "id": 6,
-                "title": "dolorem eum magni eos aperiam quia",
-                "body": "ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae"
-            },
-            {
-                "userId": 1,
-                "id": 7,
-                "title": "magnam facilis autem",
-                "body": "dolore placeat quibusdam ea quo vitae\nmagni quis enim qui quis quo nemo aut saepe\nquidem repellat excepturi ut quia\nsunt ut sequi eos ea sed quas"
-            },
-            {
-                "userId": 1,
-                "id": 8,
-                "title": "dolorem dolore est ipsam",
-                "body": "dignissimos aperiam dolorem qui eum\nfacilis quibusdam animi sint suscipit qui sint possimus cum\nquaerat magni maiores excepturi\nipsam ut commodi dolor voluptatum modi aut vitae"
-            },
-            {
-                "userId": 1,
-                "id": 9,
-                "title": "nesciunt iure omnis dolorem tempora et accusantium",
-                "body": "consectetur animi nesciunt iure dolore\nenim quia ad\nveniam autem ut quam aut nobis\net est aut quod aut provident voluptas autem voluptas"
-            },
-            {
-                "userId": 1,
-                "id": 10,
-                "title": "optio molestias id quia eum",
-                "body": "quo et expedita modi cum officia vel magni\ndoloribus qui repudiandae\nvero nisi sit\nquos veniam quod sed accusamus veritatis error"
-            }
+            
+            // + loput saman käyttäjän postaukset täällä...
         ]
     },
     
-    // ...9 muuta käyttäjää...
+    // + loput käyttäjät...
 
 ]
 ```
