@@ -25,39 +25,45 @@
 
 ## Alkusanat
 
-Opintojen tässä vaiheessa olette käyttäneet JavaScriptiä eri kursseilla ja useissa useissa eri tilanteissa. JavaScriptiä on melko suoraviivaista "käyttää" ilman varsinaista ymmärrystä siitä, miten ohjeissa esitetyt syntaksit oikeasti toimivat.
+Opintojen tässä vaiheessa olette käyttäneet JavaScriptiä eri kursseilla ja eri käyttötarkoituksissa. JavaScriptiä on mahdollista "käyttää" myös ilman varsinaista ymmärrystä siitä, miten ohjeissa esitetyt syntaksit oikeasti toimivat.
 
-JavaScript-projekteissa käytetään usein erilaisia kielen natiiviominaisuuksiin kuulumattomia ominaisuuksia, kuten JSX-syntaksia:
+JavaScript-projekteissa käytetään usein erilaisia kielen natiiviominaisuuksiin kuulumattomia ominaisuuksia, kuten Reactin JSX-syntaksia:
 
 ```jsx
 // https://reactjs.org/docs/introducing-jsx.html
 const element = <h1>Hello, world!</h1>;
+```
 
-// Sama koodi muutettuna JavaScriptiksi https://babeljs.io/repl-työkalulla:
+Kuten yllä oleva koodiesimerkki, kaikki JavaScriptillä kirjoitettu koodi ei ole välttämättä suoraan suoritettavissa ilman erilaisia käännösvaiheita. Kääntäminen tehdään usein taustalla [Babel](http://babeljs.io/)-työkalulla, joka muuttaa (transpile) esimerkiksi yllä olevan JSX-koodin tavallisiksi JavaScript-rakenteiksi:
+
+```js
+// Sama koodi transpiloituna https://babeljs.io/repl-työkalulla:
 var element = React.createElement("h1", null, "Hello, world!");
 ```
 
-Kaikki koodi, joka kirjoitetaan JavaScriptillä, ei siis ole välttämättä suoraan suoritettavissa ilman erilaisia käännösvaiheita. Kääntäminen tehdään usein taustalla [Babel](http://babeljs.io/)-työkalulla, joka muuttaa esimerkiksi yllä olevan JSX-koodin tavallisiksi JavaScript-rakenteiksi. Samoin Babel osaa muuntaa JavaScriptin modernimmilla versioilla toteutetut syntaksit vanhempien selainten tukemaan muotoon. Muunnoksista johtuen voi joskus olla haastavaa hahmottaa, mitkä asiat ovat "natiivi JavaScriptiä" ja mitkä eri kirjastoihin tai ohjelmistokehyksiin liittyviä ominaisuuksia.
-
-Aiheessa esiintyvä MongoDB-tietokanta ei ole osa oppitunnin sisältöä eikä oppituntiin liittyvää kotitehtävää, vaan osa tämän aihealueen seminaariosuutta.
+Reactin ja muiden erityissyntaksien lisäksi Babel osaa muuntaa JavaScriptin modernimmilla versioilla toteutetut syntaksit vanhempien selainten tukemaan muotoon. Erilaisista muunnoksista johtuen voi joskus olla haastavaa hahmottaa, mitkä asiat ovat "natiivi JavaScriptiä" ja mitkä eri kirjastoihin tai ohjelmistokehyksiin liittyviä ominaisuuksia.
 
 
 ## Oppitunnin tavoitteet
 
-Oppitunnin tavoitteena on oppia erityisesti lukemaan koodia ja ymmärtämään, miten yleisimmät JavaScript-kieliset esimerkkikoodit toimivat. Sivuamme funktionaalista ohjelmointia hyödyntämällä funktioiden antamista parametreina toisille funktioille (callback) sekä funktioiden vaiheittaista suorittamista (currying).
+Tämän oppitunnin tavoitteena on oppia erityisesti lukemaan koodia ja ymmärtämään, miten yleisimmät JavaScript-kieliset esimerkkikoodit toimivat. Sivuamme funktionaalista ohjelmointia hyödyntämällä funktioiden antamista parametreina toisille funktioille (callback) sekä funktioiden vaiheittaista suorittamista (currying).
 
 ES6:n ajoittain erikoiset syntaksit tekevät usein koodista suoraviivaista, mutta toisinaan syntaksien liikakäyttö väärissä tilanteissa hankaloittaa koodin ymmärtämistä ja ylläpitoa. Tämän tunnin jälkeen tunnistat joitakin tilanteita, joissa on tarkoituksenmukaista hyödyntää eri ominaisuuksia.
 
-Itseopiskelumateriaalina voit hyödyntää hyviä sivustoja kuten:
+Itseopiskelumateriaalina voit hyödyntää hyviä sivustoja, kuten:
 
 * https://javascript.info/
 * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/
 * https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d
 
+Aiheessa esiintyvä MongoDB-tietokanta ei ole osa oppitunnin sisältöä eikä oppituntiin liittyvää kotitehtävää, vaan osa tämän aihealueen seminaariosuutta.
+
 
 ## JavaScriptin ohjelmointityylit
 
-JavaScriptillä voidaan soveltaa monia erilaisia ohjelmointityylejä, eli se on monen paradigman kieli. Voit siis soveltaa JavaScriptillä olio-ohjelmointia tai funktionaataulukko ohjelmointia tai halutessasi sekoittaa niitä. Monipuolisuuden heikkoutena JavaScriptillä ei aina ole yhtä vahvoja "parhaita käytäntöjä" kuin yhden paradigman kielillä. Tämän oppitunnin aikana perehdymme erityisesti JavaScriptin funktionaaliseen puoleen: nuolifunktioihin sekä map-, filter- ja reduce-operaatioihin.
+JavaScriptillä voidaan soveltaa monia erilaisia ohjelmointityylejä, eli se on monen paradigman kieli. Voit siis soveltaa JavaScriptillä olio-ohjelmointia tai funktionaalista ohjelmointia, tai halutessasi sekoittaa eri tyylejä. Monipuolisuuden heikkoutena JavaScriptillä ei aina ole yhtä vahvoja "parhaita käytäntöjä" kuin yhden paradigman kielillä. 
+
+Tämän oppitunnin aikana perehdymme erityisesti JavaScriptin funktionaaliseen puoleen: nuolifunktioihin sekä map-, filter- ja reduce-operaatioihin.
 
 
 ## Uusien ominaisuuksien selaintuki
@@ -68,7 +74,7 @@ Erityisesti verkkoselaimella käytettävien sovellusten kehittämisessä on huom
 let { first, last } = names;
 ```
 
-Muuttuu automaattisesti paremmin tuettuun muotoon:
+voidaan muuttaa automaattisesti vanhempien selainten tukemaan muotoon:
 
 ```js
 var _names = names,
@@ -79,9 +85,9 @@ var _names = names,
 
 ## ES6
 
-Tämän oppitunnin tarkoituksena on esitellä JavaScript-kielen taustalla olevan ECMAScript-standardin versiossa 6 mukaan tulleita ominaisuuksia käytännössä ja pohtia esimerkkien avulla, miten uusi syntaksi voi hyödyttää meitä "oikeassa ohjelmassa".
+JavaScript-kielen taustalla olevan ECMAScript-standardin versiossa 6 ja sen jälkeen kieleen on tullut mukaan useita erilaisia ominaisuuksia ja kirjoitusasuja. Seuraavissa kappaleissa tutustumme esimerkkien avulla siihen, miten uusi syntaksi voi hyödyttää meitä "oikeassa ohjelmassa". Oikea ohjelma tarkoittaa tässä tapauksessa Node-sovellusta, joka hakee dataa REST-rajapinnasta ja tarjoaa asiakkailleen JSON-muotoista dataa.
 
-Syntaksien opetteleminen on tärkeää lähinnä siksi, että ymmärrät kohtaamiasi esimerkkikoodeja ja käyttämiäsi valmiita koodipohjia. Koodin "modernisointi" on muuten usein toisarvoista.
+Huom! Eri syntaksien opetteleminen on tärkeää lähinnä siksi, että ymmärrät kohtaamiasi esimerkkikoodeja ja käyttämiäsi valmiita koodipohjia. Koodin "modernisointi" on muuten usein toisarvoista.
 
 
 ### Array destructuring
@@ -136,12 +142,17 @@ let last = 'Norris';
 
 let names = { first, last };
 
-// Luo uuden olion kahden olemassa olevan muuttujan arvoilla. Sama kuin:
+// Sama kuin:
 let names = { first: first, last: last };
+
+// Sama kuin:
+let names = {};
+names.first = first;
+names.last = last;
 ```
 
 
-### Object destructuring ja Property value shorthand yhdessä
+### Object destructuring ja property value shorthand yhdessä
 
 Yhdistämällä kaksi edellistä, voimme luoda esimerkiksi koordinaattipisteen tapahtumaolion sisältä löytyvän `location`-rakenteen avulla:
 
@@ -163,16 +174,12 @@ let point = {
 
 
 ```js
-> let a = [1, 2, 3]
-> let b = [4, 5, 6]
->
-> [...a, ...b]
-[ 1, 2, 3, 4, 5, 6 ]
->
-> [...a, ...b, 7, 8, 9]
-[ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
-```
+let a = [1, 2, 3];
+let b = [4, 5, 6];
 
+let c = [...a, ...b];           // [ 1, 2, 3, 4, 5, 6 ]
+let d = [...a, ...b, ...c];  // [ 1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6  ]
+```
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 
@@ -218,9 +225,9 @@ let { name, description, ...theRest } = event;
 >
 > [MDN web docs, Arrow function expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 
-Nuolifunktioiden kaltaiset anonyymit funktiot ovat yleisiä myös muissa kielissä, kuten Javassa ja Pythonissa. Niissä funktioita kutsutaan "lambdoiksi".
+Nuolifunktioiden kaltaiset anonyymit funktiot ovat yleisiä myös muissa kielissä, kuten Javassa ja Pythonissa. Niissä vastaavia funktioita kutsutaan "lambdoiksi".
 
-Funktion määrittelystä voidaan nuolifunktioiden avulla jättää pois sana `function` sekä, mikäli funktiossa on vain yksi lauseke, myös `return`-avainsana:
+Funktion määrittelystä voidaan nuolifunktioiden tapauksessa jättää pois sana `function` sekä, mikäli funktiossa on vain yksi lauseke, myös `return`-avainsana. Mikäli funktion runko koostuu useista lausekkeista, tarvitaan lisäksi aaltosulut ja `return`.
 
 ```js
 let multiply = (a, b) => a * b;
@@ -243,7 +250,7 @@ Eräs JavaScriptin yhteydessä kasvavassa määrin hyödynnetty tekniikka, joka 
 
 Currying-tekniikalla voimme siis pilkkoa useita parametreja sisältäviä funktioita siten, että yksittäisellä funktiokutsulla sidotaan yksi muuttuja. Funktiot palauttavat uusia funktioita, jotka voidaan ottaa tarvittaessa talteen ja kutsua muualla. 
 
-Kutsuessamme toista funktiota, ensimmäisessä funktiokutsussa annetut parametrit ovat edelleen voimassa, koska ne ovat saman "sulkeuman" sisällä:
+Kutsuessamme toista funktiota, ensimmäisessä funktiokutsussa annetut parametrit ovat edelleen voimassa, koska ne ovat saman "sulkeuman" (clojure) sisällä:
 
 ```js
 function multiply(a) {
@@ -263,8 +270,8 @@ let sentitTuumiksi = multiply(0.393700787);
 let markatEuroiksi = multiply(0.16818792646);
 
 // nyt palautettuja funktioita voidaan hyödyntää uusissa kutsuissa:
-let tuumat = sentitTuumiksi(200);
-let eurot = markatEuroiksi(100);
+let tuumina = sentitTuumiksi(200);
+let euroina = markatEuroiksi(100);
 ```
 
 Milloin funktioiden osittaisesta määrittelystä on meille erityisesti hyötyä?
@@ -273,15 +280,17 @@ Milloin funktioiden osittaisesta määrittelystä on meille erityisesti hyötyä
 
 ```js
 let markat = [200, 123, 99, 10, 4521];
-let eurot = markat.map(markatEuroiksi);
+let eurot = markat.map(markatEuroiksi); // [ 33.637585292, 20.68711495458, 16.65060471954, 1.6818792646, 760.37761552566 ]
 ```
 
 # Tapahtumien käsitteleminen `map`, `filter` ja `reduce` -operaatioilla
 
-Tunnilla harjoittelemme `map`, `filter` ja `reduce` -operaatioita [MyHelsinki Open API](http://open-api.myhelsinki.fi/doc) -rajapinnan tapahtumien avulla. `filter`, `map` ja `reduce` löytyvät suurimmasta osasta ohjelmointikieliä, mukaan lukien Java, Python ja JavaScript.
+Tunnilla harjoittelemme `map`, `filter` ja `reduce` -operaatioita [MyHelsinki Open API](http://open-api.myhelsinki.fi/doc) -rajapinnan tapahtumien avulla. `map`, `filter` ja `reduce` löytyvät suurimmasta osasta ohjelmointikieliä, mukaan lukien Java, Python ja JavaScript.
 
 
 ## Esivalmistelu: staattisen aineiston hakeminen
+
+Linux-pohjaisissa järjestelmissä HTTP-pyyntöjen tekemiseksi komentoriviltä käytetään usein `curl`-komentoa.
 
 > *curl  is  a tool to transfer data from or to a server, 
 > using one of the supported protocols [...].
@@ -289,7 +298,7 @@ Tunnilla harjoittelemme `map`, `filter` ja `reduce` -operaatioita [MyHelsinki Op
 >
 > `man curl`
 
-curl voidaan asentaa seuraavasti:
+`curl` voidaan asentaa seuraavasti:
 
     $ sudo apt install curl
 
@@ -297,38 +306,42 @@ curl voidaan asentaa seuraavasti:
 
     $ curl http://open-api.myhelsinki.fi/v1/events/
 
-Edellinen komento tulostaa saadun vastauksen suoraan terminaaliin. `python3 -m json.tool` auttaa muotoilemaan JSON-merkkijonot oikein sisennetyiksi merkkijonoiksi:
+Edellinen komento tulostaa saadun vastauksen suoraan terminaaliin. Pythonin standardikirjaston `json.tool` auttaa muotoilemaan JSON-dataa hyvin sisennetyiksi merkkijonoiksi. `curl`-komennon tuloste voidaan putkittaa `json.tool`-moduulille seuraavasti:
 
     $ curl http://open-api.myhelsinki.fi/v1/events/ | python3 -m json.tool
 
-Nyt saimme terminaaliin siistimmin jäsennellyn JSON-tietorakenteen. Voimme ohjata saamamme tulosteet tiedostoksi `>`-operaatiolla seuraavasti:
+Nyt saimme terminaaliin siistimmin jäsennellyn JSON-tietorakenteen. Voimme ohjata saamamme tulosteet vielä tiedostoon `>`-operaatiolla seuraavasti:
 
     $ curl http://open-api.myhelsinki.fi/v1/events/ | python3 -m json.tool > events.json
 
-Huom! `events.json` on iso tiedosto, luokkaa 6-7 megatavua, joten sen käsitteleminen tekstieditorilla on melko raskasta.
+Huom! `events.json` on iso tiedosto, luokkaa 6-7 megatavua, joten sen käsitteleminen tekstieditorilla voi olla raskasta.
+
 
 ## Tapahtuma JSON:in tuominen Node REPL:iin (Read-Evaluate-Print-Loop)
 
-Ilman npm:ää. Ilman riippuvuuksia:
+Ensimmäiset kokeilut teemme nodella ilman npm-pakettienhallintaa tai riippuvuuksia:
 
 ```js
 $ node
-> let jsonFile = require('./events.json')
+> // luetaan JSON-tiedosto muuttujaan
+> const jsonFile = require('./events.json')
+>
 > let events = jsonFile['data']
 > events.length
 5527
 ```
 
-`events` sisältää nyt meille aikaisemmilta viikoilta tutun taulukon tapahtumista. Tällä kertaa tapahtumat ovat JavaScript-olioita. Niillä on täysin sama rakenne kuin aikaisemmilla Pythonin sanakirjoilla:
+`events` sisältää nyt meille aikaisemmilta viikoilta tutun taulukon tapahtumista. Tällä kertaa tapahtumat ovat JavaScript-olioita. Niillä on silti täysin sama rakenne kuin aikaisemmissa tehtävissä käsittelemillämme Pythonin sanakirjoilla:
 
 ```js
 > // alkamispäivän tarkastaminen satunnaiselta tapahtumalta
 > let e = events[2500]
+>
+> // tapahtuman alkuajan selvittäminen
 > e['event_dates']['starting_day']
 '2020-10-23T07:00:00.000Z'
 >
-> // JavaScriptillä luonnollisempi tapa käsitellä sisäkkäisiä 
-> // rakenteita on pistenotaatio:
+> // vaihtoehtoinen tapa käsitellä sisäkkäisiä rakenteita on pistenotaatio
 > e.event_dates.starting_day
 '2020-10-23T07:00:00.000Z'
 >
@@ -339,15 +352,19 @@ true
 
 ## Filter-metodi
 
+> *"The filter() method creates a new array with all elements that pass the test implemented by the provided function."*
+>
+> [MDN web docs. Array.prototype.filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
+
 ```js
 > // filter luo uuden taulukon, jolle valitaan alkuperäiseltä taulukolta 
 > // sellaiset arvot, joille antamamme funktio palauttaa `true`:
-> let allTrue = events.filter(e => true);
+> let allTrue = events.filter(event => true);
 > allTrue.length
 5527 // kaikki valittiin!
 > 
 > // vastaavasti jos palautetaan false:
-> let allFalse = events.filter(e => false);
+> let allFalse = events.filter(event => false);
 > allFalse.length
 0 // mitään ei valittu!
 >
@@ -356,13 +373,17 @@ true
 > now
 '2020-10-09T10:47:00.111Z'
 >
-> let nextWeek = '2020-10-16T10:47:00.111Z';
+> let futureEvents = events.filter(event => {
+      return event.event_dates.starting_day >= now;
+  }
 ```
 
 Seuraavaksi halutaan rajata tapahtumat, joilla on alkuaika, ja joilla se sijoittuu kahden ajankohdan väliin:
 
 ```js
 > // Tapahtumat, joilla on alkuaika, ja se sijoittuu kahden ajankohdan väliin:
+> let nextWeek = '2020-10-16T10:47:00.111Z';
+>
 > let eventsNextWeek = events
     .filter(e => e.event_dates.starting_day != null)
     .filter(e => e.event_dates.starting_day >= now)
@@ -376,7 +397,7 @@ Miten voisimme siistiä koodia siten, että yllä oleva koodi ei tekisi kolmea f
 
 ```js
 function isBetweenDates(event) {
-    let { starting_day } = event.event_dates;
+    let { starting_day } = event.event_dates; // object destructuring
     return starting_day != null && starting_day >= now && starting_day <= nextWeek;
 }
 ```
@@ -391,12 +412,12 @@ Nyt `isBetweenDates` voidaan antaa parametrina `filter`-operaatiolle:
 612
 ```
 
-Yllä olevassa koodissa `isBetweenDates` on "kovakoodattu" vertailemaan tapahtuman alkuaikaa aina samoihin arvoihin `now` ja `nextWeek`. Olisikin paljon parempi, jos voisimme määritellä funktion kahdessa vaiheessa: ensin annetaan päivämäärät, ja sen jälkeen vertaillaan tapahtumaa:
+Yllä olevassa koodissa `isBetweenDates` on "kovakoodattu" vertailemaan tapahtuman alkuaikaa aina samoihin arvoihin `now` ja `nextWeek`. Olisikin paljon parempi, jos voisimme määritellä funktion kahdessa vaiheessa: ensin annetaan päivämäärät ja sen jälkeen vertaillaan tapahtumaa:
 
 ```js
 function isBetweenDates(minDate, maxDate) {
     return function (event) {
-        let { starting_day } = event.event_dates;
+        let { starting_day } = event.event_dates; // object destructuring
         return starting_day && minDate <= starting_day && starting_day <= maxDate;
     }
 }
@@ -408,13 +429,13 @@ Tämän `isBetweenDates`-funktion avulla voimme ensin luoda uuden funktion `isNe
 let isNextWeek = isBetweenDates('2020-10-09T00:00:00', '2020-10-16T24:00:00');
 ```
 
-Kun `isNextWeek` annetaan `filter`-operaatiolle, filter kutsuu antamaamme `isNextWeek`-funktiota jokaiselle tapahtumalle ja valikoi uudelle `eventsNextWeek`-taulukkolle ne tapahtumat, joille `isNextWeek` palauttaa arvon `true`:
+Kun `isNextWeek` annetaan `filter`-operaatiolle, filter kutsuu antamaamme `isNextWeek`-funktiota jokaiselle tapahtumalle. Funktio palauttaa `true` mikäli tapahtuman ajankohta sijoittuu seuraavalle viikolle, joten uudelle taulukkolle tulee vain seuraavan viikon tapahtumat:
 
 ```js
 let eventsNextWeek = events.filter(isNextWeek);
 ```
 
-Nyt melko monimutkainen operaatio, joka edellyttäisi perinteisesti taulukon luomisen, toistorakenteen, ehtorakenteen ja taulukkoon lisäykset, saadaan toteutettua suoraviivaisesti.
+Nyt melko monimutkainen operaatio, joka edellyttäisi perinteisesti taulukon luomisen, toistorakenteen, ehtorakenteen ja taulukkoon lisäykset, saatiin toteutettua kohtuullisen suoraviivaisesti.
 
 
 ### Funktioiden parametrien oletusarvot
@@ -424,7 +445,7 @@ JavaScriptin uusimmilla versioilla voimme antaa parametreille oletusarvot, joita
 ```js
 function isBetweenDates(minDate = '0000-01-01', maxDate = '9999-12-31') {
     return function (event) {
-        let { starting_day } = event.event_dates;
+        let { starting_day } = event.event_dates; // object destructuring
         return starting_day && minDate <= starting_day && starting_day <= maxDate;
     }
 }
@@ -434,11 +455,11 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Defa
 
 ### Järjestäminen alkamisajan mukaan
 
-JavaScriptin taulukoilla on valmis `sort`-metodi, jonka avulla sen sisältö voidaan järjestää. Tarvitset vain vertailufunktion, joka vertailee kahta tapahtumaa, ja kertoo kumman tulisi olla järjestyksessä ensimmäisenä:
+JavaScriptin taulukoilla on valmis `sort`-metodi, jonka avulla sen sisältö voidaan järjestää. Tarvitset tapahtumien järjestelemiseksi vertailufunktion, joka vertailee kahta tapahtumaa, ja kertoo kumman tulisi olla järjestyksessä ensimmäisenä:
 
-> *"The sort() method sorts the elements of an array in place and returns the sorted array."*
+> *"The sort() method sorts the elements of an array in place and returns the sorted array.*
 >
-> *"If compareFunction is supplied, all non-undefined array elements are sorted according to the return value of the compare function. If compareFunction(a, b) returns less than 0, sort a to an index lower than b (i.e. a comes first). If compareFunction(a, b) returns 0, leave a and b unchanged with respect to each other, but sorted with respect to all different elements."*
+> *If compareFunction is supplied, all non-undefined array elements are sorted according to the return value of the compare function. If compareFunction(a, b) returns less than 0, sort a to an index lower than b (i.e. a comes first). If compareFunction(a, b) returns 0, leave a and b unchanged with respect to each other, but sorted with respect to all different elements."*
 >
 > [MDN web docs. Array.prototype.sort()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
 
@@ -450,8 +471,9 @@ function eventDateComparator(event1, event2) {
     let event1date = event1.event_dates.starting_day || '';
     let event2date = event2.event_dates.starting_day || '';
 
-    // Palauttaa negatiivisen luvun, nollan tai positiivisen luvun riippuen merkkijonojen aakkosjärjestyksestä.
-    // Tämä toimii, koska starting_day on aina ISO-muotoinen String, kuten "2020-10-16T24:00:00".
+    // Palauttaa negatiivisen luvun, nollan tai positiivisen luvun 
+    // riippuen merkkijonojen aakkosjärjestyksestä. Tämä toimii, koska 
+    // starting_day on aina ISO-muotoinen String, esim. "2020-10-16T24:00:00".
     return event1date.localeCompare(event2date);
 }
 
@@ -462,7 +484,7 @@ events.sort(eventDateComparator);
 
 ## Express-harjoitus
 
-Miten voisimme hyödyntää toteuttamaamme logiikkaa osana verkkopalvelua? Nodelle on olemassa useita web-sovelluskehyksiä, joista *express* on hyvin suosittu:
+Miten voisimme hyödyntää toteuttamaamme logiikkaa osana verkkopalvelua? Nodelle on olemassa useita web-sovelluskehyksiä, joista [express](https://www.npmjs.com/package/express) on hyvin suosittu:
 
 > *"Fast, unopinionated, minimalist web framework for node."*
 >
@@ -474,7 +496,7 @@ Asennetaan express seuraavasti:
 $ npm install express --save
 ```
 
-Liitetään tapahtumien näyttäminen osaksi Expressin esimerkkisovellusta. Tarvoitteemme on, että palvelimemme vastaa pyyntöihin JSON-rakenteella, joka on rajattu annettujen päivämäärien mukaan ja järjestetty kronologiseen järjestykseen. Lisäominaisuuksina voimme toteuttaa myös "limit"-ominaisuuden tapahtumien määrän rajoittamiseksi.
+Liitetään seuraavaksi tapahtumien käsittely osaksi Expressin esimerkkisovellusta. Tarvoitteemme on, että palvelimemme vastaa pyyntöihin JSON-rakenteella, joka on rajattu annettujen päivämäärien mukaan ja järjestetty kronologiseen järjestykseen. Lisäominaisuuksina voimme toteuttaa myös "limit"-ominaisuuden tapahtumien määrän rajoittamiseksi.
 
 ```js
 // https://www.npmjs.com/package/express
@@ -513,6 +535,9 @@ Tässä esimerkissä luomme tapahtumia sisältävän taulukon perusteella uuden,
 [ 'helmet:214000', 'helmet:216844', 'helmet:216842', 'helmet:211890', 'helmet:214001', ... ]
 ```
 
+`map`-operaatio suoritti annetun funktion taulukon jokaiselle tapahtumalle ja muodosti funktion paluuarvoista uuden taulukon. Tässä tapauksessa funktio yksinkertaisesti palautti saamansa tapahtuman id:n, joten uusi lista koostuu id-arvoista.
+
+
 ### Etäisyyden lisääminen kaikille tapahtumille
 
 Meille erityisen hyödyllinen `map`-operaation käyttötapaus voisi olla etäisyyden lisääminen tapahtuman tietoihin. Kaikilla tapahtumilla on koordinaatit, joten meidän tulee vain laskea etäisyys kunkin tapahtuman koordinaattipisteen ja oman pisteemme välillä. Etäisyyden laskeminen on sen verran monimutkainen operaatio, että emme halua toteuttaa sitä omaan koodiimme. Sen sijaan käytämm evalmista `geolib`-kirjastoa:
@@ -537,8 +562,8 @@ const helsinkiCoordinates = { lat: 60.1733244, lon: 24.9410248 };
 let eventsWithDistance = events.map(event => {
     let eventCoordinates = { lat, lon } = event.location;
     return {
-        ...event, // kopioidaan tapahtuman tiedot palautettavaan olioon
-        distance: geolib.getDistance(helsinkiCoordinates, eventCoordinates) // lisätään myös distance
+        ...event, // "object spread"
+        distance: geolib.getDistance(helsinkiCoordinates, eventCoordinates) // lisätään uusi attribuutti!
     }
 });
 ```
@@ -548,15 +573,18 @@ Huomaa, että yllä oleva koodi ei muuta alkuperäistä `events`-taulukkoa eikä
 
 ### Currying
 
-Yllä olevassa koodiesimerkissä `map`-operaatiolle annettu funktio on sidottu `helsinkiCoordinates`-muuttujaan. Haluaisimme kuitenkin ohjelmassamme todennäköisesti laskea etäisyyksiä monipuolisesti, joten eri etäisyysfunktiot olisi tarpeen sitoa eri muuttujien arvoihin. 
+Yllä olevassa koodiesimerkissä `map`-operaatiolle annettu funktio on sidottu `helsinkiCoordinates`-muuttujaan. Haluaisimme kuitenkin ohjelmassamme todennäköisesti laskea etäisyyksiä monipuolisesti, joten eri etäisyysfunktiot olisi tarpeen sitoa eri muuttujien arvoihin:
+
+```js
+const helsinkiCoordinates = { lat: 60.1733244, lon: 24.9410248 };
+const espooCoordinates = { lat: 60.205491, lon: 24.655900 };
+const rovaniemiCoordinates = { lat: 66.503059, lon: 25.726967 };
+```
 
 Voimme ratkaista ongelman soveltaen currying-tekniikkaa! Ensin lukitsemme koordinaattipisteen ja sen jälkeen kutsumme sisempää funktiota tapahtumaolioiden kanssa!
 
-
 ```js
-// ensimmäinen funktiokutsu sitoo `point`-muuttujan arvon sulkeumaan:
 function getDistanceTo(point) {
-    // toista funktiota kutsutaan vain tapahtumaolion kanssa:
     return function (event) {
         return geolib.getDistance(point, event.location);
     }
@@ -625,10 +653,23 @@ eventsWithDistances.sort((event1, event2) => event1.distance - event2.distance);
 
 Katso lisätietoa järjestämisestä ylempää kodasta "Järjestäminen alkamisajan mukaan".
 
+----
+
+## Map-harjoitus
+
+Lisätään express-sovellukseen logiikka etäisyyden lisäämiseksi, mikäli koordinaattipisteet on annettu HTTP-pyynnön parametreina.
+
+----
 
 ## Fetch, Promiset, async ja await
 
-Asynkroniset fetch- ja json-kutsut palauttavat Promise-oliota. Promise-olion tapahtumankuuntelija asetetaan kutsumalla Promisen `then`-metodia ja antamalla sille callback-funktio, jota kutsutaan, kun promisen operaatio on valmistunut. Peräkkäisiä Promise-oliota voidaan myös ketjuttaa, jolloin ensimmäisenä Promisen `then`-metodille annettu funktio suoritetaan aina ennen seuraavia kutsuja, ja edeltävän funktion palauttama arvo välitetään aina seuraavalle funktiolle. Tästä käytetään myös termiä "putkitus" eli piping.
+Asynkroniset kutsut, kuten `fetch`, palauttavat Promise-oliota:
+
+> *"A Promise is a proxy for a value not necessarily known when the promise is created. It allows you to associate handlers with an asynchronous action's eventual success value or failure reason. This lets asynchronous methods return values like synchronous methods: instead of immediately returning the final value, the asynchronous method returns a promise to supply the value at some point in the future.*"
+>
+> [MDN web docs. Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+
+Promise-olion tapahtumankuuntelija asetetaan kutsumalla Promisen `then`-metodia ja antamalla sille funktio, jota kutsutaan, kun promisen operaatio on valmistunut. Peräkkäisiä Promise-oliota voidaan myös ketjuttaa, jolloin ensimmäisenä Promisen `then`-metodille annettu funktio suoritetaan aina ennen seuraavia kutsuja, ja edeltävän funktion palauttama arvo välitetään aina seuraavalle funktiolle. Tästä käytetään myös termiä "putkitus" eli piping.
 
 Katso seuraavat videot `fetch`-funktion ja sen palauttamien `Promise`-olioiden käyttämisestä:
 
@@ -650,7 +691,7 @@ Katso seuraavat videot `fetch`-funktion ja sen palauttamien `Promise`-olioiden k
 
 ## Fetch-harjoitus
 
-Tähän asti olemme lukeneet tapahtumien JSON-rakenteen levyltä synkronisesti `require`-funktiolla. Tämä on tapahtunut synkronisesti, eli lukeminen on tehty loppuun ennen seuraavalle riville etenemistä. Tyypillisesti tiedostojen lukeminen, tietokantakyselyt ja http-pyynnöt tapahtuvat kuitenkin asynkronisesti, eli vastausta ei jäädä odottamaan, vaan ohjelman suoritus siirtyy suoraan eteenpäin. Asynkronisten operaatioiden valmistumisen jälkeen niiden tuloksia pystytään hyödyntämään esimerkiksi Promise-olioiden ja then-metodin avulla.
+Tähän asti olemme lukeneet tapahtumien JSON-rakenteen paikallisesta tiedostosta `require`-funktiolla. Tämä on tapahtunut synkronisesti, eli lukeminen on tehty loppuun ennen seuraavalle riville etenemistä. Tyypillisesti tiedostojen lukeminen, tietokantakyselyt ja http-pyynnöt tapahtuvat kuitenkin asynkronisesti, eli vastausta ei jäädä odottamaan, vaan ohjelman suoritus siirtyy suoraan eteenpäin. Asynkronisten operaatioiden valmistumisen jälkeen niiden tuloksia pystytään hyödyntämään esimerkiksi edellä videoissa käsiteltyjen Promise-olioiden ja then-metodin avulla.
 
 Asennetaan ensin `node-fetch`-niminen paketti, jonka avulla pystymme käyttämään selaimista tuttua `fetch`-funktioita http-pyyntöjen tekemiseen:
 
@@ -659,7 +700,7 @@ Asennetaan ensin `node-fetch`-niminen paketti, jonka avulla pystymme käyttämä
 > https://www.npmjs.com/package/node-fetch
 
 ```
-$ npm install node-fetch
+$ npm install node-fetch --save
 ```
 
 HTTP-pyyntö voidaan tehdä nyt sovelluksessa seuraavasti:
@@ -670,7 +711,7 @@ const fetch = require('node-fetch');
 let httpPromise = fetch('http://open-api.myhelsinki.fi/v1/events/');
 ```
 
-**Tuntidemo asynkronisesta ohjelmoinnista, putkituksesta sekä async/await.***
+**Tuntidemo asynkronisesta ohjelmoinnista, putkituksesta sekä async/await.**
 
 ----
 
@@ -680,13 +721,26 @@ let httpPromise = fetch('http://open-api.myhelsinki.fi/v1/events/');
 >
 > [MDN web docs. Array.prototype.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
 
-Reducen avulla voidaan tyypillisesti selvittää esimerkiksi kokoelman suurin tai pienin arvo, kaikkien arvojen summa tai muita vastaavia operaatioita. Reducen avulla voidaan kuitenkin toteuttaa myös muunlaisia operaatioita, joissa käsitellään yksi kerrallaan kokoelman arvot.
+Reducen avulla voidaan tyypillisesti selvittää esimerkiksi kokoelman suurin tai pienin arvo, kaikkien arvojen summa tai muita vastaavia operaatioita. Reducen avulla voidaan kuitenkin toteuttaa lähes mitä vain operaatioita, joissa käsitellään yksi kerrallaan jonkin tietyn kokoelman arvot.
 
 ```js
 let tulos = taulukko.reduce(( koottuArvo, nykyinenArvo ) => {
-    /* operaatio, jonka paluuarvoa käytetään seuraavana koottunaArvona */
+    /* operaatio, jonka paluuarvoa on seuraava koottuArvo */
     return X;
-}, kokoojanAlkuarvo);
+}, vapaaehtoinenAlkuarvo);
+```
+
+Kokonaislukutaulukon summa voitaisiin laskea reducen avulla esimerkiksi seuraavasti:
+
+```js
+let numerot = [1, 2, 3, 4, 5];
+
+let summa = numerot.reduce( (summa, seuraava) => { 
+    return summa + seuraava; // palautetaan aina uusi summa
+}, 0); // alkuarvo summalle on nolla
+
+// sama kuin:
+let summa = numerot.reduce( (summa, seuraava) => summa + seuraava, 0);
 ```
 
 Sekä `map` että `filter` on toteutettavissa `reduce`:n avulla. Tällöin koottava arvo on uusi taulukko, ja alkuperäisen taulukon arvot redusoidaan uudelle taulukolle joko ehdon täyttyessä (filter) tai muutettuna (map):
@@ -714,6 +768,7 @@ let tuplattu = [1, 2, 3, 4, 5].reduce((uusiTaulukko, arvo) => {
 ```
 
 Reduce onkin erittäin monikäyttöinen operaatio, ja sen avulla onnistuu luontevasti myös esimerkiksi taulukon arvojen ryhmitteleminen tietyn avaimen mukaan. Voit lukea aiheesta lisää Googlesta hakusanoilla "JavaScript reduce group by" tai [tästä artikkelista](https://learnwithparam.com/blog/how-to-group-by-array-of-objects-using-a-key/).
+
 
 ## Bonus: JavaScriptin totuusarvot ja niiden vertailu
 
@@ -759,7 +814,7 @@ false
 
 ### Taulukoiden vertailu
 
-Taulukoita vertailtaessa `==` ja `===` molemmat tarkastavat, onko kyseessä sama taulukko. __Taulukoiden sisältöjä ei vertailla.__
+Taulukoita vertailtaessa JavaScript tutkii, onko kyseessä sama taulukko. __Taulukoiden sisältöjä ei vertailla.__
 
 ```js
 > [1, 2, 3] === [1, 2, 3]
@@ -770,7 +825,7 @@ false
 
 ### Olioiden vertailu
 
-Kuten taulukoiden kanssa, myös olioita vertailtaessa tarkastetaan ovatko oliot **samat**, eikä niiden sisältöä vertailla.
+Kuten taulukoiden kanssa, myös olioita vertailtaessa tarkastetaan ovatko oliot samat. __Olioiden sisältöjä ei vertailla.__
 
 ```js
 > { language: "JavaScript" } === { language: "JavaScript" }
@@ -838,9 +893,9 @@ Data tulee hakea dynaamisesti jokaiselle pyynnölle, **eli ei tallentaa etukäte
 * käyttäjät: https://jsonplaceholder.typicode.com/users
 * postaukset: https://jsonplaceholder.typicode.com/posts
 
-Saat itse valita, palauttaako HTTP-palvelusi datan JSON-muodossa (helpointa) vai muodostatko datan perusteella HTML-sivun esimerkiksi pug-templaten avulla.
+Saat itse valita, palauttaako HTTP-palvelusi datan JSON-muodossa (helpointa) vai muodostatko datan perusteella HTML-sivun esimerkiksi [pug-sivupohjien avulla](https://expressjs.com/en/guide/using-template-engines.html) (haastava).
 
-Lopputuloksena palvelusi tulee palauttaa taulukko käyttäjistä, jossa kunkin käyttäjän postaukset ovat ryhmiteltynä käyttäjän alle taulukkoksi. Yksittäisen käyttäjän osalta lopputulos voi olla esimerkiksi seuraava:
+Lopputuloksena palvelusi tulee palauttaa JSON-taulukko tai HTML-sivu käyttäjistä, jossa kunkin käyttäjän omat postaukset ovat ryhmiteltynä käyttäjän alle. Yksittäisen käyttäjän osalta lopputulos voi olla esimerkiksi seuraava:
 
 ```
 curl http://localhost:3000/users
@@ -895,13 +950,15 @@ curl http://localhost:3000/users
 
 ## Valmiiden kirjastojen käyttäminen
 
-Tämän tehtävän ratkaisemiseksi et tarvitse välttämättä ulkoisia kirjastoja tai `npm`-komentoa. Pelkkä Node.js voi hyvin riittää. Sinulle saattaa kuitenkin olla hyötyä kirjastoista, kuten [express](https://www.npmjs.com/package/express), [axios](https://www.npmjs.com/package/axios) tai [node-fetch](https://www.npmjs.com/package/node-fetch). Myös apukirjastojen, kuten [lodash](https://www.npmjs.com/package/lodash) käyttäminen on sallittua.
+Tämän tehtävän ratkaisemiseksi et tarvitse välttämättä ulkoisia kirjastoja tai `npm`-komentoa. Pelkkä Node.js voi hyvin riittää. Sinulle saattaa kuitenkin olla hyötyä kirjastoista, kuten [express](https://www.npmjs.com/package/express), [axios](https://www.npmjs.com/package/axios) tai [node-fetch](https://www.npmjs.com/package/node-fetch). Myös apukirjastojen, kuten [lodash](https://www.npmjs.com/package/lodash) käyttäminen on sallittua eivätkä ne vaikuta arvosanaan.
+
 
 ## Pyyntöjen samanaikaisuus
 
 Koska HTTP-pyynnöt ovat JavaScriptissä asynkronisia, käyttäjien ja postausten lataaminen voidaan tehdä joko rinnakkain tai yksi kerrallaan. 
 
-Tämän tehtävän kannalta ei ole merkitystä kumman tavan valitset, mutta harjoituksen vuoksi suosittelen pyrkimään lataamaan tiedostot samanaikaisesti rinnakkain. Tähän ei tarvita erillisiä työkaluja, vaan riittää että käsittelet Promiset "tavallisina olioina", joiden then-metodia ei ole pakko kutsua välittömästi. Voit siis itse valita, missä haluat kunkin Promise-olion tulosta käyttää. Myös `Promise.all`-funktiosta voi olla apua.
+Tämän tehtävän tai sen arvosanan kannalta ei ole merkitystä kumman tavan valitset, mutta harjoituksen vuoksi suosittelen pyrkimään lataamaan tiedostot samanaikaisesti rinnakkain. Tähän ei tarvita erillisiä työkaluja, vaan riittää että muistat, että Promiset ovat "tavallisia olioita", jotka voit asettaa muuttujiin, ja joiden then-metodia ei ole pakko kutsua välittömästi. Myös `Promise.all`-funktiosta voi olla apua.
+
 
 ## Vinkit datan käsittelyyn
 
@@ -911,5 +968,7 @@ Vaihtoehtoisesti voit myös ratkaista tehtävän täysin ilman `map`, `filter`, 
 
 ## Tehtävän palauttaminen
 
-Palauta kaikki ratkaisuusi liittyvät lähdekoodit sekä mahdollinen `package.json` erillisinä tiedostoina Teamsiin ennen seuraavaa oppituntia. Nimeä `.js`-päätteiset tiedostot `.js.txt`-päätteisiksi, mikäli Teams ei hyväksy tiedostojasi tietoturvasyistä.
+Myös osittain ratkaistut palautukset hyväksytään ja arvostellaan suhteessa niiden valmiusasteeseen. Palauta kaikki ratkaisuusi liittyvät lähdekoodit sekä mahdollinen `package.json` erillisinä tiedostoina Teamsiin ennen seuraavaa oppituntia. 
+
+**Nimeä `.js`-päätteiset tiedostot `.js.txt`-päätteisiksi, mikäli Teams ei hyväksy tiedostojasi tietoturvasyistä.**
 
