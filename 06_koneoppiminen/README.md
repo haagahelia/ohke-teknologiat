@@ -12,6 +12,8 @@ Koneoppimisessa on kyse siitä, että datan avulla tietokone voidaan opettaa rat
 Yksinkertaisia ongelmia voi mallintaa lineaarisilla funktioilla. Kerätyn datan perusteella, voimme laskea lineaariselle *tavoitefunktiolle (objective function)* painokertoimet ja tehdä ennusteen uudelle datapisteelle. Rakennetun mallin hyvyyttä voidaan mitata esimerkiksi [Root Mean Square Error](https://en.wikipedia.org/wiki/Root-mean-square_deviation):lla (eli lasketaan toteutumien ja ennustefunktion antamien arvojen erotusten (keltaiset viivat kuvassa) neliöiden summa, jaetaan se toteutumien määrällä (3 kpl kuvassa) ja otetaan neliöjuuri tästä).
 ![lineaarinen tavoitefunktio, hävikkifunktio (loss function), optimointifunktio (gradient descent), ](img/lineaarinen_tavoitefunktio.png)
 
+[Tässä esimerkki lineaarisesta mallista Google Sheetissä, jota käydään läpi tunnilla.](https://docs.google.com/spreadsheets/d/1vCNstzPycii9qNs1EA8imoUEZH-EQR7uqQN6fE7XN90/copy)
+
 Usein reaalimaailman asiat ja ilmiöt ovat sen verran monimutkaisia, että lineaarinen ennustemalli olisi hyvin epätarkka. Tällöin voidaan käyttää sen sijaan epälineaarista tavoitefunktiota.
 ![epälineaarinen tavoitefunktio, ylisovittaminen (overfitting)](img/epalineaarinen_tavoitefunktio.png)
 
