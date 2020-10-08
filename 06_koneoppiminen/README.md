@@ -47,7 +47,9 @@ Jotta kone voi oppia esimerkiksi kuvadatasta, pitää kuvadata muokata koneen ym
 
 ## Koneoppiminen käytännössä
 
-Koneoppimiseen liitty useita kirjastoja ja työkaluja, joilla kaikilla on oma roolinsa koneoppimismallien rakentamisessa tai havainnollistamisessa.
+Koneoppimiseen liitty useita kirjastoja ja työkaluja, joilla kaikilla on oma roolinsa koneoppimismallien rakentamisessa tai havainnollistamisessa. 
+
+*(Yleisesti on todettava, että koneoppimiskirjastojen rajapinnat eivät ole vielä valitettavasti kehittyneet aivan yhtä korkealle abstraktiotasolle (ja helppokäyttöisiksi) kuin esimerkikiksi webohjelmointiin liittyvät kirjastot. Kuten muussakin ohjelmoinnissa, hyvä tapa lähteä liikkeelle koneoppimismallien rakentamisessa on pyrkiä etsimään esimerkki, joka tekee melkein saman asian jota itse yrittää tehdä ja sitten muokata esimerkkiä omiin tarpeisiin sopivaksi. Internetistä löytyy paljon esimerkiksi Googlen Colaboratoryllä tehtyjä esimerkkipohjia erilaisiin koneoppimisskenaarioihin.)*
 
 1. [Python](https://www.python.org/) on ohjelmointikieli, jolla on kirjoitettu lukuisia koneoppimiseen liittyviä kirjastoja ja rajapintoja. Suurin osa koneoppimisohjelmista ohjelmoidaan Pythonilla. 
 1. [Jupyter Notebook](https://jupyter.org/) on työkalu, jolla voi kirjoittaa koodia, tehdä dokumentointia, piirtää graafeja jne. Se on vähän kuin steroideja syönyt tekstieditori. Selkeyttää ja visualisoi koneoppimismallien rakentamista. 
@@ -59,10 +61,9 @@ Koneoppimiseen liitty useita kirjastoja ja työkaluja, joilla kaikilla on oma ro
 1. [Matplotlib](https://matplotlib.org/) on kirjasto datasettien visualisointiin.
 1. [Google Colaboratory](https://colab.research.google.com/notebooks/intro.ipynb) on selaimessa pyörivä ympäristö, jossa voi ajaa yllä kuvattuja työkaluja asentamatta niitä itse. Colaboratoryssä tehtyjä Notebookkeja voi jakaa Google driven kautta helposti muille. 
 1. [Ibm:n Watson Assistant](https://www.ibm.com/cloud/watson-assistant/) on esimerkiksi yksi koneoppimiseen perustuva helposti käytettävä ja kehittynyt luonnollisen kielen tulkintaan keskittyvä palvelu, jonka voi konfiguroida omiin tarpeisiinsa jopa ilman ohjelmointitaitoja.
+1. Suomalainen [aito.ai](https://aito.ai/) tarjoaa esimerkiksi korkean abstraktiotason työkalua ennusteiden laatimiseen tietokantadatasta. Samoin kuin SQL-kannasta voit kysellä dataan liittyen historiatietoja, niin heidän palvelullaan voit datan perusteella kysyä myös ennusteita tulevaisuuteen. Dataan liittyvä koneoppiminen toimii konepellin alla ja kehittäjälle asiat näyttäytyvät vain helppokäyttöisenä rajapintana. Tämä on uskoakseni koneoppimistyökalujen suunta.
 
 Jos yllä olevat koneoppimiskirjastot haluaa asentaa oikeasti omalle koneelleen, eikä vain pyörittää niitä selaimessa, niin esimerkiksi [tässä blogissa](https://medium.com/@margaretmz/anaconda-jupyter-notebook-tensorflow-and-keras-b91f381405f8) on siihen hyvät ohjeet.
-
-Yleisesti on todettava, että koneoppimiskirjastojen rajapinnat eivät ole vielä valitettavasti kehittyneet aivan yhtä korkealle abstraktiotasolle (ja helppokäyttöisiksi) kuin esimerkikiksi webohjelmointiin liittyvät kirjastot. Kuten muussakin ohjelmoinnissa, hyvä tapa lähteä liikkeelle koneoppimismallien rakentamisessa on pyrkiä etsimään esimerkki, joka tekee melkein saman asian jota itse yrittää tehdä ja sitten muokata esimerkkiä omiin tarpeisiin sopivaksi. Internetistä löytyy paljon esimerkiksi Googlen Colaboratoryllä tehtyjä esimerkkipohjia erilaisiin koneoppimisskenaarioihin.
 
 Tällä kurssilla havainnollistetaan koneoppimista käytännössä seuraavien Colaboratory notebookkien avulla:
 
