@@ -596,11 +596,11 @@ Pilvipalvelujen ansiosta kehittäjän työ on monessa kohtaa tehostunut ja kehit
 
 ## Tehtävät
 
-### Tehtävä 4.1
+### Tehtävä 4.1 (40% kierroksen arvosanasta)
 
 Kirjoita scripti (lokittaja.sh), joka tarvittaessa luo ja sitten kirjoittaa tiedostoon *loki.log* tämän hetken kellonajan ja tekstin “heippa”. Käytä googlea selvittääksesi miten parhaiten saat aikaleiman tulostettua scriptiin. Ajasta scripti chronilla pyörimään minuutin välein. Kirjoita toinen scripti (tyhjentaja.sh), joka kopioi *loki.log*-tiedoston sisällön *vanhatlogit.log*-tiedoston loppuun ja sitten poistaa *loki.log*-tiedoston. Ajasta tyhjentaja-scripti pyörimään chronissa joka keskiyö. Palauta luomasi kaksi linux-skriptiä (lokittaja.sh ja tyhjentaja.sh) sekä tiedostossa /var/spool/cron/crontabs/kayttajatunnus sijaitseva cron-tiedosto, josta näkyy tekemäsi ajastukset. Vinkki: cron-tiedoston käsittelyyn (palautusta varten) tarvitset todennäköisesti sudo-komentoa.
 
-### Tehtävä 4.2
+### Tehtävä 4.2 (60% kierroksen arvosanasta)
 
 Ota testausosiossa kirjoittamasi python-ohjelma (tai tehtävän mallivastaus tarvittaessa) ja siihen liittyvät yksikkötestit. Pushaa tämä sovellus itsellesi githubiin ja liitä siihen TravisCI monitorointi seuraavasti: 
 
