@@ -1,19 +1,21 @@
-# ES6, JavaScript, node (+mongo)
+# ES6, JavaScript, node (+MongoDB)
 
-- [ES6, JavaScript, node (+mongo)](#es6-javascript-node-mongo)
+- [ES6, JavaScript, node (+MongoDB)](#es6-javascript-node-mongodb)
   - [Oppitunnin tavoitteet](#oppitunnin-tavoitteet)
   - [JavaScriptin ohjelmointityylit](#javascriptin-ohjelmointityylit)
   - [Uusien ominaisuuksien selaintuki](#uusien-ominaisuuksien-selaintuki)
   - [ES6](#es6)
-  - [Muut tunnilla käsiteltävät tekniikat](#muut-tunnilla-ksiteltävät-tekniikat)
+  - [Muut tunnilla käsiteltävät tekniikat](#muut-tunnilla-käsiteltävät-tekniikat)
 - [Tapahtumien käsitteleminen `map`, `filter` ja `reduce` -operaatioilla](#tapahtumien-käsitteleminen-map-filter-ja-reduce--operaatioilla)
   - [Esivalmistelu: staattisen aineiston hakeminen](#esivalmistelu-staattisen-aineiston-hakeminen)
   - [Tapahtuma JSON:in tuominen Node REPL:iin (Read-Evaluate-Print-Loop)](#tapahtuma-jsonin-tuominen-node-repliin-read-evaluate-print-loop)
   - [Filter-metodi](#filter-metodi)
   - [Map](#map)
+  - [Express-harjoitus](#express-harjoitus)
   - [Fetch, Promiset, async ja await](#fetch-promiset-async-ja-await)
+  - [Fetch-harjoitus](#fetch-harjoitus)
   - [Reduce](#reduce)
-  - [JavaScriptin totuusarvot ja niiden vertailu](#javascriptin-totuusarvot-ja-niiden-vertailu)
+  - [Bonus: JavaScriptin totuusarvot ja niiden vertailu](#bonus-javascriptin-totuusarvot-ja-niiden-vertailu)
 - [Tehtävä](#tehtävä)
   - [Tehtävän data](#tehtävän-data)
   - [Valmiiden kirjastojen käyttäminen](#valmiiden-kirjastojen-käyttäminen)
@@ -21,6 +23,7 @@
   - [Vinkit datan käsittelyyn](#vinkit-datan-käsittelyyn)
   - [Tehtävän palauttaminen](#tehtävän-palauttaminen)
 
+## Alkusanat
 
 Opintojen tässä vaiheessa olette käyttäneet JavaScriptiä eri kursseilla ja useissa useissa eri tilanteissa. JavaScriptiä on melko suoraviivaista "käyttää" ilman varsinaista ymmärrystä siitä, miten ohjeissa esitetyt syntaksit oikeasti toimivat.
 
@@ -35,6 +38,9 @@ var element = React.createElement("h1", null, "Hello, world!");
 ```
 
 Kaikki koodi, joka kirjoitetaan JavaScriptillä, ei siis ole välttämättä suoraan suoritettavissa ilman erilaisia käännösvaiheita. Kääntäminen tehdään usein taustalla [Babel](http://babeljs.io/)-työkalulla, joka muuttaa esimerkiksi yllä olevan JSX-koodin tavallisiksi JavaScript-rakenteiksi. Samoin Babel osaa muuntaa JavaScriptin modernimmilla versioilla toteutetut syntaksit vanhempien selainten tukemaan muotoon. Muunnoksista johtuen voi joskus olla haastavaa hahmottaa, mitkä asiat ovat "natiivi JavaScriptiä" ja mitkä eri kirjastoihin tai ohjelmistokehyksiin liittyviä ominaisuuksia.
+
+Aiheessa esiintyvä MongoDB-tietokanta ei ole osa oppitunnin sisältöä eikä oppituntiin liittyvää kotitehtävää, vaan osa tämän aihealueen seminaariosuutta.
+
 
 ## Oppitunnin tavoitteet
 
@@ -452,6 +458,46 @@ function eventDateComparator(event1, event2) {
 events.sort(eventDateComparator);
 ```
 
+----
+
+## Express-harjoitus
+
+Miten voisimme hyödyntää toteuttamaamme logiikkaa osana verkkopalvelua? Nodelle on olemassa useita web-sovelluskehyksiä, joista *express* on hyvin suosittu:
+
+> *"Fast, unopinionated, minimalist web framework for node."*
+>
+> https://www.npmjs.com/package/express
+
+Asennetaan express seuraavasti:
+
+```
+$ npm install express --save
+```
+
+Liitetään tapahtumien näyttäminen osaksi Expressin esimerkkisovellusta. Tarvoitteemme on, että palvelimemme vastaa pyyntöihin JSON-rakenteella, joka on rajattu annettujen päivämäärien mukaan ja järjestetty kronologiseen järjestykseen. Lisäominaisuuksina voimme toteuttaa myös "limit"-ominaisuuden tapahtumien määrän rajoittamiseksi.
+
+```js
+// https://www.npmjs.com/package/express
+const express = require('express');
+const app = express();
+ 
+app.get('/', function (req, res) {
+  res.send('Hello World');
+})
+ 
+app.listen(3000);
+```
+
+Harjoituksessä käytämme query-parametreja päivämäärien rajaamiseksi:
+
+* https://expressjs.com/en/4x/api.html#req.query
+
+Palvelin vastaa pyyntöihin JSON-muodossa:
+
+* https://expressjs.com/en/4x/api.html#res.json
+
+----
+
 ## Map 
 
 > *The map() method creates a new array populated with the results of calling a provided function on every element in the calling array.*
@@ -600,7 +646,33 @@ Katso seuraavat videot `fetch`-funktion ja sen palauttamien `Promise`-olioiden k
 
 > *"Promises make asynchronous programming much easier than the traditional event-listener or callback approaches. This video explains promises, promise-chaining, and complex error-handling."*
 
+----
 
+## Fetch-harjoitus
+
+Tähän asti olemme lukeneet tapahtumien JSON-rakenteen levyltä synkronisesti `require`-funktiolla. Tämä on tapahtunut synkronisesti, eli lukeminen on tehty loppuun ennen seuraavalle riville etenemistä. Tyypillisesti tiedostojen lukeminen, tietokantakyselyt ja http-pyynnöt tapahtuvat kuitenkin asynkronisesti, eli vastausta ei jäädä odottamaan, vaan ohjelman suoritus siirtyy suoraan eteenpäin. Asynkronisten operaatioiden valmistumisen jälkeen niiden tuloksia pystytään hyödyntämään esimerkiksi Promise-olioiden ja then-metodin avulla.
+
+Asennetaan ensin `node-fetch`-niminen paketti, jonka avulla pystymme käyttämään selaimista tuttua `fetch`-funktioita http-pyyntöjen tekemiseen:
+
+> *"node-fetch: a light-weight module that brings window.fetch to Node.js"*
+>
+> https://www.npmjs.com/package/node-fetch
+
+```
+$ npm install node-fetch
+```
+
+HTTP-pyyntö voidaan tehdä nyt sovelluksessa seuraavasti:
+
+```js
+const fetch = require('node-fetch');
+
+let httpPromise = fetch('http://open-api.myhelsinki.fi/v1/events/');
+```
+
+**Tuntidemo asynkronisesta ohjelmoinnista, putkituksesta sekä async/await.***
+
+----
 
 ## Reduce
 
@@ -643,7 +715,7 @@ let tuplattu = [1, 2, 3, 4, 5].reduce((uusiTaulukko, arvo) => {
 
 Reduce onkin erittäin monikäyttöinen operaatio, ja sen avulla onnistuu luontevasti myös esimerkiksi taulukon arvojen ryhmitteleminen tietyn avaimen mukaan. Voit lukea aiheesta lisää Googlesta hakusanoilla "JavaScript reduce group by" tai [tästä artikkelista](https://learnwithparam.com/blog/how-to-group-by-array-of-objects-using-a-key/).
 
-## JavaScriptin totuusarvot ja niiden vertailu
+## Bonus: JavaScriptin totuusarvot ja niiden vertailu
 
 Kuten kurssin aikaisemmalla oppitunnilla todettiin, JavaScriptissä vertailuoperaatiot tehdään usein kolmella merkillä eli `===` tai `!==`. Kolmen merkin vertailuoperaatiot tarkastavat, että vertailtavien arvojen tyyppi on sama. Mikäli tyyppitarkastus jätetään tekemättä, JavaScript vertailee tyhjiä ja nollaan vertautuvia arvoja epäloogisesti.
 
@@ -731,7 +803,15 @@ assert.deepStrictEqual({ language: "JavaScript" }, { language: "JavaScript" });
 https://nodejs.org/api/assert.html#assert_assert_deepstrictequal_actual_expected_message
 
 
-
+<!--
+  let title; // Tarkastetaan onko suomenkielistä name atribuuttia saatavilla
+  if (props.item.name.fi !== null) {
+    // jos ei ole käytetään englanninkieleistä
+    title = props.item.name.fi;
+  } else if (props.item.name.en !== null) {
+    title = props.item.name.en;
+  }
+-->
 
 
 
