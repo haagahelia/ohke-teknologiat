@@ -52,7 +52,15 @@ Video: <a href="https://web.microsoftstream.com/video/f3903449-9188-47ca-8cc6-7c
 
  </td></tr>
  <tr><td>pe 2.10.</td><td><a href="04_infra_ja_automaatio">Infra + automaatio</a></td></tr>
- <tr><td>pe 9.10.</td><td><a href="05_es6_node_mongo">ES6 / JavaScript, node, mongo</a></td></tr>
+ <tr><td>pe 9.10.</td><td><a href="05_es6_node_mongo">ES6 / JavaScript, node, mongo</a><br/><br/>
+ 
+ <a href="05_es6_node/mongo/src/">Lähdekoodit</a><br/><br/>
+
+Video: <a href="https://web.microsoftstream.com/video/39d4bf67-7258-4d9c-9e21-b6a74ceadcde">ES6:n ominaisuudet ja syntaksit</a><br /><br />
+
+Video: <a href="https://web.microsoftstream.com/video/247c0aba-772c-4331-833c-c1ec217e0f60">Node, express, filter, fetch, promiset ja async/await</a>
+
+ </td></tr>
  <tr><td>pe 16.10.</td><td>Koneoppiminen</td></tr>
  <tr><td><del>pe 23.10.</del></td><td><del>Intensiiviviikko</del></td></tr>
  <tr><td>pe 30.10.</td><td>Azure</td></tr>
