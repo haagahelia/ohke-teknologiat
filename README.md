@@ -54,7 +54,7 @@ Video: <a href="https://web.microsoftstream.com/video/f3903449-9188-47ca-8cc6-7c
  <tr><td>pe 2.10.</td><td><a href="04_infra_ja_automaatio">Infra + automaatio</a></td></tr>
  <tr><td>pe 9.10.</td><td><a href="05_es6_node_mongo">ES6 / JavaScript, node, mongo</a><br/><br/>
  
- <a href="05_es6_node/mongo/src/">Lähdekoodit</a><br/><br/>
+ <a href="05_es6_node_mongo/src/">Lähdekoodit</a><br/><br/>
 
 Video: <a href="https://web.microsoftstream.com/video/39d4bf67-7258-4d9c-9e21-b6a74ceadcde">ES6:n ominaisuudet ja syntaksit</a><br /><br />
 
