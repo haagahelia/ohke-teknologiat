@@ -1,3 +1,5 @@
 language: python
 script:
-  - pytest
+  - coverage run --source=. -m pytest . --pylint --pylint-error-types=EF
+after_success:
+  - coverage report
