@@ -68,7 +68,6 @@ Jos yllä olevat koneoppimiskirjastot haluaa asentaa oikeasti omalle koneelleen,
 Tällä kurssilla havainnollistetaan koneoppimista käytännössä seuraavien Colaboratory notebookkien avulla:
 
 1. [Pandas-kirjaston perusteet](https://colab.research.google.com/notebooks/mlcc/intro_to_pandas.ipynb#scrollTo=av6RYOraVG1V) <!--datasettinä https://download.mlcc.google.com/mledu-datasets/california_housing_train.csv-->
-1. [TensorFlow:n peruskäsitteet](https://colab.research.google.com/notebooks/mlcc/tensorflow_programming_concepts.ipynb)
 1. [Lineaarisen mallin rakentamienn TensorFlow 1:lla](https://colab.research.google.com/drive/1gdnOajkVQ66tupq5peMEDoQE3ubkgOl6#scrollTo=ajVM7rkoYXeL)
 1. [Neuroverkon rakentaminen TensoFlow 1:lla](https://colab.research.google.com/notebooks/mlcc/intro_to_neural_nets.ipynb#scrollTo=AGOM1TUiKNdz)
 
