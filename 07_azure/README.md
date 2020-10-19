@@ -27,7 +27,6 @@ https://azure.microsoft.com/en-us/services/machine-learning/
 https://docs.microsoft.com/en-us/azure/machine-learning/studio-module-reference/machine-learning-initialize-model-clustering (klusterointimoduuli yleinen)
 https://docs.microsoft.com/en-us/azure/machine-learning/studio-module-reference/k-means-clustering (k-means, moduuli)
 https://docs.microsoft.com/en-us/azure/machine-learning/studio-module-reference/assign-data-to-clusters (assign new data to clusters, after training)
-https://docs.microsoft.com/en-us/azure/machine-learning/algorithm-module-reference/k-means-clustering (algoritmi)
 -->
 
 ## Demo 3: Enterprise Azure, Houston Inc.
