@@ -3,6 +3,8 @@
  */
 const fetch = require('node-fetch');
 
+const fs = require('fs');
+
 async function getEventsAsync() {
     let response = await fetch('http://open-api.myhelsinki.fi/v1/events/');
     let json = await response.json();
@@ -12,37 +14,45 @@ async function getEventsAsync() {
 
 //TODO: Pitäsikö eventit ajaa map-rakenteeseen, jossa eventin nimi olisi avaimena, eli
 //ei otettaisi samannimisiä eventtejä useaan kertaan, vaan poimittaisiin niistä vain yksi..
-async function getOnlyEventNamesAndTags(howManyEvents = 100) {
+async function getOnlyEventNamesAndTagsForXEvents(howManyEvents = 100) {
     let events = await getEventsAsync();
     let onlyNEvents = events.slice(0, howManyEvents);
-    return onlyNEvents.map(event => ({ event: event.name.fi, tags: event.tags.map(tag => tag.name) }));
+    return onlyNEvents.map(event => ({ name: event.name.fi, tags: event.tags.map(tag => tag.name) }));
 }
 
-function removeEventsWithEmptyTags(events) {
-    return events.filter(event => event.tags.length > 0);
+function removeEventsWithEmptyEventName(events) {
+    return events.filter(event => !!event.name);
+}
+
+function removeEventsWithFewerThanXTags(events, x = 1) {
+    return events.filter(event => event.tags.length >= x);
 }
 
 function replaceCommasWithSpaces(string) {
     return string.split(",").join(" ");
 }
 
+function chooseFirstIfNotEmpty(first, second) {
+    return !!first ? first : second;
+}
+
 function convertEventsToCSV(events) {
-
-    //FIXME: Jos halutaan käyttää kaikki tägit...
-    /*let csvContent = "name,tag1,tag2,tag3,"
-        + events.map(e => "" + e.event + "," + e.tags.join(",")).join("\n");*/
-
-    let csvContent = "name,tag1,tag2,tag3,\n"
-        + events.map(e => "" + replaceCommasWithSpaces(e.event) + "," + e.tags[0]
-            + "," + e.tags[1] + "," + e.tags[2]).join("\n");
+    let csvContent = "name,tag1,tag2,tag3\n"
+        + events.map(e => "" + replaceCommasWithSpaces(e.name) + "," + e.tags[0]
+            + "," + chooseFirstIfNotEmpty(e.tags[1], e.tags[0]) + "," + chooseFirstIfNotEmpty(e.tags[2], e.tags[0])).join("\n");
     return csvContent;
 }
 
-getOnlyEventNamesAndTags(20).then(response => {
-    let eventsWithoutEmptyTags = removeEventsWithEmptyTags(response);
-    let eventsInCSV = convertEventsToCSV(eventsWithoutEmptyTags);
-    console.log(eventsInCSV);
-    //TODO: Ajetaan tulokset vielä csv-tiedostoon...
-})
+function writeToFile(content) {
+    fs.writeFile('helsinkiData.csv', content, err => {
+        if (err) throw err;
+    });
+}
 
-//module.exports = { getEventsAsync };
+getOnlyEventNamesAndTagsForXEvents(200).then(response => {
+    let eventsWithoutEmptyTags = removeEventsWithFewerThanXTags(response, 1);
+    let eventsWithoutEmptyNamesOrTags = removeEventsWithEmptyEventName(eventsWithoutEmptyTags)
+    let eventsInCSV = convertEventsToCSV(eventsWithoutEmptyNamesOrTags);
+    writeToFile(eventsInCSV);
+    console.log(eventsInCSV + "\nEventtien lopullinen määrä: " + eventsWithoutEmptyNamesOrTags.length);
+})
