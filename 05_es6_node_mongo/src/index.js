@@ -14,4 +14,6 @@ app.get('/', async function (req, res) {
 
 });
 
-app.listen(3000, () => console.log('running'));
+let port = parseInt(process.env.PORT) || 3000;
+
+app.listen(port, () => console.log(`running on port ${port}`));
