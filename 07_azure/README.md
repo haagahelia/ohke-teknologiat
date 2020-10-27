@@ -4,7 +4,7 @@
 >
 > [Microsoft. What is Azure?](https://azure.microsoft.com/en-us/overview/what-is-azure/)
 
-In this module we shall demonstrate and practice the use of [Azuren](https://azure.microsoft.com/) and a few selected services available there.
+In this module, we shall demonstrate and practice the use of [Azure](https://azure.microsoft.com/) and a few selected services available there.
 
 
 ## Goals
@@ -14,7 +14,7 @@ Understanding the concepts [PaaS](https://azure.microsoft.com/en-us/overview/wha
 
 ## Registering to Azure 
 
-You can log in Azure using your Haaga-Helia account. If you register using [student registration](https://azure.microsoft.com/en-us/free/students/) you may receive free credits in your account. 
+You can log in [Azure Portal](https://portal.azure.com/) using your Haaga-Helia account. You may receive free credits in your account if you register using [student registration](https://azure.microsoft.com/en-us/free/students/). 
 
 
 ## Demo application
@@ -24,6 +24,8 @@ During this session we will use the following application to demonstrate the wor
 https://github.com/haagahelia/app-deployment-demo
 
 The demo application contains two HTTP endpoints and runs on top of [Express](https://expressjs.com/). You can check the contents of index.js [here](https://github.com/haagahelia/app-deployment-demo/blob/master/index.js).
+
+In short, the server root `/` will return a list of events from Helsinki Open API and the `/health` path will return a JSON object describing the status of the application.
 
 
 ## Demo 1: Azure as a cloud provider
@@ -51,9 +53,9 @@ This demonstration presents an opinionated view on how to develop and deploy web
 
 The following video demonstrates how to create a new virtual machine in Azure and how to deploy your application code there:
 
-[Video: Azure part 1 - Ubuntu virtual machine](https://web.microsoftstream.com/video/8eb8e43c-3972-4f73-bd75-d5269e45c82e)
+**[Video: Azure part 1 - Ubuntu virtual machine](https://web.microsoftstream.com/video/8eb8e43c-3972-4f73-bd75-d5269e45c82e)**
 
-The newly created Ubuntu server contains outdated packages and is missing the node installation. The system is first updated and node is installed with the following commands:
+The newly created Ubuntu server contains outdated packages and is missing the Node.js installation. The system is first updated and Node.js is installed with the following commands:
 
 ```bash
 $ sudo apt update
@@ -63,18 +65,18 @@ $ sudo apt upgrade
 $ sudo apt install node
 ```
 
-After updating the server and installing node, the application can be checked out and started:
+After updating the server and installing Node.js, the application can be cloned, installed and started:
 
 ```bash
 $ git clone https://github.com/haagahelia/app-deployment-demo.git
 
 $ cd app-deployment-demo
 
-$ npm install
+$ npm install --production
 
 $ npm start # port 3000
 
-$ sudo PORT=80 node index.js
+$ sudo PORT=80 node index.js # port 80 requires sudo privileges
 ```
 
 You can check the results at http://20.54.83.139/health. The server may be shut down after the class.
@@ -103,9 +105,9 @@ Weaknesses:
 
 The following video demonstrates how to create a new app in Azure and how to deploy your application code there:
 
-[Video 2: Azure part 2 - App service](https://web.microsoftstream.com/video/615a4f88-4a10-4b39-9ef5-f5f60c4a4c1b)
+**[Video 2: Azure part 2 - App service](https://web.microsoftstream.com/video/615a4f88-4a10-4b39-9ef5-f5f60c4a4c1b)**
 
-Because our demo application is a standard node app built with [Express](https://expressjs.com/), it can be deployed as an App as-is. Azure App Service supports a multitude of different deployment methods, but in our case, we prefer to deploy the application with Git.
+Because our demo application is a standard Node.js app built with [Express](https://expressjs.com/), it can be deployed as an App as-is. Azure App Service supports a multitude of different deployment methods, but in our case, we prefer to deploy the application with Git.
 
 As in the video, the deployment can be done by adding the app's Git repository as a remote and deploying the master branch there.
 
@@ -142,43 +144,46 @@ Weaknesses:
 [Quickstart: Create a function in Azure using Visual Studio Code](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-function-vs-code?pivots=programming-language-javascript)
 
 
-    # asennetaan 'func'-työkalu:
+    # installing the 'func' command:
     npm install --global azure-functions-core-tools
 
-    # luodaan uusi funktiosovellus
+    # creating a function app
     func init
 
-    # lisätään uusi funktio (http trigger)
+    # adding a new function (http trigger)
     func new
 
-    # käynnistetään kehityspalvelin
+    # starting the development server
     func start
 
+During class we extend our demo application with two cloud functions.
 
 ### Docker (containers)
 
-> *"Containers offer a standardized and repeatable way to package, deploy and manage cloud applications. Azure Container Instances let you run a container in Azure without managing virtual machines and without a higher-level service."*
+> *"Fundamentally, a container is nothing but a running process, with some added encapsulation features applied to it in order to keep it isolated from the host and from other containers. One of the most important aspects of container isolation is that each container interacts with its own private filesystem; this filesystem is provided by a Docker image. An image includes everything needed to run an application - the code or binary, runtimes, dependencies, and any other filesystem objects required."*
 >
-> Microsoft, [Introduction to Azure Container Instances](https://docs.microsoft.com/en-us/learn/modules/run-docker-with-azure-container-instances/1-introduction)
+> [Docker. Orientation and setup.](https://docs.docker.com/get-started/)
 
-The video ["Docker For Beginners: From Docker Desktop to Deployment"](https://www.youtube.com/watch?v=i7ABlHngi1Q) explains key concepts for Docker.
+The video ["Docker For Beginners: From Docker Desktop to Deployment"](https://www.youtube.com/watch?v=i7ABlHngi1Q) explains key concepts and workflows for Docker.
 
-The ["Dockerizing a Node.js web app" tutorial from Node.js](https://nodejs.org/en/docs/guides/nodejs-docker-webapp/) covers creating, building and running a Docker container for a Node.js application.
+For orientation about Docker, see [Orientation and setup](https://docs.docker.com/get-started/) at Docker docs.
 
-Dockerhub contains official [pre-built Node.js images](https://hub.docker.com/_/node) that can be extended by your Dockerfile.
+Recommended reading: 
 
-You can read more about the different commands in a Dockerfile from the official [Dockerfile reference](https://docs.docker.com/engine/reference/builder/).
+* The ["Dockerizing a Node.js web app" tutorial from Node.js](https://nodejs.org/en/docs/guides/nodejs-docker-webapp/) covers creating, building and running a Docker container for a Node.js application.
+
+* Dockerhub contains official [pre-built Node.js images](https://hub.docker.com/_/node) that can be extended by your Dockerfile. In our Dockerfile, we use `12-slim`, which is a very small image running the latest version `12.x` of Node.js.
+
+* You can read more about the different commands in a Dockerfile from the official [Dockerfile reference](https://docs.docker.com/engine/reference/builder/).
 
 #### Dockerignore
 
-`.dockerignore`
+To exclude certain folders being copied from our host system into the container we exclude them in a `.dockerignore` file:
 
 ```
 node_modules
 npm-debug.log
 ```
-
-Anatomy of a dockerfile: https://gist.github.com/adamveld12/4815792fadf119ef41bd
 
 ### Dockerfile
 
@@ -204,28 +209,31 @@ CMD [ "node", "index.js" ]
 
 For explanations why `package*.json` files are copied first and the rest of the source code later or why we start the app with `node` and not `npm`, see the ["Docker For Beginners: From Docker Desktop to Deployment"](https://www.youtube.com/watch?v=i7ABlHngi1Q) video.
 
-#### Building the container
+Another good resource for understanding the Dockerfile is [Anatomy of a dockerfile](https://gist.github.com/adamveld12/4815792fadf119ef41bd).
+
+
+#### Building the image
 
 Docker images need to be built before running. The builds consist of layers that are cached. Caching makes the builds fast, as when we update our source code, Docker only needs to re-build the topmost layers.
 
-The following command will build the current folder `.` and tag it with the tag `docker-demo`:
+The following command will build the container using the current folder `.` as context and tag the image with the tag `docker-demo`:
 
 ```sh
 $ docker build -t docker-demo .
 ```
 
-To deploy our image to Azure, we want to add it a specific tag, which contains the container registry URL as well our image name (docker-demo) and version (latest):
+To deploy our image to Azure, we want to add a specific tag to it, which contains the container registry URL as well our image name (docker-demo) and version (latest):
 
 ```sh
 $ docker build -t swd4tn023.azurecr.io/docker-demo:latest .
 ```
 
-This time the build will be instant, as Docker already has all layers cached.
+We will use this tag later when we deploy the image. This time the build will be instant, as Docker already has all layers cached.
 
 
-#### Running the container locally
+#### Running the image in a local container
 
-The container can be started with `docker run` command. In our Dockerfile we defined the container to internally listen to port 80. To be able to access that port from our host operating system, we need to [bind a port on our local system](https://docs.docker.com/engine/reference/commandline/run/#publish-or-expose-port--p---expose) to the one inside the container using the `-p` flag.
+The image can be started with `docker run` command and the tag. In our Dockerfile we defined the container to internally listen to port 80. To be able to access that port from our host operating system, we need to [bind a port on our local system](https://docs.docker.com/engine/reference/commandline/run/#publish-or-expose-port--p---expose) to the one inside the container using the `-p` flag.
 
 ```sh
 $ docker run -p 3000:80 swd4tn023.azurecr.io/docker-demo:latest
@@ -236,13 +244,13 @@ Now port `3000` on the host system is directed to port `80` inside the container
 
 #### Azure Container Registry
 
-Now that we have our Docker container built and running locally, the next step is to publish it and run it on top of Azure infrastructure. For this we use Azure Container Registry:
+Now that we have our Docker image built and running locally, the next step is to publish it and run it on top of Azure infrastructure. For this we use Azure Container Registry:
 
 > *"Azure Container Registry is a managed, private Docker registry service based on the open-source Docker Registry 2.0. Create and maintain Azure container registries to store and manage your private Docker container images and related artifacts.*"
 >
 > [Microsoft. Introduction to private Docker container registries in Azure.](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-intro)
 
-There are other container regisries as well, such as [Docker Hub](https://hub.docker.com/) and [GitHub Packages](https://github.com/features/packages).
+There are other container registries as well, such as [Docker Hub](https://hub.docker.com/) and [GitHub Packages](https://github.com/features/packages).
 
 First, we [create a new private container registry in Azure](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-get-started-portal). In our demo, the registry is called `swd4tn023` and located at `swd4tn023.azurecr.io`.
 
@@ -265,7 +273,7 @@ Notice that the tag `swd4tn023.azurecr.io/docker-demo:latest` contains the URL o
 
 #### Using the container in a Web Application
 
-When the container is published we can create a new webapp in App Service and use that container as our application. One possible way for achieving this is explained in ["Migrate custom software to Azure App Service using a custom container"](https://docs.microsoft.com/en-us/azure/app-service/tutorial-custom-container?pivots=container-linux#configure-app-service-to-deploy-the-image-from-the-registry) at Microsoft Docs. In our example, we are using `app-deployment-demo-docker` as the name of our application.
+When the container is published we can create a new webapp in App Service. One possible way for achieving this is explained in ["Migrate custom software to Azure App Service using a custom container"](https://docs.microsoft.com/en-us/azure/app-service/tutorial-custom-container?pivots=container-linux#configure-app-service-to-deploy-the-image-from-the-registry) at Microsoft Docs. Unlike in the previous App Service example, this time we choose to deploy a container, not code. In our example, we are using `app-deployment-demo-docker` as the name of our application.
 
 By using the Azure portal, we can also configure our app to trigger a new deployment when the Docker image is updated in the registry. After the container app is running, we can visit it at:
 

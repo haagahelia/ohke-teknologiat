@@ -70,7 +70,7 @@ Video: <a href="https://web.microsoftstream.com/video/9e82d743-a4cd-4890-9fa6-d3
  </td></tr>
  <tr><td><del>pe 23.10.</del></td><td><del>Intensiiviviikko</del></td></tr>
  <tr><td>pe 30.10.</td><td><a href="07_azure">Azure osa 1: IaaS, PaaS ja Machine Learning</a></td></tr>
- <tr><td>pe 6.11.</td><td><a href="07_azure">Azure osa 2</a>, vierailija <a href="https://houston-inc.com/">Houston Inc</a>:stä 
+ <tr><td>pe 6.11.</td><td><a href="07_azure">Azure osa 2: Enterprise Azure</a>. Vierailija <a href="https://houston-inc.com/">Houston Inc</a>:stä. 
  </td></tr>
  <tr><td>pe 13.11.</td><td>Seminaarityön tekemistä</td></tr>
  <tr><td>pe 20.11.</td><td>Seminaarityön tekemistä</td></tr>
