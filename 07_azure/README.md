@@ -288,7 +288,7 @@ In our example, we use [Publish Docker Container](https://github.com/actions/sta
 
 The results of the action can be [observed at GitHub](https://github.com/haagahelia/app-deployment-demo/actions?query=workflow%3ADocker).
 
-The Container Registry password must not be included in the automation file in plain text. Instead, it is defined as a GitHub secret and injected to the `docker logi` command as follows:
+The Container Registry password must not be included in the automation file in plain text. Instead, it is defined as a [GitHub secret](https://docs.github.com/en/free-pro-team@latest/actions/reference/encrypted-secrets) and injected to the `docker login` command as follows:
 
     echo "${{ secrets.CR_PAT }}" | docker login swd4tn023.azurecr.io -u swd4tn023 --password-stdin
 
