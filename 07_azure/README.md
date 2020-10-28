@@ -25,15 +25,34 @@ https://github.com/haagahelia/app-deployment-demo
 
 The demo application contains two HTTP endpoints and runs on top of [Express](https://expressjs.com/). You can check the contents of index.js [here](https://github.com/haagahelia/app-deployment-demo/blob/master/index.js).
 
-In short, the server root `/` will return a list of events from Helsinki Open API and the `/health` path will return a JSON object describing the status of the application.
+In short, the server root `/` will return a list of events from [MyHelsinki Open API](http://open-api.myhelsinki.fi/) and the `/health` path will return a JSON object describing the status of the application:
 
+```json
+{
+  "status": "ok",
+  "eventCount": 4667,
+  "duration": 1.4089999198913574,
+  "port": "80"
+}
+```
+
+`eventCount` shows how many events from [MyHelsinki Open API](http://open-api.myhelsinki.fi/) were received and `duration` shows the duration of the request to the API.
+
+The data from [MyHelsinki Open API](http://open-api.myhelsinki.fi/) is licensed under [Creative Commons By 4.0 license](http://open-api.myhelsinki.fi/terms).
 
 ## Demo 1: Azure as a cloud provider
 
-In Azure, there are typically multiple supported ways of achieving the same goals. Typically documents published by Microsoft will explain how resources are managed and updated using either VS Code extensions or other Azure specific tools.
+In Azure, there are typically multiple supported ways of achieving the same goals. Typically documents published by Microsoft will explain how resources are managed and updated using either VS Code extensions or other Azure specific tools, such as the `az` command ([Azure CLI](https://docs.microsoft.com/en-us/cli/azure/)).
 
 This demonstration presents an opinionated view on how to develop and deploy web applications. Generic tools, such as Git, are favored over Azure specific tools. Command line is favored over graphical interfaces, as the GUIs tend to hide some of the details that help us understand how the systems work.
 
+To follow the examples in this document you will need to install Docker. In Ubuntu, Docker can be installed as follows:
+
+```sh
+$ sudo apt install docker.io
+```
+
+You will also need Node.js and Git that are used also during previous weeks.
 
 <!--
 -Millainen ubuntuserveri voidaan pystyttää.
@@ -269,6 +288,8 @@ $ docker push swd4tn023.azurecr.io/docker-demo:latest
 ```
 
 Notice that the tag `swd4tn023.azurecr.io/docker-demo:latest` contains the URL of the registry as well as the container name and version.
+
+At this point the container image is published in our private container repository, but it's not actually running.
 
 
 #### Using the container in a Web Application
