@@ -138,6 +138,8 @@ $ git push azure master
 
 After the application is deployed, you can visit it at https://app-deployment-demo.azurewebsites.net/health.
 
+Note that the application is now accessible with a secure HTTPS connection in port 443, although it is internally listening to a different port.
+
 <!--Benefits:
 
 * scalability
@@ -300,6 +302,8 @@ By using the Azure portal, we can also configure our app to trigger a new deploy
 
 https://app-deployment-demo-docker.azurewebsites.net/health
 
+Note that the application is now accessible with a secure HTTPS connection in port 443, although our container is internally listening to port 80.
+
 
 #### Continuous integration for the container
 
@@ -358,10 +362,203 @@ Helsinki datan esimerkki jos sitä hieman näytetään:
 
 ## Demo 3: Enterprise Azure, Houston Inc.
 
-## Assignements
+---
 
-### Assignement 7.1
-<!--Pieni laajennus Teemun demoon. Mietitään mikä voisi olla fiksua omana palvelunaan (esim tapahtuman lähellä olevien bussipysäkkien näyttäminen..).
--->
-### Seminar assignement 1
+## Assignement 7.1: Cloud IoT
+
+In this exercise we use Docker and the Message Queuing Telemetry Transport protocol (MQTT), which is often used by IoT devices. MQTT enables us to easily publish and subscribe to events instead of exchanging requests and responses directly between a client and a server: 
+
+> *"MQTT is data centric whereas HTTP is document-centric. HTTP is request-response protocol for client-server computing and not always optimized for mobile devices. Main solid benefits of MQTT in these terms are lightweightness (MQTT transfers data as a byte array) and publish/subscribe model, which makes it perfect for resource-constrained devices and help to save battery.*"
+>
+> [Serozhenko, M. 2017. MQTT vs. HTTP: which one is the best for IoT?](https://medium.com/mqtt-buddy/mqtt-vs-http-which-one-is-the-best-for-iot-c868169b3105)
+
+An added benefit from MQTT is that the applications publishing and receiving messages do not need to have public IP addresses or open ports. A good explanation about the architecture can be found at [mqtt.org](https://mqtt.org/). 
+
+As our data source we use the [Digitransit High-frequency positioning API](https://digitransit.fi/en/developers/apis/4-realtime-api/vehicle-positions/):
+
+> *"Most of the vehicles in the HSL area should publish their status, including their position, once per second. The devices of the end users, e.g. smartphones, may subscribe to receive the relevant messages based on their context, e.g. filtered on the mode of transport, the route ID, the geographical region etc. The subscription scope is specified by the MQTT topic structure of the API."*
+>
+> [Digitransit, 2020. High-frequency positioning.](https://digitransit.fi/en/developers/apis/4-realtime-api/vehicle-positions/)
+
+Our application is meant to **observe the traffic conditions at a certain road section and report detected anomalies to another MQTT queue**. In the exercise we are only interested in a specific road section so we limit our subscription to events occurring there. As the example location to observe we have selected [Lauttasaari Bridge](https://goo.gl/maps/qEKv3F9pbWECms857). More specifically, our coordinates are **60°09'43.4"N 24°53'50.9"E** (60.162050, 24.897470). 
+
+In MQTT, messages are filtered with topics. Topics are strings that consist of one or multiple levels separated by slashes `/`, such as `/foo/bar/baz`. They may first appear similar to URLs, but clients may use wildcards `+` and `#` to match multiple topics at once. Wildcards can only be used when subscribing to messages, not when publishing them.
+
+An example topic for ongoing vehicle positioning events for buses at our street section is:
+
+```
+/hfp/v2/journey/ongoing/vp/bus/+/+/+/+/+/+/+/+/60;24/18/69/27/#
+```
+
+Notice that in the topic, location `60.162050, 24.897470` is converted to `60;24/18/69/27` as instructed in the [Digitransit documentation](https://digitransit.fi/en/developers/apis/4-realtime-api/vehicle-positions/#the-topic) (see section **geohash** for more information). You can test subscribing to events on that topic with the `mqtt` command as in [Digitransit documentation](https://digitransit.fi/en/developers/apis/4-realtime-api/vehicle-positions/):
+
+```sh
+$ npm install -g mqtt
+$ mqtt subscribe -h mqtt.hsl.fi -p 8883 -l mqtts -v -t "/hfp/v2/journey/ongoing/vp/bus/+/+/+/+/+/+/+/+/60;24/18/69/27/#"
+```
+
+We recommend using the `mqtt` command on Linux. The command makes a connection to `mqtt.hs.fi`, subscribes to the given topic and waits for incoming messages. When a bus sends a positioning message inside our coordinates, a one-line JSON string in the following format is printed to the console:
+
+```js
+// Creative Commons BY 4.0 International. © Helsinki Region Transport 2020
+{
+  "VP": {
+    "desi": "54",
+    "dir": "1",
+    "oper": 17,
+    "veh": 39,
+    "tst": "2020-10-29T09:42:27.172Z",
+    "tsi": 1603964547,
+    "spd": 22.38,
+    "hdg": 245,
+    "lat": 60.239832,
+    "long": 24.919478,
+    "acc": 0.00,
+    "dl": -12,
+    "odo": 10710,
+    "drst": 0,
+    "oday": "2020-10-29",
+    "jrn": 264,
+    "line": 71,
+    "start": "11:24",
+    "loc": "GPS",
+    "stop": null,
+    "route": "1054",
+    "occu": 0
+  }
+}
+```
+
+In this exercise we are most interested in the attribute `spd`, which is speed of the vehicle in meters per second (m/s). Note that the vehicle in the sample data appears to be driving 80.56 km/h (22.38 m/s), which is slightly over the speed limit at Kehä I. If you do not receive any positioning messages for a while, you can use [Bussitutka](https://bussitutka.fi/map#13/60.162050/24.897470) to check when a bus is approaching the Lauttasaari Bridge.
+
+In JavaScript code, similar MQTT subscription and logging can be done as follows:
+
+```js
+// Example modified from https://github.com/mqttjs/MQTT.js#example
+const mqtt = require('mqtt');
+
+const myTopic = '/hfp/v2/journey/ongoing/vp/bus/+/+/+/+/+/+/+/+/60;24/18/69/27/#';
+
+const hslClient = mqtt.connect('mqtts://mqtt.hsl.fi:8883');
+
+hslClient.on('connect', function () {
+    hslClient.subscribe(myTopic, function (err) {
+        if (!err) {
+            console.log('Connected!');
+        } else {
+            console.log(err);
+        }
+    })
+});
+
+hslClient.on('message', function (topic, message) {
+    // todo: handle the traffic jam and speeding logic here
+    console.log(message.toString());
+});
+```
+
+The example uses the MQTT.js library, which you can read more about at https://github.com/mqttjs/MQTT.js. Each time our app receives a message, it is handled by the `'message'` event handler and logged with `console.log`. In Digitransit API, the messages are JSON encoded (see above JSON example) and can be decoded into JavaScript objects using `JSON.parse`:
+
+```js
+let json = JSON.parse(message.toString());
+let speed = json.VP.spd;
+
+console.log('Speed: ' + speed);
+```
+
+### Step 1: reporting traffic jams
+
+Create a new NPM package in an empty folder. Then install `mqtt` as a dependency:
+
+```sh
+$ npm init
+$ npm install mqtt --save
+```
+
+Create a new JavaScript file `index.js`, where you connect to the Digitransit API with the topic described earlier. You can use the JavaScript code sample as a template. If you wish, you can also use any other coordinates, but you need to convert them to the Digitransit topic format yourself.
+
+When you receive an incoming message, observe the speed and report potential traffic jams to a new MQTT queue. The current speed limit for Lauttasaari Bridge is expected to be 30 km/h or 8.33 m/s. You can choose the speed threshold for traffic jams freely. **Remember that speeds in the API are in meters per second (m/s).** <!--In the model answer, speeds below 15 km/h (4.17 m/s) are considered traffic jams.-->
+
+For reporting the traffic jams, use a public MQTT server at `test.mosquitto.org`. The test server allows us to publish messages without authentication. You can make another MQTT connection to the Mosquitto broker by calling `mqtt.connect` again:
+
+```js
+const mosquittoClient = mqtt.connect('mqtt://test.mosquitto.org:1883');
+```
+
+Report the potential traffic jams with a topic `"/swd4tn023/MY_ALIAS/traffic/jam"`, where `MY_ALIAS` is any unique string that differentiates your message from the ones by your classmates. The contents of your messages should mimic the following JavaScript object:
+
+```json
+{
+    "oper": 17,
+    "veh": 39,
+    "lat": 60.239832,
+    "long": 24.919478,
+    "spd": 5.0,
+    "cause": "Potential traffic jam"
+}
+```
+
+Use operator id (oper), vehicle id (veh), coordinates (lat, lon) and speed (spd) from the incoming message from Digitransit. The new message can then be published using the `publish` method with the topic and the message:
+
+```js
+mosquittoClient.publish('/swd4tn023/MY_ALIAS/traffic/jam', JSON.stringify(myMessage));
+```
+
+To test your publishing logic, you can open another terminal window and listen to the queue there:
+
+```sh
+mqtt subscribe -h test.mosquitto.org -p 1883 -l mqtt -v -t "/swd4tn023/MY_ALIAS/traffic/#"
+```
+
+The wildcard `#` at the end will allow you to listen to messages from this and the next step simultaneously.
+
+
+### Step 2: reporting speeding
+
+If you observe speeds that you suspect to be over the speed limit, send another message containing "Potential speeding" as the cause:
+
+```json
+{
+  "oper": 17,
+  "veh": 39,
+  "lat": 60.239832,
+  "long": 24.919478,
+  "spd": 11.9,
+  "cause": "Potential speeding"
+}
+```
+
+For the speeding messages, use the topic `/swd4tn023/MY_ALIAS/traffic/speeding` on `test.mosquitto.org`. You can choose the speeding threshold freely. If the speed limit is 30 km/h, any speed over 8.33 m/s can be considered speeding.
+
+Note that you are not supposed to open a new connection for each message. Instead, open the connections to `mqtt.hsl.fi` and `test.mosquitto.org` when the application starts and re-use those connections in your code.
+
+
+### Step 3: building the app as a Docker container image
+
+Finally, build and verify running the application using Docker. You can use the [Dockerfile](https://raw.githubusercontent.com/haagahelia/app-deployment-demo/master/Dockerfile) and [.dockerignore](https://raw.githubusercontent.com/haagahelia/app-deployment-demo/master/.dockerignore) files from the Azure demo as your starting point. You do not need to add any new steps, but you can remove all steps concerning port numbers, including the `-p` flag when running the container.
+
+Save the output of your `docker build` command in a file named `docker.txt`. If you build the image multiple times, the output can be saved from any build.
+
+You do not need to publish your Docker image in a repository, but you are free to do so as an extra exercise.
+
+
+### Submitting the exercise
+
+Submit your `index.js` and `Dockerfile` in Teams before our next session. Also include the file `docker.txt`, where you copied the output from your `docker build` command. In case Teams rejects the `index.js` file as unsafe, rename it to `index.js.txt`. Do not submit a zip archive.
+
+
+<!--### Additional reading
+
+[Introducing the MQTT Protocol - MQTT Essentials: Part 1](https://www.hivemq.com/blog/mqtt-essentials-part-1-introducing-mqtt/)-->
+
+----- 
+
+## Seminar assignement 1
 Build a machine learning model with some interesting data related to e.g. your software project assignement with the help of Azure machine learning studio. You can e.g. build a recommendation system with the help of k-means clustering. You can deploy your service as a Web API.
+
+
+-----
+
+## Digitransit license
+
+The data in these Digitransit High-frequency positioning API is licensed under the [Creative Commons BY 4.0 International](https://creativecommons.org/licenses/by/4.0/) -license. © Helsinki Region Transport 2020. See [terms of usage](https://digitransit.fi/en/developers/apis/6-terms-of-use/).
