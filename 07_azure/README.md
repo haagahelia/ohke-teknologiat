@@ -364,7 +364,7 @@ Helsinki datan esimerkki jos sitä hieman näytetään:
 
 ---
 
-## Assignement 7.1: Cloud IoT
+## Assignment 7.1: Cloud IoT
 
 In this exercise we use Docker and the Message Queuing Telemetry Transport protocol (MQTT), which is often used by IoT devices. MQTT enables us to easily publish and subscribe to events instead of exchanging requests and responses directly between a client and a server: 
 
@@ -429,7 +429,7 @@ We recommend using the `mqtt` command on Linux. The command makes a connection t
 }
 ```
 
-In this exercise we are most interested in the attribute `spd`, which is speed of the vehicle in meters per second (m/s). Note that the vehicle in the sample data appears to be driving 80.56 km/h (22.38 m/s), which is slightly over the speed limit at Kehä I. If you do not receive any positioning messages for a while, you can use [Bussitutka](https://bussitutka.fi/map#13/60.162050/24.897470) to check when a bus is approaching the Lauttasaari Bridge.
+In this exercise we are most interested in the attribute `spd`, which is speed of the vehicle in meters per second (m/s). Note that the vehicle in the sample data appears to be driving 80.56 km/h (22.38 m/s), which is slightly over the speed limit at Kehä I. If you do not receive any positioning messages for a while, you can use [Bussitutka.fi](https://bussitutka.fi/map#13/60.162050/24.897470) to check when a bus is approaching the Lauttasaari Bridge.
 
 In JavaScript code, similar MQTT subscription and logging can be done as follows:
 
@@ -498,7 +498,7 @@ Report the potential traffic jams with a topic `"/swd4tn023/MY_ALIAS/traffic/jam
 }
 ```
 
-Use operator id (oper), vehicle id (veh), coordinates (lat, lon) and speed (spd) from the incoming message from Digitransit. The new message can then be published using the `publish` method with the topic and the message:
+Use operator id (*oper*), vehicle id (*veh*), coordinates (*lat*, *lon*) and speed (*spd*) from the incoming message from Digitransit. The new message can then be published using the `publish` method with the topic and the message:
 
 ```js
 mosquittoClient.publish('/swd4tn023/MY_ALIAS/traffic/jam', JSON.stringify(myMessage));
@@ -553,8 +553,8 @@ Submit your `index.js` and `Dockerfile` in Teams before our next session. Also i
 
 ----- 
 
-## Seminar assignement 1
-Build a machine learning model with some interesting data related to e.g. your software project assignement with the help of Azure machine learning studio. You can e.g. build a recommendation system with the help of k-means clustering. You can deploy your service as a Web API.
+## Seminar assignment 1
+Build a machine learning model with some interesting data related to e.g. your software project assignment with the help of Azure machine learning studio. You can e.g. build a recommendation system with the help of k-means clustering. You can deploy your service as a Web API.
 
 
 -----
