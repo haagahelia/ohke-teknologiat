@@ -6,10 +6,12 @@
 
 In this module, we shall demonstrate and practice the use of [Azure](https://azure.microsoft.com/) and a few selected services available there.
 
+This module is done as part of the [IoT Rapid-Proto labs](https://www.rapidprotolabs.eu/) Erasmus+ funded project.
+
 
 ## Goals
 
-Understanding the concepts [PaaS](https://azure.microsoft.com/en-us/overview/what-is-saas/) and [IaaS](https://azure.microsoft.com/en-us/overview/what-is-iaas/). Learning how to deploy a Node.js application in Azure in multiple different ways. Learning how to implement an application as serverless cloud functions. Machine learning, clustering and K-means based recommendations with the help of Azure Machine Learning studio.
+Understanding the concepts [PaaS](https://azure.microsoft.com/en-us/overview/what-is-saas/) and [IaaS](https://azure.microsoft.com/en-us/overview/what-is-iaas/). Learning how to deploy a Node.js application in Azure in multiple different ways. Learning how to implement an application as serverless cloud functions. Machine learning, clustering and K-means based classification and recommendations with the help of Azure Machine Learning studio.
 
 
 ## Registering to Azure 
@@ -322,7 +324,7 @@ See the entire `docker-publish.yml` file [here](https://github.com/haagahelia/ap
 
 ## Demo 2: Machine learning, K-means Clustering recommendations.
 
-In this demo we shall build a K-means clustering model for movie recommendations with the help of [Azure machine learning studio](https://studio.azureml.net/). We will deploy the trained model as a web service and ask for a new recommendation.
+In this demo we shall build a K-means clustering model for movie recommendations with the help of [Azure machine learning studio](https://studio.azureml.net/). We will deploy the trained model as a web service and ask for a new classifications (that could be used for providing new recommendations).
 
 Here are listed some useful links related to this demo:
 1. [Machine learning in general from Azure documentation](https://azure.microsoft.com/en-us/services/machine-learning/)
