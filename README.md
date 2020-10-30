@@ -24,9 +24,9 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
  <a href="00_linux_ja_python">Kurssin johdanto, ympäristöt ja perustason Python</a><br />
 <br />
 Video 1: <a href="https://web.microsoftstream.com/video/3984ea5c-7782-484c-af51-ce6d50b049ad">kurssin yleiset käytännöt ja johdanto 1. tehtävään</a><br />
-Video 2: <a href="https://web.microsoftstream.com/video/bff8f1a1-025d-4c13-8287-7721032be43c">Python-ohjelmointi</a><br /><br />
-<a href="00_linux_ja_python/src/">Lähdekoodit</a>
-<br /><br />
+Video 2: <a href="https://web.microsoftstream.com/video/bff8f1a1-025d-4c13-8287-7721032be43c">Python-ohjelmointi</a><br />
+<a href="00_linux_ja_python/src/">Tunnin lähdekoodit</a>
+<br />
 <a href="00_linux_ja_python/malliratkaisu.md">Kotitehtävän malliratkaisu (koodit)</a><br />
 <a href="https://web.microsoftstream.com/video/a6035f13-dc74-4942-8880-fedfae4d6d7f">Kotitehtävän malliratkaisu (video)</a><br />
  </td></tr>
@@ -34,48 +34,35 @@ Video 2: <a href="https://web.microsoftstream.com/video/bff8f1a1-025d-4c13-8287-
  <a href="01_tietorakenteet_ja_algoritmit">Tietorakenteet ja algoritmit</a><br />
  <br />
  Video: <a href="https://web.microsoftstream.com/video/554e5274-ec08-404c-81d5-e21c91eade59">Tietorakenteet ja algoritmit -oppitunti</a><br />
- Video: <a href="https://web.microsoftstream.com/video/a9ab87c2-7442-4769-99a0-c1800056513c">Vinkkejä kotitehtävään</a>
- <br/>
- <br />
- <a href="01_tietorakenteet_ja_algoritmit/src/">Lähdekoodit</a>
- <br /><br />
+ Video: <a href="https://web.microsoftstream.com/video/a9ab87c2-7442-4769-99a0-c1800056513c">Vinkkejä kotitehtävään</a><br />
+ <a href="01_tietorakenteet_ja_algoritmit/src/">Oppitunnin lähdekoodit</a><br />
  <a href="01_tietorakenteet_ja_algoritmit/malliratkaisu.md">Kotitehtävän malliratkaisu (dokumentti)</a><br />
- <a href="https://web.microsoftstream.com/video/aac1ced4-5a82-43d7-b7cd-40604760ffc4">Kotitehtävän malliratkaisu (video)</a><br />
+ <a href="https://web.microsoftstream.com/video/aac1ced4-5a82-43d7-b7cd-40604760ffc4">Kotitehtävän malliratkaisu (video)</a>
  </td></tr>
  <tr><td>pe 11.9.</td><td> <a href="02_ohjelmistoarkkitehtuurit_ja_patternit">Ohjelmistoarkkitehtuurit ja patternit</a></td></tr>
  <tr><td>pe 18.9.</td><td><a href="02_ohjelmistoarkkitehtuurit_ja_patternit">Ohjelmistoarkkitehtuurit ja patternit</a>, vierailija <a href="https://neverthink.tv/">Neverthink.tv:ltä</a></td></tr>
  <tr><td>pe 25.9.</td><td><a href="03_testaus">Testaus</a><br /><br />
- Video: <a href="https://web.microsoftstream.com/video/87a443b6-5e2e-4d1f-a8c7-71b9b4d10697">oppitunnin videotallenne</a><br /><br />
-<a href="03_testaus/src">Oppitunnilla kirjoitetut lähdekoodit</a><br /><br />
-Kotitehtävän malliratkaisu: <a href="https://raw.githubusercontent.com/haagahelia/swd4tn023/testaus-malliratkaisu/03_testaus/src/postinumerot.py">postinumerot.py</a>, <a href="https://raw.githubusercontent.com/haagahelia/swd4tn023/testaus-malliratkaisu/03_testaus/src/test_postinumerot.py">test_postinumerot.py</a><br /><br />
+ <a href="https://web.microsoftstream.com/video/87a443b6-5e2e-4d1f-a8c7-71b9b4d10697">Oppitunnin videotallenne</a><br />
+<a href="03_testaus/src">Oppitunnilla kirjoitetut lähdekoodit</a><br />
+Kotitehtävän malliratkaisu: <a href="https://raw.githubusercontent.com/haagahelia/swd4tn023/testaus-malliratkaisu/03_testaus/src/postinumerot.py">postinumerot.py</a>, <a href="https://raw.githubusercontent.com/haagahelia/swd4tn023/testaus-malliratkaisu/03_testaus/src/test_postinumerot.py">test_postinumerot.py</a><br />
 Video: <a href="https://web.microsoftstream.com/video/f3903449-9188-47ca-8cc6-7c1b92ef38d9">kotitehtävän malliratkaisu</a>
-
  </td></tr>
  <tr><td>pe 2.10.</td><td><a href="04_infra_ja_automaatio">Infra + automaatio</a></td></tr>
  <tr><td>pe 9.10.</td><td><a href="05_es6_node_mongo">ES6 / JavaScript, node, mongo</a><br/><br/>
- 
- <a href="05_es6_node_mongo/src/">Lähdekoodit</a><br/><br/>
-
-Video: <a href="https://web.microsoftstream.com/video/39d4bf67-7258-4d9c-9e21-b6a74ceadcde">ES6:n ominaisuudet ja syntaksit</a><br /><br />
-
-Video: <a href="https://web.microsoftstream.com/video/247c0aba-772c-4331-833c-c1ec217e0f60">Node, express, filter, fetch, promiset ja async/await</a><br /><br />
-
-Video: <a href="https://web.microsoftstream.com/video/9e82d743-a4cd-4890-9fa6-d31bcfff6113">kotitehtävän malliratkaisu</a><br /><br />
-
+ <a href="05_es6_node_mongo/src/">Oppitunnin lähdekoodit</a><br/>
+ Video: <a href="https://web.microsoftstream.com/video/39d4bf67-7258-4d9c-9e21-b6a74ceadcde">ES6:n ominaisuudet ja syntaksit</a><br />
+ Video: <a href="https://web.microsoftstream.com/video/247c0aba-772c-4331-833c-c1ec217e0f60">Node, express, filter, fetch, promiset ja async/await</a><br />
+ Video: <a href="https://web.microsoftstream.com/video/9e82d743-a4cd-4890-9fa6-d31bcfff6113">kotitehtävän malliratkaisu</a>
  </td></tr>
  <tr><td>pe 16.10.</td>
  <td><a href="06_koneoppiminen">Koneoppiminen</a>
- 
- 
  </td></tr>
  <tr><td><del>pe 23.10.</del></td><td><del>Intensiiviviikko</del></td></tr>
  <tr><td>pe 30.10.</td><td><a href="07_azure">Azure osa 1: IaaS, PaaS ja Machine Learning</a><br /><br /> 
-
-
- Video: <a href="https://web.microsoftstream.com/video/8eb8e43c-3972-4f73-bd75-d5269e45c82e">Azure osa 1 - Ubuntu virtuaalikone</a><br />
- Video: <a href="https://web.microsoftstream.com/video/615a4f88-4a10-4b39-9ef5-f5f60c4a4c1b">Azure osa 2 - App service</a><br />
- Video: <a href="https://web.microsoftstream.com/video/04c8b7c5-e431-41de-8175-41c631863a0a">Azure osa 3 - pilvifunktiot</a><br />
- Video: <a href="https://web.microsoftstream.com/video/d1521324-2c3d-4a45-9c5e-4c5caecda274">Azure osa 4 - Docker</a><br />
+ Video: <a href="https://web.microsoftstream.com/video/8eb8e43c-3972-4f73-bd75-d5269e45c82e">Ubuntu virtuaalikone Azuressa</a><br />
+ Video: <a href="https://web.microsoftstream.com/video/615a4f88-4a10-4b39-9ef5-f5f60c4a4c1b">Azure App service</a><br />
+ Video: <a href="https://web.microsoftstream.com/video/04c8b7c5-e431-41de-8175-41c631863a0a">Azuren pilvifunktiot</a><br />
+ Video: <a href="https://web.microsoftstream.com/video/d1521324-2c3d-4a45-9c5e-4c5caecda274">Docker-kontin vienti Azureen</a><br />
  Video: <a href="https://web.microsoftstream.com/video/e77d5ea8-b102-4c6d-a703-0e22c6acf3dd">Machine learning, K-means Clustering recommendations</a><br />
  Video: <a href="https://web.microsoftstream.com/video/0cc82202-9ab1-432a-88eb-8b8da7459643">Seminaarivaiheen ja Azure-kotitehtävän ohjeistukset</a><br />
  </a></td></tr>
