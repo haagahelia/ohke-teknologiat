@@ -69,7 +69,16 @@ Video: <a href="https://web.microsoftstream.com/video/9e82d743-a4cd-4890-9fa6-d3
  
  </td></tr>
  <tr><td><del>pe 23.10.</del></td><td><del>Intensiiviviikko</del></td></tr>
- <tr><td>pe 30.10.</td><td><a href="07_azure">Azure osa 1: IaaS, PaaS ja Machine Learning</a></td></tr>
+ <tr><td>pe 30.10.</td><td><a href="07_azure">Azure osa 1: IaaS, PaaS ja Machine Learning</a><br /><br /> 
+
+
+ Video: <a href="https://web.microsoftstream.com/video/8eb8e43c-3972-4f73-bd75-d5269e45c82e">Azure osa 1 - Ubuntu virtuaalikone</a><br />
+ Video: <a href="https://web.microsoftstream.com/video/615a4f88-4a10-4b39-9ef5-f5f60c4a4c1b">Azure osa 2 - App service</a><br />
+ Video: <a href="https://web.microsoftstream.com/video/04c8b7c5-e431-41de-8175-41c631863a0a">Azure osa 3 - pilvifunktiot</a><br />
+ Video: <a href="https://web.microsoftstream.com/video/d1521324-2c3d-4a45-9c5e-4c5caecda274">Azure osa 4 - Docker</a><br />
+ Video: <a href="https://web.microsoftstream.com/video/e77d5ea8-b102-4c6d-a703-0e22c6acf3dd">Machine learning, K-means Clustering recommendations</a><br />
+ Video: <a href="https://web.microsoftstream.com/video/0cc82202-9ab1-432a-88eb-8b8da7459643">Seminaarivaiheen ja Azure-kotitehtävän ohjeistukset</a><br />
+ </a></td></tr>
  <tr><td>pe 6.11.</td><td><a href="07_azure">Azure osa 2: Enterprise Azure</a>. Vierailija <a href="https://houston-inc.com/">Houston Inc</a>:stä. 
  </td></tr>
  <tr><td>pe 13.11.</td><td>Seminaarityön tekemistä</td></tr>
