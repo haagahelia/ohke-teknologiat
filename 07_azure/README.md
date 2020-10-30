@@ -292,6 +292,13 @@ Recommended reading:
 
 * You can read more about the different commands in a Dockerfile from the official [Dockerfile reference](https://docs.docker.com/engine/reference/builder/).
 
+### Class example
+
+The following video contains our class example where we build, run and publish our application in Azure as a Docker container:
+
+**[Video: Azure part 4 - Docker](https://web.microsoftstream.com/video/d1521324-2c3d-4a45-9c5e-4c5caecda274)**
+
+
 #### Dockerignore
 
 To exclude certain folders being copied from our host system into the container we exclude them in a `.dockerignore` file:
