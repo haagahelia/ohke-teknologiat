@@ -175,7 +175,11 @@ Weaknesses:
 >
 > [Mashkowski, N. Introducing Azure Functions](https://azure.microsoft.com/en-us/blog/introducing-azure-functions/)
 
-[Quickstart: Create a function in Azure that responds to HTTP requests](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-azure-function-azure-cli?tabs=bash%2Cbrowser&pivots=programming-language-javascript)
+The following video demonstrates how to create a new function app and deploy it in Azure:
+
+**[Video: Azure part 3 - Cloud functions](https://web.microsoftstream.com/video/04c8b7c5-e431-41de-8175-41c631863a0a)**
+
+During class we extend our demo application with cloud functions. To convert the demo application into an Azure Functions app we will use the `func` command from `azure-functions-core-tools` NPM package:
 
     # installing the 'func' command
     # see https://www.npmjs.com/package/azure-functions-core-tools
@@ -190,7 +194,7 @@ Weaknesses:
     # starting the local development server
     $ func start
 
-During class we extend our demo application with cloud functions. The function for filtering and sorting MyHelsinki events is:
+The function for filtering and sorting MyHelsinki events is:
 
 ```js
 const { createEventDateFilter, eventDateComparator } = require('../events/dates');
@@ -248,6 +252,7 @@ We can also remove our start script, as Azure will take care of calling the func
 
 Complete source code written during the class can be found at the [cloud functions branch of the demo application repository](https://github.com/haagahelia/app-deployment-demo/tree/cloud-functions).
 
+**Recommended reading:** [Create a function in Azure that responds to HTTP requests](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-azure-function-azure-cli?tabs=bash%2Cbrowser&pivots=programming-language-javascript)
 
 #### Cloud function deployment
 
