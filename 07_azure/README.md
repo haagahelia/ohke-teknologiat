@@ -163,23 +163,36 @@ Weaknesses:
 
 [Quickstart: Create a function in Azure that responds to HTTP requests](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-azure-function-azure-cli?tabs=bash%2Cbrowser&pivots=programming-language-javascript)
 
-
-[Quickstart: Create a function in Azure using Visual Studio Code](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-function-vs-code?pivots=programming-language-javascript)
-
-
-    # installing the 'func' command:
-    npm install --global azure-functions-core-tools
+    # installing the 'func' command
+    # see https://www.npmjs.com/package/azure-functions-core-tools
+    $ sudo npm i -g azure-functions-core-tools@3 --unsafe-perm true
 
     # creating a function app
-    func init
+    $ func init   # choose node and javascript
 
     # adding a new function (http trigger)
-    func new
+    $ func new
 
-    # starting the development server
-    func start
+    # starting the local development server
+    $ func start
 
-During class we extend our demo application with two cloud functions.
+During class we extend our demo application with cloud functions. The cloud function app can be deployed to Azure using the same deployment center process as demonstrated in our App Service demo:
+
+```sh
+$ git remote add azure AZURE_REPOSITORY_URL
+
+$ git push azure master
+```
+
+In our case, we may want to use another branch name than `master`. We can use locally a different branch but push it to the remote repository's `master` branch:
+
+```sh
+git push remote-name local-branch-name:remote-branch-name
+```
+
+
+
+<!--Azure functions can also be created in VS Code: [Create a function in Azure using Visual Studio Code](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-function-vs-code?pivots=programming-language-javascript).-->
 
 ### Docker (containers)
 
@@ -283,7 +296,7 @@ Before pushing our container in the registry, we first need to log in:
 $ docker login swd4tn023.azurecr.io
 ```
 
-Username for the container registry is the same as the registry name (swd4tn023) and the password can be found in the Azure Portal.
+Username for the container registry is the same as the registry name (swd4tn023) and the password can be found in the Azure Portal under *settings* and *access keys*.
 
 When authentication is complete, we use `docker push` command with our **tag**:
 
@@ -291,7 +304,7 @@ When authentication is complete, we use `docker push` command with our **tag**:
 $ docker push swd4tn023.azurecr.io/docker-demo:latest
 ```
 
-Notice that the tag `swd4tn023.azurecr.io/docker-demo:latest` contains the URL of the registry as well as the container name and version.
+The `push` command will initialize a new *repository* called **docker-demo**. Notice that the tag `swd4tn023.azurecr.io/docker-demo:latest` contains the URL of the registry as well as the repository name and version.
 
 At this point the container image is published in our private container repository, but it's not actually running.
 
@@ -300,7 +313,7 @@ At this point the container image is published in our private container reposito
 
 When the container is published we can create a new webapp in App Service. One possible way for achieving this is explained in ["Migrate custom software to Azure App Service using a custom container"](https://docs.microsoft.com/en-us/azure/app-service/tutorial-custom-container?pivots=container-linux#configure-app-service-to-deploy-the-image-from-the-registry) at Microsoft Docs. Unlike in the previous App Service example, this time we choose to deploy a container, not code. In our example, we are using `app-deployment-demo-docker` as the name of our application.
 
-By using the Azure portal, we can also configure our app to trigger a new deployment when the Docker image is updated in the registry. After the container app is running, we can visit it at:
+By using the Azure portal, we can also configure our app to trigger a new deployment when the Docker image is updated in the registry. The "Contiunuous deployment" option can be found in "Container settings" of the app. After the container app is running, we can visit it at:
 
 https://app-deployment-demo-docker.azurewebsites.net/health
 
@@ -384,7 +397,7 @@ As our data source we use the [Digitransit High-frequency positioning API](https
 
 Our application is meant to **observe the traffic conditions at a certain road section and report detected anomalies to another MQTT queue**. In the exercise we are only interested in a specific road section so we limit our subscription to events occurring there. As the example location to observe we have selected [Lauttasaari Bridge](https://goo.gl/maps/qEKv3F9pbWECms857). More specifically, our coordinates are **60°09'43.4"N 24°53'50.9"E** (60.162050, 24.897470). 
 
-In MQTT, messages are filtered with topics. Topics are strings that consist of one or multiple levels separated by slashes `/`, such as `/foo/bar/baz`. They may first appear similar to URLs, but clients may use wildcards `+` and `#` to match multiple topics at once. Wildcards can only be used when subscribing to messages, not when publishing them.
+In MQTT, messages are filtered with topics. Topics are strings that consist of one or multiple levels separated by slashes `/`, such as `/foo/bar/baz`. They may first appear similar to URLs, but clients may use wildcards `+` and `#` to match multiple topics at once. Wildcards can only be used when subscribing to messages, not when publishing them. You can read more about the concepts [here](https://www.hivemq.com/blog/mqtt-essentials-part-1-introducing-mqtt/).
 
 An example topic for ongoing vehicle positioning events for buses at our street section is:
 
@@ -431,7 +444,7 @@ We recommend using the `mqtt` command on Linux. The command makes a connection t
 }
 ```
 
-In this exercise we are most interested in the attribute `spd`, which is speed of the vehicle in meters per second (m/s). Note that the vehicle in the sample data appears to be driving 80.56 km/h (22.38 m/s), which is slightly over the speed limit at Kehä I. If you do not receive any positioning messages for a while, you can use [Bussitutka.fi](https://bussitutka.fi/map#13/60.162050/24.897470) to check when a bus is approaching the Lauttasaari Bridge.
+All attributes are documented at https://digitransit.fi/en/developers/apis/4-realtime-api/vehicle-positions/#the-payload. In this exercise we are interested in the attribute `spd`, which is speed of the vehicle in meters per second (m/s). Note that the vehicle in the sample data appears to be driving 80.56 km/h (22.38 m/s), which is slightly over the speed limit at Kehä I. If you do not receive any positioning messages for a while, you can use [Bussitutka.fi](https://bussitutka.fi/map#13/60.162050/24.897470) to check when a bus is approaching the Lauttasaari Bridge.
 
 In JavaScript code, similar MQTT subscription and logging can be done as follows:
 
@@ -439,6 +452,7 @@ In JavaScript code, similar MQTT subscription and logging can be done as follows
 // Example modified from https://github.com/mqttjs/MQTT.js#example
 const mqtt = require('mqtt');
 
+// Vehicle positioning for ongoing buses at Lauttasaari bridge
 const myTopic = '/hfp/v2/journey/ongoing/vp/bus/+/+/+/+/+/+/+/+/60;24/18/69/27/#';
 
 const hslClient = mqtt.connect('mqtts://mqtt.hsl.fi:8883');
@@ -541,7 +555,7 @@ Finally, build and verify running the application using Docker. You can use the 
 
 Save the output of your `docker build` command in a file named `docker.txt`. If you build the image multiple times, the output can be saved from any build.
 
-You do not need to publish your Docker image in a repository, but you are free to do so as an extra exercise.
+Remember that you need to re-build the image if you make any changes to your source code. Building should be very fast, as Docker caches the previous steps. You do not need to publish your Docker image in a repository, but you are free to do so as an extra exercise.
 
 
 ### Submitting the exercise
