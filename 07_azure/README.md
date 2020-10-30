@@ -76,6 +76,18 @@ The following video demonstrates how to create a new virtual machine in Azure an
 
 **[Video: Azure part 1 - Ubuntu virtual machine](https://web.microsoftstream.com/video/8eb8e43c-3972-4f73-bd75-d5269e45c82e)**
 
+Azure will allow you to either log in with a password, a private key or it can create a new private key for you. If you are using private keys and Linux, you will most likely need to restrict the access to the key file to the owner:
+
+```
+$ chmod 600 my_private_key.pem
+```
+
+A new SSH connection to the server can be made with the private key, username and server's IP address as follows:
+
+```
+$ ssh -i my_private_key.pem username@your.ip.address.here
+```
+
 The newly created Ubuntu server contains outdated packages and is missing the Node.js installation. The system is first updated and Node.js is installed with the following commands:
 
 ```bash
@@ -85,6 +97,8 @@ $ sudo apt upgrade
 
 $ sudo apt install node
 ```
+
+Note that the Node.js version from the repository may still be outdated for your purposes. In that case, see instructions on how to install Node.js without `apt`. 
 
 After updating the server and installing Node.js, the application can be cloned, installed and started:
 
@@ -176,7 +190,68 @@ Weaknesses:
     # starting the local development server
     $ func start
 
-During class we extend our demo application with cloud functions. The cloud function app can be deployed to Azure using the same deployment center process as demonstrated in our App Service demo:
+During class we extend our demo application with cloud functions. The function for filtering and sorting MyHelsinki events is:
+
+```js
+const { createEventDateFilter, eventDateComparator } = require('../events/dates');
+const { getEventsAsync } = require('../events/client');
+
+module.exports = async function (context, req) {
+
+    let { min_date, max_date } = req.query;
+    let dateFilter = createEventDateFilter(min_date, max_date);
+
+    let events = await getEventsAsync();
+    let filtered = events.filter(dateFilter);
+
+    filtered.sort(eventDateComparator);
+
+    context.res = {
+        body: filtered
+    };
+}
+```
+
+As we are no longer using Express in our application, the dependency was removed from our `package.json` file:
+
+```
+$ npm uninstall express
+```
+
+We can also remove our start script, as Azure will take care of calling the function when needed:
+
+```diff
+ {
+   "name": "app-deployment-demo",
+   "version": "1.0.0",
+   "description": "Demo app used in class",
+   "main": "index.js",
+   "devDependencies": {
+     "mocha": "^8.1.3"
+   },
+   "scripts": {
+-    "start": "node index.js",
+     "test": "mocha -u qunit --timeout 10000"
+   },
+   "author": "Teemu Havulinna",
+   "license": "ISC",
+   "dependencies": {
+-    "express": "4.17.1",
+     "node-fetch": "2.6.1"
+   },
+   "repository": {
+     "type": "git",
+     "url": "https://github.com/haagahelia/app-deployment-demo.git"
+   }
+ }
+```
+
+Complete source code written during the class can be found at the [cloud functions branch of the demo application repository](https://github.com/haagahelia/app-deployment-demo/tree/cloud-functions).
+
+
+#### Cloud function deployment
+
+The cloud function app can be deployed to Azure using the same deployment center process as demonstrated in our App Service demo:
 
 ```sh
 $ git remote add azure AZURE_REPOSITORY_URL
@@ -190,7 +265,7 @@ In our case, we may want to use another branch name than `master`. We can use lo
 git push remote-name local-branch-name:remote-branch-name
 ```
 
-
+When the deployment is complete, the function is available at https://app-deployment-demo-func.azurewebsites.net/api/MyHelsinkiEvents?code=gzGyD55l09pbwbEHAPmmoprcSvOji7YhQDMMZAJWadn5puaCPp498w==&min_date=2020-10-30&max_date=2020-10-31
 
 <!--Azure functions can also be created in VS Code: [Create a function in Azure using Visual Studio Code](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-function-vs-code?pivots=programming-language-javascript).-->
 
