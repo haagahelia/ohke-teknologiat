@@ -42,6 +42,24 @@ In short, the server root `/` will return a list of events from [MyHelsinki Open
 
 The data from [MyHelsinki Open API](http://open-api.myhelsinki.fi/) is licensed under [Creative Commons By 4.0 license](http://open-api.myhelsinki.fi/terms).
 
+
+## Linux and Windows resource groups
+
+In the deployment examples, each time we are creating a new resource (web app, function app, container registry...) we need to select or create a resource group. The resource groups are described in [Azure documentation](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/overview#terminology) as follows:
+
+> *"**resource group** - A container that holds related resources for an Azure solution. The resource group includes those resources that you want to manage as a group. You decide which resources belong in a resource group based on what makes the most sense for your organization."*
+>
+> [Microsoft. What is Azure Resource Manager?](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/overview#terminology)
+
+When creating new resources note that Azure has limitations that prevent you from creating Linux and Windows apps in the same resource group:
+
+> *"Within the same resource group, you can't mix Windows and Linux apps in the same region."* [*(Azure documentation)*](https://docs.microsoft.com/en-us/azure/app-service/overview#limitations)
+
+Mixing Windows and Linux apps in the same resource group leads to a confusing validation error in the last step in resource creation process. To prevent this, **create separate resource groups for Windows and Linux resources**.
+
+Thanks @ristoxxx for pointing this out in issue [#3](https://github.com/haagahelia/swd4tn023/issues/3).
+
+
 ## Demo 1: Azure as a cloud provider
 
 In Azure, there are typically multiple supported ways of achieving the same goals. Typically documents published by Microsoft will explain how resources are managed and updated using either VS Code extensions or other Azure specific tools, such as the `az` command ([Azure CLI](https://docs.microsoft.com/en-us/cli/azure/)).
