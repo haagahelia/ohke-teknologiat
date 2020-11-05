@@ -606,7 +606,7 @@ For reporting the traffic jams, use a public MQTT server at `test.mosquitto.org`
 const mosquittoClient = mqtt.connect('mqtt://test.mosquitto.org:1883');
 ```
 
-*⚠️ During the week it `test.mosquitto.org` had an outage and was temporarily unavailable. In case you experience issues with the `test.mosquitto.org` server, replace it with `broker.hivemq.com` in the connection string. Thanks Olli K. for the hint!*
+*⚠️ During the week `test.mosquitto.org` had an outage and was temporarily unavailable. In case you experience issues with the `test.mosquitto.org` server, replace it with `broker.hivemq.com` in the connection string. Thanks Olli K. for the hint!*
 
 Report the potential traffic jams with a topic `"/swd4tn023/MY_ALIAS/traffic/jam"`, where `MY_ALIAS` is any unique string that differentiates your message from the ones by your classmates. The contents of your messages should mimic the following JavaScript object:
 
