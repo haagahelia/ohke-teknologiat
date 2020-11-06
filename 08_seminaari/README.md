@@ -6,11 +6,13 @@ Tälle sivulle on koottu esimerkkiaiheita kurssin seminaaritehtävää varten. V
 
 * **Tunnetun algoritmin toteuttaminen:**
 
-    Tutustu syvyyshakuun, rekursioon ja graafeihin ja toteuta syvyyshaku itse valitsemaasi aineistoon. Halutessasi voit esimerkiksi toteuttaa algoritmin, joka etsii tien ulos labyrintistä.
+    Tutustu syvyyshakuun, rekursioon ja graafeihin ja toteuta syvyyshaku itse valitsemaasi aineistoon. Halutessasi voit esimerkiksi toteuttaa algoritmin, joka etsii tien ulos labyrintistä. Katso esim: https://en.wikipedia.org/wiki/Maze_solving_algorithm.
+
+    Algoritmiaiheeseen sopii myös esimerkiksi minimax-algoritmilla toimiva ristinollaa pelaava botti: https://medium.com/ai-in-plain-english/coding-the-perfect-tic-tac-toe-bot-a0827e966a74
 
 * **Vapaavalintaisen tietorakenteen toteuttaminen:**
 
-    Toteuta esimerkiksi labyrintin tai sanaristikon generoiva algoritmi. Voit käyttää pohjana tunnettua valmista logiikkaa, josta teet oman toteutuksesi.
+    Toteuta esimerkiksi labyrintin tai sanaristikon generoiva algoritmi. Voit käyttää pohjana tunnettua valmista logiikkaa, josta teet oman toteutuksesi. Katso esim: https://en.wikipedia.org/wiki/Maze_generation_algorithm
 
 
 ## Ohjelmistoarkkitehtuurit ja patternit
