@@ -14,6 +14,8 @@ Tälle sivulle on koottu esimerkkiaiheita kurssin seminaaritehtävää varten. V
 
     Toteuta esimerkiksi labyrintin tai sanaristikon generoiva algoritmi. Voit käyttää pohjana tunnettua valmista logiikkaa, josta teet oman toteutuksesi. Katso esim: https://en.wikipedia.org/wiki/Maze_generation_algorithm
 
+Huom! Kokonaista peliä ja sen käyttöliittymää ei tarvitse toteuttaa. Riittää, että algoritmi on jollain tavoin todennettavissa toimivaksi.
+
 
 ## Ohjelmistoarkkitehtuurit ja patternit
 
