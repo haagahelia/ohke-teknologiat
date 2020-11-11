@@ -67,10 +67,12 @@ Koska ohjelmien asennus vaatii pääkäyttäjäoikeudet, ei normaalilla käyttä
     sudo apt install ohjelma
 
 
+APT asentaa koneellesi suoritettavia ohjelmia, joiden kanssa tulee aina huomioida myös tietoturva. Pääsääntöisesti Ubuntun pakettivarastot ovat turvallisia, mutta uusien pakettivarastojen lisääminen saattaa aiheuttaa riskejä. Tällä kurssilla teemme asennuksia vain Ubuntun omista pakettivarastoista. Voit lukea aiheesta lisää artikkelista [Can I get a virus by using "sudo apt-get install"?](https://askubuntu.com/a/818022)
+
+
 **PIP**
 
 APT-komennon lisäksi Linuxille on lukuisia muita pakettienhallintaohjelmia, joista useat ovat erikoistuneet jonkin tietyn ohjelmointikielen kirjastojen asentamiseen. 
-
 
 Python-kirjastojen asentamisessa käytämme `pip`-työkalua.
 
@@ -83,6 +85,7 @@ Python-kirjastojen asentamisessa käytämme `pip`-työkalua.
 ```shell
 sudo apt install python3-pip
 ```
+
 
 **Node.js ja npm**
 
@@ -138,6 +141,8 @@ Huomaa, että pip-asennukset ovat käyttäjäkohtaisia, eli niitä ei tehdä `su
 Lisäksi suosittelemme muuttamaan VS Code:n asetuksista koodin automaattisen muotoilun päälle tallennettaessa ja liitettäessä koodia:
 
 Avaa "User settings". Etsi hakukentän avulla valinnat `Format on save` sekä `Format on paste` ja aseta rastit molempiin ruutuihin.
+
+Huom! Python-paketit sisältävät suoritettavaa ohjelmakoodia, joten niiden kanssa tulee huomioida tietoturva, aivan kuten muidenkin suoritettavien ohjelmien kanssa. Paketteja ei kannata ladata tuntemattomista lähteistä. Tunnettujen ja laajasti käytettyjen pakettien käyttäminen voi myös olla turvallisempaa kuin heikommin tunnettujen tai vähäisessä käytössä olevien. Lisätietoa pip-pakettienhallinnan turvallisuudesta löydät esimerkiksi artikkelista ["Look before you pip"](https://www.ayrx.me/look-before-you-pip).
 
 
 ### Extra: Guest additions sekä leikepöydän käyttö

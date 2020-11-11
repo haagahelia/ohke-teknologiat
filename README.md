@@ -122,6 +122,9 @@ Mikäli sinulla on valmiiksi käytössäsi Linux tai muu Unix-pohjainen käyttö
 
 Lisää ohjeita löydät kurssin [ensimmäisen viikon materiaalista](00_linux_ja_python).
 
+Kurssin aikana teemme asennuksia Ubuntun `apt`-työkalulla, Pythonin `pip`-työkalulla sekä Noden `npm`-työkalulla. Nämä työkalut lisäävät tietokoneellesi suoritettavaa ohjelmakoodia, jonka yhteydessä tulee aina huomioida myös tietoturva. Asennusten tekeminen erillisessä virtuaalikoneessa on oiva lisä oman tietokoneesi suojaamiseksi, vaikka olemmekin pyrkineet valitsemaan vain erittäin tunnettuja ja hyvämaineisia ohjelmistoja tälle kurssille.
+
+
 ## Arviointi
 
 Kurssi arvioidaan asteikolla 0-5. Kurssin arviointi perustuu viikkoaiheiden yhteydessä suoritettuihin tehtäviin (60% arvosanasta) sekä kurssin toisella puoliskolla tehtävään seminaarityöhön (40%).
