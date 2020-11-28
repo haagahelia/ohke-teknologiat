@@ -71,9 +71,12 @@ Video: <a href="https://web.microsoftstream.com/video/f3903449-9188-47ca-8cc6-7c
  </td></tr>
  <tr><td>pe 6.11.</td><td><a href="07_azure">Azure osa 2: Enterprise Azure</a>. Vierailija <a href="https://houston-inc.com/">Houston Inc</a>:stä. 
  </td></tr>
- <tr><td>pe 13.11.</td><td>Seminaarityön tekemistä</td></tr>
- <tr><td>pe 20.11.</td><td>Seminaarityön tekemistä</td></tr>
- <tr><td>pe 27.11.</td><td>Seminaarityön tekemistä</td></tr>
+ <tr><td>pe 13.11.</td><td>Seminaarityön tekemistä<br />
+ <em>Yksilöllistä ohjausta Teamsissa</em></td></tr>
+ <tr><td>pe 20.11.</td><td>Seminaarityön tekemistä<br />
+ <em>Yksilöllistä ohjausta Teamsissa</em></td></tr>
+ <tr><td>pe 27.11.</td><td>Seminaarityön tekemistä<br />
+ <em>Yksilöllistä ohjausta Teamsissa</em></td></tr>
  <tr><td>su 29.11.</td><td>Seminaariesityksen palauttaminen</td></tr>
  <tr><td>pe 4.12.</td><td>Seminaariesityksiä</td></tr>
  <tr><td>pe 11.12.</td><td>Seminaariesityksiä</td></tr>
