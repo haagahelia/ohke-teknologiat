@@ -39,7 +39,11 @@ Hyvä ohje asennuksiin löytyy esimerkiksi osoitteesta https://itsfoss.com/insta
 >
 > https://itsfoss.com/install-linux-in-virtualbox/
 
-Mikäli virtuaalikoneen asennuksessa on ongelmia, pyritään pääsääntöisesti ratkaisemaan ne jo ennen ensimmäistä oppituntia Teams-työtilan chatissa.
+Windows-käyttäjänä joudut mahdollisesti [kytkemään päälle Windowsin Hyper-V -ominaisuuden](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v#enable-the-hyper-v-role-through-settings) tai [kytkemään virtualisoinnin päälle tietokoneesi BIOS-asetuksista](https://www.google.com/search?q=enable+virtualization+bios).
+
+Mikäli virtuaalikoneen asennuksessa on ongelmia, pyritään pääsääntöisesti ratkaisemaan ne jo ennen ensimmäistä oppituntia Teams-työtilan chatissa!
+
+
 
 ### Linuxin komentorivikäyttö ja pakettien asentaminen
 
@@ -104,7 +108,7 @@ Kurssilla käytetään oppimateriaalin ja esimerkkikoodien jakelussa Git-version
 sudo apt install git
 ```
 
-Asennuksen jälkeen voit kloonata tämän repositorion itsellesi:
+Asennuksen jälkeen voit kloonata tämän repositorion itsellesi (vapaaehtoista):
 
 ```shell
 git clone https://github.com/haagahelia/swd4tn023.git
@@ -147,7 +151,13 @@ Huom! Python-paketit sisältävät suoritettavaa ohjelmakoodia, joten niiden kan
 
 ### Extra: Guest additions sekä leikepöydän käyttö
 
-Perusasennuksen lisäksi suosittelemme sinua asentamaan VirtualBoxin "guest additions" -lisäosat virtualisoidulle Linux-koneelle. Lisäosien avulla esimerkiksi VirtualBox-ikkunan koon muuttaminen muuttaa automaattisesti virtualisoidun työpöydän resoluutiota ikkunan koon mukaiseksi. Ohjeita lisäosan lisäosan asentamiseksi löydät [Googlella](https://www.google.com/search?q=virtualbox+install+guest+additions).
+Perusasennuksen lisäksi suosittelemme sinua asentamaan VirtualBoxin "guest additions" -lisäosat virtualisoidulle Linux-koneelle. Lisäosien avulla esimerkiksi VirtualBox-ikkunan koon muuttaminen muuttaa automaattisesti virtualisoidun työpöydän resoluutiota ikkunan koon mukaiseksi. 
+
+Asennus tapahtuu helpoiten syöttämällä virtuaalikoneeseen virtuaalinen asennus CD virtuaalikoneen ollessa käynnissä:
+
+![Install guest additions](guest-additions.png)
+
+Lisää ohjeita löydät [Googlella](https://www.google.com/search?q=virtualbox+install+guest+additions).
 
 Virtuaalikoneen ja "host"-koneen välillä on myös mahdollista synkronoida leikepöytä. Tällöin pystyt kopioimaan ja liittämään tekstiä kätevästi eri järjestelmien välillä. Käynnissä olevan virtuaalikoneen "Devices"-valikosta löytyy kohta "Shared clipboard", jonka avulla voit valita leikepöydän toimintalogiikan haluamaksesi.
 
