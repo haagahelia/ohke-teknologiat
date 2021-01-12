@@ -44,14 +44,6 @@ var element = React.createElement("h1", null, "Hello, world!");
 Reactin ja muiden erityissyntaksien lisäksi Babel osaa muuntaa JavaScriptin modernimmilla versioilla toteutetut syntaksit vanhempien selainten tukemaan muotoon. Erilaisista muunnoksista johtuen voi joskus olla haastavaa hahmottaa, mitkä asiat ovat "natiivi JavaScriptiä" ja mitkä eri kirjastoihin tai ohjelmistokehyksiin liittyviä ominaisuuksia.
 
 
-## Tehtävän malliratkaisu
-
-Tehtävän malliratkaisu käytiin läpi koneoppimisen oppitunnin alussa:
-
-Video: <a href="https://web.microsoftstream.com/video/9e82d743-a4cd-4890-9fa6-d31bcfff6113">kotitehtävän malliratkaisu</a>
-
-Malliratkaisun koodit: <a href="https://github.com/haagahelia/swd4tn023/blob/es6-malliratkaisu/05_es6_node_mongo/malliratkaisu/index.js">index.js</a>, <a href="https://github.com/haagahelia/swd4tn023/blob/es6-malliratkaisu/05_es6_node_mongo/malliratkaisu/blog/users.js">users.js</a>
-
 ## Oppitunnin tavoitteet
 
 Tämän oppitunnin tavoitteena on oppia erityisesti lukemaan koodia ja ymmärtämään, miten yleisimmät JavaScript-kieliset esimerkkikoodit toimivat. Sivuamme funktionaalista ohjelmointia hyödyntämällä funktioiden antamista parametreina toisille funktioille (callback) sekä funktioiden vaiheittaista suorittamista (currying).
