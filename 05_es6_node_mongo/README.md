@@ -59,14 +59,6 @@ Itseopiskelumateriaalina voit hyödyntää hyviä sivustoja, kuten:
 Aiheessa esiintyvä MongoDB-tietokanta ei ole osa oppitunnin sisältöä eikä oppituntiin liittyvää kotitehtävää, vaan osa tämän aihealueen seminaariosuutta.
 
 
-## Oppitunnin lähdekoodit ja tallenteet
-
-[Lähdekoodit](src/)
-
-Video: [ES6:n ominaisuudet ja syntaksit](https://web.microsoftstream.com/video/39d4bf67-7258-4d9c-9e21-b6a74ceadcde)
-
-Video: [Node, express, filter, fetch, promiset ja async/await](https://web.microsoftstream.com/video/247c0aba-772c-4331-833c-c1ec217e0f60)
-
 ## JavaScriptin ohjelmointityylit
 
 JavaScriptillä voidaan soveltaa monia erilaisia ohjelmointityylejä, eli se on monen paradigman kieli. Voit siis soveltaa JavaScriptillä olio-ohjelmointia tai funktionaalista ohjelmointia, tai halutessasi sekoittaa eri tyylejä. Monipuolisuuden heikkoutena JavaScriptillä ei aina ole yhtä vahvoja "parhaita käytäntöjä" kuin yhden paradigman kielillä. 
