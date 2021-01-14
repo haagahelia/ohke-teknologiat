@@ -21,57 +21,141 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
 **Kurssin aikataulun päivittäminen on kesken. Aikatauluun on tulossa merkittäviä muutoksia.**
 
 <table>
-<thead><tr><th>Päivämäärä</th><th>Aihe</th></tr></thead><tbody>
- <tr><td>pe 22.1.</td><td>
- <a href="00_linux_ja_python">Kurssin johdanto, ympäristöt ja perustason Python</a><br />
- </td></tr>
- <tr><td>pe 29.1.</td><td>
- <a href="01_tietorakenteet_ja_algoritmit">Tietorakenteet ja algoritmit</a><br />
- </td></tr>
- <tr><td>pe 5.2.</td><td> <a href="02_ohjelmistoarkkitehtuurit_ja_patternit">Ohjelmistoarkkitehtuurit ja patternit</a></td></tr>
- <tr><td>pe 12.2.</td><td><a href="02_ohjelmistoarkkitehtuurit_ja_patternit">Ohjelmistoarkkitehtuurit ja patternit</a>, vierailija <a href="https://neverthink.tv/">Neverthink.tv:ltä</a></td></tr>
- <tr><td>pe 19.2.</td><td><a href="03_testaus">Testaus</a>
- </td></tr>
- <tr><td>pe 26.2.</td><td><del>Talvilomaviikko</del></td></tr>
- <tr><td>pe 5.3.</td><td><a href="04_infra_ja_automaatio">Infra + automaatio</a></td></tr>
- <tr><td>pe 12.3.</td><td><a href="05_es6_node_mongo">ES6 / JavaScript, node, mongo</a><br/><br/>
- </td></tr>
- <tr><td>pe 19.3.</td>
- <td><a href="06_koneoppiminen">Koneoppiminen</a>
- </td></tr>
- <tr><td>pe 26.3.</td><td><del>Intensiiviviikko</del></td></tr>
- <tr><td>pe 2.4.</td><td><del>Pitkäperjantai</del></td></tr>
- <tr><td>pe 9.4.</td><td><a href="07_azure">Azure osa 1: IaaS, PaaS ja Machine Learning</a>
- </a></td></tr>
- <tr><td>pe 16.4.</td><td><a href="07_azure">Azure osa 2: Enterprise Azure</a>. Vierailija <a href="https://houston-inc.com/">Houston Inc</a>:stä. 
- </td></tr>
- <tr><td>pe 23.4.</td><td>Seminaarityön tekemistä<br />
- <em>Yksilöllistä ohjausta Teamsissa</em></td></tr>
- <tr><td>pe 30.4.</td><td>Seminaarityön tekemistä<br />
- <em>Yksilöllistä ohjausta Teamsissa</em></td></tr>
- <tr><td>pe 7.5.</td><td>Seminaarityön tekemistä<br />
- <em>Yksilöllistä ohjausta Teamsissa</em></td></tr>
- <tr><td>pe 14.5.</td><td>Seminaariesityksiä</td></tr>
- <tr><td>pe 21.5.</td><td>Seminaariesityksiä</td></tr>
-</tbody></table>
-
-## Aiheet
-
-1. [Linux ja Python](00_linux_ja_python)
-
-1. [Tietorakenteet ja algoritmit](01_tietorakenteet_ja_algoritmit)
-
-1. [Ohjelmistoarkkitehtuurit ja patternit](02_ohjelmistoarkkitehtuurit_ja_patternit)
-
-1. [Testaus](03_testaus)
-
-1. [Infra + automaatio](04_infra_ja_automaatio)
-
-1. [ES6 / JavaScript, node, mongo](05_es6_node_mongo)
-
-1. [Koneoppiminen](06_koneoppiminen)
-
-1. [Azure](07_azure)
+    <thead>
+        <tr>
+            <th>Päivämäärä</th>
+            <th>Aihe</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>pe 22.1.</td>
+            <td>
+                <a href="00_linux">Kurssin johdanto, ympäristöt ja Linux/Unix-komentorivi</a><br />
+            </td>
+        </tr>
+        <tr>
+            <td>pe 29.1.</td>
+            <td>
+                <a href="01_python">Python-ohjelmointi</a><br />
+                <ul>
+                    <li>Ehto- ja toistorakenteet</li>
+                    <li>Perustietotyypit ja kokoelmat</li>
+                    <li>Http-pyynnöt</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>pe 5.2.</td>
+            <td>
+                <a href="02_testaus">Testaus</a>
+            </td>
+        </tr>
+        <tr>
+            <td>pe 12.2.</td>
+            <td>
+                <a href="03_infra_ja_automaatio">Infra ja automaatio</a><br />
+                <ul>
+                    <li>Continuous integration</li>
+                    <li>Git-demo</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>pe 19.2.</td>
+                <a href="04_tietorakenteet_ja_algoritmit">Tietorakenteet ja algoritmit</a><br />
+                <ul>
+                    <li>Lajittelualgoritmit</li>
+                    <li>Hakualgoritmit</li>
+                    <li>Algoritmien tehokkuus</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>pe 26.2.</td>
+            <td><del>Talvilomaviikko</del></td>
+        </tr>
+        <tr>
+            <td>pe 5.3.</td>
+            <td>
+                <a href="05_es6_node">Node / JavaScript</a><br />
+                <ul>
+                    <li>ES6-syntaksit</li>
+                    <li>filter, map, reduce</li>
+                    <li>currying</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>pe 12.3.</td>
+            <td>
+                <a href="05_es6_node">Node / JavaScript</a><br />
+                <ul>
+                    <li>Express.js</li>
+                    <li>Promise</li>
+                    <li>Async/await</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>pe 19.3.</td>
+            <td>
+                <a href="06_ohjelmistoarkkitehtuurit_ja_patternit">Ohjelmistoarkkitehtuurit ja patternit</a>
+            </td>
+        </tr>
+        <tr>
+            <td>pe 26.3.</td>
+            <td><del>Intensiiviviikko</del></td>
+        </tr>
+        <tr>
+            <td>pe 2.4.</td>
+            <td>
+                Pitkäperjantai: <strong>ei oppituntia</strong><br />
+                Azure-videomateriaalit itseopiskeluun
+            </td>
+        </tr>
+        <tr>
+            <td>pe 9.4.</td>
+            <td>
+                <a href="06_ohjelmistoarkkitehtuurit_ja_patternit">Ohjelmistoarkkitehtuurit ja patternit</a>
+            </td>
+        </tr>
+        <tr>
+            <td>pe 16.4.</td>
+            <td>
+                <a href="06_ohjelmistoarkkitehtuurit_ja_patternit">Ohjelmistoarkkitehtuurit ja patternit</a>
+                <ul>
+                    <li>Tehtävien purku</li>
+                    <li>Vierailu</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>pe 23.4.</td>
+            <td>
+                <a href="07_koneoppiminen">Koneoppiminen</a>
+            </td>
+        </tr>
+        <tr>
+            <td>pe 30.4.</td>
+            <td><a href="08_seminaari">Seminaarien käynnistys</a></td>
+        </tr>
+        <tr>
+            <td>pe 7.5.</td>
+            <td>Seminaarityön tekemistä<br />
+                <em>Yksilöllistä ohjausta Teamsissa</em></td>
+        </tr>
+        <tr>
+            <td>pe 14.5.</td>
+            <td>Seminaarityön tekemistä<br />
+                <em>Yksilöllistä ohjausta Teamsissa</em></td>
+        </tr>
+        <tr>
+            <td>pe 21.5.</td>
+            <td>Seminaariesityksiä</td>
+        </tr>
+    </tbody>
+</table>
 
 ## Viestintäkanavat
 
@@ -95,7 +179,7 @@ Linux voidaan asentaa myös tietokoneen pääkäyttöjärjestelmäksi tai "dual 
 
 Mikäli sinulla on valmiiksi käytössäsi Linux tai muu Unix-pohjainen käyttöjärjestelmä, kuten macOS, voit käyttää sitä kurssilla. Myös Raspberry Pi tai etäyhteydellä käytettävät Linux-ympäristöt, kuten [DigitalOcean](https://www.digitalocean.com/github-students/), sopivat kurssin tarkoituksiin, mutta  niihin pystymme tarjoamaan vain vähäistä käyttötukea.
 
-Lisää ohjeita löydät kurssin [ensimmäisen viikon materiaalista](00_linux_ja_python).
+Lisää ohjeita löydät kurssin [ensimmäisen viikon materiaalista](00_linux).
 
 Kurssin aikana teemme asennuksia Ubuntun `apt`-työkalulla, Pythonin `pip`-työkalulla sekä Noden `npm`-työkalulla. Nämä työkalut lisäävät tietokoneellesi suoritettavaa ohjelmakoodia, jonka yhteydessä tulee aina huomioida myös tietoturva. Asennusten tekeminen erillisessä virtuaalikoneessa on oiva lisä oman tietokoneesi suojaamiseksi, vaikka olemmekin pyrkineet valitsemaan vain erittäin tunnettuja ja hyvämaineisia ohjelmistoja tälle kurssille.
 
