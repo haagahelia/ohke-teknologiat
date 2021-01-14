@@ -63,6 +63,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
         </tr>
         <tr>
             <td>pe 19.2.</td>
+            <td>
                 <a href="04_tietorakenteet_ja_algoritmit">Tietorakenteet ja algoritmit</a><br />
                 <ul>
                     <li>Lajittelualgoritmit</li>
