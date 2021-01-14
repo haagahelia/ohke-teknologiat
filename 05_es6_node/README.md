@@ -772,9 +772,13 @@ Reduce onkin erittäin monikäyttöinen operaatio, ja sen avulla onnistuu luonte
 
 ## Bonus: JavaScriptin totuusarvot ja niiden vertailu
 
-Kuten kurssin aikaisemmalla oppitunnilla todettiin, JavaScriptissä vertailuoperaatiot tehdään usein kolmella merkillä eli `===` tai `!==`. Kolmen merkin vertailuoperaatiot tarkastavat, että vertailtavien arvojen tyyppi on sama. Mikäli tyyppitarkastus jätetään tekemättä, JavaScript vertailee tyhjiä ja nollaan vertautuvia arvoja epäloogisesti.
+JavaScriptissä vertailuoperaatiot tehdään usein kolmella merkillä eli `===` tai `!==`. Kolmen merkin vertailuoperaatiot tarkastavat, että vertailtavien arvojen tyyppi on sama. Mikäli tyyppitarkastus jätetään tekemättä, JavaScript vertailee tyhjiä ja nollaan vertautuvia arvoja epäloogisesti.
+
+Voit tutustua aiheeseen syvällisemmin YouTube-videolla [JavaScript == VS === (Web Dev Simplified)](https://www.youtube.com/watch?v=C5ZVC4HHgIg).
 
 ### Vertailu kahdella yhtäsuuruusmerkillä
+
+Kahden yhtäsuuruusmerkin vertailut tuottavat epäloogisia tuloksia esimerkiksi seuraavissa tapauksissa:
 
 ```js
 > "0" == false  // nolla merkkijonona ja false
@@ -795,7 +799,7 @@ false
 
 ### Vertailu kolmella yhtäsuuruusmerkillä
 
-Vertailu kolmella merkillä on helpommin arvattavissa, koska sekä tyypin että arvon tulee olla sama:
+Vertailu kolmella merkillä on helpommin arvattavissa, koska vertailussa sekä tyypin että arvon tulee olla sama:
 
 ```js
 > "0" === false

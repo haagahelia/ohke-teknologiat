@@ -20,7 +20,15 @@ Laajempia ja laadukkaita oppimateriaaleja löytyy mm. seuraavista lähteistä:
 
 [Lähdekoodit](src/)-->
 
+# Oppitunnin aiheet
 
+* Python-koodin suorittaminen ja kirjoittaminen
+* Tietotyypit
+* Ehto- ja toistorakenteet
+* Funktiot
+* Json
+* Http-pyynnöt
+* Sanakirjat
 
 # Koodaustehtävä
 
