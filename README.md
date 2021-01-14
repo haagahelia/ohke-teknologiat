@@ -48,7 +48,13 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
         <tr>
             <td>pe 5.2.</td>
             <td>
-                <a href="02_testaus">Testaus</a>
+                <a href="02_testaus">Testaus</a><br />
+                <ul>
+                    <li>Testauksen tasot</li>
+                    <li>Yksikkötestaus</li>
+                    <li>Test driven development</li>
+                    <li>Testikattavuus, fixturet, mock:it</li>
+                </ul>
             </td>
         </tr>
         <tr>
