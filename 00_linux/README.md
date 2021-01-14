@@ -1,31 +1,15 @@
-# Sisällysluettelo
+# Kurssin johdanto, ympäristöt ja Linux/Unix-komentorivi
 
-- [Linux ja Python](#linux-ja-python)
-  - [Tavoite](#tavoite)
-  - [Ennakkotehtävät](#ennakkotehtävät)
-- [Python-intro](#python-intro)
-- [Koodaustehtävä](#koodaustehtvä)
-  - [Tehtävä 1](#tehtävä-1)
-  - [Tehtävä 2](#tehtävä-2)
-  - [Postinumeroaineisto](#postinumeroaineisto)
-  - [Lähteitä](#lähteitä)
-  - [Tehtävien palauttaminen](#tehtävien-palauttaminen)
-
-# Linux ja Python
-
-Kurssin ensimmäisellä viikolla asennamme kurssilla tarvittavat kehitysympäristöt, tutustumme Linux-käyttöjärjestelmän peruskäyttöön ja perehdymme Python-ohjelmointikielen perusteisiin.
+Kurssin ensimmäisellä viikolla asennamme kurssilla tarvittavat kehitysympäristöt, tutustumme Linux-käyttöjärjestelmän peruskäyttöön.
 
 Johdannon käytettäviin työkaluihin löydät kurssin [etusivulta](../README.md#Työkalut).
 
+
 **Tulet tekemään osan ensimmäisen viikon työskentelystä itsenäisesti jo ennen lukujärjestykseen merkittyä oppituntia. Kysy kohtaamistasi ongelmista rohkeasti Teamsissa keskustelukanavalla jo ennen ensimmäistä oppituntia.**
-
-## Tavoite 
-
-Tämän viikon tavoitteina on päästä alkuun komentorivityöskentelyssä sekä oppia käyttämään ohjelmoinnin perusrakenteita Python-ohjelmointikielellä.
 
 ## Ennakkotehtävät
 
-Ennen ensimmäistä oppituntia sinun tulee valmistella itsellesi toimiva unix-pohjainen ympäristö, jossa voit kehittää ja suorittaa Python-kielistä koodia. 
+Ennen ensimmäistä oppituntia sinun tulee valmistella itsellesi toimiva unix-pohjainen ympäristö, jossa voit kehittää ja suorittaa jatkossa kurssilla kehittämiämme koodeja. 
 
 Mikäli sinulla on jo valmiiksi hyvä ympäristö tai olet kiinnostunut esimerkiksi, [Dockerin](https://www.docker.com/), [Raspberry Pi](https://www.raspberrypi.org/):n tai [DigitalOceanin](https://www.digitalocean.com/github-students/) käytöstä, voit käyttää myös niitä, mutta  emme voi luvata niihin käyttötukea.
 
