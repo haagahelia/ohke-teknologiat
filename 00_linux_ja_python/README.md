@@ -174,7 +174,7 @@ Jos haluat päästä nopeasti vauhtiin, voit lukea esimerkiksi tutoriaalin "Lear
 
 Laajempia valmiita oppimateriaaleja löytyy mm. seuraavat:
 
-* Lappeenrannan Yliopiston Python 3 –ohjelmointiopas: https://lutpub.lut.fi/handle/10024/63381
+* Lappeenrannan Yliopiston Python 3 –ohjelmointiopas: https://lutpub.lut.fi/handle/10024/162088
 * Pythonin oma "The Python Tutorial": https://docs.python.org/3/tutorial/
 * Mooc.fi:n Ohjelmoinnin perusteet Pythonilla -kurssi: https://python-k20.mooc.fi/
 
