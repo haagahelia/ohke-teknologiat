@@ -44,4 +44,11 @@ public class Listaesimerkki {
         }
         return tulos;
     }
+
+    /**
+     * TODO: Lisätään esimerkkiin vielä oma objekti, jolla on id ja tekstikenttä ja
+     * toteutetaan luokan equals-metodi siten, että pelkkä tekstisisällön
+     * samankaltaisuus tarkoittaa samankaltaisuutta, sitten se voidaan myös antaa
+     * mielekkääseen vertailuun laskeEsiintymat metodille.
+     */
 }
