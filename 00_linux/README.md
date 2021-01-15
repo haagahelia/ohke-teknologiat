@@ -2,12 +2,9 @@
 
 Kurssin ensimmäisellä viikolla asennamme kurssilla tarvittavat kehitysympäristöt, tutustumme Linux-käyttöjärjestelmän peruskäyttöön.
 
-Johdannon käytettäviin työkaluihin löydät kurssin [etusivulta](../README.md#Työkalut).
-
-
 **Tulet tekemään osan ensimmäisen viikon työskentelystä itsenäisesti jo ennen lukujärjestykseen merkittyä oppituntia. Kysy kohtaamistasi ongelmista rohkeasti Teamsissa keskustelukanavalla jo ennen ensimmäistä oppituntia.**
 
-## Ennakkotehtävät
+## &lt;ennakkotehtävät&gt;
 
 Ennen ensimmäistä oppituntia sinun tulee valmistella itsellesi toimiva unix-pohjainen ympäristö, jossa voit kehittää ja suorittaa jatkossa kurssilla kehittämiämme koodeja. 
 
@@ -15,13 +12,14 @@ Mikäli sinulla on jo valmiiksi hyvä ympäristö tai olet kiinnostunut esimerki
 
 ### Windows + VirtualBox + Linux
 
-Windows-käyttäjille suosittelemme Oraclen ilmaisen [VirtualBox](https://www.virtualbox.org/)-virtualisointiympäristön sekä [Ubuntu](https://ubuntu.com/)-käyttöjärjestelmän asentamista. Virtuaalikoneeseen tekemäsi asennukset eivät vaikuta tietokoneesi normaaliin käyttöön, ja käyttämällä virtuaalikonetta saat käyttötukea myös kurssin puolesta. 
-
-Hyvä ohje asennuksiin löytyy esimerkiksi osoitteesta https://itsfoss.com/install-linux-in-virtualbox/:
+Windows-käyttäjille suosittelemme Oraclen ilmaisen [VirtualBox](https://www.virtualbox.org/)-virtualisointiympäristön sekä [Ubuntu](https://ubuntu.com/desktop)-käyttöjärjestelmän asentamista. Virtuaalikoneeseen tekemäsi asennukset eivät vaikuta tietokoneesi normaaliin käyttöön, ja käyttämällä virtuaalikonetta saat käyttötukea myös kurssin puolesta. Kurssin opettajalla on käytössä Ubuntun stabiili LTS-versio 20.04 (Long Term Support), joka on varmuudella toimiva tälle kurssille.
 
 > *Using Linux in a virtual machine gives you the option to try Linux within Windows. This step-by-step guide shows you how to install Linux inside Windows using VirtualBox.*
 >
 > https://itsfoss.com/install-linux-in-virtualbox/
+
+Hyviä ohjeita asennuksiin löytyy sekä YouTubesta että Googlesta. Toimiviksi havaittuja ohjeita ovat mm. video ["How to Install Ubuntu 20.04 LTS on VirtualBox in Windows 10"](https://www.youtube.com/watch?v=x5MhydijWmc) ja artikkeli ["Install Linux Inside Windows Using VirtualBox"](https://itsfoss.com/install-linux-in-virtualbox/).
+
 
 Windows-käyttäjänä joudut mahdollisesti [kytkemään päälle Windowsin Hyper-V -ominaisuuden](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v#enable-the-hyper-v-role-through-settings) tai [kytkemään virtualisoinnin päälle tietokoneesi BIOS-asetuksista](https://www.google.com/search?q=enable+virtualization+bios).
 
@@ -57,6 +55,32 @@ Koska ohjelmien asennus vaatii pääkäyttäjäoikeudet, ei normaalilla käyttä
 
 APT asentaa koneellesi suoritettavia ohjelmia, joiden kanssa tulee aina huomioida myös tietoturva. Pääsääntöisesti Ubuntun pakettivarastot ovat turvallisia, mutta uusien pakettivarastojen lisääminen saattaa aiheuttaa riskejä. Tällä kurssilla teemme asennuksia vain Ubuntun omista pakettivarastoista. Voit lukea aiheesta lisää artikkelista [Can I get a virus by using "sudo apt-get install"?](https://askubuntu.com/a/818022)
 
+### Git-asennus
+
+Kurssilla käytetään oppimateriaalin ja esimerkkikoodien jakelussa Git-versionhallintaa. Asenna itsellesi valmiiksi Git-työkalut. 
+
+```shell
+sudo apt install git
+```
+
+Asennuksen jälkeen voit kloonata tämän repositorion itsellesi (vapaaehtoista):
+
+```shell
+git clone https://github.com/haagahelia/swd4tn023.git
+```
+
+**Node.js ja npm**
+
+Tulemme tällä kurssilla ohjelmoimaan JavaScriptillä, johon tarvitsemme Node.js-suoritusympäristön. Node-paketeille on lisäksi oma paketinhallintasovellus nimeltä **npm** (Node Package Manager). Nämä voidaan asentaa apt-komennoilla seuraavasti:
+
+```shell
+sudo apt install nodejs
+sudo apt install npm
+```
+
+Halutessasi voit lisäksi konfiguroida npm:n siten, että et tarvitse pääkäyttäjäoikeuksia pakettien asentamiseen: https://blua.blue/article/how-to-install-global-npm-packages-without-sudo-on-ubuntu/
+
+
 
 **PIP**
 
@@ -72,32 +96,6 @@ Python-kirjastojen asentamisessa käytämme `pip`-työkalua.
 
 ```shell
 sudo apt install python3-pip
-```
-
-
-**Node.js ja npm**
-
-Pythonin lisäksi tulemme tällä kurssilla ohjelmoimaan JavaScriptillä, mihin tarvitsemme Node.js:n. Node-paketeille on oma paketinhallintasovellus nimeltä **npm** (Node Package Manager). Nämä voidaan asentaa apt-komennoilla seuraavasti:
-
-```shell
-sudo apt install nodejs
-sudo apt install npm
-```
-
-Halutessasi voit lisäksi konfiguroida npm:n siten, että et tarvitse pääkäyttäjäoikeuksia pakettien asentamiseen: https://blua.blue/article/how-to-install-global-npm-packages-without-sudo-on-ubuntu/
-
-### Git-asennus
-
-Kurssilla käytetään oppimateriaalin ja esimerkkikoodien jakelussa Git-versionhallintaa. Asenna itsellesi valmiiksi Git-työkalut. 
-
-```shell
-sudo apt install git
-```
-
-Asennuksen jälkeen voit kloonata tämän repositorion itsellesi (vapaaehtoista):
-
-```shell
-git clone https://github.com/haagahelia/swd4tn023.git
 ```
 
 ### Visual Studio Coden asennus
@@ -146,6 +144,12 @@ Asennus tapahtuu helpoiten syöttämällä virtuaalikoneeseen virtuaalinen asenn
 Lisää ohjeita löydät [Googlella](https://www.google.com/search?q=virtualbox+install+guest+additions).
 
 Virtuaalikoneen ja "host"-koneen välillä on myös mahdollista synkronoida leikepöytä. Tällöin pystyt kopioimaan ja liittämään tekstiä kätevästi eri järjestelmien välillä. Käynnissä olevan virtuaalikoneen "Devices"-valikosta löytyy kohta "Shared clipboard", jonka avulla voit valita leikepöydän toimintalogiikan haluamaksesi.
+
+
+## &lt;/ennakkotehtävät&gt;
+
+Jos sait yllä olevat kohdat suoritettua, olet erinomaisesti valmistautunut viikon oppituntia ja tehtäviä varten. Mikäli törmäsit ongelmaan, kysythän neuvoa [Teamsissa](http://teams.microsoft.com/). Mikäli ongelmat eivät ratkea ennen oppituntia, älä lannistu. Myös oppitunnilla on mahdollista kysyä neuvoa.
+
 
 ## Linuxin ja komentorivin perusteet
 
