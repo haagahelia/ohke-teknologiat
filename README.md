@@ -32,6 +32,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
             <td>pe 22.1.</td>
             <td>
                 <a href="00_linux">Kurssin johdanto, ympäristöt ja Linux/Unix-komentorivi</a><br />
+                <a href="00_linux/asennukset.md">⭐ Ennakkotehtävä: kurssin kehitysympäristön asennus</a>
             </td>
         </tr>
         <tr>
@@ -63,7 +64,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
                 <a href="03_infra_ja_automaatio">Infra ja automaatio</a><br />
                 <ul>
                     <li>Continuous integration</li>
-                    <li>Git-demo</li>
+                    <li>Git: branch, merge, rebase...</li>
                 </ul>
             </td>
         </tr>
