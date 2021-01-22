@@ -108,7 +108,7 @@ $ grep -E "koira|kissa" tiedosto.txt # Sovella regex-patternia, eli etsi sekä k
 Tiedoston lopun voi tulostaa tail-komennolla. Tämä komento on erityisen hyödyllinen logitiedostojen seuraamiseen -F-vivulla, jolloin se jää seuraamaan tiedostojen päivittymistä ja jatkaa muutosten tulostamista ruudulla. Tailin voi myös putkittaa grep:in kanssa ja seurata tiedostossa esimerkiksi vain tietyn patternin mukaisia muutoksia. Komennosta voi poistua CTRL^C:llä
 ```shell
 $ tail -F server.log
-$ tail -F server.log | grep "ERROR"
+$ tail -F server.log | grep -E "ERROR"
 ```
 Kahden tiedoston eroavaisuudet voi listata diff komennolla.
 ```shell
