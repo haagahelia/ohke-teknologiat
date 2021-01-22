@@ -30,7 +30,7 @@ Laajempia ja laadukkaita oppimateriaaleja löytyy mm. seuraavista lähteistä:
 * Http-pyynnöt
 * Sanakirjat
 
-# Koodaustehtävä
+# Koodaustehtävä (luonnos)
 
 Tämän koodaustehtävän tavoitteena on luoda pohja seuraavien viikkojen tehtäville, joissa käsittelemme dataa ja testaamme ohjelmistoja Python-kielellä. Kaikkien mahdollisten Pythonin rakenteiden opetteleminen etukäteen ei ole kurssin kannalta tarkoituksenmukaista, mutta tehtäväksi on valittu sellainen, jonka kautta opimme seuraavista Pythonin rakenteista:
 
