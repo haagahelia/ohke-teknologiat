@@ -196,7 +196,9 @@ Kurssin aikana teemme asennuksia Ubuntun `apt`-työkalulla, Pythonin `pip`-työk
 
 Kurssi arvioidaan asteikolla 0-5. Kurssin arviointi perustuu viikkoaiheiden yhteydessä suoritettuihin tehtäviin (60% arvosanasta) sekä kurssin toisella puoliskolla tehtävään seminaarityöhön (40%).
 
-Kaikkien viikkojen tehtävien painoarvo kokonaisarvosanasta on yhtä suuri riippumatta tehtävän maksimipistemäärästä. Pisteet skaalataan yhteneviksi vasta loppuarvosanaa varten.
+Kunkin yksittäisen viikon tehtävien painoarvo kokonaisarvosanassa on yhtä suuri riippumatta viikon maksimipistemäärästä. Pisteet skaalataan yhteneviksi vasta loppuarvosanaa varten.
+
+Yksittäinen palauttamatta jäänyt tai arvosanalla 0 arvioitu tehtävä ei estä seuraavien tehtävien tekemistä, kunhan kokonaisuutena viikkotehtävistä muodostuu hyväksytty arvosana.
 
 ## Lähteiden käyttäminen
 
