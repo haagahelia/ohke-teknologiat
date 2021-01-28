@@ -61,6 +61,22 @@ Asennuksen jälkeen voit kloonata tämän repositorion itsellesi (vapaaehtoista)
 git clone https://github.com/haagahelia/swd4tn023.git
 ```
 
+Asennuksen jälkeen Gitille täytyy vielä kertoa sähköpostiosoite ja nimi, joita käytetään tehdessäsi committeja. Nämä tiedot tulevat esim. GitHubin kautta kaikkien saataville, voit itse valita käytätkö oikeaa nimeäsi ja oikeaa sähköpostiosoitettasi. [GitHub tarjoaa myös mahdollisuuden käyttää anonyymiä sähköpostiosoitetta.](https://docs.github.com/en/github/setting-up-and-managing-your-github-user-account/setting-your-commit-email-address)
+
+```shell
+$ git config --global user.email "you@example.com"
+$ git config --global user.name "Your Name"
+```
+
+Jos et halua syöttää käyttäjätunnustasi ja kirjautumistunnustasi (personal access token) joka kerta tehdessäsi kirjautumista vaativia Git-operaatioita, voit asettaa Gitin pitämään kirjautumistietosi muistissa:
+
+```shell
+$ git config --global credential.helper cache
+```
+
+Yllä oleva komento pitää tiedot tilapäisessä muistissa, josta ne poistuvat automaattisesti myöhemmin. Vaihtoehtoisesti voit asettaa Gitin [tallentamaan salasanan tiedostoon](https://unix.stackexchange.com/questions/379272/storing-username-and-password-in-git), mitä emme voi suositella.
+
+
 ## Node.js ja npm
 
 Tulemme tällä kurssilla ohjelmoimaan JavaScriptillä, johon tarvitsemme Node.js-suoritusympäristön. Node-paketeille on lisäksi oma paketinhallintasovellus nimeltä **npm** (Node Package Manager). Nämä voidaan asentaa apt-komennoilla seuraavasti:
