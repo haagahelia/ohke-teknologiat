@@ -53,9 +53,6 @@ Kokeile Pythonin laskuoperaatioita sivun https://www.pythoncheatsheet.org/#Pytho
 
 ### Kommentit
 
-```python
-// tämä ei ole kommentti!
-```
 
 ```python
 # tämä on yksirivinen kommentti
@@ -64,6 +61,9 @@ Kokeile Pythonin laskuoperaatioita sivun https://www.pythoncheatsheet.org/#Pytho
     käytetään pythonissa myös usein kommentteina """
 ```
 
+```python
+// tämä ei ole kommentti!
+```
 
 ### Muuttujat ja tietotyypit
 
@@ -491,107 +491,9 @@ def laske_summa(lista_numeroista):
 Pythonista löytyy **paljon** perusoperaatioita myös valmiina, eli oman `laske_summa`-funktion sijaan voimme kutsua Pythonin valmista `sum`-funktiota.
 
 
-### Sanakirjat
-
-    >>> kaupungit = {
-    ...     'Helsinki': 648553,
-    ...     'Espoo': 285018,
-    ...     'Vantaa': 229593
-    ... }
-    >>> 
-    >>> 
-    >>> kaupungit.keys()
-    dict_keys(['Helsinki', 'Espoo', 'Vantaa'])
-    >>> kaupungit.values()
-    dict_values([648553, 285018, 229593])
-    >>> kaupungit.items()
-    dict_items([('Helsinki', 648553), ('Espoo', 285018), ('Vantaa', 229593)])
-    >>> list(kaupungit.items())[0]
-    ('Helsinki', 648553)
-    >>> hki = list(kaupungit.items())[0]
-    >>> hki
-    ('Helsinki', 648553)
-    >>> type(hki)
-    <class 'tuple'>
-    >>> nimi, vakiluku = hki
-    >>> nimi
-    'Helsinki'
-    >>> vakiluku
-    648553
-    >>> 
-    >>> kaupungit.items()
-    dict_items([('Helsinki', 648553), ('Espoo', 285018), ('Vantaa', 229593)])
-    >>> parit = list(kaupungit.items())
-    >>> parit
-    [('Helsinki', 648553), ('Espoo', 285018), ('Vantaa', 229593)]
-    >>> eka = parit[0]
-    >>> toka = parit[1]
-    >>> kolmas = parit[2]
-
-Esimerkki 2 (VS Codessa)
-
-    # dict -rakenteet, eli sanakirjat, vastaavat map-rakenteita:
-    kaupungit = {
-        'Helsinki': 648553,
-        'Espoo': 285018,
-        'Vantaa': 229593
-    }
-
-    # arvojen (väkiluvut) hakeminen avaimien (nimet) perusteella:
-    print(kaupungit['Helsinki'])
-    print(kaupungit['Vantaa'])
-
-    # uuden avaimen ja arvon asettaminen:
-    kaupungit['Kauniainen'] = 9549
-
-    # tulostetaan koko rakenne
-    print(kaupungit)
-
-
-    # in -operaatio hakee sanakirjan _avaimista_
-    if 'Helsinki' in kaupungit:
-        print('Helsinki löytyy kaupungeista')
-
-    if 'Tampere' in kaupungit:  # ei löydy
-        print(kaupungit['Tampere'])
-
-    # Arvoa haetaan vain _avaimista_ eli kaupunkien nimistä
-    print(9549 in kaupungit)  # false
-
-    print(kaupungit.keys())  # tulostaa listan avaimia, eli kaupunkien nimet
-
-    print(kaupungit.values())  # tulostaa listan arvoja, eli väkiluvut
-
-    # väkilukujen summa saadaan laskettua kätevästi sum-funktiolla!
-    vakiluku_yhteensa = sum(kaupungit.values())
-    print(vakiluku_yhteensa)
-
-    # kerätään tähän listaan kaupungit, joissa on yli 50000 asukasta!
-    isot_kaupungit = []
-
-    # for a, b in x.items() käy läpi avaimet ja arvot *pareittain*
-    for kaupunki, vakiluku in kaupungit.items():
-        if vakiluku > 50000:
-            # lisätään uusi kaupungin nimi listalle
-            isot_kaupungit.append(kaupunki)
-
-    # tulostaa isojen kaupunkien nimet
-    print(isot_kaupungit)
-
-
-    kaupungit['Tukholma'] = 975904
-    print(kaupungit)
-
-    # del -komennolla poistetaan sekä avain että siihen liitetty arvo:
-    del kaupungit['Tukholma']
-
-    # Tukholma on nyt poistettu
-    print(kaupungit)
-
-
 ### Muita hyödyllisiä komentoja
 
-**help**
+**help** -funktio näyttää ohjeita sille annetun arvon tai funktion käyttämiseksi:
 
     >>> help(print)
     Help on built-in function print in module builtins:
@@ -606,53 +508,60 @@ Esimerkki 2 (VS Codessa)
         end:   string appended after the last value, default a newline.
         flush: whether to forcibly flush the stream.
 
-**type**
+**type** -funktio kertoo sille annetun arvon tyypin:
 
     >>> type(mysteerimuuttuja)
     <class 'list'>
 
-**dir**
+**dir** -funktio kertoo moduulin sisältämät arvot, funktiot ja luokat:
 
     >>> import math
     >>> dir(math)
-    ['__doc__', '__loader__', '__name__', '__package__', '__spec__', 'acos', 'acosh', 'asin', 'asinh', 'atan', 'atan2', 'atanh', 'ceil', 'comb', 'copysign', 'cos', 'cosh', 'degrees', 'dist', 'e', 'erf', 'erfc', 'exp', 'expm1', 'fabs', 'factorial', 'floor', 'fmod', 'frexp', 'fsum', 'gamma', 'gcd', 'hypot', 'inf', 'isclose', 'isfinite', 'isinf', 'isnan', 'isqrt', 'ldexp', 'lgamma', 'log', 'log10', 'log1p', 'log2', 'modf', 'nan', 'perm', 'pi', 'pow', 'prod', 'radians', 'remainder', 'sin', 'sinh', 'sqrt', 'tan', 'tanh', 'tau', 'trunc']
+    ['__doc__', '__loader__', '__name__', '__package__', '__spec__', 'acos', 'acosh', 'asin', 'asinh', 'atan', 'atan2', 
+    'atanh', 'ceil', 'comb', 'copysign', 'cos', 'cosh', 'degrees', 
+    'dist', 'e', 'erf', 'erfc', 'exp', 'expm1', 'fabs', 
+    'factorial', 'floor', 'fmod', 'frexp', 'fsum', 'gamma', 'gcd',
+    'hypot', 'inf', 'isclose', 'isfinite', 'isinf', 'isnan', 
+    'isqrt', 'ldexp', 'lgamma', 'log', 'log10', 'log1p', 'log2', 
+    'modf', 'nan', 'perm', 'pi', 'pow', 'prod', 'radians', 
+    'remainder', 'sin', 'sinh', 'sqrt', 'tan', 'tanh', 'tau', 
+    'trunc']
 
-
-
-
-
-### Ehtorakenteet
-
-
-### Toistorakenteet
-
-
-```python
-range(0, 10)
-
-[*range(0, 10)] # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-```
 
 ### Luokat ja oliot
 
-Emme hyödynnä tällä kurssilla 
+Emme hyödynnä tällä kurssilla luokkia ja olioita, mutta voit tutustua itsenäisesti Pythonin olio-ohjelmointipuoleen.
 
 ## "Python as a swiss army knife"
 
-### JSON-työkalu: **json.tool**
-
 Seuraavissa esimerkeissä käytämme `curl`-komentoa, jonka voit asentaa Ubuntussa seuraavasti: `sudo apt install curl`. Lisätietoja komennosta löydät [Ubuntun manuaalista](https://manpages.ubuntu.com/manpages/focal/man1/curl.1.html).
 
-```
+```bash
 $ curl https://raw.githubusercontent.com/theikkila/postinumerot/master/postcode_map_light.json
+```
+
+### JSON-työkalu: **json.tool**
+
+Python 3:ssa on mukana `json.tool`-niminen moduuli, jonka avulla voidaan mm. muotoilla JSON-tietorakenteita helpommin luettavaan muotoon.
+
+Kokeillaan seuraavaksi putkittaa curl-komennon tulostama sisentämätön JSON-tietorakenne `json.tool`-työkalulle:
+
+```bash
 $ curl https://raw.githubusercontent.com/theikkila/postinumerot/master/postcode_map_light.json | python3 -m json.tool
 ```
+
+Sama voidaan tehdä myös tiedostolle (ensimmäinen komento lataa tiedoston paikalliseen hakemistoon):
 
 ```
 $ curl https://raw.githubusercontent.com/theikkila/postinumerot/master/postcode_map_light.json > postinumerot.json
 $ cat postinumerot.json | python3 -m json.tool
 ```
 
+Data saadaan ladattua, muotoiltua ja tallennettua myös yhdellä rivillä:
+
+```
+$ curl https://raw.githubusercontent.com/theikkila/postinumerot/master/postcode_map_light.json | python3 -m json.tool > postinumerot.json
+```
 
 https://docs.python.org/3/library/json.html#json-commandline
 
@@ -670,38 +579,22 @@ https://developer.mozilla.org/en-US/docs/Learn/Common_questions/set_up_a_local_t
 Tällä kurssilla emme käytä Pythonin virtuaalisia ympäristöjä, koska kaikki harjoitukset ja esimerkit tehdään lähtökohtaisesti virtualisoimalla koko käyttöjärjestelmä. Jos sinulla on tarpeen kehittää samalla käyttöjärjestelmällä useita toisistaan riippumattomia Python-projekteja, näiden erittely omiksi ympäristöikseen `venv`-työkalulla on tedennäköisesti kannattavaa: https://docs.python.org/3/tutorial/venv.html
 
 
-### Unittest
+### Muut kurssilla myöhemmin käytettävät työkalut
 
-https://docs.python.org/3/library/unittest.html
-
-
-### Pytest
-
-### cProfile
+* Pytest
+* cProfile
+* coverage
 
 ## Python as a programming language
 
-Python on monen paradigman kieli.
+Python on monen paradigman kieli. Tunnilla tutustumme Python-kehitykseen hyödyntäen VS Codea sekä muita ohjelmistokehityksen työkaluja.
 
-* main-moduuli `if __name__ == 'main'` 
-
-* Python-koodin suorittaminen ja kirjoittaminen
-* Tietotyypit
-* Ehto- ja toistorakenteet
-* Funktiot
-* Json
-* Http-pyynnöt
-* Sanakirjat
+Tutustu tarvittaessa itsenäisesti kurssin videotallenteisiin tämän osion tiimoilta.
 
 
-```python
-import antigravity
-```
+# Koodaustehtävä
 
-
-# Koodaustehtävä (luonnos)
-
-Tämän koodaustehtävän tavoitteena on luoda pohja seuraavien viikkojen tehtäville, joissa käsittelemme dataa ja testaamme ohjelmistoja Python-kielellä. Kaikkien mahdollisten Pythonin rakenteiden opetteleminen etukäteen ei ole kurssin kannalta tarkoituksenmukaista, mutta tehtäväksi on valittu sellainen, jonka kautta opimme seuraavista Pythonin rakenteista:
+Tämän koodaustehtävän tavoitteena on luoda pohja seuraavien viikkojen tehtäville, joissa käsittelemme dataa ja testaamme ohjelmistoja Python-kielellä. Kaikkien mahdollisten Pythonin rakenteiden opetteleminen etukäteen ei ole kurssin kannalta tarkoituksenmukaista, mutta tehtäväksi on valittu sellainen, jonka kautta opimme soveltamaan seuraavia Pythonin ominaisuuksia:
 
 * ehtolauseet
 * toisto
@@ -712,9 +605,9 @@ Tämän koodaustehtävän tavoitteena on luoda pohja seuraavien viikkojen tehtä
 
 Tehtävien tausta-aineistona käytämme GitHubissa julkaistua postinumeroaineistoa, jonka tarkemmat ohjeet löytyvät alempana tästä dokumentista.
 
-Tehtävät saa ratkaista yhteistyössä kaverin kanssa, mutta molempien on osallistuttava aktiivisesti ongelmien ratkaisemiseen ja palautettava omat ratkaisunsa. 
+Tehtävät saa ratkaista yhteistyössä kaverin kanssa, mutta molempien on osallistuttava aktiivisesti ongelmien ratkaisemiseen ja koodattava sekä palautettava omat ratkaisunsa. 
 
-Tehtävien toimintalogiikan ja käyttöliittymän ei tarvitse noudattaa täsmällisesti annettuja esimerkkejä, mutta toimintaidean tulee olla samankaltainen.
+Tehtävien toimintalogiikan ja käyttöliittymän ei tarvitse noudattaa täsmällisesti annettuja esimerkkejä, mutta toimintalogiikan tulee olla samankaltainen.
 
 
 ## Tehtävien arviointi
@@ -722,7 +615,7 @@ Tehtävien toimintalogiikan ja käyttöliittymän ei tarvitse noudattaa täsmäl
 Hyväksyttyyn suoritukseen sinun ei tarvitse toteuttaa kumpaakaan tehtävää täydellisesti. Palauta siis ohjelmat siinä kunnossa mihin saat ne toteutettua. Arviointi skaalataan suuntaa-antavasti siten, että ensimmäisen tehtävän ratkaisulla saat arvosanan 3 ja molemmat tehtävät ratkaisemalla arvosanan 5.
 
 
-## Tehtävä 1
+## Tehtävä 1 (arvosanatavoite 3)
 
 Kirjoita Python-kielinen ohjelma `postitoimipaikka.py`, joka kysyy  käyttäjältä postinumeron ja kertoo, mihin postitoimipaikkaan kyseinen postinumero kuuluu. 
 
@@ -735,7 +628,7 @@ Esimerkkisuoritus:
     Kirjoita postinumero: 00100
     HELSINKI
 
-## Tehtävä 2
+## Tehtävä 2 (arvosanatavoite 5)
 
 Kirjoita Python-kielinen ohjelma `postinumerot.py`, joka kysyy käyttäjältä postitoimipaikan nimen, ja listaa kaikki kyseisen postitoimipaikan postinumerot.
 
@@ -794,6 +687,7 @@ Pythonin dict-tietorakenne, eli sanakirja, muistuttaa Javan map-tietorakennetta.
 Tiedoston lataaminen verkosta onnistuu esim Python 3: standardikirjastoon kuuluvalla `urllib`-kirjastolla: https://docs.python.org/3/howto/urllib2.html.
 
 JSON-muotoisen merkkijonon parsiminen Pythonin listoiksi, sanakirjoiksi ja muiksi tietorakenteiksi onnistuu standardikirjaston `json`-kirjastolla: https://docs.python.org/3/library/json.html
+
 
 ## Tehtävien palauttaminen
 
