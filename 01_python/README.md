@@ -595,55 +595,11 @@ Tutustu tarvittaessa itsenäisesti kurssin videotallenteisiin tämän osion tiim
 
 # Koodaustehtävä
 
-Tämän koodaustehtävän tavoitteena on luoda pohja seuraavien viikkojen tehtäville, joissa käsittelemme dataa ja testaamme ohjelmistoja Python-kielellä. Kaikkien mahdollisten Pythonin rakenteiden opetteleminen etukäteen ei ole kurssin kannalta tarkoituksenmukaista, mutta tehtäväksi on valittu sellainen, jonka kautta opimme soveltamaan seuraavia Pythonin ominaisuuksia:
+Tämän koodaustehtävän tavoitteena on luoda pohja seuraavien viikkojen tehtäville, joissa käsittelemme dataa ja testaamme ohjelmistoja Python-kielellä. Kaikkien mahdollisten Pythonin rakenteiden opetteleminen etukäteen ei ole kurssin kannalta tarkoituksenmukaista, mutta tehtäväksi on valittu sellainen, jonka kautta opimme soveltamaan Pythonin perusrakenteita.
 
-* ehtolauseet
-* toisto
-* listat
-* sanakirjat (dict)
-* merkkijonot
-* JSON
+Tehtävät saa ratkaista yhteistyössä kaverin kanssa, mutta molempien on osallistuttava aktiivisesti ongelmien ratkaisemiseen ja koodattava sekä palautettava omat ratkaisunsa. Tehtävien toimintalogiikan ja käyttöliittymän ei tarvitse noudattaa täsmällisesti annettuja esimerkkejä, mutta toimintalogiikan tulee olla samankaltainen.
 
-Tehtävien tausta-aineistona käytämme GitHubissa julkaistua postinumeroaineistoa, jonka tarkemmat ohjeet löytyvät alempana tästä dokumentista.
-
-Tehtävät saa ratkaista yhteistyössä kaverin kanssa, mutta molempien on osallistuttava aktiivisesti ongelmien ratkaisemiseen ja koodattava sekä palautettava omat ratkaisunsa. 
-
-Tehtävien toimintalogiikan ja käyttöliittymän ei tarvitse noudattaa täsmällisesti annettuja esimerkkejä, mutta toimintalogiikan tulee olla samankaltainen.
-
-
-## Tehtävien arviointi
-
-Hyväksyttyyn suoritukseen sinun ei tarvitse toteuttaa kumpaakaan tehtävää täydellisesti. Palauta siis ohjelmat siinä kunnossa mihin saat ne toteutettua. Arviointi skaalataan suuntaa-antavasti siten, että ensimmäisen tehtävän ratkaisulla saat arvosanan 3 ja molemmat tehtävät ratkaisemalla arvosanan 5.
-
-
-## Tehtävä 1 (arvosanatavoite 3)
-
-Kirjoita Python-kielinen ohjelma `postitoimipaikka.py`, joka kysyy  käyttäjältä postinumeron ja kertoo, mihin postitoimipaikkaan kyseinen postinumero kuuluu. 
-
-Tehtävän ratkaisemiseksi sinun tulee kysyä käyttäjältä syötettä ja etsiä postinumeroaineistosta syötettä vastaava arvo. Voit joko tallentaa postinumeroaineiston koneellesi ja [lukea sen levyltä](https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files) tai toteuttaa ohjelmasi [lukemaan tiedoston suoraan verkosta](https://docs.python.org/3/howto/urllib2.html).
-
-Esimerkkisuoritus:
-
-    $ python3 postitoimipaikka.py
-    
-    Kirjoita postinumero: 00100
-    HELSINKI
-
-## Tehtävä 2 (arvosanatavoite 5)
-
-Kirjoita Python-kielinen ohjelma `postinumerot.py`, joka kysyy käyttäjältä postitoimipaikan nimen, ja listaa kaikki kyseisen postitoimipaikan postinumerot.
-
-Tehtävän voi ratkaista useilla tavoilla, joten käytä hetki ongelman pohtimiseen ennen kuin ryhdyt koodaamaan. Olisiko esimerkiksi helpompaa jäsentää postinumeroaineisto etukäteen uudenlaiseksi tietorakenteeksi, vai käydä avain-arvo-pareja läpi yksi kerrallaan postinumeroiden löytämiseksi. Seuraavalla viikolla käsittelemme hieman lähemmin tietorakenteiden ja algoritmien suunnittelua ja tehokkuutta.
-
-Esimerkkisuoritus:
-
-    $ python3 postinumerot.py
-
-    Kirjoita postitoimipaikka: Porvoo
-    Postinumerot: 06100, 06401, 06151, 06150, 06101, 06500, 06450, 06400, 06200
-
-Yritä toteuttaa ohjelma siten, että syötetyn postitoimipaikan kirjainkoolla ei ole merkitystä. Huolehdi myös siitä, että tuntemattoman nimen syöttäminen ei kaada ohjelmaa.
-
+Tehtävien tausta-aineistona käytämme GitHubissa julkaistua postinumeroaineistoa, jonka tarkemmat ohjeet käsitellään seuraavaksi.
 
 ## Postinumeroaineisto
 
@@ -680,6 +636,40 @@ JSON-muotoisen merkkijonon parsiminen Pythonin tietorakenteiksi onnistuu standar
 > *JSON-muunnokset ovat vapaasti käytettävissä ja muunneltavissa.*
 >
 > Lähde: https://github.com/theikkila/postinumerot
+
+## Tehtävien arviointi
+
+Hyväksyttyyn suoritukseen sinun ei tarvitse toteuttaa kumpaakaan tehtävää täydellisesti. Palauta siis ohjelmat siinä kunnossa mihin saat ne toteutettua. Arviointi skaalataan suuntaa-antavasti siten, että ensimmäisen tehtävän ratkaisulla saat arvosanan 3 ja molemmat tehtävät ratkaisemalla arvosanan 5.
+
+
+## Tehtävä 1 (arvosanatavoite 3)
+
+Kirjoita Python-kielinen ohjelma `postitoimipaikka.py`, joka kysyy  käyttäjältä postinumeron ja kertoo, mihin postitoimipaikkaan kyseinen postinumero kuuluu. 
+
+Tehtävän ratkaisemiseksi sinun tulee kysyä käyttäjältä syötettä ja etsiä postinumeroaineistosta syötettä vastaava arvo. Voit joko tallentaa postinumeroaineiston koneellesi ja [lukea sen levyltä](https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files) tai toteuttaa ohjelmasi [lukemaan tiedoston suoraan verkosta](https://docs.python.org/3/howto/urllib2.html).
+
+Esimerkkisuoritus:
+
+    $ python3 postitoimipaikka.py
+    
+    Kirjoita postinumero: 00100
+    HELSINKI
+
+## Tehtävä 2 (arvosanatavoite 5)
+
+Kirjoita Python-kielinen ohjelma `postinumerot.py`, joka kysyy käyttäjältä postitoimipaikan nimen, ja listaa kaikki kyseisen postitoimipaikan postinumerot.
+
+Tehtävän voi ratkaista useilla tavoilla, joten käytä hetki ongelman pohtimiseen ennen kuin ryhdyt koodaamaan. Olisiko esimerkiksi helpompaa jäsentää postinumeroaineisto etukäteen uudenlaiseksi tietorakenteeksi, vai käydä avain-arvo-pareja läpi yksi kerrallaan postinumeroiden löytämiseksi. Seuraavalla viikolla käsittelemme hieman lähemmin tietorakenteiden ja algoritmien suunnittelua ja tehokkuutta.
+
+Esimerkkisuoritus:
+
+    $ python3 postinumerot.py
+
+    Kirjoita postitoimipaikka: Porvoo
+    Postinumerot: 06100, 06401, 06151, 06150, 06101, 06500, 06450, 06400, 06200
+
+Yritä toteuttaa ohjelma siten, että syötetyn postitoimipaikan kirjainkoolla ei ole merkitystä. Huolehdi myös siitä, että tuntemattoman nimen syöttäminen ei kaada ohjelmaa.
+
 
 ## Lähteitä
 
