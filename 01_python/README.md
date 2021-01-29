@@ -637,12 +637,12 @@ JSON-muotoisen merkkijonon parsiminen Pythonin tietorakenteiksi onnistuu standar
 >
 > Lähde: https://github.com/theikkila/postinumerot
 
-## Tehtävien arviointi
+## Tehtävän arviointi
 
-Hyväksyttyyn suoritukseen sinun ei tarvitse toteuttaa kumpaakaan tehtävää täydellisesti. Palauta siis ohjelmat siinä kunnossa mihin saat ne toteutettua. Arviointi skaalataan suuntaa-antavasti siten, että ensimmäisen tehtävän ratkaisulla saat arvosanan 3 ja molemmat tehtävät ratkaisemalla arvosanan 5.
+Hyväksyttyyn suoritukseen sinun ei tarvitse toteuttaa kumpaakaan tehtävää täydellisesti. Palauta siis ohjelmat siinä kunnossa mihin saat ne toteutettua. Arviointi skaalataan suuntaa-antavasti siten, että ensimmäisen tehtävän ratkaisulla saat arvosanan 3 ja **molemmat tehtävät** ratkaisemalla arvosanan 5.
 
 
-## Tehtävä 1 (arvosanatavoite 3)
+## Osa 1 (arvosanatavoite 3)
 
 Kirjoita Python-kielinen ohjelma `postitoimipaikka.py`, joka kysyy  käyttäjältä postinumeron ja kertoo, mihin postitoimipaikkaan kyseinen postinumero kuuluu. 
 
@@ -655,7 +655,7 @@ Esimerkkisuoritus:
     Kirjoita postinumero: 00100
     HELSINKI
 
-## Tehtävä 2 (arvosanatavoite 5)
+## Osa 2 (arvosanatavoite 5)
 
 Kirjoita Python-kielinen ohjelma `postinumerot.py`, joka kysyy käyttäjältä postitoimipaikan nimen, ja listaa kaikki kyseisen postitoimipaikan postinumerot.
 
