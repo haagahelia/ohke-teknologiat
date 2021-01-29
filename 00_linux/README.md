@@ -158,7 +158,9 @@ $ ping www.haaga-helia.fi #miten nopeasti osoite vastaa, voi testata vaikka omaa
 $ whois haaga-helia.fi #tietoja tunnuksesta, whois pitää asentaa apt:lla ubuntussa.
 $ ssh host.jotain.fi  #avataan ssh-etäyhteys etäpalvelimeen
 $ wget https://osoite.fi/kuva.jpeg  #Ladataan tiedosto internetistä
+§ curl https://external.api.yle.fi/v1/programs/items.json?app_id=${APP_ID}\&app_key=${APP_KEY} | python3 -m json.tool | grep '"fi"' #Haetaan curl komennolla rajapinnasta json-tiedosto, siistitään se kivasti riveittäin pythonin json.tool:illa ja tulostetaan grepin avulla vain tietyn sanan sisältävät rivit. Komennolle annetaan parametreina lokaaleista ympäristömuuttujista APP_ID ja APP_KEY.
 ```
+
 Ohjelmistokehittäjä pystyy ajamaan unix-järjestelmissä lukuisia kehitystyöhön liittyviä ohjelmia. Tässä vielä niistä muutamia esimerkkejä.
 ```shell
 $ node
