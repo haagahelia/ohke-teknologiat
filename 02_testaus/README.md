@@ -1,3 +1,5 @@
+🚧 **Huom!** Tämän aiheen [päivitys kevään 2021 toteutukselle on kesken](http://textfiles.com/underconstruction/). 🚧
+
 # Testaus
 
 Tämän oppitunnin tavoitteena on tutustua testauksen eri tasoihin yksikkötesteistä järjestelmätesteihin ja tutustua testiautomaation käsitteistöön ja työkaluihin.
@@ -210,6 +212,19 @@ Tietokantapohjaisessa ohjelmistossa sama ennalta määrätty testidata syötetä
 
 VS Codessa on oma erillinen näkymänsä testeille. Tämän näkymän kautta testien suoritusta voidaan nopeuttaa ja tehdä vielä havainnollisemmaksi kuin komentoriviltä. Ota testausominaisuudet käyttöön seuraamalla oppituntia tai ohjeita sivulla: https://code.visualstudio.com/docs/python/testing
 
+## Refaktorointi
+
+Mikäli käytät malliratkaisua tai oma toteutuksesi noudattaa malliratkaisun kaltaista arkkitehtuuria, jossa kaikki logiikka on toteutettu `main`-funktioon, joudut refaktoroimaan koodia testaamisen mahdollistamiseksi.
+
+Voit toteuttaa esimerkiksi funktion, joka ottaa parametreinaan etsittävän postitoimipaikan nimen sekä sanakirjan postinumeroista ja postitoimipaikoista ja palauttaa annettua toimipaikkaa vastaavat postinumerot listana:
+
+```python
+def etsi_postinumerot(postitoimipaikka, postinumerot_sanakirja):
+    pass # todo
+```
+Tämän funktion testaaminen on huomattavasti helpompaa kuin main-funktion, koska `etsi_postinumerot` ei kysy käyttäjältä mitään eikä tee tulostuksia.
+
+<!--
 ## Test driven development
 
 Tietorakenteet ja algoritmit -aiheen malliratkaisussa on havaittu bugi, joka [on raportoitu GitHubiin issuena](https://github.com/haagahelia/swd4tn023/issues/1). Bugin seurauksena kaikkien tapahtumien ajankohdat on ilmoitettu UTC-ajassa, eli ne eivät vastaa Suomen paikallisia aikoja.
@@ -221,7 +236,9 @@ Päivämäärien käsittelemiseksi asennamme `dateutil`-paketin, joka helpottaa 
 `pip3 install python-dateutil`
 
 Dateutil-paketin dokumentaatio löytyy osoitteesta https://dateutil.readthedocs.io/en/stable/
+-->
 
+<!--
 ### Testin kirjoittaminen
 
 Bugiraportissa todetaan elokuussa 2021 klo 10 alkavan tapahtuman kellonaikana näkyvän virheellisesti klo 7:00. Virhe johtuu siitä, että aika poimitaan ISO-muotoillusta merkkijonosta huomioimatta lainkaan aikavyöhykettä. Oikea ajankohta syötteelle `'2021-08-13T07:00:00.000Z'` olisikin 13.8.2021 **klo 10:00 Suomen aikaa**.
@@ -254,9 +271,11 @@ def str_to_datetime(dt_str):
     hki_timezone = tz.gettz('Europe/Helsinki')
     return dt.astimezone(hki_timezone)
 ```
--->
+
 
 Ratkaisussa tarvitaan myös Pythonin standardikirjaston `datetime`-moduulin dokumentaatiota: https://docs.python.org/3/library/datetime.html.
+
+
 
 ### Koodin korjaaminen
 
@@ -271,6 +290,7 @@ Oikeat muotoilumääreet selviävät datetime-moduulin dokumentaatiosta: https:/
 
 Lopulta voimme myös suorittaa koodin ja varmistaa että korjaus tuotti toivotun lopputuloksen.
 
+-->
 
 ## Miten testata koodia, jolla on riippuvuuksia?
 
@@ -451,41 +471,35 @@ events_by_date.py      48      3    94%
 Voit käyttää myös `coverage html`-komentoa, joka muodostaa raportin staattisen verkkosivun muodossa.
 
 
-# Tehtävä
+# Tehtävä (luonnos)
 
-Tällä viikolla harjoitellaan koodin refaktorointia ja yksikkötestausta kirjoittamalla testejä aikaisemmin koodaamallesi `postinumerot.py`-tiedostolle. Mikäli aikaisempi tehtävä jäi sinulta palauttamatta tai et halua käyttää vanhaa koodiasi, voit käyttää myös tehtävän malliratkaisun tiedostoja:
+Tällä viikolla harjoitellaan koodin refaktorointia ja yksikkötestausta kirjoittamalla testejä aikaisemmin koodaamallesi `postitoimipaikka.py`-tiedostolle. Mikäli aikaisempi tehtävä jäi sinulta palauttamatta tai et halua käyttää vanhaa koodiasi, voit käyttää myös tehtävän malliratkaisun tiedostoja.
 
-* [postinumerot.py](../00_linux_ja_python/src/postinumerot.py)
-* [postitoimipaikka.py](../00_linux_ja_python/src/postitoimipaikka.py)
+* postinumerot.py (linkki lisätään mallivastauksen julkaisun jälkeen)
+* postitoimipaikka.py (linkki lisätään mallivastauksen julkaisun jälkeen)
 
+## Osa 1: postitoimipaikkalogiikan testaaminen (arvosanatavoite 3)
 
-## Refaktorointi
-
-Mikäli käytät malliratkaisua tai oma toteutuksesi noudattaa malliratkaisun kaltaista arkkitehtuuria, jossa kaikki logiikka on toteutettu `main`-funktioon, joudut refaktoroimaan koodia testaamisen mahdollistamiseksi.
-
-Voit toteuttaa esimerkiksi funktion, joka ottaa parametreinaan etsittävän postitoimipaikan nimen sekä sanakirjan postinumeroista ja postitoimipaikoista ja palauttaa annettua toimipaikkaa vastaavat postinumerot listana:
-
-```python
-def etsi_postinumerot(postitoimipaikka, postinumerot_sanakirja):
-    pass # todo
-```
-Tämän funktion testaaminen on huomattavasti helpompaa kuin main-funktion, koska `etsi_postinumerot` ei kysy käyttäjältä mitään eikä tee tulostuksia.
-
-
-## Testien laajuus ja kattavuus
+Kirjoita yksikkötestit `postitoimipaikka.py`-ratkaisullesi. Sinun ei tarvitse testata koko ohjelmalogiikkaa, vaan riittää, että testaat esimerkiksi malliratkaisussa esitetyn `ryhmittele_toimipaikoittain`-funktion.
 
 Testaa toteuttamasi logiikka ainakin tapauksissa, joissa:
 
-1. annettua nimeä ei löydy lainkaan aineistosta
+1. postitoimipaikan nimi on kirjoitettu eri kirjainkoolla kuin JSON-aineistossa
+1. annettua toimipaikkaa ei löydy lainkaan aineistosta
+
+    * tämä tapaus ei saa tuottaa poikkeusta tai kaataa ohjelmaa
+
 1. postitoimipaikan nimellä löytyy yksi postinumero
 1. postitoimipaikan nimellä löytyy useita postinumeroita
 
-Saadaksesi täydet pisteet tehtävästä **sinun ei tarvitse** testata syötteitä pyytäviä tai tulosteita tekeviä kohtia koodista. Riittää siis, että testaat esimerkiksi pelkän edellä esitetyn `etsi_postinumerot`-funktion, mikäli päädyt refaktoroimaan sellaisen omaan koodiisi.
+Saadaksesi täydet pisteet tästä osasta **sinun ei tarvitse** testata syötteitä pyytäviä tai tulosteita tekeviä kohtia koodista. Voit oman harkintasi mukaan käyttää testeissä joko itse luomaasi testidataa tai antaa testattavan koodin lukea postinumeroaineiston verkosta tai levyltä. Testiaineiston käyttämisessä `pytest-mock` voi olla avuksi, mutta sitä **ei ole välttämätöntä käyttää**.
 
-Voit oman harkintasi mukaan käyttää testeissä joko itse luomaasi testidataa tai antaa testattavan koodin lukea postinumeroaineiston verkosta tai levyltä. Testiaineiston käyttämisessä `pytest-mock` voi olla avuksi, mutta sitä ei ole välttämätöntä käyttää.
 
-Tehtävän malliratkaisussa tulemme tutustumaan myös siihen, miten ohjelman tulosteet voidaan tarkistaa yksikkötestissä.
+## Osa 2: bugin testaus ja korjaus (arvosanatavoite 5)
 
+`postitoimipaikka.py`-tiedoston koodista löytyy oppitunnilla bugi, joka [raportoidaan GitHubin issuena](https://github.com/haagahelia/swd4tn023/issues/5). Arvosanatavoitteeseen 5 sinun tulee kirjoittaa yksikkötesti, joka osoittaa bugin olemassaolon. Lopuksi korjaa bugi, jolloin kirjoittamasi yksikkötesti menee läpi.
+
+<!--
 ## Huom: Sanakirjan sisällön testaaminen
 
 Pythonin sanakirja `dict` on hajautusrakenne, joka ei lisää arvoja muistiin järjestyksessä peräkkäisille paikoille, vaan etsii arvoille paikat avaimien hajautusfunktioiden avulla. Hajautusfunktio nopeuttaa haku- ja lisäysoperaatioita, mutta tyypillisesti sillä kustannuksella, että tietorakenne ei säilytä tietoa arvojen lisäysjärjestyksestä. Sama ilmiö esiintyy mm. Javan HashMap-tietorakenteen kanssa. Tämä vaikeuttaa jossain tapauksissa testaamista, koska sanakirjan sisällön järjestystä ei välttämättä tiedetä ennalta.
@@ -532,9 +546,7 @@ Python 2.7.18rc1 (default, Apr  7 2020, 12:05:55)
 ['a', 'c', 'b', 'e', 'd'] # eri järjestys!
 ```
 
-## Tehtävän arviointi
-
-Ratkaisu, joka on refaktoroitu testauskuntoon ja testattu edellä esitetyillä kolmella testitapauksella hyväksytään arvosanalla 5. Myös puutteelliset ratkaisut hyväksytään eri arvosanoin, kunhan niissä osoitetaan selvää yritystä tehtävän ratkaisemiseksi.
+-->
 
 ## Tehtävän palauttaminen
 
