@@ -631,9 +631,9 @@ JSON-muotoisen merkkijonon parsiminen Pythonin tietorakenteiksi onnistuu standar
 >>>
 ```
 
-> *Data on postin ja sitä koskee kaikki http://www.posti.fi/liitteet-yrityksille/ehdot/postinumeropalvelut-palvelukuvaus-ja-kayttoehdot.pdf dokumentin käyttöehdot.*
+> *"Data on postin ja sitä koskee kaikki http://www.posti.fi/liitteet-yrityksille/ehdot/postinumeropalvelut-palvelukuvaus-ja-kayttoehdot.pdf dokumentin käyttöehdot."*
 >
-> *JSON-muunnokset ovat vapaasti käytettävissä ja muunneltavissa.*
+> *"JSON-muunnokset ovat vapaasti käytettävissä ja muunneltavissa."*
 >
 > Lähde: https://github.com/theikkila/postinumerot
 
