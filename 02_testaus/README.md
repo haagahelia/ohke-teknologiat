@@ -426,13 +426,13 @@ rope==0.17.0
 # ... ja monia muita riippuvuuksia
 ```
 
-Pip mahdollistaa myös useiden riippuvuuksien asentamisen kerralla `requirements.txt` -tiedostojen avulla. Voit lukea lisää näistä tiedostoista [virallisesta dokumentaatiosta](https://pip.pypa.io/en/stable/user_guide/#requirements-files). Tätä omaa projektiamme varten voimme tallentaa riippuvuudet `requirements.txt`-tiedostoon listaamalla ne `freeze`-komennolla ja ohjaamalla `freeze`-komennon tulosteet `requirements.txt`-nimiseen tiedostoon:
+Pip mahdollistaa myös useiden riippuvuuksien asentamisen kerralla `requirements.txt` -tiedostojen avulla. Voit lukea lisää näistä tiedostoista [virallisesta dokumentaatiosta](https://pip.pypa.io/en/stable/user_guide/#requirements-files). 
+
+Tätä omaa projektiamme varten voimme tallentaa riippuvuudet `requirements.txt`-tiedostoon ohjaamalla `freeze`-komennon tulosteet `requirements.txt`-nimiseen tiedostoon:
 
 ```
 $ pip3 freeze > requirements.txt
 ```
-
-Katsotaan tiedoston `requirements.txt` sisältö:
 
 ```
 $ cat requirements.txt
@@ -445,17 +445,7 @@ python-dateutil==2.8.1
 rope==0.17.0
 ```
 
-Myöhemmin samat riippuvuudet on asennettavissa uuteen ympäristöön yksinkertaisesti kutsumalla `install`-komentoa `-r` -vivulla:
-
-```
-$ pip3 help install | grep requirements -A 3
-
-Install Options:
-  -r, --requirement <file>    Install from the given requirements file. This
-                              option can be used multiple times.
-```
-
-Tiedostoon määritettyjen riippuvuuksien asentaminen tapahtuu seuraavasti:
+Myöhemmin samat riippuvuudet on asennettavissa uuteen ympäristöön yksinkertaisesti käyttämällä `install`-komentoa `-r` -[vivulla](https://pip.pypa.io/en/stable/user_guide/#requirements-files):
 
 ```
 $ pip3 install -r requirements.txt
@@ -488,12 +478,13 @@ events_by_date.py      48      3    94%
 Voit käyttää myös `coverage html`-komentoa, joka muodostaa raportin staattisen verkkosivun muodossa.
 
 
-# Tehtävä (luonnos)
+# Tehtävä
 
-Tällä viikolla harjoitellaan koodin refaktorointia ja yksikkötestausta kirjoittamalla testejä aikaisemmin koodaamallesi `postitoimipaikka.py`-tiedostolle. Mikäli aikaisempi tehtävä jäi sinulta palauttamatta tai et halua käyttää vanhaa koodiasi, voit käyttää myös tehtävän malliratkaisun tiedostoja.
+Tällä viikolla harjoittelemme koodin refaktorointia ja yksikkötestausta kirjoittamalla testejä aikaisemmin koodatulle `postinumerot.py`-skriptille (edellisen viikon tehtävän 2. osa). Mikäli aikaisempi tehtävä jäi sinulta palauttamatta tai et halua käyttää vanhaa koodiasi, voit käyttää myös tehtävän malliratkaisun tiedostoja.
 
-* Osa 1: postitoimipaikka.py (linkki lisätään mallivastauksen julkaisun jälkeen)
-* Osa 2: postinumerot.py (linkki lisätään mallivastauksen julkaisun jälkeen)
+* postinumerot.py (linkki lisätään mallivastauksen julkaisun jälkeen)
+* http_pyynto.py (linkki lisätään mallivastauksen julkaisun jälkeen)
+
 
 ## Osa 1: postitoimipaikkalogiikan testaaminen (arvosanatavoite 3)
 
@@ -507,23 +498,27 @@ Sinun ei tarvitse testata koko ohjelmalogiikkaa, vaan riittää, että testaat e
     * tämä tapaus ei saa tuottaa poikkeusta tai kaataa ohjelmaa
 
 1. postitoimipaikan nimellä löytyy yksi postinumero
-1. postitoimipaikan nimellä löytyy useita postinumeroita
+1. postitoimipaikan nimellä löytyy useita postinumeroita.
 
 Saadaksesi täydet pisteet tästä osasta **sinun ei tarvitse** testata syötteitä pyytäviä tai tulosteita tekeviä kohtia koodista. Voit oman harkintasi mukaan käyttää testeissä joko itse luomaasi testidataa tai antaa testattavan koodin lukea postinumeroaineiston verkosta tai levyltä. Testiaineiston käyttämisessä `pytest-mock` voi olla avuksi, mutta sitä **ei ole välttämätöntä käyttää**.
 
 
 ## Osa 2: bugin testaus ja korjaus (arvosanatavoite 5)
 
-`postitoimipaikka.py`-tiedoston koodista löytyy oppitunnilla bugi, joka [raportoidaan GitHubin issuena](https://github.com/haagahelia/swd4tn023/issues/5). Arvosanatavoitteeseen 5 sinun tulee kirjoittaa tarvittavat yksikkötestit, jotka osoittavat bugin olemassaolon. Lopuksi korjaa bugi, jolloin kirjoittamasi yksikkötestit menevät läpi. [Bugiraportissa](https://github.com/haagahelia/swd4tn023/issues/5) esiintyvä kirjoitusvirheiden korjaaminen ei ole tarpeen täysiin pisteisiin, mutta voit halutessasi kokeilla myös sen ratkaisemista.
+`postitoimipaikka.py`-tiedoston koodista löytyy oppitunnilla bugi, joka [raportoidaan GitHubiin bugina](https://github.com/haagahelia/swd4tn023/issues/5). Arvosanatavoitteeseen 5 sinun tulee kirjoittaa tarvittavat yksikkötestit, jotka osoittavat bugin olemassaolon. Lopuksi korjaa bugi, jolloin kirjoittamasi yksikkötestit menevät läpi. [Bugiraportissa](https://github.com/haagahelia/swd4tn023/issues/5) esiintyvä kirjoitusvirheiden korjaaminen ei ole tarpeen täysiin pisteisiin, mutta voit halutessasi kokeilla myös sen ratkaisemista.
 
-**Vinkki**: voit hyödyntää testiesi kirjoittamisessa bugiraportissa valmiiksi raportoituja postinumero- ja toimipaikkatietoja.
+**Vinkki**: voit hyödyntää testeissäsi bugiraportissa valmiiksi raportoituja postinumero- ja toimipaikkatietoja.
 
 <!--
 Smart post -postinumerot kirjoitettu usealla eri tavalla
 
 Postinumeroaineistossa postitoimipaikka "SMARTPOST" esiintyy myös kirjoitusasulla "SMART POST" sekä kirjoitusvirheellä "SMARTPSOT". Ohjelman tulee käsitellä "SMART POST", "SMART-POST" ja "SMARTPOST" samoina toimipaikkoina, eli jättää mahdolliset erot tyhjissä- ja välimerkeissä huomioimatta. Mahdolliset kahden peräkkäisen kirjaimen sekoittumiset voidaan myös yrittää korjata ("SMARTPSOT"), mutta se ei ole pakollista.
 
-Virheen toistaminen:
+# Oikea toiminta
+
+Postinumerolistausten toimipaikoille "smart post" ja "smartpost" tulee tuottaa sama lista kaikista näihin toimipaikkoihin merkityistä postinumeroista. Saman logiikan tulee toimia myös muiden välilyöntejä mahdollisesti sisältävien toimipaikkojen nimien yhteydessä.
+
+# Virheen toistaminen
 
 ```
 $ python3 postinumerot.py
@@ -546,7 +541,7 @@ $ python3 postinumerot.py
 
 Kirjoita postitoimipaikka: smartpost
 
-Postinumerot: 74704, 73464, 03604, 69954, 02614, 02104, 44504, 46904, 00644, 13724, 02244, 99994, 36204, 20784, 90824, 63614, 57174, 20744, 15204, 33544, 20524, 33214, 39104, 00204, 70204, 33474, 33854, 20254, 40744, 82904, 28364, 68414, 00244, 41804, 27434, 21284, 90534, 66534, 91204, 02134, 40804, 06104, 75534, 69704, 70824, 97144, 33714, 60124, 98104, 02344, 74134, 38424, 21604, 80104, 14814, 82604, 09224, 00504, 01694, 86404, 21414, 05404, 90674, 00564, 15874, 15704, 53504, 76154, 21424, 91304, 44254, 63104, 01454, 83704, 21384, 11114, 00254, 79704, 66404, 50134, 49224, 05814, 14504, 95204, 95974, 00144, 17134, 66514, 70914, 23264, 01674, 91504, 41664, 20884, 39164, 20244, 88604, 68234, 31384, 35804, 82734, 10424, 65324, 81284, 64104, 90804, 02334, 95404, 90244, 35304, 01734, 74304, 90104, 21204, 33234, 00654, 99604, 00774, 07564, 02234, 05204, 21254, 10364, 01684, 16904, 37574, 53814, 27104, 87254, 43704, 33804, 20304, 04404, 15504, 61404, 68624, 40504, 66274, 20204, 67304, 15114, 02754, 67104, 40954, 62204, 67604, 45164, 00134, 22415, 21184, 41164, 13204, 32804, 60324, 88614, 99944, 02304, 53854, 66144, 73904, 85504, 25414, 00794, 68104, 02324, 16604, 54714, 95164, 21624, 90584, 74204, 90904, 02254, 89404, 15864, 92144, 92704, 21214, 65204, 02174, 49414, 82204, 33954, 63804, 05824, 45744, 90124, 46914, 33734, 73604, 77434, 30424, 27404, 34154, 70804, 98534, 33184, 27234, 11134, 92434, 78254, 02924, 00234, 50194, 03254, 03854, 08204, 70304, 00124, 06154, 49424, 85804, 75504, 33504, 68914, 93104, 23804, 55304, 00714, 04624, 02664, 80714, 13504, 38304, 65234, 57214, 35404, 01364, 61804, 99954, 90464, 60104, 37504, 53604, 95424, 70114, 04504, 64304, 53954, 21504, 20904, 48104, 90134, 33724, 68604, 94604, 39704, 44204, 15104, 33304, 68824, 04134, 14204, 11104, 97224, 19414, 00334, 36604, 44104, 16304, 23504, 15954, 33344, 11124, 00394, 31764, 40324, 92934, 71164, 39824, 03104, 48914, 52104, 50604, 73104, 44804, 54504, 26664, 00434, 16204, 63604, 17504, 00934, 88274, 01404, 00164, 02584, 02274, 25504, 01534, 29904, 80144, 69304, 15144, 42104, 00754, 90634, 41904, 01654, 90144, 64204, 24104, 33274, 20404, 33404, 04434, 03304, 68304, 08354, 68874, 00214, 62104, 57514, 10214, 01344, 54924, 19654, 00404, 74124, 15544, 96324, 86604, 25334, 07804, 00104, 66204, 64264, 73134, 90154, 01204, 13134, 15304, 66444, 00984, 90574, 28844, 42704, 02884, 80164, 00764, 68374, 15554, 32704, 00704, 90844, 98714, 20754, 00694, 50674, 90444, 81704, 43104, 00284, 93144, 14304, 01644, 00744, 90624, 13304, 00664, 72104, 36284, 53204, 58904, 20104, 60224, 21244, 27514, 85104, 04444, 00354, 38714, 36114, 41234, 29254, 68664, 15154, 00634, 40274, 48704, 45204, 33964, 12544, 33564, 01354, 94104, 89204, 20384, 71754, 87404, 66854, 86104, 20324, 70104, 29814, 28614, 28404, 01394, 61104, 00994, 80114, 12524, 32444, 28104, 31504, 73304, 20724, 00414, 06454, 90944, 02214, 55424, 62304, 21114, 00264, 01514, 97704, 57204, 69104, 62664, 12244, 90544, 42224, 55804, 45704, 60804, 95704, 00874, 01744, 78214, 62904, 61304, 41334, 02434, 70214, 80264, 37804, 00584, 21534, 34874, 15814, 67904, 66304, 91414, 40704, 07174, 90454, 54104, 40644, 91704, 38104, 68504, 31604, 02184, 35704, 28604, 04414, 20734, 27324, 12404, 27804, 84104, 15214, 87504, 28134, 50174, 01624, 10524, 02784, 04424, 51204, 34604, 24804, 73204, 72404, 01304, 90424, 10304, 60204, 60154, 17204, 33884, 01724, 40204, 99134, 62804, 62374, 86714, 80404, 97904, 70424, 33614, 20544, 94704, 83904, 83504, 18304, 33904, 01374, 08104, 33584, 38804, 66904, 45104, 00844, 00154, 54804, 28904, 13214, 51904, 02204, 68554, 35604, 29604, 67404, 28804, 88304, 00924, 62424, 93604, 00974, 70154, 02154, 45374, 21874, 62604, 70344, 33824, 04604, 36914, 65354, 46144, 00614, 37604, 01284, 53904, 28434, 49404, 86804, 99834, 99874, 55124, 04234, 20364, 00374, 04264, 00224, 45724, 02704, 15164, 95604, 92404, 39504, 99104, 49934, 91804, 76104, 34264, 13104, 45614, 40104, 00384, 02654, 90234, 71204, 02364, 21354, 90524, 56804, 66804, 91904, 90254, 61604, 33534, 04344, 76854, 23314, 12704, 40254, 65614, 20614, 28454, 65104, 23144, 00514, 60554, 05844, 80774, 00814, 81204, 26204, 90404, 36224, 69604, 01604, 02484, 20814, 99804, 45914, 70624, 21494, 45154, 44284, 05464, 00684, 00554, 80334, 02774, 20664, 49904, 02604, 30104, 79104, 67704, 02284, 20214, 66504, 34244, 85904, 18104, 40524, 04204, 92134, 31304, 73504, 00524, 15564, 37104, 41344, 65304, 15244, 67204, 95904, 02464, 09124, 58504, 28374, 25394, 52204, 20464, 01804, 00824, 90654, 04304, 01904, 63704, 00734, 36244, 10904, 57714, 65384, 04334, 90504, 11714, 25704, 87204, 85204, 48604, 01704, 38464, 42604, 33484, 78204, 29204, 34304, 96904, 31404, 12104, 05834, 04254, 02764, 41404, 70704, 91104, 37634, 08154, 71474, 02944, 00324, 38204, 90594, 91604, 37834, 27504, 31644, 37124, 00174, 02394, 92104, 01524, 06404, 02124, 00944, 86304, 13604, 02264, 24264, 02684, 32504, 00304, 55104, 26104, 37554, 40344, 33684, 77704, 53104, 14704, 69154, 25464, 00724, 65414, 75704, 80224, 90514, 57134, 00964, 37474, 12604, 28124, 01714, 20764, 38704, 31704, 50104, 63304, 96914, 47404, 00534, 46804, 70604, 33104, 68704, 15884, 71804, 05804, 70464, 02624, 03404, 30304, 96304, 17804, 68574, 00544, 07904, 23104, 28304, 33874, 81104, 79604, 00884, 39204, 00574, 10654, 88904, 79484, 32204, 61504, 70784, 96404, 56104, 60514, 07504, 00424, 53554, 19704, 00444, 99304, 77604, 90834, 82504, 74104, 70844, 42304, 39934, 00804, 10964, 72304, 10604, 65284, 02744, 87704, 78304, 90414, 02404, 33204, 48404, 98904, 00594, 34804, 52304, 02634, 33844, 96104, 00184, 05904, 07884, 37144, 33314, 72604, 04224, 90604, 00274, 66104, 66604, 48354, 96204, 21234, 28204
+Postinumerot: 74704, 73464, 03604, ... 96204, 21234, 28204
 ```
 -->
 
