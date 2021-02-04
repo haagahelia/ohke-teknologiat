@@ -43,7 +43,7 @@ Mikäli haluat tutustua pytest-työkaluun oppituntia syvällisemmin, suosittelen
 >
 > *"Yksikkötestauksen hyödyt näkyvät kehitysprosessin aikana erityisesti silloin, kun jo kirjoitettuun koodiin joudutaan tekemään muutoksia. Automatisoiduilla yksikkötesteillä voidaan **nopeasti** todeta, aiheuttavatko tehdyt muutokset virheitä."*
 >
-> Jyväskylän Yliopisto, Informaatioteknologian tiedekunta. [Testauksen tasot](http://smarteducation.jyu.fi/projektit/systech/Periaatteet/suunnittelun-periaatteet/testaus/testauksen-tasot)
+> Jyväskylän Yliopisto, Informaatioteknologian tiedekunta. Testauksen tasot.<!--http://smarteducation.jyu.fi/projektit/systech/Periaatteet/suunnittelun-periaatteet/testaus/testauksen-tasot-->
 
 Katsotaan ensimmäiseksi alla esitettyä funktiota, joka vaihtaa annetulta listalta kahdessa indeksissä olevat alkiot keskenään:
 
@@ -276,66 +276,49 @@ Monissa tapauksissa tietokannan alustaminenkaan ei riitä testien alustamiseksi.
 >
 > Krzysztof Żuraw, 2016. https://krzysztofzuraw.com/blog/2016/mocks-monkeypatching-in-python
 
-Ohjelmakoodiin toteuttamamme `get_events_by_date` on riippuvainen toisesta funktiosta nimeltä `get_events`, joka tekee REST-kutsun ja parsii vastauksena saadun JSON-olion listaksi sanakirjoja:
+Ohjelmakoodiin toteuttamamme `hae_postinumerot` tekee HTTP-kutsun ja parsii vastauksena saadun JSON-olion sanakirjaksi:
 
-```
-get_events_by_date -> get_events -> urllib.request.urlopen -> REST-api
-```
-
-Koska eri ajankohtina REST-rajapinnasta saadaan eri vastauksia, on tuloksen oikeellisuus vaikea varmistaa. Oikea pyyntö REST-palveluun ja vastauksen käsittely voi myös viedä tarpeettoman paljon aikaa, joten sitä ei haluta tehdä yksikkötestissä.
-
-Yksikkötesteissä korvataan usein riippuvuuksia mock'eilla, joiden avulla saadaan rajattua testi vain tiettyyn osaan koodista, vaikka testattavalla koodinpätkällä olisikin riippuvuuksia:
-
-```
-get_events_by_date -> get_events=Mock([test0, test1, test2, test3])
+```python
+def hae_postinumerot():
+    with urllib.request.urlopen(URL) as response:
+        data = response.read()
+    return json.loads(data)
 ```
 
-Riippuvuudet voivat olla niin ulkoisiin rajapintoihin kuin vaikka kellonaikoihin liittyviä.
+Koska HTTP-rajapinnasta saatava vastaus muuttuu Postin postinumeroiden muuttuessa, joten tuloksena saatava sanakirja vaihtelee ajan kuluessa. Tämän aineiston muuttumisnopeus ei välttämättä ole nopea, mutta ongelma olisi ilmeinen esimerkiksi hetkellisiä säähavaintoja haettaessa. Datan muuttumisen lisäksi oikea pyyntö HTTP:n yli ja vastauksen käsittely voi myös viedä tarpeettoman paljon aikaa, joten sitä ei haluta tehdä yksikkötestissä.
+
+Yksikkötesteissä ulkoiset riippuvuudet korvataan usein ns. mock'eilla, joiden avulla testi suorittaa vain tietyn osaan koodista. Riippuvuudet voivat olla niin ulkoisiin rajapintoihin kuin vaikka kellonaikoihin liittyviä.
 
 ### pytest-mock
 
-Käyttämämme Pytest-moduulin `pytest-mock`-laajennus voidaan asentaa seuraavasti:
+Käyttämämme Pytest-testityökalun `pytest-mock`-laajennus voidaan asentaa seuraavasti:
 
-`pip3 install pytest-mock`
+```
+pip3 install pytest-mock
+```
 
 Pystest-mock (https://pypi.org/project/pytest-mock/) lisää testeihin käytettäväksi `mocker`-olion, joka saadaan **injektoitua** testifunktioon kirjoittamalla testin parametrimuuttujiin `mocker`:
 
 ```python
-# dependency injection huolehtii `mocker`-olion injektoimisesta:
-def test_get_events_by_date_with_mock(mocker):
+# dependency injection huolehtii `mocker`-olion injektoimisesta,
+# kunhan olemme asentaneet pytest-mock-paketin:
+def test_tama_testi_tarvitsee_mockerin(mocker):
     pass
 ```
 
-Koska määrittelimme parametrin `mocker`-nimiseksi, Pytest tietää, että tätä testiä varten täytyy injektoida mocker-olio. Kun mocker on injektoitu funktioon, sen avulla voidaan korvata tilapäisesti esimerkiksi funktioita uusilla mock-funktioilla, joilla on aina sama paluuarvo:
+Koska määrittelimme parametrin `mocker`-nimiseksi, Pytest tietää, että tätä testiä varten täytyy injektoida juuri mocker-olio. Muilla nimillä saisimme käyttöömme muita laajennoksia.
+
+Kun mocker on injektoitu funktioon, sen avulla voidaan korvata tilapäisesti esimerkiksi funktioita uusilla mock-funktioilla, joilla on aina sama paluuarvo:
 
 ```python
-mocker.patch('moduuli.funktio', return_value=palauta_aina_tama_vastaus)
+def test_tassa_testissa_hae_postinumerot_on_mockattu(mocker):
+    mocker.patch('http_pyynto.hae_postinumerot', return_value={ '00100': 'HELSINKI' })
+
 ```
 
-Korvataankin nyt `get_events`-funktion uudella funktiolla, joka palautaa ennalta määrätyn arvon:
+Yllä oleva koodirivi korvaa testitapauksen suorituksen ajaksi `http_pyynto.hae_postinumerot`-funktion toisella, joka palauttaa aina saman vastauksen.
 
-```python
-mocker.patch('events_by_date.get_events', return_value=my_list_of_test_events)
-```
-
-Mocker-olio ja injektointi huolehtivat siitä, että `get_events`-funktiota ei korvata pysyvästi, vaan kyseisen testin suorittamisen jälkeen `get_events` ja kaikki muut korvatut funktiot palautetaan taas ennalleen. `get_events_by_date` voidaan siis testata korvaamalla sen riippuvuus staattisella paluuarvolla, jonka tuloksen tiedämme ennalta:
-
-```python
-# dependency injection huolehtii `mocker`-olion injektoimisesta:
-def test_get_events_by_date_with_mock(mocker):
-
-    # Tapahtumat epäjärjestyksessä:
-    mock_response = [CHRISTMAS_EVENT, UNKNOWN_EVENT, JANUARY_1ST_EVENT]
-
-    # Asetetaan get_events palauttamaan yllä oleva lista tapahtumista:
-    mocker.patch('events_by_date.get_events', return_value=mock_response)
-
-    # get_events_by_date kutsuu sisäisesti get_events-funktiota
-    result = events_by_date.get_events_by_date()
-
-    # get_events_by_date on nyt palauttanut tunnetut tapahtumat oikeassa järjestyksessä:
-    assert result == [UNKNOWN_EVENT, JANUARY_1ST_EVENT, CHRISTMAS_EVENT]
-```
+Mocker-olio ja injektointi huolehtivat siitä, että `hae_postinumerot`-funktiota ei korvata pysyvästi, vaan kyseisen testitapauksen suorittamisen jälkeen tämä ja kaikki muut korvatut funktiot palautetaan taas ennalleen. `hae_postinumerot` voidaan siis testata korvaamalla sen riippuvuus staattisella paluuarvolla, jonka tuloksen tiedämme ennalta.
 
 <!--
 ## Test driven development
@@ -409,36 +392,19 @@ Lopulta voimme myös suorittaa koodin ja varmistaa että korjaus tuotti toivotun
 
 > *"Integraatiotestauksessa testataan useiden komponenttien yhteistoimintaa tavoitteena löytää virheitä, jotka eivät tulleet esiin yksikkötesteissä. Testeissä suoritetaan tiettyjä suorituspolkuja, jotka hyödyntävät useita eri yksiköitä tai laajempia komponentteja, ja tarkastellaan toiminnan tuloksia."*
 >
-> Jyväskylän Yliopisto, Informaatioteknologian tiedekunta. [Testauksen tasot](http://smarteducation.jyu.fi/projektit/systech/Periaatteet/suunnittelun-periaatteet/testaus/testauksen-tasot)
+> Jyväskylän Yliopisto, Informaatioteknologian tiedekunta. Testauksen tasot. <!--http://smarteducation.jyu.fi/projektit/systech/Periaatteet/suunnittelun-periaatteet/testaus/testauksen-tasot-->
 
 Koska edellisissä testeissä käytimme itse luotua keinotekoista dataa, ei testit välttämättä paljasta kaikkia virheitä, jotka ilmenevät rajapinnan oikeassa datassa. Siksi on tärkeää testata myös oman ohjelmamme ja rajapinnan välistä yhteistoimintaa integraatiotestillä.
 
-Integraatiotestit voivat olla luonteeltaan yksikkötestejä monimutkaisempia ja hitaampia, joten niitä suoritetaan tyypillisesti keskitetyssä CI-järjestelmässä (continuous integration) eikä välttämättä vain kehittäjän omalla työasemalla. Meidänkin tapauksessamme on odotettavaa, että bubble sort -toteutuksen testaaminen vie ainakin minuutin jokaisella testikerralla.
+Integraatiotestit voivat olla luonteeltaan yksikkötestejä monimutkaisempia ja hitaampia, joten niitä suoritetaan tyypillisesti keskitetyssä CI-järjestelmässä (continuous integration) eikä välttämättä vain kehittäjän omalla työasemalla. 
 
-Integraatiotestejä voidaan toteuttaa samoilla teknologioilla kuin yksikkötestejä, ja voisimme esimerkiksi testata `get_events_by_date`-funktiomme seuraavasti:
-
-```python
-# Tämä testifunktio kutsuu API:a ja lajittelee tapahtumat oikeasti. Se voi olla siis hyvin hidas.
-def test_get_events_by_date_integration_test():
-
-    # Nyt rajapintaa kutsutaan oikeasti ja oikeat tapahtumat lajitellaan:
-    result = events_by_date.get_events_by_date()
-
-    # Testi edellyttää rajapinnalta aina vähintään 100 tapahtumaa, vaikka oikea määrä on tuntematon:
-    assert len(result) > 10
-
-    # Vertaillaan että alkamisaika on joko None tai peräkkäiset ovat oikeassa järjestyksessä:
-    for i in range(len(result) - 1):
-        assert result[i]['event_dates']['starting_day'] == None or result[i]['event_dates']['starting_day'] < result[i + 1]['event_dates']['starting_day']
-```
-
-Tällä kertaa `get_events`-funktiota ei ole korvattu mock'illa, vaan se hakee tiedot oikeasta REST-rajapinnasta. Koska rajapinta palauttaa ajankohdasta riippuen eri tapahtumat, emme voi olla varmoja, kuinka monta tapahtumaa täsmälleen palautetaan. Testissä voidaan kuitenkin varmistaa, että tapahtumia löytyy ja että niiden päiväykset ovat nyt oikeassa järjestyksessä.
+Integraatiotestejä voidaan toteuttaa samoilla teknologioilla kuin yksikkötestejä. Käytännössä voisimme toteuttaa integraatiotestin oman Python-sovelluksemme ja JSON-rajapinnan välille kirjoittamalla samankaltaisen testin kuin aikaisemmin, mutta ilman mock-vastausta.
 
 ## Järjestelmätestaus
 
 > *"Järjestelmätestauksessa testataan kokonaista ohjelmaa, ja tarkastellaan vastaako ohjelma sille asetettuja vaatimuksia ja käyttötarkoitusta. Aitoon ympäristöön kuuluvat mm. käytettävä laitteisto, tietokannat ja käyttäjät."*
 >
-> Jyväskylän Yliopisto, Informaatioteknologian tiedekunta. [Testauksen tasot](http://smarteducation.jyu.fi/projektit/systech/Periaatteet/suunnittelun-periaatteet/testaus/testauksen-tasot)
+> Jyväskylän Yliopisto, Informaatioteknologian tiedekunta. Testauksen tasot <!--http://smarteducation.jyu.fi/projektit/systech/Periaatteet/suunnittelun-periaatteet/testaus/testauksen-tasot-->
 
 Järjestelmätestauksella varmistetaan usein monivaiheisia käyttötapauksia. Testattava käyttötapaus voisi pitää sisällään esimerkiksi kirjautumisen järjestelmään, jonkin datan muokkaamisen ja muokatun datan tarkastelemisen. Järjestelmätestejä tehdäänkin usein eri työkaluilla kuin yksikkötestejä. Yksi järjestelmätesteissä hyödyllinen testityökalu on kotimaista alkuperää oleva [Robot Framework](https://robotframework.org/), jolla voidaan erilaisten laajennusten kanssa testata verkkosivuja tai vaikka matkapuhelinverkkoja. Robot Frameworkilla on oma kielensä, jolla testitapaukset voivat näyttää esim. tältä: https://github.com/robotframework/WebDemo/blob/master/login_tests/valid_login.robot.
 
@@ -464,8 +430,11 @@ Pip mahdollistaa myös useiden riippuvuuksien asentamisen kerralla `requirements
 
 ```
 $ pip3 freeze > requirements.txt
-$
-$ # Katsotaan tiedoston sisältö:
+```
+
+Katsotaan tiedoston `requirements.txt` sisältö:
+
+```
 $ cat requirements.txt
 
 autopep8==1.5.4
@@ -479,13 +448,16 @@ rope==0.17.0
 Myöhemmin samat riippuvuudet on asennettavissa uuteen ympäristöön yksinkertaisesti kutsumalla `install`-komentoa `-r` -vivulla:
 
 ```
-$ # Luetaan ensin ohje:
-$ pip3 help install | grep "requirements"
-  pip3 install [options] -r <requirements file> [package-index-options] ...
-  pip also supports installing from "requirements files", which provide
-  -r, --requirement <file>    Install from the given requirements file. This
+$ pip3 help install | grep requirements -A 3
 
-$ # Nyt asennetaan  riippuvuudet tiedostosta:
+Install Options:
+  -r, --requirement <file>    Install from the given requirements file. This
+                              option can be used multiple times.
+```
+
+Tiedostoon määritettyjen riippuvuuksien asentaminen tapahtuu seuraavasti:
+
+```
 $ pip3 install -r requirements.txt
 ```
 
