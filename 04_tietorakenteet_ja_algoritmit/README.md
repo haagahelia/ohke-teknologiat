@@ -155,7 +155,7 @@ O(n * m)              | ~10 000 000 000   | noin 10 minuuttia
 
 Tiedämme, että molemmat aineistot ovat aakkosjärjestyksessä. Sen sijaan, että kävisimme listan yksi kerrallaan alusta alkaen läpi,  voimmekin aloittaa etsimisen keskeltä ja rajata etsittävästä aineistosta puolet pois, riippuen siitä, onko etsittävä arvo aakkosissa ennen vai jälkeen keskikohdassa olevaa alkiota!
 
-Kun lista on järjestyksessä, voidaan etsiminen aloittaa keskeltä ja rajata etsimistä aina siten, että pystymme puolittamaan etsittävän alueen! Tätä kutsutaan binäärihauksi eli puolitushauksi: https://www.cs.usfca.edu/~galles/visualization/Search.html
+Kun lista on järjestyksessä, voidaan etsiminen aloittaa keskeltä ja rajata etsimistä aina siten, että pystymme puolittamaan etsittävän alueen! Tätä kutsutaan binäärihauksi eli puolitushauksi. 
 
 ```python
 >>> etsittava = "villa"
@@ -165,6 +165,8 @@ Kun lista on järjestyksessä, voidaan etsiminen aloittaa keskeltä ja rajata et
 ```
 
 Koska yllä olevassa esimerkissä etsitty sana `'villa'` on suurempi kuin keskimmäinen sana `'nimivakuus'`, sanat 0-47055 voidaan rajata pois! Tätä voidaan toistaa niin kauan, kunnes olemme löytäneet etsityn sanan, tai puolittaneet aineiston loppuun.
+
+Voit katsoa konkreettisen visualisoinnin algoritmin suorituksesta osoitteesta https://www.cs.usfca.edu/~galles/visualization/Search.html tai https://ohjelmointi-19.mooc.fi/osa-7/2-algoritmiikkaa.
 
 Muutetaan vaiheessa 1 kehitettyä sovellusta siten, että puolitamme etsittävän aineiston. Toteutetaan siis oma binäärihaku! 
 
