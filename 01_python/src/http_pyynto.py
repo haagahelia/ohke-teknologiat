@@ -1,9 +1,10 @@
 import urllib.request
 import json
 
-with urllib.request.urlopen('https://raw.githubusercontent.com/theikkila/postinumerot/master/postcode_map_light.json') as response:
-    data = response.read()
 
-postinumerot = json.loads(data)
+def hae_postinumerot():
+    with urllib.request.urlopen('https://raw.githubusercontent.com/theikkila/postinumerot/master/postcode_map_light.json') as response:
+        data = response.read()
 
-print(postinumerot['00100'])
+    postinumerot = json.loads(data)
+    return postinumerot
