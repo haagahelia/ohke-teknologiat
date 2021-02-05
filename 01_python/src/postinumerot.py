@@ -1,7 +1,4 @@
 import http_pyynto
-postinumerot = http_pyynto.hae_postinumerot()
-
-toimipaikka = input('Kirjoita postitoimipaikka: ').strip().upper()
 
 
 def ryhmittele_toimipaikoittain(numero_sanakirja):
@@ -15,7 +12,11 @@ def ryhmittele_toimipaikoittain(numero_sanakirja):
     return paikat
 
 
+postinumerot = http_pyynto.hae_postinumerot()
+
 toimipaikat = ryhmittele_toimipaikoittain(postinumerot)
+
+toimipaikka = input('Kirjoita postitoimipaikka: ').strip().upper()
 
 if toimipaikka in toimipaikat:
     toimipaikat[toimipaikka].sort()
