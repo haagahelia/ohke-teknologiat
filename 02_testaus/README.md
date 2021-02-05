@@ -490,24 +490,23 @@ Tällä viikolla harjoittelemme koodin refaktorointia ja yksikkötestausta kirjo
 
 Kirjoita yksikkötestit edellisen viikon Python-tehtävän osan 2 ratkaisullesi. Mikäli kyseinen tehtävä jäi sinulta toteuttamatta, voit käyttää testattavana koodina tehtävän malliratkaisua.
 
-Sinun ei tarvitse testata koko ohjelmalogiikkaa, vaan riittää, että testaat esimerkiksi malliratkaisussa esitetyn `ryhmittele_toimipaikoittain`-funktion. Testatessasi itse kirjoittamaasi lähdekoodia, mieti miten saisit koodin refaktoroitua siten, että saat siitä testattua seuraavat tapaukset:
+Sinun ei tarvitse testata koko ohjelmalogiikkaa, vaan riittää, että testaat esimerkiksi malliratkaisussa esitetyn `ryhmittele_toimipaikoittain`-funktion. Lisäksi joudut refaktoroimaan Python-tiedostoa siten, että sen testaaminen on ylipäänsä mahdollista.
 
-1. postitoimipaikan nimi on kirjoitettu eri kirjainkoolla kuin JSON-aineistossa
-1. annettua toimipaikkaa ei löydy lainkaan aineistosta
+Testeissä kannattaa varmistaa ainakin seuraavien tapausten toiminta:
 
-    * tämä tapaus ei saa tuottaa poikkeusta tai kaataa ohjelmaa
-
-1. postitoimipaikan nimellä löytyy yksi postinumero
+1. postitoimipaikan nimellä löytyy vain yksi postinumero
 1. postitoimipaikan nimellä löytyy useita postinumeroita.
 
-Saadaksesi täydet pisteet tästä osasta **sinun ei tarvitse** testata syötteitä pyytäviä tai tulosteita tekeviä kohtia koodista. Voit oman harkintasi mukaan käyttää testeissä joko itse luomaasi testidataa tai antaa testattavan koodin lukea postinumeroaineiston verkosta tai levyltä. Testiaineiston käyttämisessä `pytest-mock` voi olla avuksi, mutta sitä **ei ole välttämätöntä käyttää**.
+Saadaksesi täydet pisteet tästä osasta **sinun ei tarvitse** testata syötteitä pyytäviä tai tulosteita tekeviä kohtia koodista. Voit oman harkintasi mukaan käyttää testeissä joko kovakoodattua testidataa tai antaa testattavan koodin lukea postinumeroaineiston verkosta tai levyltä. Testiaineiston käyttämisessä `pytest-mock` voi olla avuksi, mutta sitä **ei ole välttämätöntä käyttää**.
 
 
 ## Osa 2: bugin testaus ja korjaus (arvosanatavoite 5)
 
-`postitoimipaikka.py`-tiedoston koodista löytyi oppitunnilla bugi, joka [raportoitiin GitHubiin](https://github.com/haagahelia/swd4tn023/issues/5). Arvosanatavoitteeseen 5 sinun tulee kirjoittaa tarvittavat yksikkötestit, jotka osoittavat tämän bugin olemassaolon. Lopuksi korjaa bugi, jolloin kirjoittamasi yksikkötestit menevät läpi.
+`postinumerot.py`-tiedoston koodista löytyi oppitunnilla bugi, joka [raportoitiin GitHubiin](https://github.com/haagahelia/swd4tn023/issues/5). Arvosanatavoitteeseen 5 sinun tulee kirjoittaa tarvittavat yksikkötestit, jotka osoittavat tämän bugin olemassaolon. Lopuksi korjaa bugi, jolloin kirjoittamasi yksikkötestit menevät läpi.
 
-[Bugiraportissa](https://github.com/haagahelia/swd4tn023/issues/5) esiintyvä kirjoitusvirheiden korjaaminen ei ole tarpeen täysiin pisteisiin, mutta voit halutessasi kokeilla myös sen ratkaisemista.
+[Bugiraportissa](https://github.com/haagahelia/swd4tn023/issues/5) esiintyvä kirjoitusvirheiden käsittely ei ole tarpeen täysiin pisteisiin, mutta voit halutessasi kokeilla myös sen ratkaisemista jos kaipaat lisähaastetta.
+
+**Vinkki**: bugin korjauksessa voi olla avuksi, jos poistat kaikki välilyönnit [Pythonin replace-funktiolla](https://stackoverflow.com/questions/9452108/how-to-use-string-replace-in-python-3-x).
 
 **Vinkki**: voit hyödyntää testeissäsi bugiraportissa valmiiksi raportoituja postinumero- ja toimipaikkatietoja.
 
