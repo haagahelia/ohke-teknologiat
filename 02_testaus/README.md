@@ -482,8 +482,8 @@ Voit käyttää myös `coverage html`-komentoa, joka muodostaa raportin staattis
 
 Tällä viikolla harjoittelemme koodin refaktorointia ja yksikkötestausta kirjoittamalla testejä aikaisemmin koodatulle `postinumerot.py`-skriptille (edellisen viikon tehtävän 2. osa). Mikäli aikaisempi tehtävä jäi sinulta palauttamatta tai et halua käyttää vanhaa koodiasi, voit käyttää myös tehtävän malliratkaisun tiedostoja.
 
-* postinumerot.py (linkki lisätään mallivastauksen julkaisun jälkeen)
-* http_pyynto.py (linkki lisätään mallivastauksen julkaisun jälkeen)
+* [postinumerot.py](https://github.com/haagahelia/swd4tn023/blob/master/01_python/src/postinumerot.py)
+* [http_pyynto.py](https://github.com/haagahelia/swd4tn023/blob/master/01_python/src/http_pyynto.py)
 
 
 ## Osa 1: postitoimipaikkalogiikan testaaminen (arvosanatavoite 3)
@@ -505,7 +505,9 @@ Saadaksesi täydet pisteet tästä osasta **sinun ei tarvitse** testata syöttei
 
 ## Osa 2: bugin testaus ja korjaus (arvosanatavoite 5)
 
-`postitoimipaikka.py`-tiedoston koodista löytyy oppitunnilla bugi, joka [raportoidaan GitHubiin bugina](https://github.com/haagahelia/swd4tn023/issues/5). Arvosanatavoitteeseen 5 sinun tulee kirjoittaa tarvittavat yksikkötestit, jotka osoittavat bugin olemassaolon. Lopuksi korjaa bugi, jolloin kirjoittamasi yksikkötestit menevät läpi. [Bugiraportissa](https://github.com/haagahelia/swd4tn023/issues/5) esiintyvä kirjoitusvirheiden korjaaminen ei ole tarpeen täysiin pisteisiin, mutta voit halutessasi kokeilla myös sen ratkaisemista.
+`postitoimipaikka.py`-tiedoston koodista löytyi oppitunnilla bugi, joka [raportoitiin GitHubiin](https://github.com/haagahelia/swd4tn023/issues/5). Arvosanatavoitteeseen 5 sinun tulee kirjoittaa tarvittavat yksikkötestit, jotka osoittavat tämän bugin olemassaolon. Lopuksi korjaa bugi, jolloin kirjoittamasi yksikkötestit menevät läpi.
+
+[Bugiraportissa](https://github.com/haagahelia/swd4tn023/issues/5) esiintyvä kirjoitusvirheiden korjaaminen ei ole tarpeen täysiin pisteisiin, mutta voit halutessasi kokeilla myös sen ratkaisemista.
 
 **Vinkki**: voit hyödyntää testeissäsi bugiraportissa valmiiksi raportoituja postinumero- ja toimipaikkatietoja.
 
