@@ -418,20 +418,23 @@ Ota testausosiossa kirjoittamasi python-ohjelma (tai tehtävän mallivastaus tar
 
 1. Tee projektillesi gitissä uusi "development"-haara.
 
-1. Lisää githubactions.yml-tiedosto oman projektisi development haaraan kansioon .github/workflows. Kannattaa [ottaa pohjaksi tämän sivun ylhäällä oleva esimerkki .yml-tiedosta pythonille](https://docs.github.com/en/actions/guides/building-and-testing-python). yml-tiedostossa kannattaa kuitenkin konfiguroida suoritusajo tehtäväksi vain yhdellä python-versiolla (3.x). Voit tässä kohtaa puskea projektisi ja .yml-tiedoston githubiin VAIHTOEHTOISESTI: Jos olet puskenut projektisi jos githubiin, niin voit klikata githubissa "Actions"-välilehteä ja valita sieltä "Python Applicationin" alta "set up this worklow".
+2. Lisää githubactions.yml-tiedosto oman projektisi development haaraan kansioon .github/workflows. Kannattaa [ottaa pohjaksi tämän sivun ylhäällä oleva esimerkki .yml-tiedosta pythonille](https://docs.github.com/en/actions/guides/building-and-testing-python). yml-tiedostossa kannattaa kuitenkin konfiguroida suoritusajo tehtäväksi vain yhdellä python-versiolla (3.x). Voit tässä kohtaa puskea projektisi ja .yml-tiedoston githubiin 
+
+VAIHTOEHTOISESTI: Jos olet puskenut projektisi jos githubiin, niin voit klikata githubissa "Actions"-välilehteä ja valita sieltä "Python Applicationin" alta "set up this worklow".
 
 ![Github Actions esimerkki 0](img/githubactions/github_actions_esimerkki_0.png) 
 
-1. .yml-tiedoston perusteella tapahtunutta Github Actions suoritusta voit tarkastella Githubista "Actions"-välilehdeltä. 
+
+3. .yml-tiedoston perusteella tapahtunutta Github Actions suoritusta voit tarkastella Githubista "Actions"-välilehdeltä. 
 ![Github Actions välilehti](img/githubactions/github_actions_1.png) 
 
-1. Liitä projektiisi ja Github Actionsiin koodin testikattavuutta mittaava [Coverage-kirjasto](https://coverage.readthedocs.io/en/coverage-5.2.1/). Coverage kannattaa ensin laittaa pyörimään itsellesi paikallisesti ja sitten lisätä tarvittavat skriptit myös .yml-tiedostoon steppien alle. Coveragella pitää ajaa siis kaksi komentoa: Ensin sen pitää ajaa pytest ja generoida .coverage-tiedoston. Sitten pitää ajaa coveragen raportointikomento, joka generoi .coverage-tiedoston perusteella koodikattavuusraportin.
+4. Liitä projektiisi ja Github Actionsiin koodin testikattavuutta mittaava [Coverage-kirjasto](https://coverage.readthedocs.io/en/coverage-5.2.1/). Coverage kannattaa ensin laittaa pyörimään itsellesi paikallisesti ja sitten lisätä tarvittavat skriptit myös .yml-tiedostoon steppien alle. Coveragella pitää ajaa siis kaksi komentoa: Ensin sen pitää ajaa pytest ja generoida .coverage-tiedoston. Sitten pitää ajaa coveragen raportointikomento, joka generoi .coverage-tiedoston perusteella koodikattavuusraportin.
 
-1. Tulosta ja palauta Github Actionsin tuottama CI-raportti jossa näkyy, että sovellus kääntyy, sille ajetaan ainakin yksi yksikkötesti development-haarassa ja yksikkötestikattavauus rivitasolla on jotain yli 0%, mieluusti lähemmäs 100%. Palauta siis tekemäsi .yml-tiedosto sekä kaksi kuvankaappausta, toisessa näkyy github-tunnuksesi sekä kuvankaappaus Github Actionsin buildauksesta development-haarassa ja toisessa saman buildin coverage raportti. Alla esimerkit.
+5. Tulosta ja palauta Github Actionsin tuottama CI-raportti jossa näkyy, että sovellus kääntyy, sille ajetaan ainakin yksi yksikkötesti development-haarassa ja yksikkötestikattavauus rivitasolla on jotain yli 0%, mieluusti lähemmäs 100%. Palauta siis tekemäsi .yml-tiedosto sekä kaksi kuvankaappausta, toisessa näkyy github-tunnuksesi sekä kuvankaappaus Github Actionsin buildauksesta development-haarassa ja toisessa saman buildin coverage raportti. Alla esimerkit.
 ![Github Actions esimerkki 1](img/githubactions/github_actions_palautus_esimerkki_1.png) 
 ![Github Actions esimerkki 2](img/githubactions/github_actions_palautus_esimerkki_2.png)
 
-1. Huomioita tehtävän arvioinnista. Tehtävästä voi saada pisteitä vaikkei sitä osaisikaan ratkaista täydellisesti. Seuraavat puutteet ainakin vähentävät pisteitä:
+6. Huomioita tehtävän arvioinnista. Tehtävästä voi saada pisteitä vaikkei sitä osaisikaan ratkaista täydellisesti. Seuraavat puutteet ainakin vähentävät pisteitä:
 * .yml-tiedosto löytyy, mutta siinä on puutteita eikä asioita ole osattu konfiguroida oikein.
 * Suorittaminen ei tapahdu development haarassa.
 * Pytest ajetaan, mutta ei coveragen kanssa.
