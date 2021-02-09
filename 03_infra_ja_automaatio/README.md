@@ -412,7 +412,7 @@ Ota testausosiossa kirjoittamasi python-ohjelma (tai tehtävän mallivastaus tar
 
 1. Liitä projektiisi ja Github Actionsiin koodin testikattavuutta mittaava [Coverage-kirjasto](https://coverage.readthedocs.io/en/coverage-5.2.1/). Coverage kannattaa ensin laittaa pyörimään itsellesi paikallisesti ja sitten lisätä tarvittavat skriptit myös .yml-tiedostoon steppien alle. Coveragella pitää ajaa siis kaksi komentoa: Ensin sen pitää ajaa pytest ja generoida .coverage-tiedoston. Sitten pitää ajaa coveragen raportointikomento, joka generoi .coverage-tiedoston perusteella koodikattavuusraportin.
 
-1. Tulosta ja palauta Github Actionsin tuottama CI-raportti jossa näkyy, että sovellus kääntyy, sille ajetaan ainakin yksi yksikkötesti development-haarassa ja yksikkötestikattavauus rivitasolla on jotain yli 0%, mieluusti lähemmäs 100%. Palauta siis kaksi kuvankaappausta, toisessa näkyy github-tunnuksesi ja kuvankaappaus Github Actionsin buildauksesta development-haarassa ja toisessa saman buildin coverage raportti. Alla esimerkit.
+1. Tulosta ja palauta Github Actionsin tuottama CI-raportti jossa näkyy, että sovellus kääntyy, sille ajetaan ainakin yksi yksikkötesti development-haarassa ja yksikkötestikattavauus rivitasolla on jotain yli 0%, mieluusti lähemmäs 100%. Palauta siis tekemäsi .yml-tiedosto sekä kaksi kuvankaappausta, toisessa näkyy github-tunnuksesi sekä kuvankaappaus Github Actionsin buildauksesta development-haarassa ja toisessa saman buildin coverage raportti. Alla esimerkit.
 ![Github Actions esimerkki 1](img/githubactions/github_actions_palautus_esimerkki_1.png) 
 ![Github Actions esimerkki 2](img/githubactions/github_actions_palautus_esimerkki_2.png)
 
