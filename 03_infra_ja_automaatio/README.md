@@ -418,9 +418,7 @@ Ota testausosiossa kirjoittamasi python-ohjelma (tai tehtävän mallivastaus tar
 
 1. Tee projektillesi gitissä uusi "development"-haara.
 
-1. Lisää githubactions.yml-tiedosto oman projektisi development haaraan kansioon .github/workflows. Kannattaa [ottaa pohjaksi tämän sivun ylhäällä oleva esimerkki .yml-tiedosta pythonille](https://docs.github.com/en/actions/guides/building-and-testing-python). yml-tiedostossa kannattaa kuitenkin konfiguroida suoritusajo tehtäväksi vain yhdellä python-versiolla (3.x). Voit tässä kohtaa puskea projektisi ja .yml-tiedoston githubiin.
-
-VAIHTOEHTOISESTI: Jos olet puskenut projektisi jos githubiin, niin voit klikata githubissa "Actions"-välilehteä ja valita sieltä "Python Applicationin" alta "set up this worklow".
+1. Lisää githubactions.yml-tiedosto oman projektisi development haaraan kansioon .github/workflows. Kannattaa [ottaa pohjaksi tämän sivun ylhäällä oleva esimerkki .yml-tiedosta pythonille](https://docs.github.com/en/actions/guides/building-and-testing-python). yml-tiedostossa kannattaa kuitenkin konfiguroida suoritusajo tehtäväksi vain yhdellä python-versiolla (3.x). Voit tässä kohtaa puskea projektisi ja .yml-tiedoston githubiin VAIHTOEHTOISESTI: Jos olet puskenut projektisi jos githubiin, niin voit klikata githubissa "Actions"-välilehteä ja valita sieltä "Python Applicationin" alta "set up this worklow".
 
 ![Github Actions esimerkki 0](img/githubactions/github_actions_esimerkki_0.png) 
 
