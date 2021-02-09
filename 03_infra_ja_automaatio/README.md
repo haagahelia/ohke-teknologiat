@@ -76,6 +76,7 @@ $ git pull
 # git pull on sama kuin: 
 $ git fetch # haetaan muutokset
 $ git merge # tehdään yhdistäminen paikallisiin muutoksiin
+$ git rebase origin/master # "rebasetaan" paikalliset muutokset originin master haaran muutosten perään
 # rebase-vivulla käytettynä git pull ottaa remote-repositoryn viimeisimmät muutokset ja 
 # lisää lokaalit muutokset niiden "perään" versiohistoriassa. 
 # Eli toisin sanoen lokaalit muutokset "rebasetaan" (ja mergataan) uudestaan 
@@ -98,6 +99,14 @@ $ git checkout -b uusihaara
 # myös tämä komentosarja tekee saman asian
 $ git branch uusihaara
 $ git checkout uusihaara
+
+#rebasea uusihaara master-haaran viimeisimpien muutokset päälle. 
+$ git rebase master 
+#(NOTE: Rebasekomentoa tulee kuitenkin käyttää hieman harkiten, eli 
+#jos esimerkiksi rebaseat master-haaran oman haarasi perään, niin
+#kellään muulla saman repon käyttäjillä master ei ole rebasettu
+#sinun branchistasi ja versionhallinta sekoaa pahan kerran.)
+
 #pushaa uusi haara myös remote-repositoryyn
 $ git push --set-upstream origin uusihaara
 # Kun olet tehnyt muutoksia omassa haarassasi ja haluat yhdistää muutokset esim master-haaraan, niin
