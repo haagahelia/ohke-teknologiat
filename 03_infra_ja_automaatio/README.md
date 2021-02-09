@@ -128,6 +128,9 @@ $ git stash apply
 # Tulosta versiohallinan commit-logi ja eri commitien hash-numerot siististi.
 $ git log --oneline
 
+#Hae tämän haaran tietty file tietystä edellisestä commitista (hash-numerolla).
+$ git checkout 8c4c448 -- ./path/file_name.txt
+
 # Älä kokeile tätä kotona! Jos on jostain syystä ihan pakko, niin voit siirtää ensin lokaalin 
 # repositorysi tiettyyn committiin ja sitten pakottaa myös 
 # upstream-repositoryn HEAD:in osoittamaan siihen. Tämä tuhoaa mahdollisesti versiohistoriaa ja saattaa
@@ -266,7 +269,7 @@ $ npm publish
 
 Jatkuva integrointi (Continuous integration) tarkoittaa oleellisesti sitä, että kun uutta koodia ajetaan versionhallintaan, niin sille suoritetaan samantien erilaisia laatutarkistuksia. Tyypillisesti ajetaan siis järjestelmän yksikkö- ja integraatiotestit ja lisäksi voidaan tehdä esimerkiksi staattista koodianalysointia, automaattista testausta eri käyttöjärjestelmäympäristöissä, suorituskykytestausta yms. Jatkuvan integroinnin avulla nähdään nopeasti jos uusi koodimuutos on rikkonut jotain tai ei muuten ole laadultaan hyväksyttävä. Joillain tiimeillä on työtilassaan esimerkiksi jatkuvasti kaikille näkyvä "radiaattori"-ruutu, josta voi tarkistaa viimeisimmän buildauksen tilan.
 
-Jatkuvan integroinnin työkaluja on tarjolla useita. [Jenkins](https://www.jenkins.io/) on kenties suosituin jatkuvan integroinnin mahdollistava automaatiopalvelinympäristö isoissa projekteissa. Jenkinsiin on tarjolla lukuisia plugineita. Myös esimerkiksi JetBrainsin [TeamCity](https://www.jetbrains.com/teamcity/) on vastaava tuote. [Travis CI](https://travis-ci.org/) on kätevä CI-työkalu käytettynä yhdessä Githubin tai Bitbucketin kanssa. Sen voi konfiguroida buildaamaan projektin aina kun githubiin tulee uuttaa koodia ja tarvittaessa deployaamaan uusimman buildin herokuun automaattisesti. Buildin jälkeen Travis voi esimerkiksi postata tiimin slack-kanavalle viestin buildin onnistumisesta. (Sidenote: privaatteja github-repoja pääsee käsittelemään travis-ci.org:in sijaan [travis-ci.com:ssa](https://travis-ci.com/)).
+Jatkuvan integroinnin työkaluja on tarjolla useita. [Jenkins](https://www.jenkins.io/) on kenties suosituin jatkuvan integroinnin mahdollistava automaatiopalvelinympäristö isoissa projekteissa. Jenkinsiin on tarjolla lukuisia plugineita. Myös esimerkiksi JetBrainsin [TeamCity](https://www.jetbrains.com/teamcity/) on vastaava tuote. [Travis CI](https://travis-ci.org/) on kätevä CI-työkalu käytettynä yhdessä Githubin tai Bitbucketin kanssa. Sen voi konfiguroida buildaamaan projektin aina kun githubiin tulee uuttaa koodia ja tarvittaessa deployaamaan uusimman buildin herokuun automaattisesti. Buildin jälkeen Travis voi esimerkiksi postata tiimin slack-kanavalle viestin buildin onnistumisesta. Tämän kurssin harjoituksessa käytämme Githubiin suoraan integroituvaa [Github Actionsia][https://docs.github.com/en/actions].
 
 ![Travis yleiskuva](img/travis/travis_yleiskuva.png) 
 
