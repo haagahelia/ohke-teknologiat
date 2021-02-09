@@ -5,4 +5,3 @@ rivi2.2 # Teemun muutos
 rivi2.3 # Teemun muutos
 rivi3
 rivi4
-rivi5
