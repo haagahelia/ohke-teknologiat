@@ -36,6 +36,8 @@ Esimerkiksi siis muutosten peruuttaminen (undo) tapahtuu eri tavalla riippuen mi
 
 Esimerkiksi Atlassian-ohjelmistoyhtiö on tehnyt gitin käytöstä [melko hyvän tutoriaalin](https://www.atlassian.com/git/tutorials/setting-up-a-repository) johon voi tutustua. Käydään tässä myös läpi Gitin peruskäytössä ohjelmoijalle oleellisimpia ydintoimintoja.
 
+Gittiä voi käyttää myös visuaalisilla työkaluilla, jotka saattavat helpottaa sen käyttöä. Näitä ovat esimerkiksi [Source tree](https://www.sourcetreeapp.com/) tai Visual Studio coden [Git Graph -lisäosa](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph).
+
 ```shell
 # Luodaan paikallinen git-repository kansiosta, jossa nyt olemme
 $ git init 
@@ -109,6 +111,8 @@ $ git status
 
 # Näyttää omat ja originin viimeiset commitit ennen edellistä pullia.
 $ git log
+#--graph-vivulla näyttää committien haarautumista myös visuaalisesti.
+$ git log --graph 
 
 # Katsele riveittäin tekemiäsi lokaaleja muutoksia 
 $ git diff # voit myös antaa paramterina tarkemman tiedostonimen
