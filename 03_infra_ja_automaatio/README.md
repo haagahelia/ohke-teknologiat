@@ -398,30 +398,26 @@ Pilvipalvelujen ansiosta kehittäjän työ on monessa kohtaa tehostunut ja kehit
 
 ### Tehtävä 3.1 (100% kierroksen arvosanasta)
 
-Ota testausosiossa kirjoittamasi python-ohjelma (tai tehtävän mallivastaus tarvittaessa) ja siihen liittyvät yksikkötestit. Pushaa tämä sovellus itsellesi githubiin ja liitä siihen TravisCI monitorointi seuraavasti: 
+Ota testausosiossa kirjoittamasi python-ohjelma (tai tehtävän mallivastaus tarvittaessa) ja siihen liittyvät yksikkötestit. Pushaa tämä sovellus itsellesi githubiin ja liitä siihen [GithubActions](https://docs.github.com/en/actions) CI-monitorointi seuraavasti: 
 
-1. [Kirjaudu github-tunnuksillasi travikseen](https://docs.travis-ci.com/user/tutorial/#to-get-started-with-travis-ci-using-github).
+1. Tee projektillesi gitissä uusi "development"-haara.
 
-1. Seuraa traviksen ohjeita ja aktivoi python-ohjelmasi githubrepository travikselle. Activate repository tehdään travis-ci:n settings-valikosta (oikealta github-avatariasi klikkaamalla).
-![Travis asennus 1](img/travis/travis_install_screenshot1.png) 
-![Travis asennus 2](img/travis/travis_install_screenshot2.png) 
-![Travis asennus 3](img/travis/travis_install_screenshot3.png) 
-![Travis asennus 4](img/travis/travis_install_screenshot4.png) 
+1. Lisää githubactions.yml-tiedosto oman projektisi development haaraan kansioon .github/workflows. Kannattaa [ottaa pohjaksi tämä sivun ylhäällä oleva esimerkki .yml-tiedosta pythonille](https://docs.github.com/en/actions/guides/building-and-testing-python). yml-tiedostossa kannattaa kuitenkin konfiguroida että se suorittaa ajon vain yhdellä python-versiolla (3.x). Voit tässä kohtaa puskea projektisi ja .yml-tiedoston githubiin. 
 
-1. Tee projektillesi gitissä uusi "development"-haara ja pushaa se githubiin.
+1. .yml-tiedoston perusteella tapahtunutta Github-actions suoritusta voit tarkastella Githubista "Actions"-välilehdeltä. 
+![Github actions välilehti](img/githubactions/github_actions_1.png) 
 
-1. [Lisää .travis.yml-tiedosto](https://docs.travis-ci.com/user/languages/python/) oman projektisi development haaraan (projektin juureen) ja pushaa se githubiin. 
+1. Liitä projektiisi ja Github actionsiin koodin testikattavuutta mittaava [Coverage-kirjasto](https://coverage.readthedocs.io/en/coverage-5.2.1/). Coverage kannattaa ensin laittaa pyörimään itsellesi paikallisesti ja sitten lisätä tarvittavat skriptit myös .yml-tiedostoon steppien alle. Coveragella pitää ajaa siis kaksi komentoa: Ensin sen pitää ajaa pytest ja generoida .coverage-tiedoston. Sitten pitää ajaa coveragen raportointikomento, joka generoi .coverage-tiedoston perusteella koodikattavuusraportin.
 
-1. Paina traviksessa “Trigger a build”:ia tai travis lähtee myös automaattisesti käyntiin jos liittäminen on onnistunut oikein. Development haaran buildia pääset katsomaan traviksessa branches-välilehden kautta, jos master on sinulla defaulttina.
-![Travis trigger a build](img/travis/travis_install_screenshot5.png) 
-![Travis trigger a build 2](img/travis/travis_install_screenshot6.png) 
-![Development haara](img/travis/travis_development_haaran_buildi.png) 
+1. Tulosta ja palauta Github actionsin tuottama CI-raportti jossa näkyy, että sovellus kääntyy, sille ajetaan ainakin yksi yksikkötesti development-haarassa ja yksikkötestikattavauus rivitasolla on jotain yli 0%, mieluusti lähemmäs 100%. Palauta siis kaksi kuvankaappausta, toisessa näkyy github-tunnuksesi ja kuvankaappaus traviksen buildauksesta development-haarassa ja toisessa saman buildin coverage raportti. Alla esimerkit.
+![Github actions esimerkki 1](img/githubactions/github_actions_palautus_esimerkki_1.png) 
+![Github actions esimerkki 2](img/travis/github_actions_palautus_esimerkki_2.png)
 
-1. Liitää projektiisi ja travikseen koodin testikattavuutta mittaava [Coverage-kirjasto](https://coverage.readthedocs.io/en/coverage-5.2.1/). Coverage kannattaa ensin laittaa pyörimään itsellesi paikallisesti ja sitten lisätä tarvittavat skriptit myös .travis.yml-tiedostoon "script" ja "after_success"-osioihin.
-
-1. Tulosta ja palauta Traviksen tuottama CI-raportti jossa näkyy, että sovellus kääntyy, sille ajetaan ainakin yksi yksikkötesti development-haarassa ja yksikkötestikattavauus rivitasolla on jotain yli 0%, mieluusti lähemmäs 100%. Palauta siis kaksi kuvankaappausta, toisessa näkyy github-tunnuksesi ja kuvankaappaus traviksen buildauksesta development-haarassa ja toisessa saman buildin coverage raportti. Alla esimerkit.
-![Travis esimerkki 1](img/travis/travis_ci_tehtavanpalautus_esimerkki1_yleiskuva_development_haarasta.png) 
-![Travis esimerkki 2](img/travis/travis_tehtavanpalautus_coverage_raportti_esimerkki.png) 
+1. Huomioita tehtävän arvioinnista. Tehtävästä voi saada pisteitä vaikkei sitä osaisikaan ratkaista täydellisesti. Seuraavat puutteet ainakin vähentävät pisteitä:
+* .yml-tiedosto löytyy, mutta siinä on puutteita eikä asioita ole osattu konfiguroida oikein.
+* Suorittaminen ei tapahdu development haarassa.
+* Pytest ajetaan, mutta ei coveragen kanssa.
+* Coverage tai pytest ajetaan, mutta coverage raporttia ei ajeta.
 
 <!--
 ### Tehtävä 4.3
