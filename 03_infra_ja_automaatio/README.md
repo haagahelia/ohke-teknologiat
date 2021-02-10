@@ -103,18 +103,18 @@ $ git checkout -b uusihaara
 $ git branch uusihaara
 $ git checkout uusihaara
 
-#rebasea uusihaara master-haaran viimeisimpien muutokset päälle. 
+# Rebasea uusihaara master-haaran viimeisimpien muutokset päälle. 
 $ git rebase master 
 #(NOTE: Rebasekomentoa tulee kuitenkin käyttää hieman harkiten, eli 
 #jos esimerkiksi rebaseat master-haaran oman haarasi perään, niin
 #kellään muulla saman repon käyttäjillä master ei ole rebasettu
 #sinun branchistasi ja versionhallinta sekoaa pahan kerran.)
 
-#pushaa uusi haara myös remote-repositoryyn
+# Pushaa uusi haara myös remote-repositoryyn
 $ git push --set-upstream origin uusihaara
-#toimii lyhyemmin myös vivulla -u
+# Toimii lyhyemmin myös vivulla -u
 $ git push -u origin uusihaara
-#tai HEAD:lla voi sanoa, että pusketaan nykyinen lokaalihaara samannimisenä
+# Tai HEAD:lla voi sanoa, että pusketaan nykyinen lokaalihaara samannimisenä
 #originiin
 $ git push -u origin HEAD
 
@@ -129,8 +129,11 @@ $ git status
 
 # Näyttää omat ja originin viimeiset commitit ennen edellistä pullia.
 $ git log
+# --oneline-vivulla vain commit viestit ja hash-numero.
+$ git log --oneline
 #--graph-vivulla näyttää committien haarautumista myös visuaalisesti.
 $ git log --graph 
+
 
 # Katsele riveittäin tekemiäsi lokaaleja muutoksia 
 $ git diff # voit myös antaa paramterina tarkemman tiedostonimen
@@ -147,8 +150,9 @@ $ git stash # muutoksesi menevät stashiin ja working directorysi on tyhjä
 #...tee mitä haluat... ja sitten kun haluat taas ottaa muutoksesi takaisin stashista
 $ git stash apply
 
-# Tulosta versiohallinan commit-logi ja eri commitien hash-numerot siististi.
-$ git log --oneline
+# Siirry tietyn commitin (hashnumero) aikana vallinneeseen tilaan, tällöin olet
+#detached modessa, eli suoraan ei kannata commitoida mitään muutoksia.
+$ git checkout 8c4c448
 
 #Hae tämän haaran tietty file tietystä edellisestä commitista (hash-numerolla).
 $ git checkout 8c4c448 -- ./path/file_name.txt
