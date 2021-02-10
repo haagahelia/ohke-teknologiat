@@ -151,11 +151,20 @@ $ git stash # muutoksesi menevät stashiin ja working directorysi on tyhjä
 $ git stash apply
 
 # Siirry tietyn commitin (hashnumero) aikana vallinneeseen tilaan, tällöin olet
-#detached modessa, eli suoraan ei kannata commitoida mitään muutoksia.
+#detached head modessa, eli suoraan ei kannata commitoida mitään muutoksia.
 $ git checkout 8c4c448
+# Palaa takaisin detached head modesta sen branchiin nykyiseen tilaan josta siirryit detachiin.
+$ git checkout -
 
-#Hae tämän haaran tietty file tietystä edellisestä commitista (hash-numerolla).
+# Hae tämän haaran tietty file tietystä edellisestä commitista (hash-numerolla).
 $ git checkout 8c4c448 -- ./path/file_name.txt
+
+# Git revert komennolla voi revertoida tietyn kommitin aiheuttamat muutokset
+# Revert-komento ei poista vanhaa committia vaan yrittää poistaa tietyn 
+# commitin tuomat muutokset ja tehdä niistä uuden commitin. Reverttiä voi
+# ajatella commitin vastakohtana. Tästä voi lukea lisää esim.
+# https://www.atlassian.com/git/tutorials/undoing-changes/git-revert
+$ git revert HEAD #Reverttaa viimeisin committi.
 
 # Älä kokeile tätä kotona! Jos on jostain syystä ihan pakko, niin voit siirtää ensin lokaalin 
 # repositorysi tiettyyn committiin ja sitten pakottaa myös 
