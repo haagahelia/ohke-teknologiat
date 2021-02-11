@@ -278,11 +278,12 @@ Buildaustoimenpiteitä voi konfiguroida myös tarkemmin package.json:issa. Alla 
 ...
   "scripts": {
     "test": "mocha",
+    "build": "babel ServerCodeFolder -s -d dist",
     "pretest": "npm start",
     "posttest": "npm stop",
     "prestart":"echo 'starting server'"
     "poststop":"echo 'stopping server'"
-    "start": "node server.js",
+    "start": "npm run build && node dist/server.js",
     "stop": "node server.stop.js"
     "omaskripti": "echo 'hello world'"
   }
