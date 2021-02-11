@@ -339,7 +339,7 @@ Docker-kontit määritellään *Dockerfile*:issä, joka voi näyttää esimerkik
 FROM node:10-alpine
 WORKDIR /app
 COPY . .
-RUN npm install --production
+RUN npm install
 CMD ["node", "/app/src/index.js"]
 ```
 Uuden kontin voi tämän jälkeen rakentaa komennolla:
