@@ -6,3 +6,4 @@ rivi2.3 # Teemun muutos
 rivi3
 rivi4
 rivi5
+rivi6 githubissa lisätty
