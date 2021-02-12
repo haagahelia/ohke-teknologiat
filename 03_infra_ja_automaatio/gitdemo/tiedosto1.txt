@@ -7,3 +7,4 @@ rivi3
 rivi4
 rivi5
 rivi6 githubissa lisätty
+rivi7 lisätty lokaalisti
