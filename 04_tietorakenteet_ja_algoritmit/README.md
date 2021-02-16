@@ -392,9 +392,9 @@ Voit valita itsellesi mieluisen algoritmin esimerkiksi tutustumalla ensin niiden
 
 ### Järjesteltävä aineisto
 
-MyHelsinki Open API on Helsinki Marketingin tarjoama avoin REST-rajapinta kaupungin tapahtumien, paikkojen ja aktiviteettien tietoihin. Rajapinnan dokumentaatio löytyy Swagger-muodossa osoitteesta http://open-api.myhelsinki.fi/doc. Kyseisessä osoitteessa on dokumentoituna niin resurssien osoitteet, niiden tukemat parametrit kuin palautettujen JSON-tietueiden rakenne.
+[MyHelsinki Open API](https://open-api.myhelsinki.fi/) on Helsinki Marketingin tarjoama avoin REST-rajapinta kaupungin tapahtumien, paikkojen ja aktiviteettien tietoihin. Rajapinnan dokumentaatio löytyy Swagger-muodossa osoitteesta https://open-api.myhelsinki.fi/doc. Kyseisessä osoitteessa on dokumentoituna niin resurssien osoitteet, niiden tukemat parametrit kuin palautettujen JSON-tietueiden rakenne.
 
-Tässä tehtävässä hyödynnetään tapahtumarajapinnan tarjoamaa aineistoa osoitteesta http://open-api.myhelsinki.fi/v1/events/. Tapahtumat palautetaan rajapinnasta epäjärjestyksessä, joten joudut itse huolehtimaan tapahtumien järjestämisestä alkamisajan mukaan. 
+Tässä tehtävässä hyödynnetään tapahtumarajapinnan tarjoamaa aineistoa osoitteesta https://open-api.myhelsinki.fi/v1/events/. Tapahtumat palautetaan rajapinnasta epäjärjestyksessä, joten joudut itse huolehtimaan tapahtumien järjestämisestä alkamisajan mukaan. 
 
 Huomaa, että **kaikilla rajapinnan palauttamilla tapahtumilla ei välttämättä ole alkamisaikaa**. Tällaisten tapahtumien kohdalla voit itse päättää, jätätkö tapahtumat huomioimatta vai kehitätkö niille vapaavalintaisen erillisen logiikan. Osalle tapahtumista on myös annettu nimet useilla eri kielillä, kun taas joiltain nimiä puuttuu. Myös tällaisten tapahtumien kohdalla saat itse päättää, miten käsittelet tapahtumat.
 
@@ -470,6 +470,17 @@ Palauta koodaamasi lähdekooditiedosto(t) sellaisenaan, eli **ei pakattuna** Tea
 
 
 ----
+
+# Lisenssit ja tekijänoikeudet
+
+## MyHelsinki Open API
+
+> *"Note that all of the information provided over the API is open data with the exception of image files. When using images, please refer to the license terms included with each image.*"
+> 
+> MyHelsinki Open API. https://open-api.myhelsinki.fi/
+
+MyHelsinki Open API:n aineisto on lisensoitu [Creative Commons BY 4.0](https://open-api.myhelsinki.fi/terms)-lisenssillä. Voit lukea tarkemmat käyttöehdot ositteesta https://open-api.myhelsinki.fi/terms.
+
 
 ## Suomenkielisen sanalistan tekijänoikeudet 
 
