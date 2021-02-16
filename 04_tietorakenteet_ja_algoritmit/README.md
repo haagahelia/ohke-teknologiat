@@ -148,7 +148,7 @@ Vertailuoperaatioita tehdään siis jopa n * m kappaletta, joka meidän aineisto
 
 Algoritmin tehokkuus  | Vertailujen määrä | Suoritusaika
 ----------------------|-------------------|----------
-O(n * m)              | ~10 000 000 000   | noin 10 minuuttia
+O(n * m)              | ~10 000 000 000   | ?
 
 
 ### 2. Miten voimme nopeuttaa algoritmin toimintaa?
@@ -244,7 +244,7 @@ Toisin sanoen, tietty lista voidaan aina puolittaa sen pituuden kaksikantaisen l
 
 Algoritmin tehokkuus  | Vertailujen määrä | Suoritusaika
 ----------------------|-------------------|--------
-O(n * log(m))         | ~2 000 000        | muutaman sekunnin
+O(n * log(m))         | ~2 000 000        | ?
 
 
 **Huom!** Oikeassa ohjelmistoprojektissa käyttäisit Pythonin valmista [bisect](https://docs.python.org/3/library/bisect.html)-moduulia, mutta koska haluamme oppia, toteutamme algoritmin itse.
@@ -296,11 +296,11 @@ if __name__ == '__main__':
 
 #### Sanakirjatoteutuksen tehokkuuden arviointi
 
-Sanakirjasta hakeminen vie keskimäärin yhden operaation, vaikka teoreettisesti epätasaisesti jakautuneet sanakirjat voivat vaatia jopa kokonsa verran hakuoperaatiota, mikäli hajautusfunktio toimii tehottomasti. Sanakirjan muodostaminen vie aikaa saman verran kuin sanakirjasta hakeminen, eli englanninkielisen aineiston koko `m` vaikuttaa samassa suhteessa tarvittavien operaatioiden määrään sanakirjaa muodostettaessa. Hakuoperaatioita tehdään edelleen `n` kappaletta, joten tehokkuus on suuruusluokkaa O(m + n) tai O(n).
+Sanakirjasta hakeminen vie keskimäärin yhden operaation, vaikka teoreettisesti epätasaisesti jakautuneet sanakirjat voivat vaatia jopa kokonsa verran hakuoperaatiota, mikäli hajautusfunktio toimii tehottomasti. Sanakirjan muodostaminen vie aikaa saman verran kuin sanakirjasta hakeminen, eli englanninkielisen aineiston koko `m` vaikuttaa samassa suhteessa tarvittavien operaatioiden määrään sanakirjaa muodostettaessa. Hakuoperaatioita tehdään edelleen `n` kappaletta, joten tehokkuus on suuruusluokkaa O(m + n). Koska `m + n` kasvaa lineaarisesti alkioiden määrän mukaan, voidaan tehokkuudeksi ilmoittaa lineaarinen O(n).
 
 Algoritmin tehokkuus  | Operaatioiden määrä  | Suoritusaika
 ----------------------|----------------------|--------
-O(n)                  | ~200 000             | alle 1 sekunti
+O(n)                  |  ~200 000            | ?
 
 ### 4. Ongelman muotoilu toisella tavalla
 
@@ -344,12 +344,12 @@ if __name__ == '__main__':
 > https://fi.wikipedia.org/wiki/Lajittelualgoritmi
 
 
-"Parhaiden yleiskäyttöisten lajittelualgoritmien asymptoottinen suoritusaika on luokkaa O(nlog n)", mitä se tarkoittaa? Entä onko esim n<sup>2</sup> merkittävästi huonompi suoritusaika?
+"Parhaiden yleiskäyttöisten lajittelualgoritmien asymptoottinen suoritusaika on luokkaa O(n * log n)", mitä se tarkoittaa? Entä onko esim n<sup>2</sup> merkittävästi huonompi suoritusaika?
 
 Seuraava taulukko antaa käsityksen eri operaatioiden määrän suuruusluokista eri aineistojen koolla:
 
 Tehokkuus       | Opiskelijoita (n = 50)| Tapahtumia (n = 4000) | Sanoja (n = 100 000)  | Kansalaisia (n = 5 500 000)
-----------------|-----------------------|-----------------------|-----------------------|------------------------
+----------------|----------------------:|----------------------:|----------------------:|-----------------------:
 O(1)            | 1                     | 1                     | 1                     | 1
 O(log(n))       | ~6                    | ~12                   | ~17                   | ~22
 O(n)            | 50                    | 4 000                 | 100 000               | 5 500 000
@@ -357,9 +357,15 @@ O(n * log(n))   | ~282                  | ~47 000               | ~1 000 000    
 O(n * n)        | ~2 500                | ~16 000 000           | ~10 000 000 000       | ~30 000 000 000 000
 
 
+**Kertaus**
+
+1. Mihin tehokkuusluokkaan sijoittuu haku Pythoni listalta?
+1. Mihin tehokkuusluokkaan sijoittuu haku Pythoni sanakirjasta?
+1. Mihin tehokkuusluokkaan sijoittuu hyvä lajittelualgoritmi?
+1. Mihin tehokkuusluokkaan sijoittuu heikko lajittelualgoritmi?
 
 
-## Viikon koodaustehtävä
+# Viikon koodaustehtävä (luonnos)
 
 Tämän viikon tehtävänä on harjoitella vapaavalintaisen järjestämisalgoritmin toteuttamista. Voit valita toteutettavan järjestämisalgoritmin esimerkiksi seuraavista:
 
