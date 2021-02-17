@@ -9,7 +9,7 @@ kuvaa ratkaistavan ongelman tapauksen, ja algoritmin tulee tuottaa tuloste (outp
 
 ## Tavoitteet
 
-Tällä viikolla ohjelmistokehityksen teknologioita -kurssilla tavoitteena on perehtyä tietorakenteiden ja algoritmien peruskäsitteisiin. Opettelemme arvioimaan karkeasti erilaisten algoritmisten lähestymistapojen soveltuvuutta kohtaamiimme ohjelmointiongelmiin. 
+Tällä viikolla ohjelmistokehityksen teknologioita -kurssilla tavoitteena on perehtyä tietorakenteiden ja algoritmien peruskäsitteisiin. Opettelemme arvioimaan karkeasti erilaisten algoritmisten lähestymistapojen soveltuvuutta kohtaamiimme ohjelmointiongelmiin.
 
 Tavoitteenamme ei ole oppia laskemaan tai esittämään algoritmiemme tarkkaa tehokkuutta matemaattisilla kaavoilla, vaan käytämme laskukaavoja apuvälineenä ymmärtääksemme, miksi jokin algoritmi suoriutuu samasta tehtävästä tehokkaammin kuin toinen. Emme myöskään harjoittele optimoimaan ohjelmiemme suorituskykyä, vaikka suorituskyky toimiikin tärkeänä mittarina tällä viikolla.
 
@@ -35,9 +35,17 @@ Tallentaessamme itse tietoa ohjelmiimme voimme itse vaikuttaa suuresti siihen, k
 }
 ```
 
-Jos tarkoituksesi olisi selvittää postinumeroa 74700 vastaava postitoimipaikan nimi, mitä sen selvittäminen vaatisi eri tietorakenteilla? Entä kumpi tietorakenne olisi myöhemmin helpommin laajennettavissa, jos postinumeroalueita varten halutaan tallentaa toimipaikan nimen lisäksi myös muita tietoja? Olisiko näiden kahden tietorakenteen hyvät puolet jollain tavoin yhdistettävissä?
+```json
+{
+    "KIURUVESI": ["74701", "74700"],
+    "JUUPAJOKI": ["35540"],
+    "MUURUVESI": ["73460"]
+}
+```
 
-## Ennakkotehtävät
+Jos tarkoituksesi olisi selvittää postinumeroa 74700 vastaava postitoimipaikan nimi, mitä sen selvittäminen vaatisi eri tietorakenteilla? Entä mikä tietorakenne olisi myöhemmin helpommin laajennettavissa, jos postinumeroalueita varten halutaan tallentaa toimipaikan nimen lisäksi myös muita tietoja? Olisiko näiden kahden tietorakenteen hyvät puolet jollain tavoin yhdistettävissä?
+
+## Suositeltu oheismateriaali
 
 Tietojenkäsittelyssä sama ongelma voidaan tyypillisesti ratkaista lukemattomilla erilaisilla tavoilla. Onkin olemassa lukuisia tunnettuja algoritmeja esimerkiksi listan arvojen järjestelemiseksi tai yksittäisen arvon etsimiseksi listalta. 
 
@@ -66,11 +74,9 @@ Katso seuraavat kolme videota, joka esittelevät ohjelmistokehittäjän perusosa
 Tätä videota vastaava esittely tärkeistä tietorakenteista löytyy myös tekstimuodossa osoitteesta https://towardsdatascience.com/8-common-data-structures-every-programmer-must-know-171acf6a1a42
 
 
+# Oppitunti
 
-
-## Oppitunti
-
-### Minkälaisten algoritmien kanssa olet päivittäin tekemisissä?
+## Minkälaisten algoritmien kanssa olet päivittäin tekemisissä?
 
 * Suosittelualgoritmi?
 * Hakualgoritmi?
@@ -80,10 +86,10 @@ Tätä videota vastaava esittely tärkeistä tietorakenteista löytyy myös teks
 * Pelialgoritmit?
 * Kuvanparannusalgoritmit?
 
-### Minkälaisia ongelmanratkaisuperiaatteita eri algoritmit hyödyntävät?
+## Minkälaisia ongelmanratkaisuperiaatteita eri algoritmit hyödyntävät?
 
 * Brute force           <!-- Vertaillaan kaikkia toisiinsa -->
-* Divide and conquer    <!-- järjestetään esim. mergesortilla. Pilkotaan reitinhaku a-c paloiksi a-b ja a-c -->
+* Divide and conquer    <!-- järjestetään esim. mergesortilla. Käännetään teksti ensin suomesta englanniksi, sitten englannista ruotsiksi -->
 * Dynamic               <!-- matemaattisempi, esim. reitinhaku pisteestä a pisteeseen b kun tiedetään reitit a-b ja b-c -->
 * Evolutionary          <!-- kokeillaan vastata kyselyyn eri tavoilla ja katsotaan mikä saa parhaan tuloksen. Muutetaan parasta tulosta n. kertaa satunnaisesti ja toistetaan. -->
 * Graph traversal       <!-- verkon läpikäynti, esim. optimaaliset reitit. Shakki, ristinolla! -->
@@ -101,12 +107,30 @@ https://en.wikipedia.org/wiki/Algorithmic_technique#General_techniques
 
 ## Teoriaosuus ja "koodiprojekti"
 
-Tämän oppitunnin tavoitteena on kirjoittaa ohjelma, joka lukee listat suomen- ja englanninkielisistä sanoista ja selvittää, mitkä sanat esiintyvät molemmissa kielissä. Aihe on lainattu [Helsingin yliopiston Antti Laaksosen luennolta](https://www.cs.helsinki.fi/u/ahslaaks/tira19/luento1/) ja sovellettu omiin tarpeisiimme.
+Tämän oppitunnin tavoitteena on kirjoittaa ohjelma, joka lukee listat suomen- ja englanninkielisistä sanoista ja selvittää, mitkä sanat esiintyvät molemmissa kielissä. Idea on lainattu [Helsingin yliopiston Antti Laaksosen luennolta](https://www.cs.helsinki.fi/u/ahslaaks/tira19/luento1/) ja sovellettu omiin tarpeisiimme.
 
 Aineistona käytämme [Kotimaisten kielten tutkimuskeskuksen nykysuomen sanalistaa](http://kaino.kotus.fi/sanat/nykysuomi/) sekä Linuxin sanalistaa `/usr/share/dict/words`. Nykysuomen sanalista [kotus-sanalista-suomi.txt](src/kotus-sanalista-v1/kotus-sanalista-suomi.txt) sisältää 94&nbsp;110 sanaa ja Linux-jakelusta riippuen englanninkielinen sanalista voi sisältää esimerkiksi 102&nbsp;401 sanaa. Tämä aineisto on riittävän suuri, jotta pystymme huomaamaan merkittäviä eroja erilaisissa tietorakenteissa ja algoritmeissa, joilla yritämme selvittää yhteiset sanat.
 
+Ensin voimme kokeilla selvittää yhteisten sanojen määrän komentorivillä Linuxin `comm`-komennolla. Tehokkuussyistä `comm` edellyttää, että sille annettavat syötteet ovat aakkosjärjestyksessä, joten järjestämme ne `sort`-komennolla:
 
-### 1. Mitkä samat sanat esiintyvät molemmissa kielissä?
+```
+comm -1 -2 <(sort /usr/share/dict/words) <(sort kotus-sanalista-v1/kotus-sanalista-suomi.txt)
+```
+
+Jos haluamme selvittää ohjelman suorituksen keston, voimme käyttää Linuxin `time`-komentoa:
+
+```
+$ time comm -1 -2 <(sort /usr/share/dict/words) <(sort kotus-sanalista-v1/kotus-sanalista-suomi.txt) > /dev/null
+
+real    0m0,161s
+user    0m0,210s
+sys     0m0,048s
+```
+
+Tässä tapauksessa yhteisten sanojen selvittäminen kesti noin 0,16 sekuntia (real). Miten käy, jos yritämme toteuttaa oman algoritmin saman tiedon selvittämiseksi?
+
+
+### 1. Oma Python-toteutus: mitkä samat sanat esiintyvät molemmissa kielissä?
 
 Kirjoitetaan Python-skripti, joka lukee kaikki sanat kahdesta tiedostosta listoille. Kun listat on muodostettu, etsitään listalta A kaikki sanat, jotka esiintyvät myös listalla B! Lopuksi tulostetaan löytyneet sanat:
 
@@ -140,7 +164,7 @@ if __name__ == '__main__':
 
 > *Algoritmin tehokkuus riippuu siitä, montako askelta se suorittaa. Tavoitteemme on nyt arvioida algoritmin askelten määrää suhteessa syötteen kokoon n. Esimerkiksi jos syötteenä on taulukko, n on taulukon koko, ja jos syötteenä on merkkijono, n on merkkijonon pituus.*
 >
-> *Antti Laaksonen, [Tietorakenteet ja algoritmit -kirja](https://github.com/pllk/tirakirja/raw/master/tirakirja.pdf)*
+> Antti Laaksonen. [Tietorakenteet ja algoritmit -kirja](https://github.com/pllk/tirakirja/raw/master/tirakirja.pdf)
 
 Koska edellä esitetyssä koodissa käydään aina koko suomenkielinen sanalista läpi, on ulomman toistorakenteen tehokkuus suoraan suhteessa suomenkielisten sanojen määrään (n). Jokaista suomenkielistä sanaa kohden käydään läpi lista englanninkielisiä sanoja `word in english_words` -operaatiolla. Sisäisesti tämä operaatio vertailee etsittävää sanaa kaikkiin englanninkielisen listan sanoihin (m). 
 
@@ -151,11 +175,23 @@ Algoritmin tehokkuus  | Vertailujen määrä | Suoritusaika
 O(n * m)              | ~10 000 000 000   | ?
 
 
+### Ohjelman profilointi
+
+Pythonissa on valmiina `cProfile`-niminen moduuli, jonka avulla voimme mitata eri funktioiden suoritusten määrää ja niihin kulunutta aikaa. Seuraavissa vaiheissa hyödynnetään myös profilointia:
+
+```bash
+$ python3 -m cProfile -s calls sanalistat.py
+```
+
+Yllä olevassa komennossa `-m cProfile` käynnistää profiloijan ja `-s calls` järjestää funktiot niiden suorituskertojen mukaan.
+
 ### 2. Miten voimme nopeuttaa algoritmin toimintaa?
 
-Tiedämme, että molemmat aineistot ovat aakkosjärjestyksessä. Sen sijaan, että kävisimme listan yksi kerrallaan alusta alkaen läpi,  voimmekin aloittaa etsimisen keskeltä ja rajata etsittävästä aineistosta puolet pois, riippuen siitä, onko etsittävä arvo aakkosissa ennen vai jälkeen keskikohdassa olevaa alkiota!
+Linuxin `comm`-komento edellytti, että aineistot ovat aakkosjärjestyksessä. Voisimmeko me hyödyntää tätä samaa ideaa? Sen sijaan, että kävisimme listan yksi kerrallaan alusta alkaen läpi, voisimme aloittaa etsimisen keskeltä ja rajata etsittävästä aineistosta puolet pois, riippuen siitä, onko etsittävä sana aakkosissa ennen vai jälkeen keskikohdassa olevaa sanaa!
 
-Kun lista on järjestyksessä, voidaan etsiminen aloittaa keskeltä ja rajata etsimistä aina siten, että pystymme puolittamaan etsittävän alueen! Tätä kutsutaan binäärihauksi eli puolitushauksi. 
+Hakua, jossa puolitamme haettavan aineiston aina keskeltä ja rajaamme seuraavan haun aina puolta pienempään aineistoon kutsutaan binäärihauksi, eli puolitushauksi. 
+
+Seuraavassa Python-koodissa etsitään sanaa "villa", ja verrataan sitä aineiston keskimmäiseen sanaan:
 
 ```python
 >>> etsittava = "villa"
@@ -170,6 +206,7 @@ Voit katsoa konkreettisen visualisoinnin algoritmin suorituksesta osoitteesta ht
 
 Muutetaan vaiheessa 1 kehitettyä sovellusta siten, että puolitamme etsittävän aineiston. Toteutetaan siis oma binäärihaku! 
 
+<!--
 ```python
 # tiedosto binary_search.py
 # tutustu myös valmiiseen toteutukseen https://docs.python.org/3/library/bisect.html
@@ -178,7 +215,7 @@ def binary_search(word, list_of_words):
     right = len(list_of_words) - 1
 
     while left <= right:
-        middle = int((left + right) / 2)
+        middle = (left + right) // 2
         if list_of_words[middle] < word:
             left = middle + 1
         elif list_of_words[middle] > word:
@@ -214,7 +251,7 @@ if __name__ == '__main__':
 ```bash
 python3 -m cProfile -s calls sanalistat.py
 ```
-
+-->
 * Kuinka kauan ohjelman suoritus kestää tällä kertaa? 
 * Onko ero havaittava edelliseen versioon nähden? 
 * Mikä on puolitushaun aikavaatimus?
@@ -228,12 +265,15 @@ Algoritmimme uudessa versiossa suomenkielinen sanalista käydään edelleen läp
 
 Entä kuinka monta kertaa aineisto voidaan puolittaa, jotta jäljelle jää vielä jotain puolitettavaa?
 
-1. luku kaksi voidaan puolittaa kerran
-1. luku neljä voidaan puolittaa kaksi kertaa
-1. luku kahdeksan voidaan puolittaa kolme kertaa
-1. luku kuusitoista voidaan puolittaa neljä kertaa...
+1. kahden pituinen lista voidaan puolittaa kerran (2 == 2<sup>1</sup>)
+1. neljän pituinen lista voidaan puolittaa kaksi kertaa (4 == 2<sup>2</sup>)
+1. kahdeksan pituinen lista voidaan puolittaa kolme kertaa (8 == 2<sup>3</sup>)
+1. kuudentoista pituinen lista voidaan puolittaa neljä kertaa  (16 == 2<sup>4</sup>)
+1. ...
+1. miljoonan pituinen lista voidaan puolittaa alle 20 kertaa!
+1. miljardin pituinen lista voidaan puolittaa alle 30 kertaa! (1 000 000 000 &lt; 2<sup>30</sup>)
 
-Toisin sanoen, tietty lista voidaan aina puolittaa sen pituuden kaksikantaisen logaritmin verran kertoja. Tämä on valtava parannus aikaisempaan lineaariseen hakuun verrattuna, koska nyt yhden sanan hakeminen esimerkiksi 102&nbsp;401 sanan aineistosta vaatii korkeintaan 17 vertailuoperaatiota! Maksimissaan vertailuja tehdään siis yhteensä enää alle 1&nbsp;600&nbsp;000 kappaletta.
+Toisin sanoen, tietty lista voidaan aina puolittaa sen **pituuden kaksikantaisen logaritmin verran kertoja**. Tämä on valtava parannus aikaisempaan lineaariseen hakuun verrattuna, koska nyt yhden sanan hakeminen esimerkiksi 102&nbsp;401 sanan aineistosta vaatii korkeintaan 17 vertailuoperaatiota! Maksimissaan vertailuja tehdään siis yhteensä enää alle 1&nbsp;600&nbsp;000 kappaletta.
 
 ```python
 >>> import math
@@ -249,13 +289,14 @@ O(n * log(m))         | ~2 000 000        | ?
 
 **Huom!** Oikeassa ohjelmistoprojektissa käyttäisit Pythonin valmista [bisect](https://docs.python.org/3/library/bisect.html)-moduulia, mutta koska haluamme oppia, toteutamme algoritmin itse.
 
+
 ### 3. Miten käytetty tietorakenne vaikuttaa ohjelman nopeuteen?
 
 Suomenkielisen sanalistan läpikäyntiä voi olla mahdotonta nopeuttaa, koska haluamme yhä käydä kaikki sanat läpi. Sen sijaan voimme yrittää nopeuttaa englanninkielisten sanojen hakua entisestään käyttämällä jotain muuta tietorakennetta kuin listoja.
 
 Olisiko meillä muita tietorakenteita, joita voisimme käyttää listojen sijasta? Mikä tietorakenne olisi nopea hakujen tekemiseen?
 
-Hajautustaulut (sanakirja), toimivat eri periaatteella kuin listat. Listoilla arvot esiintyvät peräkkäin ja esimerkiksi merkkijono 'nimi' voi olla listan ensimmäisenä tai viimeisenä, riippuen listan muusta sisällöstä. Hajautettavat tietorakenteet toimivat puolestaan eri toimintaperiaatteella. Jokaiselle arvolle lasketaan sijainti tietorakenteessa hajautusfunktion avulla, joten teoriassa arvon löytyminen edellyttää vain yhden arvon tarkastamisen tietorakenteesta: O(1):
+Hajautustaulut (sanakirja), toimivat eri periaatteella kuin listat. Listoilla arvot esiintyvät peräkkäin ja esimerkiksi merkkijono `'tie'` voi olla listan missä tahansa indeksissä, riippuen listan muusta sisällöstä. Hajautettavat tietorakenteet toimivat puolestaan eri toimintaperiaatteella. Jokaiselle arvolle lasketaan sijainti tietorakenteessa hajautusfunktion avulla, joten teoriassa arvon löytyminen edellyttää vain yhden arvon tarkastamisen tietorakenteesta: O(1):
 
 ```python
 >>> hash('python')
@@ -266,6 +307,7 @@ Hajautustaulut (sanakirja), toimivat eri periaatteella kuin listat. Listoilla ar
 -2131589936
 ```
 
+<!--
 Meidän tarvitsee luoda sanakirja vain siitä listasta, josta etsimme sanoja:
 
 ```python
@@ -283,11 +325,10 @@ def main():
         if word in english_dict:
             print(word)
 
-
 if __name__ == '__main__':
     main()
-
 ```
+-->
 
 * Kuinka kauan suoritus kestää tällä kertaa?
 * Mistä ero johtuu?
@@ -296,15 +337,19 @@ if __name__ == '__main__':
 
 #### Sanakirjatoteutuksen tehokkuuden arviointi
 
-Sanakirjasta hakeminen vie keskimäärin yhden operaation, vaikka teoreettisesti epätasaisesti jakautuneet sanakirjat voivat vaatia jopa kokonsa verran hakuoperaatiota, mikäli hajautusfunktio toimii tehottomasti. Sanakirjan muodostaminen vie aikaa saman verran kuin sanakirjasta hakeminen, eli englanninkielisen aineiston koko `m` vaikuttaa samassa suhteessa tarvittavien operaatioiden määrään sanakirjaa muodostettaessa. Hakuoperaatioita tehdään edelleen `n` kappaletta, joten tehokkuus on suuruusluokkaa O(m + n). Koska `m + n` kasvaa lineaarisesti alkioiden määrän mukaan, voidaan tehokkuudeksi ilmoittaa lineaarinen O(n).
+Sanakirjasta hakeminen vie keskimäärin yhden operaation, vaikka teoreettisesti epätasaisesti jakautuneet sanakirjat voivat vaatia jopa kokonsa verran hakuoperaatiota, mikäli hajautusfunktio toimii tehottomasti. Arvon lisääminen sanakirjaan vie aikaa saman verran kuin sanakirjasta hakeminen, eli englanninkielisen aineiston koko `m` vaikuttaa samassa suhteessa tarvittavien operaatioiden määrään sanakirjaa muodostettaessa.
+
+Hakuoperaatioita tehdään edelleen `n` kappaletta, joten tehokkuus on suuruusluokkaa O(m + n). Koska `m + n` kasvaa lineaarisesti alkioiden määrän mukaan, voidaan tehokkuudeksi ilmoittaa lineaarinen O(n).
+
 
 Algoritmin tehokkuus  | Operaatioiden määrä  | Suoritusaika
 ----------------------|----------------------|--------
-O(n)                  |  ~200 000            | ?
+O(n)                  | ~200 000             | ?
+
 
 ### 4. Ongelman muotoilu toisella tavalla
 
-Määritellään ongelma uudelleen joukko-opin näkökulmasta: yhden kielen sanat on joukko sanoja. Kahden kielen yhteiset sanat ovat kahden joukon leikkaus. Käyttämällä [Pythonin joukkoja (set)](https://docs.python.org/3/library/stdtypes.html#set-types-set-frozenset), haluttu osajoukko saadaan selville ilman yhtään itse kirjoitettua toisto-, vertailu- tai hakuoperaatiota:
+Määritellään ongelma uudelleen joukko-opin näkökulmasta: yhden kielen sanat on **joukko sanoja**. Kahden kielen yhteiset sanat ovat **kahden joukon leikkaus**. Käyttämällä [Pythonin joukkoja (set)](https://docs.python.org/3/library/stdtypes.html#set-types-set-frozenset), haluttu osajoukko saadaan selville ilman yhtään itse kirjoitettua toisto-, vertailu- tai hakuoperaatiota:
 
 ```python
 >>> {'rodeo', 'mafia', 'villa', 'peruna', 'riisi'} & {'rodeo', 'mafia', 'villa', 'potato', 'rice'}
@@ -334,7 +379,7 @@ if __name__ == '__main__':
 
 * Mikä on suoritusaika nyt?
 * Mikä on set-tietorakenteen leikkauksen aikavaatimus? https://wiki.python.org/moin/TimeComplexity
-
+* Kuinka pärjäämme nyt suhteessa Linuxin `comm`-komentoon?
 
 
 ## Lajittelualgoritmit ja suoritusajan kasvu tietomäärän kasvaessa
@@ -357,17 +402,110 @@ O(n * log(n))   | ~282                  | ~47 000               | ~1 000 000    
 O(n * n)        | ~2 500                | ~16 000 000           | ~10 000 000 000       | ~30 000 000 000 000
 
 
-**Kertaus**
+**Yhteenveto**
 
 1. Mihin tehokkuusluokkaan sijoittuu haku Pythoni listalta?
 1. Mihin tehokkuusluokkaan sijoittuu haku Pythoni sanakirjasta?
+1. Mihin tehokkuusluokkaan sijoittuu puolitushaku?
 1. Mihin tehokkuusluokkaan sijoittuu hyvä lajittelualgoritmi?
 1. Mihin tehokkuusluokkaan sijoittuu heikko lajittelualgoritmi?
 
 
-# Viikon koodaustehtävä (luonnos)
+# Viikon koodaustehtävät: suodattaminen ja lajittelu
 
-Tämän viikon tehtävänä on harjoitella vapaavalintaisen järjestämisalgoritmin toteuttamista. Voit valita toteutettavan järjestämisalgoritmin esimerkiksi seuraavista:
+Tämän viikon tehtävänä on harjoitella sanakirjoista ja listoista koostuvan aineiston suodattamista sekä järjestämistä annettujen ehtojen mukaan.
+
+> *"So<br/>
+> I heard you guys like dictionaries<br/>
+> So we put a dictionary in a list within another dictionary within another list"*
+>
+> Anonymous Haaga-Helia student , 2021
+
+Aineistona käytämme [MyHelsinki Open API](https://open-api.myhelsinki.fi/) -REST-rajapinnan tarjoamia tapahtumatietoja, joissa vastaus koostuu sanakirjasta, jonka sisällä on lista sanakirjamuotoisista tapahtumista, joilla on sanakirjamuotoiset tiedot niiden ajankohdasta.
+
+
+## Järjesteltävä aineisto
+
+[MyHelsinki Open API](https://open-api.myhelsinki.fi/) on Helsinki Marketingin tarjoama avoin REST-rajapinta kaupungin tapahtumien, paikkojen ja aktiviteettien tietoihin. Rajapinnan dokumentaatio löytyy Swagger-muodossa osoitteesta https://open-api.myhelsinki.fi/doc. Kyseisessä osoitteessa on dokumentoituna niin resurssien osoitteet, niiden tukemat parametrit kuin palautettujen JSON-tietueiden rakenne.
+
+Tässä tehtävässä hyödynnetään tapahtumarajapinnan tarjoamaa aineistoa osoitteesta https://open-api.myhelsinki.fi/v1/events/. Karkeasti supistettuna yhden tapahtuman pituinen vastaus rajapinnasta voi näyttää esimerkiksi seuraavalta:
+
+
+```json
+{
+  "meta": {},
+  "data": [
+    {
+      "id": "",
+      "name": {
+        "fi": "Suomenkielinen tapahtuman nimi",
+        "en": null,
+        "sv": null,
+        "zh": null
+      },
+      "source_type": {},
+      "info_url": null,
+      "modified_at": "",
+      "location": {
+        "lat": 60,
+        "lon": 24,
+        "address": {}
+      },
+      "description": {
+        "intro": "",
+        "body": "",
+        "images": []
+      },
+      "tags": [],
+      "event_dates": {
+        "starting_day": "2021-03-24T16:00:00.000Z",
+        "ending_day": "2021-03-24T17:00:00.000Z",
+        "additional_description": null
+      }
+    }
+  ],
+  "tags": {
+  }
+}
+```
+
+Tietorakenteen uloin tyyppi on sanakirja, jonka "data"-avaimelta löytyy lista sanakirjoja. Kukin sanakirja vastaa yhtä tapahtumaa, ja sisältää useita listoja ja sanakirjoja.
+
+
+## Tehtävän osa 1: aineiston suodattaminen (arvosanatavoite 3)
+
+Kirjoita Python-skripti `events_by_date.py`, joka hakee events-rajapinnasta kaikki tapahtumat. Tehtävän ensimmäisessä osassa sinun tulee tulostaa saamastasi vastauksesta sellaiset tapahtumat, joiden alkamisaika on seuraavan 30 vuorokauden aikana. Huomaa, että **kaikilla rajapinnan palauttamilla tapahtumilla ei välttämättä ole alkamisaikaa**. Tuntemattoman ajankohdan tapahtumat tulee suodattaa pois aineistosta.
+
+Tulosteessa tulee käydä ilmi tapahtuman alkamisaika (`starting_day`) sekä tapahtuman nimi millä tahansa kielellä. Osalle tapahtumista on annettu nimet useilla eri kielillä, kun taas joiltain nimiä puuttuu. Tällaisten tapahtumien kohdalla voit näyttää minkä kieliversion tahansa.
+
+Voit muodostaa Pythonissa aikaoliot sekä nykyhetkelle että 30 päivän päähän seuraavasti:
+
+```python
+from datetime import datetime, timedelta
+min = datetime.utcnow()
+max = min + timedelta(days=30)
+```
+
+`utcnow`-funktio muodostaa ajanhetken UTC-aikavyöhykkeessä, joka vastaa myös tapahtuma-aineistossa käytettävää aikavyöhykettä. Ajankohdat voidaan puolestaan muuttaa ISO-standardin mukaisiksi merkkijonoiksi `isoformat`-metodilla:
+
+```
+alku_str = min.isoformat()
+loppu_str = max.isoformat()
+```
+
+Kun vertailtavat ajankohdat ovat yhtenevässä merkkijonomuodossa, niitä voidaan vertailla Pythonin `<`- ja `>`-operaattoreilla.
+
+## Tehtävän osa 2: tapahtumien järjestäminen (arvosanatavoite 5)
+
+Arvosanatavoitteeseen 5 sinun tulee lajittelun lisäksi järjestää tapahtumat niiden alkamisajan mukaan. 
+
+> *Some examples where you can find direct application of sorting techniques include: Sorting by price, popularity etc in e-commerce websites*
+>
+> *https://u.osu.edu/cstutorials/2016/11/21/7-algorithms-and-data-structures-every-programmer-must-know/*
+
+Järjestä tapahtumat järjestykseen alkamisaikansa mukaan itse toteuttamallasi vapaasti valittavalla järjestämisalgoritmilla. **Koodisi tulee järjestellä kokonaisia tapahtumatietueita**, eli et saa poimia aineistosta järjesteltäväksi esimerkiksi pelkkiä nimiä ja alkamisaikoja.
+
+Voit valita toteutettavan järjestämisalgoritmin esimerkiksi seuraavista:
 
 * Lisäyslajittelu eli Insertion Sort: https://en.wikipedia.org/wiki/Insertion_sort
 
@@ -387,26 +525,16 @@ Tämän viikon tehtävänä on harjoitella vapaavalintaisen järjestämisalgorit
 
 Voit valita itsellesi mieluisen algoritmin esimerkiksi tutustumalla ensin niiden tehokkuuteen, tai valita sen, joka vaikuttaa toteutukseltaan sopivan yksinkertaiselta. Muista myös, että voit kysyä Teamsissa neuvoa mihin vain tehtävässä kohtaamaasi haasteeseen liittyen. Todennäköisesti samojen haasteiden parissa kamppailee myös moni muu kurssilainen.
 
-**Huom!** Oikeassa ohjelmistoprojektissa käyttäisit Pythonin valmiita järjestämisfunktioita, joita esitellään esimerkiksi osoitteessa https://docs.python.org/3/howto/sorting.html. Tämän harjoituksen tavoitteena on kuitenkin opetella itse toteuttamaan jokin tunnettu järjestämisalgoritmi.
+Kun aineisto on järjestetty, tulosta tapahtumien nimet ja ajankohdat kronologisessa järjestyksessä. Tulosteen muodolla ei ole tehtävän arvioinnin kannalta merkitystä, kunhan tulosteesta on todennettavissa ohjelman oikea toiminta. 
+
+Arvioi lopuksi tehtävää ratkaistessasi järjestämiseen kuluvaa aikaa. Miten esimerkiksi aineiston koon kaksinkertaistaminen vaikuttaisi ohjelmasi suoritusaikaan? Kirjoita yhden virkkeen pituinen arvio suorituskyvystä koodin kommentteihin.
+
+**Huom!** Oikeassa ohjelmistoprojektissa käyttäisit Pythonin valmiita järjestämisfunktioita, joita esitellään esimerkiksi osoitteessa https://docs.python.org/3/howto/sorting.html. Tämän harjoituksen tavoitteena on kuitenkin opetella itse toteuttamaan jokin tunnettu järjestämisalgoritmi, joten Pythonin valmiin lajittelualgoritmin käyttämistä ei arvioida.
 
 
-### Järjesteltävä aineisto
+## Ohjelman tuloste-esimerkki
 
-[MyHelsinki Open API](https://open-api.myhelsinki.fi/) on Helsinki Marketingin tarjoama avoin REST-rajapinta kaupungin tapahtumien, paikkojen ja aktiviteettien tietoihin. Rajapinnan dokumentaatio löytyy Swagger-muodossa osoitteesta https://open-api.myhelsinki.fi/doc. Kyseisessä osoitteessa on dokumentoituna niin resurssien osoitteet, niiden tukemat parametrit kuin palautettujen JSON-tietueiden rakenne.
-
-Tässä tehtävässä hyödynnetään tapahtumarajapinnan tarjoamaa aineistoa osoitteesta https://open-api.myhelsinki.fi/v1/events/. Tapahtumat palautetaan rajapinnasta epäjärjestyksessä, joten joudut itse huolehtimaan tapahtumien järjestämisestä alkamisajan mukaan. 
-
-Huomaa, että **kaikilla rajapinnan palauttamilla tapahtumilla ei välttämättä ole alkamisaikaa**. Tällaisten tapahtumien kohdalla voit itse päättää, jätätkö tapahtumat huomioimatta vai kehitätkö niille vapaavalintaisen erillisen logiikan. Osalle tapahtumista on myös annettu nimet useilla eri kielillä, kun taas joiltain nimiä puuttuu. Myös tällaisten tapahtumien kohdalla saat itse päättää, miten käsittelet tapahtumat.
-
-> *Some examples where you can find direct application of sorting techniques include: Sorting by price, popularity etc in e-commerce websites*
->
-> *https://u.osu.edu/cstutorials/2016/11/21/7-algorithms-and-data-structures-every-programmer-must-know/*
-
-### Koodaustehtävä: events_by_date.py
-
-Kirjoita Python-skripti `events_by_date.py`, joka hakee events-rajapinnasta kaikki tapahtumat. Järjestä tapahtumat järjestykseen alkamisaikansa mukaan itse toteuttamallasi vapaasti valittavalla järjestämisalgoritmilla (ks. linkit yllä). Koodisi tulee järjestellä kokonaisia tapahtumatietueita, eli et saa poimia aineistosta järjesteltäväksi esimerkiksi pelkkiä nimiä ja alkamisaikoja.
-
-Kun aineisto on järjestetty, tulosta tapahtumien nimet ja ajankohdat kronologisessa järjestyksessä. Tulosteen muodolla ei ole tehtävän arvioinnin kannalta merkitystä. Yksi varteenotettava tapa on näyttää tapahtumat ryhmiteltynä päivän mukaan (suurin osa tulosteesta poistettu '...'):
+Halutessasi voit tulostaa tapahtumat ohjelmassa ryhmiteltynä päivän mukaan:
 
 ```
 2020-12-05
@@ -445,26 +573,16 @@ Kun aineisto on järjestetty, tulosta tapahtumien nimet ja ajankohdat kronologis
   07:30 Taaperotuokio
   07:30 Satutuokio
   ...
-
 ...
 ```
 
-Arvioi tehtävää ratkaistessasi järjestämiseen kuluvaa aikaa. Miten esimerkiksi aineiston koon kaksinkertaistaminen vaikuttaisi ohjelmasi suoritusaikaan? 
+
+## Tehtävän arviointi
+
+Tehtävän ensimmäisen osan suorittaminen osoittaa osaamista arvosanan 3 mukaisesti, ja sen lisäksi toteutettuna järjestelyalgoritmi arvosanan 5 mukaisesti. Myös puutteelliset ratkaisut hyväksytään eri arvosanoin, kunhan niissä osoitetaan selvää yritystä tehtävän ratkaisemiseksi.
 
 
-### Apua tehtävään
-
-Kysy apua Teamsissa yleisellä kanavalla, mikäli jäät jumiin tehtävän kanssa. Voit myös katsoa videotallenteen oppitunnin lopusta, joka saattaa auttaa hahmottamaan JSON-rakenteiden sisäkkäisten arvojen vertailua: https://web.microsoftstream.com/video/a9ab87c2-7442-4769-99a0-c1800056513c
-
-
-### Tehtävän arviointi
-
-Ratkaisu, joka sisältää toimivan itse mallin mukaan toteutetun järjestelyalgoritmin, hyväksytään arvosanalla 5. Myös puutteelliset ratkaisut hyväksytään eri arvosanoin, kunhan niissä osoitetaan selvää yritystä tehtävän ratkaisemiseksi.
-
-Toiminnallisesti oikea ratkaisu, joka oman järjestelyalgoritmin sijasta hyödyntää Pythonin valmiita [sort-operaatioita](https://docs.python.org/3/howto/sorting.html), oikeuttaa arvosanaan 3.
-
-
-### Tehtävän palauttaminen
+## Tehtävän palauttaminen
 
 Palauta koodaamasi lähdekooditiedosto(t) sellaisenaan, eli **ei pakattuna** Teamsissa olevaan palautuslaatikkoon seuraavaan oppituntiin mennessä.
 
