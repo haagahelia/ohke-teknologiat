@@ -382,6 +382,13 @@ if __name__ == '__main__':
 * Kuinka pärjäämme nyt suhteessa Linuxin `comm`-komentoon?
 
 
+### 5. Ohjelman mahdolliset seuraavat optimoinnit
+
+Yhteisten sanojen selvittämisen ongelma olisi ratkaistavissa edellä käsiteltyjen tapojen lisäksi monilla muillakin tavoilla. Yksi mahdollinen tapa voisi olla käydä suomen- ja englanninkielistä sanalistaa samanaikaisesti läpi siten, että edetään aina sillä listalla, jolla käsiteltävä sana on aakkosissa ensimmäisenä. Yhteiset sanat löytyisivät silloin, kun molemmilla listoilla käsiteltäisiin samaa sanaa.
+
+Mikä olisi tämän ratkaisutavan aikavaatimus? Kannattaisiko jatkokehitys tehdä suorituskyvyn paranemisen toivossa?
+
+
 ## Lajittelualgoritmit ja suoritusajan kasvu tietomäärän kasvaessa
 
 > *Lajittelualgoritmit eli järjestämisalgoritmit ovat varsin keskeisiä algoritmeja ohjelmistotekniikassa. Lajittelualgoritmin tarkoitus on järjestää lista sovittuun järjestykseen, esimerkiksi numero- tai aakkosjärjestykseen. Lajittelualgoritmeilla on keskeinen merkitys sovelluksissa, jotka käsittelevät suuria tietomääriä. Lajittelualgoritmien nopeutta on tutkittu ohjelmistotekniikassa verrattain paljon niiden merkittävyyden vuoksi. Parhaiden yleiskäyttöisten lajittelualgoritmien asymptoottinen suoritusaika on luokkaa O(nlog n).*
@@ -537,7 +544,7 @@ Arvioi lopuksi tehtävää ratkaistessasi järjestämiseen kuluvaa aikaa. Miten 
 Halutessasi voit tulostaa tapahtumat ohjelmassa ryhmiteltynä päivän mukaan:
 
 ```
-2020-12-05
+2021-03-05
 
   08:30 Taaperodisko
   09:00 Jazz for Kids: 5-vuotissynttärit
@@ -548,14 +555,7 @@ Halutessasi voit tulostaa tapahtumat ohjelmassa ryhmiteltynä päivän mukaan:
   17:00 SIIRRETTY: Räjäyttäjät, Ninni Forever Band – A la Malmi
   18:00 DIVET SHOW - 15-vuotisjuhlashow
 
-2020-12-06
-
-  11:00 Kaarela-seuran perinteinen itsenäisyyspäivän juhla
-  14:00 Kaikkien itsenäisyyspäivän juhla PERUUNTUNUT – Juhla-ateria ja monipuolista ohjelmaa
-  14:00 Itsenäisyyspäivä 2020
-  15:00 Iltasatutuokiot
-
-2020-12-07
+2021-03-07
 
   07:30 SYTO-MYSSYT
   08:00 Ohjattu liikuntatuokio leikkipuistossa
@@ -565,7 +565,7 @@ Halutessasi voit tulostaa tapahtumat ohjelmassa ryhmiteltynä päivän mukaan:
   17:00 Emilia Lajunen: Vainaan perua
   17:00 Iliza
 
-2020-12-08
+2021-03-08
 
   07:00 Avoin keramiikkapaja
   07:00 Biljardiryhmä
@@ -576,6 +576,7 @@ Halutessasi voit tulostaa tapahtumat ohjelmassa ryhmiteltynä päivän mukaan:
 ...
 ```
 
+Tapahtumien tulostaminen päivittäin ei välttämättä vaadi erillistä tietorakennetta, vaan yksinkertainen tapahtumalista riittää. Vertaat vain aina tapahtuman päivämäärää edellisen päivämäärään, ja mikäli se on eri, tulostat uuden päivämäärän ennen tapahtuman kellonajan ja nimen tulostamista.
 
 ## Tehtävän arviointi
 
