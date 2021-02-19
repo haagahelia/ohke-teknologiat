@@ -502,9 +502,11 @@ loppu_str = max.isoformat()
 
 Kun vertailtavat ajankohdat ovat yhtenevässä merkkijonomuodossa, niitä voidaan vertailla Pythonin `<`- ja `>`-operaattoreilla.
 
+**Vinkki:** tehtävää käsiteltiin oppitunnin lopussa. Tutustu src-hakemistossa olevaan events_by_date.py-tiedostoon sekä Teamsissa olevaan oppituntitallenteeseen mikäli et pääse alkuun tämän tehtävän tekemisessä.
+
 ## Tehtävän osa 2: tapahtumien järjestäminen (arvosanatavoite 5)
 
-Arvosanatavoitteeseen 5 sinun tulee lajittelun lisäksi järjestää tapahtumat niiden alkamisajan mukaan. 
+Arvosanatavoitteeseen 5 sinun tulee suodattamisen lisäksi järjestää tapahtumat niiden alkamisajan mukaan. 
 
 > *Some examples where you can find direct application of sorting techniques include: Sorting by price, popularity etc in e-commerce websites*
 >
