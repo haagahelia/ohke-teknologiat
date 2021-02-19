@@ -206,9 +206,7 @@ Voit katsoa konkreettisen visualisoinnin algoritmin suorituksesta osoitteesta ht
 
 Muutetaan vaiheessa 1 kehitettyä sovellusta siten, että puolitamme etsittävän aineiston. Toteutetaan siis oma binäärihaku! 
 
-<!--
 ```python
-# tiedosto binary_search.py
 # tutustu myös valmiiseen toteutukseen https://docs.python.org/3/library/bisect.html
 def binary_search(word, list_of_words):
     left = 0
@@ -251,7 +249,7 @@ if __name__ == '__main__':
 ```bash
 python3 -m cProfile -s calls sanalistat.py
 ```
--->
+
 * Kuinka kauan ohjelman suoritus kestää tällä kertaa? 
 * Onko ero havaittava edelliseen versioon nähden? 
 * Mikä on puolitushaun aikavaatimus?
@@ -307,7 +305,6 @@ Hajautustaulut (sanakirja), toimivat eri periaatteella kuin listat. Listoilla ar
 -2131589936
 ```
 
-<!--
 Meidän tarvitsee luoda sanakirja vain siitä listasta, josta etsimme sanoja:
 
 ```python
@@ -320,7 +317,9 @@ def main():
     finnish_words = read_words('kotus-sanalista-v1/kotus-sanalista-suomi.txt')
     english_words = read_words('/usr/share/dict/words')
 
+    # sanakirjan luominen, dictionary comprehension:
     english_dict = {word: True for word in english_words}
+
     for word in finnish_words:
         if word in english_dict:
             print(word)
@@ -328,7 +327,7 @@ def main():
 if __name__ == '__main__':
     main()
 ```
--->
+
 
 * Kuinka kauan suoritus kestää tällä kertaa?
 * Mistä ero johtuu?
