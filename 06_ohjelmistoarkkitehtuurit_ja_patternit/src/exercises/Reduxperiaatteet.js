@@ -1,6 +1,6 @@
 /*Tässä tehtävässä on tarkoitus rakentaa pieni scripti 
-värien lisäämiseen ja poistamiseen säiliöstä Reduxin periaatteiden mukaisesti. 
-Lopulta scriptin pitäisi siis tulostaa "keltainen", "vihreä"
+rahasummien lisäämiseen ja poistamiseen säiliöstä Reduxin periaatteiden mukaisesti. 
+Lopulta scriptin pitäisi siis tulostaa summa 50.
 Muista ajaa ensin src-kansiossa komento "npm install"
 Voit ajaa tämän tiedoston komennolla "node Reduxperiaatteet.js" tai "npm run build"
 */
@@ -10,18 +10,18 @@ Voit ajaa tämän tiedoston komennolla "node Reduxperiaatteet.js" tai "npm run b
 const Redux = require('redux')
 
 //Action 1
-function addColor(value) {
+function removeMoney(value) {
     return {
         type: "", //FIXME
-        color: null //FIXME
+        amount: null //FIXME
     };
 }
 
 //Action 2
-function removeColor(value) {
+function addMoney(value) {
     return {
         type: "", //FIXME
-        color: null //FIXME
+        amount: null //FIXME
     };
 }
 
@@ -30,29 +30,25 @@ Pohja reducerille, ota edellinen tila ja Action ja palauta uusi tila.
 Tämä reducer-funktio on siis "idealtaan samantapainen" kuin funktionaalisen ohjelmoinnin 
 reduce-funktio, eli Array.prototype.reduce(reducer, ?initialValue)
 */
-function favoriteColors(state, action) {
+function moneyReducer(state, action) {
     if (state == undefined) {
-        state = []
+        state = 0
     }
 
     if (action.type === "ADD") {
-        return state.concat(action.color);
+        return state + action.amount;
     } else if (action.type === "REMOVE") {
-        return state.filter(function (item) {
-            //selvitä tarvittaessa miten toimii funktionaalisen ohjelmoinnin filter-funktio
-            return false //FIXME
-        });
+        return 0 //FIXME
     } else {
         return state;
     }
 }
 
 //Luodaan redux-säiliö ja käytetään sitä
-let store = Redux.createStore(favoriteColors);
-store.dispatch(addColor("sininen"));
-store.dispatch(addColor("keltainen"));
-store.dispatch(addColor("vihreä"));
-store.dispatch(removeColor("sininen"));
+let store = Redux.createStore(/*reducerFunktio*/);//FIXME: createStorelle pitää antaa parametriksi reducer-funktio
+store.dispatch(addMoney(50));
+store.dispatch(addMoney(50));
+store.dispatch(removeMoney(50));
 
-console.log(store.getState()); //pitäisi tulla tuloste ['keltainen', 'vihreä']
+console.log(store.getState()); //pitäisi tulla tuloste 50
 

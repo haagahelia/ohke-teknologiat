@@ -1,11 +1,11 @@
 
 /**
  * 
- * Järjestelmässämme on yksi moottoripyörä (vm. 2015, ajetut kilometrit
- * 20500 ja se ei ole kevytmoottoripyörä).
+ * Järjestelmässämme on yksi moottoripyörä (vm. 2014, ajetut kilometrit
+ * 25500 ja se ei ole kevytmoottoripyörä).
  * 
- * Järjestelmässä on myös yksi auto (vm. 2018, ajetut kilometrit 
- * 56000 ja se on farmariauto).
+ * Järjestelmässä on myös yksi auto (vm. 2019, ajetut kilometrit 
+ * 58000 ja se on farmariauto).
  * 
  * Sinun tehtäväsi olisi refaktoroida tiedostossa olevat luokat
  * siten, että järjestelmän arkkitehtuuri seuraa
@@ -141,7 +141,7 @@ class BusinessLuokka {
      * Auto-luokasta. Tämä luokka siis alustetaan tässä kiinteästi autolla. Mitä jos
      * haluaisin saman BusinessLuokan käsittelevänkin järjestelmän moottoripyörää?
      */
-    Auto auto = new Auto(56000, 2018, true);
+    Auto auto = new Auto(58000, 2019, true);
 
     /**
      * Tämä on järjestelmän ydinbusinekseen liittyvä tarpeellinen toiminto. Tämän

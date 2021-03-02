@@ -216,7 +216,7 @@ Monivalintakysymyksiä yllä olevasta lukumateriaalista vastattavissa Teamsissa.
 
 ### Tehtävä 6.2 (30% kierroksen arvosanasta):
 
-[DIPTehtava.java](src/DIPTehtava.java) tiedostosta löytyy useampi Java-luokka, jotka kuvaavat yksinkertaista moottoripyörien tai autojen käsittelyyn tehtyä järjestelmää. Sinun tehtäväsi olisi refaktoroida tiedostossa olevat luokat siten, että järjestelmän arkkitehtuuri seuraa Dependency inversion-periaatetta (DIP) ja hyödyntää olioiden monimuotoisuutta.
+[DIPTehtava.java](src/exercises/DIPTehtava.java) tiedostosta löytyy useampi Java-luokka, jotka kuvaavat yksinkertaista moottoripyörien tai autojen käsittelyyn tehtyä järjestelmää. Sinun tehtäväsi olisi refaktoroida tiedostossa olevat luokat siten, että järjestelmän arkkitehtuuri seuraa Dependency inversion-periaatetta (DIP) ja hyödyntää olioiden monimuotoisuutta.
  
 Kaikki luokat on kirjoitettu tehtävän palautuksen helpottamiseksi samaan
 tiedostoon.
@@ -236,7 +236,7 @@ Reduxin käyttäminen perustuu omaan pieneen suunnittelumalliin, eli arkkitehtuu
 
 ![Redux](img/redux.png) 
 
-Reduxia voi käyttää (ja sen periaatteita seurata) myös ilman Reactia. Tiedostossa [Reduxperiaatteet.js](src/Reduxperiaatteet.js) on luotu tiedostopohja, josta löytyy metodipohja Reducer-metodille, kahdelle Action-metodille sekä Redux säiliön luomiselle (lisäksi samassa src-kansiossa on npm:lle tarpeellinen [package.json](src/package.json)). Sinun tehtäväsi on täydentää Reducer-metodia sekä kahta Action metodia siten, että Redux-säiliö palauttaa tiedostossa kuvatun halutun lopputuloksen. Tässä tapauksessa siis lisäämme ja poistamme säiliöön yksinkertaisia väreihin liittyviä tietoja. Tärkeintä tässä tehtävässä olisi tutustua Reduxin arkkitehtuurin toimintaperiaatteita Reduxin dokumentaatiota ja googlea hyödyntäen ja yrittää toteuttaa tämä pieni ohjelma Reduxin arkkitehtuuriperiaatteita seuraten. Reduxista ja sen periaatteista voi lukea myös esim [täältä](https://redux.js.org/introduction/getting-started). (muista ajaa src-kansiossa *npm install* komento alkuun, jolloin npm asentaa Redux-kirjaston, johon on määritelty riippuvuus src-kansion package.json-tiedostossa).
+Reduxia voi käyttää (ja sen periaatteita seurata) myös ilman Reactia. Tiedostossa [Reduxperiaatteet.js](src/exercises/Reduxperiaatteet.js) on luotu tiedostopohja, josta löytyy metodipohja Reducer-metodille, kahdelle Action-metodille sekä Redux säiliön luomiselle (lisäksi samassa src-kansiossa on npm:lle tarpeellinen [package.json](src/exercises/package.json)). Sinun tehtäväsi on täydentää Reducer-metodia sekä kahta Action metodia siten, että Redux-säiliö palauttaa tiedostossa kuvatun halutun lopputuloksen. Tärkeintä tässä tehtävässä olisi tutustua Reduxin arkkitehtuurin toimintaperiaatteita Reduxin dokumentaatiota ja googlea hyödyntäen ja yrittää toteuttaa tämä pieni ohjelma Reduxin arkkitehtuuriperiaatteita seuraten. Reduxista ja sen periaatteista voi lukea myös esim [täältä](https://redux.js.org/introduction/getting-started). (muista ajaa src-kansiossa *npm install* komento alkuun, jolloin npm asentaa Redux-kirjaston, johon on määritelty riippuvuus src-kansion package.json-tiedostossa).
 
 Palauta lopuksi sama tiedosto Teamsiin.
 
