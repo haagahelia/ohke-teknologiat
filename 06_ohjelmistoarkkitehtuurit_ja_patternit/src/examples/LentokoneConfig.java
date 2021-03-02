@@ -4,17 +4,17 @@
  */
 public class LentokoneConfig {
 
-    private final Lentokone lentokone;
-    private final Lentokone lentokone2;
+    private final Lentokone superlentokone;
+    private final Lentokone halpalentokone;
 
     public LentokoneConfig() {
-        lentokone = new Lentokone();
+        superlentokone = new Lentokone();
         Moottori moottori = new SuperMoottori();
-        lentokone.setMoottori(moottori);
+        superlentokone.setMoottori(moottori);
 
-        lentokone2 = new Lentokone();
+        halpalentokone = new Lentokone();
         Moottori moottori2 = new HalpaMoottori();
-        lentokone2.setMoottori(moottori2);
+        halpalentokone.setMoottori(moottori2);
     }
 
 }
@@ -45,7 +45,7 @@ class SuperMoottori implements Moottori {
     }
 
     public boolean kaynnista() {
-        // TODO Auto-generated method stub
+        // Tee supermoottorin käynnistämiseen tarvittavat toimet
         return false;
     }
 
@@ -58,7 +58,7 @@ class HalpaMoottori implements Moottori {
     }
 
     public boolean kaynnista() {
-        // TODO Auto-generated method stub
+        // Tee halvan moottorin käynnistämiseen tarvittavat toimet
         return false;
     }
 

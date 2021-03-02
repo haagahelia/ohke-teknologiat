@@ -89,9 +89,11 @@ Huomionarvoista on se, että paradigmat eivät oikeastaan tarjoa ohjelmoijalle m
 Toinen olio-ohjelmoinnin tärkeä periaate on *perintä (inheritance)*. Luokka tai olio voi siis periä ominaisuuksia ja toiminnallisuuksia toiselta luokalta. Perinnän avulla on mahdollista vähentää koodin uudelleenkirjoittamista. Esimerkiksi siis *Auto* ja *Moottoripyörä* voivat molemmat periä ominaisuuksia *Ajoneuvo*-luokalta, mutta toteuttaa osin omia toimintojaan.
 
 Robert Martinin mukaan arkkitehdin näkökulmasta olio-ohjelmoinnin isoin vahvuus on *olioiden monimuotoisuus ([polymorphism](https://en.wikipedia.org/wiki/Polymorphism_%28computer_science%29))*. Monimuotoisuus tarkoittaa, että esimerkiksi yllä olevan esimerkin *Auto*-luokka voi esiintyä myös pelkkänä *Ajoneuvona*, jos se on kutsuvalle taholle riittävä abstraktiotaso. 
-Edelleen arkkitehtuurin näkökulmasta tarkasteltuna polymorfismin suurin käytännön hyöty syntyy riippuvuussuhteiden kääntämisestä ([Dependency Inversion Principle](https://en.wikipedia.org/wiki/Dependency_inversion_principle)). Polymorfismin ja DIP-periaatteen avulla on mahdollista rakentaa järjestelmän arkkitehtuuri siten, että korkean tason komponentit eivät riipu alemman tason toteutusyksityiskohdista. 
+Edelleen arkkitehtuurin näkökulmasta tarkasteltuna polymorfismin suurin käytännön hyöty syntyy riippuvuussuhteiden kääntämisestä ([Dependency Inversion Principle](https://en.wikipedia.org/wiki/Dependency_inversion_principle)). Polymorfismin ja DIP-periaatteen avulla on mahdollista rakentaa järjestelmän arkkitehtuuri siten, että korkean tason komponentit eivät riipu alemman tason toteutusyksityiskohdista. Tätä asiaa pyrkii havainnollistamaan [LentokoneConfig-esimerkki](src/examples/LentokoneConfig.java).
 
-Springin *Inversion of Control-periaate* ja *[Dependency Injection-pattern](https://www.baeldung.com/inversion-control-and-dependency-injection-in-spring)* on esimerkki [DIP-periaatteen konkreettisesta toteutuksesta](https://springframework.guru/principles-of-object-oriented-design/dependency-inversion-principle/). Spring-sovelluksissa voidaan siis esimerkiksi antaa *Ajoneuvo*-tyyppisiä luokkia (tai rajapintoja) parametreina tietyille palvelu-luokille (service). Sitten sovellus voidaan alustaa joko *Moottoripyörillä* tai *Autoilla*, mutta palvelu-luokkien ei koskaan tarvitse tietää minkä toteuttavan luokan Spring-sovellus on tässä tapauksessa injektoinut. Näin ollen kyseisten palvelu-luokkien toteutuksia ei tarvitse muuttaa vaikka *Auto* ja *Moottoripyörä* muuttuisivatkin ja toisaalta samaa järjestelmää voidaan käyttää useiden ajoneuvotyyppien hallintaan.
+Perintää ja olioiden monimuotoisuuttaa käsittelee myös [Listaesimerkki](src/examples/Listaesimerkki.java).
+
+Springin *Inversion of Control-periaate* ja *[Dependency Injection-pattern](https://www.baeldung.com/inversion-control-and-dependency-injection-in-spring)* on esimerkki [DIP-periaatteen konkreettisesta toteutuksesta](https://springframework.guru/principles-of-object-oriented-design/dependency-inversion-principle/). Spring-sovelluksissa voidaan siis esimerkiksi antaa *Ajoneuvo*-tyyppisiä luokkia (tai rajapintoja) parametreina tietyille palvelu-luokille (service). Sitten sovellus voidaan alustaa joko *Moottoripyörillä* tai *Autoilla*, mutta palvelu-luokkien ei koskaan tarvitse tietää minkä toteuttavan luokan Spring-sovellus on tässä tapauksessa injektoinut. Näin ollen kyseisten palvelu-luokkien toteutuksia ei tarvitse muuttaa vaikka *Auto* ja *Moottoripyörä* muuttuisivatkin ja toisaalta samaa järjestelmää voidaan käyttää useiden ajoneuvotyyppien hallintaan. Tätä periaatetta harjoitellaan tehtävässä 6.2.
 
 Olio-paradigman mukaan ohjelmoiduista järjestelmistä tulee monesti rakenteeltaan kerroksellisia. Kerrosten välillä viestitään rajapintojen avulla, mikä mahdollistaa varsinaisten toteutusteknologioiden vaihtamisen ilman, että rajapinnasta riippuviin kerroksiin tarvitsee tehdä muutoksia. Myös esimerkiksi tietyn kerroksen testaaminen on helpompaa, kun alla oleva kerros voidaan testien ajaksi huijata palauttamaan haluttua syötettä.
 
@@ -104,6 +106,10 @@ Kolmas pääohjelmointiparadigma, **Funktionaalinen ohjelmointi**, perustuu olee
 Arkkitehdin näkökulmasta moni ohjelmoinnin ongelma poistuu, jos muuttujan arvo ei ikinä voi muuttua. Tällöin ei voi syntyä ongelmia siitä, että samaa muuttujaa muokataan kahdesta eri paikasta ja eri säikeistä melkein samaan aikaan (concurrent update problem). 
 Täydellisen muokkaamattomuuden toteuttaminen käytännössä saattaa sovelluksesta riippuen vaatia huomattavasti laskenta- ja tallenuskapasiteettia ja siksi sitä ei käytännössä kannata välttämättä seurata täysin kirjaimellisesti. Arkkitehtuurisuunnittelun näkökulmasta on hyvä käytäntö erottaa muuttumattomat komponentit (immutable) sellaisista, joille sallitaan muuttuminen (mutable). Sitten muutoksille sallitut kohdat pyritään toteuttamaan siten, että niissä huomioidaan esimerkiksi transaktiot.
 
+Funktionaalinen ohjelmointi seuraa [deklaratiivista paradigmaa](https://en.wikipedia.org/wiki/Declarative_programming). Tämä tarkoittaa sitä, että kielen lauseilla kuvataan haluttu lopputulos eikä yksittäisiä vaiheita, joita tietokoneen tulee suorittaa lopputulokseen päästäkseen kuten tehdään [imperatiivisessa paradigmassa](https://en.wikipedia.org/wiki/Imperative_programming).
+
+Oliotyylisen ja funktionaalisen ohjelmointityylin sekä deklaratiivisen ja imperatiivisen paradigman eroja on pyritty havainnollistamaan [Oliolaskurin](src/examples/Oliolaskuri.java) ja [Funktionaalisen laskurin](src/examples/FunktionaalinenLaskuri.js) vertailussa.
+
 **[Event Sourcing](https://martinfowler.com/eaaDev/EventSourcing.html)** on hyödyllinen funktionaaliseen paradigmaan liittyvä ohjelmointimalli (pattern). Event Sourcingin ajatuksena on tallentaa kaikki tilan muutokset, varsinaisen uuden tilan sijaan. Esimerkiksi pankkisovelluksessa siis tallennettaisiin pankkitilin alkuperäinen saldo ja sitten kaikki saldoon kohdistuneet operaatiot (otto/talletus ja summa). Tällöin kunkin hetken saldo (tila) pystyttäisiin laskemaan alkuperäisestä saldosta ajamalla kaikki tallennetut operaatiot. 
 Näin toteutettu järjestelmä vaatisi huomattavan paljon muisti- ja laskentatehoa. Kenties voitaisiin kuitenkin tallentaa vaikka aina jokaisen keskiyön saldo ja ainoastaan seuraavan päivän operaatiot, jolloin potentiaalisten samanaikaisuusvirheiden (concurrency errors) määrä vähenisi käytännössä kokonaan, mutta järjestelmä pysyisi kuitenkin myös laskenta- ja tallennuskapasiteetin osalta järkevänä. 
 Tunnetuista ohjelmointikielistä [Clojure](https://clojure.org/about/rationale) on suunniteltu ohjelmoitavaksi funktionaalisen paradigman mukaan.
@@ -111,15 +117,19 @@ Tunnetuista ohjelmointikielistä [Clojure](https://clojure.org/about/rationale) 
 
 ![Event Sourcing](img/eventsourcing.png) 
 
+### Muita alatason ohjelmointiparadigmoja ja käytäntöjä
+
+Käytännön tasolla luokka- ja funktiokomponenttien *(lopulta ehkä aika pieniä)* eroja on pyritty havainnollistamaan [UserMeasurementsUpdaterClass-luokkakomponentin](src/examples/UserMeasurementsUpdaterClass.js) ja saman asian toteuttavan [UserMeasurementsUpdaterFunction-funktiokomponentin](src/examples/UserMeasurementsUpdaterFunction.js) vertailussa. Esimerkissä vertaillaan esimerkiksi curryttamista ja konstruktorin käyttämistä.
+
 Kolmen pääparadigman lisäksi kiinnostavaa voi olla nostaa esiin muutamia esimerkkejä käytännön ohjelmointitavoista tai paradigmoista. JavaScript-kieli (ja mm. sitä käyttävä Node.js) [eivät mahdollista säikeiden (Thread) kirjoittamista ohjelmiin](https://www.sohamkamani.com/blog/2016/03/14/wrapping-your-head-around-async-programming/). Sen sijaan JavaScriptissä pitkään kestävät operaatiot (esimerkiksi levylle kirjoittaminen, tietokantahaut, jne.) toteutetaan asynkronisilla takaisinkutsuilla (asynchronous callback). Takaisinkutsumalli on saattanut aiheuttaa ohjelmakoodiin vaikeasti seurattavia toimintoketjuja ja siksi JavaScript-maailmassa yleisempää onkin nykyisin [Promise:jen](https://javascript.info/promise-basics) tai [async/await -syntaksin](https://javascript.info/async-await) käyttäminen. 
 
 Yleensä webjärjestelmässä käyttäjä antaa jonkin uuden syötteen tai tekee muutoksen ja sen seurauksena tapahtuu uuttaa laskentaa ja järjestelmän antamat tulostukset muuttuvat. Facebookin kehittämä React-kirjasto [on suunniteltu ohjelmoitavaksi deklaratiivisen mallin mukaisesti](https://facebook.github.io/flux/docs/in-depth-overview) siten, että järjestelmän näkymien sisällöt määritellään kiinteästi suhteessa näkymistä erotettujen tilamuuttujien arvoihin. 
 Kun käyttäjä esimerkiksi tekee näkymässä muutoksen, niin Reactissa ei suoraan päivitetä tähän liittyviä näkymäkomponentteja, vaan ainoastaan tilamuuttujia. Sitten ne näkymät, jotka ovat kiinnostuneita kyseisten tilamuuttujien arvoista renderöivät oman sisältönsä uudelleen ja päivittyvät näyttämään kuten muutoksen edellyttävät. 
 Näkymät siis määritellään deklaratiivisesti suhteessa tilamuuttujiin, eikä niitä tarvitse päivittää aina kaikkien mahdollisten muutosten yhteydessä erikseen annettavilla imperatiivisilla käskyillä.
 
-### Muita alatason ohjelmointiparadigmoja
+[Reaktiivinen ohjelmointi](https://fi.wikipedia.org/wiki/Reaktiivinen_ohjelmointi) on myös monella tapaa kiinnostava ohjelmointiparadigma esimerkiksi webjärjestelmissä, joissa reagoidaan käyttäjän syötteisiin. Reaktiivisessa ohjelmoinnissa [ohjelma koostetaan virroista](https://stackoverflow.com/questions/1028250/what-is-functional-reactive-programming/1030631#1030631). JavaScriptillä reaktiivista ohjelmointia voi tehdä esimerkiksi [RxJS](https://www.learnrxjs.io/) kirjastolla. Virtojen käsitettä on pyritty visualisoimaan [RxJS marbles-sivustolla](https://rxmarbles.com/).
 
-[Reaktiivinen ohjelmointi](https://fi.wikipedia.org/wiki/Reaktiivinen_ohjelmointi) on myös monella tapaa kiinnostava ohjelmointiparadigma esimerkiksi webjärjestelmissä, joissa reagoidaan käyttäjän syötteisiin. Reaktiivisessa ohjelmoinnissa [ohjelma koostetaan virroista](https://stackoverflow.com/questions/1028250/what-is-functional-reactive-programming/1030631#1030631). JavaScriptillä reaktiivista ohjelmointia voi tehdä esimerkiksi [RxJS](https://www.learnrxjs.io/) kirjastolla. Myös esimerkiksi Suomessa [Reaktorilla](https://www.reaktor.com/) työskentelevän [Juha Paanasen](https://github.com/raimohanska) kehittämä [Bacon.js](https://baconjs.github.io/) on [funktionaalista reaktiivista ohjelmointiparadigmaa](https://www.quora.com/What-is-difference-between-Functional-Reactive-Programming-Functional-Programming-and-Reactive-Programming) toteuttava kirjasto. Virtojen käsitettä on pyritty visualisoimaan [RxJS marbles-sivustolla](https://rxmarbles.com/).
+ *Kiinnostava yksityiskohta: Myös esimerkiksi Suomessa [Reaktorilla](https://www.reaktor.com/) työskentelevän [Juha Paanasen](https://github.com/raimohanska) kehittämä [Bacon.js](https://baconjs.github.io/) on [funktionaalista reaktiivista ohjelmointiparadigmaa](https://www.quora.com/What-is-difference-between-Functional-Reactive-Programming-Functional-Programming-and-Reactive-Programming) toteuttava kirjasto. Paananen on myös kehittänyt bacon.js:lle seuraajaa, [harmaja-nimistä](https://github.com/raimohanska/harmaja) kirjastoa.*
 
 <!--RxJS esimerkkejä: 
 https://www.learnrxjs.io/learn-rxjs/concepts/rxjs-primer
@@ -156,7 +166,7 @@ Tiedonsiirtoon käytetyt patternit (esim. [publish/subscribe](https://en.wikiped
 
 ## Tehtävät
 
-### Tehtävä 2.1 (30% kierroksen arvosanasta): 
+### Tehtävä 6.1 (30% kierroksen arvosanasta): 
 Monivalintakysymyksiä yllä olevasta lukumateriaalista vastattavissa Teamsissa. Kysymykset tässä alla, niihin voi tutustua etukäteen ennen vastaussession aloittamista.
 
 1. Mitkä seuraavista ovat hyvän arkkitehtuurin tunnusmerkkejä tietyssä ohjelmistojärjestelmässä (valitse yksi tai useampi)?
@@ -204,7 +214,7 @@ Monivalintakysymyksiä yllä olevasta lukumateriaalista vastattavissa Teamsissa.
 * Palveluiden versioiminen
 * Koko järjestelmän testaaminen
 
-### Tehtävä 2.2 (30% kierroksen arvosanasta):
+### Tehtävä 6.2 (30% kierroksen arvosanasta):
 
 [DIPTehtava.java](src/DIPTehtava.java) tiedostosta löytyy useampi Java-luokka, jotka kuvaavat yksinkertaista moottoripyörien tai autojen käsittelyyn tehtyä järjestelmää. Sinun tehtäväsi olisi refaktoroida tiedostossa olevat luokat siten, että järjestelmän arkkitehtuuri seuraa Dependency inversion-periaatetta (DIP) ja hyödyntää olioiden monimuotoisuutta.
  
@@ -219,7 +229,7 @@ Palauta lopuksi sama tiedosto Teamsiin.
 
 *Lisäpohdintaa tehtävään: Jos haluat tehtävän tekemisen jälkeen vielä pohtia DIP:tä ja olioiden monimuotoisuutta lisää, niin kokeile toteuttaa myös Moottoripyörän ja Auton ajoneuvoveron laskeminen DIP-arkkitehtuurimallin mukaisesti. Ajoneuvoveron suuruus riippuu nyt käyttämättömistä fieldeistä, eli siitä onko kyseessä kevytmoottoripyörä tai vastaavasti auton tapauksessa farmariauto. Voit vaikka harjoituksen vuoksi toteuttaa laskennat kaavalla, jossa ajoneuvovero määräytyy: (ajoneuvon käyttövuodet)x100 ja kevytmoottoripyörälle lisäksi jaetaan tuo summa kahdella ja farmariautolla kerrotaan 1.2:lla. Tämä siis tarkoittaa, että tarvitset nykyisen BusinessLuokan lisäksi omat businessluokat myös Moottoripyörälle ja Autolle. Näiden businessluokkien tulee myös toteuttaa yhteinen rajapinta, jossa on laskeAjoneuvovero()-metodi. Sovelluksen konfigurointivaiheessa tulee sitten injektoida asianmukaiset toteuttavat luokat paikoilleen, jotta laskenta menee oikein.*
 
-### Tehtävä 2.3 (20% kierroksen arvosanasta):
+### Tehtävä 6.3 (20% kierroksen arvosanasta):
 
 [Redux](https://redux.js.org/tutorials/essentials/part-1-overview-concepts) on kirjasto, jota käytetään monesti React-sovellusten yhteydessä. Reduxin tarkoitus olisi selkeyttää sovelluksen tilan hallintaa tilanteissa, joissa tila uhkaa hajautua sekavasti eri komponentteihin. 
 Reduxin käyttäminen perustuu omaan pieneen suunnittelumalliin, eli arkkitehtuurimalliin. Malli koostuu kolmesta ydinkomponentista: [Actioneista](https://redux.js.org/basics/actions), [Reducerista](https://redux.js.org/basics/reducers) sekä [Säiliöstä](https://redux.js.org/basics/store) (Store). Tässä mallissa Actionit kertovat mitä halutaan tehdä (ja välittävät tämän tiedon Reducerille). Reducer päättää miten Actionin haluama asia tehdään ja miten uusi tila määritellään. Reducer-komponentin idea pohjautuu funktionaalisen ohjelmoinnin [reduce (toiselta nimeltä fold tai accumulate) funktioon](https://en.wikipedia.org/wiki/Fold_%28higher-order_function%29). (Funktionaalisen ohjelmoinnin Reduce-funktiolle annetaan parametrina lista ja tavoitteena on palauttaa vain yksi redusoitu/accumuloitu arvo. Redusoivaa funktiota sovelletaan listan alkioihin (tai tässä tapauksessa tämänhetkiseen tila-arvoon) ja lopulta palautetaan lopputulos, joka syntyy redusoivan funktion soveltamisesta yksi kerrallaan listan arvoihin.) Funktionaalisen ohjelmoinnin periaatteiden mukaisesti Reducer ei muokkaa vanhaa tilaa, vaan palauttaa kokonaan uuden tilan, Reducerin tulee muutenkin olla ns. ["puhdas funktio"](https://en.wikipedia.org/wiki/Pure_function) ilman sivuvaikutuksia.
@@ -230,7 +240,7 @@ Reduxia voi käyttää (ja sen periaatteita seurata) myös ilman Reactia. Tiedos
 
 Palauta lopuksi sama tiedosto Teamsiin.
 
-### Tehtävä 2.4 (20% kierroksen arvosanasta):
+### Tehtävä 6.4 (20% kierroksen arvosanasta):
 1. Piirrä arkkitehtuurikaavio joko komponenteista ja teknologioista TAI luokkakaavio ohjelmistoprojekti2-järjestelmästänne mikäli järjestelmänne on arkkitehtuurillisesti riittävän haastava ja kiinnostava. Jos järjestelmänne on arkkitehtuurillisesti hyvin simppeli, niin tätä vaihtoehtoa ei voi tehdä. Et voi myöskään palauttaa samaa kaaviota tiimikaverisi kanssa, eli tehtävä tulee tehdä itsenäisesti, toki asioista voi keskustella tiimikavereiden kanssa.
 
 1. Toinen vaihtoehto on laatia järjestelmätason arkkitehtuurikuvaus järjestelmästä, jolla toteuttaisit reaaliaikaisesti toimivan web/mobiili-chatalustan, jossa käyttäjät voivat lähetellä viestejä toisilleen eri kanavilla sekä yksityisesti kahden käyttäjä kesken. Chattia voi siis käyttää 2-1000 käyttäjää kerrallaan samassa chatissa. Jos haluat tehtävään vielä lisää haastetta, niin suunnittele arkkitehtuuriehdotuksesi siten, että chatti toimisi esimerkiksi isolla festivaalialueella sisäisenä viestintäkanavana [bluetooth mesh-verkon](https://en.wikipedia.org/wiki/Bluetooth_mesh_networking) avulla kaikille siellä paikalla oleville ihmisille vaikka internetyhteyttä ei olisikaan käytettävissä.

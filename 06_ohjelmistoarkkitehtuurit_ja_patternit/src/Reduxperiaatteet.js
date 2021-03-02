@@ -1,6 +1,6 @@
 /*Tässä tehtävässä on tarkoitus rakentaa pieni scripti 
 värien lisäämiseen ja poistamiseen säiliöstä Reduxin periaatteiden mukaisesti. 
-Lopulta scriptin pitäisi siis tulosta "keltainen", "vihreä"
+Lopulta scriptin pitäisi siis tulostaa "keltainen", "vihreä"
 Muista ajaa ensin src-kansiossa komento "npm install"
 Voit ajaa tämän tiedoston komennolla "node Reduxperiaatteet.js" tai "npm run build"
 */
