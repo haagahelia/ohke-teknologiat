@@ -160,7 +160,7 @@ if __name__ == '__main__':
 * Mikä on Pythonin `x in list`-operaation aikavaatimus? https://wiki.python.org/moin/TimeComplexity
 
 
-#### Algoritmin tehokkuuden arviointi
+#### Ratkaisun tehokkuuden arviointi
 
 > *Algoritmin tehokkuus riippuu siitä, montako askelta se suorittaa. Tavoitteemme on nyt arvioida algoritmin askelten määrää suhteessa syötteen kokoon n. Esimerkiksi jos syötteenä on taulukko, n on taulukon koko, ja jos syötteenä on merkkijono, n on merkkijonon pituus.*
 >
