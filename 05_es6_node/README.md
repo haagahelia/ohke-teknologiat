@@ -10,7 +10,18 @@ Tunneilla käsittelemme samaa Helsinki Marketing -tapahtuma-aineistoa, jota käs
 
 Tämän oppitunnin tavoitteena on oppia erityisesti lukemaan koodia ja ymmärtämään, miten yleisimmät JavaScript-kieliset esimerkkikoodit toimivat. Sivuamme funktionaalista ohjelmointia hyödyntämällä funktioiden antamista parametreina toisille funktioille (callback) sekä funktioiden vaiheittaista suorittamista (currying).
 
-ES6:n ajoittain erikoiset syntaksit tekevät usein koodista suoraviivaista, mutta toisinaan syntaksien liikakäyttö väärissä tilanteissa hankaloittaa koodin ymmärtämistä ja ylläpitoa. Tämän tunnin jälkeen tunnistat joitakin tilanteita, joissa on tarkoituksenmukaista hyödyntää eri ominaisuuksia.
+Oppitunnin jälkeen osaat nimetä esimerkiksi seuraavassa koodissa käytettyjä ominaisuuksia:
+
+```js
+function helloAgent({ names }) {
+    let { first, last } = names;
+    console.log(`My name is ${last}, ${first} ${last}`);
+}
+
+module.exports = { helloAgent };
+```
+
+ES6:n ajoittain erikoiset syntaksit tekevät usein koodista suoraviivaista, mutta toisinaan syntaksien liikakäyttö väärissä tilanteissa hankaloittaa koodin ymmärtämistä ja ylläpitoa. Miten esimerkiksi saisit hyödynnettyä yllä esitettyä `helloAgent`-funktiota toisesta moduulista käsin? Tämän tunnin jälkeen tunnistat koodiesimerkin erikoisuudet ja tunnistat joitakin tilanteita, joissa on tarkoituksenmukaista hyödyntää eri ominaisuuksia.
 
 Itseopiskelumateriaalina voit hyödyntää hyviä sivustoja, kuten:
 
