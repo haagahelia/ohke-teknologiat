@@ -107,6 +107,16 @@ let middle = names[1];
 let last = names[2];
 ```
 
+### Array destructuring ja useState()
+
+Olet mahdollisesti törmännyt taulukon purkamiseen esimerkiksi Reactin kanssa:
+
+```js
+const [count, setCount] = useState(0);
+```
+
+`useState` palauttaa arvon ja funktion taulukkona, joka puretaan tyypillisesti kahteen erilliseen muuttujaan hakasulkujen, eli array destructuring -operaation, avulla. Voit lukea aiheesta lisää dokumentaatiossa [Using the State Hook / What Do Square Brackets Mean?](https://reactjs.org/docs/hooks-state.html#tip-what-do-square-brackets-mean)
+
 
 ## Object destructuring
 
@@ -256,6 +266,23 @@ person.hobby = 'Kung-fu';
 Yllä olevassa `names`-muuttujassa oletetaan olevan olion, joka sisältää esim. `firstName`- ja `lastName`-attribuutit.
 
 
+### Oletusarvojen käyttäminen
+
+Tyypillinen käyttökohde object spread -operaatiolle on esimerkiksi valinnaisten arvojen korvaaminen saaduilla parametreilla. Seuraavassa koodissa määritellään ensin `defaults`, jota myöhemmin laajennetaan `params`-olion arvoilla:
+
+```js
+const defaults = { brightness: 100, color: '#ffffff' };
+const params = { brightness: 90 };
+
+let light = { ...defaults, ...params };
+```
+
+Lopussa `brightness` on muutettu uusien parametrien mukaiseksi, mutta `color` on edelleen oletusarvossa:
+
+```js
+{ brightness: 90, color: '#ffffff' }
+```
+
 ## Rest in Object Destructuring
 
 > *"Rest properties collect the remaining own enumerable property keys that are not already picked off by the destructuring pattern."*
@@ -335,6 +362,23 @@ Milloin funktioiden osittaisesta määrittelystä on meille erityisesti hyötyä
 let markat = [200, 123, 99, 10, 4521];
 let eurot = markat.map(markatEuroiksi); // [ 33.637585292, 20.68711495458, 16.65060471954, 1.6818792646, 760.37761552566 ]
 ```
+
+# ESLint
+
+> *"lint, or a linter, is a static code analysis tool used to flag programming errors, bugs, stylistic errors, and suspicious constructs.[4] The term originates from a Unix utility that examined C language source code."*
+>
+> [lint (software). Wikipedia](https://en.wikipedia.org/wiki/Lint_(software))
+```
+$ npm install --global eslint
+$ eslint --init
+$ 
+$ eslint tiedosto1.js tiedosto2.js
+```
+
+Lue lisää ESLintin komentorivikäytöstä osoitteessa [https://eslint.org/docs/user-guide/command-line-interface](https://eslint.org/docs/user-guide/command-line-interface).
+
+`npm install --global` ei välttämättä onnistu ilman sudo-oikeuksia. Kurssin [asennusohjeissa](00_linux/asennukset.md#nodejs-ja-npm) on linkki konfigurointiohjeeseen, jolla npm-asennukset saadaan toimimaan Ubuntussa tietoturvallisemmin ilman pääkäyttäjäoikeuksia.
+
 
 # Tapahtumien käsitteleminen `map`, `filter` ja `reduce` -operaatioilla
 
@@ -506,6 +550,81 @@ function isBetweenDates(minDate = '0000-01-01', maxDate = '9999-12-31') {
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters
 
+
+
+## Map 
+
+> *The map() method creates a new array populated with the results of calling a provided function on every element in the calling array.*
+>
+> [MDN web docs. Array.prototype.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
+
+Tässä esimerkissä luomme tapahtumia sisältävän taulukon perusteella uuden, pelkät `id`-arvot sisältävän taulukon:
+
+```js
+> // map:lle annettava funktio palauttaa jokaista tapahtumaa kohden sen id-arvon:
+> let ids = events.map(event => event.id)
+> ids
+[ 'helmet:214000', 'helmet:216844', 'helmet:216842', 'helmet:211890', 'helmet:214001', ... ]
+```
+
+`map`-operaatio suoritti annetun funktion taulukon jokaiselle tapahtumalle ja muodosti funktion paluuarvoista uuden taulukon. Tässä tapauksessa funktio yksinkertaisesti palautti saamansa tapahtuman id:n, joten uusi lista koostuu id-arvoista.
+
+
+## Reduce
+
+> *"The reduce() method executes a reducer function (that you provide) on each element of the array, resulting in single output value."*
+>
+> [MDN web docs. Array.prototype.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
+
+Reducen avulla voidaan tyypillisesti selvittää esimerkiksi kokoelman suurin tai pienin arvo, kaikkien arvojen summa tai muita vastaavia operaatioita. Reducen avulla voidaan kuitenkin toteuttaa lähes mitä vain operaatioita, joissa käsitellään yksi kerrallaan jonkin tietyn kokoelman arvot.
+
+```js
+let tulos = taulukko.reduce(( koottuArvo, nykyinenArvo ) => {
+    /* operaatio, jonka paluuarvoa on seuraava koottuArvo */
+    return X;
+}, vapaaehtoinenAlkuarvo);
+```
+
+Kokonaislukutaulukon summa voitaisiin laskea reducen avulla esimerkiksi seuraavasti:
+
+```js
+let numerot = [1, 2, 3, 4, 5];
+
+let summa = numerot.reduce( (summa, seuraava) => { 
+    return summa + seuraava; // palautetaan aina uusi summa
+}, 0); // alkuarvo summalle on nolla
+
+// sama kuin:
+let summa = numerot.reduce( (summa, seuraava) => summa + seuraava, 0);
+```
+
+Sekä `map` että `filter` on toteutettavissa `reduce`:n avulla. Tällöin koottava arvo on uusi taulukko, ja alkuperäisen taulukon arvot redusoidaan uudelle taulukolle joko ehdon täyttyessä (filter) tai muutettuna (map):
+
+```js
+> // map toteutettuna reducen avulla:
+let tuplattu = [1, 2, 3, 4, 5].reduce((uusiTaulukko, arvo) => { 
+    uusiTaulukko.push(arvo * 2);
+    return uusiTaulukko;
+}, [] );
+> console.log(tuplattu);
+[ 2, 4, 6, 8, 10 ]
+```
+
+```js
+> // filter toteutettuna reducen avulla:
+> let suurempiKuinKolme = [1, 2, 3, 4, 5].reduce((uusiTaulukko, arvo) => {
+    if (arvo > 3) {
+        uusiTaulukko.push(arvo);
+    } 
+    return uusiTaulukko; 
+}, [] );
+> console.log(suurempiKuinKolme);
+[ 4, 5 ]
+```
+
+Reduce onkin erittäin monikäyttöinen operaatio, ja sen avulla onnistuu luontevasti myös esimerkiksi taulukon arvojen ryhmitteleminen tietyn avaimen mukaan. Voit lukea aiheesta lisää Googlesta hakusanoilla "JavaScript reduce group by" tai [tästä artikkelista](https://learnwithparam.com/blog/how-to-group-by-array-of-objects-using-a-key/).
+
+
 ## Järjestäminen alkamisajan mukaan
 
 JavaScriptin taulukoilla on valmis `sort`-metodi, jonka avulla sen sisältö voidaan järjestää. Tarvitset tapahtumien järjestelemiseksi vertailufunktion, joka vertailee kahta tapahtumaa, ja kertoo kumman tulisi olla järjestyksessä ensimmäisenä:
@@ -533,7 +652,150 @@ function eventDateComparator(event1, event2) {
 events.sort(eventDateComparator);
 ```
 
-# Tehtävä (julkaistaan oppitunnilla)
+# Tehtävä 5.3.2021 (luonnos)
+
+Tämän viikon tehtävässä harjoitellaan tunnilla esitettyjen ohjelmointitapojen hyödyntämistä. Tehtävänä on lukea kahdesta erillisestä JSON-tiedostosta käyttäjiä ja postauksia, ja yhdistellä käyttäjät postauksiin.
+
+
+## Tehtävän data
+
+Tässä tehtävässä käytetään testidataa JSON Placeholder -palvelusta:
+
+> *"{JSON} Placeholder*
+>
+> *Free to use fake Online REST API for testing and prototyping*
+>
+> *Powered by JSON Server + LowDB"*
+>
+> https://jsonplaceholder.typicode.com/
+
+Voit tallentaa JSON-tiedostot itsellesi seuraavista kahdesta osoitteesta:
+
+* käyttäjät: https://jsonplaceholder.typicode.com/users
+* postaukset: https://jsonplaceholder.typicode.com/posts
+
+Mikäli haluat, voit myös toteuttaa tiedostojen lataamisen dynaamisesti JavaScriptillä. Tiedon dynaaminen hakeminen käsitellään kuitenkin vasta seuraavan viikon oppitunnilla.
+
+## Osa 1 (arvosanatavoite 3)
+
+Tehtävän 1. osassa sinun tulee kirjoittaa Node-skripti, joka lukee tiedostot ja tulostaa niissä olevien käyttäjien nimet (name) sekä postausten otsikot (title) siten, että kunkin käyttäjän nimen tulostamisen jälkeen tulostetaan kaikkien kyseisen käyttäjän postausten otsikot:
+
+```
+Leanne Graham
+- sunt aut facere repellat provident occaecati excepturi optio reprehenderit
+- qui est esse
+- ea molestias quasi exercitationem repellat qui ipsa sit aut
+- eum et est occaecati
+- nesciunt quas odio
+- dolorem eum magni eos aperiam quia
+- magnam facilis autem
+- dolorem dolore est ipsam
+- nesciunt iure omnis dolorem tempora et accusantium
+- optio molestias id quia eum 
+
+
+Ervin Howell
+- et ea vero quia laudantium autem
+- in quibusdam tempore odit est dolorem
+- dolorum ut in voluptas mollitia et saepe quo animi
+- voluptatem eligendi optio
+- eveniet quod temporibus
+- sint suscipit perspiciatis velit dolorum rerum ipsa laboriosam odio
+- fugit voluptas sed molestias voluptatem provident
+- voluptate et itaque vero tempora molestiae
+- adipisci placeat illum aut reiciendis qui
+- doloribus ad provident suscipit at 
+
+...
+```
+
+
+
+## Osa 2 (arvosanatavoite 5)
+
+Arvosanatavoitteeseen 5 sinun tulee kirjoittaa edellisen lisäksi toinen skripti, joka esittää datan sisäkkäisinä JSON-tietorakenteina siten, että kunkin käyttäjän kirjoittamat postaukset ovat koottu käyttäjän yhteyteen omaksi taulukokseen. Yksittäisen käyttäjän osalta lopputulos voi olla esimerkiksi seuraava:
+
+```js
+[
+    {
+        "id": 1,
+        "name": "Leanne Graham",
+        "username": "Bret",
+        "email": "Sincere@april.biz",
+        "address": {
+            "street": "Kulas Light",
+            "suite": "Apt. 556",
+            "city": "Gwenborough",
+            "zipcode": "92998-3874",
+            "geo": {
+                "lat": "-37.3159",
+                "lng": "81.1496"
+            }
+        },
+        "phone": "1-770-736-8031 x56442",
+        "website": "hildegard.org",
+        "company": {
+            "name": "Romaguera-Crona",
+            "catchPhrase": "Multi-layered client-server neural-net",
+            "bs": "harness real-time e-markets"
+        },
+        "posts": [
+            {
+                "userId": 1,
+                "id": 1,
+                "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+                "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+            },
+            {
+                "userId": 1,
+                "id": 2,
+                "title": "qui est esse",
+                "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+            },
+            
+            // + loput saman käyttäjän postaukset täällä...
+        ]
+    },
+    
+    // + loput käyttäjät...
+
+]
+```
+
+JavaScript-tietorakenteen muuttaminen merkkijonoksi onnistuu esimerkiksi [JSON.stringify-metodilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify):
+
+```js
+let merkkijonona = JSON.stringify(omaData, null, 2);
+```
+
+Muunnettu JSON-tietorakenne tulee tallentaa uuteen JSON-tiedostoon esimerkiksi Noden fs-moduulin [writeFileSync](https://stackoverflow.com/a/46356040)-metodilla:
+
+```js
+const fs = require('fs')
+
+fs.writeFileSync('output.json', omaData)
+```
+
+Arvosanatavoitteeseen 5 sinun tulee hyödyntää oppitunnilla käsiteltyjä `map`-, `filter`- tai `reduce`-operaatiota vähintään kerran.
+
+
+
+## Valmiiden kirjastojen käyttäminen
+
+Näiden tehtävien ratkaisemiseksi et tarvitse ulkoisia kirjastoja tai `npm`-komentoa. Pelkkä Node.js riittää. Halutessasi saat kuitenkin käyttää apukirjastoja, kuten [lodash](https://www.npmjs.com/package/lodash). Kirjastojen käyttäminen ei vaikuta laskevasti arvosanaan.
+
+
+## Vinkit datan käsittelyyn
+
+Käyttäjien ja heidän postauksiensa yhdistämiseksi yksi lähestymistapa on käydä käyttäjät läpi `map`-metodilla ja muodostaa jokaisesta käyttäjästä uusi olio, jolla on taulukko postauksia. Postaustaulukko puolestaan voidaan rakentaa kullekin käyttäjälle `filter`-metodin avulla, suodattamalla kaikista postauksista ne, joiden `userId` vastaa kyseisen käyttäjän `id`:tä.
+
+
+## Tehtävän palauttaminen
+
+Myös osittain ratkaistut palautukset hyväksytään ja arvostellaan suhteessa niiden valmiusasteeseen. Palauta kaikki ratkaisuusi liittyvät lähdekoodit erillisinä tiedostoina Teamsiin ennen seuraavaa oppituntia. 
+
+**Nimeä `.js`-päätteiset tiedostot `.js.txt`-päätteisiksi, mikäli Teams ei hyväksy tiedostojasi tietoturvasyistä.**
+
 
 ----
 
@@ -546,3 +808,7 @@ events.sort(eventDateComparator);
 > MyHelsinki Open API. https://open-api.myhelsinki.fi/
 
 MyHelsinki Open API:n aineisto on lisensoitu [Creative Commons BY 4.0](https://open-api.myhelsinki.fi/terms)-lisenssillä. Voit lukea tarkemmat käyttöehdot ositteesta https://open-api.myhelsinki.fi/terms.
+
+## JSONPlaceholder
+
+JSONPlaceholder-palvelun on kehittänyt [typicode](https://typicode.com) ja se on lisensoitu MIT-lisenssillä: [https://github.com/typicode/jsonplaceholder/blob/master/LICENSE](https://github.com/typicode/jsonplaceholder/blob/master/LICENSE)
