@@ -671,8 +671,22 @@ Tässä tehtävässä käytetään testidataa JSON Placeholder -palvelusta:
 
 Voit tallentaa JSON-tiedostot itsellesi seuraavista kahdesta osoitteesta:
 
-* käyttäjät: https://jsonplaceholder.typicode.com/users
-* postaukset: https://jsonplaceholder.typicode.com/posts
+* **Käyttäjät**
+
+    https://jsonplaceholder.typicode.com/users
+
+    ```
+    curl https://jsonplaceholder.typicode.com/users > users.json
+    ```
+
+* **Postaukset**
+
+    https://jsonplaceholder.typicode.com/posts
+
+    ```
+    curl https://jsonplaceholder.typicode.com/posts > posts.json
+    ```
+
 
 Mikäli haluat, voit myös toteuttaa tiedostojen lataamisen dynaamisesti JavaScriptillä. Tiedon dynaaminen hakeminen käsitellään kuitenkin vasta seuraavan viikon oppitunnilla.
 
