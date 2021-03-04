@@ -243,7 +243,7 @@ Palauta lopuksi sama tiedosto Teamsiin.
 ### Tehtävä 6.4 (20% kierroksen arvosanasta):
 1. Piirrä arkkitehtuurikaavio joko komponenteista ja teknologioista TAI luokkakaavio ohjelmistoprojekti2-järjestelmästänne (mikäli järjestelmänne on arkkitehtuurillisesti mielestäsi kohtalaisen haastava ja kiinnostava). Et voi palauttaa samaa kaaviota tiimikaverisi kanssa, eli tehtävä tulee tehdä itsenäisesti, toki asioista voi keskustella tiimikavereiden kanssa.
 
-1. Toinen vaihtoehto on laatia luokkakaavio [LentokoneConfig-esimerkistä](src/examples/LentokoneConfig.java). Piirrä siis tehtävän luokat ja rajapinnat sekä osoita nuolilla luokkien/rajapintojen suhteet. Jos luokka käyttää toista luokkaa, merkitse se yhtenäisellä nuolella ja jos luokka toteuttaa rajapinnan, merkitse se katkonuolella. Merkitse rajapinnat joko katkoviivalaatikkoina tai \<\<\<\interface>>>-merkinnällä rajapinnan nimen perässä. Kaavio on siis samankaltainen kuin olio-ohjelmoinnin yhteydessä [esitelty UML-kaavio](img/UML-luokkakaavio.png.png).
+1. Toinen vaihtoehto on laatia luokkakaavio [LentokoneConfig-esimerkistä](src/examples/LentokoneConfig.java). Piirrä siis tehtävän luokat ja rajapinnat sekä osoita nuolilla luokkien/rajapintojen suhteet. Jos luokka käyttää toista luokkaa, merkitse se yhtenäisellä nuolella ja jos luokka toteuttaa rajapinnan, merkitse se katkonuolella. Merkitse rajapinnat joko katkoviivalaatikkoina tai \<\<\<interface>>>-merkinnällä rajapinnan nimen perässä. Kaavio on siis samankaltainen kuin olio-ohjelmoinnin yhteydessä [esitelty UML-kaavio](img/UML-luokkakaavio.png.png).
 
 Arkkitehtuurikaavion voit piirtää haluamallasi työkalulla, esimerkiksi google-slides riittää ihan hyvin. Palauta tehtävässä lopulta siis png-kuvatiedostona  arkkitehtuurikaavio.
 
