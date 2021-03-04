@@ -4,7 +4,7 @@
  * Tässä voi havaita mm. sen että privaattien luokkametodeiden tekeminen
  * javascriptillä ei onnistu.
  * Vertailun vuoksi tämä on sama asia on toteutettu funktiona
- * [UserMeasurementsUpdaterFunction.js-tiedostossa](UserMeasurementsUpdaterFunction.js).
+ * UserMeasurementsUpdaterFunction.js-tiedostossa.
  */
 export default class UserMeasurementsUpdater {
     constructor(userDataCollection) {//Otetaan mongodb-collection parametrina.
