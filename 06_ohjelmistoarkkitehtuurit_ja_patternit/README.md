@@ -241,13 +241,11 @@ Reduxia voi käyttää (ja sen periaatteita seurata) myös ilman Reactia. Tiedos
 Palauta lopuksi sama tiedosto Teamsiin.
 
 ### Tehtävä 6.4 (20% kierroksen arvosanasta):
-1. Piirrä arkkitehtuurikaavio joko komponenteista ja teknologioista TAI luokkakaavio ohjelmistoprojekti2-järjestelmästänne mikäli järjestelmänne on arkkitehtuurillisesti riittävän haastava ja kiinnostava. Jos järjestelmänne on arkkitehtuurillisesti hyvin simppeli, niin tätä vaihtoehtoa ei voi tehdä. Et voi myöskään palauttaa samaa kaaviota tiimikaverisi kanssa, eli tehtävä tulee tehdä itsenäisesti, toki asioista voi keskustella tiimikavereiden kanssa.
+1. Piirrä arkkitehtuurikaavio joko komponenteista ja teknologioista TAI luokkakaavio ohjelmistoprojekti2-järjestelmästänne (mikäli järjestelmänne on arkkitehtuurillisesti mielestäsi kohtalaisen haastava ja kiinnostava). Et voi palauttaa samaa kaaviota tiimikaverisi kanssa, eli tehtävä tulee tehdä itsenäisesti, toki asioista voi keskustella tiimikavereiden kanssa.
 
-1. Toinen vaihtoehto on laatia järjestelmätason arkkitehtuurikuvaus järjestelmästä, jolla toteuttaisit reaaliaikaisesti toimivan web/mobiili-chatalustan, jossa käyttäjät voivat lähetellä viestejä toisilleen eri kanavilla sekä yksityisesti kahden käyttäjä kesken. Chattia voi siis käyttää 2-1000 käyttäjää kerrallaan samassa chatissa. Jos haluat tehtävään vielä lisää haastetta, niin suunnittele arkkitehtuuriehdotuksesi siten, että chatti toimisi esimerkiksi isolla festivaalialueella sisäisenä viestintäkanavana [bluetooth mesh-verkon](https://en.wikipedia.org/wiki/Bluetooth_mesh_networking) avulla kaikille siellä paikalla oleville ihmisille vaikka internetyhteyttä ei olisikaan käytettävissä.
+1. Toinen vaihtoehto on laatia luokkakaavio [LentokoneConfig-esimerkistä](src/examples/LentokoneConfig.java). Piirrä siis tehtävän luokat ja rajapinnat sekä osoita nuolilla luokkien/rajapintojen suhteet. Jos luokka käyttää toista luokkaa, merkitse se yhtenäisellä nuolella ja jos luokka toteuttaa rajapinnan, merkitse se katkonuolella. Merkitse rajapinnat joko katkoviivalaatikkoina tai *<<<interface>>>*-merkinnällä rajapinnan nimen perässä. Kaavio on siis samankaltainen kuin olio-ohjelmoinnin yhteydessä [esitelty UML-kaavio](img/UML-luokkakaavio.png.png).
 
-Järjestelmäarkkitehtuurikaavion näkökulma (ja abstraktiotaso) tulisi valita siten, että se havainnollistaa järjestelmän mielestäsi oleellisimman yleiskuvan (eli mitkä komponentit ovat oleellisimpia järjestelmän kokonaisarkkitehtuurissa ja miten nämä kompontentit liittyvät toisiinsa).
-
-Arkkitehtuurikaavion voit piirtää haluamallasi työkalulla, esimerkiksi google-slides riittää ihan hyvin. Palauta tehtävässä lopulta siis png-kuvatiedostona järjestelmätason arkkitehtuurikaavio.
+Arkkitehtuurikaavion voit piirtää haluamallasi työkalulla, esimerkiksi google-slides riittää ihan hyvin. Palauta tehtävässä lopulta siis png-kuvatiedostona  arkkitehtuurikaavio.
 
 ### Seminaaritehtävä 1:
 Refaktoroi ohjelmistoprojekti 2 -projektinne käyttämään mielestäsi optimaalista arkkitehtuuriratkaisua. Kuvaa tämä arkkitehtuuri myös kaaviona.
