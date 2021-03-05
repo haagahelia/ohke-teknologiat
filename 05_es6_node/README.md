@@ -386,7 +386,7 @@ function addOne(i) {
 
 Voit lukea lisää ESLintin komentorivikäytöstä osoitteessa [https://eslint.org/docs/user-guide/command-line-interface](https://eslint.org/docs/user-guide/command-line-interface). Komentorivikäytön sijaan ESLint-työkalua käytetään usein automatisoidusti IDE:stä tai NPM-skripteistä käsin. Näihin käyttötapoihin emme syvenny tarkemmin tällä oppitunnilla.
 
-<sup>1</sup> Asennusohjeessa mainittu `npm install --global` ei välttämättä onnistu ilman sudo-oikeuksia. Kurssin [asennusohjeissa](00_linux/asennukset.md#nodejs-ja-npm) on linkki konfigurointiohjeeseen, jolla npm-asennukset saadaan toimimaan Ubuntussa tietoturvallisemmin ilman pääkäyttäjäoikeuksia.
+<sup>1</sup> Asennusohjeessa mainittu `npm install --global` ei välttämättä onnistu ilman sudo-oikeuksia. Kurssin [asennusohjeissa](../00_linux/asennukset.md#nodejs-ja-npm) on linkki konfigurointiohjeeseen, jolla npm-asennukset saadaan toimimaan Ubuntussa tietoturvallisemmin ilman pääkäyttäjäoikeuksia.
 
 
 # Tapahtumien käsitteleminen funktionaalisesti
