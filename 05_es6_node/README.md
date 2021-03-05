@@ -214,19 +214,6 @@ ES6:n export-komentoa käyttävät moduulit hyödyntävät `module`-muuttujan si
 export { Event, Activity, Place };
 ```
 
-## Object destructuring ja property value shorthand yhdessä
-
-Yhdistämällä kaksi aikaisempaa syntaksia, voimme luoda esimerkiksi koordinaattipisteen tapahtumaolion sisältä löytyvän `location`-rakenteen avulla:
-
-```js
-let point = { lat, lon } = event.location;
-
-// sama kuin
-let point = {
-    lat: event.location.lat,
-    lon: event.location.lon
-};
-```
 
 ## Array spread
 
@@ -707,7 +694,7 @@ let tuplattu = [1, 2, 3, 4, 5].reduce((uusiTaulukko, arvo) => {
 Reduce on erittäin monikäyttöinen operaatio, ja sen avulla onnistuu luontevasti myös esimerkiksi taulukon arvojen ryhmitteleminen tietyn avaimen mukaan. Voit lukea aiheesta lisää Googlesta hakusanoilla "JavaScript reduce group by" tai [tästä artikkelista](https://learnwithparam.com/blog/how-to-group-by-array-of-objects-using-a-key/).
 
 
-# Tehtävä 5.3.2021 (luonnos)
+# Tehtävä 5.3.2021
 
 Tämän viikon tehtävässä harjoitellaan tunnilla esitettyjen ohjelmointitapojen hyödyntämistä. Tehtävänä on lukea kahdesta erillisestä JSON-tiedostosta käyttäjiä ja postauksia, ja yhdistellä käyttäjät postauksiin.
 
