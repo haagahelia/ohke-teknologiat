@@ -370,16 +370,36 @@ let eurot = markat.map(markatEuroiksi); // [ 33.637585292, 20.68711495458, 16.65
 > *"lint, or a linter, is a static code analysis tool used to flag programming errors, bugs, stylistic errors, and suspicious constructs.[4] The term originates from a Unix utility that examined C language source code."*
 >
 > [lint (software). Wikipedia](https://en.wikipedia.org/wiki/Lint_(software))
+
+ESLint-työkalun asentaminen ja konfigurointi onnistuu esimerkiksi seuraavasti<sup>1</sup>:
+
 ```
 $ npm install --global eslint
 $ eslint --init
-$ 
+```
+
+Tämän jälkeen voit käyttää `eslint`-komentoa JavaScript-tiedostojen tarkastamiseksi:
+
+```
 $ eslint tiedosto1.js tiedosto2.js
 ```
 
-Lue lisää ESLintin komentorivikäytöstä osoitteessa [https://eslint.org/docs/user-guide/command-line-interface](https://eslint.org/docs/user-guide/command-line-interface).
+Oppitunnin koodiesimerkki:
 
-`npm install --global` ei välttämättä onnistu ilman sudo-oikeuksia. Kurssin [asennusohjeissa](00_linux/asennukset.md#nodejs-ja-npm) on linkki konfigurointiohjeeseen, jolla npm-asennukset saadaan toimimaan Ubuntussa tietoturvallisemmin ilman pääkäyttäjäoikeuksia.
+```js
+// lähde: https://eslint.org/docs/user-guide/formatters/
+function addOne(i) {
+    if (i != NaN) {
+        return i ++
+    } else {
+      return
+    }
+};
+```
+
+Voit lukea lisää ESLintin komentorivikäytöstä osoitteessa [https://eslint.org/docs/user-guide/command-line-interface](https://eslint.org/docs/user-guide/command-line-interface). Komentorivikäytön sijaan ESLint-työkalua käytetään usein automatisoidusti IDE:stä tai NPM-skripteistä käsin. Näihin käyttötapoihin emme syvenny tarkemmin tällä oppitunnilla.
+
+<sup>1</sup> Asennusohjeessa mainittu `npm install --global` ei välttämättä onnistu ilman sudo-oikeuksia. Kurssin [asennusohjeissa](00_linux/asennukset.md#nodejs-ja-npm) on linkki konfigurointiohjeeseen, jolla npm-asennukset saadaan toimimaan Ubuntussa tietoturvallisemmin ilman pääkäyttäjäoikeuksia.
 
 
 # Tapahtumien käsitteleminen `map`, `filter` ja `reduce` -operaatioilla
