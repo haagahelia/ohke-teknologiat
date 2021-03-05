@@ -10,7 +10,7 @@ Tunneilla käsittelemme samaa MyHelsinki-tapahtuma-aineistoa, jota käsittelimme
 
 # Oppitunti 5.3.2021
 
-Tämän oppitunnin tavoitteena on oppia erityisesti lukemaan koodia ja ymmärtämään, miten yleisimmät JavaScript-kieliset esimerkkikoodit toimivat. Sivuamme funktionaalista ohjelmointia hyödyntämällä funktioiden antamista parametreina toisille funktioille (callback) sekä funktioiden vaiheittaista suorittamista (currying).
+Tämän oppitunnin tavoitteena on oppia erityisesti lukemaan koodia ja ymmärtämään, miten yleisimmät JavaScript-kieliset esimerkkikoodit toimivat. Sivuamme funktionaalista ohjelmointia hyödyntämällä funktioiden antamista parametreina toisille funktioille (callback) sekä uusien funktioiden palauttamista paluuarvoina (currying).
 
 Oppitunnin jälkeen osaat nimetä esimerkiksi seuraavassa koodissa käytettyjä ominaisuuksia:
 
@@ -320,7 +320,7 @@ function multiply(a, b) {
 }
 ```
 
-## Currying
+## Currying (funktion palauttaminen paluuarvona)
 
 Eräs JavaScriptin yhteydessä kasvavassa määrin hyödynnetty tekniikka, joka ei suoraan liity pelkästään ES6:een tai vain JavaScriptiin on "currying":
 
@@ -402,9 +402,9 @@ Voit lukea lisää ESLintin komentorivikäytöstä osoitteessa [https://eslint.o
 <sup>1</sup> Asennusohjeessa mainittu `npm install --global` ei välttämättä onnistu ilman sudo-oikeuksia. Kurssin [asennusohjeissa](00_linux/asennukset.md#nodejs-ja-npm) on linkki konfigurointiohjeeseen, jolla npm-asennukset saadaan toimimaan Ubuntussa tietoturvallisemmin ilman pääkäyttäjäoikeuksia.
 
 
-# Tapahtumien käsitteleminen `map`, `filter` ja `reduce` -operaatioilla
+# Tapahtumien käsitteleminen funktionaalisesti
 
-Tunnilla harjoittelemme `map`, `filter` ja `reduce` -operaatioita [MyHelsinki Open API](http://open-api.myhelsinki.fi/doc) -rajapinnan tapahtumien avulla. `map`, `filter` ja `reduce` löytyvät suurimmasta osasta ohjelmointikieliä, mukaan lukien Java, Python ja JavaScript.
+Tunnilla harjoittelemme `map`, `filter` ja `reduce` -operaatioita [MyHelsinki Open API](http://open-api.myhelsinki.fi/doc) -rajapinnan tapahtumien avulla. `map`, `filter` ja `reduce` löytyvät suurimmasta osasta ohjelmointikieliä, mukaan lukien Java, Python ja JavaScript. 
 
 
 ## Esivalmistelu: staattisen aineiston hakeminen
@@ -450,24 +450,63 @@ $ node
 5527
 ```
 
+Miten voisimme poimia data-attribuutin arvon suoraan require-funktion paluuarvosta object destructuring -tekniikalla?
+
 `events` sisältää nyt meille aikaisemmilta viikoilta tutun taulukon tapahtumista. Tällä kertaa tapahtumat ovat JavaScript-olioita. Niillä on silti täysin sama rakenne kuin aikaisemmissa tehtävissä käsittelemillämme Pythonin sanakirjoilla:
 
 ```js
-> // alkamispäivän tarkastaminen satunnaiselta tapahtumalta
-> let e = events[2500]
->
-> // tapahtuman alkuajan selvittäminen
-> e['event_dates']['starting_day']
-'2020-10-23T07:00:00.000Z'
->
-> // vaihtoehtoinen tapa käsitellä sisäkkäisiä rakenteita on pistenotaatio
-> e.event_dates.starting_day
-'2020-10-23T07:00:00.000Z'
->
-> // vertailu johonkin muuhun päivämäärään 
-> e.event_dates.starting_day > '2020-10-07T00:00:00.000Z'
-true
+let e = events[2500]
+e['event_dates']['starting_day'] // esim. '2020-10-23T07:00:00.000Z'
 ```
+
+Hakasulkeille vaihtoehtoinen tapa käsitellä sisäkkäisiä rakenteita on JavaScriptissä tyypillisempi pistenotaatio:
+
+```js
+e.event_dates.starting_day // esim. '2020-10-23T07:00:00.000Z'
+```
+
+Alkamisaikaa voidaan käyttää esimerkiksi vertailuissa kuten mitä tahansa merkkijonoja:
+
+```js
+e.event_dates.starting_day > '2020-10-07T00:00:00.000Z' // true
+```
+
+
+## Funktion välittäminen parametrina
+
+Ennen uusien `map`, `filter` ja `reduce`-operaatioiden kokeilemista tarkastellaan, miten voimme hyödyntää callback-funktiota ja JS-taulukon `sort`-metodia suorittaaksemme operaatioita taulukon sisällölle.
+
+> *"The sort() method sorts the elements of an array in place and returns the sorted array.*
+>
+> *If compareFunction is supplied, all non-undefined array elements are sorted according to the return value of the compare function. If compareFunction(a, b) returns less than 0, sort a to an index lower than b (i.e. a comes first). If compareFunction(a, b) returns 0, leave a and b unchanged with respect to each other, but sorted with respect to all different elements."*
+>
+> [MDN web docs. Array.prototype.sort()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
+
+JavaScriptin taulukoilla on siis valmis `sort`-metodi, jonka avulla sen sisältö voidaan järjestää. Tarvitset tapahtumien järjestelemiseksi vertailufunktion, joka vertailee kahta tapahtumaa, ja kertoo kumman tulisi olla järjestyksessä ensimmäisenä.
+
+Voimme vertailla alkamisaikoja ja järjestää tapahtumat alkamisajan mukaan järjestykseen alkamisajankohtia vertailevalla funktiolla:
+
+```js
+function eventDateComparator(event1, event2) {
+    // jos starting_day on undefined, käytetään tyhjää merkkijonoa:
+    let event1date = event1.event_dates.starting_day || '';
+    let event2date = event2.event_dates.starting_day || '';
+
+    // Palauttaa negatiivisen luvun, nollan tai positiivisen luvun 
+    // riippuen merkkijonojen aakkosjärjestyksestä. Tämä toimii, koska 
+    // starting_day on aina ISO-muotoinen String, esim. "2020-10-16T24:00:00".
+    return event1date.localeCompare(event2date);
+}
+```
+
+Tapahtumien järjestäminen tapahtuu nyt antamalla tämä funktio taulukon `sort`-metodille:
+
+```js
+events.sort(eventDateComparator);
+```
+
+Huomaa, että yllä olevalla rivillä ei suoriteta `eventDateComparator`-funktiota, vaan se annetaan parametriarvona.
+
 
 ## Filter-operaatio
 
@@ -475,41 +514,47 @@ true
 >
 > [MDN web docs. Array.prototype.filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
 
+`filter` luo uuden taulukon, jolle valitaan alkuperäiseltä taulukolta sellaiset arvot, joille antamamme funktio palauttaa `true`:
+
 ```js
-> // filter luo uuden taulukon, jolle valitaan alkuperäiseltä taulukolta 
-> // sellaiset arvot, joille antamamme funktio palauttaa `true`:
-> let allTrue = events.filter(event => true);
-> allTrue.length
-5527 // kaikki valittiin!
-> 
-> // vastaavasti jos palautetaan false:
-> let allFalse = events.filter(event => false);
-> allFalse.length
-0 // mitään ei valittu!
->
-> // valitaan päivämäärän mukaan!
-> let now = new Date().toISOString()
-> now
-'2020-10-09T10:47:00.111Z'
->
-> let futureEvents = events.filter(event => {
-      return event.event_dates.starting_day >= now;
-  }
+let allTrue = events.filter(event => true);
+allTrue.length // kaikki valittiin!
 ```
 
-Seuraavaksi halutaan rajata tapahtumat, joilla on alkuaika, ja joilla se sijoittuu kahden ajankohdan väliin:
+Vastaavasti, jos annetusta funktiosta palautetaan false:
 
 ```js
-> // Tapahtumat, joilla on alkuaika, ja se sijoittuu kahden ajankohdan väliin:
-> let nextWeek = '2020-10-16T10:47:00.111Z';
->
-> let eventsNextWeek = events
+let allFalse = events.filter(event => false);
+allFalse.length mitään ei valittu!
+```
+
+Sen sijaan että funktio palauttaisi aina `true` tai `false`, haluamme luonnollisesti tehdä funktioon oikeaa valintalogiikkaa. Seuraava funktio vertailee saamansa tapahtuman päivämäärää nykyhetkeen, ja palauttaa `true`, mikäli tapahtuma on tulevaisuudessa:
+
+```js
+function isFutureEvent(event) {
+    let now = new Date().toISOString();
+    return event.event_dates.starting_day >= now;
+}
+```
+
+Nyt voimme käyttää tätä funktiota suodattaaksemme vain tulevaisuuteen sijoittuvat tapahtumat!
+
+```js
+// Huom! isFutureEvent-funktiota ei kutsuta heti, vaan se annetaan parametrina
+let futureEvents = events.filter(isFutureEvent);
+```
+
+Seuraavaksi halutaan rajata tapahtumat, joilla on alkuaika, ja joilla se sijoittuu kahden ajankohdan väliin. Tässä tapauksessa kokeilemme ketjuttaa filter-operaatiot, jolloin seuraava operaatio tehdään aina edellisen tulokselle:
+
+```js
+let nextWeek = '2021-03-12T10:47:00.111Z';
+
+let eventsNextWeek = events
     .filter(e => e.event_dates.starting_day != null)
     .filter(e => e.event_dates.starting_day >= now)
-    .filter(e => e.event_dates.starting_day <= nextWeek)
->
-> eventsNextWeek.length
-612 // enää 612 tapahtumaa!
+    .filter(e => e.event_dates.starting_day <= nextWeek);
+
+eventsNextWeek; // sisältää kolmella ehdolla rajatut tapahtumat!
 ```
 
 Miten voisimme siistiä koodia siten, että yllä oleva koodi ei tekisi kolmea filtteriä eikä sääntöjä kirjoitettaisin filter-metodin sisään? Tätä varten voimme kirjoittaa filtteröintifunktion erilleen filtteröinnistä!
@@ -524,11 +569,9 @@ function isBetweenDates(event) {
 Nyt `isBetweenDates` voidaan antaa parametrina `filter`-operaatiolle:
 
 ```js
-> // huom! isBetweenDates-funktiota ei kutsuta heti, vaan se annetaan parametrina.
-> // Filter-metodi huolehtii antamamme funktion kutsumisesta.
-> let eventsNextWeek = events.filter(isBetweenDates)
-> eventsNextWeek.length
-612
+// Huom! isBetweenDates-funktiota ei kutsuta heti, vaan se annetaan parametrina.
+// Filter-metodi huolehtii antamamme funktion kutsumisesta.
+let eventsNextWeek = events.filter(isBetweenDates);
 ```
 
 Yllä olevassa koodissa `isBetweenDates` on "kovakoodattu" vertailemaan tapahtuman alkuaikaa aina samoihin arvoihin `now` ja `nextWeek`. Olisikin paljon parempi, jos voisimme määritellä funktion kahdessa vaiheessa: ensin annetaan päivämäärät ja sen jälkeen vertaillaan tapahtumaa:
@@ -591,6 +634,23 @@ Tässä esimerkissä luomme tapahtumia sisältävän taulukon perusteella uuden,
 
 `map`-operaatio suoritti annetun funktion taulukon jokaiselle tapahtumalle ja muodosti funktion paluuarvoista uuden taulukon. Tässä tapauksessa funktio yksinkertaisesti palautti saamansa tapahtuman id:n, joten uusi lista koostuu id-arvoista.
 
+### Map-operaatio JSX-renderöinnissä
+
+React-käytössä JS-taulukon `map`-operaatiota hyödynnetään usein renderöitäessä taulukoiden sisältöä:
+
+```jsx
+{
+    events.map((event) => (
+        <div key={event.id}>
+            <h2>{event.title}</h2>
+            <p>{event.description}</p>
+        </div>
+    ));
+}
+```
+
+Samoin kuin yksinkertaisemmassa `map`-esimerkissä, myös tässä `map` muodostaa uuden taulukon, jossa kutakin alkuperäistä `event`-arvoa kohden on sitä vastaava DOM-rakenne. React renderöi taulukon elementit osaksi sivurakennetta.
+
 
 ## Reduce
 
@@ -644,35 +704,8 @@ let tuplattu = [1, 2, 3, 4, 5].reduce((uusiTaulukko, arvo) => {
 [ 4, 5 ]
 ```
 
-Reduce onkin erittäin monikäyttöinen operaatio, ja sen avulla onnistuu luontevasti myös esimerkiksi taulukon arvojen ryhmitteleminen tietyn avaimen mukaan. Voit lukea aiheesta lisää Googlesta hakusanoilla "JavaScript reduce group by" tai [tästä artikkelista](https://learnwithparam.com/blog/how-to-group-by-array-of-objects-using-a-key/).
+Reduce on erittäin monikäyttöinen operaatio, ja sen avulla onnistuu luontevasti myös esimerkiksi taulukon arvojen ryhmitteleminen tietyn avaimen mukaan. Voit lukea aiheesta lisää Googlesta hakusanoilla "JavaScript reduce group by" tai [tästä artikkelista](https://learnwithparam.com/blog/how-to-group-by-array-of-objects-using-a-key/).
 
-
-## Järjestäminen alkamisajan mukaan
-
-JavaScriptin taulukoilla on valmis `sort`-metodi, jonka avulla sen sisältö voidaan järjestää. Tarvitset tapahtumien järjestelemiseksi vertailufunktion, joka vertailee kahta tapahtumaa, ja kertoo kumman tulisi olla järjestyksessä ensimmäisenä:
-
-> *"The sort() method sorts the elements of an array in place and returns the sorted array.*
->
-> *If compareFunction is supplied, all non-undefined array elements are sorted according to the return value of the compare function. If compareFunction(a, b) returns less than 0, sort a to an index lower than b (i.e. a comes first). If compareFunction(a, b) returns 0, leave a and b unchanged with respect to each other, but sorted with respect to all different elements."*
->
-> [MDN web docs. Array.prototype.sort()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
-
-Voimme vertailla alkamisaikoja ja järjestää tapahtumat alkamisajan mukaan järjestykseen alkamisajankohtia vertailevalla funktiolla:
-
-```js
-function eventDateComparator(event1, event2) {
-    // jos starting_day on undefined, käytetään tyhjää merkkijonoa:
-    let event1date = event1.event_dates.starting_day || '';
-    let event2date = event2.event_dates.starting_day || '';
-
-    // Palauttaa negatiivisen luvun, nollan tai positiivisen luvun 
-    // riippuen merkkijonojen aakkosjärjestyksestä. Tämä toimii, koska 
-    // starting_day on aina ISO-muotoinen String, esim. "2020-10-16T24:00:00".
-    return event1date.localeCompare(event2date);
-}
-
-events.sort(eventDateComparator);
-```
 
 # Tehtävä 5.3.2021 (luonnos)
 
