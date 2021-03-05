@@ -1,8 +1,10 @@
-# ES6, JavaScript, node (+MongoDB)
+# ES6, JavaScript, Node.js (+MongoDB)
 
-Tämä aihe on jaettu kahdelle eri viikolle. Ensimmäisellä viikolla tutustumme ES6:een, erilaisiin ohjelmointityyleihin sekä Node-ohjelmointiin yleisellä tasolla. Toisella viikolla sovellamme oppimaamme NPM:n ja Express-palvelinkirjaston yhteydessä.
+Tämä aihe on jaettu kahdelle eri viikolle. Ensimmäisellä viikolla tutustumme ES6:een, erilaisiin ohjelmointityyleihin sekä Node.js-ohjelmointiin yleisellä tasolla. Toisella viikolla sovellamme oppimaamme NPM:n ja Express-palvelinkirjaston yhteydessä. Vilkaisemme koodin stattista analyysiä [ESLint](https://eslint.org/)-työkalulla sekä yksikkötestaamista [Mocha](https://mochajs.org/)-työkalulla.
 
-Tunneilla käsittelemme samaa Helsinki Marketing -tapahtuma-aineistoa, jota käsittelimme myös tietorakenteiden ja algoritmien kotitehtävässä.
+Oppitunneilla oletetaan hyvää perusosaamista JavaScript-kielestä ainakin olioiden, funktioiden, taulukoiden sekä ehto- ja toistorakenteiden osalta.
+
+Tunneilla käsittelemme samaa MyHelsinki-tapahtuma-aineistoa, jota käsittelimme myös tietorakenteiden ja algoritmien kotitehtävässä.
 
 ----
 
@@ -81,7 +83,7 @@ Useat kehitystyökalut, kuten Reactin kehityspalvelin, huolehtivat transpiloinni
 
 # ES6
 
-JavaScript-kielen taustalla olevan ECMAScript-standardin versiossa 6 ja sen jälkeen kieleen on tullut mukaan useita erilaisia ominaisuuksia ja kirjoitusasuja, kuten edellä esitetty "object destructuring". Seuraavissa kappaleissa tutustumme esimerkkien avulla siihen, miten uudet syntaksit voivat hyödyttää meitä "oikeassa ohjelmassa". Oikea ohjelma tarkoittaa tässä tapauksessa esimerkiksi Node-sovellusta, joka hakee dataa REST-rajapinnasta ja tarjoaa asiakkailleen JSON-muotoista dataa.
+JavaScript-kielen taustalla olevan ECMAScript-standardin versiossa 6 ja sen jälkeen kieleen on tullut mukaan useita erilaisia ominaisuuksia ja kirjoitusasuja, kuten edellä esitetty "object destructuring". Seuraavissa kappaleissa tutustumme esimerkkien avulla siihen, miten uudet syntaksit voivat hyödyttää meitä "oikeassa ohjelmassa". Oikea ohjelma tarkoittaa tässä tapauksessa esimerkiksi Node.js-sovellusta, joka hakee dataa REST-rajapinnasta ja tarjoaa asiakkailleen JSON-muotoista dataa.
 
 Huom! Eri syntaksien opetteleminen on tärkeää lähinnä siksi, että ymmärrät kohtaamiasi esimerkkikoodeja ja käyttämiäsi valmiita koodipohjia. Hyvässä tapauksessa pystyt myös välttämään turhaa toistoa tai kompleksisuutta. Koodin "modernisointi" vain modernisoinnin vuoksi on muuten usein toisarvoista.
 
@@ -192,7 +194,7 @@ names.last = last;
 
 ### Property value shorthand ja export
 
-Node-moduulit "julkaisevat" ominaisuuksiaan toisille moduuleille `module.exports`-muuttujan kautta, esim. seuraavasti:
+Node.js-moduulit "julkaisevat" ominaisuuksiaan toisille moduuleille `module.exports`-muuttujan kautta, esim. seuraavasti:
 
 ```js
 module.exports.Event = Event;
@@ -414,7 +416,7 @@ Nyt saimme terminaaliin siistimmin jäsennellyn JSON-tietorakenteen. Voimme ohja
 Huom! `events.json` on iso tiedosto, luokkaa 6-7 megatavua, joten sen käsitteleminen tekstieditorilla voi olla raskasta.
 
 
-## Tapahtuma JSON:in tuominen Node REPL:iin (Read-Evaluate-Print-Loop)
+## Tapahtuma JSON:in tuominen Node.js REPL:iin (Read-Evaluate-Print-Loop)
 
 Ensimmäiset kokeilut teemme nodella ilman npm-pakettienhallintaa tai riippuvuuksia:
 
@@ -580,7 +582,7 @@ Reducen avulla voidaan tyypillisesti selvittää esimerkiksi kokoelman suurin ta
 
 ```js
 let tulos = taulukko.reduce(( koottuArvo, nykyinenArvo ) => {
-    /* operaatio, jonka paluuarvoa on seuraava koottuArvo */
+    /* operaatio, jonka paluuarvona on seuraava koottuArvo */
     return X;
 }, vapaaehtoinenAlkuarvo);
 ```
@@ -692,7 +694,7 @@ Mikäli haluat, voit myös toteuttaa tiedostojen lataamisen dynaamisesti JavaScr
 
 ## Osa 1 (arvosanatavoite 3)
 
-Tehtävän 1. osassa sinun tulee kirjoittaa Node-skripti, joka lukee tiedostot ja tulostaa niissä olevien käyttäjien nimet (name) sekä postausten otsikot (title) siten, että kunkin käyttäjän nimen tulostamisen jälkeen tulostetaan kaikkien kyseisen käyttäjän postausten otsikot:
+Tehtävän 1. osassa sinun tulee kirjoittaa Node.js-skripti, joka lukee tiedostot ja tulostaa niissä olevien käyttäjien nimet (name) sekä postausten otsikot (title) siten, että kunkin käyttäjän nimen tulostamisen jälkeen tulostetaan kaikkien kyseisen käyttäjän postausten otsikot:
 
 ```
 Leanne Graham
@@ -779,15 +781,15 @@ Arvosanatavoitteeseen 5 sinun tulee kirjoittaa edellisen lisäksi toinen skripti
 JavaScript-tietorakenteen muuttaminen merkkijonoksi onnistuu esimerkiksi [JSON.stringify-metodilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify):
 
 ```js
-let merkkijonona = JSON.stringify(omaData, null, 2);
+let jsonString = JSON.stringify(omaData, null, 4);
 ```
 
-Muunnettu JSON-tietorakenne tulee tallentaa uuteen JSON-tiedostoon esimerkiksi Noden fs-moduulin [writeFileSync](https://stackoverflow.com/a/46356040)-metodilla:
+Muunnettu JSON-tietorakenne tulee tallentaa uuteen JSON-tiedostoon esimerkiksi Node.js:n fs-moduulin [writeFileSync](https://stackoverflow.com/a/46356040)-metodilla:
 
 ```js
-const fs = require('fs')
+const fs = require('fs');
 
-fs.writeFileSync('output.json', omaData)
+fs.writeFileSync('output.json', jsonString);
 ```
 
 Arvosanatavoitteeseen 5 sinun tulee hyödyntää oppitunnilla käsiteltyjä `map`-, `filter`- tai `reduce`-operaatiota vähintään kerran.
