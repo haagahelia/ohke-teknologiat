@@ -512,7 +512,7 @@ Vastaavasti, jos annetusta funktiosta palautetaan false:
 
 ```js
 let allFalse = events.filter(event => false);
-allFalse.length mitään ei valittu!
+allFalse.length // mitään ei valittu!
 ```
 
 Sen sijaan että funktio palauttaisi aina `true` tai `false`, haluamme luonnollisesti tehdä funktioon oikeaa valintalogiikkaa. Seuraava funktio vertailee saamansa tapahtuman päivämäärää nykyhetkeen, ja palauttaa `true`, mikäli tapahtuma on tulevaisuudessa:
