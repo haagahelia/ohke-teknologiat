@@ -1,13 +1,3 @@
-# ES6, JavaScript, Node.js (+MongoDB)
-
-Tämä aihe on jaettu kahdelle eri viikolle. Ensimmäisellä viikolla tutustumme ES6:een, erilaisiin ohjelmointityyleihin sekä Node.js-ohjelmointiin yleisellä tasolla. Toisella viikolla sovellamme oppimaamme NPM:n ja Express-palvelinkirjaston yhteydessä. Vilkaisemme koodin stattista analyysiä [ESLint](https://eslint.org/)-työkalulla sekä yksikkötestaamista [Mocha](https://mochajs.org/)-työkalulla.
-
-Oppitunneilla oletetaan hyvää perusosaamista JavaScript-kielestä ainakin olioiden, funktioiden, taulukoiden sekä ehto- ja toistorakenteiden osalta.
-
-Tunneilla käsittelemme samaa MyHelsinki-tapahtuma-aineistoa, jota käsittelimme myös tietorakenteiden ja algoritmien kotitehtävässä.
-
-----
-
 # Oppitunti 5.3.2021
 
 Tämän oppitunnin tavoitteena on oppia erityisesti lukemaan koodia ja ymmärtämään, miten yleisimmät JavaScript-kieliset esimerkkikoodit toimivat. Sivuamme funktionaalista ohjelmointia hyödyntämällä funktioiden antamista parametreina toisille funktioille (callback) sekä uusien funktioiden palauttamista paluuarvoina (currying).
