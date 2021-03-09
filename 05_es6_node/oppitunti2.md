@@ -2,6 +2,71 @@
 
 Tällä oppitunnilla jatkamme JavaScript-kielen ja sen työkalujen parissa. Tutustumme suosittuun [Express](https://expressjs.com/)-sovelluskehykseen, jonka avulla voimme toteuttaa Node.js-pohjaisen verkkopalvelun. Lisäksi sivuamme JavaScriptin yksikkötestausta [Mocha](https://mochajs.org/)-työkalun avulla.
 
+
+# Users ja Posts -tehtävän malliratkaisu
+
+## JS-koodin yksikkötestaaminen
+
+### Taulukoiden vertailu
+
+Taulukoita vertailtaessa JavaScript tutkii, onko kyseessä sama taulukko. __Taulukoiden sisältöjä ei vertailla.__
+
+```js
+> [1, 2, 3] === [1, 2, 3]
+false
+> [1, 2, 3] == [1, 2, 3]
+false
+```
+
+### Olioiden vertailu
+
+Kuten taulukoiden kanssa, myös olioita vertailtaessa tarkastetaan ovatko oliot samat. __Olioiden sisältöjä ei vertailla.__
+
+```js
+> { language: "JavaScript" } === { language: "JavaScript" }
+false
+> { language: "JavaScript" } == { language: "JavaScript" }
+false
+```
+
+Eri kielet toimivat vertailujen osalta eri logiikalla. Esimerkiksi Python vertailee tietorakenteiden sisältöä:
+
+```python
+>>> [1, 2, 3] == [1, 2, 3] # Python
+True
+>>> { "language": "JavaScript" } == { "language": "JavaScript" } # Python
+True
+>>>
+```
+
+### deepStrictEqual
+
+Koska olioiden vertaileminen vertailee vain, ovatko oliot samat, joudumme hyödyntämään erillistä vertailulogiikkaa. Node-yksikkötesteissä voimme hyödyntää esimerkiksi `assert`-moduulin `deepStrictEqual`-metodia, joka vertailee rekursiivisesti sille annettuja arvoja:
+
+```js
+const assert = require('assert');
+
+assert.deepStrictEqual([1, 2, 3], [1, 2, 3]):
+assert.deepStrictEqual({ language: "JavaScript" }, { language: "JavaScript" });
+```
+
+https://nodejs.org/api/assert.html#assert_assert_deepstrictequal_actual_expected_message
+
+
+
+# ES6-syntaksien kertaus
+
+
+```js
+function helloAgent({ names }) {
+    let { first, last } = names;
+    console.log(`My name is ${last}, ${first} ${last}`);
+}
+
+module.exports = { helloAgent };
+```
+
+
 ## Express-harjoitus
 
 Miten voisimme hyödyntää toteuttamaamme logiikkaa osana verkkopalvelua? Nodelle on olemassa useita web-sovelluskehyksiä, joista [express](https://www.npmjs.com/package/express) on hyvin suosittu:
@@ -266,51 +331,14 @@ false
 false
 ```
 
-### Taulukoiden vertailu
 
-Taulukoita vertailtaessa JavaScript tutkii, onko kyseessä sama taulukko. __Taulukoiden sisältöjä ei vertailla.__
+# Tehtävä: postinumerot-backend (luonnos)
 
-```js
-> [1, 2, 3] === [1, 2, 3]
-false
-> [1, 2, 3] == [1, 2, 3]
-false
-```
+Toteutetaan backend, jonka kautta voidaan pyytää postitoimipaikan nimi postinumerolle, tai postinumerot toimipaikan nimellä.
 
-### Olioiden vertailu
+## Arvosanatavoite 3
 
-Kuten taulukoiden kanssa, myös olioita vertailtaessa tarkastetaan ovatko oliot samat. __Olioiden sisältöjä ei vertailla.__
-
-```js
-> { language: "JavaScript" } === { language: "JavaScript" }
-false
-> { language: "JavaScript" } == { language: "JavaScript" }
-false
-```
-
-Eri kielet toimivat vertailujen osalta eri logiikalla. Esimerkiksi Python vertailee tietorakenteiden sisältöä:
-
-```python
->>> [1, 2, 3] == [1, 2, 3] # Python
-True
->>> { "language": "JavaScript" } == { "language": "JavaScript" } # Python
-True
->>>
-```
-
-### deepStrictEqual
-
-Koska olioiden vertaileminen vertailee vain, ovatko oliot samat, joudumme hyödyntämään erillistä vertailulogiikkaa. Node-yksikkötesteissä voimme hyödyntää esimerkiksi `assert`-moduulin `deepStrictEqual`-metodia, joka vertailee rekursiivisesti sille annettuja arvoja:
-
-```js
-const assert = require('assert');
-
-assert.deepStrictEqual([1, 2, 3], [1, 2, 3]):
-assert.deepStrictEqual({ language: "JavaScript" }, { language: "JavaScript" });
-```
-
-https://nodejs.org/api/assert.html#assert_assert_deepstrictequal_actual_expected_message
-
+## Arvosanatavoite 5
 
 <!--
   let title; // Tarkastetaan onko suomenkielistä name atribuuttia saatavilla
@@ -321,6 +349,3 @@ https://nodejs.org/api/assert.html#assert_assert_deepstrictequal_actual_expected
     title = props.item.name.en;
   }
 -->
-
-
-
