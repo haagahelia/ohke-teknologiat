@@ -57,6 +57,8 @@ Sanavektorit siis asettavat samankaltaiset sanat vektoriavaruudesta lähelle toi
 [1, -0.5, 0.2, -0.2]. Vastaaasti Miehen: [0.5, 1, -0.2, 0.2]. Kuningatar taas: [-0.2, 0.2, 1, 0.5]. 
 Esimerkiki myös värit olisivat sanavektoriavaruudessa lähellä toisiaan.
 
+[Myös tämä blogikirjoitus avaa hyvin sanojen vektorisointia](https://medium.com/@paritosh_30025/natural-language-processing-text-data-vectorization-af2520529cf7).
+
 ## Koneoppiminen käytännössä
 
 Koneoppimiseen liittyy useita kirjastoja ja työkaluja, joilla kaikilla on oma roolinsa koneoppimismallien rakentamisessa tai havainnollistamisessa. 
