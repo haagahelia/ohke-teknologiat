@@ -45,6 +45,18 @@ Jotta kone voi oppia esimerkiksi kuvadatasta, pitää kuvadata muokata koneen ym
 
 ![Hymynaama](img/hymynaama.png)
 
+### Tekstiaineiston käsittely
+
+Myös tekstiaineiston käsittely edellyttää sen muokkaamista matriisimuotoon. Lausetasolla siis esimerkiksi lause "Tänään on kuuma päivä" ja "Tänään on kylmä päivä" kuvattaisiin
+[1, 2, 3, 4] ja [1, 2, 5, 4]. Numeroiden merkitys olisi siis 1=tänään, 2=on, 3=kuuma, 4=päivä ja 5=kylmä.
+
+[Tässä artikkelissa on avattu hyvin kieliaineiston käsittelyä koneoppimisessa.](https://realpython.com/python-keras-text-classification/). Artikkelissa puhutaan myös esimerkiksi sanavektoreista. joiden avulla esimerkiksi siis voidaan päätellä että: 
+>Kuningas - Mies + Nainen = Kuningatar.
+
+Sanavektorit siis asettavat samankaltaiset sanat vektoriavaruudesta lähelle toisiaan ja toisaalta esimerkiksi sanan mies etäisyys kuninkaasta on täsmälleen sama kuin naisen etäisyys kuningattaresta. Jos meillä on kielioppina siis sanat "Nainen, Mies, Kuningatar ja Kuningas", niin esimerkiksi kuningattaren sanavektori voisi näyttää jotenkin tältä:
+[1, -0.5, 0.2, -0.2]. Vastaaasti Miehen: [0.5, 1, -0.2, 0.2]. Kuningatar taas: [-0.2, 0.2, 1, 0.5]. 
+Esimerkiki myös värit olisivat sanavektoriavaruudessa lähellä toisiaan.
+
 ## Koneoppiminen käytännössä
 
 Koneoppimiseen liittyy useita kirjastoja ja työkaluja, joilla kaikilla on oma roolinsa koneoppimismallien rakentamisessa tai havainnollistamisessa. 
