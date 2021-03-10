@@ -53,7 +53,7 @@ Myös tekstiaineiston käsittely edellyttää sen muokkaamista matriisimuotoon. 
 [Tässä artikkelissa on avattu hyvin kieliaineiston käsittelyä koneoppimisessa](https://realpython.com/python-keras-text-classification/). Artikkelissa puhutaan myös esimerkiksi sanavektoreista, joiden avulla voidaan esimerkiksi päätellä että: 
 >Kuningas - Mies + Nainen = Kuningatar.
 
-Sanavektorit siis asettavat samankaltaiset sanat vektoriavaruudesta lähelle toisiaan ja toisaalta esimerkiksi sanan mies etäisyys kuninkaasta on sama kuin naisen etäisyys kuningattaresta. Sanaverktoreiden avulla pystytään siis ymmärtämään tarkemmin sanojen merkityksiä ja suhteita toisiinsa.
+Sanavektorit siis asettavat samankaltaiset sanat vektoriavaruudesta lähelle toisiaan ja toisaalta esimerkiksi sanan mies etäisyys kuninkaasta on sama kuin naisen etäisyys kuningattaresta. Sanavektoreiden avulla pystytään siis ymmärtämään tarkemmin sanojen merkityksiä ja suhteita toisiinsa.
 
 [Tämä blogikirjoitus avaa hyvin sanojen vektorisointia](https://medium.com/@jayeshbahire/introduction-to-word-vectors-ea1d4e4b84bf).
 
