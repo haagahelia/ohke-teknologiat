@@ -1,6 +1,23 @@
-# Oppitunti 12.3.2021 (luonnos)
+# Oppitunti 12.3.2021
 
 Tällä oppitunnilla jatkamme JavaScript-kielen ja Node.js:n parissa. Tutustumme suosittuun [Express](https://expressjs.com/)-sovelluskehykseen, jonka avulla voimme toteuttaa JavaScript-pohjaisen verkkopalvelun. Lisäksi sivuamme JavaScriptin yksikkötestausta [Mocha](https://mochajs.org/)-työkalun avulla.
+
+
+
+# ES6-syntaksien kertaus
+
+Edellisellä oppitunnilla käsittelimme mm. seuraavassa koodiesimerkissä esiintyviä syntakseja:
+
+```js
+function helloAgent({ names }) {
+    let { first, last } = names;
+    console.log(`My name is ${last}, ${first} ${last}`);
+}
+
+module.exports = { helloAgent };
+```
+
+Miten tässä moduulissa määritettyä `helloAgent`-funktiota voitaisiin kutsua toisesta Node.js-moduulista?
 
 
 # Users ja Posts -tehtävän malliratkaisu
@@ -26,8 +43,79 @@ $ npm install --save-dev mocha
 
 Seuraavissa vaiheissa seuraamme Mochan dokumentaatiossa [https://mochajs.org/#getting-started](https://mochajs.org/#getting-started) olevia työvaiheita.
 
+Testejä varten luodaan uusi kansio "test":
+
+```
+$ mkdir test
+```
+
+Package.json-tiedoston `test`-skriptiksi asetetaan `mocha`-komento:
+
+```diff
+ "scripts": {
++  "test": "mocha"
+-  "test": "echo \"Error: no test specified\" && exit 1"
+ },
+```
+
+Nyt testit voidaan suorittaa `npm`-komennon avulla:
+
+```
+$ npm test
+```
+
+```js
+const assert = require('assert');
+const { getUsers, getPosts, combineUsersAndPosts, getPostsByUser } = require('../blog/functions');
+
+describe('Users and posts', function () {
+
+    it('should get posts for a single user', function () {
+        let user = { id: 1, name: 'John Doe' };
+        let posts = [{ id: 1, userId: 1 }, { id: 2, userId: 2 }, { id: 3, userId: 1 }];
+
+        let result = getPostsByUser(user, posts);
+        assert.deepStrictEqual(result, [posts[0], posts[2]]);
+    });
+
+    it('should connect posts to users', function () {
+        let users = [{ id: 1 }, { id: 2 }];
+        let posts = [{ id: 1, userId: 1 }, { id: 2, userId: 1 }];
+
+        let result = combineUsersAndPosts(users, posts);
+
+        assert.deepStrictEqual(result, [
+            {
+                id: 1,
+                posts: [{ id: 1, userId: 1 }, { id: 2, userId: 1 }]
+            },
+            {
+                id: 2,
+                posts: []
+            }
+        ]);
+    });
+});
+
+
+describe('Fetch requests', function () {
+
+    it('returns 10 users', async function () {
+        let users = await getUsers();
+        assert.strictEqual(users.length, 10);
+    });
+
+    it('returns 100 posts', async function () {
+        let posts = await getPosts();
+        assert.strictEqual(posts.length, 100);
+    })
+});
+```
+
 
 ## Vertailu JavaScriptillä
+
+Yllä esitellyissä testeissä sekä oppitunnin esimerkissä vertailu tehdään `assert.deepStrictEqual`-funktion avulla, eikä yhtäsuuruusmerkeillä. Tämä johtuu siitä, että JavaScript vertailee taulukoita ja olioita eri tavalla kuin esimerkiksi Python. 
 
 ### Taulukoiden vertailu
 
@@ -129,23 +217,6 @@ Voit tutustua aiheeseen syvällisemmin YouTube-videolla [JavaScript == VS === (W
 ----
 
 
-# ES6-syntaksien kertaus
-
-Edellisellä oppitunnilla käsittelimme mm. seuraavassa koodiesimerkissä esiintyviä syntakseja:
-
-```js
-function helloAgent({ names }) {
-    let { first, last } = names;
-    console.log(`My name is ${last}, ${first} ${last}`);
-}
-
-module.exports = { helloAgent };
-```
-
-Miten tässä moduulissä määritettyä `helloAgent`-funktiota voitaisiin kutsua toisesta Node.js-moduulista?
-
-
-
 # Fetch-harjoitus
 
 Tähän asti olemme lukeneet käyttäjien ja postausten JSON-rakenteet paikallisesta tiedostosta `require`-funktiolla. Tämä on tapahtunut synkronisesti, eli lukeminen on tehty loppuun ennen seuraavalle riville etenemistä.
@@ -169,7 +240,7 @@ HTTP-pyyntö voidaan tehdä nyt sovelluksessa seuraavasti:
 ```js
 const fetch = require('node-fetch');
 
-let httpPromise = fetch('http://open-api.myhelsinki.fi/v1/events/');
+let httpPromise = fetch('https://jsonplaceholder.typicode.com/users');
 ```
 
 Fetch-funktion sijasta voisimme käyttää myös muita HTTP-asiakaskirjastoja, kuten [axios](https://www.npmjs.com/package/axios). Tällä oppitunnilla käytämme fetch-funktiota, koska se on hyödynnettävissä suoraan eri selaimissa.
@@ -183,7 +254,15 @@ Asynkroniset kutsut, kuten `fetch`, palauttavat Promise-oliota:
 >
 > [MDN web docs. Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
-Promise-olion tapahtumankuuntelija asetetaan kutsumalla Promisen `then`-metodia ja antamalla sille funktio, jota kutsutaan, kun promisen operaatio on valmistunut. Peräkkäisiä Promise-oliota voidaan myös ketjuttaa, jolloin ensimmäisenä Promisen `then`-metodille annettu funktio suoritetaan aina ennen seuraavia kutsuja, ja edeltävän funktion palauttama arvo välitetään aina seuraavalle funktiolle. Tästä käytetään myös termiä ketjutus eli chaining.
+Promise-olion tapahtumankuuntelija asetetaan kutsumalla Promisen `then`-metodia ja antamalla sille funktio, jota kutsutaan, kun promisen operaatio on valmistunut:
+
+```js
+fetch('https://jsonplaceholder.typicode.com/users')
+  .then(response => response.json())
+  .then(users => console.log(users[0].name))
+```
+
+Peräkkäisiä Promise-olioita voidaan myös ketjuttaa, jolloin ensimmäisenä Promisen `then`-metodille annettu funktio suoritetaan aina ennen seuraavia kutsuja, ja edeltävän funktion palauttama arvo välitetään aina seuraavalle funktiolle. Tästä käytetään myös termiä ketjutus eli chaining.
 
 Voit tutustua itsenäisesti tarkemmin `fetch`-funktioon sekä sen palauttamien `Promise`-olioiden käyttämiseen seuraavien YouTube-videoiden avulla:
 
@@ -221,7 +300,7 @@ Asennetaan express seuraavasti:
 $ npm install express
 ```
 
-Liitetään seuraavaksi tapahtumien käsittely osaksi Expressin esimerkkisovellusta. Tarvoitteemme on, että palvelimemme vastaa pyyntöihin JSON-rakenteella, joka on rajattu annettujen päivämäärien mukaan ja järjestetty kronologiseen järjestykseen. Lisäominaisuuksina voimme toteuttaa myös "limit"-ominaisuuden tapahtumien määrän rajoittamiseksi.
+Liitetään seuraavaksi tapahtumien käsittely osaksi Expressin esimerkkisovellusta. Tavoitteemme on, että palvelimemme vastaa pyyntöihin JSON-rakenteella, joka on rajattu annettujen päivämäärien mukaan ja järjestetty kronologiseen järjestykseen. Lisäominaisuuksina voimme toteuttaa myös "limit"-ominaisuuden tapahtumien määrän rajoittamiseksi.
 
 ```js
 // https://www.npmjs.com/package/express
@@ -235,18 +314,87 @@ app.get('/', function (req, res) {
 app.listen(3000);
 ```
 
-Harjoituksessä käytämme query-parametreja päivämäärien rajaamiseksi:
+Tämän viikon harjoituksissa hyödynnämme ainakin seuraavia express:in ominaisuuksia:
 
-* https://expressjs.com/en/4x/api.html#req.query
 
-Palvelin vastaa pyyntöihin JSON-muodossa:
+## JSON-datan palauttaminen
 
-* https://expressjs.com/en/4x/api.html#res.json
+https://expressjs.com/en/4x/api.html#res.json
 
+```js
+app.get('/users', async function (req, res) {
+    let users = await getUsers();
+    res.json(users);
+});
+```
+
+## Parametrien käsittely
+
+https://expressjs.com/en/4x/api.html#req.query
+
+```js
+app.get('/users/', async function (req, res) {
+  let id = Number(req.query.id));
+});
+```
+
+Esimerkkipyyntö:
+
+```
+curl http://localhost:3000/users/?id=10
+```
+
+## Polkumuuttujien käsittely
+
+https://expressjs.com/en/guide/routing.html#route-parameters
+
+```js
+app.get('/users/:id(\\d+)', async function (req, res) {
+    let id = Number(req.params.id);
+});
+```
+
+Esimerkkipyyntö:
+
+```
+curl http://localhost:3000/users/10
+```
+
+## Node.js-palvelimen uudelleenkäynnistys
+
+Node.js-palvelin täytyy uudelleenkäynnistää aina koodimuutosten jälkeen. Uudelleenkäynnistys voidaan automatisoida `nodemon`-komennon avulla:
+
+> *"nodemon is a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory are detected.*
+>
+> *nodemon does not require any additional changes to your code or method of development. nodemon is a replacement wrapper for node. To use nodemon, replace the word node on the command line when executing your script."*
+>
+> nodemon. https://www.npmjs.com/package/nodemon
+
+Tällä oppitunnilla käytämme nodemon-työkalua seuraavasti:
+
+```
+$ npm install -g nodemon
+$ nodemon index.js
+```
+
+Nodemon voidaan asentaa myös projektikohtaisesti:
+
+```
+$ npm install --save-dev nodemon
+$ npm start
+```
+
+Projektikohtaisessa asennuksessa nodemon täytyy käynnistää esim. `npm start`-komennolla ja `package.json`-tiedostoon täytyy lisätä `start`-skripti:
+
+```
+"scripts": {
+  "start": "nodemon index.js"
+}
+```
 
 ----
 
-
+<!--
 ## Map: etäisyyden lisääminen kaikille tapahtumille
 
 Meille erityisen hyödyllinen `map`-operaation käyttötapaus voisi olla etäisyyden lisääminen tapahtuman tietoihin. Kaikilla tapahtumilla on koordinaatit, joten meidän tulee vain laskea etäisyys kunkin tapahtuman koordinaattipisteen ja oman pisteemme välillä. Etäisyyden laskeminen on sen verran monimutkainen operaatio, että emme halua toteuttaa sitä omaan koodiimme. Sen sijaan käytämm evalmista `geolib`-kirjastoa:
@@ -330,7 +478,7 @@ let eventsWithCoordinates = events.map(event => ({ ...event, distance: distanceF
 // forEach:
 events.forEach(event => event.distance = distanceFuncHelsinki(event));
 ```
-
+-->
 <!--
 ```js
 function addDistanceTo(coordinates) {
@@ -369,11 +517,11 @@ Katso lisätietoa järjestämisestä ylempää kodasta "Järjestäminen alkamisa
 
 
 
-# Koodaustehtävä: postinumerot-backend (luonnos)
+# Koodaustehtävä: postinumerot-backend
 
 Tämän viikon tehtävässä sinun tulee hyödyntää Node.js:ää, npm:ää sekä [express](https://www.npmjs.com/package/express)-kirjastoa ja toteuttaa HTTP-palvelu, joka palauttaa postitoimipaikkojen nimiä sekä postinumeroita.
 
-Tavoitteenamme on asynkronisen web-ohjelmoinnin opettelun lisäksi kerrata tietorakenteiden läpikäyntiä. Mikäli tehtävät eivät tarjoa tarvittavaa haastetta, voit tehdä lisäksi valinnaisen bonustehtävän.
+Tavoitteenamme on asynkronisen web-ohjelmoinnin opettelun lisäksi kerrata tietorakenteiden läpikäyntiä. Mikäli tehtävät eivät tarjoa tarvittavaa haastetta tai haluat oppia välimuistituksesta, voit tehdä lisäksi valinnaisen lisätehtävän.
 
 
 ## JSON-tiedoston hakeminen ja parametrin käsittely (arvosanatavoite 3)
@@ -417,13 +565,19 @@ Vastaus tulee palauttaa JSON-muodossa esimerkiksi seuraavasti:
 
 Ohjelman tulee löytää postinumerot annetun nimen kirjainkoosta riippumatta. Varaudu myös parhaaksi katsomallasi tavalla tapaukseen, että pyydettyä postitoimipaikkaa ei löydy aineistosta.
 
-## Postinumeroaineiston välimuistitus (bonus)
+## Postinumeroaineiston välimuistitus (extra)
 
-Postinumeroaineiston hakeminen verkosta on tämän ohjelman suorituskyvyn kannalta suurin haaste. Aineiston lataaminen etukäteen tai vain ohjelman käynnistyessä nopeuttaisi hakuja, mutta aineistoon tulevat päivitykset eivät tulisi ohjelmaan automaattisesti saataville.
+Postinumeroaineiston hakeminen verkosta on tämän ohjelman suorituskyvyn kannalta suurin haaste. Lisäksi useat rajapinnat rajoittavat niihin tehtävien kutsujen määrää, joten rajapinta saattaisi lakata vastaamasta tekemiimme toistuviin kutsuihin:
 
-Ongelman ratkaisemiseksi aineistoa voidaan pitää ohjelman muistissa tietyn aikaa, jonka jälkeen aineisto haetaan uudelleen. Tällaisista [välimuisteista](https://fi.wikipedia.org/wiki/V%C3%A4limuisti) käytetään termiä cache.
+> *"Rate limiting is a strategy for limiting network traffic. It puts a cap on how often someone can repeat an action within a certain timeframe – for instance, trying to log in to an account. Rate limiting can help stop certain kinds of malicious bot activity. It can also reduce strain on web servers."*
+>
+> Cloudflare. What Is Rate Limiting? https://www.cloudflare.com/learning/bots/what-is-rate-limiting/
 
-GitHub-palvelin pyytää JSON-tiedostoa ladattaessa asiakasta välimuistittamaan vastauksen 5 minuutin ajaksi:
+Aineiston lataaminen etukäteen tai vain ohjelman käynnistyessä ratkaisisi ongelman, mutta aineistoon tulevat päivitykset eivät tulisi omaan palveluumme automaattisesti saataville.
+
+Näiden ongelmien ratkaisemiseksi aineistoa voidaan pitää ohjelman muistissa tietyn aikaa, jonka jälkeen aineisto haetaan uudelleen. Tällaisista [välimuisteista](https://fi.wikipedia.org/wiki/V%C3%A4limuisti) käytetään termiä cache.
+
+HTTP-vastaukset sisältävät hyvin usein tietoa mm. niiden välimuistituksesta. GitHub-palvelin pyytää JSON-tiedostoa ladattaessa HTTP-headerin avulla asiakasta välimuistittamaan vastauksen 5 minuutin ajaksi:
 
 ```
 $ curl -I https://raw.githubusercontent.com/theikkila/postinumerot/master/postcode_map_light.json
@@ -452,7 +606,9 @@ source-age: 155
 content-length: 114651
 ```
 
-Välimuistitus voidaan toteuttaa ohjelmassa monella eri tavalla. Yksi vaihtoehto on käyttää HTTP-asiakaskirjastoa, joka huolehtii välimuistituksesta automaattisesti taustalla. Tällöin emme tarvitse muutoksia omaan koodiimme.
+Yllä olevissa HTTP-otsikoissa on välimuistin ajan lisäksi muitakin välimuistitukseen liittyvää tietoa tietoja, kuten `etag` ja `x-cache`.
+
+Välimuistitus voidaan toteuttaa ohjelmassa monella eri tavalla. Yksi vaihtoehto on välimuistittaa HTTP-pyyntöjen vastauksia käyttämällä HTTP-asiakaskirjastoa, joka huolehtii välimuistituksesta automaattisesti. Tällöin emme tarvitse muutoksia omaan koodiimme.
 
 Toinen vaihtoehto on toteuttaa välimuistitus osaksi omaa ohjelmaamme:
 
@@ -462,4 +618,4 @@ Toinen vaihtoehto on toteuttaa välimuistitus osaksi omaa ohjelmaamme:
 
 Välimuistiin asettamisen ja sieltä hakemisen lisäksi vanhentuneet vastaukset tulee luonnollisesti poistaa välimuistista, jolloin data haetaan uudestaan API-rajapinnasta.
 
-Tehtävän bonusosion ratkaisemisessa voit halutessasi käyttää hyödyksi esimerkiksi fetch-kutsuja välimuistittavaa [node-fetch-cache](https://www.npmjs.com/package/node-fetch-cache)-kirjastoa tai sanakirjan tavoin toimivaa [node-cache](https://www.npmjs.com/package/node-cache)-kirjastoa. Voit myös toteuttaa oman välimuistituslogiikan. Riippuvuuksia asentaessasi on hyvä muistaa, että npm-paketit ovat erinäisten tahojen julkaisemaa suoritettavaa koodia. Niitä asennettaessa kannattaa perehtyä projektien laatuun ja luotettavuuteen esimerkiksi niiden GitHub-sivujen avulla: [node-cache](https://github.com/node-cache/node-cache), [node-fetch-cache](https://github.com/mistval/node-fetch-cache).
+Tehtävän lisäosion ratkaisemisessa voit halutessasi käyttää hyödyksi esimerkiksi fetch-kutsuja välimuistittavaa [node-fetch-cache](https://www.npmjs.com/package/node-fetch-cache)-kirjastoa tai sanakirjan tavoin toimivaa [node-cache](https://www.npmjs.com/package/node-cache)-kirjastoa. Voit myös toteuttaa oman välimuistituslogiikan. Riippuvuuksia asentaessasi on hyvä muistaa, että npm-paketit ovat erinäisten tahojen julkaisemaa suoritettavaa koodia. Niitä asennettaessa kannattaa perehtyä projektien laatuun ja luotettavuuteen esimerkiksi niiden GitHub-sivujen avulla: [node-cache](https://github.com/node-cache/node-cache), [node-fetch-cache](https://github.com/mistval/node-fetch-cache).
