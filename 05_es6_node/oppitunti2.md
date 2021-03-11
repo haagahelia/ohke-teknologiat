@@ -328,6 +328,16 @@ app.get('/users', async function (req, res) {
 });
 ```
 
+Käyttäessäsi json-metodia, express lisää HTTP-vastaukseen oikean `Content-Type`-otsikon:
+
+```
+$ curl -I localhost:3000/users
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 28712
+```
+
 ## Parametrien käsittely
 
 https://expressjs.com/en/4x/api.html#req.query
@@ -391,8 +401,6 @@ Projektikohtaisessa asennuksessa nodemon täytyy käynnistää esim. `npm start`
   "start": "nodemon index.js"
 }
 ```
-
-----
 
 <!--
 ## Map: etäisyyden lisääminen kaikille tapahtumille
