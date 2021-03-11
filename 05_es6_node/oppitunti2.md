@@ -183,7 +183,7 @@ Asynkroniset kutsut, kuten `fetch`, palauttavat Promise-oliota:
 >
 > [MDN web docs. Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
-Promise-olion tapahtumankuuntelija asetetaan kutsumalla Promisen `then`-metodia ja antamalla sille funktio, jota kutsutaan, kun promisen operaatio on valmistunut. Peräkkäisiä Promise-oliota voidaan myös ketjuttaa, jolloin ensimmäisenä Promisen `then`-metodille annettu funktio suoritetaan aina ennen seuraavia kutsuja, ja edeltävän funktion palauttama arvo välitetään aina seuraavalle funktiolle. Tästä käytetään myös termiä "putkitus" eli piping.
+Promise-olion tapahtumankuuntelija asetetaan kutsumalla Promisen `then`-metodia ja antamalla sille funktio, jota kutsutaan, kun promisen operaatio on valmistunut. Peräkkäisiä Promise-oliota voidaan myös ketjuttaa, jolloin ensimmäisenä Promisen `then`-metodille annettu funktio suoritetaan aina ennen seuraavia kutsuja, ja edeltävän funktion palauttama arvo välitetään aina seuraavalle funktiolle. Tästä käytetään myös termiä ketjutus eli chaining.
 
 Voit tutustua itsenäisesti tarkemmin `fetch`-funktioon sekä sen palauttamien `Promise`-olioiden käyttämiseen seuraavien YouTube-videoiden avulla:
 
@@ -242,6 +242,7 @@ Harjoituksessä käytämme query-parametreja päivämäärien rajaamiseksi:
 Palvelin vastaa pyyntöihin JSON-muodossa:
 
 * https://expressjs.com/en/4x/api.html#res.json
+
 
 ----
 
@@ -350,6 +351,7 @@ let eventsWithDistanceFromHelsinki = events.map(addDistanceToHelsinki);
 ```
 -->
 
+<!--
 ### Tapahtumien järjestäminen etäisyyden mukaan
 
 Kun tapahtumille on lisätty uusi attribuutti `distance`, voidaan tätä käyttää hyväksi myös tapahtumien järjestämisessä etäisyyden mukaan. Seuraavan koodiesimerkin nuolifunktio vertailee kahta tapahtumaa niiden `distance`-attribuutin mukaan:
@@ -360,30 +362,104 @@ eventsWithDistances.sort((event1, event2) => event1.distance - event2.distance);
 ```
 
 Katso lisätietoa järjestämisestä ylempää kodasta "Järjestäminen alkamisajan mukaan".
-
-----
-
-----
-
-
-
-
-
-
-# Tehtävä: postinumerot-backend (luonnos)
-
-Toteutetaan backend, jonka kautta voidaan pyytää postitoimipaikan nimi postinumerolle, tai postinumerot toimipaikan nimellä.
-
-## Arvosanatavoite 3
-
-## Arvosanatavoite 5
-
-<!--
-  let title; // Tarkastetaan onko suomenkielistä name atribuuttia saatavilla
-  if (props.item.name.fi !== null) {
-    // jos ei ole käytetään englanninkieleistä
-    title = props.item.name.fi;
-  } else if (props.item.name.en !== null) {
-    title = props.item.name.en;
-  }
 -->
+
+
+---
+
+
+
+# Koodaustehtävä: postinumerot-backend (luonnos)
+
+Tämän viikon tehtävässä sinun tulee hyödyntää Node.js:ää, npm:ää sekä [express](https://www.npmjs.com/package/express)-kirjastoa ja toteuttaa HTTP-palvelu, joka palauttaa postitoimipaikkojen nimiä sekä postinumeroita.
+
+Tavoitteenamme on asynkronisen web-ohjelmoinnin opettelun lisäksi kerrata tietorakenteiden läpikäyntiä. Mikäli tehtävät eivät tarjoa tarvittavaa haastetta, voit tehdä lisäksi valinnaisen bonustehtävän.
+
+
+## JSON-tiedoston hakeminen ja parametrin käsittely (arvosanatavoite 3)
+
+Toteuta express-sovellus, jolta voidaan kysyä postinumeron avulla postitoimitoimipaikan nimi. Postinumero annetaan HTTP-pyynnön parametrina esimerkiksi seuraavasti:
+
+```
+curl http://localhost:3000/postitoimipaikka?numero=99999
+```
+
+Vastaus tulee palauttaa JSON-muodossa esimerkiksi seuraavasti:
+
+```json
+{
+  "postinumero": "99999",
+  "toimipaikka": "KORVATUNTURI"
+}
+```
+
+Varaudu myös tilanteeseen, jossa annettua postinumeroa ei löydy. Tällöin voit palauttaa toimipaikaksi esimerkiksi `null`-arvon.
+
+[Postinumeroaineisto](https://github.com/theikkila/postinumerot) löytyy GitHubista [JSON-muodossa](https://raw.githubusercontent.com/theikkila/postinumerot/master/postcode_map_light.json). Voit lukea tarkemman kuvauksen käsiteltävästä aineistosta [Python-tehtävän tehtävänannosta](../01_python#postinumeroaineisto).
+
+
+## Polun käsittely ja JSON-tietorakenteen läpikäynti (arvosanatavoite 5)
+
+Toteuta edellä ohjeistetun tehtävän lisäksi palvelimelle toinen polku, josta voidaan etsiä postitoimipaikan nimellä kaikki siihen kuuluvat postinumerot. Postitoimipaikan nimi tulee antaa osana polkua, esimerkiksi seuraavasti:
+
+```
+curl http://localhost:3000/postitoimipaikka/porvoo/
+```
+
+Vastaus tulee palauttaa JSON-muodossa esimerkiksi seuraavasti:
+
+```json
+{
+  "toimipaikka": "porvoo",
+  "postinumerot": ["06100", "06401", "06151", "06150", "06101", "06500", "06450", "06400", "06200"]
+}
+```
+
+Ohjelman tulee löytää postinumerot annetun nimen kirjainkoosta riippumatta. Varaudu myös parhaaksi katsomallasi tavalla tapaukseen, että pyydettyä postitoimipaikkaa ei löydy aineistosta.
+
+## Postinumeroaineiston välimuistitus (bonus)
+
+Postinumeroaineiston hakeminen verkosta on tämän ohjelman suorituskyvyn kannalta suurin haaste. Aineiston lataaminen etukäteen tai vain ohjelman käynnistyessä nopeuttaisi hakuja, mutta aineistoon tulevat päivitykset eivät tulisi ohjelmaan automaattisesti saataville.
+
+Ongelman ratkaisemiseksi aineistoa voidaan pitää ohjelman muistissa tietyn aikaa, jonka jälkeen aineisto haetaan uudelleen. Tällaisista [välimuisteista](https://fi.wikipedia.org/wiki/V%C3%A4limuisti) käytetään termiä cache.
+
+GitHub-palvelin pyytää JSON-tiedostoa ladattaessa asiakasta välimuistittamaan vastauksen 5 minuutin ajaksi:
+
+```
+$ curl -I https://raw.githubusercontent.com/theikkila/postinumerot/master/postcode_map_light.json
+HTTP/2 200 
+cache-control: max-age=300
+content-security-policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+content-type: text/plain; charset=utf-8
+etag: "0c7eee999e998c6d959353abc9abeccb56d0ddaaac9a5d46dac0b123d68d0c41"
+strict-transport-security: max-age=31536000
+x-content-type-options: nosniff
+x-frame-options: deny
+x-xss-protection: 1; mode=block
+x-github-request-id: 621C:574F:16BD8FE:17E9826:6049E5B7
+accept-ranges: bytes
+date: Thu, 11 Mar 2021 09:43:46 GMT
+via: 1.1 varnish
+x-served-by: cache-bma1627-BMA
+x-cache: HIT
+x-cache-hits: 1
+x-timer: S1615455827.977461,VS0,VE1
+vary: Authorization,Accept-Encoding
+access-control-allow-origin: *
+x-fastly-request-id: 88772d1f4b3180348997fd9230c44aad01afcef0
+expires: Thu, 11 Mar 2021 09:48:46 GMT
+source-age: 155
+content-length: 114651
+```
+
+Välimuistitus voidaan toteuttaa ohjelmassa monella eri tavalla. Yksi vaihtoehto on käyttää HTTP-asiakaskirjastoa, joka huolehtii välimuistituksesta automaattisesti taustalla. Tällöin emme tarvitse muutoksia omaan koodiimme.
+
+Toinen vaihtoehto on toteuttaa välimuistitus osaksi omaa ohjelmaamme:
+
+> *"You could then wrap your API call in a helper function which checks the cache, and returns the value if it's present. If it's not it makes the API request, adds it to the cache, then returns it."*
+>
+> Nick Mitchinson. Proper way to cache data from API call with nodejs. https://stackoverflow.com/a/15608809
+
+Välimuistiin asettamisen ja sieltä hakemisen lisäksi vanhentuneet vastaukset tulee luonnollisesti poistaa välimuistista, jolloin data haetaan uudestaan API-rajapinnasta.
+
+Tehtävän bonusosion ratkaisemisessa voit halutessasi käyttää hyödyksi esimerkiksi fetch-kutsuja välimuistittavaa [node-fetch-cache](https://www.npmjs.com/package/node-fetch-cache)-kirjastoa tai sanakirjan tavoin toimivaa [node-cache](https://www.npmjs.com/package/node-cache)-kirjastoa. Voit myös toteuttaa oman välimuistituslogiikan. Riippuvuuksia asentaessasi on hyvä muistaa, että npm-paketit ovat erinäisten tahojen julkaisemaa suoritettavaa koodia. Niitä asennettaessa kannattaa perehtyä projektien laatuun ja luotettavuuteen esimerkiksi niiden GitHub-sivujen avulla: [node-cache](https://github.com/node-cache/node-cache), [node-fetch-cache](https://github.com/mistval/node-fetch-cache).
