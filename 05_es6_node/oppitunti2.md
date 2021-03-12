@@ -551,7 +551,9 @@ Vastaus tulee palauttaa JSON-muodossa esimerkiksi seuraavasti:
 
 Varaudu myös tilanteeseen, jossa annettua postinumeroa ei löydy. Tällöin voit palauttaa toimipaikaksi esimerkiksi `null`-arvon.
 
-[Postinumeroaineisto](https://github.com/theikkila/postinumerot) löytyy GitHubista [JSON-muodossa](https://raw.githubusercontent.com/theikkila/postinumerot/master/postcode_map_light.json). Voit lukea tarkemman kuvauksen käsiteltävästä aineistosta [Python-tehtävän tehtävänannosta](../01_python#postinumeroaineisto).
+[Postinumeroaineisto](https://github.com/theikkila/postinumerot) löytyy GitHubista [JSON-muodossa](https://raw.githubusercontent.com/theikkila/postinumerot/master/postcode_map_light.json). JSON-aineisto tulee ladata JavaScript-koodissa dynaamisesti esimerkiksi fetch-funktiolla tai axios-kirjastolla. Älä siis tallenna aineistoa staattiseksi tiedostoksi.
+
+Voit lukea tarkemman kuvauksen käsiteltävästä aineistosta [Python-tehtävän tehtävänannosta](../01_python#postinumeroaineisto).
 
 
 ## Polun käsittely ja JSON-tietorakenteen läpikäynti (arvosanatavoite 5)
@@ -572,6 +574,14 @@ Vastaus tulee palauttaa JSON-muodossa esimerkiksi seuraavasti:
 ```
 
 Ohjelman tulee löytää postinumerot annetun nimen kirjainkoosta riippumatta. Varaudu myös parhaaksi katsomallasi tavalla tapaukseen, että pyydettyä postitoimipaikkaa ei löydy aineistosta.
+
+**Vinkki**
+
+Python-harjoitusten yhteydessä käytimme aineiston läpikäynnissä Pythonin dict-tietorakenteen `keys()`-, `values()`- ja `items()`-metodeja. JavaScriptin Object-luokasta löytyy vastaavat metodit `Object.keys(data)`, `Object.values(data)` ja `Object.entries(data)`, jotka mahdollisesti ovat hyödyksi tehtävän ratkaisussa:
+
+* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
+* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values
+* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries
 
 ## Postinumeroaineiston välimuistitus (extra)
 
@@ -632,6 +642,6 @@ Tehtävän lisäosion ratkaisemisessa voit halutessasi käyttää hyödyksi esim
 
 ## Tehtävän palauttaminen
 
-Myös osittain ratkaistut palautukset hyväksytään ja arvostellaan suhteessa niiden valmiusasteeseen. Palauta kaikki ratkaisuusi liittyvät lähdekoodit erillisinä tiedostoina Teamsiin ennen seuraavaa oppituntia. 
+Myös osittain ratkaistut palautukset hyväksytään ja arvostellaan suhteessa niiden valmiusasteeseen. Palauta kaikki ratkaisuusi liittyvät lähdekoodit erillisinä tiedostoina, eli ei pakattuna. Tehtävän DL on seuraava oppitunti. 
 
 **Nimeä `.js`-päätteiset tiedostot `.js.txt`-päätteisiksi, mikäli Teams ei hyväksy tiedostojasi tietoturvasyistä.**
