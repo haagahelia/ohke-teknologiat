@@ -1,5 +1,3 @@
-
-
 function isBetweenDates(minDate, maxDate) {
     let min = minDate.toISOString();
     let max = maxDate.toISOString();
