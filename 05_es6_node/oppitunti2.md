@@ -529,6 +529,8 @@ Katso lisätietoa järjestämisestä ylempää kodasta "Järjestäminen alkamisa
 
 Tämän viikon tehtävässä sinun tulee hyödyntää Node.js:ää, npm:ää sekä [express](https://www.npmjs.com/package/express)-kirjastoa ja toteuttaa HTTP-palvelu, joka palauttaa postitoimipaikkojen nimiä sekä postinumeroita.
 
+Suosittelen tutustumaan tekstimuotoisen tehtävänannon lisäksi myös ES6-aiheen toisen oppitunnin videotallenteen viimeisiin 15 minuuttiin, mikäli et ollut paikalla aihetta käsittelevällä oppitunnilla. Tallenne löytyy Teamsista kyseisen oppitunnin chatista.
+
 Tavoitteenamme on asynkronisen web-ohjelmoinnin opettelun lisäksi kerrata tietorakenteiden läpikäyntiä. Mikäli tehtävät eivät tarjoa tarvittavaa haastetta tai haluat oppia välimuistituksesta, voit tehdä lisäksi valinnaisen lisätehtävän.
 
 
