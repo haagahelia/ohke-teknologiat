@@ -230,6 +230,13 @@ Palauta lopuksi sama tiedosto Teamsiin.
 *Lisäpohdintaa tehtävään: Jos haluat tehtävän tekemisen jälkeen vielä pohtia DIP:tä ja olioiden monimuotoisuutta lisää, niin kokeile toteuttaa myös Moottoripyörän ja Auton ajoneuvoveron laskeminen DIP-arkkitehtuurimallin mukaisesti. Ajoneuvoveron suuruus riippuu nyt käyttämättömistä fieldeistä, eli siitä onko kyseessä kevytmoottoripyörä tai vastaavasti auton tapauksessa farmariauto. Voit vaikka harjoituksen vuoksi toteuttaa laskennat kaavalla, jossa ajoneuvovero määräytyy: (ajoneuvon käyttövuodet)x100 ja kevytmoottoripyörälle lisäksi jaetaan tuo summa kahdella ja farmariautolla kerrotaan 1.2:lla. Tämä siis tarkoittaa, että tarvitset nykyisen BusinessLuokan lisäksi omat businessluokat myös Moottoripyörälle ja Autolle. Näiden businessluokkien tulee myös toteuttaa yhteinen rajapinta, jossa on laskeAjoneuvovero()-metodi. Sovelluksen konfigurointivaiheessa tulee sitten injektoida asianmukaiset toteuttavat luokat paikoilleen, jotta laskenta menee oikein.*
 
 ### Tehtävä 6.3 (20% kierroksen arvosanasta):
+1. Piirrä arkkitehtuurikaavio joko komponenteista ja teknologioista TAI luokkakaavio ohjelmistoprojekti2-järjestelmästänne (mikäli järjestelmänne on arkkitehtuurillisesti mielestäsi kohtalaisen haastava ja kiinnostava). Et voi palauttaa samaa kaaviota tiimikaverisi kanssa, eli tehtävä tulee tehdä itsenäisesti, toki asioista voi keskustella tiimikavereiden kanssa.
+
+1. Toinen vaihtoehto on laatia luokkakaavio [LentokoneConfig-esimerkistä](src/examples/LentokoneConfig.java). Piirrä siis tehtävän luokat ja rajapinnat sekä osoita nuolilla luokkien/rajapintojen suhteet. Jos luokka käyttää toista luokkaa, merkitse se yhtenäisellä nuolella ja jos luokka toteuttaa rajapinnan, merkitse se katkonuolella. Merkitse rajapinnat joko katkoviivalaatikkoina tai \<\<\<interface>>>-merkinnällä rajapinnan nimen perässä. Kaavio on siis samankaltainen kuin olio-ohjelmoinnin yhteydessä [esitelty UML-kaavio](img/UML-luokkakaavio.png).
+
+Arkkitehtuurikaavion voit piirtää haluamallasi työkalulla, esimerkiksi google-slides riittää ihan hyvin. Palauta tehtävässä lopulta siis png-kuvatiedostona  arkkitehtuurikaavio.
+
+### Tehtävä 6.4 (20% kierroksen arvosanasta):
 
 [Redux](https://redux.js.org/tutorials/essentials/part-1-overview-concepts) on kirjasto, jota käytetään monesti React-sovellusten yhteydessä. Reduxin tarkoitus olisi selkeyttää sovelluksen tilan hallintaa tilanteissa, joissa tila uhkaa hajautua sekavasti eri komponentteihin. 
 Reduxin käyttäminen perustuu omaan pieneen suunnittelumalliin, eli arkkitehtuurimalliin. Malli koostuu kolmesta ydinkomponentista: [Actioneista](https://redux.js.org/basics/actions), [Reducerista](https://redux.js.org/basics/reducers) sekä [Säiliöstä](https://redux.js.org/basics/store) (Store). Tässä mallissa Actionit kertovat mitä halutaan tehdä (ja välittävät tämän tiedon Reducerille). Reducer päättää miten Actionin haluama asia tehdään ja miten uusi tila määritellään. Reducer-komponentin idea pohjautuu funktionaalisen ohjelmoinnin [reduce (toiselta nimeltä fold tai accumulate) funktioon](https://en.wikipedia.org/wiki/Fold_%28higher-order_function%29). (Funktionaalisen ohjelmoinnin Reduce-funktiolle annetaan parametrina lista ja tavoitteena on palauttaa vain yksi redusoitu/accumuloitu arvo. Redusoivaa funktiota sovelletaan listan alkioihin (tai tässä tapauksessa tämänhetkiseen tila-arvoon) ja lopulta palautetaan lopputulos, joka syntyy redusoivan funktion soveltamisesta yksi kerrallaan listan arvoihin.) Funktionaalisen ohjelmoinnin periaatteiden mukaisesti Reducer ei muokkaa vanhaa tilaa, vaan palauttaa kokonaan uuden tilan, Reducerin tulee muutenkin olla ns. ["puhdas funktio"](https://en.wikipedia.org/wiki/Pure_function) ilman sivuvaikutuksia.
@@ -240,12 +247,6 @@ Reduxia voi käyttää (ja sen periaatteita seurata) myös ilman Reactia. Tiedos
 
 Palauta lopuksi sama tiedosto Teamsiin.
 
-### Tehtävä 6.4 (20% kierroksen arvosanasta):
-1. Piirrä arkkitehtuurikaavio joko komponenteista ja teknologioista TAI luokkakaavio ohjelmistoprojekti2-järjestelmästänne (mikäli järjestelmänne on arkkitehtuurillisesti mielestäsi kohtalaisen haastava ja kiinnostava). Et voi palauttaa samaa kaaviota tiimikaverisi kanssa, eli tehtävä tulee tehdä itsenäisesti, toki asioista voi keskustella tiimikavereiden kanssa.
-
-1. Toinen vaihtoehto on laatia luokkakaavio [LentokoneConfig-esimerkistä](src/examples/LentokoneConfig.java). Piirrä siis tehtävän luokat ja rajapinnat sekä osoita nuolilla luokkien/rajapintojen suhteet. Jos luokka käyttää toista luokkaa, merkitse se yhtenäisellä nuolella ja jos luokka toteuttaa rajapinnan, merkitse se katkonuolella. Merkitse rajapinnat joko katkoviivalaatikkoina tai \<\<\<interface>>>-merkinnällä rajapinnan nimen perässä. Kaavio on siis samankaltainen kuin olio-ohjelmoinnin yhteydessä [esitelty UML-kaavio](img/UML-luokkakaavio.png).
-
-Arkkitehtuurikaavion voit piirtää haluamallasi työkalulla, esimerkiksi google-slides riittää ihan hyvin. Palauta tehtävässä lopulta siis png-kuvatiedostona  arkkitehtuurikaavio.
 
 ### Seminaaritehtävä 1:
 Refaktoroi ohjelmistoprojekti 2 -projektinne käyttämään mielestäsi optimaalista arkkitehtuuriratkaisua. Kuvaa tämä arkkitehtuuri myös kaaviona.
