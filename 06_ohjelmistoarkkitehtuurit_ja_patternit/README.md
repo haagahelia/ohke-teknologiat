@@ -245,8 +245,7 @@ Reduxin käyttäminen perustuu omaan pieneen suunnittelumalliin, eli arkkitehtuu
 
 Reduxia voi käyttää (ja sen periaatteita seurata) myös ilman Reactia. Tiedostossa [Reduxperiaatteet.js](src/exercises/Reduxperiaatteet.js) on luotu tiedostopohja, josta löytyy metodipohja Reducer-metodille, kahdelle Action-metodille sekä Redux säiliön luomiselle (lisäksi samassa src-kansiossa on npm:lle tarpeellinen [package.json](src/exercises/package.json)). Sinun tehtäväsi on täydentää Reducer-metodia sekä kahta Action metodia siten, että Redux-säiliö palauttaa tiedostossa kuvatun halutun lopputuloksen. Tärkeintä tässä tehtävässä olisi tutustua Reduxin arkkitehtuurin toimintaperiaatteita Reduxin dokumentaatiota ja googlea hyödyntäen ja yrittää toteuttaa tämä pieni ohjelma Reduxin arkkitehtuuriperiaatteita seuraten. Reduxista ja sen periaatteista voi lukea myös esim [täältä](https://redux.js.org/introduction/getting-started). (muista ajaa src-kansiossa *npm install* komento alkuun, jolloin npm asentaa Redux-kirjaston, johon on määritelty riippuvuus src-kansion package.json-tiedostossa).
 
-Palauta lopuksi sama tiedosto Teamsiin.
-
+Palauta lopuksi sama tiedosto Teamsiin (HUOM: Teams ei anna palauttaa .js-päätteistä tiedostoa, joten muuta tai lisää päätteeksi .txt, niin palautus onnistuu. Pahoittelut tästä).
 
 ### Seminaaritehtävä 1:
 Refaktoroi ohjelmistoprojekti 2 -projektinne käyttämään mielestäsi optimaalista arkkitehtuuriratkaisua. Kuvaa tämä arkkitehtuuri myös kaaviona.
