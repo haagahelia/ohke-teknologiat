@@ -98,7 +98,7 @@ Tulostaminen tapahtuu `print`-funktiolla, jolle voidaan antaa tarvittaessa useam
 
 ```python
 >>> print('Hello world!')
->>> print('Hello', 'world1')
+>>> print('Hello', 'world!')
 ```
 
 

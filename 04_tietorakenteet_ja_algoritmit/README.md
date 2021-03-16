@@ -515,21 +515,39 @@ Järjestä tapahtumat järjestykseen alkamisaikansa mukaan itse toteuttamallasi 
 
 Voit valita toteutettavan järjestämisalgoritmin esimerkiksi seuraavista:
 
-* Lisäyslajittelu eli Insertion Sort: https://en.wikipedia.org/wiki/Insertion_sort
+**Lisäyslajittelu eli Insertion Sort**
 
-	<a title="Simpsons contributor / CC BY-SA (https://creativecommons.org/licenses/by-sa/3.0)" href="https://commons.wikimedia.org/wiki/File:Insertion_sort.gif"><img width="128" alt="Insertion sort" src="https://upload.wikimedia.org/wikipedia/commons/4/42/Insertion_sort.gif"></a>
+https://en.wikipedia.org/wiki/Insertion_sort
 
-* Lomituslajittelu eli Merge Sort: https://en.wikipedia.org/wiki/Merge_sort
+<a title="Simpsons contributor / CC BY-SA (https://creativecommons.org/licenses/by-sa/3.0)" href="https://commons.wikimedia.org/wiki/File:Insertion_sort.gif"><img width="128" alt="Insertion sort" src="https://upload.wikimedia.org/wikipedia/commons/4/42/Insertion_sort.gif"></a>
 
-	<a title="Swfung8 / CC BY-SA (https://creativecommons.org/licenses/by-sa/3.0)" href="https://commons.wikimedia.org/wiki/File:Merge-sort-example-300px.gif"><img width="256" alt="Merge-sort-example-300px" src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif"></a>
+Kuva: By Simpsons contributor - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=17512147
 
-* Kuplalajittelu eli Bubble Sort: https://en.wikipedia.org/wiki/Bubble_sort
+**Lomituslajittelu eli Merge Sort**
 
-	<a href="https://commons.wikimedia.org/wiki/File:Bubble-sort-example-300px.gif#/media/File:Bubble-sort-example-300px.gif"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif" alt="Bubble-sort-example-300px.gif"></a>
+https://en.wikipedia.org/wiki/Merge_sort
 
-* Pikalajittelu eli Quicksort: https://en.wikipedia.org/wiki/Quicksort
+<a title="Swfung8 / CC BY-SA (https://creativecommons.org/licenses/by-sa/3.0)" href="https://commons.wikimedia.org/wiki/File:Merge-sort-example-300px.gif"><img width="256" alt="Merge-sort-example-300px" src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif"></a>
+
+Kuva: By Swfung8 - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=14961648
+
+**Kuplalajittelu eli Bubble Sort**
+
+https://en.wikipedia.org/wiki/Bubble_sort
+
+<a href="https://commons.wikimedia.org/wiki/File:Bubble-sort-example-300px.gif#/media/File:Bubble-sort-example-300px.gif" title="By Swfung8 - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=14953478"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif" alt="Bubble-sort-example-300px.gif"></a>
+
+Kuva: By Swfung8 - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=14953478
+
+**Pikalajittelu eli Quicksort**
+
+https://en.wikipedia.org/wiki/Quicksort
 	
-	<a href="https://commons.wikimedia.org/wiki/File:Sorting_quicksort_anim.gif#/media/File:Sorting_quicksort_anim.gif"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Sorting_quicksort_anim.gif" alt="Sorting quicksort anim.gif"></a>
+<a href="https://commons.wikimedia.org/wiki/File:Sorting_quicksort_anim.gif#/media/File:Sorting_quicksort_anim.gif" title="By en:User:RolandH, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=1965827"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Sorting_quicksort_anim.gif" alt="Sorting quicksort anim.gif"></a>
+
+Kuva: By en:User:RolandH, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=1965827
+
+**Algoritmin valintaperusteet**
 
 Voit valita itsellesi mieluisen algoritmin esimerkiksi tutustumalla ensin niiden tehokkuuteen, tai valita sen, joka vaikuttaa toteutukseltaan sopivan yksinkertaiselta. Muista myös, että voit kysyä Teamsissa neuvoa mihin vain tehtävässä kohtaamaasi haasteeseen liittyen. Todennäköisesti samojen haasteiden parissa kamppailee myös moni muu kurssilainen.
 
