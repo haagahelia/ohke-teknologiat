@@ -1,7 +1,8 @@
 /**
  * Lasketaan oliomallinnuksen mukaan mallinnetulla oliolaskurilla lasku
  * (1+(2*(3+2))) = 11. Tarkoitus on havainnollistaa olioiden monimuotoisuutta ja
- * oliomallinnusta. Vrt. FunktionaalinenLaskuri.js
+ * oliomallinnusta. Vrt. FunktionaalinenLaskuri.js ja
+ * ProseduraalinenLaskuri.java
  */
 public class Oliolaskuri {
 

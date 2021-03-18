@@ -4,7 +4,7 @@
  * Tarkoitus olisi havainnollistaa miten voimme funktionaalisen 
  * paradigman avulla vain määritellä lopputuloksen funktioiden avulla 
  * ja laskenta tapahtuu kuin itsestään.
- * Vrt. Oliolaskuri.java
+ * Vrt. Oliolaskuri.java ja ProseduraalinenLaskuri.java
  */
 
 const sum = (x1, x2) => x1 + x2;
@@ -12,7 +12,8 @@ const mul = (x1, x2) => x1 * x2;
 
 /**
  * tulos-muuttujaan tuleva arvo on siis määritelty deklaratiivisesti, 
- * eikä tarvitse kutsua erikseen esim. jotain laske()-funktiota, 
+ * eikä tarvitse kutsua erikseen esim. jotain laske()-funktiota tai 
+ * proseduraalisia käskyjä for-loopeista jne., 
  * joka siis imperatiivisesti käskisi ohjelmaa tekemään jotain.
  * Funktioita ja muuttujia käsitellään samalla tavalla 
  * "first class citizens":einä, jolloin siis toinen funktio 
