@@ -4,7 +4,7 @@
  * Tarkoitus olisi havainnollistaa miten voimme funktionaalisen 
  * paradigman avulla vain määritellä lopputuloksen funktioiden avulla 
  * ja laskenta tapahtuu kuin itsestään.
- * Vrt. Oliolaskuri.java ja ProseduraalinenLaskuri.java
+ * Vrt. Oliolaskuri.java ja ImperatiivinenLaskuri.java
  */
 
 const sum = (x1, x2) => x1 + x2;

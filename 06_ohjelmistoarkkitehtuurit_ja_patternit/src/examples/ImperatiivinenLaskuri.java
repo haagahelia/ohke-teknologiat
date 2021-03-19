@@ -8,7 +8,7 @@ import java.util.List;
  * bugista.
  */
 
-public class ProseduraalinenLaskuri {
+public class ImperatiivinenLaskuri {
     public static void main(final String[] args) {
         List luvutJaOperaatiot = new LinkedList();
 
