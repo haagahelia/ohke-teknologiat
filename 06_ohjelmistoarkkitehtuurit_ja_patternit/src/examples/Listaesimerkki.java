@@ -24,6 +24,13 @@ public class Listaesimerkki {
         tekstiLista.add("Pekka");
         System.out.println(laskeEsiintymat(tekstiLista));
 
+        List<OmaObjekti> omaLista = new LinkedList<>();
+        omaLista.add(new OmaObjekti(1, "Volvo"));
+        omaLista.add(new OmaObjekti(2, "Mersu"));
+        omaLista.add(new OmaObjekti(3, "BMW"));
+        omaLista.add(new OmaObjekti(4, "Volvo"));
+        System.out.println(laskeEsiintymat(omaLista));
+
     }
 
     /**
@@ -44,11 +51,44 @@ public class Listaesimerkki {
         }
         return tulos;
     }
+}
 
-    /**
-     * TODO: Lisätään esimerkkiin vielä oma objekti, jolla on id ja tekstikenttä ja
-     * toteutetaan luokan equals-metodi siten, että pelkkä tekstisisällön
-     * samankaltaisuus tarkoittaa samankaltaisuutta, sitten se voidaan myös antaa
-     * mielekkääseen vertailuun laskeEsiintymat metodille.
-     */
+/**
+ * Lisätään esimerkkiin vielä oma objekti, jolla on id ja tekstikenttä ja
+ * overridataan luokan hashcode ja equals-metodit siten, että pelkkä
+ * tekstisisällön samankaltaisuus tarkoittaa samankaltaisuutta, sitten se
+ * voidaan myös antaa mielekkääseen vertailuun laskeEsiintymat metodille.
+ */
+
+class OmaObjekti {
+    private int id;
+    private String tekstiArvo;
+
+    public OmaObjekti(int id, String tekstiArvo) {
+        this.id = id;
+        this.tekstiArvo = tekstiArvo;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof OmaObjekti)) {
+            return false;
+        }
+        OmaObjekti toinenObjekti = (OmaObjekti) o;
+        return this.tekstiArvo.equals(toinenObjekti.getTekstiArvo());
+    }
+
+    @Override
+    public int hashCode() {
+        return this.tekstiArvo.hashCode();
+    }
+
+    @Override
+    public String toString() {
+        return this.getTekstiArvo();
+    }
+
+    public String getTekstiArvo() {
+        return this.tekstiArvo;
+    }
 }
