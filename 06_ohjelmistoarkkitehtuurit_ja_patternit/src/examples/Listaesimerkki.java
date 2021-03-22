@@ -5,7 +5,7 @@ import java.util.LinkedList;
 
 /**
  * Tämän esimerkin tarkoituksena on havainnollistaa olioiden monimuotoisuutta ja
- * rajapintojen käyttämistä.
+ * rajapintojen käyttämistä. Vrt. funktionaalinenLista.js
  */
 public class Listaesimerkki {
 
