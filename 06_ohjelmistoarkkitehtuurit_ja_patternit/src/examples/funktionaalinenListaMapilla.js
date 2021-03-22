@@ -3,12 +3,13 @@
  * ja vertailukohtaa olio-ohjelmoinnin vastaavaan toteutukseen.
  * Vrt. Listaesimerkki.java
  * */
+
 const laskeEsiintymat = (lista, uniikkiAvainFunktio) => {
-    const esiintymaMap = {}
+    const esiintymaMap = new Map()
     if (lista.length < 1) {
         return esiintymaMap
     }
-    esiintymaMap[uniikkiAvainFunktio(lista[0])] = 1
+    esiintymaMap.set(uniikkiAvainFunktio(lista[0]), 1)
     return laskeEsiintymatInternal(esiintymaMap, lista.slice(1), uniikkiAvainFunktio)
 }
 
@@ -16,16 +17,12 @@ const laskeEsiintymatInternal = (map, loppuLista, uniikkiAvainFunktio) => {
     if (loppuLista.length < 1) {
         return map
     }
-
-    const avain = uniikkiAvainFunktio(loppuLista[0])
-    let uusiArvoAvaimelle = 1
-
-    if (map[avain]) {
-        uusiArvoAvaimelle = map[avain] + 1
+    if (map.has(uniikkiAvainFunktio(loppuLista[0]))) {
+        map.set(uniikkiAvainFunktio(loppuLista[0]), map.get(uniikkiAvainFunktio(loppuLista[0])) + 1)
+    } else {
+        map.set(uniikkiAvainFunktio(loppuLista[0]), 1)
     }
-
-    return laskeEsiintymatInternal({ ...map, [avain]: uusiArvoAvaimelle }, loppuLista.slice(1),
-        uniikkiAvainFunktio)
+    return laskeEsiintymatInternal(map, loppuLista.slice(1), uniikkiAvainFunktio)
 }
 
 const numeroLista = [1, 2, 3, 1];
