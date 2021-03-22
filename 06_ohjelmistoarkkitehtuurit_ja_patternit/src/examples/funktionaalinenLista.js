@@ -3,30 +3,24 @@
  * ja vertailukohtaa olio-ohjelmoinnin vastaavaan toteutukseen.
  * Vrt. Listaesimerkki.java
  * */
-const laskeEsiintymat = (lista, uniikkiAvainFunktio) => {
-    const esiintymaMap = {}
+
+const laskeEsiintymat = (lista, uniikkiAvainFunktio, esiintymaMap = {}) => {
     if (lista.length < 1) {
         return esiintymaMap
     }
-    esiintymaMap[uniikkiAvainFunktio(lista[0])] = 1
-    return laskeEsiintymatInternal(esiintymaMap, lista.slice(1), uniikkiAvainFunktio)
-}
 
-const laskeEsiintymatInternal = (map, loppuLista, uniikkiAvainFunktio) => {
-    if (loppuLista.length < 1) {
-        return map
-    }
-
-    const avain = uniikkiAvainFunktio(loppuLista[0])
+    const avain = uniikkiAvainFunktio(lista[0])
     let uusiArvoAvaimelle = 1
 
-    if (map[avain]) {
-        uusiArvoAvaimelle = map[avain] + 1
+    if (esiintymaMap[avain]) {
+        uusiArvoAvaimelle = esiintymaMap[avain] + 1
     }
 
-    return laskeEsiintymatInternal({ ...map, [avain]: uusiArvoAvaimelle }, loppuLista.slice(1),
-        uniikkiAvainFunktio)
+    //Luodaan aina uusi map, hyödynnettään ES6 computed propertya avaimen kanssa.
+    return laskeEsiintymat(lista.slice(1),
+        uniikkiAvainFunktio, { ...esiintymaMap, [avain]: uusiArvoAvaimelle })
 }
+
 
 const numeroLista = [1, 2, 3, 1];
 console.log(laskeEsiintymat(numeroLista, (a) => a))
