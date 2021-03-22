@@ -10,11 +10,7 @@ const laskeEsiintymat = (lista, uniikkiAvainFunktio, esiintymaMap = {}) => {
     }
 
     const avain = uniikkiAvainFunktio(lista[0])
-    let uusiArvoAvaimelle = 1
-
-    if (esiintymaMap[avain]) {
-        uusiArvoAvaimelle = esiintymaMap[avain] + 1
-    }
+    const uusiArvoAvaimelle = esiintymaMap[avain] ? (esiintymaMap[avain] + 1) : 1
 
     //Luodaan aina uusi map, hyödynnettään ES6 computed propertya avaimen kanssa.
     return laskeEsiintymat(lista.slice(1),
