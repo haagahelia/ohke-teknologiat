@@ -10,11 +10,13 @@ const laskeEsiintymat = (lista, uniikkiAvainFunktio, esiintymaMap = {}) => {
         return esiintymaMap
     }
 
-    const avain = uniikkiAvainFunktio(lista[0])
+    const [eka, ...loput] = lista
+
+    const avain = uniikkiAvainFunktio(eka)
     const uusiArvoAvaimelle = esiintymaMap[avain] ? (esiintymaMap[avain] + 1) : 1
 
     //Luodaan aina uusi map, hyödynnettään ES6 computed propertya avaimen kanssa.
-    return laskeEsiintymat(lista.slice(1),
+    return laskeEsiintymat(loput,
         uniikkiAvainFunktio, { ...esiintymaMap, [avain]: uusiArvoAvaimelle })
 }
 
@@ -40,10 +42,11 @@ console.log(laskeEsiintymat(numeroLista, (a) => a))
 const reduceVersioNumeroLista = numeroLista.reduce(laskeEsiintymatReduceVersio, {})
 console.log(`reduceversio numerolistasta: ${JSON.stringify(reduceVersioNumeroLista)}`)
 
-const stringLista = ["Pekka", "Maija", "Elina", "Pekka"];
-console.log(laskeEsiintymat(stringLista, (a) => a))
+const stringLista = ["Pekka", "Maija", "Elina", "pekka"];
+console.log(laskeEsiintymat(stringLista, (a) => a.toLowerCase()))
 
-const reduceVersioStringLista = stringLista.reduce(laskeEsiintymatReduceVersio, {})
+const reduceVersioStringLista = stringLista.reduce(laskeEsiintymatReduceVersioAvainFunktiolla((a) =>
+    a.toLowerCase()), {})
 console.log(`reduceversio stringlistasta: ${JSON.stringify(reduceVersioStringLista)}`)
 
 const autoLista = [{ id: 1, merkki: "Volvo" },
