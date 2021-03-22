@@ -38,13 +38,13 @@ const numeroLista = [1, 2, 3, 1];
 console.log(laskeEsiintymat(numeroLista, (a) => a))
 
 const reduceVersioNumeroLista = numeroLista.reduce(laskeEsiintymatReduceVersio, {})
-console.log(`reduce versio numerolistasta: ${JSON.stringify(reduceVersioNumeroLista)}`)
+console.log(`reduceversio numerolistasta: ${JSON.stringify(reduceVersioNumeroLista)}`)
 
 const stringLista = ["Pekka", "Maija", "Elina", "Pekka"];
 console.log(laskeEsiintymat(stringLista, (a) => a))
 
 const reduceVersioStringLista = stringLista.reduce(laskeEsiintymatReduceVersio, {})
-console.log(`reduce versio stringlistasta: ${JSON.stringify(reduceVersioStringLista)}`)
+console.log(`reduceversio stringlistasta: ${JSON.stringify(reduceVersioStringLista)}`)
 
 const autoLista = [{ id: 1, merkki: "Volvo" },
 { id: 2, merkki: "Mersu" }, { id: 3, merkki: "BMW" }, { id: 4, merkki: "Volvo" }];
@@ -52,6 +52,6 @@ console.log(laskeEsiintymat(autoLista, (a) => a.merkki))
 
 const reduceVersioAutoLista = autoLista.reduce(laskeEsiintymatReduceVersioAvainFunktiolla((a) =>
     a.merkki), {})
-console.log(`reduce versio autolistasta: ${JSON.stringify(reduceVersioAutoLista)}`)
+console.log(`reduceversio autolistasta: ${JSON.stringify(reduceVersioAutoLista)}`)
 
 
