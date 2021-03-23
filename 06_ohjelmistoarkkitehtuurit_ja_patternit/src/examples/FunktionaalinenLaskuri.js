@@ -12,9 +12,8 @@ const mul = (x1, x2) => x1 * x2;
 
 /**
  * tulos-muuttujaan tuleva arvo on siis määritelty deklaratiivisesti, 
- * eikä tarvitse kutsua erikseen esim. jotain laske()-funktiota tai 
- * imperatiivisia käskyjä for-loopeista jne., 
- * joka siis käskisi ohjelmaa tekemään jotain.
+ * eikä tarvitse antaa erikseen imperatiivisia käskyjä kuten for-looppeja jne., 
+ * jotka siis käskisivät tietokonetta tekemään vaihe kerrallaan jotain.
  * Funktioita ja muuttujia käsitellään samalla tavalla 
  * "first class citizens":einä, jolloin siis toinen funktio 
  * voi ottaa parametrikseen myös toisen funktion siinä missä 

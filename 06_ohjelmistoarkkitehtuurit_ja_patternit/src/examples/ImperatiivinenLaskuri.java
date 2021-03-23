@@ -2,8 +2,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Lasketaan proseduraalisilla komennoilla lasku (1+(2*(3+2))) = 11. Tarkoitus
- * on havainnollistaa eri ohjelmointiparadigmojen eroja. Vrt.
+ * Lasketaan imperatiivisilla komennoilla lasku (1+(2*(3+2))) = 11. Tarkoitus on
+ * havainnollistaa eri ohjelmointiparadigmojen eroja. Vrt.
  * FunktionaalinenLaskuri.js ja Oliolaskuri.java. NOTE: Koodi on huonoa ja
  * bugista.
  */
