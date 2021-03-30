@@ -70,13 +70,6 @@ In Azure, there are typically multiple supported ways of achieving the same goal
 
 This demonstration presents an opinionated view on how to develop and deploy web applications. Generic tools, such as Git, are favored over Azure specific tools. Command line is favored over graphical interfaces, as the GUIs tend to hide some of the details that help us understand how the systems work.
 
-To follow the examples in this document you will need to install Docker. In Ubuntu, Docker can be installed as follows:
-
-```sh
-$ sudo apt install docker.io
-```
-
-You will also need Node.js and Git that are used also during previous weeks.
 
 <!--
 -Millainen ubuntuserveri voidaan pystyttää.
@@ -88,15 +81,17 @@ You will also need Node.js and Git that are used also during previous weeks.
 
 ### IaaS (virtual machines)
 
+The following video demonstrates how to create a new virtual machine in Azure and how to deploy your application code there:
+
+**[Video: Azure part 1 - Ubuntu virtual machine](https://web.microsoftstream.com/video/8eb8e43c-3972-4f73-bd75-d5269e45c82e)**
+
+
 > *"Infrastructure as a service (IaaS) is an instant computing infrastructure, provisioned and managed over the internet."*
 >
 > *"IaaS provides all the infrastructure to support web apps, including storage, web and application servers, and networking resources. Organizations can quickly deploy web apps on IaaS and easily scale infrastructure up and down when demand for the apps is unpredictable."*
 >
 > [Microsoft. What is IaaS.](https://azure.microsoft.com/en-us/overview/what-is-iaas/)
 
-The following video demonstrates how to create a new virtual machine in Azure and how to deploy your application code there:
-
-**[Video: Azure part 1 - Ubuntu virtual machine](https://web.microsoftstream.com/video/8eb8e43c-3972-4f73-bd75-d5269e45c82e)**
 
 Azure will allow you to either log in with a password, a private key or it can create a new private key for you. If you are using private keys and Linux, you will most likely need to restrict the access to the key file to the owner:
 
@@ -154,15 +149,16 @@ Weaknesses:
 
 ### PaaS (App Service)
 
+The following video demonstrates how to create a new app in Azure and how to deploy your application code there:
+
+**[Video 2: Azure part 2 - App service](https://web.microsoftstream.com/video/615a4f88-4a10-4b39-9ef5-f5f60c4a4c1b)**
+
+
 > *"Platform as a service (PaaS) is a complete development and deployment environment in the cloud, with resources that enable you to deliver everything from simple cloud-based apps to sophisticated, cloud-enabled enterprise applications. You purchase the resources you need from a cloud service provider on a pay-as-you-go basis and access them over a secure Internet connection."*
 >
 > *"PaaS provides a framework that developers can build upon to develop or customize cloud-based applications. ... Cloud features such as scalability, high-availability, and multi-tenant capability are included, reducing the amount of coding that developers must do."*
 >
 > [Microsoft. What is PaaS.](https://azure.microsoft.com/en-us/overview/what-is-paas/)
-
-The following video demonstrates how to create a new app in Azure and how to deploy your application code there:
-
-**[Video 2: Azure part 2 - App service](https://web.microsoftstream.com/video/615a4f88-4a10-4b39-9ef5-f5f60c4a4c1b)**
 
 Because our demo application is a standard Node.js app built with [Express](https://expressjs.com/), it can be deployed as an App as-is. Azure App Service supports a multitude of different deployment methods, but in our case, we prefer to deploy the application with Git.
 
@@ -189,6 +185,10 @@ Weaknesses:
 
 ### Cloud functions ("serverless")
 
+The following video demonstrates how to create a new function app and deploy it in Azure:
+
+**[Video: Azure part 3 - Cloud functions](https://web.microsoftstream.com/video/04c8b7c5-e431-41de-8175-41c631863a0a)**
+
 > *"Azure Functions extends the PaaS concept by providing developers with complete abstraction from the underlying infrastructure through a pay-per-execution billing model that automatically scales based on trigger invocations."*
 >
 > [Mashkowski, N. Introducing Azure Functions](https://azure.microsoft.com/en-us/blog/introducing-azure-functions/)
@@ -197,11 +197,7 @@ Weaknesses:
 >
 > [Mashkowski, N. Introducing Azure Functions](https://azure.microsoft.com/en-us/blog/introducing-azure-functions/)
 
-The following video demonstrates how to create a new function app and deploy it in Azure:
-
-**[Video: Azure part 3 - Cloud functions](https://web.microsoftstream.com/video/04c8b7c5-e431-41de-8175-41c631863a0a)**
-
-During class we extend our demo application with cloud functions. To convert the demo application into an Azure Functions app we will use the `func` command from `azure-functions-core-tools` NPM package:
+During class we extend our demo application with cloud functions (see video above). To convert the demo application into an Azure Functions app we will use the `func` command from `azure-functions-core-tools` NPM package:
 
     # installing the 'func' command
     # see https://www.npmjs.com/package/azure-functions-core-tools
@@ -298,6 +294,17 @@ When the deployment is complete, the function is available at https://app-deploy
 
 ### Docker (containers)
 
+The following video contains our class example where we build, run and publish our application in Azure as a Docker container:
+
+**[Video: Azure part 4 - Docker](https://web.microsoftstream.com/video/d1521324-2c3d-4a45-9c5e-4c5caecda274)**
+
+
+To repeat the examples you will need to install Docker. In Ubuntu, Docker can be installed as follows:
+
+```sh
+$ sudo apt install docker.io
+```
+
 > *"Fundamentally, a container is nothing but a running process, with some added encapsulation features applied to it in order to keep it isolated from the host and from other containers. One of the most important aspects of container isolation is that each container interacts with its own private filesystem; this filesystem is provided by a Docker image. An image includes everything needed to run an application - the code or binary, runtimes, dependencies, and any other filesystem objects required."*
 >
 > [Docker. Orientation and setup.](https://docs.docker.com/get-started/)
@@ -314,11 +321,6 @@ Recommended reading:
 
 * You can read more about the different commands in a Dockerfile from the official [Dockerfile reference](https://docs.docker.com/engine/reference/builder/).
 
-### Class example
-
-The following video contains our class example where we build, run and publish our application in Azure as a Docker container:
-
-**[Video: Azure part 4 - Docker](https://web.microsoftstream.com/video/d1521324-2c3d-4a45-9c5e-4c5caecda274)**
 
 
 #### Dockerignore
