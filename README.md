@@ -119,7 +119,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
             <td>pe 2.4.</td>
             <td>
                 Pitkäperjantai: <strong>ei oppituntia</strong><br />
-                Azure-videomateriaalit itseopiskeluun
+                <a href="09_azure">Azure-materiaalit itseopiskeluun</a>
             </td>
         </tr>
         <tr>
