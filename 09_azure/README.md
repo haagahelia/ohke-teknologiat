@@ -488,7 +488,9 @@ Helsinki datan esimerkki jos sitä hieman näytetään:
 
 ---
 
-## Assignment 7.1: Cloud IoT
+## Extra assignment: Cloud IoT
+
+**This is an extra assignment that is *not included* in the grading of the course during spring 2021.**
 
 In this exercise we use Docker and the Message Queuing Telemetry Transport protocol (MQTT), which is often used by IoT devices. MQTT enables us to easily publish and subscribe to events instead of exchanging requests and responses directly between a client and a server: 
 
