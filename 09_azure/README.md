@@ -448,6 +448,8 @@ See the entire `docker-publish.yml` file [here](https://github.com/haagahelia/ap
 
 ## Demo 2: Machine learning, K-means Clustering recommendations.
 
+**[Video: K-Means clustering with Azure](https://web.microsoftstream.com/video/e77d5ea8-b102-4c6d-a703-0e22c6acf3dd)**
+
 In this demo we shall build a K-means clustering model for movie recommendations with the help of [Azure machine learning studio](https://studio.azureml.net/). We will deploy the trained model as a web service and ask for a new classifications (that could be used for providing new recommendations).
 
 Here are listed some useful links related to this demo:
