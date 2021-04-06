@@ -2,6 +2,17 @@
 
 Tälle sivulle on koottu esimerkkiaiheita kurssin seminaaritehtävää varten. Voit melko vapaasti jalostaa ideoita vastaamaan omaa vaatimustasoasi ja kiinnostuksen kohteitasi.
 
+## Python
+
+* **Web-palvelu Pythonilla:**
+
+Python-aiheiset seminaarityöt voivat käsitellä esimerkiksi Pythonin [Django](https://www.djangoproject.com/)- tai [Flask](https://flask.palletsprojects.com/)-sovelluskehysten käyttöönottoa tai Pythonin tietokantaohjelmointiin perehtymistä.
+
+* **Mikrokontrollerin ohjelmointi MicroPythonilla:**
+
+Keväälle 2021 tarjotaan myös mahdollisuus perehtyä ESP32-mikrokontrollerien ohjelmointiin [MicroPython](https://micropython.org/)-kielellä.
+
+
 ## Tietorakenteet ja algoritmit
 
 * **Tunnetun algoritmin toteuttaminen:**
@@ -36,7 +47,7 @@ Huom! Kokonaista peliä ja sen käyttöliittymää ei tarvitse toteuttaa. Riitt�
 
 * **Järjestelmätestaus:**
 
-    Tutustu Robot Framework:iin, Cucumber:iin tai Selenium Framework:iin ja toteuta valitsemasi työkalun avulla yksinkertainen järjestelmätesti jollekin omalle tai julkiselle palvelulle.
+    Tutustu [Robot Framework](https://robotframework.org/):iin, Cucumber:iin tai Selenium Framework:iin ja toteuta valitsemasi työkalun avulla yksinkertainen järjestelmätesti jollekin omalle tai julkiselle palvelulle.
 
     Mahdollinen lähde: https://www.theseus.fi/handle/10024/341637
 
@@ -65,6 +76,7 @@ Huom! Kokonaista peliä ja sen käyttöliittymää ei tarvitse toteuttaa. Riitt�
 * **Paketin julkaisu NPM:ssä:**
 
     Tutustu NPM-palvelun pakettien julkaisemiseen ja julkaise oma pieni paketti. Julkaistava paketti voi olla esimerkiksi asiakaskirjasto MyHelsinki Open API:n tapahtumien hakemiseksi. Asiakaskirjaston ominaisuuksiin voi kuulua erilaiset rajaukset tai järjestämiset päivämäärien mukaan tai vaikka rajaus tapahtumiin, joiden otsikossa tai kuvauksessa esiintyy tietty teksti.
+
 
 ## Koneoppiminen
 
