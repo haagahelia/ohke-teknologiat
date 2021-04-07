@@ -134,7 +134,8 @@ N채kym채t siis m채채ritell채채n deklaratiivisesti suhteessa tilamuuttujiin, eik�
 
 <!--RxJS esimerkkej채: 
 https://www.learnrxjs.io/learn-rxjs/concepts/rxjs-primer
-https://www.learnrxjs.io/learn-rxjs/recipes/type-ahead
+https://stackblitz.com/edit/rxjs-type-ahead-b6tp5t?file=index.ts
+(t채m채n pohjalta tehty tuo oma forkki: https://www.learnrxjs.io/learn-rxjs/recipes/type-ahead)
 import { filter } from 'rxjs/operators';
 filter(keys => keys.length > 2 ),
 -->
