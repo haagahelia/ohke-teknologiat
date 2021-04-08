@@ -131,22 +131,17 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
         <tr>
             <td>pe 16.4.</td>
             <td>
-                <a href="06_ohjelmistoarkkitehtuurit_ja_patternit">Ohjelmistoarkkitehtuurit ja patternit</a>
-                <ul>
-                    <li>Tehtävien purku</li>
-                    <li>Vierailu</li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td>pe 23.4.</td>
-            <td>
                 <a href="07_koneoppiminen">Koneoppiminen</a>
             </td>
         </tr>
         <tr>
-            <td>pe 30.4.</td>
+            <td>pe 23.4.</td>
             <td><a href="08_seminaari">Seminaarien käynnistys</a></td>
+        </tr>
+        <tr>
+            <td>pe 30.4.</td>
+            <td>Seminaarityön tekemistä<br />
+                <em>Yksilöllistä ohjausta Teamsissa</em></td>
         </tr>
         <tr>
             <td>pe 7.5.</td>
@@ -155,12 +150,11 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
         </tr>
         <tr>
             <td>pe 14.5.</td>
-            <td>Seminaarityön tekemistä<br />
-                <em>Yksilöllistä ohjausta Teamsissa</em></td>
+            <td>Seminaariesityksiä</td>
         </tr>
         <tr>
             <td>pe 21.5.</td>
-            <td>Seminaariesityksiä</td>
+            <td>(mahdollisesti seminaariesityksiä)</td>
         </tr>
     </tbody>
 </table>
