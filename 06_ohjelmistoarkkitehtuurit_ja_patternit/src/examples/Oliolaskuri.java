@@ -1,8 +1,12 @@
 /**
  * Lasketaan oliomallinnuksen mukaan mallinnetulla oliolaskurilla lasku
  * (1+(2*(3+2))) = 11. Tarkoitus on havainnollistaa olioiden monimuotoisuutta ja
- * oliomallinnusta sekä tarjota vertailua muihin paradigmoihin. Vrt.
- * FunktionaalinenLaskuri.js ja ImperatiivinenLaskuri.java
+ * oliomallinnusta sekä tarjota vertailua muihin paradigmoihin. Huomionarvoista
+ * on myös se, että tämä toteutus ei sisällä yhtään if lausetta tai for-looppia
+ * toisin kuin imperatiivinen toteutus. Tästä voi myös huomata, että ongelman
+ * mallintaminen olioiksi tuottaa aika paljon koodirivejä.
+ * 
+ * Vrt. FunktionaalinenLaskuri.js ja ImperatiivinenLaskuri.java
  */
 public class Oliolaskuri {
 

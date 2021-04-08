@@ -3,7 +3,10 @@
  * laskurilla (1+(2*(3+2))) = 11.
  * Tarkoitus olisi havainnollistaa miten voimme funktionaalisen 
  * paradigman avulla vain määritellä lopputuloksen funktioiden avulla 
- * ja laskenta tapahtuu kuin itsestään.
+ * ja laskenta tapahtuu kuin itsestään. Huomionarvoista on myös se, että tämä 
+ * toteutus ei sisällä yhtään if lausetta tai for-looppia toisin kuin 
+ * imperatiivinen toteutus.
+ * 
  * Vrt. Oliolaskuri.java ja ImperatiivinenLaskuri.java
  */
 
