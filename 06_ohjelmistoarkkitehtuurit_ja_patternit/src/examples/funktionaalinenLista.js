@@ -5,7 +5,7 @@
  * Vrt. Listaesimerkki.java
  * */
 
-const laskeEsiintymat = (lista, uniikkiAvainFunktio, esiintymaMap = {}) => {
+const laskeEsiintymat = (lista, uniikkiAvainFunktio = (a => a), esiintymaMap = {}) => {
     if (lista.length < 1) {
         return esiintymaMap
     }
@@ -37,7 +37,7 @@ const laskeEsiintymatReduceVersioAvainFunktiolla = (uniikkiAvainFunktio) => (acc
 }
 
 const numeroLista = [1, 2, 3, 1];
-console.log(laskeEsiintymat(numeroLista, (a) => a))
+console.log(laskeEsiintymat(numeroLista))
 
 const reduceVersioNumeroLista = numeroLista.reduce(laskeEsiintymatReduceVersio, {})
 console.log(`reduceversio numerolistasta: ${JSON.stringify(reduceVersioNumeroLista)}`)
