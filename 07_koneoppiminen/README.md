@@ -55,7 +55,7 @@ Myös tekstiaineiston käsittely edellyttää sen muokkaamista matriisimuotoon. 
 
 Sanavektorit siis asettavat samankaltaiset sanat vektoriavaruudesta lähelle toisiaan ja toisaalta esimerkiksi sanan mies etäisyys kuninkaasta on sama kuin naisen etäisyys kuningattaresta. Sanavektoreiden avulla pystytään siis ymmärtämään tarkemmin sanojen merkityksiä ja suhteita toisiinsa.
 
-[Tämä blogikirjoitus avaa hyvin sanojen vektorisointia](https://medium.com/@jayeshbahire/introduction-to-word-vectors-ea1d4e4b84bf) kuten myös [tämä](https://medium.com/@paritosh_30025/natural-language-processing-text-data-vectorization-af2520529cf7).
+[Tämä blogikirjoitus avaa hyvin sanojen vektorisointia](https://medium.com/@paritosh_30025/natural-language-processing-text-data-vectorization-af2520529cf7).
 
 ## Koneoppiminen käytännössä
 
