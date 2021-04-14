@@ -158,7 +158,7 @@ Kerakseen liittyviä materiaaleja:
 * [Build Your Own Image Classifier In Tensorflow](https://www.youtube.com/watch?v=AACPaoDsd50Deep) 
 * [Learning with Keras+ TensorFlow -(Pt.2) Build the CNN](https://www.youtube.com/watch?v=lOZGYzTn9Z8Build)
 * [A computer vision model with TensorFlow](https://codelabs.developers.google.com/codelabs/tensorflow-lab2-computervision/#1)
-*[TensorBoardUsage](https://colab.research.google.com/github/tensorflow/tensorboard/blob/master/docs/tensorboard_in_notebooks.ipynb#scrollTo=hzm9DNVILxJe)
+* [TensorBoardUsage](https://colab.research.google.com/github/tensorflow/tensorboard/blob/master/docs/tensorboard_in_notebooks.ipynb#scrollTo=hzm9DNVILxJe)
 
 ### Seminaaritehtävä 2:
 Laadi tutkielma ja raportti siitä mitä koneoppiminen (ja esim neuroverkot) ovat ja mihin niitä voi hyödyntää.
