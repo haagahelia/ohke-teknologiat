@@ -84,7 +84,7 @@ Tällä kurssilla havainnollistetaan koneoppimista käytännössä seuraavien Co
 1. [Neuroverkon rakentaminen TensorFlow 1:lla](https://colab.research.google.com/notebooks/mlcc/intro_to_neural_nets.ipynb#scrollTo=AGOM1TUiKNdz)
 
 Lisäksi sivutaan lyhyesti näitä esimerkkiä:
-1. [Kuvadatan käsittelyä Keraksella ja TensorFlow2:lla](https://colab.research.google.com/github/tensorflow/docs/blob/master/site/en/tutorials/quickstart/beginner.ipynb) ja [tämä on toinen ehkä vielä parempi step-by-step tutoriaali kuvadatasta ja Keraksesta](https://codelabs.developers.google.com/codelabs/tensorflow-lab2-computervision/#0)
+1. [Kuvadatan käsittelyä Keraksella ja TensorFlow2:lla](https://codelabs.developers.google.com/codelabs/tensorflow-lab2-computervision/#0), joka perustuu [tähän Zalandon keräämään datasettiin](https://github.com/zalandoresearch/fashion-mnist).
 1. [Facebookin detectron kuvantunnistuskirjaston käyttämistä käytännössä](https://colab.research.google.com/drive/16jcaJoc6bCFAQ96jDe2HwtXj7BMD_-m5)
 1. [Kuvadatasta kissojen ja koirien tunnistamista](https://colab.research.google.com/github/google/eng-edu/blob/master/ml/pc/exercises/image_classification_part1.ipynb)
 1. [Kasvojentunnistusta kuvista](https://colab.research.google.com/github/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/05.14-Image-Features.ipynb)
