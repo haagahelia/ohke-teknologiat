@@ -3,6 +3,8 @@ rahasummien lisäämiseen ja poistamiseen säiliöstä Reduxin periaatteiden muk
 Lopulta scriptin pitäisi siis tulostaa summa 50.
 Muista ajaa ensin src-kansiossa komento "npm install"
 Voit ajaa tämän tiedoston komennolla "node Reduxperiaatteet.js" tai "npm run build"
+HUOM: Tämä nykyinen versio ilman korjauksia heittää Redux-kirjastolta virheen, eli se ei
+suostu ajamaan sellaisenaan ilman muutoksia.
 */
 
 //import Redux from 'redux' //ES6 syntaksilla voisi tehdä näin
