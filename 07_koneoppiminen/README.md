@@ -51,7 +51,7 @@ Myös tekstiaineiston käsittely edellyttää sen muokkaamista matriisimuotoon. 
 [1, 2, 3, 4] ja [1, 2, 5, 4]. Numeroiden merkitys olisi siis 1=tänään, 2=on, 3=kuuma, 4=päivä ja 5=kylmä.
 
 [Tässä artikkelissa on avattu hyvin kieliaineiston käsittelyä koneoppimisessa](https://realpython.com/python-keras-text-classification/). Artikkelissa puhutaan myös esimerkiksi sanavektoreista, joiden avulla voidaan esimerkiksi päätellä että: 
->Kuningas - Mies + Nainen = Kuningatar.
+>Kuningas - Mies + Nainen = Kuningatar. Myös [tässä artikkelissa on selitetty word-vectoreita](https://dzone.com/articles/introduction-to-word-vectors) käsitetasolla hyvin.
 
 Sanavektorit siis asettavat samankaltaiset sanat vektoriavaruudesta lähelle toisiaan ja toisaalta esimerkiksi sanan mies etäisyys kuninkaasta on sama kuin naisen etäisyys kuningattaresta. Sanavektoreiden avulla pystytään siis ymmärtämään tarkemmin sanojen merkityksiä ja suhteita toisiinsa.
 
