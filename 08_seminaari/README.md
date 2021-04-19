@@ -6,11 +6,11 @@ Tälle sivulle on koottu esimerkkiaiheita kurssin seminaaritehtävää varten. V
 
 * **Web-palvelu Pythonilla:**
 
-Python-aiheiset seminaarityöt voivat käsitellä esimerkiksi Pythonin [Django](https://www.djangoproject.com/)- tai [Flask](https://flask.palletsprojects.com/)-sovelluskehysten käyttöönottoa tai Pythonin tietokantaohjelmointiin perehtymistä.
+    Python-aiheiset seminaarityöt voivat käsitellä esimerkiksi Pythonin [Django](https://www.djangoproject.com/)- tai [Flask](https://flask.palletsprojects.com/)-sovelluskehysten käyttöönottoa tai Pythonin tietokantaohjelmointiin perehtymistä.
 
 * **Mikrokontrollerin ohjelmointi MicroPythonilla:**
 
-Keväälle 2021 tarjotaan myös mahdollisuus perehtyä ESP32-mikrokontrollerien ohjelmointiin [MicroPython](https://micropython.org/)-kielellä.
+    Keväälle 2021 tarjotaan myös mahdollisuus perehtyä ESP32-mikrokontrollerien ohjelmointiin [MicroPython](https://micropython.org/)-kielellä. Mahdollisia projekteja voivat olla esimerkiksi sääasema, peruutustutka, Telegram-bottina toteutettu  liiketunnistin tai nopeustesti-peli.
 
 
 ## Tietorakenteet ja algoritmit
@@ -25,7 +25,7 @@ Keväälle 2021 tarjotaan myös mahdollisuus perehtyä ESP32-mikrokontrollerien 
 
     Toteuta esimerkiksi labyrintin tai sanaristikon generoiva algoritmi. Voit käyttää pohjana tunnettua valmista logiikkaa, josta teet oman toteutuksesi. Katso esim: https://en.wikipedia.org/wiki/Maze_generation_algorithm
 
-Huom! Kokonaista peliä ja sen käyttöliittymää ei tarvitse toteuttaa. Riittää, että algoritmi on jollain tavoin todennettavissa toimivaksi.
+    Huom! Kokonaista peliä ja sen käyttöliittymää ei tarvitse toteuttaa. Riittää, että algoritmi on jollain tavoin todennettavissa toimivaksi.
 
 
 ## Ohjelmistoarkkitehtuurit ja patternit
@@ -85,7 +85,7 @@ Huom! Kokonaista peliä ja sen käyttöliittymää ei tarvitse toteuttaa. Riitt�
     Kouluta koneoppimismalli jostain datasta ja laadi sillä ennusteita. Voi liittyä ohjelmistoprojekti 2:seen mieluusti.
 
 
-## Azure
+## Azure tai vastaava pilvipalvelu
 
 * **Koneoppiminen:**
 
