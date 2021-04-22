@@ -31,6 +31,7 @@ Tälle sivulle on koottu esimerkkiaiheita kurssin seminaaritehtävää varten. V
 ## Ohjelmistoarkkitehtuurit ja patternit
 
 * **Ohjelmistoprojekti 2 refaktorointi:**
+
 Refaktoroi ohjelmistoprojekti 2 -projektinne käyttämään mielestäsi optimaalista arkkitehtuuriratkaisua joiltain osin. Kuvaa tämä arkkitehtuuri myös kaaviona.
 
 * **FRP-ohjelmointi:**
