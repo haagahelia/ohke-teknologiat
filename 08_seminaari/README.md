@@ -30,6 +30,9 @@ Tälle sivulle on koottu esimerkkiaiheita kurssin seminaaritehtävää varten. V
 
 ## Ohjelmistoarkkitehtuurit ja patternit
 
+* **Ohjelmistoprojekti 2 refaktorointi:**
+Refaktoroi ohjelmistoprojekti 2 -projektinne käyttämään mielestäsi optimaalista arkkitehtuuriratkaisua joiltain osin. Kuvaa tämä arkkitehtuuri myös kaaviona.
+
 * **FRP-ohjelmointi:**
 
     Tutustu [FRP-ohjelmointiin](https://stackoverflow.com/questions/1028250/what-is-functional-reactive-programming/1030631#1030631) ja tee (tietynlainen) ohjelma RxJS:llä (tai bacon.js:llä). Myös [Node-RED](https://nodered.org/)-ympäristöä voi miettiä tähän vaiheeseen.
@@ -37,7 +40,6 @@ Tälle sivulle on koottu esimerkkiaiheita kurssin seminaaritehtävää varten. V
 * **Mikropalvelu:**
 
     Mikropalveluihin perustuvan pienen palvelun rakentaminen (esim autentikointipalvelu pyörii omana palvelunaan).
-
 
 ## Testaus
 
@@ -82,8 +84,20 @@ Tälle sivulle on koottu esimerkkiaiheita kurssin seminaaritehtävää varten. V
 
 * **Koneoppimismallin kouluttaminen:**
 
-    Kouluta koneoppimismalli jostain datasta ja laadi sillä ennusteita. Voi liittyä ohjelmistoprojekti 2:seen mieluusti.
+    Kouluta koneoppimismalli jostain datasta ja laadi sillä ennusteita (esim. keraksella kuvien tunnistamista). Voi liittyä ohjelmistoprojekti 2:seen mieluusti.
+    
+    Kerakseen liittyviä materiaaleja:
+* [Keraswith TensorFlow Course -Python Deep Learning and Neural Networks for Beginners Tutorial](https://www.youtube.com/watch?reload=9&v=qFJeN9V1ZsITensorflowImage) 
+* [Build Your Own Image Classifier In Tensorflow](https://www.youtube.com/watch?v=AACPaoDsd50Deep) 
+* [Learning with Keras+ TensorFlow -(Pt.2) Build the CNN](https://www.youtube.com/watch?v=lOZGYzTn9Z8Build)
+* [A computer vision model with TensorFlow](https://codelabs.developers.google.com/codelabs/tensorflow-lab2-computervision/#1)
+* [TensorBoardUsage](https://colab.research.google.com/github/tensorflow/tensorboard/blob/master/docs/tensorboard_in_notebooks.ipynb#scrollTo=hzm9DNVILxJe)
 
+* **Koneoppimistutkielma:**
+Laadi tutkielma ja raportti siitä mitä koneoppiminen (ja esim neuroverkot) ovat ja mihin niitä voi hyödyntää. Voit syventyä myös esimerkiksi luonnollisen kielen tulkintaan (NLP) ja sanavektoreihin.
+
+* **Vahvistusoppiminen:**
+Kouluta vahvistusoppimisella (reinforcement learning) jonkin pelin tekoäly. Tässä esimerkiksi on [youtube-playlista](https://www.youtube.com/playlist?list=PLTWFMbPFsvz3CeozHfeuJIXWAJMkPtAdS), jolla koulutetaan tekoäly pelaamaan Segan Sonic the hedgehog -peliä [Open AI:n](https://openai.com/) ja [Neatin](https://neat-python.readthedocs.io/en/latest/neat_overview.html) avulla. 
 
 ## Azure tai vastaava pilvipalvelu
 
