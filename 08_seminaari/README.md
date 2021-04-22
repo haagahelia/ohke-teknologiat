@@ -32,7 +32,7 @@ Tälle sivulle on koottu esimerkkiaiheita kurssin seminaaritehtävää varten. V
 
 * **Ohjelmistoprojekti 2 refaktorointi:**
 
-Refaktoroi ohjelmistoprojekti 2 -projektinne käyttämään mielestäsi optimaalista arkkitehtuuriratkaisua joiltain osin. Kuvaa tämä arkkitehtuuri myös kaaviona.
+    Refaktoroi ohjelmistoprojekti 2 -projektinne käyttämään mielestäsi optimaalista arkkitehtuuriratkaisua joiltain osin. Kuvaa tämä arkkitehtuuri myös kaaviona.
 
 * **FRP-ohjelmointi:**
 
@@ -85,15 +85,15 @@ Refaktoroi ohjelmistoprojekti 2 -projektinne käyttämään mielestäsi optimaal
 
 * **Koneoppimismallin kouluttaminen:**
 
-Kouluta koneoppimismalli jostain datasta ja laadi sillä ennusteita (esim. keraksella kuvien tunnistamista). Voi liittyä ohjelmistoprojekti 2:seen mieluusti.
+    Kouluta koneoppimismalli jostain datasta ja laadi sillä ennusteita (esim. keraksella kuvien tunnistamista). Voi liittyä ohjelmistoprojekti 2:seen mieluusti.
     
 * **Koneoppimistutkielma:**
 
-Laadi tutkielma ja raportti siitä mitä koneoppiminen (ja esim neuroverkot) ovat ja mihin niitä voi hyödyntää. Voit syventyä myös esimerkiksi luonnollisen kielen tulkintaan (NLP) ja sanavektoreihin.
+    Laadi tutkielma ja raportti siitä mitä koneoppiminen (ja esim neuroverkot) ovat ja mihin niitä voi hyödyntää. Voit syventyä myös esimerkiksi luonnollisen kielen tulkintaan (NLP) ja sanavektoreihin.
 
 * **Vahvistusoppiminen:**
 
-Kouluta vahvistusoppimisella (reinforcement learning) jonkin pelin tekoäly. Tässä esimerkiksi on [youtube-playlista](https://www.youtube.com/playlist?list=PLTWFMbPFsvz3CeozHfeuJIXWAJMkPtAdS), jolla koulutetaan tekoäly pelaamaan Segan Sonic the hedgehog -peliä [Open AI:n](https://openai.com/) ja [Neatin](https://neat-python.readthedocs.io/en/latest/neat_overview.html) avulla. 
+    Kouluta vahvistusoppimisella (reinforcement learning) jonkin pelin tekoäly. Tässä esimerkiksi on [youtube-playlista](https://www.youtube.com/playlist?list=PLTWFMbPFsvz3CeozHfeuJIXWAJMkPtAdS), jolla koulutetaan tekoäly pelaamaan Segan Sonic the hedgehog -peliä [Open AI:n](https://openai.com/) ja [Neatin](https://neat-python.readthedocs.io/en/latest/neat_overview.html) avulla. 
 
 ## Azure tai vastaava pilvipalvelu
 
