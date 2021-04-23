@@ -33,7 +33,7 @@ Lisäksi seminaariaiheen haastekerroin vaikuttaa arviointiin. Jos teette haastav
 
 * **Seminaariaiheen ilmoittaminen Teams-kanavalle**
 
-    DL 30.4.2021, klo 12
+    DL 27.4.2021, klo 12
 
 * **Yksilöllistä seminaarityön ohjausta Teamsissa**
 
