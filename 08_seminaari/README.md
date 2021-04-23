@@ -7,7 +7,7 @@ Saman seminaariaiheen valinneet opiskelijat osallistuvat sen aiheen yhteiseen se
 
 ## Seminaaritehtävän raportointi ja palauttaminen
 
-Raportoi seminaarityösi seminaariesityksiä ja arviointia varten Teams-tehtävään liitettyyn [esityspohjaan](https://docs.google.com/presentation/d/1NkrV-k6aivE7U-yjYlGvtp6rONhOV5gmgHfCuD3bXj8/copy). Palauta tehtävä pdf-muodossa, eli tallenna esitys PowerPointissa tai Google Slides'sa PDF:ksi. 
+Raportoi seminaarityösi seminaariesityksiä ja arviointia varten Teams-tehtävään liitettyyn [PowerPoint-esityspohjaan](https://teams.microsoft.com/l/message/19:91797aba48074dddaf47377b3cb318a2@thread.tacv2/1619084659760?tenantId=a9e39483-dd21-4c25-b848-2a625cff7939&groupId=d1702b37-fa13-4428-a687-e9cda765b7b5&parentMessageId=1619084659760&teamName=Ohjelmistokehityksen%20teknologioita&channelName=Yleinen&createdTime=1619084659760) tai vaihtoehtoiseen [Google Sheets -pohjaan](https://docs.google.com/presentation/d/1NkrV-k6aivE7U-yjYlGvtp6rONhOV5gmgHfCuD3bXj8/copy). Palauta tehtävä PDF-muodossa, eli tallenna esitys PowerPointissa tai Google Slides'sa PDF:ksi. 
 
 Esityksen lisäksi nauhoita noin 5 minuuttia kestävä video, jossa esittelet työsi teknistä toteutusta esityspohjassa olevan ohjeen mukaisesti. Videolla ei ole tarpeen käsitellä tai näyttää PowerPoint-esitystä, voitte olettaa katsojan jo tuntevan sen sisällön.
 
