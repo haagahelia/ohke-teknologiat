@@ -6,6 +6,8 @@ Saman seminaariaiheen valinneet opiskelijat osallistuvat sen aiheen yhteiseen se
 
 Seminaarit järjestetään peräkkäin siten, että kerrallaan on käynnissä kahden aiheen seminaarit omilla Teams-kanavillaan. Olette lämpimästi tervetulleita osallistumaan myös muiden seminaariaiheiden tilaisuuksiin oman seminaarinne ulkopuolella! Voitte myös tutustua seminaarien tallenteisiin jälkikäteen, mikäli ette päällekkäisyyksien vuoksi pysty osallistumaan kaikkiin teitä kiinnostaviin aiheisiin.
 
+Seminaarityön laajuus on noin 20 tuntia työtä.
+
 
 ## Seminaaritehtävän raportointi ja palauttaminen
 
@@ -22,6 +24,28 @@ Seminaaritöitä arvioidessa katsomme ennen kaikkea sitä, miten hyvin seminaari
 
 Lisäksi seminaariaiheen haastekerroin vaikuttaa arviointiin. Jos teette haastavuudeltaan suunnilleen samantasoisia asioita kun kurssin perustehtävät ovat olleet, niin se vastaa tavoitearvosanaltaa 3:a. Jos osaatte syventää asiaa jo hieman pidemmälle, puhutaan arvosanoista 4-5.
 
+
+## Aikataulu
+
+* **Seminaarien käynnistys**
+
+    23.4.2021
+
+* **Seminaariaiheen ilmoittaminen Teams-kanavalle**
+
+    DL 30.4.2021, klo 12
+
+* **Yksilöllistä seminaarityön ohjausta Teamsissa**
+
+    Opettajat tavoitettavissa pe 30.4. ja pe 7.5. klo 12-15 välillä. Ota yhteyttä ja sovi videotapaaminen!
+
+* **Seminaarin tulosten palauttaminen Teamsiin**
+
+    DL 10.5.2021, klo 23.59
+
+* **Seminaariesitykset**
+
+    14.5.2021, klo 12-25
 
 # Seminaariaiheita
 
