@@ -1,6 +1,29 @@
+# Seminaari
+
+Seminaarivaiheessa jokainen opiskelija valitsee kurssin aiheista itseään eniten kiinnostavan ja tekee siihen liittyvän seminaaritehtävän. Seminaaritehtävän voi valita joko opettajien ehdotuksista, tai seminaaritehtävän aihetta voi ehdottaa myös itse. Seminaaritehtävä voi liittyvä läheisesti opiskelijan ohjelmistoprojekti 2-projektiin. 
+
+Saman seminaariaiheen valinneet opiskelijat osallistuvat sen aiheen yhteiseen seminaariin, jossa analysoidaan ja kommentoidaan myös muiden opiskelijoiden seminaaritöitä. Lopuksi järjestetään vielä mahdollinen yhteinen seminaari, jossa jokaisen pienemmän seminaarin tärkeimmät (tai parhaat) tulokset esitellään kaikille.
+
+
+## Seminaaritehtävän raportointi ja palauttaminen
+
+Raportoi seminaarityösi seminaariesityksiä ja arviointia varten Teams-tehtävään liitettyyn [esityspohjaan](https://docs.google.com/presentation/d/1NkrV-k6aivE7U-yjYlGvtp6rONhOV5gmgHfCuD3bXj8/copy). Palauta tehtävä pdf-muodossa, eli tallenna esitys PowerPointissa tai Google Slides'sa PDF:ksi. 
+
+Esityksen lisäksi nauhoita noin 5 minuuttia kestävä video, jossa esittelet työsi teknistä toteutusta esityspohjassa olevan ohjeen mukaisesti. Videolla ei ole tarpeen käsitellä tai näyttää PowerPoint-esitystä, voitte olettaa katsojan jo tuntevan sen sisällön.
+
+Seminaarityösi arvioidaan tämän palautuksen perusteella. Lisäksi osa opiskelijoista valitaan esittelemään töitään muille seminaarilaisille 14.5. seminaarissa.
+
+
+## Arviointi
+
+Seminaaritöitä arvioidessa katsomme ennen kaikkea sitä, miten hyvin seminaarityössänne on syvennytty kyseiseen seminaariaiheeseen ja löydetty kiinnostavia näkökulmia siihen seminaariaiheeseen liittyen (esim siis tietorakenteiden näkökulmasta). Eli miten hyvin olette osanneet soveltaa nyt kurssin "teoriaosuuksissa" ja harjoituksissa oppimianne asioita omissaa toteutuksissanne.
+
+Lisäksi seminaariaiheen haastekerroin vaikuttaa arviointiin. Jos teette haastavuudeltaan suunnilleen samantasoisia asioita kun kurssin perustehtävät ovat olleet, niin se vastaa tavoitearvosanaltaa 3:a. Jos osaatte syventää asiaa jo hieman pidemmälle, puhutaan arvosanoista 4-5.
+
+
 # Seminaariaiheita
 
-Tälle sivulle on koottu esimerkkiaiheita kurssin seminaaritehtävää varten. Voit melko vapaasti jalostaa ideoita vastaamaan omaa vaatimustasoasi ja kiinnostuksen kohteitasi.
+Tälle sivulle on koottu esimerkkiaiheita kurssin seminaaritehtävää varten. Voit melko vapaasti jalostaa ideoita vastaamaan omaa vaatimustasoasi ja kiinnostuksen kohteitasi. Lisää oma aiheesi uutena viestinä kyseisen aihealueen Teams-kanavalle.
 
 ## Python
 
