@@ -45,7 +45,7 @@ Lisäksi seminaariaiheen haastekerroin vaikuttaa arviointiin. Jos teette haastav
 
 * **Seminaariesitykset**
 
-    14.5.2021, klo 12-25
+    14.5.2021, klo 12-15
 
 # Seminaariaiheita
 
