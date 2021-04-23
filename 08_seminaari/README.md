@@ -2,7 +2,9 @@
 
 Seminaarivaiheessa jokainen opiskelija valitsee kurssin aiheista itseään eniten kiinnostavan ja tekee siihen liittyvän seminaaritehtävän. Seminaaritehtävän voi valita joko opettajien ehdotuksista, tai seminaaritehtävän aihetta voi ehdottaa myös itse. Seminaaritehtävä voi liittyvä läheisesti opiskelijan ohjelmistoprojekti 2-projektiin. 
 
-Saman seminaariaiheen valinneet opiskelijat osallistuvat sen aiheen yhteiseen seminaariin, jossa analysoidaan ja kommentoidaan myös muiden opiskelijoiden seminaaritöitä. Lopuksi järjestetään vielä mahdollinen yhteinen seminaari, jossa jokaisen pienemmän seminaarin tärkeimmät (tai parhaat) tulokset esitellään kaikille.
+Saman seminaariaiheen valinneet opiskelijat osallistuvat sen aiheen yhteiseen seminaariin, jossa esitellään, analysoidaan ja kommentoidaan myös muiden opiskelijoiden seminaaritöitä. 
+
+Seminaarit järjestetään peräkkäin siten, että kerrallaan on käynnissä kahden aiheen seminaarit omilla Teams-kanavillaan. Olette lämpimästi tervetulleita osallistumaan myös muiden seminaariaiheiden tilaisuuksiin oman seminaarinne ulkopuolella! Voitte myös tutustua seminaarien tallenteisiin jälkikäteen, mikäli ette päällekkäisyyksien vuoksi pysty osallistumaan kaikkiin teitä kiinnostaviin aiheisiin.
 
 
 ## Seminaaritehtävän raportointi ja palauttaminen
