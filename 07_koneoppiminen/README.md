@@ -154,6 +154,7 @@ Liitteenä olevassa kuviossa on esitetty jostain datasta tehdyt neljä havaintoa
 Kouluta koneoppimismalli jostain datasta ja laadi sillä ennusteita (esim. keraksella kuvien tunnistamista). Voi liittyä ohjelmistoprojekti 2:seen mieluusti.
 
 Kerakseen liittyviä materiaaleja:
+* [Image classification from scratch](https://keras.io/examples/vision/image_classification_from_scratch/)
 * [Keraswith TensorFlow Course -Python Deep Learning and Neural Networks for Beginners Tutorial](https://www.youtube.com/watch?reload=9&v=qFJeN9V1ZsITensorflowImage) 
 * [Build Your Own Image Classifier In Tensorflow](https://www.youtube.com/watch?v=AACPaoDsd50Deep) 
 * [Learning with Keras+ TensorFlow -(Pt.2) Build the CNN](https://www.youtube.com/watch?v=lOZGYzTn9Z8Build)
