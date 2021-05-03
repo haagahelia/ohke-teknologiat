@@ -149,16 +149,17 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
                 <em>Yksilöllistä ohjausta Teamsissa</em></td>
         </tr>
         <tr>
-            <td>ma 10.5.</td>
+            <td>pe 14.5.</td>
+            <td>Seminaarityön tekemistä<br />
+                <em>Yksilöllistä ohjausta Teamsissa</em></td>
+        </tr>
+        <tr>
+            <td>ma 17.5.</td>
             <td>Seminaaritöiden raportin palautus</td>
         </tr>
         <tr>
-            <td>pe 14.5.</td>
-            <td>Seminaariesityksiä</td>
-        </tr>
-        <tr>
             <td>pe 21.5.</td>
-            <td>(mahdollisesti seminaariesityksiä)</td>
+            <td>Seminaariesityksiä</td>
         </tr>
     </tbody>
 </table>
