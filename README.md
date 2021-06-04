@@ -8,6 +8,10 @@ Opettajina kurssilla toimivat Ohto Rainio ja Teemu Havulinna (etunimi.sukunimi@h
 
 ![Kurssin aiheet](img/kurssin_aiheet.png)
 
+## Luentovideot
+
+**[Video: Ohjelmistokehityksen teknologioita kurssin yleinen johdanto](https://web.microsoftstream.com/video/ae56e0e9-5bd1-4576-9994-bcd3c29eafaa)**
+
 ## Linkit
 
 * [Opintojaksokuvaus](https://opinto-opas.haaga-helia.fi/course_unit/SWD4TN023)
