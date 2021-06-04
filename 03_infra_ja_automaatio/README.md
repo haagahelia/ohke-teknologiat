@@ -14,6 +14,14 @@
 
 Ohjelmistokehittäjän työssä on paljon oheistyökaluja ja tekniikoita, jotka helpottavat kehitystyötä ja parantavat kehitystyön laatua. Tässä osiossa on esitelty näitä asioita.
 
+## Luentovideot
+
+**[Video: Johdanto Gitin ja Githubin käyttöön](https://web.microsoftstream.com/video/c13cb771-9f12-4a50-b8fa-04bf76393885)**
+
+**[Video: Git demo](https://web.microsoftstream.com/video/e7f7d1cb-7ac2-49d1-a08f-5613d24d4989)**
+
+**[Video: Paketinhallinta (npm), CI/CD, Docker](https://web.microsoftstream.com/video/e36de940-2634-4b5a-a09e-a2891c2a61ae)**
+
 ## Versionhallinta (Git) ja Github-palvelu
 
 <!-- TODO: lisää maininta graafisista GIT-työkaluista -->
