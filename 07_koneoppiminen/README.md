@@ -5,6 +5,15 @@
 * [Koneoppiminen käytännössä](#koneoppiminen-käytännössä)
 * [Tehtävät](#tehtävät)
 
+## Luentovideot
+
+**[Video: Johdanto koneoppimiseen](https://web.microsoftstream.com/video/24cde106-9001-4151-a549-a36092a50313)**
+
+**[Video: Johdanto jatkuu ja miten kone oppii](https://web.microsoftstream.com/video/c33eb567-1481-47b2-b931-8816aec5c4b4)**
+
+**[Video: Käytännön työkaluja](https://web.microsoftstream.com/video/561459e5-c87d-457b-bcdf-cda19577aead)**
+
+
 # Johdanto koneoppimiseen
 
 Koneoppimisessa on kyse siitä, että datan avulla tietokone voidaan opettaa ratkaisemaan ongelmia tietyssä toimintaympäristössä ilman varsinaista ohjelmointia. Dataa kyseisestä ongelmakentästä täytyy kuitenkin olla paljon, jotta *koneoppimismalli* voidaan kouluttaa. Ongelmakentän tulee myös olla tarkasti rajattu, eikä samalla datalla koulutettua mallia voida siirtää toisen ongelman ratkaisuun. Termiä *tekoäly* tunnutaan käyttävän monesti myös synonyyminä koneoppimisesta ja toisaalta mikä tahansa tavallinen ohjelmoitu algoritmi saatetaan nykyään luokitella valtamediassa "tekoälyksi". 
