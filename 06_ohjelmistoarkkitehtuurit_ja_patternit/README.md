@@ -7,6 +7,19 @@
 * [Tehtävät](#tehtävät)
 <!--Jaksaako tätä ylläpitää manuaalisesesti...-->
 
+## Luentovideot
+
+**[Video: Johdanto arkkitehtuureihin ja patterneihin](https://web.microsoftstream.com/video/71f21473-a6d1-497b-8652-c58bcd7c225e)**
+
+**[Video: Johdanto jatkuu ja olioparadigma](https://web.microsoftstream.com/video/3a4f462b-de19-4292-af10-29b0ec386c33)**
+
+**[Video: Olioparadigma jatkuu](https://web.microsoftstream.com/video/f118605f-4f7e-4d82-a782-62c0ebcc07f4)**
+
+**[Video: Funktionaalinen paradigma](https://web.microsoftstream.com/video/0ee84095-0af2-45db-927c-8a8dda0d07b7)**
+
+**[Video: Arkkitehtuurimallien pohdintaa ja kaavioita](https://web.microsoftstream.com/video/49e8da2c-bb03-4cdc-86a5-99845609a3be)**
+
+
 # Ohjelmistoarkkitehtuurit ja patternit
 
 Arkkitehtuuriperiaatteet ovat samoja riippumatta minkälainen ohjelmistojärjestelmä on kyseessä, olipa kyseessä konsolisovellus, graafinen käyttöliittymä, peli, kirjanpintojärjestelmä, monisäiejärjestelmä, tietokantasovellus, jne. Nämä periaatteet eivät ole myöskään radikaalisti muuttuneet ohjelmointikielten ja järjestelmien laskentatehojen kehittyessä vuosikymmenien aikana. (Martin R., Clean Architecture).
