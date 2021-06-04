@@ -7,6 +7,7 @@ Ohjeet kurssille tarvittavan ympäristön asentamiseksi löydät [täältä](ase
 ## Luentovideot
 
 **[Video: Linux luento 1 peruskomennot](https://web.microsoftstream.com/video/f6013fac-0aad-4abb-90ea-50b9899599ff)**
+
 **[Video: Linux luento 2 skriptaaminen ja tehtävä](https://web.microsoftstream.com/video/d4ae20a1-7dcf-407c-b7f8-ffca9c0b099c)**
 
 ## Linuxin ja komentorivin perusteet
