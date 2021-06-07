@@ -4,6 +4,24 @@ Tämän oppitunnin tavoitteena on tutustua testauksen eri tasoihin yksikköteste
 
 Aiheen opiskelun jälkeen osaat kirjoittaa Python-funktioillesi yksikkötestit ja tiedät mistä lähteä liikkeelle, kun sinulle tulee tarve kirjoittaa automatisoituja testejä. Osaat myös huomioida testausnäkökulmaa jäsentäessäsi Python-ohjelmiasi eri moduuleihin ja funktioihin.
 
+
+# Oppitunnin videot
+
+Tämän aiheen videot julkaistaan perjantaina 10.9.
+
+**[Osa 1: Orientaatio testaukseen](https://web.microsoftstream.com/video/8f0d594f-9277-4782-937e-9d215d7cf7c4)** *44:38*
+
+Tällä videolla käymme läpi postitoimipaikka- ja postinumerot-tehtävien malliratkaisut ja tutustumme testaukseen yleisellä tasolla.
+
+**[Osa 2: pytest-työkalu](https://web.microsoftstream.com/video/674aaa29-74eb-401f-8251-e6f14df7ae5d)** *45:43*
+
+Tällä videolla tutustumme Pytest-työkaluun ja yksikkötestien automatisointiin. 
+
+**[Osa 3: pytest-mock ja harjoitustehtävän tehtävänanto](https://web.microsoftstream.com/video/9c438228-0354-49bb-8fb1-1ad03e4222cd)** *33:10*
+
+Tällä videolla harjoittelemme ulkoisten riippuvuuksien korvaamista testeissä ja käymme läpi viikkotehtävän tehtävänannon.
+
+
 ## Malliratkaisu
 
 Tämän tehtävän malliratkaisu on julkaistu:
