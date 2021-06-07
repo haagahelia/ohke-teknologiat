@@ -9,6 +9,7 @@ Aiheen opiskelun jälkeen osaat kirjoittaa Python-funktioillesi yksikkötestit j
 
 Tämän aiheen videot julkaistaan perjantaina 10.9.
 
+<!-- 
 **[Osa 1: Orientaatio testaukseen](https://web.microsoftstream.com/video/8f0d594f-9277-4782-937e-9d215d7cf7c4)** *44:38*
 
 Tällä videolla käymme läpi postitoimipaikka- ja postinumerot-tehtävien malliratkaisut ja tutustumme testaukseen yleisellä tasolla.
@@ -20,15 +21,7 @@ Tällä videolla tutustumme Pytest-työkaluun ja yksikkötestien automatisointii
 **[Osa 3: pytest-mock ja harjoitustehtävän tehtävänanto](https://web.microsoftstream.com/video/9c438228-0354-49bb-8fb1-1ad03e4222cd)** *33:10*
 
 Tällä videolla harjoittelemme ulkoisten riippuvuuksien korvaamista testeissä ja käymme läpi viikkotehtävän tehtävänannon.
-
-
-## Malliratkaisu
-
-Tämän tehtävän malliratkaisu on julkaistu:
-
-* [test_postinumerot.py](https://raw.githubusercontent.com/haagahelia/swd4tn023/testaus-malliratkaisu/01_python/src/test_postinumerot.py)
-* [postinumerot.py](https://raw.githubusercontent.com/haagahelia/swd4tn023/testaus-malliratkaisu/01_python/src/postinumerot.py)
-* [http_pyynto.py](https://raw.githubusercontent.com/haagahelia/swd4tn023/testaus-malliratkaisu/01_python/src/http_pyynto.py)
+-->
 
 
 ## Suositeltava oheisvideo: [What is Automated Testing?](https://www.youtube.com/watch?v=Nd31XiSGJLw)
