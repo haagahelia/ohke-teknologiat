@@ -15,13 +15,14 @@ Tämän GitHub-repositorion oppimateriaali on tarkoitettu oppitunnin rungoksi, e
 
 Lisää hyvä lähteitä löydät hakukoneilla. Jaathan vinkkejä hyvistä materiaaleista myös kurssin Teamsissa!
 
-<!--## Oppitunnin tallenteet 2020
 
-[Osa 1: kurssin yleiset käytännöt ja johdanto 1. tehtävään](https://web.microsoftstream.com/video/3984ea5c-7782-484c-af51-ce6d50b049ad)
+# Oppitunnin videot
 
-[Osa 2: Python-ohjelmointi](https://web.microsoftstream.com/video/bff8f1a1-025d-4c13-8287-7721032be43c)
+**[Osa 1: Python-kielen perusrakenteet ja komentorivikäyttö](https://web.microsoftstream.com/video/497d7df3-1629-49f9-b460-82c1d479b03d)** *43:09*
 
-[Lähdekoodit](src/)-->
+**[Osa 2: Pythonin tietorakenteet, ehtolauseet ja toistolauseet](https://web.microsoftstream.com/video/0f31953b-417b-4669-915d-ca35917bfbc0)** *1:03:17*
+
+
 
 # Oppitunnin aiheet
 
