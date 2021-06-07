@@ -7,6 +7,21 @@ kuvaa ratkaistavan ongelman tapauksen, ja algoritmin tulee tuottaa tuloste (outp
 > *Antti Laaksonen, [Tietorakenteet ja algoritmit -kirja](https://github.com/pllk/tirakirja/raw/master/tirakirja.pdf)*
 
 
+# Oppitunnin videot
+
+**[Osa 1: Johdanto tietorakenteisiin ja algoritmeihin](https://web.microsoftstream.com/video/b9af8942-94fb-46ac-a085-6cb9e57199c4)** *1:00:48*
+
+Tällä videolla toteutamme yksinkertaisen listoja hyödyntävän toistorakenteen ja perehdymme sen tehokkuuteen.
+
+**[Osa 2: Hajautustaulut, joukot ja asymptoottinen suoritusaika](https://web.microsoftstream.com/video/1967c82b-9d40-4247-9db0-95f5067c026a)** *48:46*
+
+Tällä videolla perehdymme vertaillen eri tietorakenteisiin sekä niihin liittyvien operaatioiden suoritusaikaan. Opimme arvioimaan oman koodimme suoritusaikaa ja valitsemaan tarpeet huomioiden tehokkaita tietorakenteita ja algoritmeja.
+
+**[Osa 3: Viikon harjoitustehtävän tehtävänanto ja vinkit](https://web.microsoftstream.com/video/7e1e6347-b8c5-4f03-8c92-369591408be4)** *19:18*
+
+Viikon harjoitustehtävän tehtävänanto.
+
+
 ## Tavoitteet
 
 Tällä viikolla ohjelmistokehityksen teknologioita -kurssilla tavoitteena on perehtyä tietorakenteiden ja algoritmien peruskäsitteisiin. Opettelemme arvioimaan karkeasti erilaisten algoritmisten lähestymistapojen soveltuvuutta kohtaamiimme ohjelmointiongelmiin.
