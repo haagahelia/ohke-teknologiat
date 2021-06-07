@@ -33,14 +33,14 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
     </thead>
     <tbody>
         <tr>
-            <td>pe 22.1.</td>
+            <td>pe 27.8.</td>
             <td>
                 <a href="00_linux">Kurssin johdanto, ympäristöt ja Linux/Unix-komentorivi</a><br />
                 <a href="00_linux/asennukset.md">⭐ Ennakkotehtävä: kurssin kehitysympäristön asennus</a>
             </td>
         </tr>
         <tr>
-            <td>pe 29.1.</td>
+            <td>pe 3.9.</td>
             <td>
                 <a href="01_python">Python-ohjelmointi</a><br />
                 <ul>
@@ -51,7 +51,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
             </td>
         </tr>
         <tr>
-            <td>pe 5.2.</td>
+            <td>pe 10.9.</td>
             <td>
                 <a href="02_testaus">Testaus</a><br />
                 <ul>
@@ -63,7 +63,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
             </td>
         </tr>
         <tr>
-            <td>pe 12.2.</td>
+            <td>pe 17.9.</td>
             <td>
                 <a href="03_infra_ja_automaatio">Infra ja automaatio</a><br />
                 <ul>
@@ -73,7 +73,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
             </td>
         </tr>
         <tr>
-            <td>pe 19.2.</td>
+            <td>pe 24.9.</td>
             <td>
                 <a href="04_tietorakenteet_ja_algoritmit">Tietorakenteet ja algoritmit</a><br />
                 <ul>
@@ -84,11 +84,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
             </td>
         </tr>
         <tr>
-            <td>pe 26.2.</td>
-            <td><del>Talvilomaviikko</del></td>
-        </tr>
-        <tr>
-            <td>pe 5.3.</td>
+            <td>pe 1.10.</td>
             <td>
                 <a href="05_es6_node">Node / JavaScript</a><br />
                 <ul>
@@ -99,7 +95,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
             </td>
         </tr>
         <tr>
-            <td>pe 12.3.</td>
+            <td>pe 8.10.</td>
             <td>
                 <a href="05_es6_node">Node / JavaScript</a><br />
                 <ul>
@@ -110,60 +106,59 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
             </td>
         </tr>
         <tr>
-            <td>pe 19.3.</td>
+            <td>pe 15.10.</td>
             <td>
                 <a href="06_ohjelmistoarkkitehtuurit_ja_patternit">Ohjelmistoarkkitehtuurit ja patternit</a>
             </td>
         </tr>
         <tr>
-            <td>pe 26.3.</td>
+            <td>pe 22.10.</td>
             <td><del>Intensiiviviikko</del></td>
         </tr>
-        <tr>
+        <!--tr>
             <td>pe 2.4.</td>
             <td>
-                Pitkäperjantai: <strong>ei oppituntia</strong><br />
                 <a href="09_azure">Azure-materiaalit itseopiskeluun</a>
             </td>
-        </tr>
+        </tr-->
         <tr>
-            <td>pe 9.4.</td>
+            <td>pe 29.10.</td>
             <td>
                 <a href="06_ohjelmistoarkkitehtuurit_ja_patternit">Ohjelmistoarkkitehtuurit ja patternit</a>
             </td>
         </tr>
         <tr>
-            <td>pe 16.4.</td>
+            <td>pe 5.11.</td>
             <td>
                 <a href="07_koneoppiminen">Koneoppiminen</a>
             </td>
         </tr>
         <tr>
-            <td>pe 23.4.</td>
+            <td>pe 12.11.</td>
             <td><a href="08_seminaari">Seminaarien käynnistys</a></td>
         </tr>
         <tr>
-            <td>pe 30.4.</td>
+            <td>pe 19.11.</td>
             <td>Seminaarityön tekemistä<br />
-                <em>Yksilöllistä ohjausta Teamsissa</em></td>
+                <em>Yksilöllistä ohjausta Teamsissa tai kampuksella</em></td>
         </tr>
         <tr>
-            <td>pe 7.5.</td>
+            <td>pe 26.11.</td>
             <td>Seminaarityön tekemistä<br />
-                <em>Yksilöllistä ohjausta Teamsissa</em></td>
+                <em>Yksilöllistä ohjausta Teamsissa tai kampuksella</em></td>
         </tr>
         <tr>
-            <td>pe 14.5.</td>
+            <td>pe 3.12.</td>
             <td>Seminaarityön tekemistä<br />
-                <em>Yksilöllistä ohjausta Teamsissa</em></td>
+                <em>Yksilöllistä ohjausta Teamsissa tai kampuksella</em></td>
         </tr>
         <tr>
-            <td>ma 17.5.</td>
+            <td>su 5.12.</td>
             <td>Seminaaritöiden raportin palautus</td>
         </tr>
         <tr>
-            <td>pe 21.5.</td>
-            <td>Seminaariesityksiä</td>
+            <td>pe 10.12.</td>
+            <td>Seminaariesitykset</td>
         </tr>
     </tbody>
 </table>
