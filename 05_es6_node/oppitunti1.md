@@ -1,4 +1,4 @@
-# Oppitunti 5.3.2021
+# Oppitunti 1.10.2021
 
 Tämän oppitunnin tavoitteena on oppia erityisesti lukemaan koodia ja ymmärtämään, miten yleisimmät JavaScript-kieliset esimerkkikoodit toimivat. Sivuamme funktionaalista ohjelmointia hyödyntämällä funktioiden antamista parametreina toisille funktioille (callback) sekä uusien funktioiden palauttamista paluuarvoina (currying).
 
@@ -22,6 +22,23 @@ Itseopiskelumateriaalina voit hyödyntää hyviä sivustoja, kuten:
 * https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d
 
 Aiheen otsikossa esiintyvä MongoDB-tietokanta ei ole osa oppituntien yhteistä sisältöä eikä oppituntiin liittyvää kotitehtävää, vaan MongoDB:tä on mahdollista hyödyntää kurssin syventävässä seminaariosuudessa.
+
+
+# Oppitunnin videot
+
+**[Osa 1: Johdanto ES6-aiheeseen ja oppitunnin tavoitteisiin](https://web.microsoftstream.com/video/4ff9a051-3e45-4e89-a194-a6e68084d55a)** *21:02*
+
+JavaScriptin eri versiot, laajennokset, ohjelmointityylit ja työkalut.
+
+**[Osa 2: ES6-syntaksit](https://web.microsoftstream.com/video/7099841a-16d7-44f2-99fe-c37302c4b024)** *44:45*
+
+ES6-syntaksit. Funktioiden vaiheittainen suoritus (currying). Nuolifunktiot ja sulkeumat.
+
+**[Osa 3: Datan käsittely funktionaalisesti](https://web.microsoftstream.com/video/94a16d95-45eb-4c69-b69c-d8c70e4c0560)** *35:17*
+
+JS:n import, require ja exportit. Oppitunnin aiheiden soveltaminen Helsinki Open API:n tapahtuma-aineiston kanssa. Viikkoharjoituksen tehtävänanto.
+
+Videolla editoitava tiedosto: [events.js](./src/events.js)
 
 
 ## JavaScriptin ohjelmointityylit

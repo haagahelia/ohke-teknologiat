@@ -1,8 +1,25 @@
-# Oppitunti 12.3.2021
+# Oppitunti 8.10.2021
 
 Tällä oppitunnilla jatkamme JavaScript-kielen ja Node.js:n parissa. Tutustumme suosittuun [Express](https://expressjs.com/)-sovelluskehykseen, jonka avulla voimme toteuttaa JavaScript-pohjaisen verkkopalvelun. Lisäksi sivuamme JavaScriptin yksikkötestausta [Mocha](https://mochajs.org/)-työkalun avulla.
 
 
+# Oppitunnin videot
+
+Tämän oppitunnin videot julkaistaan 8.10.2021.
+
+<!--
+**[Osa 1: ES6 kertaus, malliratkaisu sekä Mocha-yksikkötestit](https://web.microsoftstream.com/video/8d5ce190-2bd0-4c8a-84ad-f51b2cbe7f3e)** *52:44*
+
+Tällä videolla kerrataan edellisen viikon syntaksit konkreettisen esimerkin avulla. Käymme läpi users & posts -tehtävän malliratkaisun ja perehdymme yksikkötestaukseen Mocha-testaustyökalulla.
+
+**[Osa 2: Yksikkötestaus, http-pyynnöt ja asynkroninen ohjelmointi](https://web.microsoftstream.com/video/1ef90b63-0b90-4606-a75c-c25ccf13cb61)** *1:05:23*
+
+Tällä videolla käsittelemme yksikkötestausta Mochalla sekä eri tyyppisten arvojen vertailua JavaScriptillä. Asennamme `node-fetch`-kirjaston, jonka avulla voimme tehdä asynkronisia HTTP-pyyntöjä Node.js-koodistamme. Videon esimerkkikoodit: [api.js](./src/blog/api.js), [blog-api.test.js](./src/test/blog-api.test.js).
+
+**[Osa 3: Express](https://web.microsoftstream.com/video/68dfd069-5b72-4484-a6fd-0b3199f803a2)** *32:52*
+
+Tällä videolla asennamme express-kirjaston, jonka avulla toteutamme yksinkertaisen http-palvelun edellisissä videoissa käsitellyn datan tarjoamiseksi web-selaimelle. Videon esimerkkikoodit löytyvät tiedostoista [] Käsittelemme videon lopussa myös tämän viikon harjoitustehtävän tehtävänantoa. Videolla luodaan ja muokataan tiedostoa [index.js](./src/index.js).
+-->
 
 # ES6-syntaksien kertaus
 

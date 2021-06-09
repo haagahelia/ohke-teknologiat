@@ -6,6 +6,6 @@ Oppitunneilla oletetaan hyvää perusosaamista JavaScript-kielestä ainakin olio
 
 Tunneilla käsittelemme samaa MyHelsinki-tapahtuma-aineistoa, jota käsittelimme myös tietorakenteiden ja algoritmien kotitehtävässä.
 
-[**Oppitunti 1, 5.3.2021**](oppitunti1.md)
+[**Oppitunti 1, 1.10.2021**](oppitunti1.md)
 
-[**Oppitunti 2, 12.3.2021**](oppitunti2.md)
+[**Oppitunti 2, 8.10.2021**](oppitunti2.md)
