@@ -16,7 +16,7 @@ Tämän GitHub-repositorion oppimateriaali on tarkoitettu oppitunnin rungoksi, e
 Lisää hyvä lähteitä löydät hakukoneilla. Jaathan vinkkejä hyvistä materiaaleista myös kurssin Teamsissa!
 
 
-# Oppitunnin videot
+# Videot
 
 **[Osa 1: Python-kielen perusrakenteet ja komentorivikäyttö](https://web.microsoftstream.com/video/497d7df3-1629-49f9-b460-82c1d479b03d)** *43:09*
 

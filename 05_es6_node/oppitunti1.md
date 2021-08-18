@@ -1,4 +1,4 @@
-# Oppitunti 1.10.2021
+# ES6-syntaksit ja funktionaalinen ohjelmointityyli
 
 Tämän oppitunnin tavoitteena on oppia erityisesti lukemaan koodia ja ymmärtämään, miten yleisimmät JavaScript-kieliset esimerkkikoodit toimivat. Sivuamme funktionaalista ohjelmointia hyödyntämällä funktioiden antamista parametreina toisille funktioille (callback) sekä uusien funktioiden palauttamista paluuarvoina (currying).
 
@@ -21,10 +21,8 @@ Itseopiskelumateriaalina voit hyödyntää hyviä sivustoja, kuten:
 * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/
 * https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d
 
-Aiheen otsikossa esiintyvä MongoDB-tietokanta ei ole osa oppituntien yhteistä sisältöä eikä oppituntiin liittyvää kotitehtävää, vaan MongoDB:tä on mahdollista hyödyntää kurssin syventävässä seminaariosuudessa.
 
-
-# Oppitunnin videot
+# Aiheen videot
 
 **[Osa 1: Johdanto ES6-aiheeseen ja oppitunnin tavoitteisiin](https://web.microsoftstream.com/video/4ff9a051-3e45-4e89-a194-a6e68084d55a)** *21:02*
 

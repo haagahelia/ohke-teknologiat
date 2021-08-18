@@ -9,6 +9,8 @@ kuvaa ratkaistavan ongelman tapauksen, ja algoritmin tulee tuottaa tuloste (outp
 
 # Oppitunnin videot
 
+Videoilla esiintyvät lähdekoodit löydät [täältä](./src/).
+
 **[Osa 1: Johdanto tietorakenteisiin ja algoritmeihin](https://web.microsoftstream.com/video/b9af8942-94fb-46ac-a085-6cb9e57199c4)** *1:00:48*
 
 Tällä videolla toteutamme yksinkertaisen listoja hyödyntävän toistorakenteen ja perehdymme sen tehokkuuteen.

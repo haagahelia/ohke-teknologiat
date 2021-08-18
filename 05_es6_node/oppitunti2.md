@@ -1,11 +1,11 @@
-# Oppitunti 8.10.2021
+# Node, NPM, Express ja Promiset
 
 Tällä oppitunnilla jatkamme JavaScript-kielen ja Node.js:n parissa. Tutustumme suosittuun [Express](https://expressjs.com/)-sovelluskehykseen, jonka avulla voimme toteuttaa JavaScript-pohjaisen verkkopalvelun. Lisäksi sivuamme JavaScriptin yksikkötestausta [Mocha](https://mochajs.org/)-työkalun avulla.
 
 
 # Oppitunnin videot
 
-Tämän oppitunnin videot julkaistaan 8.10.2021.
+Tämän aiheen videot julkaistaan maanantaina 4.10.2021.
 
 <!--
 **[Osa 1: ES6 kertaus, malliratkaisu sekä Mocha-yksikkötestit](https://web.microsoftstream.com/video/8d5ce190-2bd0-4c8a-84ad-f51b2cbe7f3e)** *52:44*

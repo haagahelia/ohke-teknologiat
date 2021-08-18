@@ -107,7 +107,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
         <tr>
             <td>5</td>
             <td>
-                <a href="05_es6_node">Node / JavaScript</a><br />
+                <a href="05_es6_node/oppitunti1.md">Node / JavaScript</a><br />
                 <ul>
                     <li>ES6-syntaksit</li>
                     <li>filter, map, reduce</li>
@@ -122,7 +122,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
         <tr>
             <td>6</td>
             <td>
-                <a href="05_es6_node">Node / JavaScript</a><br />
+                <a href="05_es6_node/oppitunti2.md">Node / JavaScript</a><br />
                 <ul>
                     <li>Express.js</li>
                     <li>Promise</li>

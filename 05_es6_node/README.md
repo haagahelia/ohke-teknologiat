@@ -6,6 +6,6 @@ Oppitunneilla oletetaan hyvää perusosaamista JavaScript-kielestä ainakin olio
 
 Tunneilla käsittelemme samaa MyHelsinki-tapahtuma-aineistoa, jota käsittelimme myös tietorakenteiden ja algoritmien kotitehtävässä.
 
-[**Oppitunti 1, 1.10.2021**](oppitunti1.md)
+[**Osa 1: ES6-syntaksit ja funktionaalinen ohjelmointityyli**](oppitunti1.md)
 
-[**Oppitunti 2, 8.10.2021**](oppitunti2.md)
+[**Osa 2: Node, NPM, Express ja Promiset**](oppitunti2.md)
