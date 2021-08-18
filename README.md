@@ -27,20 +27,25 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
 <table>
     <thead>
         <tr>
-            <th>Päivämäärä</th>
-            <th>Aihe</th>
+            <th>#</th>
+            <th>Aiheet</th>
+            <th>Aikataulu</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>pe 27.8.</td>
+            <td>0</td>
             <td>
-                <a href="00_linux">Kurssin johdanto, ympäristöt ja Linux/Unix-komentorivi</a><br />
-                <a href="00_linux/asennukset.md">⭐ Ennakkotehtävä: kurssin kehitysympäristön asennus</a>
+                <a href="00_linux/asennukset.md">⭐ Ennakkotehtävä: kurssin kehitysympäristön asennus</a><br />
+                <a href="00_linux">Kurssin johdanto, ympäristöt ja Linux/Unix-komentorivi</a>
+            </td>
+            <td>
+                Teams-sessio pe 27.8. klo 12<br />
+                Tehtävien DL su 29.8. klo 23:55
             </td>
         </tr>
         <tr>
-            <td>pe 3.9.</td>
+            <td>1</td>
             <td>
                 <a href="01_python">Python-ohjelmointi</a><br />
                 <ul>
@@ -49,9 +54,13 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
                     <li>Http-pyynnöt</li>
                 </ul>
             </td>
+            <td>
+                Teams-sessio pe 3.9. klo 12<br />
+                Tehtävien DL su 5.9. klo 23:55
+            </td>
         </tr>
         <tr>
-            <td>pe 10.9.</td>
+            <td>2</td>
             <td>
                 <a href="02_testaus">Testaus</a><br />
                 <ul>
@@ -61,9 +70,13 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
                     <li>Testikattavuus, fixturet, mock:it</li>
                 </ul>
             </td>
+            <td>
+                Teams-sessio <strong>to 9.9.</strong><br />
+                Tehtävien DL su 12.9. klo 23:55
+            </td>
         </tr>
         <tr>
-            <td>pe 17.9.</td>
+            <td>3</td>
             <td>
                 <a href="03_infra_ja_automaatio">Infra ja automaatio</a><br />
                 <ul>
@@ -71,9 +84,13 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
                     <li>Git: branch, merge, rebase...</li>
                 </ul>
             </td>
+            <td>
+                Teams-sessio pe 17.9. klo 12<br />
+                Tehtävien DL su 19.9. klo 23:55
+            </td>
         </tr>
         <tr>
-            <td>pe 24.9.</td>
+            <td>4</td>
             <td>
                 <a href="04_tietorakenteet_ja_algoritmit">Tietorakenteet ja algoritmit</a><br />
                 <ul>
@@ -82,9 +99,13 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
                     <li>Algoritmien tehokkuus</li>
                 </ul>
             </td>
+            <td>
+                Teams-sessio pe 24.9. klo 12<br />
+                Tehtävien DL su 26.9. klo 23:55
+            </td>
         </tr>
         <tr>
-            <td>pe 1.10.</td>
+            <td>5</td>
             <td>
                 <a href="05_es6_node">Node / JavaScript</a><br />
                 <ul>
@@ -93,9 +114,13 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
                     <li>currying</li>
                 </ul>
             </td>
+            <td>
+                Teams-sessio pe 1.10. klo 12<br />
+                Tehtävien DL su 3.10. klo 23:55
+            </td>
         </tr>
         <tr>
-            <td>pe 8.10.</td>
+            <td>6</td>
             <td>
                 <a href="05_es6_node">Node / JavaScript</a><br />
                 <ul>
@@ -104,16 +129,25 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
                     <li>Async/await</li>
                 </ul>
             </td>
-        </tr>
-        <tr>
-            <td>pe 15.10.</td>
             <td>
-                <a href="06_ohjelmistoarkkitehtuurit_ja_patternit">Ohjelmistoarkkitehtuurit ja patternit</a>
+                Teams-sessio pe 8.10. klo 12<br />
+                Tehtävien DL su 10.10. klo 23:55
             </td>
         </tr>
         <tr>
-            <td>pe 22.10.</td>
+            <td>7</td>
+            <td>
+                <a href="06_ohjelmistoarkkitehtuurit_ja_patternit">Ohjelmistoarkkitehtuurit ja patternit</a>
+            </td>
+            <td>
+                Teams-sessio pe 15.10. klo 12<br />
+                Tehtävien DL su 17.10. klo 23:55
+            </td>
+        </tr>
+        <tr>
+            <td>8</td>
             <td><del>Intensiiviviikko</del></td>
+            <td></td>
         </tr>
         <!--tr>
             <td>pe 2.4.</td>
@@ -122,43 +156,56 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
             </td>
         </tr-->
         <tr>
-            <td>pe 29.10.</td>
+            <td>9</td>
             <td>
                 <a href="06_ohjelmistoarkkitehtuurit_ja_patternit">Ohjelmistoarkkitehtuurit ja patternit</a>
             </td>
-        </tr>
-        <tr>
-            <td>pe 5.11.</td>
             <td>
-                <a href="07_koneoppiminen">Koneoppiminen</a>
+                Teams-sessio pe 29.10. klo 12<br />
+                Tehtävien DL su 31.10. klo 23:55
             </td>
         </tr>
         <tr>
-            <td>pe 12.11.</td>
+            <td>10</td>
+            <td>
+                <a href="07_koneoppiminen">Koneoppiminen</a>
+            </td>
+            <td>
+                Teams-sessio pe 5.11. klo 12<br />
+                Tehtävien DL su 7.11. klo 23:55
+            </td>
+        </tr>
+        <tr>
+            <td>11</td>
             <td><a href="08_seminaari">Seminaarien käynnistys</a></td>
+            <td>
+                Teams-sessio pe 12.11. klo 12
+            </td>
         </tr>
         <tr>
-            <td>pe 19.11.</td>
-            <td>Seminaarityön tekemistä<br />
-                <em>Yksilöllistä ohjausta Teamsissa tai kampuksella</em></td>
+            <td>12</td>
+            <td>Seminaarityön tekemistä</td>
+            <td><em>Yksilöllistä ohjausta Teamsissa tai kampuksella pe 19.11.</em></td>
         </tr>
         <tr>
-            <td>pe 26.11.</td>
-            <td>Seminaarityön tekemistä<br />
-                <em>Yksilöllistä ohjausta Teamsissa tai kampuksella</em></td>
+            <td>13</td>
+            <td>Seminaarityön tekemistä</td>
+            <td><em>Yksilöllistä ohjausta Teamsissa tai kampuksella pe 26.11.</em></td>
         </tr>
         <tr>
-            <td>pe 3.12.</td>
-            <td>Seminaarityön tekemistä<br />
-                <em>Yksilöllistä ohjausta Teamsissa tai kampuksella</em></td>
+            <td>14</td>
+            <td>Seminaarityön tekemistä</td>
+            <td><em>Yksilöllistä ohjausta Teamsissa tai kampuksella pe 3.12.</em></td>
         </tr>
         <tr>
-            <td>su 5.12.</td>
+            <td>15</td>
             <td>Seminaaritöiden raportin palautus</td>
+            <td>Raportin DL su 5.12. klo 23:55</td>
         </tr>
         <tr>
-            <td>pe 10.12.</td>
+            <td>16</td>
             <td>Seminaariesitykset</td>
+            <td>Seminaariesitykset Teamsissa pe 10.12. klo 12</td>
         </tr>
     </tbody>
 </table>
