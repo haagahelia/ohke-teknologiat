@@ -855,7 +855,7 @@ Käyttäjien ja heidän postauksiensa yhdistämiseksi yksi lähestymistapa on k�
 
 ## Tehtävän palauttaminen
 
-Myös osittain ratkaistut palautukset hyväksytään ja arvostellaan suhteessa niiden valmiusasteeseen. Palauta kaikki ratkaisuusi liittyvät lähdekoodit erillisinä tiedostoina Teamsiin ennen seuraavaa oppituntia. 
+Myös osittain ratkaistut palautukset hyväksytään ja arvostellaan suhteessa niiden valmiusasteeseen. Palauta kaikki ratkaisuusi liittyvät lähdekoodit erillisinä tiedostoina **Teams-tehtävässä ilmoitettuun määräaikaan mennessä**. 
 
 **Nimeä `.js`-päätteiset tiedostot `.js.txt`-päätteisiksi, mikäli Teams ei hyväksy tiedostojasi tietoturvasyistä.**
 

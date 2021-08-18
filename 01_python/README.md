@@ -683,7 +683,7 @@ JSON-muotoisen merkkijonon parsiminen Pythonin listoiksi, sanakirjoiksi ja muiks
 
 ## Tehtävien palauttaminen
 
-Palauta koodaamasi lähdekooditiedostot sellaisenaan, eli **ei pakattuna** Teamsissa olevaan palautuslaatikkoon seuraavaan oppituntiin mennessä.
+Palauta koodaamasi lähdekooditiedostot sellaisenaan, eli **ei pakattuna** Teamsissa olevaan palautuslaatikkoon **Teams-tehtävässä ilmoitettuun määräaikaan mennessä**.
 
 
 ## Seminaariaiheita

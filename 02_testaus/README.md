@@ -616,7 +616,7 @@ Python 2.7.18rc1 (default, Apr  7 2020, 12:05:55)
 
 ## Tehtävän palauttaminen
 
-Palauta koodaamasi testit sekä testattavat moduulit sellaisenaan, eli **ei pakattuna** Teamsissa olevaan palautuslaatikkoon **seuraavaan oppituntiin mennessä**.
+Palauta koodaamasi testit sekä testattavat moduulit sellaisenaan, eli **ei pakattuna** Teamsissa olevaan palautuslaatikkoon **Teams-tehtävässä ilmoitettuun määräaikaan mennessä**.
 
 
 # Seminaariaihe-ehdotukset

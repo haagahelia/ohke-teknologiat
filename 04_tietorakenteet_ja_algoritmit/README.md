@@ -619,7 +619,7 @@ Tehtävän ensimmäisen osan suorittaminen osoittaa osaamista arvosanan 3 mukais
 
 ## Tehtävän palauttaminen
 
-Palauta koodaamasi lähdekooditiedosto(t) sellaisenaan, eli **ei pakattuna** Teamsissa olevaan palautuslaatikkoon seuraavaan oppituntiin mennessä.
+Palauta koodaamasi lähdekooditiedosto(t) sellaisenaan, eli **ei pakattuna** Teamsissa olevaan palautuslaatikkoon **Teams-tehtävässä ilmoitettuun määräaikaan mennessä**.
 
 
 ----

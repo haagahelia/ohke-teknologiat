@@ -661,6 +661,6 @@ Tehtävän lisäosion ratkaisemisessa voit halutessasi käyttää hyödyksi esim
 
 ## Tehtävän palauttaminen
 
-Myös osittain ratkaistut palautukset hyväksytään ja arvostellaan suhteessa niiden valmiusasteeseen. Palauta kaikki ratkaisuusi liittyvät lähdekoodit erillisinä tiedostoina, eli ei pakattuna. Tehtävän DL on seuraava oppitunti. 
+Myös osittain ratkaistut palautukset hyväksytään ja arvostellaan suhteessa niiden valmiusasteeseen. Palauta kaikki ratkaisuusi liittyvät lähdekoodit erillisinä tiedostoina, eli ei pakattuna **Teams-tehtävässä ilmoitettuun määräaikaan mennessä**.
 
-**Nimeä `.js`-päätteiset tiedostot `.js.txt`-päätteisiksi, mikäli Teams ei hyväksy tiedostojasi tietoturvasyistä.**
+**Huom! Nimeä `.js`-päätteiset tiedostot `.js.txt`-päätteisiksi, mikäli Teams ei hyväksy tiedostojasi tietoturvasyistä.**
