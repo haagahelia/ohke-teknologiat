@@ -41,7 +41,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
             </td>
             <td>
                 Teams-sessio pe 27.8. klo 12<br />
-                Tehtävien DL su 29.8. klo 23:55
+                Tehtävien DL su 29.8. klo 23:59
             </td>
         </tr>
         <tr>
@@ -56,7 +56,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
             </td>
             <td>
                 Teams-sessio pe 3.9. klo 12<br />
-                Tehtävien DL su 5.9. klo 23:55
+                Tehtävien DL su 5.9. klo 23:59
             </td>
         </tr>
         <tr>
@@ -72,7 +72,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
             </td>
             <td>
                 Teams-sessio <strong>to 9.9.</strong><br />
-                Tehtävien DL su 12.9. klo 23:55
+                Tehtävien DL su 12.9. klo 23:59
             </td>
         </tr>
         <tr>
@@ -86,7 +86,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
             </td>
             <td>
                 Teams-sessio pe 17.9. klo 12<br />
-                Tehtävien DL su 19.9. klo 23:55
+                Tehtävien DL su 19.9. klo 23:59
             </td>
         </tr>
         <tr>
@@ -101,7 +101,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
             </td>
             <td>
                 Teams-sessio pe 24.9. klo 12<br />
-                Tehtävien DL su 26.9. klo 23:55
+                Tehtävien DL su 26.9. klo 23:59
             </td>
         </tr>
         <tr>
@@ -116,7 +116,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
             </td>
             <td>
                 Teams-sessio pe 1.10. klo 12<br />
-                Tehtävien DL su 3.10. klo 23:55
+                Tehtävien DL su 3.10. klo 23:59
             </td>
         </tr>
         <tr>
@@ -131,7 +131,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
             </td>
             <td>
                 Teams-sessio pe 8.10. klo 12<br />
-                Tehtävien DL su 10.10. klo 23:55
+                Tehtävien DL su 10.10. klo 23:59
             </td>
         </tr>
         <tr>
@@ -141,7 +141,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
             </td>
             <td>
                 Teams-sessio pe 15.10. klo 12<br />
-                Tehtävien DL su 17.10. klo 23:55
+                Tehtävien DL su 17.10. klo 23:59
             </td>
         </tr>
         <tr>
@@ -162,7 +162,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
             </td>
             <td>
                 Teams-sessio pe 29.10. klo 12<br />
-                Tehtävien DL su 31.10. klo 23:55
+                Tehtävien DL su 31.10. klo 23:59
             </td>
         </tr>
         <tr>
@@ -172,7 +172,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
             </td>
             <td>
                 Teams-sessio pe 5.11. klo 12<br />
-                Tehtävien DL su 7.11. klo 23:55
+                Tehtävien DL su 7.11. klo 23:59
             </td>
         </tr>
         <tr>
@@ -200,7 +200,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
         <tr>
             <td>15</td>
             <td>Seminaaritöiden raportin palautus</td>
-            <td>Raportin DL su 5.12. klo 23:55</td>
+            <td>Raportin DL su 5.12. klo 23:59</td>
         </tr>
         <tr>
             <td>16</td>
