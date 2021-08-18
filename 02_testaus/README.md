@@ -7,7 +7,7 @@ Aiheen opiskelun jälkeen osaat kirjoittaa Python-funktioillesi yksikkötestit j
 
 # Oppitunnin videot
 
-Tämän aiheen videot julkaistaan perjantaina 10.9.
+Tämän aiheen videot julkaistaan maanantaina 6.9.2021.
 
 <!-- 
 **[Osa 1: Orientaatio testaukseen](https://web.microsoftstream.com/video/8f0d594f-9277-4782-937e-9d215d7cf7c4)** *44:38*

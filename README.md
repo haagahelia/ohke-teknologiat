@@ -50,6 +50,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
                     <li>Ehto- ja toistorakenteet</li>
                     <li>Perustietotyypit ja kokoelmat</li>
                     <li>Http-pyynnöt</li>
+                    <li><a href="https://web.microsoftstream.com/video/497d7df3-1629-49f9-b460-82c1d479b03d">Video 1</a>, <a href="https://web.microsoftstream.com/video/0f31953b-417b-4669-915d-ca35917bfbc0">video 2</a></li>
                 </ul>
             </td>
             <td>
@@ -69,7 +70,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
                 </ul>
             </td>
             <td>
-                Teams-sessio <strong>to 9.9.</strong><br />
+                Teams-sessio <strong>poikkeuksellisesti to 9.9.</strong><br />
                 Tehtävien DL su 12.9. klo 23:59
             </td>
         </tr>
@@ -95,6 +96,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
                     <li>Lajittelualgoritmit</li>
                     <li>Hakualgoritmit</li>
                     <li>Algoritmien tehokkuus</li>
+                    <li><a href="https://web.microsoftstream.com/video/b9af8942-94fb-46ac-a085-6cb9e57199c4">Video 1</a>, <a href="https://web.microsoftstream.com/video/1967c82b-9d40-4247-9db0-95f5067c026a">video 2</a>, <a href="https://web.microsoftstream.com/video/7e1e6347-b8c5-4f03-8c92-369591408be4">video 3</a></li>
                 </ul>
             </td>
             <td>
@@ -110,6 +112,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
                     <li>ES6-syntaksit</li>
                     <li>filter, map, reduce</li>
                     <li>currying</li>
+                    <li><a href="https://web.microsoftstream.com/video/4ff9a051-3e45-4e89-a194-a6e68084d55a">Video 1</a>, <a href="https://web.microsoftstream.com/video/7099841a-16d7-44f2-99fe-c37302c4b024">video 2</a>, <a href="https://web.microsoftstream.com/video/94a16d95-45eb-4c69-b69c-d8c70e4c0560">video 3</a></li>
                 </ul>
             </td>
             <td>
