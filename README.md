@@ -22,8 +22,6 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
 
 ## Opintojakson oppitunnit ja päivämäärät
 
-**Kurssin aikataulun päivittäminen on kesken. Aikatauluun on tulossa merkittäviä muutoksia.**
-
 <table>
     <thead>
         <tr>
@@ -36,7 +34,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
         <tr>
             <td>0</td>
             <td>
-                <a href="00_linux/asennukset.md">⭐ Ennakkotehtävä: kurssin kehitysympäristön asennus</a><br />
+                <a href="00_linux/asennukset.md">Ennakkotehtävä: kurssin kehitysympäristön asennus</a><br /><br />
                 <a href="00_linux">Kurssin johdanto, ympäristöt ja Linux/Unix-komentorivi</a>
             </td>
             <td>
