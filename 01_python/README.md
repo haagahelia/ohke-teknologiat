@@ -1,12 +1,10 @@
 # Python
 
-Oppitunnilla tavoitteemme on päästä vauhtiin Python-koodin kirjoittamisessa. Tavoitteena ei ole oppia kielen koko syntaksia tai kaikkia rakenteita, vaan saada jokin käsitys kielen piirteistä sekä siihen liittyvistä työtavoista. Viikon itsenäisen työn osuudessa pystytte itsenäisesti omaksumaan  lisää syntaksia ja tutustumaan kielen perusrakenteisiin.
-
-Tämän viikon oppimistavoitteena on pystyä toteuttamaan kohtuullisen yksinkertainen Python-skripti, joka hyödyntää ulkopuolisesta palvelusta ladattavaa JSON-muotoista aineistoa.
+Tällä viikolla tavoitteemme on päästä vauhtiin Python-koodin kirjoittamisessa. Tavoitteena ei ole oppia kielen koko syntaksia tai kaikkia rakenteita, vaan saada käsitys kielen piirteistä sekä Python-ohjelmointiin liittyvistä työtavoista. Viikon oppimistavoitteena on pystyä toteuttamaan kohtuullisen yksinkertainen Python-skripti, joka hyödyntää ulkopuolisesta palvelusta ladattavaa JSON-muotoista aineistoa.
 
 Pythonia käsitellessämme odotamme jo kohtuullisen vahvaa osaamista Javan ja JavaScriptin syntakseista ja standardikirjastoista. Jos haluat päästä nopeasti vauhtiin, voit lukea esimerkiksi tutoriaalin ["Learn Python in 10 minutes"](https://www.stavros.io/tutorials/python/) tai tutustua [Cheat sheet -muistiinpanoihin](https://www.pythoncheatsheet.org/).
 
-Tämän GitHub-repositorion oppimateriaali on tarkoitettu oppitunnin rungoksi, eikä se riitä pääasialliseksi Python-materiaaliksi kurssilla. Laajempia ja laadukkaita oppimateriaaleja löytyy mm. seuraavista lähteistä:
+Tämän GitHub-repositorion oppimateriaali on tarkoitettu aiheen käsittelyn rungoksi, eikä se riitä pääasialliseksi Python-materiaaliksi kurssilla. Laajempia ja laadukkaita oppimateriaaleja löytyy mm. seuraavista lähteistä:
 
 * Lappeenrannan Yliopiston Python 3 –ohjelmointiopas: https://lutpub.lut.fi/handle/10024/162088
 * Pythonin oma "The Python Tutorial": https://docs.python.org/3/tutorial/
@@ -18,17 +16,17 @@ Lisää hyvä lähteitä löydät hakukoneilla. Jaathan vinkkejä hyvistä mater
 
 # Videot
 
+Oppitunnilla käytämme aluksi Pythonia komentoriviltä interaktiivisella tulkilla, jotta opimme nopeasti kokeilemisen kautta käyttämään Pythonin perusrakenteita. Tämän jälkeen tutustumme Python-tiedostojen editointiin VS Codella.
+
+Lopuksi tutustumme myös muihin tapoihin hyödyntää Pythonia: "Python as a swiss army knife". Toisen videon loppuosa sisältää johdannon ja vinkkejä tämän viikon harjoitustehtävään.
+
+
 **[Osa 1: Python-kielen perusrakenteet ja komentorivikäyttö](https://web.microsoftstream.com/video/497d7df3-1629-49f9-b460-82c1d479b03d)** *43:09*
 
 **[Osa 2: Pythonin tietorakenteet, ehtolauseet ja toistolauseet](https://web.microsoftstream.com/video/0f31953b-417b-4669-915d-ca35917bfbc0)** *1:03:17*
 
 
 
-# Oppitunnin aiheet
-
-Oppitunnilla käytämme aluksi Pythonia komentoriviltä interaktiivisella tulkilla, jotta opimme nopeasti kokeilemisen kautta käyttämään Pythonin perusrakenteita. Tämän jälkeen tutustumme Python-tiedostojen editointiin VS Codella.
-
-Lopuksi tutustumme myös muihin tapoihin hyödyntää Pythonia: "Python as a swiss army knife".
 
 ## "Python as a calculator"
 
