@@ -1,4 +1,4 @@
-/*Tässä tehtävässä on tarkoitus rakentaa pieni scripti 
+/*Tässä tehtävässä on tarkoitus rakentaa pieni skripti 
 rahasummien lisäämiseen ja poistamiseen säiliöstä Reduxin periaatteiden mukaisesti. 
 Lopulta scriptin pitäisi siis tulostaa summa 50.
 Muista ajaa ensin src-kansiossa komento "npm install"
@@ -30,7 +30,7 @@ function addMoney(value) {
 /*
 Pohja reducerille, ota edellinen tila ja Action ja palauta uusi tila.
 Tämä reducer-funktio on siis "idealtaan samantapainen" kuin funktionaalisen ohjelmoinnin 
-reduce-funktio, eli Array.prototype.reduce(reducer, ?initialValue)
+reduce-funktio eli Array.prototype.reduce(reducer, ?initialValue)
 */
 function moneyReducer(state, action) {
     if (state == undefined) {

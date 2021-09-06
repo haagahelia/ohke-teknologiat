@@ -11,7 +11,7 @@
  * siten, että järjestelmän arkkitehtuuri seuraa
  * Dependency inversion-periaatetta (DIP) hyödyntäen olioiden
  * monimuotoisuutta ja samalla 
- * BusinessLuokalla voidaan käsitellä sekä Moottoripyöriä että Autoja.
+ * BusinessLuokalla voidaan käsitella sekä Moottoripyöriä että Autoja.
  * Itse BusinessLuokasta voi olla järjestelmässä useampi instanssi, 
  * toinen moottoripyörille ja toinen autoille.
  * 
@@ -132,7 +132,7 @@ class Moottoripyora implements Ajoneuvo {
 }
 
 /**
- * Tämä luokka sisältää järjestelmän businesslogiikan, eli oikestaan sen kaikean
+ * Tämä luokka sisältää järjestelmän businesslogiikan, eli oikestaan sen kaiken
  * kiinnostavan järjestelmässä, mitä tuoteomistaja on meille määritellyt.
  */
 class BusinessLuokka {
