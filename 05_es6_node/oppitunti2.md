@@ -8,7 +8,7 @@ Tällä oppitunnilla jatkamme JavaScript-kielen ja Node.js:n parissa. Tutustumme
 Tämän aiheen videot julkaistaan maanantaina 4.10.2021.
 
 <!--
-**[Osa 1: ES6 kertaus, malliratkaisu sekä Mocha-yksikkötestit](https://web.microsoftstream.com/video/8d5ce190-2bd0-4c8a-84ad-f51b2cbe7f3e)** *52:44*
+**[Osa 1: ES6-tehtävän malliratkaisu sekä Mocha-yksikkötestit](https://web.microsoftstream.com/video/8d5ce190-2bd0-4c8a-84ad-f51b2cbe7f3e)** *52:44*
 
 Tällä videolla kerrataan edellisen viikon syntaksit konkreettisen esimerkin avulla. Käymme läpi users & posts -tehtävän malliratkaisun ja perehdymme yksikkötestaukseen Mocha-testaustyökalulla.
 
