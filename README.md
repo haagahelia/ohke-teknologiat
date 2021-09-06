@@ -70,7 +70,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
                 </ul>
             </td>
             <td>
-                Teams-sessio <strong>poikkeuksellisesti to 9.9.</strong><br />
+                Teams-sessio <strong>poikkeuksellisesti to 9.9. klo 14:40-15:30</strong><br />
                 Tehtävien DL su 12.9. klo 23:59
             </td>
         </tr>

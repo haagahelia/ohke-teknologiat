@@ -7,10 +7,8 @@ Aiheen opiskelun jälkeen osaat kirjoittaa Python-funktioillesi yksikkötestit j
 
 # Oppitunnin videot
 
-Tämän aiheen videot julkaistaan maanantaina 6.9.2021.
 
-<!-- 
-**[Osa 1: Orientaatio testaukseen](https://web.microsoftstream.com/video/8f0d594f-9277-4782-937e-9d215d7cf7c4)** *44:38*
+**[Osa 1: Python-tehtävän malliratkaisu ja orientaatio testaukseen](https://web.microsoftstream.com/video/8f0d594f-9277-4782-937e-9d215d7cf7c4)** *44:38*
 
 Tällä videolla käymme läpi postitoimipaikka- ja postinumerot-tehtävien malliratkaisut ja tutustumme testaukseen yleisellä tasolla.
 
@@ -21,7 +19,6 @@ Tällä videolla tutustumme Pytest-työkaluun ja yksikkötestien automatisointii
 **[Osa 3: pytest-mock ja harjoitustehtävän tehtävänanto](https://web.microsoftstream.com/video/9c438228-0354-49bb-8fb1-1ad03e4222cd)** *33:10*
 
 Tällä videolla harjoittelemme ulkoisten riippuvuuksien korvaamista testeissä ja käymme läpi viikkotehtävän tehtävänannon.
--->
 
 
 ## Suositeltava oheisvideo: [What is Automated Testing?](https://www.youtube.com/watch?v=Nd31XiSGJLw)
