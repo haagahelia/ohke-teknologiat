@@ -498,8 +498,8 @@ Voit käyttää myös `coverage html`-komentoa, joka muodostaa raportin staattis
 
 Tällä viikolla harjoittelemme koodin refaktorointia ja yksikkötestausta kirjoittamalla testejä aikaisemmin koodatulle `postinumerot.py`-skriptille (edellisen viikon tehtävän 2. osa). Mikäli aikaisempi tehtävä jäi sinulta palauttamatta tai et halua käyttää vanhaa koodiasi, voit käyttää myös tehtävän malliratkaisun tiedostoja.
 
-* [postinumerot.py](https://github.com/haagahelia/swd4tn023/blob/master/01_python/src/postinumerot.py)
-* [http_pyynto.py](https://github.com/haagahelia/swd4tn023/blob/master/01_python/src/http_pyynto.py)
+* [postinumerot.py](https://gist.github.com/swd1tn002/c9685aa2cc9fc47e30ffc9a9d9dfc968#file-postinumerot-py)
+* [http_pyynto.py](https://gist.github.com/swd1tn002/c9685aa2cc9fc47e30ffc9a9d9dfc968#file-http_pyynto-py)
 
 
 ## Osa 1: postitoimipaikkalogiikan testaaminen (arvosanatavoite 3)
