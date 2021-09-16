@@ -30,7 +30,7 @@ Tällä viikolla ohjelmistokehityksen teknologioita -kurssilla tavoitteena on pe
 
 Tavoitteenamme ei ole oppia laskemaan tai esittämään algoritmiemme tarkkaa tehokkuutta matemaattisilla kaavoilla, vaan käytämme laskukaavoja apuvälineenä ymmärtääksemme, miksi jokin algoritmi suoriutuu samasta tehtävästä tehokkaammin kuin toinen. Emme myöskään harjoittele optimoimaan ohjelmiemme suorituskykyä, vaikka suorituskyky toimiikin tärkeänä mittarina tällä viikolla.
 
-Ohjelmointiongelmien ratkaisemisessa algoritmien lisäksi myös tietorakenteilla on erittäin merkittävä rooli. Tietorakenteiden sisäinen toteutus, esimerkiksi linkitetty lista tai taulukkolista, vaikuttaa merkittävästi sen soveltuvuuteen erilaisten ongelmien ratkaisemisessa. 
+Ohjelmointiongelmien ratkaisemisessa algoritmien lisäksi myös tietorakenteilla on erittäin merkittävä rooli. Tietorakenteiden sisäinen toteutus, esimerkiksi linkitetty lista (LinkedList) tai taulukkolista (ArrayList), vaikuttaa merkittävästi sen soveltuvuuteen erilaisten ongelmien ratkaisemisessa. 
 
 Tallentaessamme itse tietoa ohjelmiimme voimme itse vaikuttaa suuresti siihen, kuinka helposti ja nopeasti tallentamamme tieto on ohjelmakoodissa saatavilla. Vertaa esimerkiksi seuraavia mahdollisia tietorakenteita postinumeroiden ja postitoimipaikkojen tietojen tallentamiseksi:
 
@@ -60,7 +60,7 @@ Tallentaessamme itse tietoa ohjelmiimme voimme itse vaikuttaa suuresti siihen, k
 }
 ```
 
-Jos tarkoituksesi olisi selvittää postinumeroa 74700 vastaava postitoimipaikan nimi, mitä sen selvittäminen vaatisi eri tietorakenteilla? Entä mikä tietorakenne olisi myöhemmin helpommin laajennettavissa, jos postinumeroalueita varten halutaan tallentaa toimipaikan nimen lisäksi myös muita tietoja? Olisiko näiden kahden tietorakenteen hyvät puolet jollain tavoin yhdistettävissä?
+Jos tarkoituksesi olisi selvittää postinumeroa 74700 vastaava postitoimipaikan nimi, mitä sen selvittäminen vaatisi eri tietorakenteilla? Entä mikä tietorakenne olisi myöhemmin helpommin laajennettavissa, jos postinumeroalueita varten halutaan tallentaa toimipaikan nimen lisäksi myös muita tietoja? Olisiko näiden tietorakenteiden hyvät puolet jollain tavoin yhdisteltävissä?
 
 ## Suositeltu oheismateriaali
 
@@ -92,6 +92,8 @@ Tätä videota vastaava esittely tärkeistä tietorakenteista löytyy myös teks
 
 
 # Oppitunti
+
+Seuraavat käsitteet käydään läpi oppitunnin ensimmäisellä videotallenteella.
 
 ## Minkälaisten algoritmien kanssa olet päivittäin tekemisissä?
 
@@ -126,13 +128,17 @@ https://en.wikipedia.org/wiki/Algorithmic_technique#General_techniques
 
 Tämän oppitunnin tavoitteena on kirjoittaa ohjelma, joka lukee listat suomen- ja englanninkielisistä sanoista ja selvittää, mitkä sanat esiintyvät molemmissa kielissä. Idea on lainattu [Helsingin yliopiston Antti Laaksosen luennolta](https://www.cs.helsinki.fi/u/ahslaaks/tira19/luento1/) ja sovellettu omiin tarpeisiimme.
 
-Aineistona käytämme [Kotimaisten kielten tutkimuskeskuksen nykysuomen sanalistaa](http://kaino.kotus.fi/sanat/nykysuomi/) sekä Linuxin sanalistaa `/usr/share/dict/words`. Nykysuomen sanalista [kotus-sanalista-suomi.txt](src/kotus-sanalista-v1/kotus-sanalista-suomi.txt) sisältää 94&nbsp;110 sanaa ja Linux-jakelusta riippuen englanninkielinen sanalista voi sisältää esimerkiksi 102&nbsp;401 sanaa. Tämä aineisto on riittävän suuri, jotta pystymme huomaamaan merkittäviä eroja erilaisissa tietorakenteissa ja algoritmeissa, joilla yritämme selvittää yhteiset sanat.
+Aineistona käytämme [Kotimaisten kielten tutkimuskeskuksen nykysuomen sanalistaa](http://kaino.kotus.fi/sanat/nykysuomi/) sekä Linuxin sanalistaa `/usr/share/dict/words`. Nykysuomen sanalista [kotus-sanalista-suomi.txt](src/kotus-sanalista-v1/kotus-sanalista-suomi.txt) sisältää 94&nbsp;110 sanaa ja Linux-jakelusta riippuen englanninkielinen sanalista voi sisältää esimerkiksi 102&nbsp;401 sanaa. 
 
-Ensin voimme kokeilla selvittää yhteisten sanojen määrän komentorivillä Linuxin `comm`-komennolla. Tehokkuussyistä `comm` edellyttää, että sille annettavat syötteet ovat aakkosjärjestyksessä, joten järjestämme ne `sort`-komennolla:
+Esimerkeissä käytettävä aineisto on riittävän suuri, jotta pystymme huomaamaan merkittäviä eroja erilaisissa tietorakenteissa ja algoritmeissa, joilla yritämme selvittää yhteiset sanat. Nykysuomen sanalista sisältää myös duplikaatteja, minkä vuoksi oppitunnin esimerkeissä näkyy pientä vaihtelua sanojen määrissä: hajautusrakenteita käytettäessä duplikaatit eivät ole mukana, joten niitä käytettäessä sanojen määrä on pienempi kuin esimerkiksi listoilla.
+
+Ensin voimme kokeilla selvittää yhteisten sanojen määrän komentorivillä Linuxin `comm`-komennolla. Tehokkuussyistä `comm` edellyttää, että sille annettavat syötteet ovat valmiiksi aakkosjärjestyksessä, joten järjestämme ne `sort`-komennolla ja ohjaamme tulokset syötteiksi `<`-operaattorilla:
 
 ```
 comm -1 -2 <(sort /usr/share/dict/words) <(sort kotus-sanalista-v1/kotus-sanalista-suomi.txt)
 ```
+
+`comm`-komennon tarkemman dokumentaation löydät esimerkiksi täältä: [https://www.ibm.com/docs/en/aix/7.2?topic=c-comm-command](https://www.ibm.com/docs/en/aix/7.2?topic=c-comm-command).
 
 Jos haluamme selvittää ohjelman suorituksen keston, voimme käyttää Linuxin `time`-komentoa:
 
@@ -149,7 +155,7 @@ Tässä tapauksessa yhteisten sanojen selvittäminen kesti noin 0,16 sekuntia (r
 
 ### 1. Oma Python-toteutus: mitkä samat sanat esiintyvät molemmissa kielissä?
 
-Kirjoitetaan Python-skripti, joka lukee kaikki sanat kahdesta tiedostosta listoille. Kun listat on muodostettu, etsitään listalta A kaikki sanat, jotka esiintyvät myös listalla B! Lopuksi tulostetaan löytyneet sanat:
+Kirjoitetaan Python-skripti, joka lukee kaikki sanat kahdesta tiedostosta listoille. Kun listat on muodostettu, etsitään listalta **A** kaikki sanat, jotka esiintyvät myös listalla **B**! Lopuksi tulostetaan löytyneet sanat:
 
 
 ```python
@@ -174,7 +180,7 @@ if __name__ == '__main__':
 * Kuinka kauan algoritmin suoritus kestää?
 * Mistä kesto johtuu?
 * Mikä on algoritmin kokonaisaikavaatimus tällä hetkellä?
-* Mikä on Pythonin `x in list`-operaation aikavaatimus? https://wiki.python.org/moin/TimeComplexity
+* Mikä on Pythonin `x in list`-operaation aikavaatimus? [https://wiki.python.org/moin/TimeComplexity](https://wiki.python.org/moin/TimeComplexity)
 
 
 #### Ratkaisun tehokkuuden arviointi
@@ -192,7 +198,7 @@ Algoritmin tehokkuus  | Vertailujen määrä | Suoritusaika
 O(n * m)              | ~10 000 000 000   | ?
 
 
-### Ohjelman profilointi
+### Bonus: ohjelman profilointi
 
 Pythonissa on valmiina `cProfile`-niminen moduuli, jonka avulla voimme mitata eri funktioiden suoritusten määrää ja niihin kulunutta aikaa. Seuraavissa vaiheissa hyödynnetään myös profilointia:
 
@@ -204,14 +210,17 @@ Yllä olevassa komennossa `-m cProfile` käynnistää profiloijan ja `-s calls` 
 
 ### 2. Miten voimme nopeuttaa algoritmin toimintaa?
 
-Linuxin `comm`-komento edellytti, että aineistot ovat aakkosjärjestyksessä. Voisimmeko me hyödyntää tätä samaa ideaa? Sen sijaan, että kävisimme listan yksi kerrallaan alusta alkaen läpi, voisimme aloittaa etsimisen keskeltä ja rajata etsittävästä aineistosta puolet pois, riippuen siitä, onko etsittävä sana aakkosissa ennen vai jälkeen keskikohdassa olevaa sanaa!
+Linuxin `comm`-komento edellytti, että aineistot ovat aakkosjärjestyksessä. Olisiko siis järjestyksessä olevien sanojen etsiminen nopeampaa?
 
-Hakua, jossa puolitamme haettavan aineiston aina keskeltä ja rajaamme seuraavan haun aina puolta pienempään aineistoon kutsutaan binäärihauksi, eli puolitushauksi. 
+Sen sijaan, että kävisimme listan yksi kerrallaan alusta alkaen läpi, voisimme aloittaa etsimisen keskeltä ja rajata etsittävästä aineistosta puolet pois, riippuen siitä, onko etsittävä sana aakkosissa ennen vai jälkeen keskikohdassa olevaa sanaa!
+
+Hakua, jossa puolitamme haettavan aineiston aina keskeltä ja rajaamme seuraavan haun aina puolta pienempään aineistoon kutsutaan puolitushauksi, eli binäärihauksi ([binary search](https://en.wikipedia.org/wiki/Binary_search_algorithm)). 
 
 Seuraavassa Python-koodissa etsitään sanaa "villa", ja verrataan sitä aineiston keskimmäiseen sanaan:
 
 ```python
 >>> etsittava = "villa"
+>>>
 >>> keskikohta = len(finnish_words) // 2 # 47055
 >>> finnish_words[keskikohta]
 'nimivakuus'
@@ -224,7 +233,10 @@ Voit katsoa konkreettisen visualisoinnin algoritmin suorituksesta osoitteesta ht
 Muutetaan vaiheessa 1 kehitettyä sovellusta siten, että puolitamme etsittävän aineiston. Toteutetaan siis oma binäärihaku! 
 
 ```python
-# tutustu myös valmiiseen toteutukseen https://docs.python.org/3/library/bisect.html
+"""
+Tiedosto binary_search.py
+Tutustu myös valmiiseen toteutukseen https://docs.python.org/3/library/bisect.html
+"""
 def binary_search(word, list_of_words):
     left = 0
     right = len(list_of_words) - 1
@@ -254,6 +266,10 @@ def main():
     finnish_words = read_words('kotus-sanalista-v1/kotus-sanalista-suomi.txt')
     english_words = read_words('/usr/share/dict/words')
 
+    # Järjestetään sanat aakkosjärjestykseen
+    finnish_words.sort()
+    english_words.sort()
+
     for word in finnish_words:
         if binary_search(word, english_words):
             print(word)
@@ -271,14 +287,14 @@ python3 -m cProfile -s calls sanalistat.py
 * Onko ero havaittava edelliseen versioon nähden? 
 * Mikä on puolitushaun aikavaatimus?
 * Mikä on algoritmin kokonaisaikavaatimus nyt?
-* Riittäisikö meille, jos vain toinen aineisto olisi järjestetty?
+* Riittäisikö meille, jos vain toinen sanalista olisi järjestetty?
 
 
 #### Binäärihaun tehokkuuden arviointi
 
-Algoritmimme uudessa versiossa suomenkielinen sanalista käydään edelleen läpi kokonaisuudessaan, eli n kertaa. Englanninkielistä sanalistaa puolestaan ei enää käydä läpi kokonaan jokaista suomenkielistä sanaa kohden, vaan sanalistaa puolitetaan, kunnes aineisto on saatu pilkottua loppuun.
+Algoritmimme uudessa versiossa suomenkielinen sanalista käydään edelleen läpi kokonaisuudessaan, eli **n** kertaa. Englanninkielistä sanalistaa puolestaan ei enää käydä läpi kokonaan jokaista suomenkielistä sanaa kohden, vaan sanalistaa puolitetaan, kunnes aineisto on saatu pilkottua loppuun.
 
-Entä kuinka monta kertaa aineisto voidaan puolittaa, jotta jäljelle jää vielä jotain puolitettavaa?
+Kuinka monta kertaa aineisto voidaan puolittaa, jotta jäljelle jää vielä jotain puolitettavaa?
 
 1. kahden pituinen lista voidaan puolittaa kerran (2 == 2<sup>1</sup>)
 1. neljän pituinen lista voidaan puolittaa kaksi kertaa (4 == 2<sup>2</sup>)
@@ -288,7 +304,15 @@ Entä kuinka monta kertaa aineisto voidaan puolittaa, jotta jäljelle jää viel
 1. miljoonan pituinen lista voidaan puolittaa alle 20 kertaa!
 1. miljardin pituinen lista voidaan puolittaa alle 30 kertaa! (1 000 000 000 &lt; 2<sup>30</sup>)
 
-Toisin sanoen, tietty lista voidaan aina puolittaa sen **pituuden kaksikantaisen logaritmin verran kertoja**. Tämä on valtava parannus aikaisempaan lineaariseen hakuun verrattuna, koska nyt yhden sanan hakeminen esimerkiksi 102&nbsp;401 sanan aineistosta vaatii korkeintaan 17 vertailuoperaatiota! Maksimissaan vertailuja tehdään siis yhteensä enää alle 1&nbsp;600&nbsp;000 kappaletta.
+Toisin sanoen, tietty lista voidaan aina puolittaa sen **pituuden kaksikantaisen logaritmin verran kertoja**. 
+
+> *"logaritmi \[on\] matemaattinen funktio, joka kertoo mihin potenssiin kantaluku on korotettava, jotta saataisiin haluttu luku"*
+>
+> Logaritmi. Wiktionary. https://fi.wiktionary.org/wiki/logaritmi
+
+Tämä on valtava parannus aikaisempaan lineaariseen hakuun verrattuna, koska nyt yhden sanan hakeminen esimerkiksi 102&nbsp;401 sanan aineistosta vaatii korkeintaan 17 vertailuoperaatiota! Koska etsittäviä sanoja on 94&nbsp;110 kappaletta, vertailuoperaatioita tehdään yhteensä enää alle 1&nbsp;600&nbsp;000 kappaletta.
+
+Seuraava koodiesimerkki havainnollistaa 2-kantaisen logaritmin käyttöä Pythonissa edellä esitetyn tuloksen saamiseksi:
 
 ```python
 >>> import math
@@ -296,6 +320,8 @@ Toisin sanoen, tietty lista voidaan aina puolittaa sen **pituuden kaksikantaisen
 >>> math.log2(102_401) # maksimimäärä puolitusoperaatioita tämän kokoiselle aineistolle
 16.64387027852469
 ```
+
+Kääntäen ilmaistuna, 102&nbsp;401 sanan pituinen lista voidaan puolittaa kahteen osaan korkeintaan ~17 kertaa.
 
 Algoritmin tehokkuus  | Vertailujen määrä | Suoritusaika
 ----------------------|-------------------|--------
@@ -355,7 +381,7 @@ if __name__ == '__main__':
 
 Sanakirjasta hakeminen vie keskimäärin yhden operaation, vaikka teoreettisesti epätasaisesti jakautuneet sanakirjat voivat vaatia jopa kokonsa verran hakuoperaatiota, mikäli hajautusfunktio toimii tehottomasti. Arvon lisääminen sanakirjaan vie aikaa saman verran kuin sanakirjasta hakeminen, eli englanninkielisen aineiston koko `m` vaikuttaa samassa suhteessa tarvittavien operaatioiden määrään sanakirjaa muodostettaessa.
 
-Hakuoperaatioita tehdään edelleen `n` kappaletta, joten tehokkuus on suuruusluokkaa O(m + n). Koska `m + n` kasvaa lineaarisesti alkioiden määrän mukaan, voidaan tehokkuudeksi ilmoittaa lineaarinen O(n).
+Hakuoperaatioita tehdään edelleen `n` kappaletta, joten tehokkuus on suuruusluokkaa **O(m + n)**. Koska `m + n` kasvaa lineaarisesti alkioiden määrän mukaan, voidaan tehokkuudeksi ilmoittaa lineaarinen O(n).
 
 
 Algoritmin tehokkuus  | Operaatioiden määrä  | Suoritusaika
@@ -438,18 +464,18 @@ O(n * n)        | ~2 500                | ~16 000 000           | ~10 000 000 00
 
 Tämän viikon tehtävänä on harjoitella sanakirjoista ja listoista koostuvan aineiston suodattamista sekä järjestämistä annettujen ehtojen mukaan.
 
-> *"So<br/>
+> <em>"So<br/>
 > I heard you guys like dictionaries<br/>
-> So we put a dictionary in a list within another dictionary within another list"*
+> So we put a dictionary in a list within another dictionary within another list"</em>
 >
-> Anonymous Haaga-Helia student , 2021
+> Anonymous Haaga-Helia student, 2021
 
 Aineistona käytämme [MyHelsinki Open API](https://open-api.myhelsinki.fi/) -REST-rajapinnan tarjoamia tapahtumatietoja, joissa vastaus koostuu sanakirjasta, jonka sisällä on lista sanakirjamuotoisista tapahtumista, joilla on sanakirjamuotoiset tiedot niiden ajankohdasta.
 
 
 ## Järjesteltävä aineisto
 
-[MyHelsinki Open API](https://open-api.myhelsinki.fi/) on Helsinki Marketingin tarjoama avoin REST-rajapinta kaupungin tapahtumien, paikkojen ja aktiviteettien tietoihin. Rajapinnan dokumentaatio löytyy Swagger-muodossa osoitteesta https://open-api.myhelsinki.fi/doc. Kyseisessä osoitteessa on dokumentoituna niin resurssien osoitteet, niiden tukemat parametrit kuin palautettujen JSON-tietueiden rakenne.
+[MyHelsinki Open API](https://open-api.myhelsinki.fi/) on Helsinki Marketingin tarjoama avoin REST-rajapinta kaupungin tapahtumien, paikkojen ja aktiviteettien tietoihin. Rajapinnan dokumentaatio löytyy Swagger-muodossa osoitteesta https://open-api.myhelsinki.fi/doc. Kyseisessä osoitteessa on dokumentoituna esimerkkeineen niin resurssien osoitteet, niiden tukemat parametrit kuin palautettujen JSON-tietueiden rakenne.
 
 Tässä tehtävässä hyödynnetään tapahtumarajapinnan tarjoamaa aineistoa osoitteesta https://open-api.myhelsinki.fi/v1/events/. Karkeasti supistettuna yhden tapahtuman pituinen vastaus rajapinnasta voi näyttää esimerkiksi seuraavalta:
 
@@ -497,11 +523,11 @@ Tietorakenteen uloin tyyppi on sanakirja, jonka "data"-avaimelta löytyy lista s
 
 ## Tehtävän osa 1: aineiston suodattaminen (arvosanatavoite 3)
 
-Kirjoita Python-skripti `events_by_date.py`, joka hakee events-rajapinnasta kaikki tapahtumat. Tehtävän ensimmäisessä osassa sinun tulee tulostaa saamastasi vastauksesta sellaiset tapahtumat, joiden alkamisaika on seuraavan 30 vuorokauden aikana. Huomaa, että **kaikilla rajapinnan palauttamilla tapahtumilla ei välttämättä ole alkamisaikaa**. Tuntemattoman ajankohdan tapahtumat tulee suodattaa pois aineistosta.
+Kirjoita Python-skripti `events_by_date.py`, joka hakee events-rajapinnasta kaikki tapahtumat. **Tehtävän ensimmäisessä osassa sinun tulee tulostaa saamastasi vastauksesta sellaiset tapahtumat, joiden alkamisaika on seuraavan 30 vuorokauden aikana.** Huomaa, että **kaikilla rajapinnan palauttamilla tapahtumilla ei välttämättä ole alkamisaikaa**. Tuntemattoman ajankohdan tapahtumat tulee suodattaa pois aineistosta.
 
 Tulosteessa tulee käydä ilmi tapahtuman alkamisaika (`starting_day`) sekä tapahtuman nimi millä tahansa kielellä. Osalle tapahtumista on annettu nimet useilla eri kielillä, kun taas joiltain nimiä puuttuu. Tällaisten tapahtumien kohdalla voit näyttää minkä kieliversion tahansa.
 
-Voit muodostaa Pythonissa aikaoliot sekä nykyhetkelle että 30 päivän päähän seuraavasti:
+Voit muodostaa Pythonissa aikaoliot sekä nykyhetkelle että 30 päivän päähän esimerkiksi seuraavasti:
 
 ```python
 from datetime import datetime, timedelta
@@ -509,16 +535,19 @@ min = datetime.utcnow()
 max = min + timedelta(days=30)
 ```
 
-`utcnow`-funktio muodostaa ajanhetken UTC-aikavyöhykkeessä, joka vastaa myös tapahtuma-aineistossa käytettävää aikavyöhykettä. Ajankohdat voidaan puolestaan muuttaa ISO-standardin mukaisiksi merkkijonoiksi `isoformat`-metodilla:
+Yllä olevassa koodissa `utcnow`-funktio muodostaa ajanhetken UTC-aikavyöhykkeessä, joka vastaa myös tapahtuma-aineistossa käytettävää aikavyöhykettä. 
+
+Koska aineistossa esiintyvät ajanhetket ovat valmiiksi ISO-formaatin mukaisessa merkkijonomuodossa, niitä voidaan vertailla Pythonin `<`- ja `>`-operaattoreilla. Voit muuttaa vastaavasti edellisessä esimerkissä esiintyvät `min`- ja `max`-oliot merkkijonoiksi `isoformat`-metodilla: 
 
 ```
 alku_str = min.isoformat()
 loppu_str = max.isoformat()
 ```
 
-Kun vertailtavat ajankohdat ovat yhtenevässä merkkijonomuodossa, niitä voidaan vertailla Pythonin `<`- ja `>`-operaattoreilla.
+Kun vertailtavat ajankohdat ovat yhtenevässä merkkijonomuodossa, niitä voidaan vertailla tapahtumien ajankohtiin Pythonin `<`- ja `>`-operaattoreilla. Ohjelmasi tulee tehdä tarvittavat vertailut ja tulostaa kaikkien sellaisten tapahtumien nimet, joiden alkamisaika on seuraavien 30 vuorokauden aikana.
 
-**Vinkki:** tehtävää käsiteltiin oppitunnin lopussa. Tutustu src-hakemistossa olevaan events_by_date.py-tiedostoon sekä Teamsissa olevaan oppituntitallenteeseen mikäli et pääse alkuun tämän tehtävän tekemisessä.
+**Vinkki:** Tätä tehtävää käsitellään viimeisen videotallenteen loppuosassa, johon kannattaa tutustua. Tutustu myös videotallenteella esitettävään [events_by_date.py](./src/events_by_date.py)-tiedostoon, jolla saat ladattua ohjelmaasi listan tapahtumista. Voit myös aina kysyä vinkkejä Teamsissa!
+
 
 ## Tehtävän osa 2: tapahtumien järjestäminen (arvosanatavoite 5)
 
@@ -627,6 +656,10 @@ Palauta koodaamasi lähdekooditiedosto(t) sellaisenaan, eli **ei pakattuna** Tea
 ----
 
 # Lisenssit ja tekijänoikeudet
+
+## Oppitunnin esimerkin idea
+
+Idea suomen- ja englanninkielisten sanalistojen yhteisten sanojen selvittämisestä on lainattu [Helsingin yliopiston Antti Laaksosen luennolta](https://www.cs.helsinki.fi/u/ahslaaks/tira19/luento1/) ja sovellettu omiin tarpeisiimme.
 
 ## MyHelsinki Open API
 
