@@ -128,7 +128,7 @@ https://en.wikipedia.org/wiki/Algorithmic_technique#General_techniques
 
 ## Teoriaosuus ja "koodiprojekti"
 
-Tämän oppitunnin tavoitteena on kirjoittaa ohjelma, joka lukee listat suomen- ja englanninkielisistä sanoista ja selvittää, mitkä sanat esiintyvät molemmissa kielissä. Idea on lainattu [Helsingin yliopiston Antti Laaksosen luennolta](https://www.cs.helsinki.fi/u/ahslaaks/tira19/luento1/) ja sovellettu omiin tarpeisiimme.
+Tämän oppitunnin tavoitteena on kirjoittaa ohjelma, joka lukee listat suomen- ja englanninkielisistä sanoista ja selvittää, mitkä sanat esiintyvät molemmissa kielissä. Idea on lainattu [Helsingin yliopiston Antti Laaksosen luennolta](https://tira.mooc.fi/syksy-2021/pages/materiaali.html) ja sovellettu omiin tarpeisiimme.
 
 Aineistona käytämme [Kotimaisten kielten tutkimuskeskuksen nykysuomen sanalistaa](http://kaino.kotus.fi/sanat/nykysuomi/) sekä Linuxin sanalistaa `/usr/share/dict/words`. Nykysuomen sanalista [kotus-sanalista-suomi.txt](src/kotus-sanalista-v1/kotus-sanalista-suomi.txt) sisältää 94&nbsp;110 sanaa ja Linux-jakelusta riippuen englanninkielinen sanalista voi sisältää esimerkiksi 102&nbsp;401 sanaa. 
 
@@ -661,7 +661,7 @@ Palauta koodaamasi lähdekooditiedosto(t) sellaisenaan, eli **ei pakattuna** Tea
 
 ## Oppitunnin esimerkin idea
 
-Idea suomen- ja englanninkielisten sanalistojen yhteisten sanojen selvittämisestä on lainattu [Helsingin yliopiston Antti Laaksosen luennolta](https://www.cs.helsinki.fi/u/ahslaaks/tira19/luento1/) ja sovellettu omiin tarpeisiimme.
+Idea suomen- ja englanninkielisten sanalistojen yhteisten sanojen selvittämisestä on lainattu [Helsingin yliopiston Antti Laaksosen luennolta](https://tira.mooc.fi/syksy-2021/pages/materiaali.html) ja sovellettu omiin tarpeisiimme.
 
 ## MyHelsinki Open API
 
