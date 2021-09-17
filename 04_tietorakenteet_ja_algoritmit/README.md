@@ -28,9 +28,11 @@ Viikon harjoitustehtävän tehtävänanto.
 
 Tällä viikolla ohjelmistokehityksen teknologioita -kurssilla tavoitteena on perehtyä tietorakenteiden ja algoritmien peruskäsitteisiin. Opettelemme arvioimaan karkeasti erilaisten algoritmisten lähestymistapojen soveltuvuutta kohtaamiimme ohjelmointiongelmiin.
 
+Vaikka ohjelmointikielenä esimerkeissä ja tehtävässä esiintyy Python, myös muista yleisimmistä kielistä löytyy vastaavat tietorakenteet samoilla ominaispiirteillä. 
+
 Tavoitteenamme ei ole oppia laskemaan tai esittämään algoritmiemme tarkkaa tehokkuutta matemaattisilla kaavoilla, vaan käytämme laskukaavoja apuvälineenä ymmärtääksemme, miksi jokin algoritmi suoriutuu samasta tehtävästä tehokkaammin kuin toinen. Emme myöskään harjoittele optimoimaan ohjelmiemme suorituskykyä, vaikka suorituskyky toimiikin tärkeänä mittarina tällä viikolla.
 
-Vaikka osa tietoperustasta voi tuntua matemaattisesti hankalalta, älä lannistu. Aiheen tehtävä ei ole matemaattinen, eikä sinun tarvitse osata laskea algoritmien suoritusaikoja itse.
+Vaikka osa tietoperustasta voi tuntua matemaattisesti hankalalta, älä lannistu. Aiheen kotitehtävä ei ole matemaattinen, eikä sinun tarvitse osata laskea algoritmien suoritusaikoja itse.
 
 Ohjelmointiongelmien ratkaisemisessa algoritmien lisäksi myös tietorakenteilla on erittäin merkittävä rooli. Tietorakenteiden sisäinen toteutus, esimerkiksi linkitetty lista (LinkedList) tai taulukkolista (ArrayList), vaikuttaa merkittävästi sen soveltuvuuteen erilaisten ongelmien ratkaisemisessa. 
 
