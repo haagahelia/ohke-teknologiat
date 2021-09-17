@@ -162,7 +162,8 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
                 <a href="06_ohjelmistoarkkitehtuurit_ja_patternit">Ohjelmistoarkkitehtuurit ja patternit</a>
             </td>
             <td>
-                Teams-sessio pe 29.10. klo 12<br />
+                <strong>CGI:n vierailijaluento Teamsissa pe 29.10. klo 12 - 13</strong><br />
+                <strong>Aiheena <a href="https://www.cgi.com/fi/fi/paikkatieto" target="_blank">paikkatietojärjestelmien arkkitehtuurit</strong></strong><br />
                 Tehtävien DL su 31.10. klo 23:59
             </td>
         </tr>
