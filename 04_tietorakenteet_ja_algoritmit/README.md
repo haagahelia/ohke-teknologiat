@@ -381,9 +381,25 @@ if __name__ == '__main__':
 
 #### Sanakirjatoteutuksen tehokkuuden arviointi
 
-Sanakirjasta hakeminen vie keskimäärin yhden operaation, vaikka teoreettisesti epätasaisesti jakautuneet sanakirjat voivat vaatia jopa kokonsa verran hakuoperaatiota, mikäli hajautusfunktio toimii tehottomasti. Arvon lisääminen sanakirjaan vie aikaa saman verran kuin sanakirjasta hakeminen, eli englanninkielisen aineiston koko `m` vaikuttaa samassa suhteessa tarvittavien operaatioiden määrään sanakirjaa muodostettaessa.
+Sanakirjasta hakeminen vie keskimäärin yhden operaation, vaikka teoreettisesti epätasaisesti jakautuneet sanakirjat voivat vaatia jopa kokonsa verran hakuoperaatiota, mikäli hajautusfunktio toimii tehottomasti. Koska suomenkielisten sanojen läpikäynnin aikavaatimus on edelleen **O(n)**, tulee sanakirjan avulla algoritmin aikavaatimukseksi **O(n * 1)** eli **O(n)**:
 
-Hakuoperaatioita tehdään edelleen `n` kappaletta, joten tehokkuus on suuruusluokkaa **O(m + n)**. Koska `m + n` kasvaa lineaarisesti alkioiden määrän mukaan, voidaan tehokkuudeksi ilmoittaa lineaarinen O(n).
+```python
+for word in finnish_words:    # O(n) => listan läpikäynti
+    if word in english_dict:  # O(1) => sanakirjasta hakeminen
+        print(word)
+```
+
+Ohjelman suoritusajan laskeminen ei todellisuudessa ole aivan näin yksinkertaista, ja sanakirjan yhteydessä joudumme huomioimaan myös esimerkiksi sanakirjan muodostamiseen kuluvan ajan:
+
+```python
+# Dictionary comprehension käy läpi listan english_words, ja asettaa
+# sanakirjaan avaimiksi kaikki sanat, ja niille arvoksi True:
+english_dict = {word: True for word in english_words}
+```
+
+Arvon lisääminen sanakirjaan vie aikaa saman verran kuin sanakirjasta hakeminen, eli englanninkielisen aineiston koko `m` vaikuttaa samassa suhteessa tarvittavien operaatioiden määrään sanakirjaa muodostettaessa: **O(m)**.
+
+Näiden muutosten jälkeen ratkaisun tehokkuus on suuruusluokkaa **O(m) + O(n)**, eli lyhyemmin ilmaistuna **O(m + n)**. `m + n` kasvaa lineaarisesti alkioiden määrän mukaan, joten se on toistaiseksi kaikkein tehokkain.
 
 
 Algoritmin tehokkuus  | Operaatioiden määrä  | Suoritusaika
