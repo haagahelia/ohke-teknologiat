@@ -407,6 +407,7 @@ Algoritmin tehokkuus  | Operaatioiden määrä  | Suoritusaika
 O(n)                  | ~200 000             | ?
 
 
+
 ### 4. Ongelman muotoilu toisella tavalla
 
 Määritellään ongelma uudelleen joukko-opin näkökulmasta: yhden kielen sanat on **joukko sanoja**. Kahden kielen yhteiset sanat ovat **kahden joukon leikkaus**. Käyttämällä [Pythonin joukkoja (set)](https://docs.python.org/3/library/stdtypes.html#set-types-set-frozenset), haluttu osajoukko saadaan selville ilman yhtään itse kirjoitettua toisto-, vertailu- tai hakuoperaatiota:
