@@ -324,7 +324,7 @@ Eräs JavaScriptin yhteydessä kasvavassa määrin hyödynnetty tekniikka, joka 
 
 Currying-tekniikalla voimme siis pilkkoa useita parametreja sisältäviä funktioita siten, että yksittäisellä funktiokutsulla sidotaan yksi muuttuja. Funktiot palauttavat uusia funktioita, jotka voidaan ottaa tarvittaessa talteen ja kutsua muualla. 
 
-Kutsuessamme toista funktiota, ensimmäisessä funktiokutsussa annetut parametrit ovat edelleen voimassa, koska ne ovat saman "sulkeuman" (clojure) sisällä:
+Kutsuessamme toista funktiota, ensimmäisessä funktiokutsussa annetut parametrit ovat edelleen voimassa, koska ne ovat saman ["sulkeuman"](https://fi.wikipedia.org/wiki/Sulkeuma_\(ohjelmointi\)) (closure) sisällä:
 
 ```js
 function multiply(a) {
@@ -396,7 +396,7 @@ Voit lukea lisää ESLintin komentorivikäytöstä osoitteessa [https://eslint.o
 
 # Tapahtumien käsitteleminen funktionaalisesti
 
-Tunnilla harjoittelemme `map`, `filter` ja `reduce` -operaatioita [MyHelsinki Open API](http://open-api.myhelsinki.fi/doc) -rajapinnan tapahtumien avulla. `map`, `filter` ja `reduce` löytyvät suurimmasta osasta ohjelmointikieliä, mukaan lukien Java, Python ja JavaScript. 
+Aiheen videoilla käsittelemme `map`, `filter` ja `reduce` -operaatioita [MyHelsinki Open API](http://open-api.myhelsinki.fi/doc) -rajapinnan tapahtumien avulla. `map`, `filter` ja `reduce` löytyvät suurimmasta osasta ohjelmointikieliä, mukaan lukien Java, Python ja JavaScript. 
 
 
 ## Esivalmistelu: staattisen aineiston hakeminen
@@ -428,7 +428,7 @@ Nyt saimme terminaaliin siistimmin jäsennellyn JSON-tietorakenteen. Voimme ohja
 Huom! `events.json` on iso tiedosto, luokkaa 6-7 megatavua, joten sen käsitteleminen tekstieditorilla voi olla raskasta.
 
 
-## Tapahtuma JSON:in tuominen Node.js REPL:iin (Read-Evaluate-Print-Loop)
+## Tapahtumadatan tuominen Node.js REPL:iin (Read-Evaluate-Print-Loop)
 
 Ensimmäiset kokeilut teemme nodella ilman npm-pakettienhallintaa tai riippuvuuksia:
 
@@ -442,7 +442,7 @@ $ node
 5527
 ```
 
-Miten voisimme poimia data-attribuutin arvon suoraan require-funktion paluuarvosta object destructuring -tekniikalla?
+*Pohdittavaa: tapahtumat sijaitsevat rajapinnan tarjoamassa JSON-tietorakenteessa `data`-nimisen avaimen alla (`jsonFile['data']`). Miten voisimme poimia data-attribuutin arvon suoraan require-funktion paluuarvosta object destructuring -tekniikalla ilman, että se tehdään erillisellä rivillä?*
 
 `events` sisältää nyt meille aikaisemmilta viikoilta tutun taulukon tapahtumista. Tällä kertaa tapahtumat ovat JavaScript-olioita. Niillä on silti täysin sama rakenne kuin aikaisemmissa tehtävissä käsittelemillämme Pythonin sanakirjoilla:
 
@@ -451,10 +451,10 @@ let e = events[2500]
 e['event_dates']['starting_day'] // esim. '2020-10-23T07:00:00.000Z'
 ```
 
-Hakasulkeille vaihtoehtoinen tapa käsitellä sisäkkäisiä rakenteita on JavaScriptissä tyypillisempi pistenotaatio:
+Hakasulkeille vaihtoehtoinen tapa käsitellä sisäkkäisiä oliorakenteita on JavaScriptissä tyypillisempi pistenotaatio:
 
 ```js
-e.event_dates.starting_day // esim. '2020-10-23T07:00:00.000Z'
+e.event_dates.starting_day // sama kuin e['event_dates']['starting_day']
 ```
 
 Alkamisaikaa voidaan käyttää esimerkiksi vertailuissa kuten mitä tahansa merkkijonoja:
@@ -523,6 +523,9 @@ allFalse.length // mitään ei valittu!
 Sen sijaan että funktio palauttaisi aina `true` tai `false`, haluamme luonnollisesti tehdä funktioon oikeaa valintalogiikkaa. Seuraava funktio vertailee saamansa tapahtuman päivämäärää nykyhetkeen, ja palauttaa `true`, mikäli tapahtuma on tulevaisuudessa:
 
 ```js
+/*
+ * Palauttaa true, jos funktiolle annettavan tapahtuman alkamisaika on tulevaisuudessa.
+ */
 function isFutureEvent(event) {
     let now = new Date().toISOString();
     return event.event_dates.starting_day >= now;
@@ -532,14 +535,14 @@ function isFutureEvent(event) {
 Nyt voimme käyttää tätä funktiota suodattaaksemme vain tulevaisuuteen sijoittuvat tapahtumat!
 
 ```js
-// Huom! isFutureEvent-funktiota ei kutsuta heti, vaan se annetaan parametrina
+// Huom! isFutureEvent-funktiota ei kutsuta heti, vaan se annetaan parametrina:
 let futureEvents = events.filter(isFutureEvent);
 ```
 
 Seuraavaksi halutaan rajata tapahtumat, joilla on alkuaika, ja joilla se sijoittuu kahden ajankohdan väliin. Tässä tapauksessa kokeilemme ketjuttaa filter-operaatiot, jolloin seuraava operaatio tehdään aina edellisen tulokselle:
 
 ```js
-let nextWeek = '2021-03-12T10:47:00.111Z';
+let nextWeek = '2021-10-10T10:47:00.111Z';
 
 let eventsNextWeek = events
     .filter(e => e.event_dates.starting_day != null)
@@ -552,6 +555,9 @@ eventsNextWeek; // sisältää kolmella ehdolla rajatut tapahtumat!
 Miten voisimme siistiä koodia siten, että yllä oleva koodi ei tekisi kolmea filtteriä eikä sääntöjä kirjoitettaisin filter-metodin sisään? Tätä varten voimme kirjoittaa filtteröintifunktion erilleen filtteröinnistä!
 
 ```js
+let now = new Date().toISOString();
+let nextWeek = '2021-10-10T10:47:00.111Z';
+
 function isBetweenDates(event) {
     let { starting_day } = event.event_dates; // object destructuring
     return starting_day != null && starting_day >= now && starting_day <= nextWeek;
@@ -566,7 +572,7 @@ Nyt `isBetweenDates` voidaan antaa parametrina `filter`-operaatiolle:
 let eventsNextWeek = events.filter(isBetweenDates);
 ```
 
-Yllä olevassa koodissa `isBetweenDates` on "kovakoodattu" vertailemaan tapahtuman alkuaikaa aina samoihin arvoihin `now` ja `nextWeek`. Olisikin paljon parempi, jos voisimme määritellä funktion kahdessa vaiheessa: ensin annetaan päivämäärät ja sen jälkeen vertaillaan tapahtumaa:
+Yllä olevassa koodissa `isBetweenDates` on "kovakoodattu" vertailemaan tapahtuman alkuaikaa aina samoihin kiinteisiin arvoihin `now` ja `nextWeek`. Olisikin paljon parempi, jos voisimme määritellä funktion kahdessa vaiheessa: ensin annetaan päivämäärät, ja sen jälkeen vertaillaan tapahtumaa:
 
 ```js
 function isBetweenDates(minDate, maxDate) {
@@ -580,7 +586,7 @@ function isBetweenDates(minDate, maxDate) {
 Tämän `isBetweenDates`-funktion avulla voimme ensin luoda uuden funktion `isNextWeek`:
 
 ```js
-let isNextWeek = isBetweenDates('2020-10-09T00:00:00', '2020-10-16T24:00:00');
+let isNextWeek = isBetweenDates('2021-10-03T10:47:00.111Z', '2021-10-10T10:47:00.111Z');
 ```
 
 Kun `isNextWeek` annetaan `filter`-operaatiolle, filter kutsuu antamaamme `isNextWeek`-funktiota jokaiselle tapahtumalle. Funktio palauttaa `true` mikäli tapahtuman ajankohta sijoittuu seuraavalle viikolle, joten uudelle taulukkolle tulee vain seuraavan viikon tapahtumat:
@@ -624,7 +630,7 @@ Tässä esimerkissä luomme tapahtumia sisältävän taulukon perusteella uuden,
 [ 'helmet:214000', 'helmet:216844', 'helmet:216842', 'helmet:211890', 'helmet:214001', ... ]
 ```
 
-`map`-operaatio suoritti annetun funktion taulukon jokaiselle tapahtumalle ja muodosti funktion paluuarvoista uuden taulukon. Tässä tapauksessa funktio yksinkertaisesti palautti saamansa tapahtuman id:n, joten uusi lista koostuu id-arvoista.
+`map`-operaatio suoritti annetun funktion `event => event.id` taulukon jokaiselle tapahtumalle, ja muodosti funktion paluuarvoista uuden taulukon. Tässä tapauksessa funktio yksinkertaisesti palautti saamansa tapahtuman id:n, joten uusi lista koostuu id-arvoista.
 
 ### Map-operaatio JSX-renderöinnissä
 
@@ -676,10 +682,11 @@ Sekä `map` että `filter` on toteutettavissa `reduce`:n avulla. Tällöin koott
 
 ```js
 > // map toteutettuna reducen avulla:
-let tuplattu = [1, 2, 3, 4, 5].reduce((uusiTaulukko, arvo) => { 
+> let tuplattu = [1, 2, 3, 4, 5].reduce((uusiTaulukko, arvo) => { 
     uusiTaulukko.push(arvo * 2);
     return uusiTaulukko;
 }, [] );
+>
 > console.log(tuplattu);
 [ 2, 4, 6, 8, 10 ]
 ```
@@ -692,6 +699,7 @@ let tuplattu = [1, 2, 3, 4, 5].reduce((uusiTaulukko, arvo) => {
     } 
     return uusiTaulukko; 
 }, [] );
+>
 > console.log(suurempiKuinKolme);
 [ 4, 5 ]
 ```
@@ -734,12 +742,18 @@ Voit tallentaa JSON-tiedostot itsellesi seuraavista kahdesta osoitteesta:
     curl https://jsonplaceholder.typicode.com/posts > posts.json
     ```
 
+Tehtävän kannalta riittää hyvin, että luet käyttäjät ja postaukset paikallisesta tiedostosta [require](https://nodejs.org/en/knowledge/getting-started/what-is-require/)-funktiolla esimerkiksi seuraavasti:
 
-Mikäli haluat, voit myös toteuttaa tiedostojen lataamisen dynaamisesti JavaScriptillä. Tiedon dynaaminen hakeminen käsitellään kuitenkin vasta seuraavan viikon oppitunnilla.
+```js
+let users = require('./users.json');
+```
+
+Mikäli haluat, voit myös toteuttaa tiedostojen lataamisen verkosta dynaamisesti JavaScriptillä. Tiedon dynaaminen hakeminen käsitellään kuitenkin vasta seuraavan viikon oppitunnilla.
+
 
 ## Osa 1 (arvosanatavoite 3)
 
-Tehtävän 1. osassa sinun tulee kirjoittaa Node.js-skripti, joka lukee tiedostot ja tulostaa niissä olevien käyttäjien nimet (name) sekä postausten otsikot (title) siten, että kunkin käyttäjän nimen tulostamisen jälkeen tulostetaan kaikkien kyseisen käyttäjän postausten otsikot:
+Tehtävän 1. osassa sinun tulee kirjoittaa Node.js-skripti, joka lukee tiedostot ja tulostaa niissä olevien käyttäjien nimet (`name`) sekä postausten otsikot (`title`) siten, että kunkin käyttäjän nimen tulostamisen jälkeen tulostetaan kaikkien kyseisen käyttäjän postausten otsikot, esimerkiksi seuraavasti:
 
 ```
 Leanne Graham
@@ -770,6 +784,7 @@ Ervin Howell
 ...
 ```
 
+Voit toteuttaa tehtävän joko perinteisillä sisäkkäisillä toistorakenteilla, tai voit hyödyntää tunnilla käsiteltyjä vaihtoehtoisia operaatioita.
 
 
 ## Osa 2 (arvosanatavoite 5)
@@ -800,6 +815,8 @@ Arvosanatavoitteeseen 5 sinun tulee kirjoittaa edellisen lisäksi toinen skripti
             "catchPhrase": "Multi-layered client-server neural-net",
             "bs": "harness real-time e-markets"
         },
+
+        // käyttäjälle lisätty uusi `posts`-taulukko sisältää kaikki kyseisen käyttäjän postaukset:
         "posts": [
             {
                 "userId": 1,
@@ -823,13 +840,13 @@ Arvosanatavoitteeseen 5 sinun tulee kirjoittaa edellisen lisäksi toinen skripti
 ]
 ```
 
-JavaScript-tietorakenteen muuttaminen merkkijonoksi onnistuu esimerkiksi [JSON.stringify-metodilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify):
+Muodostettu JSON-tietorakenne tulee lopuksi tallentaa tiedostoon. JavaScript-tietorakenteen muuttaminen merkkijonoksi onnistuu esimerkiksi [JSON.stringify-metodilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify):
 
 ```js
 let jsonString = JSON.stringify(omaData, null, 4);
 ```
 
-Muunnettu JSON-tietorakenne tulee tallentaa uuteen JSON-tiedostoon esimerkiksi Node.js:n fs-moduulin [writeFileSync](https://stackoverflow.com/a/46356040)-metodilla:
+Muodostettu JSON-merkkijono tulee tallentaa vielä tiedostoon esimerkiksi Node.js:n fs-moduulin [writeFileSync](https://stackoverflow.com/a/46356040)-metodilla:
 
 ```js
 const fs = require('fs');
@@ -843,19 +860,19 @@ Arvosanatavoitteeseen 5 sinun tulee hyödyntää oppitunnilla käsiteltyjä `map
 
 ## Valmiiden kirjastojen käyttäminen
 
-Näiden tehtävien ratkaisemiseksi et tarvitse ulkoisia kirjastoja tai `npm`-komentoa. Pelkkä Node.js riittää. Halutessasi saat kuitenkin käyttää apukirjastoja, kuten [lodash](https://www.npmjs.com/package/lodash). Kirjastojen käyttäminen ei vaikuta laskevasti arvosanaan.
+Näiden tehtävien ratkaisemiseksi et tarvitse ulkoisia kirjastoja tai `npm`-komentoa. Pelkkä Node.js riittää. Halutessasi saat kuitenkin käyttää apukirjastoja, kuten [lodash](https://www.npmjs.com/package/lodash) tai [axios](https://www.npmjs.com/package/axios). Kirjastojen käyttäminen ei vaikuta laskevasti arvosanaan.
 
 
 ## Vinkit datan käsittelyyn
 
-Käyttäjien ja heidän postauksiensa yhdistämiseksi yksi lähestymistapa on käydä käyttäjät läpi `map`-metodilla ja muodostaa jokaisesta käyttäjästä uusi olio, jolla on taulukko postauksia. Postaustaulukko puolestaan voidaan rakentaa kullekin käyttäjälle `filter`-metodin avulla, suodattamalla kaikista postauksista ne, joiden `userId` vastaa kyseisen käyttäjän `id`:tä.
+Käyttäjien ja heidän postauksiensa yhdistämiseksi yksi lähestymistapa on käydä käyttäjät läpi `map`-metodilla ja muodostaa jokaisesta käyttäjästä uusi olio, jolla on alkuperäisten tietojen lisäksi taulukko postauksia. Postaustaulukko puolestaan voidaan rakentaa kullekin käyttäjälle `filter`-metodin avulla, suodattamalla kaikista postauksista ne, joiden `userId` vastaa kyseisen käyttäjän `id`:tä.
 
 
 ## Tehtävän palauttaminen
 
 Myös osittain ratkaistut palautukset hyväksytään ja arvostellaan suhteessa niiden valmiusasteeseen. Palauta kaikki ratkaisuusi liittyvät lähdekoodit erillisinä tiedostoina **Teams-tehtävässä ilmoitettuun määräaikaan mennessä**. 
 
-**Nimeä `.js`-päätteiset tiedostot `.js.txt`-päätteisiksi, mikäli Teams ei hyväksy tiedostojasi tietoturvasyistä.**
+**Huom! Nimeä `.js`-päätteiset tiedostot `.js.txt`-päätteisiksi, mikäli Teams ei hyväksy tiedostojasi tietoturvasyistä.**
 
 
 ----
