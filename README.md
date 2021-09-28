@@ -163,7 +163,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
             </td>
             <td>
                 <strong>CGI:n vierailijaluento Teamsissa pe 29.10. klo 12 - 13</strong><br />
-                <strong>Aiheena <a href="https://www.cgi.com/fi/fi/paikkatieto" target="_blank">paikkatietojärjestelmien arkkitehtuurit</strong></strong><br />
+                <strong>Aiheena <a href="https://www.cgi.com/fi/fi/paikkatieto" target="_blank">paikkatietojärjestelmien arkkitehtuurit</a></strong><br />
                 Tehtävien DL su 31.10. klo 23:59
             </td>
         </tr>
