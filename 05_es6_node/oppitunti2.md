@@ -5,9 +5,8 @@ Tällä oppitunnilla jatkamme JavaScript-kielen ja Node.js:n parissa. Tutustumme
 
 # Oppitunnin videot
 
-Tämän aiheen videot julkaistaan maanantaina 4.10.2021.
+<!-- Tämän aiheen videot julkaistaan maanantaina 4.10.2021.-->
 
-<!--
 **[Osa 1: ES6-tehtävän malliratkaisu sekä Mocha-yksikkötestit](https://web.microsoftstream.com/video/8d5ce190-2bd0-4c8a-84ad-f51b2cbe7f3e)** *52:44*
 
 Tällä videolla kerrataan edellisen viikon syntaksit konkreettisen esimerkin avulla. Käymme läpi users & posts -tehtävän malliratkaisun ja perehdymme yksikkötestaukseen Mocha-testaustyökalulla.
@@ -19,7 +18,7 @@ Tällä videolla käsittelemme yksikkötestausta Mochalla sekä eri tyyppisten a
 **[Osa 3: Express](https://web.microsoftstream.com/video/68dfd069-5b72-4484-a6fd-0b3199f803a2)** *32:52*
 
 Tällä videolla asennamme express-kirjaston, jonka avulla toteutamme yksinkertaisen http-palvelun edellisissä videoissa käsitellyn datan tarjoamiseksi web-selaimelle. Käsittelemme videon lopussa myös tämän viikon harjoitustehtävän tehtävänantoa. Videolla luodaan ja muokataan tiedostoa [index.js](./src/index.js).
--->
+
 
 # ES6-syntaksien kertaus
 

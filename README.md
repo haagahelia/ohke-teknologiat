@@ -128,6 +128,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
                     <li>Express.js</li>
                     <li>Promise</li>
                     <li>Async/await</li>
+                    <li><a href="https://web.microsoftstream.com/video/8d5ce190-2bd0-4c8a-84ad-f51b2cbe7f3e">Video 1</a>, <a href="https://web.microsoftstream.com/video/1ef90b63-0b90-4606-a75c-c25ccf13cb61">video 2</a>, <a href="https://web.microsoftstream.com/video/68dfd069-5b72-4484-a6fd-0b3199f803a2">video 3</a></li>
                 </ul>
             </td>
             <td>
