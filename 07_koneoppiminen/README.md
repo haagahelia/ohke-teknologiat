@@ -7,7 +7,7 @@
 
 ## Luentovideot
 
-**[Video: Johdanto koneoppimiseen](https://web.microsoftstream.com/video/24cde106-9001-4151-a549-a36092a50313)**
+**[Video: Johdanto koneoppimiseen](https://web.microsoftstream.com/video/ce25c6f6-e786-4ff2-824c-ab1a31f151c0)**
 
 **[Video: Johdanto jatkuu ja miten kone oppii](https://web.microsoftstream.com/video/c33eb567-1481-47b2-b931-8816aec5c4b4)**
 
