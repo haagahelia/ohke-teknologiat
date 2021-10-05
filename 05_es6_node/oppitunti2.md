@@ -15,6 +15,8 @@ Tällä videolla kerrataan edellisen viikon syntaksit konkreettisen esimerkin av
 
 Tällä videolla käsittelemme yksikkötestausta Mochalla sekä eri tyyppisten arvojen vertailua JavaScriptillä. Asennamme `node-fetch`-kirjaston, jonka avulla voimme tehdä asynkronisia HTTP-pyyntöjä Node.js-koodistamme. Videon esimerkkikoodit: [api.js](./src/blog/api.js), [blog-api.test.js](./src/test/blog-api.test.js).
 
+**Huom!** Videon esimerkistä poiketen asenna `node-fetch`-kirjastosta versio 2 komennolla `npm install node-fetch@^2`.
+
 **[Osa 3: Express](https://web.microsoftstream.com/video/68dfd069-5b72-4484-a6fd-0b3199f803a2)** *32:52*
 
 Tällä videolla asennamme express-kirjaston, jonka avulla toteutamme yksinkertaisen http-palvelun edellisissä videoissa käsitellyn datan tarjoamiseksi web-selaimelle. Käsittelemme videon lopussa myös tämän viikon harjoitustehtävän tehtävänantoa. Videolla luodaan ja muokataan tiedostoa [index.js](./src/index.js).
@@ -259,7 +261,7 @@ Selaimissa HTTP-pyyntöjä tehdään usein JavaScriptin [fetch](https://develope
 Node-fetch voidaan asentaa seuraavasti:
 
 ```
-$ npm install node-fetch
+$ npm install node-fetch@^2
 ```
 
 HTTP-pyyntö voidaan tehdä nyt sovelluksessa seuraavasti:
