@@ -15,7 +15,7 @@ Tällä videolla kerrataan edellisen viikon syntaksit konkreettisen esimerkin av
 
 Tällä videolla käsittelemme yksikkötestausta Mochalla sekä eri tyyppisten arvojen vertailua JavaScriptillä. Asennamme `node-fetch`-kirjaston, jonka avulla voimme tehdä asynkronisia HTTP-pyyntöjä Node.js-koodistamme. Videon esimerkkikoodit: [api.js](./src/blog/api.js), [blog-api.test.js](./src/test/blog-api.test.js).
 
-**Huom!** Videon esimerkistä poiketen asenna `node-fetch`-kirjastosta versio 2 komennolla `npm install node-fetch@^2`.
+🚨 **Huom!** Videon esimerkistä poiketen asenna `node-fetch`-kirjastosta versio 2 komennolla `npm install node-fetch@^2`. Versiosta 3 alkaen `node-fetch` [ei tue enää require-funktiota](https://www.npmjs.com/package/node-fetch#loading-and-configuring-the-module). Vaihtoehtoisesti voit käyttää [cross-fetch](https://www.npmjs.com/package/cross-fetch)-pakettia node-fetch'in tilalla.
 
 **[Osa 3: Express](https://web.microsoftstream.com/video/68dfd069-5b72-4484-a6fd-0b3199f803a2)** *32:52*
 
