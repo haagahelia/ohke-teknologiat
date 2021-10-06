@@ -117,7 +117,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
             </td>
             <td>
                 Teams-sessio pe 1.10. klo 12<br />
-                Tehtävien DL su 3.10. klo 23:59
+                Teams-tehtävä 5.1: DL su 3.10. klo 23:59
             </td>
         </tr>
         <tr>
@@ -133,7 +133,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
             </td>
             <td>
                 Teams-sessio pe 8.10. klo 12<br />
-                Tehtävien DL su 10.10. klo 23:59
+                Teams-tehtävä 5.2: DL su 10.10. klo 23:59
             </td>
         </tr>
         <tr>
@@ -143,7 +143,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
             </td>
             <td>
                 Teams-sessio pe 15.10. klo 12<br />
-                Tehtävien DL su 17.10. klo 23:59
+                Teams-tehtävät 6.1 ja 6.2: DL su 17.10. klo 23:59
             </td>
         </tr>
         <tr>
@@ -165,7 +165,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
             <td>
                 <strong>CGI:n vierailijaluento Teamsissa pe 29.10. klo 12 - 13</strong><br />
                 <strong>Aiheena <a href="https://www.cgi.com/fi/fi/paikkatieto" target="_blank">paikkatietojärjestelmien arkkitehtuurit</a></strong><br />
-                Tehtävien DL su 31.10. klo 23:59
+                Teams-tehtävät 6.3 ja 6.4: DL su 31.10. klo 23:59
             </td>
         </tr>
         <tr>
@@ -175,7 +175,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
             </td>
             <td>
                 Teams-sessio pe 5.11. klo 12<br />
-                Tehtävien DL su 7.11. klo 23:59
+                Teams-tehtävä 7.1: DL su 7.11. klo 23:59
             </td>
         </tr>
         <tr>

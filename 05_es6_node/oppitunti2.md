@@ -562,7 +562,7 @@ Katso lisätietoa järjestämisestä ylempää kodasta "Järjestäminen alkamisa
 
 
 
-# Koodaustehtävä: postinumerot-backend
+# Koodaustehtävä: postinumerot-backend (Teams-tehtävä 5.2)
 
 Tämän viikon tehtävässä sinun tulee hyödyntää Node.js:ää, npm:ää sekä [express](https://www.npmjs.com/package/express)-kirjastoa ja toteuttaa HTTP-palvelu, joka palauttaa aikaisemmilta viikoilta tuttuja postitoimipaikkojen nimiä sekä postinumeroita.
 
