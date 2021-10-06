@@ -264,10 +264,16 @@ Node-fetch voidaan asentaa seuraavasti:
 $ npm install node-fetch@^2
 ```
 
+Vaihtoehtoisesti voit käyttää [cross-fetch](https://www.npmjs.com/package/cross-fetch)-pakettia:
+
+```
+$ npm install cross-fetch
+```
+
 HTTP-pyyntö voidaan tehdä nyt sovelluksessa seuraavasti:
 
 ```js
-const fetch = require('node-fetch');
+const fetch = require('node-fetch'); // vaihtoehtoisesti require('cross-fetch');
 
 let httpPromise = fetch('https://jsonplaceholder.typicode.com/users');
 ```
