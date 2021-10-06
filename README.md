@@ -25,14 +25,14 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
 <table>
     <thead>
         <tr>
-            <th>#</th>
+            <th>Aika</th>
             <th>Aiheet</th>
             <th>Aikataulu</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>0</td>
+            <td>23.-29.8.</td>
             <td>
                 <a href="00_linux/asennukset.md">Ennakkotehtävä: kurssin kehitysympäristön asennus</a><br /><br />
                 <a href="00_linux">Kurssin johdanto, ympäristöt ja Linux/Unix-komentorivi</a>
@@ -43,7 +43,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
             </td>
         </tr>
         <tr>
-            <td>1</td>
+            <td>30.8.-5.9.</td>
             <td>
                 <a href="01_python">Python-ohjelmointi</a><br />
                 <ul>
@@ -59,7 +59,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
             </td>
         </tr>
         <tr>
-            <td>2</td>
+            <td>6.-12.9.</td>
             <td>
                 <a href="02_testaus">Testaus</a><br />
                 <ul>
@@ -75,7 +75,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
             </td>
         </tr>
         <tr>
-            <td>3</td>
+            <td>13.-19.9.</td>
             <td>
                 <a href="03_infra_ja_automaatio">Infra ja automaatio</a><br />
                 <ul>
@@ -89,7 +89,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
             </td>
         </tr>
         <tr>
-            <td>4</td>
+            <td>20.-26.9.</td>
             <td>
                 <a href="04_tietorakenteet_ja_algoritmit">Tietorakenteet ja algoritmit</a><br />
                 <ul>
@@ -105,9 +105,9 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
             </td>
         </tr>
         <tr>
-            <td>5</td>
+            <td>27.9.-3.10.</td>
             <td>
-                <a href="05_es6_node/oppitunti1.md">Node / JavaScript</a><br />
+                <a href="05_es6_node/oppitunti1.md">ES6-syntaksit ja funktionaalinen ohjelmointityyli</a><br />
                 <ul>
                     <li>ES6-syntaksit</li>
                     <li>filter, map, reduce</li>
@@ -121,9 +121,9 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
             </td>
         </tr>
         <tr>
-            <td>6</td>
+            <td>4.-10.10.</td>
             <td>
-                <a href="05_es6_node/oppitunti2.md">Node / JavaScript</a><br />
+                <a href="05_es6_node/oppitunti2.md">Node, NPM, Express ja Promiset</a><br />
                 <ul>
                     <li>Express.js</li>
                     <li>Promise</li>
@@ -137,7 +137,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
             </td>
         </tr>
         <tr>
-            <td>7</td>
+            <td>11.-17.10.</td>
             <td>
                 <a href="06_ohjelmistoarkkitehtuurit_ja_patternit">Ohjelmistoarkkitehtuurit ja patternit</a>
             </td>
@@ -147,7 +147,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
             </td>
         </tr>
         <tr>
-            <td>8</td>
+            <td>18.-24.10.</td>
             <td><del>Intensiiviviikko</del></td>
             <td></td>
         </tr>
@@ -158,7 +158,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
             </td>
         </tr-->
         <tr>
-            <td>9</td>
+            <td>25.-31.10</td>
             <td>
                 <a href="06_ohjelmistoarkkitehtuurit_ja_patternit">Ohjelmistoarkkitehtuurit ja patternit</a>
             </td>
@@ -169,7 +169,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
             </td>
         </tr>
         <tr>
-            <td>10</td>
+            <td>1.-7.11.</td>
             <td>
                 <a href="07_koneoppiminen">Koneoppiminen</a>
             </td>
@@ -179,34 +179,34 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
             </td>
         </tr>
         <tr>
-            <td>11</td>
+            <td>8.-14.11.</td>
             <td><a href="08_seminaari">Seminaarien käynnistys</a></td>
             <td>
                 Teams-sessio pe 12.11. klo 12
             </td>
         </tr>
         <tr>
-            <td>12</td>
+            <td>15.-21.11.</td>
             <td>Seminaarityön tekemistä</td>
             <td><em>Yksilöllistä ohjausta Teamsissa tai kampuksella pe 19.11.</em></td>
         </tr>
         <tr>
-            <td>13</td>
+            <td>22.-28.11.</td>
             <td>Seminaarityön tekemistä</td>
             <td><em>Yksilöllistä ohjausta Teamsissa tai kampuksella pe 26.11.</em></td>
         </tr>
         <tr>
-            <td>14</td>
+            <td>29.11-5.12.</td>
             <td>Seminaarityön tekemistä</td>
             <td><em>Yksilöllistä ohjausta Teamsissa tai kampuksella pe 3.12.</em></td>
         </tr>
         <tr>
-            <td>15</td>
+            <td>5.12.</td>
             <td>Seminaaritöiden raportin palautus</td>
             <td>Raportin DL su 5.12. klo 23:59</td>
         </tr>
         <tr>
-            <td>16</td>
+            <td>6.-12.12.</td>
             <td>Seminaariesitykset</td>
             <td>Seminaariesitykset Teamsissa pe 10.12. klo 12</td>
         </tr>
