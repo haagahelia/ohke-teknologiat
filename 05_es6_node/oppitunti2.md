@@ -205,7 +205,7 @@ true
 true
 > "0" == false  // nolla merkkijonona ja false
 true
-> [] == false   // tyjä taulukko ja false
+> [] == false   // tyhjä taulukko ja false
 true
 > 0 == false    // nolla ja false
 true
