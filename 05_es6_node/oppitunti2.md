@@ -264,13 +264,13 @@ Node-fetch voidaan asentaa seuraavasti:
 $ npm install node-fetch@^2
 ```
 
-Vaihtoehtoisesti voit käyttää [cross-fetch](https://www.npmjs.com/package/cross-fetch)-pakettia:
+Vaihtoehtoisesti voit käyttää [cross-fetch](https://www.npmjs.com/package/cross-fetch)-pakettia, joka toimii myös selain- ja React Native -ympäristöissä:
 
 ```
 $ npm install cross-fetch
 ```
 
-HTTP-pyyntö voidaan tehdä nyt sovelluksessa seuraavasti:
+Fetch-paketin asentamisen jälkeen HTTP-pyyntö voidaan tehdä koodissa seuraavasti:
 
 ```js
 const fetch = require('node-fetch'); // vaihtoehtoisesti require('cross-fetch');
