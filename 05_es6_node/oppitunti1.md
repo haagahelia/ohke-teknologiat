@@ -1,6 +1,8 @@
-# ES6-syntaksit ja funktionaalinen ohjelmointityyli
+# Moderni JavaScript ja funktionaalinen ohjelmointityyli
 
-Tämän oppitunnin tavoitteena on oppia erityisesti lukemaan koodia ja ymmärtämään, miten yleisimmät JavaScript-kieliset esimerkkikoodit toimivat. Sivuamme funktionaalista ohjelmointia hyödyntämällä funktioiden antamista parametreina toisille funktioille (callback) sekä uusien funktioiden palauttamista paluuarvoina (currying).
+ECMAScript-standardin uudet versiot tuovat jatkuvasti JavaScript-kieleen uusia ominaisuuksia ja uusia syntakseja. Tämän oppitunnin tavoitteena on oppia erityisesti lukemaan koodia ja ymmärtämään, miten yleisimmät JavaScript-kieliset esimerkkikoodit toimivat.
+
+Sivuamme funktionaalista ohjelmointia hyödyntämällä funktioiden antamista parametreina toisille funktioille (callback) sekä uusien funktioiden palauttamista paluuarvoina (currying).
 
 Oppitunnin jälkeen osaat nimetä esimerkiksi seuraavassa koodissa käytettyjä ominaisuuksia:
 
@@ -13,7 +15,7 @@ function helloAgent({ names }) {
 module.exports = { helloAgent };
 ```
 
-ES6:n ajoittain erikoiset syntaksit tekevät usein koodista suoraviivaista, mutta toisinaan syntaksien liikakäyttö väärissä tilanteissa hankaloittaa koodin ymmärtämistä ja ylläpitoa. Miten esimerkiksi saisit hyödynnettyä yllä esitettyä `helloAgent`-funktiota toisesta moduulista käsin? Tämän tunnin jälkeen tunnistat koodiesimerkin erikoisuudet ja tunnistat joitakin tilanteita, joissa on tarkoituksenmukaista hyödyntää eri ominaisuuksia.
+JavaScriptin ajoittain erikoiset syntaksit tekevät usein koodista suoraviivaista, mutta toisinaan syntaksien liikakäyttö väärissä tilanteissa hankaloittaa koodin ymmärtämistä ja ylläpitoa. Miten esimerkiksi saisit hyödynnettyä yllä esitettyä `helloAgent`-funktiota toisesta moduulista käsin? Tämän tunnin jälkeen tunnistat koodiesimerkin erikoisuudet ja tunnistat joitakin tilanteita, joissa on tarkoituksenmukaista hyödyntää eri ominaisuuksia.
 
 Itseopiskelumateriaalina voit hyödyntää hyviä sivustoja, kuten:
 
@@ -86,7 +88,7 @@ var _names = names,
 Useat kehitystyökalut, kuten Reactin kehityspalvelin, huolehtivat transpiloinnista automaattisesti taustalla.
 
 
-# ES6
+# ES6 ja uudemmat ECMAScript-standardin versiot
 
 JavaScript-kielen taustalla olevan ECMAScript-standardin versiossa 6 ja sen jälkeen kieleen on tullut mukaan useita erilaisia ominaisuuksia ja kirjoitusasuja, kuten edellä esitetty "object destructuring". Seuraavissa kappaleissa tutustumme esimerkkien avulla siihen, miten uudet syntaksit voivat hyödyttää meitä "oikeassa ohjelmassa". Oikea ohjelma tarkoittaa tässä tapauksessa esimerkiksi Node.js-sovellusta, joka hakee dataa REST-rajapinnasta ja tarjoaa asiakkailleen JSON-muotoista dataa.
 

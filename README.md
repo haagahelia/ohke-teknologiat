@@ -107,7 +107,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
         <tr>
             <td>27.9.-3.10.</td>
             <td>
-                <a href="05_es6_node/oppitunti1.md">ES6-syntaksit ja funktionaalinen ohjelmointityyli</a><br />
+                <a href="05_es6_node/oppitunti1.md">Moderni JavaScript ja funktionaalinen ohjelmointityyli</a><br />
                 <ul>
                     <li>ES6-syntaksit</li>
                     <li>filter, map, reduce</li>
