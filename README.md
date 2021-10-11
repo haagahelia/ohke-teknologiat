@@ -143,7 +143,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
             </td>
             <td>
                 Teams-sessio pe 15.10. klo 12<br />
-                Teams-tehtävät 6.1 ja 6.2: DL su 17.10. klo 23:59
+                Teams-tehtävät 6.1 ja 6.2: DL su 24.10. klo 23:59
             </td>
         </tr>
         <tr>
