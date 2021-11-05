@@ -152,10 +152,8 @@ Tälle sivulle on koottu esimerkkiaiheita kurssin seminaaritehtävää varten. V
 ## AR/XR
 
 * **Topics proposed by our partner Accenture:**
-    1. AR sovellus
-    Toteuta yksinkertainen AR sovellus. Laitteena voi hyödyntää esim. älypuhelinta tai HoloLens 2 laseilla. Sovelluksessa voidaan keskittyä johonkin rajattuun sovelluksen ominaisuuteen, kuten tuotevisualisointiin tai sisätilaseurantaan.
-    1. VR/XR sovellus
-    Toteuta yksinkertainen VR/XR sovellus. Laitteena voi hyödyntää esim. Varjo XR-3 laseja. Sovelluksessa voidaan keskittyä johonkin rajattuun sovelluksen ominaisuuteen, kuten käyttöliittymään, VR-liikkeeseen tai kollaboraatioon.
+    1. Toteuta yksinkertainen AR sovellus. Laitteena voi hyödyntää esim. älypuhelinta tai HoloLens laseilla. Sovelluksessa voidaan keskittyä johonkin rajattuun sovelluksen ominaisuuteen, kuten tuotevisualisointiin tai sisätilaseurantaan.
+    1. Toteuta yksinkertainen VR/XR sovellus. Laitteena voi hyödyntää esim. Varjo XR-3 laseja. Sovelluksessa voidaan keskittyä johonkin rajattuun sovelluksen ominaisuuteen, kuten käyttöliittymään, VR-liikkeeseen tai kollaboraatioon.
 
 ## Azure tai vastaava pilvipalvelu
 
