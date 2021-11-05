@@ -59,7 +59,7 @@ Tälle sivulle on koottu esimerkkiaiheita kurssin seminaaritehtävää varten. V
 
 * **Mikrokontrollerin ohjelmointi MicroPythonilla:**
 
-    Keväälle 2021 tarjotaan myös mahdollisuus perehtyä ESP32-mikrokontrollerien ohjelmointiin [MicroPython](https://micropython.org/)-kielellä. Mahdollisia projekteja voivat olla esimerkiksi sääasema, peruutustutka, Telegram-bottina toteutettu  liiketunnistin tai nopeustesti-peli.
+    Kurssilaisille tarjotaan myös mahdollisuus perehtyä ESP32-mikrokontrollerien ohjelmointiin [MicroPython](https://micropython.org/)-kielellä. Mahdollisia projekteja voivat olla esimerkiksi sääasema, peruutustutka, Telegram-bottina toteutettu  liiketunnistin tai nopeustesti-peli.
 
 
 ## Tietorakenteet ja algoritmit
@@ -143,6 +143,19 @@ Tälle sivulle on koottu esimerkkiaiheita kurssin seminaaritehtävää varten. V
 * **Vahvistusoppiminen:**
 
     Kouluta vahvistusoppimisella (reinforcement learning) jonkin pelin tekoäly. Tässä esimerkiksi on [youtube-playlista](https://www.youtube.com/playlist?list=PLTWFMbPFsvz3CeozHfeuJIXWAJMkPtAdS), jolla koulutetaan tekoäly pelaamaan Segan Sonic the hedgehog -peliä [Open AI:n](https://openai.com/) ja [Neatin](https://neat-python.readthedocs.io/en/latest/neat_overview.html) avulla. 
+
+* **Topics proposed by our partner Accenture:**
+    1. Use Tensorflow to build a character recognition model (perhaps CNN, but not limited to that) with [http://yann.lecun.com/exdb/mnist/](http://yann.lecun.com/exdb/mnist/). Would be awesome if students can test it by inputing their own handwritten digits.
+    1. Use Tensorflow or PL of choice to build single layer perceptron and then multi layer perceptron. Ideally also apply it to solve some practical problem - like character recognition or morse code translation. Another application could be to use it to classify samples from [https://archive.ics.uci.edu/ml/datasets/Iris](https://archive.ics.uci.edu/ml/datasets/Iris) dataset or wine dataset from same resource.
+    1. Write a report about [https://github.com/openai/gpt-3](https://github.com/openai/gpt-3), specifically highlighting pros, cons, and what made the model successful. Probably also add a few words about OpenAI as organisation to better understand where did this algorithm came from.
+
+## AR/XR
+
+* **Topics proposed by our partner Accenture:**
+    1. AR sovellus
+    Toteuta yksinkertainen AR sovellus. Laitteena voi hyödyntää esim. älypuhelinta tai HoloLens 2 laseilla. Sovelluksessa voidaan keskittyä johonkin rajattuun sovelluksen ominaisuuteen, kuten tuotevisualisointiin tai sisätilaseurantaan.
+    1. VR/XR sovellus
+    Toteuta yksinkertainen VR/XR sovellus. Laitteena voi hyödyntää esim. Varjo XR-3 laseja. Sovelluksessa voidaan keskittyä johonkin rajattuun sovelluksen ominaisuuteen, kuten käyttöliittymään, VR-liikkeeseen tai kollaboraatioon.
 
 ## Azure tai vastaava pilvipalvelu
 
