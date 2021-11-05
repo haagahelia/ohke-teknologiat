@@ -29,23 +29,23 @@ Lisäksi seminaariaiheen haastekerroin vaikuttaa arviointiin. Jos teette haastav
 
 * **Seminaarien käynnistys**
 
-    23.4.2021
+    5.11 tai 12.11.2021
 
 * **Seminaariaiheen ilmoittaminen Teams-kanavalle**
 
-    DL 27.4.2021, klo 12
+    DL 16.11.2021, klo 12
 
 * **Yksilöllistä seminaarityön ohjausta Teamsissa**
 
-    Opettajat tavoitettavissa pe 30.4. ja pe 7.5. klo 12-15 välillä. Ota yhteyttä ja sovi videotapaaminen!
+    Opettajat tavoitettavissa Teamsissa. Ota yhteyttä ja sovi videotapaaminen!
 
 * **Seminaarin tulosten palauttaminen Teamsiin**
 
-    DL 10.5.2021, klo 23.59
+    DL 5.12.2021, klo 23.59
 
 * **Seminaariesitykset**
 
-    14.5.2021, klo 12-15
+    10.12.2021, klo 12-15
 
 # Seminaariaiheita
 
