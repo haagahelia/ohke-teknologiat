@@ -158,13 +158,15 @@ Tälle sivulle on koottu esimerkkiaiheita kurssin seminaaritehtävää varten. V
 ## Security
 
 * **Topics proposed by our partner Accenture:**
-    1.
-    **Security Crawler**
+
+
+    **1. Security Crawler**
+
     Toteuta/kehitä työkalu tai skripti (esim. Pythonia hyödyntäen), joka hakee API-rajapintaan tai vastaavaa käyttäen avoimista palveluista/julkisista repositoreista (esim. Github) sinne päätyneitä tietoja jotka, ei tulisi olla julkisia (mm. koodiin kovakoodatut salasanat, käyttäjätunnukset, IP osoitteet tai esimerkiksi salausavaimet). Työkalulla/skriptillä voidaan hakea eri kriteereillä, esimerkiksi yrityksen nimellä, avainsanoilla tai vastaavilla, datamassasta havaintoja ja luoda niistä tietoturva-analyytikolle luettava raportti (CSV/PDF/vast.) löydöksistä jatkotutkimusta varten.
     
-    2.
     
-    **Epäilyttävä PDF-skripti**
+    **2. Epäilyttävä PDF-skripti**
+
     Joissakin tapauksissa Kyber hyökkäyksen jälkeen pitää tarkistaa, onko hyökkääjä jättänyt haitallisia tiedostoja jälkeensä tai ansoittanut olemassa olevan tiedoston.
 
     Jos käytettävissä ei ole kaupallisia tuotteita, pitää tarkastus tehdä omilla tai open source scripteillä.
