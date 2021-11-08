@@ -155,6 +155,30 @@ Tälle sivulle on koottu esimerkkiaiheita kurssin seminaaritehtävää varten. V
     1. Toteuta yksinkertainen AR sovellus. Laitteena voi hyödyntää esim. älypuhelinta tai HoloLens laseilla. Sovelluksessa voidaan keskittyä johonkin rajattuun sovelluksen ominaisuuteen, kuten tuotevisualisointiin tai sisätilaseurantaan.
     1. Toteuta yksinkertainen VR/XR sovellus. Laitteena voi hyödyntää esim. Varjo XR-3 laseja. Sovelluksessa voidaan keskittyä johonkin rajattuun sovelluksen ominaisuuteen, kuten käyttöliittymään, VR-liikkeeseen tai kollaboraatioon.
 
+## Security
+
+* **Topics proposed by our partner Accenture:**
+    1. 
+    Toteuta/kehitä työkalu tai skripti (esim. Pythonia hyödyntäen), joka hakee API-rajapintaan tai vastaavaa käyttäen avoimista palveluista/julkisista repositoreista (esim. Github) sinne päätyneitä tietoja jotka, ei tulisi olla julkisia (mm. koodiin kovakoodatut salasanat, käyttäjätunnukset, IP osoitteet tai esimerkiksi salausavaimet). Työkalulla/skriptillä voidaan hakea eri kriteereillä, esimerkiksi yrityksen nimellä, avainsanoilla tai vastaavilla, datamassasta havaintoja ja luoda niistä tietoturva-analyytikolle luettava raportti (CSV/PDF/vast.) löydöksistä jatkotutkimusta varten.
+    
+    2. Joissakin tapauksissa Kyber hyökkäyksen jälkeen pitää tarkistaa, onko hyökkääjä jättänyt haitallisia tiedostoja jälkeensä tai ansoittanut olemassa olevan tiedoston.
+
+    Jos käytettävissä ei ole kaupallisia tuotteita, pitää tarkastus tehdä omilla tai open source scripteillä.
+
+    Luo epäilyttävä PDF tiedosto ja sekä tarvittava scripti, joka löytää epäilyttävän tiedoston joukosta muita PDF tiedostoja.
+
+    Toteuta tai käytä valmiiksi saatavilla työkaluilla seuraavat scriptit:
+
+    1. Scripti joka upottaa PDF tiedostoon javascriptin joka käynnistyy automaattisesti kun PDF tiedosto avataan.
+
+    Javascriptin tulee tehdä aktiivinen toimi, esim. avata "Hello World" pop up.
+
+    2. Luo / käytä scriptiä jolla voi etsiä isosta massasta PDF tiedostoja ne, joissa on epäilyttäviä toiminnallisuuksia kuten javascriptiä tai OpenAction.
+
+    Listaa epäilyttävät PDF tiedostot ja syy, miksi tiedostot ovat epäilyttäviä ja tarvitsevat jatkotutkintaa.
+
+    Dokumentoi scriptisi kyvykkyydet ja toiminta, sekä se, mitä siitä puuttuu tai mitä pitäisi huomioida vielä scriptin nykyisten kyvykkyyksien lisäksi.
+
 ## Azure tai vastaava pilvipalvelu
 
 * **Koneoppiminen:**
