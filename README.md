@@ -4,13 +4,13 @@ Tervetuloa kurssille!
 
 Ohjelmistokehittäjän työ on suurimmaksi osaksi muuta kuin jonkin tietyn ohjelmointikielen syntaksin suvereenia hallintaa. Tämän kurssin tavoitteena on esitellä ohjelmistokehittäjälle tärkeitä taitoja, työkaluja ja tekniikoita, joita ei suoraan ole tullut esille ohjelmoinnin peruskursseilla tai projektityökursseissa. Kurssi toimii samalla myös tukikurssina ohjelmistoprojekti 2-kurssille, jossa tämän kurssin asioita päästään soveltamaan käytännössä.
 
-Opettajina kurssilla toimivat Ohto Rainio ja Teemu Havulinna (etunimi.sukunimi@haaga-helia.fi).
+Opettajina kurssilla toimivat Teemu Havulinna ja Juhani Välimäki (etunimi.sukunimi@haaga-helia.fi).
 
 ![Kurssin aiheet](img/kurssin_aiheet.png)
 
-## Luentovideot
+<!--## Luentovideot
 
-**[Video: Ohjelmistokehityksen teknologioita kurssin yleinen johdanto](https://web.microsoftstream.com/video/ae56e0e9-5bd1-4576-9994-bcd3c29eafaa)**
+**[Video: Ohjelmistokehityksen teknologioita kurssin yleinen johdanto](https://web.microsoftstream.com/video/ae56e0e9-5bd1-4576-9994-bcd3c29eafaa)**-->
 
 ## Linkit
 
@@ -32,36 +32,37 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
     </thead>
     <tbody>
         <tr>
-            <td>23.-29.8.</td>
+            <td>17.-23.1.</td>
             <td>
-                <a href="00_linux/asennukset.md">Ennakkotehtävä: kurssin kehitysympäristön asennus</a><br /><br />
-                <a href="00_linux">Kurssin johdanto, ympäristöt ja Linux/Unix-komentorivi</a>
+                <a href="00_linux/asennukset.md">Tehtävä 1: kurssin kehitysympäristön asennus</a><br />
+                Tehtävä 2: Linux-komentorivi<br /><br />
+                Kurssin johdanto, ympäristöt ja Linux/Unix-komentorivi
             </td>
             <td>
-                Teams-sessio pe 27.8. klo 12<br />
-                Tehtävien DL su 29.8. klo 23:59
+                Teams-sessio ti 18.1. klo 12<br />
+                Tehtävien DL ma 24.1. klo 22:00
             </td>
         </tr>
         <tr>
-            <td>30.8.-5.9.</td>
+            <td>24.-30.1.</td>
             <td>
-                <a href="01_python">Python-ohjelmointi</a><br />
+                Python-ohjelmointi<br />
                 <ul>
                     <li>Ehto- ja toistorakenteet</li>
                     <li>Perustietotyypit ja kokoelmat</li>
                     <li>Http-pyynnöt</li>
-                    <li><a href="https://web.microsoftstream.com/video/497d7df3-1629-49f9-b460-82c1d479b03d">Video 1</a>, <a href="https://web.microsoftstream.com/video/0f31953b-417b-4669-915d-ca35917bfbc0">video 2</a></li>
+                    <!--li><a href="https://web.microsoftstream.com/video/497d7df3-1629-49f9-b460-82c1d479b03d">Video 1</a>, <a href="https://web.microsoftstream.com/video/0f31953b-417b-4669-915d-ca35917bfbc0">video 2</a></li-->
                 </ul>
             </td>
             <td>
-                Teams-sessio pe 3.9. klo 12<br />
-                Tehtävien DL su 5.9. klo 23:59
+                Teams-sessio ti 25.1. klo 12<br />
+                Tehtävien DL ma 31.2. klo 22:00
             </td>
         </tr>
         <tr>
-            <td>6.-12.9.</td>
+            <td>31.1.-6.2.</td>
             <td>
-                <a href="02_testaus">Testaus</a><br />
+                Testaus<br />
                 <ul>
                     <li>Testauksen tasot</li>
                     <li>Yksikkötestaus</li>
@@ -70,145 +71,126 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
                 </ul>
             </td>
             <td>
-                Teams-sessio <strong>poikkeuksellisesti to 9.9. klo 14:45-15:45</strong><br />
-                Tehtävien DL su 12.9. klo 23:59
+                Teams-sessio ti 1.2. klo 12<br />
+                Tehtävien DL ma 7.2. klo 22:00
             </td>
         </tr>
         <tr>
-            <td>13.-19.9.</td>
+            <td>7.-13.2.</td>
             <td>
-                <a href="03_infra_ja_automaatio">Infra ja automaatio</a><br />
+                Infra ja automaatio<br />
                 <ul>
                     <li>Continuous integration</li>
                     <li>Git: branch, merge, rebase...</li>
                 </ul>
             </td>
             <td>
-                Teams-sessio pe 17.9. klo 12<br />
-                Tehtävien DL su 19.9. klo 23:59
+                Teams-sessio ti 8.2 klo 12<br />
+                Tehtävien DL ma 7.2. klo 22:00
             </td>
         </tr>
         <tr>
-            <td>20.-26.9.</td>
+            <td>14.-20.2.</td>
             <td>
-                <a href="04_tietorakenteet_ja_algoritmit">Tietorakenteet ja algoritmit</a><br />
+                Tietorakenteet ja algoritmit<br />
                 <ul>
                     <li>Lajittelualgoritmit</li>
                     <li>Hakualgoritmit</li>
                     <li>Algoritmien tehokkuus</li>
-                    <li><a href="https://web.microsoftstream.com/video/b9af8942-94fb-46ac-a085-6cb9e57199c4">Video 1</a>, <a href="https://web.microsoftstream.com/video/1967c82b-9d40-4247-9db0-95f5067c026a">video 2</a>, <a href="https://web.microsoftstream.com/video/7e1e6347-b8c5-4f03-8c92-369591408be4">video 3</a></li>
+                    <!--li><a href="https://web.microsoftstream.com/video/b9af8942-94fb-46ac-a085-6cb9e57199c4">Video 1</a>, <a href="https://web.microsoftstream.com/video/1967c82b-9d40-4247-9db0-95f5067c026a">video 2</a>, <a href="https://web.microsoftstream.com/video/7e1e6347-b8c5-4f03-8c92-369591408be4">video 3</a></li-->
                 </ul>
             </td>
             <td>
-                Teams-sessio pe 24.9. klo 12<br />
-                Tehtävien DL su 26.9. klo 23:59
+                Teams-sessio ti 15.2. klo 12<br />
+                Tehtävien DL ma 28.2. klo 22:00
             </td>
         </tr>
         <tr>
-            <td>27.9.-3.10.</td>
+            <td>21.-27.2.</td>
+            <td colspan="2">Talvilomaviikko</td>
+        </tr>
+        <tr>
+            <td>28.2.-6.3.</td>
             <td>
-                <a href="05_es6_node/oppitunti1.md">Moderni JavaScript ja funktionaalinen ohjelmointityyli</a><br />
+                Moderni JavaScript ja funktionaalinen ohjelmointityyli<br />
                 <ul>
                     <li>ES6-syntaksit</li>
                     <li>filter, map, reduce</li>
                     <li>currying</li>
-                    <li><a href="https://web.microsoftstream.com/video/4ff9a051-3e45-4e89-a194-a6e68084d55a">Video 1</a>, <a href="https://web.microsoftstream.com/video/7099841a-16d7-44f2-99fe-c37302c4b024">video 2</a>, <a href="https://web.microsoftstream.com/video/94a16d95-45eb-4c69-b69c-d8c70e4c0560">video 3</a></li>
+                    <!--li><a href="https://web.microsoftstream.com/video/4ff9a051-3e45-4e89-a194-a6e68084d55a">Video 1</a>, <a href="https://web.microsoftstream.com/video/7099841a-16d7-44f2-99fe-c37302c4b024">video 2</a>, <a href="https://web.microsoftstream.com/video/94a16d95-45eb-4c69-b69c-d8c70e4c0560">video 3</a></li-->
                 </ul>
             </td>
             <td>
-                Teams-sessio pe 1.10. klo 12<br />
-                Teams-tehtävä 5.1: DL su 3.10. klo 23:59
+                Teams-sessio pe 1.3. klo 12<br />
+                Tehtävien DL ma 7.3. klo 22:00
             </td>
         </tr>
         <tr>
-            <td>4.-10.10.</td>
+            <td>7.-13.3.</td>
             <td>
-                <a href="05_es6_node/oppitunti2.md">Node, NPM, Express ja Promiset</a><br />
+                Node, NPM, Express ja Promiset<br />
                 <ul>
                     <li>Express.js</li>
                     <li>Promise</li>
                     <li>Async/await</li>
-                    <li><a href="https://web.microsoftstream.com/video/8d5ce190-2bd0-4c8a-84ad-f51b2cbe7f3e">Video 1</a>, <a href="https://web.microsoftstream.com/video/1ef90b63-0b90-4606-a75c-c25ccf13cb61">video 2</a>, <a href="https://web.microsoftstream.com/video/68dfd069-5b72-4484-a6fd-0b3199f803a2">video 3</a></li>
+                    <!--li><a href="https://web.microsoftstream.com/video/8d5ce190-2bd0-4c8a-84ad-f51b2cbe7f3e">Video 1</a>, <a href="https://web.microsoftstream.com/video/1ef90b63-0b90-4606-a75c-c25ccf13cb61">video 2</a>, <a href="https://web.microsoftstream.com/video/68dfd069-5b72-4484-a6fd-0b3199f803a2">video 3</a></li-->
                 </ul>
             </td>
             <td>
-                Teams-sessio pe 8.10. klo 12<br />
-                Teams-tehtävä 5.2: DL su 10.10. klo 23:59
+                Teams-sessio ti 8.3. klo 12<br />
+                Tehtävien DL ma 14.3. klo 22:00
             </td>
         </tr>
         <tr>
-            <td>11.-17.10.</td>
+            <td>14.-20.3.</td>
             <td>
-                <a href="06_ohjelmistoarkkitehtuurit_ja_patternit">Ohjelmistoarkkitehtuurit ja patternit</a>
+                Ohjelmistoarkkitehtuurit ja patternit
             </td>
             <td>
-                Teams-sessio pe 15.10. klo 12<br />
-                Teams-tehtävät 6.1 ja 6.2: DL su 24.10. klo 23:59
-            </td>
-        </tr>
-        <tr>
-            <td>18.-24.10.</td>
-            <td><del>Intensiiviviikko</del></td>
-            <td></td>
-        </tr>
-        <!--tr>
-            <td>pe 2.4.</td>
-            <td>
-                <a href="09_azure">Azure-materiaalit itseopiskeluun</a>
-            </td>
-        </tr-->
-        <tr>
-            <td>25.-31.10</td>
-            <td>
-                <a href="06_ohjelmistoarkkitehtuurit_ja_patternit">Ohjelmistoarkkitehtuurit ja patternit</a>
-            </td>
-            <td>
-                <strong>CGI:n vierailijaluento Teamsissa pe 29.10. klo 12 - 13</strong><br />
-                <strong>Aiheena <a href="https://www.cgi.com/fi/fi/paikkatieto" target="_blank">paikkatietojärjestelmien arkkitehtuurit</a></strong><br />
-                Teams-tehtävät 6.3 ja 6.4: DL su 31.10. klo 23:59
+                Teams-sessio ti 15.3. klo 12<br />
+                Tehtävien DL ma 28.3. klo 22:00
             </td>
         </tr>
         <tr>
-            <td>1.-7.11.</td>
+            <td>21.-27.3.</td>
+            <td colspan="2">Intensiiviviikko</td>
+        </tr>
+        <tr>
+            <td>28.3.-3.4.</td>
             <td>
-                <a href="07_koneoppiminen">Koneoppiminen</a>
+                Ohjelmistoarkkitehtuurit ja patternit
             </td>
             <td>
-                Teams-sessio pe 5.11. klo 12<br />
-                Teams-tehtävä 7.1: DL su 7.11. klo 23:59
+                Teams-sessio ti 29.3. klo 12<br />
+                Tehtävien DL ma 4.4. klo 22:00
             </td>
         </tr>
         <tr>
-            <td>8.-14.11.</td>
-            <td><a href="08_seminaari">Seminaarien käynnistys</a></td>
+            <td>4.-10.4.</td>
             <td>
-                Teams-sessio pe 12.11. klo 12
+                Koneoppiminen
+            </td>
+            <td>
+                Teams-sessio ti 5.4. klo 12<br />
+                Tehtävien DL ma 11.4. klo 22:00
             </td>
         </tr>
         <tr>
-            <td>15.-21.11.</td>
+            <td>11.-17.4.</td>
+            <td><!--a href="08_seminaari"-->Seminaarien käynnistys<!--/a--></td>
+            <td>
+                Teams-sessio ti 12.4. klo 12
+            </td>
+        </tr>
+        <tr>
+            <td>18.4.-8.5.</td>
             <td>Seminaarityön tekemistä</td>
-            <td><em>Yksilöllistä ohjausta Teamsissa tai kampuksella pe 19.11.</em></td>
+            <td><em>Yksilöllistä ohjausta Teamsissa tai kampuksella tiistaisin</em></td>
         </tr>
         <tr>
-            <td>22.-28.11.</td>
-            <td>Seminaarityön tekemistä</td>
-            <td><em>Yksilöllistä ohjausta Teamsissa tai kampuksella pe 26.11.</em></td>
-        </tr>
-        <tr>
-            <td>29.11-5.12.</td>
-            <td>Seminaarityön tekemistä</td>
-            <td><em>Yksilöllistä ohjausta Teamsissa tai kampuksella pe 3.12.</em></td>
-        </tr>
-        <tr>
-            <td>5.12.</td>
-            <td>Seminaaritöiden raportin palautus</td>
-            <td>Raportin DL su 5.12. klo 23:59</td>
-        </tr>
-        <tr>
-            <td>6.-12.12.</td>
+            <td>9.-15.5.</td>
             <td>Seminaariesitykset</td>
-            <td>Seminaariesitykset Teamsissa pe 10.12. klo 12</td>
+            <td>Seminaariesitykset Teamsissa ti 10.5. klo 12 alkaen</td>
         </tr>
     </tbody>
 </table>
