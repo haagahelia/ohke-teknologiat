@@ -4,11 +4,14 @@
 
 Ennen ensimmäistä oppituntia sinun tulee valmistella itsellesi toimiva unix-pohjainen ympäristö, jossa voit kehittää ja suorittaa jatkossa kurssilla kehittämiämme koodeja. 
 
-Mikäli sinulla on jo valmiiksi hyvä ympäristö tai olet kiinnostunut esimerkiksi, [Dockerin](https://www.docker.com/), [Raspberry Pi](https://www.raspberrypi.org/):n tai [DigitalOceanin](https://www.digitalocean.com/github-students/) käytöstä, voit käyttää myös niitä, mutta  emme voi luvata niihin käyttötukea.
+Mikäli sinulla on jo valmiiksi hyvä Unix-pohjainen ympäristö, kuten macOS, tai olet kiinnostunut esimerkiksi [WSL2](https://docs.microsoft.com/en-us/windows/wsl/install):n, [Docker](https://www.docker.com/):in, [Raspberry Pi](https://www.raspberrypi.org/):n tai [DigitalOcean](https://www.digitalocean.com/github-students/):in käytöstä, voit hyvin käyttää myös niitä, mutta  emme voi luvata niihin käyttötukea.
+
 
 ## Windows + VirtualBox + Linux
 
-Windows-käyttäjille suosittelemme Oraclen ilmaisen [VirtualBox](https://www.virtualbox.org/)-virtualisointiympäristön sekä [Ubuntu](https://ubuntu.com/desktop)-käyttöjärjestelmän asentamista. Virtuaalikoneeseen tekemäsi asennukset eivät vaikuta tietokoneesi normaaliin käyttöön, ja käyttämällä virtuaalikonetta saat käyttötukea myös kurssin puolesta. Kurssin opettajalla on käytössä Ubuntun stabiili LTS-versio 20.04 (Long Term Support), joka on varmuudella toimiva tälle kurssille.
+Windows-käyttäjille suosittelemme Oraclen ilmaisen [VirtualBox](https://www.virtualbox.org/)-virtualisointiympäristön sekä [Ubuntu](https://ubuntu.com/desktop)- tai [Xubuntu](https://xubuntu.org/)-käyttöjärjestelmän asentamista. 
+
+Virtuaalikoneeseen tekemäsi asennukset eivät vaikuta tietokoneesi normaaliin käyttöön, ja voit tarvittaessa poistaa kaiken kurssilla asentamasi kerralla poistamalla virtuaalikoneen. Kurssin opettajalla on käytössä Ubuntun stabiili LTS-versio 20.04 (Long Term Support), joka on varmuudella toimiva tälle kurssille.
 
 > *Using Linux in a virtual machine gives you the option to try Linux within Windows. This step-by-step guide shows you how to install Linux inside Windows using VirtualBox.*
 >
@@ -18,7 +21,14 @@ Hyviä ohjeita asennuksiin löytyy sekä YouTubesta että Googlesta. Toimiviksi 
 
 Windows-käyttäjänä joudut mahdollisesti [kytkemään päälle Windowsin Hyper-V -ominaisuuden](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v#enable-the-hyper-v-role-through-settings) tai [kytkemään virtualisoinnin päälle tietokoneesi BIOS-asetuksista](https://www.google.com/search?q=enable+virtualization+bios).
 
-Mikäli virtuaalikoneen asennuksessa on ongelmia, pyritään pääsääntöisesti ratkaisemaan ne jo ennen ensimmäistä oppituntia Teams-työtilan chatissa!
+Mikäli virtuaalikoneen asennuksessa on ongelmia, pyritään pääsääntöisesti ratkaisemaan ne kurssin yhteisessä Teams-chatissa!
+
+
+# Ohjelmien asentaminen
+
+Kun olet saanut käyttöjärjestelmän asennettua, tarvitset vielä siihen joitakin erillisiä asennuksia, erityisesti Gitin, Node.js:n ja Pythonin. Lisäksi suosittelemme koodieditoriksi VS Codea, mutta saat käyttää myös muita editoreja.
+
+Seuraavat kohdat käsittelevät tarvittavien ohjelmien asentamista erityisesti Ubuntu-ympäristössä.
 
 
 ## Pakettien asentaminen
@@ -45,11 +55,12 @@ Koska ohjelmien asennus vaatii pääkäyttäjäoikeudet, ei normaalilla käyttä
     sudo apt install ohjelma
 
 
-APT asentaa koneellesi suoritettavia ohjelmia, joiden kanssa tulee aina huomioida myös tietoturva. Pääsääntöisesti Ubuntun pakettivarastot ovat turvallisia, mutta uusien pakettivarastojen lisääminen saattaa aiheuttaa riskejä. Tällä kurssilla teemme asennuksia vain Ubuntun omista pakettivarastoista. Voit lukea aiheesta lisää artikkelista [Can I get a virus by using "sudo apt-get install"?](https://askubuntu.com/a/818022)
+**Huom!** APT asentaa koneellesi suoritettavia ohjelmia, joiden kanssa tulee aina huomioida myös tietoturva. Pääsääntöisesti Ubuntun pakettivarastot ovat turvallisia, mutta uusien pakettivarastojen lisääminen saattaa aiheuttaa riskejä. Tällä kurssilla teemme asennuksia vain Ubuntun omista pakettivarastoista. Voit lukea aiheesta lisää artikkelista [Can I get a virus by using "sudo apt-get install"?](https://askubuntu.com/a/818022)
+
 
 ## Git-asennus
 
-Kurssilla käytetään oppimateriaalin ja esimerkkikoodien jakelussa Git-versionhallintaa. Asenna itsellesi valmiiksi Git-työkalut. 
+Kurssilla käytetään oppimateriaalin ja esimerkkikoodien jakelussa Git-versionhallintaa. Asenna itsellesi valmiiksi Git-työkalut:
 
 ```shell
 sudo apt install git
@@ -68,13 +79,15 @@ $ git config --global user.email "you@example.com"
 $ git config --global user.name "Your Name"
 ```
 
+**Huom!** Tehdessäsi kirjautumista vaativia operaatioita GitHubiin komentoriviltä, et voi tietoturvasyistä käyttää tunnistautumisessa käyttäjätunnusta ja salasanaa, vaan joudut luomaan itsellesi "personal access tokenin". Lue ohjeet täältä: https://docs.github.com/articles/creating-a-personal-access-token-for-the-command-line. Tämä ei ole välttämätöntä vielä tässä vaiheessa, mutta se on hyvä huomioida tulevaisuudessa.
+
 Jos et halua syöttää käyttäjätunnustasi ja kirjautumistunnustasi (personal access token) joka kerta tehdessäsi kirjautumista vaativia Git-operaatioita, voit asettaa Gitin pitämään kirjautumistietosi muistissa:
 
 ```shell
 $ git config --global credential.helper cache
 ```
 
-Yllä oleva komento pitää tiedot tilapäisessä muistissa, josta ne poistuvat automaattisesti myöhemmin. Vaihtoehtoisesti voit asettaa Gitin [tallentamaan salasanan tiedostoon](https://unix.stackexchange.com/questions/379272/storing-username-and-password-in-git), mitä emme voi suositella.
+Yllä oleva komento pitää tiedot tilapäisessä muistissa, josta ne poistuvat automaattisesti myöhemmin. Vaihtoehtoisesti voit [kirjautua GitHubiin SSH-avaimilla](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) tai asettaa Gitin [tallentamaan salasanan tiedostoon](https://unix.stackexchange.com/questions/379272/storing-username-and-password-in-git), mitä emme suosittele.
 
 
 ## Node.js ja npm
@@ -86,15 +99,16 @@ sudo apt install nodejs
 sudo apt install npm
 ```
 
-Halutessasi voit lisäksi konfiguroida npm:n siten, että et tarvitse pääkäyttäjäoikeuksia pakettien asentamiseen: https://blua.blue/article/how-to-install-global-npm-packages-without-sudo-on-ubuntu/
+Halutessasi voit lisäksi konfiguroida npm:n siten, että et tarvitse pääkäyttäjäoikeuksia pakettien asentamiseen: https://github.com/sindresorhus/guides/blob/main/npm-global-without-sudo.md
 
+**Huom!** NPM-paketit sisältävät suoritettavaa ohjelmakoodia, joten niiden kanssa tulee huomioida tietoturva, aivan kuten muidenkin suoritettavien ohjelmien kanssa. Tunnettujen ja laajasti käytettyjen pakettien käyttäminen voi olla turvallisempaa kuin heikommin tunnettujen tai vähäisessä käytössä olevien.
 
 
 ## PIP
 
-APT-komennon lisäksi Linuxille on lukuisia muita pakettienhallintaohjelmia, joista useat ovat erikoistuneet jonkin tietyn ohjelmointikielen kirjastojen asentamiseen. 
+APT-komennon lisäksi Linuxille on lukuisia muita pakettienhallintaohjelmia, joista useat ovat erikoistuneet jonkin tietyn ohjelmointikielen kirjastojen asentamiseen.
 
-Python-kirjastojen asentamisessa käytämme `pip`-työkalua.
+Python 3 tulee Ubuntussa valmiiksi asennettuna, mutta Python-kirjastojen asentamisessa tarvittavan `pip`-työkalun joudumme asentamaan itse:
 
 > *pip is the package installer for Python. You can use pip to install packages from the Python Package Index and other indexes.*
 > 
@@ -135,11 +149,11 @@ Tulemme käyttämään VS Codessa ainakin seuraavia laajennoksia, jotka voit ase
 
 Huomaa, että pip-asennukset ovat käyttäjäkohtaisia, eli niitä ei tehdä `sudo`-komennon avulla.
 
-Lisäksi suosittelemme muuttamaan VS Code:n asetuksista koodin automaattisen muotoilun päälle tallennettaessa ja liitettäessä koodia:
+Lisäksi suosittelemme muuttamaan VS Code:n asetuksista koodin automaattisen muotoilun päälle tallennettaessa ja liitettäessä koodia seuraavasti:
 
-Avaa "User settings". Etsi hakukentän avulla valinnat `Format on save` sekä `Format on paste` ja aseta rastit molempiin ruutuihin.
+> Avaa "User settings". Etsi hakukentän avulla valinnat `Format on save` sekä `Format on paste` ja aseta rastit molempiin ruutuihin.
 
-Huom! Python-paketit sisältävät suoritettavaa ohjelmakoodia, joten niiden kanssa tulee huomioida tietoturva, aivan kuten muidenkin suoritettavien ohjelmien kanssa. Paketteja ei kannata ladata tuntemattomista lähteistä. Tunnettujen ja laajasti käytettyjen pakettien käyttäminen voi myös olla turvallisempaa kuin heikommin tunnettujen tai vähäisessä käytössä olevien. Lisätietoa pip-pakettienhallinnan turvallisuudesta löydät esimerkiksi artikkelista ["Look before you pip"](https://www.ayrx.me/look-before-you-pip).
+**Huom!** Python-paketit sisältävät suoritettavaa ohjelmakoodia, joten niiden kanssa tulee huomioida tietoturva, aivan kuten muidenkin suoritettavien ohjelmien kanssa. Paketteja ei kannata ladata tuntemattomista lähteistä. Tunnettujen ja laajasti käytettyjen pakettien käyttäminen voi myös olla turvallisempaa kuin heikommin tunnettujen tai vähäisessä käytössä olevien. Lisätietoa pip-pakettienhallinnan turvallisuudesta löydät esimerkiksi artikkelista ["Look before you pip"](https://www.ayrx.me/look-before-you-pip).
 
 
 ## Extra: Guest additions sekä leikepöydän käyttö
@@ -157,4 +171,4 @@ Virtuaalikoneen ja "host"-koneen välillä on myös mahdollista synkronoida leik
 
 ## Loppusanat
 
-Jos sait yllä olevat kohdat suoritettua, olet erinomaisesti valmistautunut viikon oppituntia ja tehtäviä varten. Mikäli törmäsit ongelmaan, kysythän neuvoa [Teamsissa](http://teams.microsoft.com/). Mikäli ongelmat eivät ratkea ennen oppituntia, älä lannistu. Myös oppitunnilla on mahdollista kysyä neuvoa.
+Jos sait yllä olevat kohdat suoritettua, olet erinomaisesti valmistautunut kurssin tehtäviä varten. Mikäli törmäsit ongelmaan, kysythän neuvoa [Teamsissa](http://teams.microsoft.com/). Myös oppitunneilla on mahdollista kysyä neuvoa.

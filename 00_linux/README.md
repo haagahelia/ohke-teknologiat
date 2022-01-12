@@ -192,16 +192,19 @@ $ chown mysqlUser mysqlscript.sh
 $ sudo apt install mysql
 ```
 
-Unix-järjestelmissä voi määritellä ympäristömuuttujia, kuten `PATH`. Suorittaessasi komentoa, käyttöjärjestelmä etsii sitä yksi kerrallaan `PATH`-muuttujaan lisätyistä hakemistoista. Path-muuttujan nykyisen sisällön voi tulostaa echo-komennon avulla:
+Unix-järjestelmissä voi määritellä ympäristömuuttujia, kuten `PATH` ja `HOME`. Suorittaessasi komentoa, käyttöjärjestelmä etsii sitä yksi kerrallaan `PATH`-muuttujaan lisätyistä hakemistoista. Path-muuttujan nykyisen sisällön voi tulostaa echo-komennon avulla:
 
 ```shell
 $ echo $PATH
+$ echo $HOME
 ```
+
 
 export-komennolla voit lisätä PATH-muuttujaan uusia hakemistoja. Alla oleva komento siis sanoo, että uusi `PATH`-ympäristömuuttuja on nykyinen `PATH`-ympäristömuuttujan arvo, ja lisäksi siihen lisätään `/usr/me/uusihakemisto`-polku.
 
 ```shell
-$ export PATH=$PATH:/usr/me/uusihakemisto
+# https://github.com/sindresorhus/guides/blob/main/npm-global-without-sudo.md
+$ export PATH="$PATH:${HOME}/.npm-packages/bin"
 ```
 
 Processes (`ps`) komennolla voi listata esimerkiksi kaikki kyseisen käyttäjän käynnissä olevat prosessit. Niihin liittyen voi tulostaa `ps`-komennolla monipuolisesti tietoja eri prosesseista, kuten niiden muistin ja prosessorin käyttömäärän. 
