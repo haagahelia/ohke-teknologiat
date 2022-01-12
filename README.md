@@ -1,5 +1,4 @@
-# Ohjelmistokehityksen teknologioita [![Build Status](https://travis-ci.org/haagahelia/swd4tn023.svg?branch=master)](https://travis-ci.org/haagahelia/swd4tn023)
-
+# Ohjelmistokehityksen teknologioita
 Tervetuloa kurssille!
 
 Ohjelmistokehittäjän työ on suurimmaksi osaksi muuta kuin jonkin tietyn ohjelmointikielen syntaksin suvereenia hallintaa. Tämän kurssin tavoitteena on esitellä ohjelmistokehittäjälle tärkeitä taitoja, työkaluja ja tekniikoita, joita ei suoraan ole tullut esille ohjelmoinnin peruskursseilla tai projektityökursseissa. Kurssi toimii samalla myös tukikurssina ohjelmistoprojekti 2-kurssille, jossa tämän kurssin asioita päästään soveltamaan käytännössä.
@@ -18,7 +17,12 @@ Opettajina kurssilla toimivat Teemu Havulinna ja Juhani Välimäki (etunimi.suku
 * [Teams](https://teams.microsoft.com/)
 
 ## Kurssin suoritustapa
-Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat tekevät niihin liittyviä harjoitustehtäviä. Jokaisesta esiteltävästä aiheesta on myös mahdollista tehdä laajempi seminaaritehtävä kurssin jälkimmäisellä puoliskolla. Seminaarivaiheessa, kurssin jälkimmäisellä puoliskolla, jokainen opiskelija valitsee kurssin aiheista itseään eniten kiinnostavan ja tekee siihen liittyvän seminaaritehtävän. Seminaaritehtävän voi valita joko opettajien ehdotuksista tai seminaaritehtävän aihetta voi ehdottaa myös itse. Seminaaritehtävä voi liittyvä läheisesti opiskelijan ohjelmistoprojekti 2-projektiin. Saman seminaariaiheen valinneet opiskelijat osallistuvat sen aiheen yhteiseen seminaariin, jossa analysoidaan ja kommentoidaan myös muiden opiskelijoiden seminaaritöitä. Lopuksi järjestetään vielä mahdollinen yhteinen seminaari, jossa jokaisen pienemmän seminaarin tärkeimmät (tai parhaat) tulokset esitellään kaikille.
+
+Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat tekevät niihin liittyviä harjoitustehtäviä. Jokaisesta esiteltävästä aiheesta on myös mahdollista tehdä laajempi seminaaritehtävä kurssin jälkimmäisellä puoliskolla. 
+
+**Seminaarivaiheessa**, kurssin jälkimmäisellä puoliskolla, jokainen opiskelija valitsee kurssin aiheista itseään eniten kiinnostavan ja tekee siihen liittyvän seminaaritehtävän. Seminaaritehtävän voi valita joko opettajien ehdotuksista tai seminaaritehtävän aihetta voi ehdottaa myös itse. Seminaaritehtävä voi liittyvä läheisesti opiskelijan ohjelmistoprojekti 2-projektiin. 
+
+Saman seminaariaiheen valinneet opiskelijat osallistuvat sen aiheen yhteiseen seminaariin, jossa analysoidaan ja kommentoidaan myös muiden opiskelijoiden seminaaritöitä. Lopuksi järjestetään vielä mahdollinen yhteinen seminaari, jossa jokaisen pienemmän seminaarin tärkeimmät (tai parhaat) tulokset esitellään kaikille.
 
 ## Opintojakson oppitunnit ja päivämäärät
 
@@ -201,7 +205,7 @@ Tällä kurssilla oppitunnit järjestetään MS Teams -palvelussa. Teams tarjoaa
 
 Kurssilla suositellaan käytettävän Teamsin työpöytäsovellusta. Kirjautuminen Teamsiin tapahtuu Haaga-Helian opiskelijatunnuksella.
 
-Liittymisohje kurssin työtilaan löytyy sähköpostitse lähetetystä tiedotteesta.
+Liittymisohje kurssin Teams-ryhmään löytyy sähköpostitse lähetetystä tiedotteesta.
 
 * [Teams Quick Start -ohje (pdf)](https://download.microsoft.com/download/D/9/F/D9FE8B9E-22F5-47BF-A1AB-09539C41FCD0/Teams%20QS.pdf)
 * [Teams](https://teams.microsoft.com/)
@@ -230,10 +234,9 @@ Kunkin yksittäisen viikon tehtävien painoarvo kokonaisarvosanassa on yhtä suu
 
 Yksittäinen palauttamatta jäänyt tai arvosanalla 0 arvioitu tehtävä ei estä seuraavien tehtävien tekemistä, kunhan kokonaisuutena viikkotehtävistä muodostuu hyväksytty arvosana.
 
+
 ## Lähteiden käyttäminen
 
 Tämän kurssin materiaali perustuu suurelta osin valmiisiin netistä löytyviin dokumentaatioihin ja tutoriaaleihein. Tällä sivulla eri aihealueiden yhteydessä tarjotaan linkkejä aihetta koskeviin materiaaleihin, mutta **joudut sen lisäksi merkittävissä määrin etsimään itse tietoa aiheista**.
 
-Ohjelmointiongelmiin löytyy usein valmiita tai osittaisia ratkaisuja ympäri Internetiä niin keskustelupalstoilta kuin tutoriaaleista. Huonossa tapauksessa löydät toimivan ratkaisun ongelmaasi, mutta et osaa aivan tulkita mitä löytämäsi koodi tekee ja miksi se ratkaisee ongelmasi. Ammattimaisessa ohjelmistokehityksessä tästä seuraa mahdollisesti suuriakin vahinkoja.
-
-Nettilähteiden hyödyntäminen ja niistä mallin ottaminen on sallittua ja kannustettavaa, mutta et saa vain kopioida ratkaisuja, vaan sinun tulee ymmärtää, miten koodisi toimii. Lisäksi, erityisesti koska kyseessä on korkeakoulun opintojakso, sinun tulee merkitä lähteet lainatessasi esimerkiksi StackOverflow:sta löytämääsi koodia. Lähdeviitteeksi riittää esimerkiksi verkkosivun osoite kommenttina lainatun koodin yhteydessä, tai käyttämäsi lähteen käyttöehtojen mukainen muu lähdeviite.
+Ohjelmointiongelmiin löytyy usein valmiita tai osittaisia ratkaisuja ympäri Internetiä niin keskustelupalstoilta kuin tutoriaaleista. Nettilähteiden hyödyntäminen ja niistä mallin ottaminen on sallittua ja kannustettavaa, mutta et saa vain kopioida ratkaisuja, vaan sinun tulee ymmärtää, miten koodisi toimii. Lisäksi, erityisesti koska kyseessä on korkeakoulun opintojakso, sinun tulee merkitä lähteet lainatessasi esimerkiksi StackOverflow:sta löytämääsi koodia. Lähdeviitteeksi riittää esimerkiksi verkkosivun osoite kommenttina lainatun koodin yhteydessä, tai käyttämäsi lähteen käyttöehtojen mukainen muu lähdeviite.
