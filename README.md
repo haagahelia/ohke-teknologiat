@@ -232,7 +232,13 @@ Kurssi arvioidaan asteikolla 0-5. Kurssin arviointi perustuu viikkoaiheiden yhte
 
 Kunkin yksittäisen viikon tehtävien painoarvo kokonaisarvosanassa on yhtä suuri riippumatta viikon maksimipistemäärästä. Pisteet skaalataan yhteneviksi vasta loppuarvosanaa varten.
 
-Yksittäinen palauttamatta jäänyt tai arvosanalla 0 arvioitu tehtävä ei estä seuraavien tehtävien tekemistä, kunhan kokonaisuutena viikkotehtävistä muodostuu hyväksytty arvosana.
+Yksittäinen palauttamatta jäänyt tai arvosanalla 0 arvioitu osasuoritus ei estä seuraavien suoritusten tekemistä, kunhan kokonaisuutena kurssista muodostuu hyväksytty arvosana.
+
+Kurssin keskeyttäminen ei ole Haaga-Helian linjauksia noudattaen mahdollista enää kahden ensimmäisen viikon jälkeen:
+
+> *"Opettaja poistaa opetuksen alussa toteutukselta opiskelijat, jotka eivät osallistu ensimmäiseen opetuskertaan tai ilmoita poissaolostaan. Opiskelijoita ei enää myöhemmin poisteta toteutukselta, vaan kaikille annetaan arvosana hylätty-kiitettävä."*
+>
+> https://mynet.haaga-helia.fi/group/pakki/toteutukselle-ilmoittautuminen
 
 
 ## Lähteiden käyttäminen
