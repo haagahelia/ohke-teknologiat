@@ -38,7 +38,7 @@ Saman seminaariaiheen valinneet opiskelijat osallistuvat sen aiheen yhteiseen se
         <tr>
             <td>17.-23.1.</td>
             <td>
-                Kurssin johdanto, ympäristöt ja Linux/Unix-komentorivi<br /><br />
+                <a href="00_linux/">Kurssin johdanto, ympäristöt ja Linux/Unix-komentorivi</a><br /><br />
                 <a href="00_linux/asennukset.md">Tehtävä 1: kurssin kehitysympäristön asennus</a><br />
                 Tehtävä 2: Linux-komentorivi (ks. Teams)<br />
             </td>
