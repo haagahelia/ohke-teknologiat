@@ -4,7 +4,7 @@ Tämän oppitunnin tavoitteena on tutustua testauksen eri tasoihin yksikköteste
 
 Aiheen opiskelun jälkeen osaat kirjoittaa Python-funktioillesi yksikkötestit ja tiedät mistä lähteä liikkeelle, kun sinulle tulee tarve kirjoittaa automatisoituja testejä. Osaat myös huomioida testausnäkökulmaa jäsentäessäsi Python-ohjelmiasi eri moduuleihin ja funktioihin.
 
-
+<!--
 # Oppitunnin videot
 
 
@@ -19,7 +19,7 @@ Tällä videolla tutustumme Pytest-työkaluun ja yksikkötestien automatisointii
 **[Osa 3: pytest-mock ja harjoitustehtävän tehtävänanto](https://web.microsoftstream.com/video/9c438228-0354-49bb-8fb1-1ad03e4222cd)** *33:10*
 
 Tällä videolla harjoittelemme ulkoisten riippuvuuksien korvaamista testeissä ja käymme läpi viikkotehtävän tehtävänannon.
-
+-->
 
 ## Suositeltava oheisvideo: [What is Automated Testing?](https://www.youtube.com/watch?v=Nd31XiSGJLw)
 
@@ -494,127 +494,9 @@ events_by_date.py      48      3    94%
 Voit käyttää myös `coverage html`-komentoa, joka muodostaa raportin staattisen verkkosivun muodossa.
 
 
-# Tehtävä
+# Tehtävät
 
-Tällä viikolla harjoittelemme koodin refaktorointia ja yksikkötestausta kirjoittamalla testejä aikaisemmin koodatulle `postinumerot.py`-skriptille (edellisen viikon tehtävän 2. osa). Mikäli aikaisempi tehtävä jäi sinulta palauttamatta tai et halua käyttää vanhaa koodiasi, voit käyttää myös tehtävän malliratkaisun tiedostoja.
-
-* [postinumerot.py](https://gist.github.com/swd1tn002/c9685aa2cc9fc47e30ffc9a9d9dfc968#file-postinumerot-py)
-* [http_pyynto.py](https://gist.github.com/swd1tn002/c9685aa2cc9fc47e30ffc9a9d9dfc968#file-http_pyynto-py)
-
-
-## Osa 1: postitoimipaikkalogiikan testaaminen (arvosanatavoite 3)
-
-Kirjoita yksikkötestit edellisen viikon Python-tehtävän osan 2 ratkaisullesi. Mikäli kyseinen tehtävä jäi sinulta toteuttamatta, voit käyttää testattavana koodina tehtävän malliratkaisua.
-
-Sinun ei tarvitse testata koko ohjelmalogiikkaa, vaan riittää, että testaat esimerkiksi malliratkaisussa esitetyn `ryhmittele_toimipaikoittain`-funktion. Lisäksi joudut refaktoroimaan Python-tiedostoa siten, että sen testaaminen on ylipäänsä mahdollista.
-
-Testeissä kannattaa varmistaa ainakin seuraavien tapausten toiminta:
-
-1. postitoimipaikan nimellä löytyy vain yksi postinumero
-1. postitoimipaikan nimellä löytyy useita postinumeroita.
-
-Saadaksesi täydet pisteet tästä osasta **sinun ei tarvitse** testata syötteitä pyytäviä tai tulosteita tekeviä kohtia koodista. Voit oman harkintasi mukaan käyttää testeissä joko kovakoodattua testidataa tai antaa testattavan koodin lukea postinumeroaineiston verkosta tai levyltä. Testiaineiston käyttämisessä `pytest-mock` voi olla avuksi, mutta sitä **ei ole välttämätöntä käyttää**.
-
-
-## Osa 2: bugin testaus ja korjaus (arvosanatavoite 5)
-
-`postinumerot.py`-tiedoston koodista löytyi oppitunnilla bugi, joka [raportoitiin GitHubiin](https://github.com/haagahelia/swd4tn023/issues/5). Arvosanatavoitteeseen 5 sinun tulee kirjoittaa tarvittavat yksikkötestit, jotka osoittavat tämän bugin olemassaolon. Lopuksi korjaa bugi, jolloin kirjoittamasi yksikkötestit menevät läpi.
-
-[Bugiraportissa](https://github.com/haagahelia/swd4tn023/issues/5) esiintyvä kirjoitusvirheiden käsittely ei ole tarpeen täysiin pisteisiin, mutta voit halutessasi kokeilla myös sen ratkaisemista jos kaipaat lisähaastetta.
-
-**Vinkki**: bugin korjauksessa voi olla avuksi, jos poistat kaikki välilyönnit [Pythonin replace-funktiolla](https://stackoverflow.com/questions/9452108/how-to-use-string-replace-in-python-3-x).
-
-**Vinkki**: voit hyödyntää testeissäsi bugiraportissa valmiiksi raportoituja postinumero- ja toimipaikkatietoja.
-
-<!--
-Smart post -postinumerot kirjoitettu usealla eri tavalla
-
-Postinumeroaineistossa postitoimipaikka "SMARTPOST" esiintyy myös kirjoitusasulla "SMART POST" sekä kirjoitusvirheellä "SMARTPSOT". Ohjelman tulee käsitellä "SMART POST", "SMART-POST" ja "SMARTPOST" samoina toimipaikkoina, eli jättää mahdolliset erot tyhjissä- ja välimerkeissä huomioimatta. Mahdolliset kahden peräkkäisen kirjaimen sekoittumiset voidaan myös yrittää korjata ("SMARTPSOT"), mutta se ei ole pakollista.
-
-# Oikea toiminta
-
-Postinumerolistausten toimipaikoille "smart post" ja "smartpost" tulee tuottaa sama lista kaikista näihin toimipaikkoihin merkityistä postinumeroista. Saman logiikan tulee toimia myös muiden välilyöntejä mahdollisesti sisältävien toimipaikkojen nimien yhteydessä.
-
-# Virheen toistaminen
-
-```
-$ python3 postinumerot.py
-
-Kirjoita postitoimipaikka: smart post
-
-Postinumerot: 44884, 40934, 65374, 07114
-```
-
-```
-$ python3 postinumerot.py
-
-Kirjoita postitoimipaikka: smartpsot
-
-Postinumerot: 08504, 00314, 89604
-```
-
-```
-$ python3 postinumerot.py
-
-Kirjoita postitoimipaikka: smartpost
-
-Postinumerot: 74704, 73464, 03604, ... 96204, 21234, 28204
-```
--->
-
-<!--
-## Huom: Sanakirjan sisällön testaaminen
-
-Pythonin sanakirja `dict` on hajautusrakenne, joka ei lisää arvoja muistiin järjestyksessä peräkkäisille paikoille, vaan etsii arvoille paikat avaimien hajautusfunktioiden avulla. Hajautusfunktio nopeuttaa haku- ja lisäysoperaatioita, mutta tyypillisesti sillä kustannuksella, että tietorakenne ei säilytä tietoa arvojen lisäysjärjestyksestä. Sama ilmiö esiintyy mm. Javan HashMap-tietorakenteen kanssa. Tämä vaikeuttaa jossain tapauksissa testaamista, koska sanakirjan sisällön järjestystä ei välttämättä tiedetä ennalta.
-
-Onneksi Python 3:n viimeisimmissä versioissa sanakirja on toteutettu niin, että hajautuksesta huolimatta arvot pidetään lisäysjärjestyksessä. Python 3 saattaa helpottaa koodisi testaamista, koska postinumerot ovat aina lisäysjärjestyksessä!
-
-### Python 3
-
-Alla olevassa koodissa luodaan sanakirja `{"a": 1, "b": 2, "c": 3, "d": 4, "e": 5}`.
-
-Python 3.8:lla arvot `[1, 2, 3, 4, 5]` sekä avaimet `['a', 'b', 'c', 'd', 'e']` saadaan aina siinä järjestyksessä, jossa ne annetaan sanakirjaa luotaessa:
-
-```python
-$ python3
-Python 3.8.2 (default, Jul 16 2020, 14:00:26) 
->>> 
->>> print({"a": 1, "b": 2, "c": 3, "d": 4, "e": 5})
-{'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5} # sama järjestys!
->>> 
->>> print({"a": 1, "b": 2, "c": 3, "d": 4, "e": 5}.values())
-dict_values([1, 2, 3, 4, 5]) # sama järjestys!
->>> 
->>> print({"a": 1, "b": 2, "c": 3, "d": 4, "e": 5}.keys())
-dict_keys(['a', 'b', 'c', 'd', 'e']) # sama järjestys!
-```
-
-### Python 2
-
-Alla olevassa koodissa luodaan sanakirja `{"a": 1, "b": 2, "c": 3, "d": 4, "e": 5}`.
-
-Python 2.7:lla arvot `[1, 3, 2, 5, 4]` sekä avaimet `['a', 'c', 'b', 'e', 'd']` saadaan **eri järjestyksessä**, kuin missä ne annetaan sanakirjaa luotaessa. Järjestys voi myös muuttua hajautustaulun luomisen jälkeen.
-
-```python
-$ python2 
-Python 2.7.18rc1 (default, Apr  7 2020, 12:05:55) 
->>> 
->>> print({"a": 1, "b": 2, "c": 3, "d": 4, "e": 5})
-{'a': 1, 'c': 3, 'b': 2, 'e': 5, 'd': 4} # eri järjestys!
->>> 
->>> print({"a": 1, "b": 2, "c": 3, "d": 4, "e": 5}.values())
-[1, 3, 2, 5, 4] # eri järjestys!
->>> 
->>> print({"a": 1, "b": 2, "c": 3, "d": 4, "e": 5}.keys())
-['a', 'c', 'b', 'e', 'd'] # eri järjestys!
-```
-
--->
-
-## Tehtävän palauttaminen
-
-Palauta koodaamasi testit sekä testattavat moduulit sellaisenaan, eli **ei pakattuna** Teamsissa olevaan palautuslaatikkoon **Teams-tehtävässä ilmoitettuun määräaikaan mennessä**.
-
+Tämän viikon tehtävä koostuu Pythonia ja Pytestiä koskevista tehtävistä. Katso tarkemmat ohjeet Teamsin tehtävät-välilehdeltä.
 
 # Seminaariaihe-ehdotukset
 
