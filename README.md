@@ -60,7 +60,7 @@ Saman seminaariaiheen valinneet opiskelijat osallistuvat sen aiheen yhteiseen se
             </td>
             <td>
                 Teams-sessio ti 25.1. klo 12<br />
-                Tehtävien DL ma 31.2. klo 22:00
+                Tehtävien DL ma 31.1. klo 22:00
             </td>
         </tr>
         <tr>
