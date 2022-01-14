@@ -1,5 +1,0 @@
-language: python
-script:
-  - coverage run --source=. -m pytest .
-after_success:
-  - coverage report
