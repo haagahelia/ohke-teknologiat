@@ -24,6 +24,13 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
 
 Saman seminaariaiheen valinneet opiskelijat osallistuvat sen aiheen yhteiseen seminaariin, jossa analysoidaan ja kommentoidaan myös muiden opiskelijoiden seminaaritöitä. Lopuksi järjestetään vielä mahdollinen yhteinen seminaari, jossa jokaisen pienemmän seminaarin tärkeimmät (tai parhaat) tulokset esitellään kaikille.
 
+## Kurssin osallistumisen vahvistaminen
+
+Kurssin osallistumisen vahvistaminen edellyttää ensimmäisen ja toisen viikon viikkotehtävien hyväksyttyä suoritusta niiden määräaikaan mennessä. Tehtäviin on saatavissa vinkkejä ja tukea kurssin Teams-kanavalla sekä oppitunneilla.
+
+Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan varmistaa, että työskentely Linuxin ja Pythonin parissa lähtee kaikilla käyntiin, ja että kaikilla on riittävät esitiedot kurssin seuraavia viikkoja varten.
+
+
 ## Opintojakson oppitunnit ja päivämäärät
 
 <table>
@@ -232,7 +239,7 @@ Kurssi arvioidaan asteikolla 0-5. Kurssin arviointi perustuu viikkoaiheiden yhte
 
 Kunkin yksittäisen viikon tehtävien painoarvo kokonaisarvosanassa on yhtä suuri riippumatta viikon maksimipistemäärästä. Pisteet skaalataan yhteneviksi vasta loppuarvosanaa varten.
 
-Yksittäinen palauttamatta jäänyt tai arvosanalla 0 arvioitu osasuoritus ei estä seuraavien suoritusten tekemistä, kunhan kokonaisuutena kurssista muodostuu hyväksytty arvosana.
+Yksittäinen palauttamatta jäänyt tai arvosanalla 0 arvioitu osasuoritus ei estä seuraavien suoritusten tekemistä, kunhan kokonaisuutena kurssista muodostuu hyväksytty arvosana. Poikkeuksena tähän on kahden ensimmäisen viikon tehtävät, jotka toimivat kurssille osallistumisen vahvistamisessa.
 
 Kurssin keskeyttäminen ei ole Haaga-Helian linjauksia noudattaen mahdollista enää kahden ensimmäisen viikon jälkeen:
 
