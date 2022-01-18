@@ -13,7 +13,7 @@ sudo nmap 127.0.0.1
 **Note:** Be careful with address given to nmap, 
 as it's illegal to scan other peoples' computers in Finland
 
-Now you might have port numbers you are interested in.
+Now you might have port numbers you are interested in. Or you might get that from a Node.js / create-react-app Node error messages. EADDRINUSE or so. 3000 or so.
 
 The following commands might work without sudo. Distributions might vary, and user's access rights.
 ```shell
@@ -42,3 +42,5 @@ kill -9 2344
 
 
 More info here, though most was already available in examples above: [https://www.tecmint.com/20-netstat-commands-for-linux-network-management/](https://www.tecmint.com/20-netstat-commands-for-linux-network-management/)
+
+Another very interested command is **lsof** that can do a lot of things: [https://www.tecmint.com/10-lsof-command-examples-in-linux/](https://www.tecmint.com/10-lsof-command-examples-in-linux/) 
