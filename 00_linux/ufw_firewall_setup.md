@@ -1,6 +1,6 @@
 # How to use the ufw (Uncomplicated FireWall) command to setup the Linux firewall
 
-**Note:** This document ***applies to Ubuntu/Xubuntu linux***. For other systems, like MacOS, things are different! Then just read, digest and act if needed.
+**Note:** This document ***applies to Ubuntu/Xubuntu linux***. For other systems, like MacOS, or for virtual machines, virtual boxes, cloud environments, etc. things are different! Then just read, digest and act if needed. In some virtual or cloud environments you cannot set the firewall from inside the OS, but from the outside host environment.
 
 **Note:** Ubuntu (or lighter: Xubuntu) does not have firewall enabled after installation! Thus the first action should be enabling the firewall.
 
