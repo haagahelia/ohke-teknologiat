@@ -17,6 +17,8 @@ Now you might have port numbers you are interested in. Or you might get that fro
 
 The following commands might work without sudo. Distributions might vary, and user's access rights.
 ```shell
+sudo apt install net-tools
+
 sudo netstat -a | more           // -a=all, -t=TCP -u=UDP, -l=listening,     
 
 sudo netstat -l   // all listening ports
