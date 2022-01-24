@@ -57,12 +57,12 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
         <tr>
             <td>24.-30.1.</td>
             <td>
-                Python-ohjelmointi<br />
+                <a href="01_python/">Python-ohjelmointi</a><br />
                 <ul>
                     <li>Ehto- ja toistorakenteet</li>
                     <li>Perustietotyypit ja kokoelmat</li>
-                    <li>Http-pyynnöt</li>
-                    <!--li><a href="https://web.microsoftstream.com/video/497d7df3-1629-49f9-b460-82c1d479b03d">Video 1</a>, <a href="https://web.microsoftstream.com/video/0f31953b-417b-4669-915d-ca35917bfbc0">video 2</a></li-->
+                    <li>Tiedostot ja http-pyynnöt</li>
+                    <li><a href="https://web.microsoftstream.com/video/497d7df3-1629-49f9-b460-82c1d479b03d">Video 1</a>, <a href="https://web.microsoftstream.com/video/0f31953b-417b-4669-915d-ca35917bfbc0">video 2</a></li>
                 </ul>
             </td>
             <td>
