@@ -73,7 +73,7 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
         <tr>
             <td>31.1.-6.2.</td>
             <td>
-                Testaus<br />
+                <a href="02_testaus/">Testaus</a><br />
                 <ul>
                     <li>Testauksen tasot</li>
                     <li>Yksikkötestaus</li>
