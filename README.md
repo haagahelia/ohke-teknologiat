@@ -132,7 +132,7 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
                 </ul>
             </td>
             <td>
-                Teams-sessio pe 1.3. klo 12<br />
+                Teams-sessio ti 1.3. klo 12<br />
                 Tehtävien DL ma 7.3. klo 22:00
             </td>
         </tr>
