@@ -89,7 +89,7 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
         <tr>
             <td>7.-13.2.</td>
             <td>
-                Infra ja automaatio<br />
+                <a href="03_infra_ja_automaatio/">Infra ja automaatio</a><br />
                 <ul>
                     <li>Continuous integration</li>
                     <li>Git: branch, merge, rebase...</li>
