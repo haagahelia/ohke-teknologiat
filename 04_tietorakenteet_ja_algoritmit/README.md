@@ -7,7 +7,7 @@ kuvaa ratkaistavan ongelman tapauksen, ja algoritmin tulee tuottaa tuloste (outp
 > *Antti Laaksonen, [Tietorakenteet ja algoritmit -kirja](https://github.com/pllk/tirakirja/raw/master/tirakirja.pdf)*
 
 
-# Oppitunnin videot
+<!--# Oppitunnin videot
 
 Videoilla esiintyvät lähdekoodit löydät [täältä](./src/).
 
@@ -21,7 +21,7 @@ Tällä videolla perehdymme vertaillen eri tietorakenteisiin sekä niihin liitty
 
 **[Osa 3: Viikon harjoitustehtävän tehtävänanto ja vinkit](https://web.microsoftstream.com/video/7e1e6347-b8c5-4f03-8c92-369591408be4)** *19:18*
 
-Viikon harjoitustehtävän tehtävänanto.
+Viikon harjoitustehtävän tehtävänanto.-->
 
 
 ## Tavoitteet
@@ -65,6 +65,7 @@ Tallentaessamme itse tietoa ohjelmiimme voimme itse vaikuttaa suuresti siihen, k
 ```
 
 Jos tarkoituksesi olisi selvittää postinumeroa 74700 vastaava postitoimipaikan nimi, mitä sen selvittäminen vaatisi eri tietorakenteilla? Entä mikä tietorakenne olisi myöhemmin helpommin laajennettavissa, jos postinumeroalueita varten halutaan tallentaa toimipaikan nimen lisäksi myös muita tietoja? Olisiko näiden tietorakenteiden hyvät puolet jollain tavoin yhdisteltävissä?
+
 
 ## Suositeltu oheismateriaali
 
@@ -474,8 +475,8 @@ O(n * n)        | ~2 500                | ~16 000 000           | ~10 000 000 00
 
 **Yhteenveto**
 
-1. Mihin tehokkuusluokkaan sijoittuu haku Pythoni listalta?
-1. Mihin tehokkuusluokkaan sijoittuu haku Pythoni sanakirjasta?
+1. Mihin tehokkuusluokkaan sijoittuu haku Pythonin listalta?
+1. Mihin tehokkuusluokkaan sijoittuu haku Pythonin sanakirjasta?
 1. Mihin tehokkuusluokkaan sijoittuu puolitushaku?
 1. Mihin tehokkuusluokkaan sijoittuu hyvä lajittelualgoritmi?
 1. Mihin tehokkuusluokkaan sijoittuu heikko lajittelualgoritmi?
@@ -493,13 +494,6 @@ Tämän viikon tehtävissä käsittelemme MyHelsinki Open API -rajapinnan tapaht
 
 Idea suomen- ja englanninkielisten sanalistojen yhteisten sanojen selvittämisestä on lainattu [Helsingin yliopiston Antti Laaksosen luennolta](https://tira.mooc.fi/syksy-2021/pages/materiaali.html) ja sovellettu omiin tarpeisiimme.
 
-## MyHelsinki Open API
-
-> *"Note that all of the information provided over the API is open data with the exception of image files. When using images, please refer to the license terms included with each image.*"
-> 
-> MyHelsinki Open API. https://open-api.myhelsinki.fi/
-
-MyHelsinki Open API:n aineisto on lisensoitu [Creative Commons BY 4.0](https://open-api.myhelsinki.fi/terms)-lisenssillä. Voit lukea tarkemmat käyttöehdot ositteesta https://open-api.myhelsinki.fi/terms.
 
 
 ## Suomenkielisen sanalistan tekijänoikeudet 
