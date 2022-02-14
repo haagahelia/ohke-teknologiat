@@ -103,7 +103,7 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
         <tr>
             <td>14.-20.2.</td>
             <td>
-                Tietorakenteet ja algoritmit<br />
+                <a href="04_tietorakenteet_ja_algoritmit/">Tietorakenteet ja algoritmit</a><br />
                 <ul>
                     <li>Lajittelualgoritmit</li>
                     <li>Hakualgoritmit</li>
