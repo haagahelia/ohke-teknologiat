@@ -98,8 +98,6 @@ Tätä videota vastaava esittely tärkeistä tietorakenteista löytyy myös teks
 
 # Oppitunti
 
-Seuraavat käsitteet käydään läpi oppitunnin ensimmäisellä videotallenteella.
-
 ## Minkälaisten algoritmien kanssa olet päivittäin tekemisissä?
 
 * Suosittelualgoritmi?
