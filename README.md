@@ -169,8 +169,8 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
         <tr>
             <td>28.3.-3.4.</td>
             <td>
-                Ohjelmistoarkkitehtuurit ja patternit<br />
-                Mahdollinen vierailijaluento
+                Vierailijaluento / Otaverkko<br />
+                Alustavina aiheina OpenShift, Kubernetes, Docker...
             </td>
             <td>
                 Teams-sessio ti 29.3. klo 12<br />
