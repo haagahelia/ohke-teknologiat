@@ -123,7 +123,7 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
         <tr>
             <td>28.2.-6.3.</td>
             <td>
-                Moderni JavaScript ja funktionaalinen ohjelmointityyli<br />
+                <a href="05_es6_node/oppitunti1.md">Moderni JavaScript ja funktionaalinen ohjelmointityyli</a><br />
                 <ul>
                     <li>ES6-syntaksit</li>
                     <li>filter, map, reduce</li>

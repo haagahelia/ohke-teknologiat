@@ -105,15 +105,16 @@ Huom! Eri syntaksien opetteleminen on tärkeää lähinnä siksi, että ymmärr�
 JavaScript-taulukosta voidaan purkaa arvoja yksittäisiin muuttujiin käyttämällä hakasulkujan muuttujien nimien määrittelyn ympärillä:
 
 ```js
-let [ first, middle, last ] = names;
+let [ username, domain ] = email.split('@');
 ```
 
 Omien muuttujiemme nimet voivat olla taulukoiden tapauksessa mitä tahansa, mutta niiden arvot määräytyvät samassa järjestyksessä kuin taulukon arvot. Yllä oleva koodi on käytännössä sama kuin:
 
 ```js
-let first = names[0];
-let middle = names[1];
-let last = names[2];
+let parts = email.split('@');
+
+let username = parts[0];
+let domain = parts[1];
 ```
 
 ### Array destructuring ja useState()
@@ -136,15 +137,14 @@ const [count, setCount] = useState(0);
 JavaScript-olioista voidaan valita yksittäisiä attribuutteja eri muuttujiin käyttämällä aaltosulkuja muuttujien nimien ympärillä:
 
 ```js
-let { first, middle, last } = names;
+let { lat, long } = place.coordinates;
 ```
 
 Tällä syntaksilla muuttujien nimien on oltava samat kuin oliosta purettavien attribuuttien nimet. Yllä olevakoodi vastaa pidemmin kirjoitettuna tätä:
 
 ```js
-let first = names.first;
-let middle = names.middle;
-let last = names.last;
+let lat = place.coordinates.lat;
+let lon = place.coordinates.lon;
 ```
 
 Destructuring on usein käytössä myös silloin, kun valitsemme jostain oliosta tietyt arvot tai funktiot käytettäväksi omassa koodissamme:
@@ -172,31 +172,31 @@ import { Event, Activity, Place } from './models.js';
 > [Kantor, I. Property value shorthand. JavaScript.info](https://javascript.info/object#property-value-shorthand)
 
 
-Tietyissä tapauksissa koodissa on jo olemassa useita muuttujia, joiden arvoja halutaan käyttää uuden olion attribuutteina. Meillä voi olla esimerkiksi seuraavat kaksi merkkijonoa:
+Tietyissä tapauksissa koodissa on jo olemassa useita muuttujia, joiden arvoja halutaan käyttää uuden olion attribuutteina. Meillä voi olla esimerkiksi seuraavat kaksi muuttujaa:
 
 ```js
-let first = 'Chuck';
-let last = 'Norris';
+let lat = 60;
+let lon = 24;
 ```
 
 Näiden muuttujien avulla voidaan muodostaa suoraviivaisesti uusi olio ilman, että joudumme toistamaan attribuuttien ja muuttujien nimiä:
 
 ```js
-let names = { first, last };
+let coordinates = { lat, lon };
 ```
 
-Yllä oleva koodi luo siis olion, jossa on `first` ja `last` nimiset attribuutit, joiden arvot on poimittu samannimisistä muuttujista. Käytännössä koodi vastaa pidemmin kirjoitettuna seuraavaa:
+Yllä oleva koodi luo siis olion, jossa on `lat` ja `lon` nimiset attribuutit, joiden arvot on poimittu samannimisistä muuttujista. Käytännössä koodi vastaa pidemmin kirjoitettuna seuraavaa:
 
 ```js
-let names = { first: first, last: last };
+let coordinates = { 'lat': lat, 'lon': lon };
 ```
 
 Joissain tapauksissa sama koodi voidaan kirjoittaa myös monessa vaiheessa, joissa ensin luodaan olio, ja sen jälkeen asetetaan attribuutit:
 
 ```js
-let names = {};
-names.first = first;
-names.last = last;
+let coordinates = {};
+coordinates.lat = lat;
+coordinates.lon = lon;
 ```
 
 ### Property value shorthand ja export
@@ -233,8 +233,8 @@ export { Event, Activity, Place };
 let a = [1, 2, 3];
 let b = [4, 5, 6];
 
-let c = [...a, ...b];        // [ 1, 2, 3, 4, 5, 6 ]
-let d = [...a, ...b, ...c];  // [ 1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6  ]
+let c = [...a, ...b];       // [ 1, 2, 3, 4, 5, 6 ]
+let d = [...a, ...b, ...c]; // [ 1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6  ]
 ```
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
@@ -365,7 +365,7 @@ let eurot = markat.map(markatEuroiksi); // [ 33.637585292, 20.68711495458, 16.65
 >
 > [lint (software). Wikipedia](https://en.wikipedia.org/wiki/Lint_(software))
 
-ESLint-työkalun asentaminen ja konfigurointi onnistuu esimerkiksi seuraavasti<sup>1</sup>:
+ESLint-työkalun asentaminen ja konfigurointi onnistuu esimerkiksi seuraavasti<sup>1, 2</sup>:
 
 ```
 $ npm install --global eslint
@@ -395,6 +395,7 @@ Voit lukea lisää ESLintin komentorivikäytöstä osoitteessa [https://eslint.o
 
 <sup>1</sup> Asennusohjeessa mainittu `npm install --global` ei välttämättä onnistu ilman sudo-oikeuksia. Kurssin [asennusohjeissa](../00_linux/asennukset.md#nodejs-ja-npm) on linkki konfigurointiohjeeseen, jolla npm-asennukset saadaan toimimaan Ubuntussa tietoturvallisemmin ilman pääkäyttäjäoikeuksia.
 
+<sup>2</sup> ESLint-työkalua ei välttämättä kannata asentaa globaalisti, vaan paikallisesti npm-projektiin. Tässä esimerkissä työskentelemme ilman npm-projektia, joten teemme asennuksessa poikkeuksen.
 
 # Tapahtumien käsitteleminen funktionaalisesti
 
