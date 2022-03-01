@@ -1,11 +1,12 @@
 # Node, NPM, Express ja Promiset
 
-Tällä oppitunnilla jatkamme JavaScript-kielen ja Node.js:n parissa. Tutustumme suosittuun [Express](https://expressjs.com/)-sovelluskehykseen, jonka avulla voimme toteuttaa JavaScript-pohjaisen verkkopalvelun. Lisäksi sivuamme JavaScriptin yksikkötestausta [Mocha](https://mochajs.org/)-työkalun avulla.
+Tällä oppitunnilla jatkamme JavaScript-kielen ja Node.js:n parissa. Tutustumme suosittuun [Express](https://expressjs.com/)-sovelluskehykseen, jonka avulla voimme toteuttaa JavaScript-pohjaisen verkkopalvelun. Lisäksi sivuamme JavaScriptin yksikkötestausta.
 
 
-# Oppitunnin videot
+<!--# Oppitunnin videot
 
-<!-- Tämän aiheen videot julkaistaan maanantaina 4.10.2021.-->
+Tämän aiheen videot julkaistaan maanantaina 4.10.2021.
+
 
 **[Osa 1: ES6-tehtävän malliratkaisu sekä Mocha-yksikkötestit](https://web.microsoftstream.com/video/8d5ce190-2bd0-4c8a-84ad-f51b2cbe7f3e)** *52:44*
 
@@ -20,7 +21,7 @@ Tällä videolla käsittelemme yksikkötestausta Mochalla sekä eri tyyppisten a
 **[Osa 3: Express](https://web.microsoftstream.com/video/68dfd069-5b72-4484-a6fd-0b3199f803a2)** *32:52*
 
 Tällä videolla asennamme express-kirjaston, jonka avulla toteutamme yksinkertaisen http-palvelun edellisissä videoissa käsitellyn datan tarjoamiseksi web-selaimelle. Käsittelemme videon lopussa myös tämän viikon harjoitustehtävän tehtävänantoa. Videolla luodaan ja muokataan tiedostoa [index.js](./src/index.js).
-
+-->
 
 # ES6-syntaksien kertaus
 
@@ -562,11 +563,11 @@ Katso lisätietoa järjestämisestä ylempää kodasta "Järjestäminen alkamisa
 
 
 
-# Koodaustehtävä: postinumerot-backend (Teams-tehtävä 5.2)
+# Koodaustehtävä: postinumerot-backend
 
-Tämän viikon tehtävässä sinun tulee hyödyntää Node.js:ää, npm:ää sekä [express](https://www.npmjs.com/package/express)-kirjastoa ja toteuttaa HTTP-palvelu, joka palauttaa aikaisemmilta viikoilta tuttuja postitoimipaikkojen nimiä sekä postinumeroita.
+Tämän viikon tehtävässä sinun tulee hyödyntää Node.js:ää, npm:ää sekä [express](https://www.npmjs.com/package/express)-kirjastoa ja toteuttaa HTTP-palvelu, joka palauttaa aikaisemmilta viikoilta tuttuja postitoimipaikkojen nimiä sekä postinumeroita. Tarkemman tehtävänannon löydät Teamsin tehtävät-välilehdeltä.
 
-Suosittelen tutustumaan tekstimuotoisen tehtävänannon lisäksi myös tämän aiheen kolmannen videotallenteen viimeisiin 15 minuuttiin, jossa tehtävää pohjustetaan esimerkin avulla.
+<!--Suosittelen tutustumaan tekstimuotoisen tehtävänannon lisäksi myös tämän aiheen kolmannen videotallenteen viimeisiin 15 minuuttiin, jossa tehtävää pohjustetaan esimerkin avulla.
 
 Tavoitteenamme on asynkronisen web-ohjelmoinnin opettelun lisäksi kerrata tietorakenteiden läpikäyntiä. Mikäli tehtävät eivät tarjoa tarvittavaa haastetta tai haluat oppia välimuistituksesta, voit tehdä lisäksi valinnaisen lisätehtävän.
 
@@ -683,10 +684,5 @@ Tehtävän lisäosion ratkaisemisessa voit halutessasi käyttää hyödyksi esim
 
 Riippuvuuksia asentaessasi on hyvä muistaa, että npm-paketit ovat erinäisten tahojen julkaisemaa suoritettavaa koodia. Niitä asennettaessa kannattaa perehtyä projektien laatuun ja luotettavuuteen esimerkiksi niiden GitHub-sivujen avulla: [node-cache](https://github.com/node-cache/node-cache), [node-fetch-cache](https://github.com/mistval/node-fetch-cache).
 
+-->
 
-
-## Tehtävän palauttaminen
-
-Palauta kaikki ratkaisuusi liittyvät lähdekoodit erillisinä tiedostoina, eli ei pakattuna **Teams-tehtävässä ilmoitettuun määräaikaan mennessä**. Myös osittain ratkaistut palautukset hyväksytään ja arvostellaan suhteessa niiden valmiusasteeseen.
-
-**Huom! Nimeä `.js`-päätteiset tiedostot `.js.txt`-päätteisiksi, mikäli Teams ei hyväksy tiedostojasi tietoturvasyistä.**
