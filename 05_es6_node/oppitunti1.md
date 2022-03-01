@@ -24,7 +24,9 @@ Itseopiskelumateriaalina voit hyödyntää hyviä sivustoja, kuten:
 * https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d
 
 
-# Aiheen videot
+# Aikaisemman toteutuksen videot
+
+Näiden videoiden sisältö poikkeaa hieman kurssin nykyisestä sisällöstä, mutta ne soveltuvat yhä aiheen itsenäiseen opiskeluun.
 
 **[Osa 1: Johdanto ES6-aiheeseen ja oppitunnin tavoitteisiin](https://web.microsoftstream.com/video/4ff9a051-3e45-4e89-a194-a6e68084d55a)** *21:02*
 
@@ -45,7 +47,7 @@ Videolla editoitava tiedosto: [events.js](./src/events.js)
 
 JavaScript on ns. monen paradigman kieli, eli sillä voidaan soveltaa monia erilaisia ohjelmointityylejä. Voit siis soveltaa JavaScriptillä olio-ohjelmointia tai funktionaalista ohjelmointia, tai halutessasi sekoittaa eri tyylejä. Monipuolisuuden heikkoutena JavaScriptillä ei aina ole yhtä vahvoja "parhaita käytäntöjä" kuin joillain yhden paradigman kielillä. 
 
-Tämän oppitunnin aikana perehdymme erityisesti JavaScriptin funktionaaliseen puoleen: nuolifunktioihin sekä map-, filter- ja reduce-operaatioihin.
+Tämän oppitunnin aikana perehdymme erityisesti JavaScriptin funktionaaliseen puoleen: nuolifunktioihin sekä **map**-, **filter**- ja **reduce**-operaatioihin.
 
 
 ## JavaScript-kielen laajennokset
@@ -709,172 +711,9 @@ Sekä `map` että `filter` on toteutettavissa `reduce`:n avulla. Tällöin koott
 
 Reduce on erittäin monikäyttöinen operaatio, ja sen avulla onnistuu luontevasti myös esimerkiksi taulukon arvojen ryhmitteleminen tietyn avaimen mukaan. Voit lukea aiheesta lisää Googlesta hakusanoilla "JavaScript reduce group by" tai [tästä artikkelista](https://learnwithparam.com/blog/how-to-group-by-array-of-objects-using-a-key/).
 
-# Tehtävä (Teams-tehtävä 5.1)
+# Tehtävät
 
-Tämän viikon tehtävässä harjoitellaan tunnilla esitettyjen ohjelmointitapojen hyödyntämistä. Tehtävänä on lukea kahdesta erillisestä JSON-tiedostosta käyttäjiä ja postauksia, ja yhdistellä käyttäjät postauksiin.
-
-
-## Tehtävän data
-
-Tässä tehtävässä käytetään testidataa JSON Placeholder -palvelusta:
-
-> *"{JSON} Placeholder*
->
-> *Free to use fake Online REST API for testing and prototyping*
->
-> *Powered by JSON Server + LowDB"*
->
-> https://jsonplaceholder.typicode.com/
-
-Voit tallentaa JSON-tiedostot itsellesi seuraavista kahdesta osoitteesta:
-
-* **Käyttäjät**
-
-    https://jsonplaceholder.typicode.com/users
-
-    ```
-    curl https://jsonplaceholder.typicode.com/users > users.json
-    ```
-
-* **Postaukset**
-
-    https://jsonplaceholder.typicode.com/posts
-
-    ```
-    curl https://jsonplaceholder.typicode.com/posts > posts.json
-    ```
-
-Tehtävän kannalta riittää hyvin, että luet käyttäjät ja postaukset paikallisesta tiedostosta [require](https://nodejs.org/en/knowledge/getting-started/what-is-require/)-funktiolla esimerkiksi seuraavasti:
-
-```js
-let users = require('./users.json');
-```
-
-Mikäli haluat, voit myös toteuttaa tiedostojen lataamisen verkosta dynaamisesti JavaScriptillä. Tiedon dynaaminen hakeminen käsitellään kuitenkin vasta seuraavan viikon oppitunnilla.
-
-
-## Osa 1 (arvosanatavoite 3)
-
-Tehtävän 1. osassa sinun tulee kirjoittaa Node.js-skripti, joka lukee tiedostot ja tulostaa niissä olevien käyttäjien nimet (`name`) sekä postausten otsikot (`title`) siten, että kunkin käyttäjän nimen tulostamisen jälkeen tulostetaan kaikkien kyseisen käyttäjän postausten otsikot, esimerkiksi seuraavasti:
-
-```
-Leanne Graham
-- sunt aut facere repellat provident occaecati excepturi optio reprehenderit
-- qui est esse
-- ea molestias quasi exercitationem repellat qui ipsa sit aut
-- eum et est occaecati
-- nesciunt quas odio
-- dolorem eum magni eos aperiam quia
-- magnam facilis autem
-- dolorem dolore est ipsam
-- nesciunt iure omnis dolorem tempora et accusantium
-- optio molestias id quia eum 
-
-
-Ervin Howell
-- et ea vero quia laudantium autem
-- in quibusdam tempore odit est dolorem
-- dolorum ut in voluptas mollitia et saepe quo animi
-- voluptatem eligendi optio
-- eveniet quod temporibus
-- sint suscipit perspiciatis velit dolorum rerum ipsa laboriosam odio
-- fugit voluptas sed molestias voluptatem provident
-- voluptate et itaque vero tempora molestiae
-- adipisci placeat illum aut reiciendis qui
-- doloribus ad provident suscipit at 
-
-...
-```
-
-Voit toteuttaa tehtävän joko perinteisillä sisäkkäisillä toistorakenteilla, tai voit hyödyntää tunnilla käsiteltyjä vaihtoehtoisia operaatioita.
-
-
-## Osa 2 (arvosanatavoite 5)
-
-Arvosanatavoitteeseen 5 sinun tulee kirjoittaa edellisen lisäksi toinen skripti, joka esittää datan sisäkkäisinä JSON-tietorakenteina siten, että kunkin käyttäjän kirjoittamat postaukset ovat koottu käyttäjän yhteyteen omaksi taulukokseen. Yksittäisen käyttäjän osalta lopputulos voi olla esimerkiksi seuraava:
-
-```js
-[
-    {
-        "id": 1,
-        "name": "Leanne Graham",
-        "username": "Bret",
-        "email": "Sincere@april.biz",
-        "address": {
-            "street": "Kulas Light",
-            "suite": "Apt. 556",
-            "city": "Gwenborough",
-            "zipcode": "92998-3874",
-            "geo": {
-                "lat": "-37.3159",
-                "lng": "81.1496"
-            }
-        },
-        "phone": "1-770-736-8031 x56442",
-        "website": "hildegard.org",
-        "company": {
-            "name": "Romaguera-Crona",
-            "catchPhrase": "Multi-layered client-server neural-net",
-            "bs": "harness real-time e-markets"
-        },
-
-        // käyttäjälle lisätty uusi `posts`-taulukko sisältää kaikki kyseisen käyttäjän postaukset:
-        "posts": [
-            {
-                "userId": 1,
-                "id": 1,
-                "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-                "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
-            },
-            {
-                "userId": 1,
-                "id": 2,
-                "title": "qui est esse",
-                "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
-            },
-            
-            // + loput saman käyttäjän postaukset täällä...
-        ]
-    },
-    
-    // + loput käyttäjät...
-
-]
-```
-
-Muodostettu JSON-tietorakenne tulee lopuksi tallentaa tiedostoon. JavaScript-tietorakenteen muuttaminen merkkijonoksi onnistuu esimerkiksi [JSON.stringify-metodilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify):
-
-```js
-let jsonString = JSON.stringify(omaData, null, 4);
-```
-
-Muodostettu JSON-merkkijono tulee tallentaa vielä tiedostoon esimerkiksi Node.js:n fs-moduulin [writeFileSync](https://stackoverflow.com/a/46356040)-metodilla:
-
-```js
-const fs = require('fs');
-
-fs.writeFileSync('output.json', jsonString);
-```
-
-Arvosanatavoitteeseen 5 sinun tulee hyödyntää oppitunnilla käsiteltyjä `map`-, `filter`- tai `reduce`-operaatiota vähintään kerran.
-
-
-
-## Valmiiden kirjastojen käyttäminen
-
-Näiden tehtävien ratkaisemiseksi et tarvitse ulkoisia kirjastoja tai `npm`-komentoa. Pelkkä Node.js riittää. Halutessasi saat kuitenkin käyttää apukirjastoja, kuten [lodash](https://www.npmjs.com/package/lodash) tai [axios](https://www.npmjs.com/package/axios). Kirjastojen käyttäminen ei vaikuta laskevasti arvosanaan.
-
-
-## Vinkit datan käsittelyyn
-
-Käyttäjien ja heidän postauksiensa yhdistämiseksi yksi lähestymistapa on käydä käyttäjät läpi `map`-metodilla ja muodostaa jokaisesta käyttäjästä uusi olio, jolla on alkuperäisten tietojen lisäksi taulukko postauksia. Postaustaulukko puolestaan voidaan rakentaa kullekin käyttäjälle `filter`-metodin avulla, suodattamalla kaikista postauksista ne, joiden `userId` vastaa kyseisen käyttäjän `id`:tä.
-
-
-## Tehtävän palauttaminen
-
-Myös osittain ratkaistut palautukset hyväksytään ja arvostellaan suhteessa niiden valmiusasteeseen. Palauta kaikki ratkaisuusi liittyvät lähdekoodit erillisinä tiedostoina **Teams-tehtävässä ilmoitettuun määräaikaan mennessä**. 
-
-**Huom! Nimeä `.js`-päätteiset tiedostot `.js.txt`-päätteisiksi, mikäli Teams ei hyväksy tiedostojasi tietoturvasyistä.**
+Tämän viikon tehtävissä käsittelemme [JSONPlaceholder](https://github.com/typicode/jsonplaceholder)-rajapinnan dataa ja yhdistelemme kahdesta eri JSON-tietorakenteesta löytyviä tietoja map- sekä filter-operaatioiden avulla. Katso tarkemmat ohjeet Teamsin tehtävät-välilehdeltä.
 
 
 ----
