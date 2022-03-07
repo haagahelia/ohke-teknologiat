@@ -87,60 +87,55 @@ $ npm test
 
 Seuraavat testit varmistavat, että:
 
-1. `getPostsByUser` palauttaa vain sille annetun käyttäjän postaukset
-1. `combineUsersAndPosts` yhdistää annetun käyttäjän kyseisen käyttäjän postauksiin
-1. `getUsers` palauttaa onnistuneesti 10 käyttäjää REST-rajapinnasta
-1. `getPosts` palauttaa onnistuneesti 100 postausta REST-rajapinnasta
+1. `filterPostsByUser` palauttaa vain sille annetun käyttäjän postaukset
+1. `mergeUsersAndPosts` yhdistää annetut käyttäjät postauksiin (kuten tehtävässä)
+1. `getUsers` palauttaa onnistuneesti 10 käyttäjää
+1. `getPosts` palauttaa onnistuneesti 100 postausta
 
 
 ```js
 const assert = require('assert').strict;
-const { getUsers, getPosts, combineUsersAndPosts, getPostsByUser } = require('../blog/functions');
-import { describe, expect, test } from '@jest/globals'
+const { getUsers, getPosts, filterPostsByUser, mergeUsersAndPosts } = require('../blog/functions');
+const { test } = require('@jest/globals');
 
+test('getUsers returns an array of 10 users', () => {
+    let users = getUsers();
 
-test('should get posts for a single user', function () {
-    let user = { id: 1, name: 'John Doe' };
-    let posts = [{ id: 1, userId: 1 }, { id: 2, userId: 2 }, { id: 3, userId: 1 }];
-
-    let result = getPostsByUser(user, posts);
-    assert.deepEqual(result, [posts[0], posts[2]]);
+    assert.equal(users.length, 10, `Should have 10 users but had ${users.length}`);
 });
 
-test('should connect posts to users', function () {
-    let users = [{ id: 1 }, { id: 2 }];
-    let posts = [{ id: 1, userId: 1 }, { id: 2, userId: 1 }];
+test('getPosts returns 100 posts', () => {
+    let posts = getPosts();
 
-    let result = combineUsersAndPosts(users, posts);
-
-    assert.deepEqual(result, [
-        {
-            id: 1,
-            posts: [{ id: 1, userId: 1 }, { id: 2, userId: 1 }]
-        },
-        {
-            id: 2,
-            posts: []
-        }
-    ]);
+    assert.equal(posts.length, 100, `Should have 100 posts but had ${posts.length}`);
 });
 
-test('returns 10 users', async function () {
-    let users = await getUsers();
-    assert.equal(users.length, 10);
+test('filtering posts for single user', () => {
+    let users = getUsers();
+    let allPosts = getPosts();
+    let user = users[0];
+
+    let filtered = filterPostsByUser(user, allPosts);
+
+    assert.equal(filtered.length, 10);
+    assert.ok(filtered.every(post => post.userId === user.id));
 });
 
-test('returns 100 posts', async function () {
-    let posts = await getPosts();
-    assert.equal(posts.length, 100);
+test('merging posts into users', () => {
+    let users = getUsers();
+    let posts = getPosts();
+
+    let merged = mergeUsersAndPosts(users, posts);
+
+    assert.equal(merged.length, 10, 'Must still have 10 users');
+    assert.ok(Array.isArray(merged[0].posts), 'Users must have a posts array');
+
+    for (let user of merged) {
+        assert.equal(user.posts.length, 10);
+        assert.ok(user.posts.every(post => post.userId === user.id));
+    }
 });
 ```
-
-
-## Vertailu JavaScriptillä
-
-Yllä esitellyissä testeissä sekä oppitunnin esimerkissä vertailu tehdään `assert.deepEqual`-funktion avulla, eikä yhtäsuuruusmerkeillä. Tämä johtuu siitä, että JavaScript vertailee taulukoita ja olioita eri tavalla kuin esimerkiksi Python.
-
 
 ### Taulukoiden vertailu
 
