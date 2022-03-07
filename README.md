@@ -139,7 +139,7 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
         <tr>
             <td>7.-13.3.</td>
             <td>
-                Node, NPM, Express ja Promiset<br />
+                <a href="05_es6_node/oppitunti2.md">Node.js, npm, Express ja Promiset</a><br />
                 <ul>
                     <li>Express.js</li>
                     <li>Promise</li>
