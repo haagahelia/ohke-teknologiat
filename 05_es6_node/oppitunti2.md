@@ -1,6 +1,6 @@
 # Node, NPM, Express ja Promiset
 
-Tällä oppitunnilla jatkamme JavaScript-kielen ja Node.js:n parissa. Tutustumme suosittuun [Express](https://expressjs.com/)-sovelluskehykseen, jonka avulla voimme toteuttaa JavaScript-pohjaisen verkkopalvelun. Lisäksi sivuamme JavaScriptin yksikkötestausta.
+Tällä oppitunnilla jatkamme JavaScript-kielen ja Node.js:n parissa. Tutustumme suosittuun [Express](https://expressjs.com/)-sovelluskehykseen (framework), jonka avulla voimme toteuttaa JavaScript-pohjaisen verkkopalvelun. Lisäksi sivuamme JavaScriptin yksikkötestausta.
 
 
 <!--# Oppitunnin videot
@@ -43,24 +43,26 @@ Miten tässä moduulissa määritettyä `helloAgent`-funktiota voitaisiin kutsua
 
 [Edellisen oppitunnin](oppitunti1.md) tehtävässä teidän tuli yhdistellä Post-olioita User-olioihin hyödyntäen kuvitteellisen blogin JSON-tietorakenteita.
 
-Tehtävän ratkaisemiseksi oli useita erilaisia lähestymistapoja, ja oppitunnin ensimmäisellä videotallenteella tutustumme funktionaaliseen lähestymistapaan, jossa käsittelemme aineiston map- ja filter-operaatioiden avulla.
+Tehtävän ratkaisemiseksi oli useita erilaisia lähestymistapoja, ja oppitunnin aluksi tutustumme funktionaaliseen lähestymistapaan, jossa käsittelemme aineiston map- ja filter-operaatioiden avulla.
 
 
 # JS-koodin yksikkötestaaminen
 
-Koodin testaamiseksi tarvitsemme testaustyökalun, joka voi olla esimerkiksi [Mocha](https://mochajs.org/). Mocha kannattaa asentaa NPM-työkalun avulla, ja jotta NPM käsittelee koodiamme projektina, tulee se alustaa seuraavalla komennolla:
+Koodin testaamiseksi tarvitsemme testaustyökalun, joka voi olla esimerkiksi [Jest](https://jestjs.io/) tai [Mocha](https://mochajs.org/). Tällä kurssilla on aikaisempina lukukausina käytetty Mochaa, mutta tällä lukukaudella siirrymme Jest:iin.
+
+Työkalut kannattaa asentaa npm-paketinhallinnan avulla. Jotta npm käsittelee koodihakemistoamme projektina, tulee se alustaa seuraavalla komennolla:
 
 ```
 $ npm init
 ```
 
-Tämän jälkeen voimme asentaa mocha-riippuvuuden NPM:n avulla:
+Tämän jälkeen voimme asentaa testityökalut NPM:n avulla:
 
 ```
-$ npm install --save-dev mocha
+$ npm install --save-dev jest
 ```
 
-Seuraavissa vaiheissa seuraamme Mochan dokumentaatiossa [https://mochajs.org/#getting-started](https://mochajs.org/#getting-started) olevia työvaiheita.
+Seuraavissa vaiheissa seuraamme Jestin dokumentaatiossa [https://jestjs.io/docs/getting-started](https://jestjs.io/docs/getting-started) olevia työvaiheita.
 
 Testejä varten luodaan uusi kansio "test":
 
@@ -72,7 +74,7 @@ Package.json-tiedoston `test`-skriptiksi asetetaan `mocha`-komento:
 
 ```diff
  "scripts": {
-+  "test": "mocha"
++  "test": "jest"
 -  "test": "echo \"Error: no test specified\" && exit 1"
  },
 ```
@@ -90,60 +92,55 @@ Seuraavat testit varmistavat, että:
 1. `getUsers` palauttaa onnistuneesti 10 käyttäjää REST-rajapinnasta
 1. `getPosts` palauttaa onnistuneesti 100 postausta REST-rajapinnasta
 
-Testien lähdekoodin tarkempi käsittely löytyy oppitunnin ensimmäiseltä videolta.
 
 ```js
-const assert = require('assert');
+const assert = require('assert').strict;
 const { getUsers, getPosts, combineUsersAndPosts, getPostsByUser } = require('../blog/functions');
+import { describe, expect, test } from '@jest/globals'
 
-describe('Users and posts', function () {
 
-    it('should get posts for a single user', function () {
-        let user = { id: 1, name: 'John Doe' };
-        let posts = [{ id: 1, userId: 1 }, { id: 2, userId: 2 }, { id: 3, userId: 1 }];
+test('should get posts for a single user', function () {
+    let user = { id: 1, name: 'John Doe' };
+    let posts = [{ id: 1, userId: 1 }, { id: 2, userId: 2 }, { id: 3, userId: 1 }];
 
-        let result = getPostsByUser(user, posts);
-        assert.deepStrictEqual(result, [posts[0], posts[2]]);
-    });
-
-    it('should connect posts to users', function () {
-        let users = [{ id: 1 }, { id: 2 }];
-        let posts = [{ id: 1, userId: 1 }, { id: 2, userId: 1 }];
-
-        let result = combineUsersAndPosts(users, posts);
-
-        assert.deepStrictEqual(result, [
-            {
-                id: 1,
-                posts: [{ id: 1, userId: 1 }, { id: 2, userId: 1 }]
-            },
-            {
-                id: 2,
-                posts: []
-            }
-        ]);
-    });
+    let result = getPostsByUser(user, posts);
+    assert.deepEqual(result, [posts[0], posts[2]]);
 });
 
+test('should connect posts to users', function () {
+    let users = [{ id: 1 }, { id: 2 }];
+    let posts = [{ id: 1, userId: 1 }, { id: 2, userId: 1 }];
 
-describe('Fetch requests', function () {
+    let result = combineUsersAndPosts(users, posts);
 
-    it('returns 10 users', async function () {
-        let users = await getUsers();
-        assert.strictEqual(users.length, 10);
-    });
+    assert.deepEqual(result, [
+        {
+            id: 1,
+            posts: [{ id: 1, userId: 1 }, { id: 2, userId: 1 }]
+        },
+        {
+            id: 2,
+            posts: []
+        }
+    ]);
+});
 
-    it('returns 100 posts', async function () {
-        let posts = await getPosts();
-        assert.strictEqual(posts.length, 100);
-    })
+test('returns 10 users', async function () {
+    let users = await getUsers();
+    assert.equal(users.length, 10);
+});
+
+test('returns 100 posts', async function () {
+    let posts = await getPosts();
+    assert.equal(posts.length, 100);
 });
 ```
 
 
 ## Vertailu JavaScriptillä
 
-Yllä esitellyissä testeissä sekä oppitunnin esimerkissä vertailu tehdään `assert.deepStrictEqual`-funktion avulla, eikä yhtäsuuruusmerkeillä. Tämä johtuu siitä, että JavaScript vertailee taulukoita ja olioita eri tavalla kuin esimerkiksi Python. 
+Yllä esitellyissä testeissä sekä oppitunnin esimerkissä vertailu tehdään `assert.deepEqual`-funktion avulla, eikä yhtäsuuruusmerkeillä. Tämä johtuu siitä, että JavaScript vertailee taulukoita ja olioita eri tavalla kuin esimerkiksi Python.
+
 
 ### Taulukoiden vertailu
 
@@ -151,8 +148,6 @@ Taulukoita vertailtaessa JavaScript tutkii, onko kyseessä sama taulukko. __Taul
 
 ```js
 > [1, 2, 3] === [1, 2, 3]
-false
-> [1, 2, 3] == [1, 2, 3]
 false
 ```
 
@@ -165,29 +160,19 @@ Kuten taulukoiden kanssa, myös olioita vertailtaessa tarkastetaan ovatko oliot 
 ```js
 > { language: "JavaScript" } === { language: "JavaScript" }
 false
-> { language: "JavaScript" } == { language: "JavaScript" }
-false
 ```
 
-Eri kielet toimivat vertailujen osalta eri logiikalla. Esimerkiksi Python vertailee tietorakenteiden sisältöä:
+Eri kielet toimivat vertailujen osalta eri logiikalla. Esimerkiksi Python vertailee automaattisesti listojen sisältöä.
 
-```python
->>> [1, 2, 3] == [1, 2, 3] # Pythonissa True
-True
->>> { "language": "Python" } == { "language": "Python" }
-True
->>>
-```
+### deepEqual
 
-### deepStrictEqual
-
-Koska olioiden vertaileminen JavaScriptissä vertailee vain, ovatko oliot samat, joudumme hyödyntämään erillistä vertailulogiikkaa. Node-yksikkötesteissä voimme hyödyntää Noden standardikirjaston `assert`-moduulia ja sieltä löytyvää `deepStrictEqual`-metodia, joka vertailee rekursiivisesti sille annettuja arvoja:
+Koska olioiden vertaileminen JavaScriptissä vertailee vain, ovatko oliot samat, joudumme hyödyntämään erillistä vertailulogiikkaa. Node-yksikkötesteissä voimme hyödyntää Noden standardikirjaston `assert`-moduulia ja sieltä löytyvää `deepEqual`-metodia, joka vertailee rekursiivisesti sille annettuja arvoja:
 
 ```js
-const assert = require('assert');
+const assert = require('assert').strict;
 
-assert.deepStrictEqual([1, 2, 3], [1, 2, 3]):
-assert.deepStrictEqual({ language: "JavaScript" }, { language: "JavaScript" });
+assert.deepEqual([1, 2, 3], [1, 2, 3]);
+assert.deepEqual({ language: "JavaScript" }, { language: "JavaScript" });
 ```
 
 https://nodejs.org/api/assert.html#assert_assert_deepstrictequal_actual_expected_message
@@ -197,63 +182,21 @@ https://nodejs.org/api/assert.html#assert_assert_deepstrictequal_actual_expected
 
 JavaScriptissä vertailuoperaatiot tehdään usein kolmella merkillä eli `===` tai `!==`. Kolmen merkin vertailuoperaatiot tarkastavat, että vertailtavien arvojen tyyppi on sama. Mikäli tyyppitarkastus jätetään tekemättä, JavaScript vertailee tyhjiä ja nollaan vertautuvia arvoja toisinaan epäloogisesti.
 
-Kahden yhtäsuuruusmerkin vertailut tuottavat "epäloogisia" tuloksia esimerkiksi seuraavissa tapauksissa:
-
-```js
-> 1 == true
-true
-> "1" == true
-true
-> "0" == false  // nolla merkkijonona ja false
-true
-> [] == false   // tyhjä taulukko ja false
-true
-> 0 == false    // nolla ja false
-true
-> 0 == "0"      // nolla merkkijonona ja nolla
-true
-> 0 == "+00000" // "pitkä nolla" etumerkillä merkkijonona
-true
-> 0 == []       // nolla ja tyhjä taulukko
-true
-> "0" == []     // molemmat ovat false, mutta silti keskenään erisuuruiset!! 🤯
-false
-```
-
-Vertailu kolmella merkillä on helpommin arvattavissa, koska vertailussa sekä tyypin että arvon tulee olla sama:
-
-```js
-> 1 === true
-false
-> "1" === true
-false
-> "0" === false
-false
-> [] === false
-false
-> 0 === false
-false
-> 0 === "0"
-false
-> 0 === []
-false
-> "0" === []
-false
-```
-
-Voit tutustua aiheeseen syvällisemmin YouTube-videolla [JavaScript == VS === (Web Dev Simplified)](https://www.youtube.com/watch?v=C5ZVC4HHgIg).
+Voit tutustua aiheeseen syvällisemmin artikkelissa [Equality comparisons and sameness (MDN web docs)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness) tai YouTube-videolla [JavaScript == VS === (Web Dev Simplified)](https://www.youtube.com/watch?v=C5ZVC4HHgIg).
 
 
-----
+### Vertailu Jest:llä
+
+Jest-testaustyökalussa on oma [expect](https://jestjs.io/docs/expect)-funktionsa, jota voidaan käyttää arvojen vertailemiseksi. Tällä oppitunnilla käytämme kuitenkin assert-tyyliä, joka on yhdenmukaisempi aikaisemmin käsiteltyjen JUnit- ja pytest-kokemusten kanssa.
 
 
 # Fetch-harjoitus
 
-Tähän asti olemme lukeneet käyttäjien ja postausten JSON-rakenteet paikallisesta tiedostosta `require`-funktiolla. Tämä on tapahtunut synkronisesti, eli lukeminen on tehty loppuun ennen seuraavalle riville etenemistä.
+Tähän asti olemme lukeneet käyttäjien ja postausten JSON-rakenteet paikallisesta tiedostosta `require`-funktiolla. Tämä on tapahtunut synkronisesti, eli lukeminen on tehty loppuun ennen seuraavalle riville etenemistä. Tämä on ollut hyvin helppoa ja suoraviivaista.
 
 Tyypillisesti tiedostojen lukeminen, tietokantakyselyt ja http-pyynnöt tapahtuvat kuitenkin JavaScriptissä asynkronisesti, eli vastausta ei jäädä odottamaan, vaan ohjelman suoritus siirtyy suoraan eteenpäin. Asynkronisten operaatioiden valmistumisen jälkeen niiden tuloksia pystytään hyödyntämään esimerkiksi **Promise**-olioiden ja **then**-metodin avulla.
 
-Selaimissa HTTP-pyyntöjä tehdään usein JavaScriptin [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)-funktiolla. Nodessa ei ole valmista toteutusta fetch-funktiolle, mutta vastaava funktio saadaan asennettua `node-fetch`-pakettina:
+Selaimissa HTTP-pyyntöjä tehdään tyypillisesti JavaScriptin [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)-funktiolla. Nodessa ei ole vielä valmista toteutusta fetch-funktiosta, [mutta sellainen on tulossa versiossa 18](https://blog.logrocket.com/fetch-api-node-js/). Toistaiseksi `fetch` saadaan käyttöön asentamalla erillinen `node-fetch`-paketti:
 
 > *"node-fetch: a light-weight module that brings window.fetch to Node.js"*
 >
@@ -274,12 +217,12 @@ $ npm install cross-fetch
 Fetch-paketin asentamisen jälkeen HTTP-pyyntö voidaan tehdä koodissa seuraavasti:
 
 ```js
-const fetch = require('node-fetch'); // vaihtoehtoisesti require('cross-fetch');
+const fetch = require('node-fetch'); // tai require('cross-fetch');
 
 let httpPromise = fetch('https://jsonplaceholder.typicode.com/users');
 ```
 
-*Fetch-funktion sijasta voisimme käyttää myös muita HTTP-asiakaskirjastoja, kuten [axios](https://www.npmjs.com/package/axios). Tällä oppitunnilla käytämme fetch-funktiota, koska se on hyödynnettävissä suoraan eri selaimissa.*
+*Fetch-funktion sijasta voisimme käyttää myös muita HTTP-asiakaskirjastoja, kuten [axios](https://www.npmjs.com/package/axios). Tällä oppitunnilla käytämme fetch-funktiota, koska se on hyödynnettävissä suoraan eri selaimissa, sekä tulevaisuudessa Node.js:ssä.*
 
 
 ## Fetch, Promiset, async ja await
@@ -298,7 +241,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
   .then(users => console.log(users[0].name))
 ```
 
-Peräkkäisiä Promise-olioita voidaan myös ketjuttaa, jolloin ensimmäisenä Promisen `then`-metodille annettu funktio suoritetaan aina ennen seuraavia kutsuja, ja edeltävän funktion palauttama arvo välitetään aina seuraavalle funktiolle. Tästä käytetään myös termiä ketjutus eli chaining.
+Peräkkäisiä Promise-olioita voidaan ketjuttaa, kuten yllä, jolloin ensimmäisenä Promisen `then`-metodille annettu funktio suoritetaan aina ennen seuraavia kutsuja, ja edeltävän funktion palauttama arvo välitetään aina seuraavalle funktiolle. Tästä käytetään myös termiä ketjutus eli chaining.
 
 Voit tutustua itsenäisesti tarkemmin `fetch`-funktioon sekä sen palauttamien `Promise`-olioiden käyttämiseen seuraavien YouTube-videoiden avulla:
 
@@ -310,13 +253,12 @@ Voit tutustua itsenäisesti tarkemmin `fetch`-funktioon sekä sen palauttamien `
 
 > *"Promises make asynchronous programming much easier than the traditional event-listener or callback approaches. This video explains promises, promise-chaining, and complex error-handling."*
 
+
 ## Tuntiesimerkki: fetch-kutsujen ja asynkronisuuden hyödyntäminen
 
 Asynkroninen ohjelmointityyli tekee koodin kirjoittamisesta ajoittain hankalaa. Erityisesti tilanteissa, joissa tarvitsemme useita asynkronisia resursseja, joudumme kiinnittämään suoritusjärjestykseen enemmän huomiota, kuin olemme tottuneet tekemään Javan ja Pythonin kanssa.
 
 Asynkronisuudesta on kuitenkin myös hyötyjä: voimme käynnistää useita asynkronisia operaatioita helposti ilman, että meidän täytyy odottaa ensimmäisten operaatioiden valmistumista.
-
-Viikon toisella videolla tutustumme siihen, miten Users ja Posts -esimerkki voidaan muuntaa tekemään käyttäjien ja postausten haku samanaikaisesti.
 
 
 ----
@@ -324,19 +266,19 @@ Viikon toisella videolla tutustumme siihen, miten Users ja Posts -esimerkki void
 
 # Express.js
 
-Nodelle on olemassa useita web-sovelluskehyksiä, joista [express](https://www.npmjs.com/package/express) on hyvin suosittu:
+Node.js:lle on olemassa useita web-sovelluskehyksiä, joista [express](https://www.npmjs.com/package/express) on hyvin suosittu:
 
 > *"Fast, unopinionated, minimalist web framework for node."*
 >
 > https://www.npmjs.com/package/express
 
-Asennetaan express olemassa olevaan npm-projektiimme seuraavasti:
+Express voidaan asentaa olemassa olevaan npm-projektiimme seuraavasti:
 
 ```
 $ npm install express
 ```
 
-Express-kirjastoa voidaan nyt kokeilla omassa koodissa esimerkiksi express.js:n koodiesimerkin mukaisesti:
+Express-sovelluskehystä voidaan nyt kokeilla omassa koodissa esimerkiksi [express.js:n koodiesimerkin](https://www.npmjs.com/package/express) mukaisesti:
 
 ```js
 // https://www.npmjs.com/package/express
@@ -350,9 +292,9 @@ app.get('/', function (req, res) {
 app.listen(3000); // kuunneltava portti
 ```
 
-Kun koodi on käynnissä, voit kokeilla yllä esitettyä esimerkkiä vierailemalla osoitteessa [http://localhost:3000](http://localhost:3000).
+Kun koodi on käynnissä, voit kokeilla vierailla osoitteessa [http://localhost:3000](http://localhost:3000).
 
-Seuraavissa kappaleissa esiintyvät tämän aiheen kolmannella videolla käsiteltävät koodiesimerkit soveltavat käyttäjien ja postausten tarjoamista selaimille REST-rajapinnan kaltaisesti.
+Seuraavissa kappaleissa esiintyvä soveltavat käyttäjien ja postausten tarjoamista selaimille REST-rajapinnan kaltaisesti.
 
 
 ## JSON-datan palauttaminen
@@ -421,22 +363,22 @@ Node.js-palvelin täytyy uudelleenkäynnistää aina koodimuutosten jälkeen. Uu
 Tällä oppitunnilla käytämme nodemon-työkalua seuraavasti:
 
 ```
-$ npm install -g nodemon
-$ nodemon index.js
-```
-
-Nodemon voidaan asentaa myös projektikohtaisesti:
-
-```
 $ npm install --save-dev nodemon
 $ npm start
 ```
 
-Projektikohtaisessa asennuksessa nodemon täytyy käynnistää esimerkiksi `npm start`-komennolla, ja `package.json`-tiedostoon täytyy lisätä `start`-skripti:
+Nodemon voidaan asentaa myös globaalisti, jolloin sillä voidaan suorittaa ja uudelleenkäynnistää käytännössä mitä vain sovelluksia:
 
 ```
+$ npm install -g nodemon
+$ nodemon index.js
+```
+
+Projektikohtaisessa asennuksessa nodemon täytyy käynnistää esimerkiksi `npm start`-komennolla, ja `package.json`-tiedostoon täytyy lisätä `start`-skripti:
+
+```diff
 "scripts": {
-  "start": "nodemon index.js"
++  "start": "nodemon index.js"
 }
 ```
 
@@ -565,124 +507,5 @@ Katso lisätietoa järjestämisestä ylempää kodasta "Järjestäminen alkamisa
 
 # Koodaustehtävä: postinumerot-backend
 
-Tämän viikon tehtävässä sinun tulee hyödyntää Node.js:ää, npm:ää sekä [express](https://www.npmjs.com/package/express)-kirjastoa ja toteuttaa HTTP-palvelu, joka palauttaa aikaisemmilta viikoilta tuttuja postitoimipaikkojen nimiä sekä postinumeroita. Tarkemman tehtävänannon löydät Teamsin tehtävät-välilehdeltä.
-
-<!--Suosittelen tutustumaan tekstimuotoisen tehtävänannon lisäksi myös tämän aiheen kolmannen videotallenteen viimeisiin 15 minuuttiin, jossa tehtävää pohjustetaan esimerkin avulla.
-
-Tavoitteenamme on asynkronisen web-ohjelmoinnin opettelun lisäksi kerrata tietorakenteiden läpikäyntiä. Mikäli tehtävät eivät tarjoa tarvittavaa haastetta tai haluat oppia välimuistituksesta, voit tehdä lisäksi valinnaisen lisätehtävän.
-
-
-## JSON-tiedoston hakeminen ja parametrin käsittely (arvosanatavoite 3)
-
-Toteuta express-sovellus, jolta voidaan kysyä postinumeron avulla postitoimitoimipaikan nimi. Postinumero annetaan HTTP-pyynnön parametrina esimerkiksi seuraavasti:
-
-```
-curl http://localhost:3000/postitoimipaikka?numero=99999
-```
-
-Vastaus tulee palauttaa JSON-muodossa esimerkiksi seuraavasti:
-
-```json
-{
-  "postinumero": "99999",
-  "toimipaikka": "KORVATUNTURI"
-}
-```
-
-Varaudu myös tilanteeseen, jossa annettua postinumeroa ei löydy. Tällöin voit palauttaa toimipaikaksi esimerkiksi `null`-arvon.
-
-[Postinumeroaineisto](https://github.com/theikkila/postinumerot) löytyy GitHubista [JSON-muodossa](https://raw.githubusercontent.com/theikkila/postinumerot/master/postcode_map_light.json). JSON-aineisto tulee ladata JavaScript-koodissa dynaamisesti esimerkiksi fetch-funktiolla tai axios-kirjastolla. **Älä siis tallenna aineistoa staattiseksi tiedostoksi.**
-
-Voit lukea tarkemman kuvauksen käsiteltävästä aineistosta aikaisemmasta [Python-tehtävän tehtävänannosta](../01_python#postinumeroaineisto).
-
-
-## Polun käsittely ja JSON-tietorakenteen läpikäynti (arvosanatavoite 5)
-
-Toteuta edellä ohjeistetun tehtävän lisäksi palvelimelle toinen polku, josta voidaan etsiä postitoimipaikan nimellä kaikki siihen kuuluvat postinumerot. Postitoimipaikan nimi tulee antaa osana polkua, esimerkiksi seuraavasti:
-
-```
-curl http://localhost:3000/postitoimipaikka/porvoo/
-```
-
-Vastaus tulee palauttaa JSON-muodossa esimerkiksi seuraavasti:
-
-```json
-{
-  "toimipaikka": "porvoo",
-  "postinumerot": ["06100", "06401", "06151", "06150", "06101", "06500", "06450", "06400", "06200"]
-}
-```
-
-Ohjelman tulee löytää postinumerot annetun nimen **kirjainkoosta riippumatta**. Varaudu myös parhaaksi katsomallasi tavalla tapaukseen, että pyydettyä postitoimipaikkaa ei löydy aineistosta. Mahdollisiin kirjoitusvirheisiin ja toimipaikan nimen vaihteleviin kirjoitusasuihin ei tarvitse kiinnittää huomiota.
-
-**Vinkki**
-
-Python-harjoitusten yhteydessä käytimme aineiston läpikäynnissä Pythonin dict-tietorakenteen `keys()`-, `values()`- ja `items()`-metodeja. 
-
-JavaScriptin Object-luokasta löytyy vastaavat metodit `Object.keys(data)`, `Object.values(data)` ja `Object.entries(data)`, jotka mahdollisesti ovat hyödyksi tehtävän ratkaisussa:
-
-* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
-* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values
-* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries
-
-## Postinumeroaineiston välimuistitus (extra)
-
-Postinumeroaineiston hakeminen verkosta on tämän ohjelman suorituskyvyn kannalta suurin haaste. Lisäksi useat rajapinnat rajoittavat niihin tehtävien kutsujen määrää, joten rajapinta saattaisi lakata vastaamasta tekemiimme toistuviin kutsuihin:
-
-> *"Rate limiting is a strategy for limiting network traffic. It puts a cap on how often someone can repeat an action within a certain timeframe – for instance, trying to log in to an account. Rate limiting can help stop certain kinds of malicious bot activity. It can also reduce strain on web servers."*
->
-> Cloudflare. What Is Rate Limiting? https://www.cloudflare.com/learning/bots/what-is-rate-limiting/
-
-Aineiston lataaminen etukäteen tai vain ohjelman käynnistyessä ratkaisisi ongelman, mutta aineistoon tulevat päivitykset eivät tulisi omaan palveluumme automaattisesti saataville.
-
-Näiden ongelmien ratkaisemiseksi aineistoa voidaan pitää ohjelman muistissa tietyn aikaa, jonka jälkeen aineisto haetaan uudelleen. Tällaisista [välimuisteista](https://fi.wikipedia.org/wiki/V%C3%A4limuisti) käytetään termiä **cache**.
-
-HTTP-vastaukset sisältävät hyvin usein tietoa mm. niiden välimuistituksesta. GitHub-palvelin pyytää JSON-tiedostoa ladattaessa HTTP-otsikkojen avulla asiakasta välimuistittamaan vastauksen 5 minuutin ajaksi.
-
-HTTP-vastausten otsikkotietoja voidaan tutkia esimerkiksi `curl -I`-komennon avulla seuraavasti:
-
-```
-$ curl -I https://raw.githubusercontent.com/theikkila/postinumerot/master/postcode_map_light.json
-HTTP/2 200 
-cache-control: max-age=300
-content-security-policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
-content-type: text/plain; charset=utf-8
-etag: "0c7eee999e998c6d959353abc9abeccb56d0ddaaac9a5d46dac0b123d68d0c41"
-strict-transport-security: max-age=31536000
-x-content-type-options: nosniff
-x-frame-options: deny
-x-xss-protection: 1; mode=block
-x-github-request-id: 621C:574F:16BD8FE:17E9826:6049E5B7
-accept-ranges: bytes
-date: Thu, 11 Mar 2021 09:43:46 GMT
-via: 1.1 varnish
-x-served-by: cache-bma1627-BMA
-x-cache: HIT
-x-cache-hits: 1
-x-timer: S1615455827.977461,VS0,VE1
-vary: Authorization,Accept-Encoding
-access-control-allow-origin: *
-x-fastly-request-id: 88772d1f4b3180348997fd9230c44aad01afcef0
-expires: Thu, 11 Mar 2021 09:48:46 GMT
-source-age: 155
-content-length: 114651
-```
-
-Yllä olevissa HTTP-otsikoissa on välimuistin ajan lisäksi muitakin välimuistitukseen liittyvää tietoa tietoja, kuten `etag` ja `x-cache`.
-
-Välimuistitus voidaan toteuttaa ohjelmassa monella eri tavalla. Yksi vaihtoehto on välimuistittaa HTTP-pyyntöjen vastauksia käyttämällä HTTP-asiakaskirjastoa, joka huolehtii välimuistituksesta automaattisesti. Tällöin emme tarvitse välttämättä muutoksia omaan koodiimme.
-
-Toinen vaihtoehto on toteuttaa välimuistitus osaksi omaa ohjelmaamme:
-
-> *"You could then wrap your API call in a helper function which checks the cache, and returns the value if it's present. If it's not it makes the API request, adds it to the cache, then returns it."*
->
-> Nick Mitchinson. Proper way to cache data from API call with nodejs. https://stackoverflow.com/a/15608809
-
-Välimuistiin asettamisen ja sieltä hakemisen lisäksi vanhentuneet vastaukset tulee luonnollisesti poistaa välimuistista, jolloin data haetaan uudestaan API-rajapinnasta.
-
-Tehtävän lisäosion ratkaisemisessa voit halutessasi käyttää hyödyksi esimerkiksi fetch-kutsuja välimuistittavaa [node-fetch-cache](https://www.npmjs.com/package/node-fetch-cache)-kirjastoa tai sanakirjan tavoin toimivaa [node-cache](https://www.npmjs.com/package/node-cache)-kirjastoa. Voit myös halutessasi toteuttaa oman välimuistituslogiikan. 
-
-Riippuvuuksia asentaessasi on hyvä muistaa, että npm-paketit ovat erinäisten tahojen julkaisemaa suoritettavaa koodia. Niitä asennettaessa kannattaa perehtyä projektien laatuun ja luotettavuuteen esimerkiksi niiden GitHub-sivujen avulla: [node-cache](https://github.com/node-cache/node-cache), [node-fetch-cache](https://github.com/mistval/node-fetch-cache).
-
--->
+Tämän viikon tehtävässä sinun tulee hyödyntää Node.js:ää, npm:ää sekä [express](https://www.npmjs.com/package/express)-sovelluskehystä ja toteuttaa HTTP-palvelu, joka palauttaa aikaisemmilta viikoilta tuttuja postitoimipaikkojen nimiä sekä postinumeroita. Tarkemman tehtävänannon löydät Teamsin tehtävät-välilehdeltä.
 
