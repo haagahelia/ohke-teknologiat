@@ -282,7 +282,7 @@ const app = express();
 
 app.get('/', function (req, res) {
   res.send('Hello World');
-})
+});
 
 app.listen(3000); // kuunneltava portti
 ```
@@ -319,7 +319,7 @@ https://expressjs.com/en/4x/api.html#req.query
 
 ```js
 app.get('/users/', async function (req, res) {
-  let id = Number(req.query.id));
+  let id = Number(req.query.id);
 });
 ```
 
