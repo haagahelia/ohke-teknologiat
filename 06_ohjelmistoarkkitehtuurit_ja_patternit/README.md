@@ -8,6 +8,7 @@
 <!--Jaksaako tätä ylläpitää manuaalisesesti...-->
 
 ## Luentovideot
+Juhanin [intro aiheeseen Software Architectures](SoftwareArchitecturesAndPatterns.pdf). Joko ennen tai jälkeen video 1:n
 
 **[Video 1: Johdanto arkkitehtuureihin ja patterneihin (24min)](https://web.microsoftstream.com/video/71f21473-a6d1-497b-8652-c58bcd7c225e)**
 
