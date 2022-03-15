@@ -155,7 +155,7 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
         <tr>
             <td>14.-20.3.</td>
             <td>
-                Ohjelmistoarkkitehtuurit ja patternit
+                <a href="06_ohjelmistoarkkitehtuurit_ja_patternit/">Ohjelmistoarkkitehtuurit ja patternit</a>
             </td>
             <td>
                 Teams-sessio ti 15.3. klo 12<br />
