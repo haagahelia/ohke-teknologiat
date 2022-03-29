@@ -170,17 +170,17 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
             <td>28.3.-3.4.</td>
             <td>
                 Vierailijaluento / Otaverkko<br />
-                Alustavina aiheina OpenShift, Kubernetes, Docker...
+                Luvassa mm. arvokkaita näkymiä IT-alan työelämään ja konkreettinen kurkistus pilvinatiivin sovelluskehityksen periaatteisiin OpenShift-pilviympäristössä.
             </td>
             <td>
                 Teams-sessio ti 29.3. klo 12<br />
-                Tehtävien DL ma 4.4. klo 22:00
+                <del>Tehtävien DL ma 4.4. klo 22:00</del>
             </td>
         </tr>
         <tr>
             <td>4.-10.4.</td>
             <td>
-                Koneoppiminen
+                Pilvinatiivi ohjelmistokehitys, continuous integration & delivery
             </td>
             <td>
                 Teams-sessio ti 5.4. klo 12<br />
