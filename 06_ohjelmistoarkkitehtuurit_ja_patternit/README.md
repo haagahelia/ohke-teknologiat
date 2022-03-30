@@ -251,6 +251,9 @@ Palauta lopuksi sama tiedosto Teamsiin.
 
 *Lisäpohdintaa tehtävään: Jos haluat tehtävän tekemisen jälkeen vielä pohtia DIP:tä ja olioiden monimuotoisuutta lisää, niin kokeile toteuttaa myös Moottoripyörän ja Auton ajoneuvoveron laskeminen DIP-arkkitehtuurimallin mukaisesti. Ajoneuvoveron suuruus riippuu nyt käyttämättömistä fieldeistä, eli siitä onko kyseessä kevytmoottoripyörä tai vastaavasti auton tapauksessa farmariauto. Voit vaikka harjoituksen vuoksi toteuttaa laskennat kaavalla, jossa ajoneuvovero määräytyy: (ajoneuvon käyttövuodet)x100 ja kevytmoottoripyörälle lisäksi jaetaan tuo summa kahdella ja farmariautolla kerrotaan 1.2:lla. Tämä siis tarkoittaa, että tarvitset nykyisen BusinessLuokan lisäksi omat businessluokat myös Moottoripyörälle ja Autolle. Näiden businessluokkien tulee myös toteuttaa yhteinen rajapinta, jossa on laskeAjoneuvovero()-metodi. Sovelluksen konfigurointivaiheessa tulee sitten injektoida asianmukaiset toteuttavat luokat paikoilleen, jotta laskenta menee oikein.*
 
+
+-----------
+
 📣 **Huom! Vierailijaluennon vuoksi lyhensimme ohjelmistoarkkitehtuurien ja patternien osuutta yhden viikon pituiseksi, joten seuraavat tehtävät korvataan uusilla.**
 
 ### <del>Tehtävä 6.3 (20% kierroksen arvosanasta):</del>
@@ -271,6 +274,10 @@ Reduxin käyttäminen perustuu omaan pieneen suunnittelumalliin, eli arkkitehtuu
 Reduxia voi käyttää (ja sen periaatteita seurata) myös ilman Reactia. Tiedostossa [Reduxperiaatteet.js](src/exercises/Reduxperiaatteet.js) on luotu tiedostopohja, josta löytyy metodipohja Reducer-metodille, kahdelle Action-metodille sekä Redux säiliön luomiselle (lisäksi samassa src-kansiossa on npm:lle tarpeellinen [package.json](src/exercises/package.json)). Sinun tehtäväsi on täydentää Reducer-metodia sekä kahta Action metodia siten, että Redux-säiliö palauttaa tiedostossa kuvatun halutun lopputuloksen. Tärkeintä tässä tehtävässä olisi tutustua Reduxin arkkitehtuurin toimintaperiaatteita Reduxin dokumentaatiota ja googlea hyödyntäen ja yrittää toteuttaa tämä pieni ohjelma Reduxin arkkitehtuuriperiaatteita seuraten. Reduxista ja sen periaatteista voi lukea myös esim [täältä](https://redux.js.org/introduction/getting-started). (muista ajaa src-kansiossa *npm install* komento alkuun, jolloin npm asentaa Redux-kirjaston, johon on määritelty riippuvuus src-kansion package.json-tiedostossa).
 
 Palauta lopuksi sama tiedosto Teamsiin (HUOM: Teams ei anna palauttaa .js-päätteistä tiedostoa, joten muuta tai lisää päätteeksi .txt, niin palautus onnistuu. Pahoittelut tästä. HUOM2: Tehtävässä pohjaksi annettu versio ilman korjauksia heittää ajettaessa Redux-kirjastolta virheen, eli se ei suostu ajamaan sellaisenaan ilman muutoksia.).
+
+-----------
+
+## Ideoita seminaaritehtävän aiheiksi
 
 ### Seminaaritehtävä 1:
 Refaktoroi ohjelmistoprojekti 2 -projektinne käyttämään mielestäsi optimaalista arkkitehtuuriratkaisua. Kuvaa tämä arkkitehtuuri myös kaaviona.
