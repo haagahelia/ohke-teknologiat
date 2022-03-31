@@ -169,8 +169,8 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
         <tr>
             <td>28.3.-3.4.</td>
             <td>
-                Vierailijaluento / Otaverkko<br />
-                Luvassa mm. arvokkaita näkymiä IT-alan työelämään ja konkreettinen kurkistus pilvinatiivin sovelluskehityksen periaatteisiin OpenShift-pilviympäristössä.
+                <strong>Vierailijaluento / Otaverkko</strong><br />
+                <em>Luvassa mm. arvokkaita näkymiä IT-alan työelämään ja konkreettinen kurkistus pilvinatiivin sovelluskehityksen periaatteisiin OpenShift-pilviympäristössä.</em>
             </td>
             <td>
                 Teams-sessio ti 29.3. klo 12<br />
@@ -195,9 +195,15 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
             </td>
         </tr>
         <tr>
-            <td>18.4.-8.5.</td>
+            <td>
+                <div>18.4.-24.4.</div>
+                <div>25.4.-1.5.</div>
+                <div>2.5.-8.5.</div>
+            </td>
             <td>Seminaarityön tekemistä</td>
-            <td><em>Yksilöllistä ohjausta Teamsissa tai kampuksella tiistaisin</em></td>
+            <td>
+                <em>Yksilöllistä ohjausta Teamsissa tai sopimuksen mukaan kampuksella tiistaisin</em>
+            </td>
         </tr>
         <tr>
             <td>9.-15.5.</td>
