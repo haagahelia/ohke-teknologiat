@@ -208,7 +208,12 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
         <tr>
             <td>9.-15.5.</td>
             <td>Seminaariesitykset</td>
-            <td>Seminaariesitykset Teamsissa ti 10.5. klo 12 alkaen</td>
+            <td>Seminaariesitykset Teamsissa / kampuksella ti 10.5. klo 12 alkaen</td>
+        </tr>
+        <tr>
+            <td>16.-22.5.</td>
+            <td>Seminaariesitysten varapäivä</td>
+            <td>Seminaariesitykset jatkuvat tarvittaessa Teamsissa ti 17.5. klo 12 alkaen</td>
         </tr>
     </tbody>
 </table>
