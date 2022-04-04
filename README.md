@@ -180,7 +180,7 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
         <tr>
             <td>4.-10.4.</td>
             <td>
-                Pilvinatiivi ohjelmistokehitys, continuous integration & delivery
+                Pilvinatiivi ohjelmistokehitys (Docker, Kubernetes, OpenShift...)
             </td>
             <td>
                 Teams-sessio ti 5.4. klo 12<br />
