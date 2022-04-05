@@ -179,7 +179,7 @@ Seuraava esimerkki näyttää miten `login`, `tag` ja `push` toimivat `docker-re
     docker login default-route-openshift-image-registry.apps.hhocp.otaverkko.fi
 
     # 2. Tagin lisääminen. Uudessa tagissa on mukana konttorekisteri, projekti ja imagen nimi
-    docker tag flask-events  docker push default-route-openshift-image-registry.apps.hhocp.otaverkko.fi/PROJEKTI/IMAGE:latest
+    docker tag flask-events
 
     # 3. Julkaisu
     docker push default-route-openshift-image-registry.apps.hhocp.otaverkko.fi/PROJEKTI/IMAGE:latest
