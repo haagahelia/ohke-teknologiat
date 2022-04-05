@@ -5,6 +5,17 @@ Tässä demossa **yritetään** julkaista Python- ja JS-sovelluksia OpenShift-pi
 Kokonaisuutena pilvipalveluiden infrastruktuuri on erittäin laaja, ja siitä riittäisi asiaa useammaksikin kurssiksi. Tällä oppitunnilla on tarkoitus tutustua terminologiaan ja työvaiheisiin siinä määrin, että aiheiden parissa on mahdollista jatkaa itseopiskelua esimerkiksi seminaarityön puitteissa.
 
 
+## Kurssin yksityinen pilvi
+
+Kurssilla on käytössä Otaverkon tarjoama OpenShift-ympäristö. Ohjeet käyttäjätunnusten saamiseksi löytyvät kurssin Teams-kanavalta.
+
+OpenShift-kirjautuminen onnistuu selaimella osoitteessa https://console-openshift-console.apps.hhocp.otaverkko.fi/. Ensimmäinen työvaihe kirjautumisen jälkeen on tyypillisesti oman projektin luominen.
+
+Konttirekisteri löytyy osoitteesta `default-route-openshift-image-registry.apps.hhocp.otaverkko.fi`. Rekisteri ei ole käytettävissä selaimella, vaan sitä käytetään `docker`-komennon kautta (vaihtoehtoisesti `podman`). Lisätiedot esimerkkeineen ja OAuth-ohjeistuksineen löydät alempaa ja oppitunnin tallenteelta.
+
+Voit tarvittaessa ottaa ssh-yhteyden ympäristömme kuormantasaajaan osoitteella `hhocp.otaverkko.fi`. Kuormantasaajalta löytyy `oc`- ja `kubectl`-komennot, joita voit tarvita mahdollisesti edistyneempien operaatioiden parissa seminaarityössä.
+
+
 ## Missä näitä teknologioita käytetään?
 
 Docker-konttirekistereitä (container registry)
@@ -156,7 +167,7 @@ Jos kontteja jää "roikkumaan" taustalle, niitä voidaan poistaa komennolla:
 
 ## 3. Imagen julkaisu konttirekisterissä
 
-Ennen julkaisua imagelle on tarpeen lisätä tagi, joka vastaa sen sijaintia konttirekisterissä: https://docs.docker.com/engine/reference/commandline/tag/
+Ennen julkaisua imagelle on tarpeen lisätä tagi, joka vastaa sen sijaintia konttirekisterissä: https://docs.docker.com/engine/reference/commandline/tag/. Konttirekisterissä osoite sisältää projektin nimen, joten varmista että olet luonut itsellesi projektin OpenShiftiin ja että käytät samaa nimeä. Projektin nimen jälkeen tuleva imagen nimi on vapaavalintainen.
 
 Kurssin OpenShift-pilven konttirekisteri sijaitsee osoitteessa `default-route-openshift-image-registry.apps.hhocp.otaverkko.fi`. Oppituntiin mennessä kyseistä rekisteriä ei ole kuitenkaan vielä saatu otettua onnistuneesti käyttöön.
 
@@ -173,21 +184,18 @@ Seuraava esimerkki näyttää miten `login`, `tag` ja `push` toimivat `docker-re
     # 3. Julkaisu
     docker push default-route-openshift-image-registry.apps.hhocp.otaverkko.fi/PROJEKTI/IMAGE:latest
 
-**Huom!**
-
-Koska konttirekisteri käyttää itse allekirjoitettua sertifikaattia, Docker ei oletuksena suostu muodostamaan siihen yhteyttä. Tämä on saatu kierrettyä oppitunnin esimerkissä lisäälällä tiedostoon `C:\Users\TUNNUS\.docker\daemon.json` uusi attribuutti nimeltä `insecure-registries`:
+⚠ **Huom!** Koska konttirekisteri käyttää itse allekirjoitettua sertifikaattia, Docker ei oletuksena suostu muodostamaan siihen yhteyttä. Tämä on saatu kierrettyä oppitunnin esimerkissä lisäälällä tiedostoon `C:\Users\TUNNUS\.docker\daemon.json` uusi attribuutti nimeltä `insecure-registries`:
 
 ```json
 {
-	"insecure-registries": [
-		"default-route-openshift-image-registry.apps.hhocp.otaverkko.fi"
-	]
+    "insecure-registries": [
+        "default-route-openshift-image-registry.apps.hhocp.otaverkko.fi"
+    ]
 }
 ```
-
 Asetusten muuttamisen jälkeen Docker tulee käynnistää uudelleen.
 
-Kirjautumisessa salasanan sijasta käytettävän OAuth-tokenin saat pyydettyä osoitteesta https://oauth-openshift.apps.hhocp.otaverkko.fi/oauth/token/request.
+🔐 **Huom!** Kirjautumisessa käytetään salasanan sijasta OAuth-tokenia, jonka saat selville osoitteesta https://oauth-openshift.apps.hhocp.otaverkko.fi/oauth/token/request.
 
 
 ## 4. Kontin deployment OpenShiftissä
@@ -200,12 +208,14 @@ Kirjautumisessa salasanan sijasta käytettävän OAuth-tokenin saat pyydettyä o
 
     *Deploy an existing Image from an Image registry or **Image stream tag***
 
-3. ...
+3. Esimerkki jatkuu oppitunnin videotallenteessa...
 
 
 # Konttien lisääminen OpenShiftin katalogista
 
 https://catalog.redhat.com/software/containers/search
+
+Katalogista löydät esimerkiksi valmiin pohjan MySQL-tietokantaa tai muita tyypillisiä tietokantoja varten.
 
 
 # Continuous integration, rolling deployment, autoscaling etc.
