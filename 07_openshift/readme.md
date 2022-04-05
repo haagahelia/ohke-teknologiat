@@ -1,6 +1,6 @@
 # OpenShift-kokeilut ja esimerkit
 
-Tässä demossa **yritetään** viedä kohtuullisen yksinkertainen tietokantapohjainen Java-sovellus Rahti-palveluun. Esimerkkejä ei ole tarkoitus toistaa itse demon aikana.
+Tässä demossa **yritetään** julkaista Python- ja JS-sovelluksia OpenShift-pilvessä sekä konttien että pelkän lähdekoodin avulla. Esimerkkejä ei ole tarkoitus toistaa itse demon aikana.
 
 
 ## Missä näitä teknologioita käytetään?
