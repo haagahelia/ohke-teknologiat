@@ -9,7 +9,7 @@ Kokonaisuutena pilvipalveluiden infrastruktuuri on erittäin laaja, ja siitä ri
 
 Kurssilla on käytössä Otaverkon tarjoama OpenShift-ympäristö. Ohjeet käyttäjätunnusten saamiseksi löytyvät kurssin Teams-kanavalta.
 
-OpenShift-kirjautuminen onnistuu selaimella osoitteessa https://console-openshift-console.apps.hhocp.otaverkko.fi/. Ensimmäinen työvaihe kirjautumisen jälkeen on tyypillisesti oman projektin luominen.
+OpenShift-kirjautuminen onnistuu selaimella osoitteessa https://console-openshift-console.apps.hhocp.otaverkko.fi/. Palveluissamme on ainakin toistaiseksi self-signed sertifikaatit, eli on odotettua, että selain varoittaa epäluotettavasta sertifikaatista. Ensimmäinen työvaihe kirjautumisen jälkeen on tyypillisesti oman projektin luominen.
 
 Konttirekisteri löytyy osoitteesta `default-route-openshift-image-registry.apps.hhocp.otaverkko.fi`. Rekisteri ei ole käytettävissä selaimella, vaan sitä käytetään `docker`-komennon kautta (vaihtoehtoisesti `podman`). Lisätiedot esimerkkeineen ja OAuth-ohjeistuksineen löydät alempaa ja oppitunnin tallenteelta.
 
