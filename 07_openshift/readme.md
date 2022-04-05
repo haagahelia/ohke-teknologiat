@@ -193,7 +193,8 @@ Seuraava esimerkki näyttää miten `login`, `tag` ja `push` toimivat `docker-re
     ]
 }
 ```
-Asetusten muuttamisen jälkeen Docker tulee käynnistää uudelleen.
+
+Lisätiedot tästä ratkaisusta löydät osoitteesta https://docs.docker.com/registry/insecure/#deploy-a-plain-http-registry. Asetusten muuttamisen jälkeen Docker tulee käynnistää uudelleen.
 
 🔐 **Huom!** Kirjautumisessa käytetään salasanan sijasta OAuth-tokenia, jonka saat selville osoitteesta https://oauth-openshift.apps.hhocp.otaverkko.fi/oauth/token/request.
 
