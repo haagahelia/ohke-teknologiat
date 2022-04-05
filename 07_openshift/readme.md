@@ -2,6 +2,8 @@
 
 Tässä demossa **yritetään** julkaista Python- ja JS-sovelluksia OpenShift-pilvessä sekä konttien että pelkän lähdekoodin avulla. Esimerkkejä ei ole tarkoitus toistaa itse demon aikana.
 
+Kokonaisuutena pilvipalveluiden infrastruktuuri on erittäin laaja, ja siitä riittäisi asiaa useammaksikin kurssiksi. Tällä oppitunnilla on tarkoitus tutustua terminologiaan ja työvaiheisiin siinä määrin, että aiheiden parissa on mahdollista jatkaa itseopiskelua esimerkiksi seminaarityön puitteissa.
+
 
 ## Missä näitä teknologioita käytetään?
 
@@ -57,7 +59,7 @@ Kubernetes-pilviratkaisuja
 
 Tässä esimerkissä jatkokehitämme "sorting and filtering" -tehtävässä kehitettyä logiikkaa ja toteutamme [Flask](https://flask.palletsprojects.com/):in avulla ohjelmallemme http-rajapinnan. Esimerkin lähtötilanne löytyy tiedostosta [upcoming_events.py](https://gist.github.com/swd1tn002/8f2e49c5b416671856d31c40b0d0c521).
 
-Dockerin dokumentaatiossa https://docs.docker.com/language/python/build-images/ on suoraviivainen kuvaus vaiheista, joita seuraamme.
+Dockerin dokumentaatiossa https://docs.docker.com/language/python/build-images/ on suoraviivainen kuvaus vaiheista, joita seuraamme seuraavaksi.
 
 ## 1. Flaskin käyttöönotto ja app.py
 
@@ -154,16 +156,38 @@ Jos kontteja jää "roikkumaan" taustalle, niitä voidaan poistaa komennolla:
 
 ## 3. Imagen julkaisu konttirekisterissä
 
-Imagen tagin lisääminen: https://docs.docker.com/engine/reference/commandline/tag/
+Ennen julkaisua imagelle on tarpeen lisätä tagi, joka vastaa sen sijaintia konttirekisterissä: https://docs.docker.com/engine/reference/commandline/tag/
 
-    # kirjautuminen konttirekisteriin
-    docker login -u unused docker-registry.rahti.csc.fi --password-stdin
+Kurssin OpenShift-pilven konttirekisteri sijaitsee osoitteessa `default-route-openshift-image-registry.apps.hhocp.otaverkko.fi`. Oppituntiin mennessä kyseistä rekisteriä ei ole kuitenkaan vielä saatu otettua onnistuneesti käyttöön.
 
-    # tagin lisääminen
-    docker tag flask-events docker-registry.rahti.csc.fi/app-deployment-demo/flask-events:latest
+Seuraava esimerkki näyttää miten `login`, `tag` ja `push` toimivat `docker-registry.rahti.csc.fi`-rekisterin kanssa:
 
-    # julkaisu
-    docker push docker-registry.rahti.csc.fi/app-deployment-demo/flask-events:latest
+    # 1. Kirjautuminen konttirekisteriin.
+    # Salasanan sijasta käytetään OAuth-tokenia, jonka saat 
+    # osoitteesta https://oauth-openshift.apps.hhocp.otaverkko.fi/oauth/token/request
+    docker login default-route-openshift-image-registry.apps.hhocp.otaverkko.fi
+
+    # 2. Tagin lisääminen. Uudessa tagissa on mukana konttorekisteri, projekti ja imagen nimi
+    docker tag flask-events  docker push default-route-openshift-image-registry.apps.hhocp.otaverkko.fi/PROJEKTI/IMAGE:latest
+
+    # 3. Julkaisu
+    docker push default-route-openshift-image-registry.apps.hhocp.otaverkko.fi/PROJEKTI/IMAGE:latest
+
+**Huom!**
+
+Koska konttirekisteri käyttää itse allekirjoitettua sertifikaattia, Docker ei oletuksena suostu muodostamaan siihen yhteyttä. Tämä on saatu kierrettyä oppitunnin esimerkissä lisäälällä tiedostoon `C:\Users\TUNNUS\.docker\daemon.json` uusi attribuutti nimeltä `insecure-registries`:
+
+```json
+{
+	"insecure-registries": [
+		"default-route-openshift-image-registry.apps.hhocp.otaverkko.fi"
+	]
+}
+```
+
+Asetusten muuttamisen jälkeen Docker tulee käynnistää uudelleen.
+
+Kirjautumisessa salasanan sijasta käytettävän OAuth-tokenin saat pyydettyä osoitteesta https://oauth-openshift.apps.hhocp.otaverkko.fi/oauth/token/request.
 
 
 ## 4. Kontin deployment OpenShiftissä
@@ -211,3 +235,27 @@ Konttien luominen "käsin" ei ole aina, erityisesti pienten esimerkkien kanssa v
 > *"You can use the Red Hat Software Collections images as a foundation for applications that rely on specific runtime environments such as Node.js, Perl, or Python. Special versions of some of these runtime base images are referred to as Source-to-Image (S2I) images. With S2I images, you can insert your code into a base image environment that is ready to run that code."*
 >
 > [Source-to-image. docs.openshift.com](https://docs.openshift.com/container-platform/4.10/openshift_images/using_images/using-s21-images.html)
+
+
+# Tehtävä
+
+Tämä on kurssin viimeinen viikkotehtävä, ja sen saa halutessaan tehdä yksin, parin kanssa tai ryhmässä. Tehtävässä ei ole tarkkaa toiminnallista vaatimusta, joten voitte soveltaa aiheita sen mukaan, oletteko enemmän kiinnostuneita esimerkiksi Dockerista vai Kuberneteksesta. Mikäli teette työn ryhmässä, merkitkään raporttiinne selvästi kaikki tekijät. Mikäli jaoitte työtä eri kirjoittajien kesken, eritelkää kuka teki minkäkin vaiheen.
+
+Tehtävänä on soveltaa tunnilla käsiteltyjä aiheita oman sovelluksen kanssa esimerkiksi julkaisemalla oma tai ryhmän harjoitustyö konttirekisterissä tai OpenShift-alustalla. Julkaistava sovellus voi olla esimerkiksi palvelinohjelmointi-kurssin harjoitustyö, tämän kurssin viikkoharjoitus tai ohjelmistoprojekti II:lla kehitettävä projekti.
+
+Tehtävää tehdessäsi kirjaa itsellesi ylös eri työvaiheet, käyttämäsi komennot sekä hyödyntämäsi nettilähteet. Oletettavaa on, että julkaisu ei tule onnistumaan ensimmäisellä yrityksellä, joten kirjaa eri välivaiheet ja niistä oppimasi asiat. Kirjaa ylös osoitteet, joista julkaisemasi image tai web-palvelu on tarkasteltavissa tehtävän arvioinnin yhteydessä. Lopuksi palauta Teamsiin kirjoittamasi raportti. Raportti voi olla muodoltaan tekstitiedosto, docx tai pdf eikä sen tarvitse noudattaa erityistä raportointiohjetta. Lähdeviitteet vaaditaan, mutta ne ovat vapaamuotoisia, ja kuvankaappausten käyttäminen raportissa voi olla hyvä idea.
+
+Tehtävän arviointikriteerit perustuvat tehtävässä opittuihin asioihin. Raportit, joissa opiskelija selvästi osoittaa oppineensa uusia asioita ja soveltaneensa niitä käytännössä, arvioidaan oletuksena arvosanalla 5. Raportit, joissa on selvästi tehty erilaisia osin satunnaisia kokeiluja, mutta opitut asiat ovat heikosti yksilöitävissä, arvioidaan oletuksena arvosanalla 3. Huomatkaa, että sovelluksen julkaisun ei tarvitse lopulta onnistua, vaan täydet pisteet voi saada myös tilanteessa, jossa yritys on epäonnistunut, mutta siitä on selvästi opittu ja tehdyt vaiheet on raportoitu asianmukaisesti.
+
+Tehtävän ratkaisusi voi olla laajuudeltaan hyvinkin yksinkertainen, eli sen ei tarvitse tavoitella esimerkiksi tunnilla esitettyjen esimerkkien laajuutta. Voit halutessasi jatkaa OpenShiftin parissa työskentelyä kurssin seminaariosuudessa.
+
+## Esimerkkiaihe
+
+Kohtuullisen haastava ja edistynyt tehtävän sisältö voisi olla esimerkiksi seuraava:
+
+1. Luo OpenShiftiin projekti palvelinohjelmointi-kurssin harjoitustyötäsi varten
+2. Lisää projektiin MySQL-tietokantapalvelin OpenShiftin katalogista
+3. Konfiguroi sovelluksesi joko tiedostojen tai ympäristömuuttujien avulla käyttämään OpenShiftiin lisäämääsi MySQL-tietokantaa
+4. Lisää sovelluksesi projektiin GitHubista suoraan lähdekoodeista [source-to-image -lähestymistavalla](https://docs.openshift.com/container-platform/4.10/openshift_images/using_images/using-s21-images.html)
+
+Raportoi edistymisesi tehtävässä. Huomaa, että kaikkia vaiheita ei tarvitse saada valmiiksi, kunhan osoitat oppineesi eri työvaiheista.
