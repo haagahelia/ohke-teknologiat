@@ -184,7 +184,7 @@ Seuraava esimerkki näyttää miten `login`, `tag` ja `push` toimivat `docker-re
     # 3. Julkaisu
     docker push default-route-openshift-image-registry.apps.hhocp.otaverkko.fi/PROJEKTI/IMAGE:latest
 
-⚠ **Huom!** Koska konttirekisteri käyttää itse allekirjoitettua sertifikaattia, Docker ei oletuksena suostu muodostamaan siihen yhteyttä. Tämä on saatu kierrettyä oppitunnin esimerkissä lisäälällä tiedostoon `C:\Users\TUNNUS\.docker\daemon.json` uusi attribuutti nimeltä `insecure-registries`:
+⚠ **Huom!** Koska konttirekisteri käyttää itse allekirjoitettua sertifikaattia, Docker ei oletuksena suostu muodostamaan siihen yhteyttä. Tämä on saatu kierrettyä oppitunnin esimerkissä lisäämällä tiedostoon `C:\Users\TUNNUS\.docker\daemon.json` uusi attribuutti nimeltä `insecure-registries`:
 
 ```json
 {
