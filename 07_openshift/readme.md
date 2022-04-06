@@ -178,8 +178,9 @@ Seuraava esimerkki näyttää miten `login`, `tag` ja `push` toimivat `docker-re
     # osoitteesta https://oauth-openshift.apps.hhocp.otaverkko.fi/oauth/token/request
     docker login default-route-openshift-image-registry.apps.hhocp.otaverkko.fi
 
-    # 2. Tagin lisääminen. Uudessa tagissa on mukana konttorekisteri, projekti ja imagen nimi
-    docker tag flask-events
+    # 2. Tagin lisääminen aikaisemmin luodulle imagelle.
+    # Uudessa tagissa on mukana konttorekisterin URL, projekti ja imagen nimi:
+    docker tag flask-events default-route-openshift-image-registry.apps.hhocp.otaverkko.fi/PROJEKTI/IMAGE:latest
 
     # 3. Julkaisu
     docker push default-route-openshift-image-registry.apps.hhocp.otaverkko.fi/PROJEKTI/IMAGE:latest
