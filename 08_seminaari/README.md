@@ -1,12 +1,12 @@
 # Seminaari
 
-Seminaarivaiheessa jokainen opiskelija valitsee kurssin aiheista itseään eniten kiinnostavan ja tekee siihen liittyvän seminaaritehtävän. Seminaaritehtävän voi valita joko opettajien ehdotuksista, tai seminaaritehtävän aihetta voi ehdottaa myös itse. Seminaaritehtävä voi liittyvä läheisesti opiskelijan ohjelmistoprojekti 2-projektiin. 
+Seminaarivaiheessa jokainen opiskelija valitsee kurssin aiheista itseään eniten kiinnostavan ja tekee siihen liittyvän seminaaritehtävän. Seminaaritehtävän voi valita joko opettajien ehdotuksista, tai seminaaritehtävän aihetta voi ehdottaa myös itse. Seminaaritehtävä voi liittyvä läheisesti opiskelijan ohjelmistoprojekti 2-projektiin, ja se on jopa suositeltavaa. 
 
 Saman seminaariaiheen valinneet opiskelijat osallistuvat sen aiheen yhteiseen seminaariin, jossa esitellään, analysoidaan ja kommentoidaan myös muiden opiskelijoiden seminaaritöitä. 
 
-Seminaarit järjestetään peräkkäin siten, että kerrallaan on käynnissä kahden aiheen seminaarit omilla Teams-kanavillaan. Olette lämpimästi tervetulleita osallistumaan myös muiden seminaariaiheiden tilaisuuksiin oman seminaarinne ulkopuolella! Voitte myös tutustua seminaarien tallenteisiin jälkikäteen, mikäli ette päällekkäisyyksien vuoksi pysty osallistumaan kaikkiin teitä kiinnostaviin aiheisiin.
+Olette lämpimästi tervetulleita osallistumaan myös muiden seminaariaiheiden tilaisuuksiin oman seminaarinne ulkopuolella!
 
-Seminaarityön laajuus on noin 20 tuntia työtä.
+Seminaarityön laajuuden on tarkoitus olla noin 20 tuntia työtä.
 
 
 ## Seminaaritehtävän raportointi ja palauttaminen
@@ -29,27 +29,27 @@ Lisäksi seminaariaiheen haastekerroin vaikuttaa arviointiin. Jos teette haastav
 
 * **Seminaarien käynnistys**
 
-    5.11 tai 12.11.2021
+    12.4.2022
 
 * **Seminaariaiheen ilmoittaminen Teams-kanavalle**
 
-    DL 16.11.2021, klo 12
+    DL ti 19.4.2022, klo 12 (keskipäivä)
 
 * **Yksilöllistä seminaarityön ohjausta Teamsissa**
 
     Opettajat tavoitettavissa Teamsissa. Ota yhteyttä ja sovi videotapaaminen!
 
-* **Seminaarin tulosten palauttaminen Teamsiin**
+* **Seminaarin raporttien ja videoiden palauttaminen Teamsiin**
 
-    DL 5.12.2021, klo 23.59
+    DL 3.5.2022, klo 23.59
 
 * **Seminaariesitykset**
 
-    10.12.2021, klo 12-15
+    10.5.2022, klo 12-15
 
 # Seminaariaiheita
 
-Tälle sivulle on koottu esimerkkiaiheita kurssin seminaaritehtävää varten. Voit melko vapaasti jalostaa ideoita vastaamaan omaa vaatimustasoasi ja kiinnostuksen kohteitasi. Lisää oma aiheesi uutena viestinä kyseisen aihealueen Teams-kanavalle.
+Tälle sivulle on koottu **esimerkkiaiheita** kurssin seminaaritehtävää varten. Voit melko vapaasti jalostaa ideoita vastaamaan omaa vaatimustasoasi ja kiinnostuksen kohteitasi. Lisää oma aiheesi uutena viestinä kyseisen aihealueen Teams-kanavalle.
 
 ## Python
 
@@ -74,7 +74,7 @@ Tälle sivulle on koottu esimerkkiaiheita kurssin seminaaritehtävää varten. V
 
     Toteuta esimerkiksi labyrintin tai sanaristikon generoiva algoritmi. Voit käyttää pohjana tunnettua valmista logiikkaa, josta teet oman toteutuksesi. Katso esim: https://en.wikipedia.org/wiki/Maze_generation_algorithm
 
-    Huom! Kokonaista peliä ja sen käyttöliittymää ei tarvitse toteuttaa. Riittää, että algoritmi on jollain tavoin todennettavissa toimivaksi.
+    Huom! Kokonaista peliä ja sen käyttöliittymää ei tarvitse välttämättä toteuttaa. Riittää, että algoritmi on jollain tavoin todennettavissa toimivaksi.
 
 
 ## Ohjelmistoarkkitehtuurit ja patternit
@@ -130,7 +130,21 @@ Tälle sivulle on koottu esimerkkiaiheita kurssin seminaaritehtävää varten. V
     Tutustu NPM-palvelun pakettien julkaisemiseen ja julkaise oma pieni paketti. Julkaistava paketti voi olla esimerkiksi asiakaskirjasto MyHelsinki Open API:n tapahtumien hakemiseksi. Asiakaskirjaston ominaisuuksiin voi kuulua erilaiset rajaukset tai järjestämiset päivämäärien mukaan tai vaikka rajaus tapahtumiin, joiden otsikossa tai kuvauksessa esiintyy tietty teksti.
 
 
+## OpenShift tai vastaava pilvipalvelu
+
+* **Docker, Kubernetes yms:**
+
+    Jatka kurssin OpenShift-kokeiluja rakentamalla monipuolisempi pilviympäristö, joka koostuu esimerkiksi useammista konteista ja continuous integration -ratkaisusta.
+
+
+* **Serverless-funktiot (Azure functions, AWS lambda...):**
+
+    Toteuta jokin itsenäinen ominaisuus Ohjelmistoprojekti II -kurssisi projektin tueksi Azuren pilvifunktiona.
+
+
 ## Koneoppiminen
+
+Koneoppimista ei tällä toteutuksella juuri käsitelty, mutta voit halutessasi perehtyä aiheeseen itsenäisesti seminaariosuudessa.
 
 * **Koneoppimismallin kouluttaminen:**
 
@@ -144,53 +158,4 @@ Tälle sivulle on koottu esimerkkiaiheita kurssin seminaaritehtävää varten. V
 
     Kouluta vahvistusoppimisella (reinforcement learning) jonkin pelin tekoäly. Tässä esimerkiksi on [youtube-playlista](https://www.youtube.com/playlist?list=PLTWFMbPFsvz3CeozHfeuJIXWAJMkPtAdS), jolla koulutetaan tekoäly pelaamaan Segan Sonic the hedgehog -peliä [Open AI:n](https://openai.com/) ja [Neatin](https://neat-python.readthedocs.io/en/latest/neat_overview.html) avulla. 
 
-* **Topics proposed by our partner Accenture:**
-    1. Use Tensorflow to build a character recognition model (perhaps CNN, but not limited to that) with [http://yann.lecun.com/exdb/mnist/](http://yann.lecun.com/exdb/mnist/). Would be awesome if students can test it by inputing their own handwritten digits.
-    1. Use Tensorflow or PL of choice to build single layer perceptron and then multi layer perceptron. Ideally also apply it to solve some practical problem - like character recognition or morse code translation. Another application could be to use it to classify samples from [https://archive.ics.uci.edu/ml/datasets/Iris](https://archive.ics.uci.edu/ml/datasets/Iris) dataset or wine dataset from same resource.
-    1. Write a report about [https://github.com/openai/gpt-3](https://github.com/openai/gpt-3), specifically highlighting pros, cons, and what made the model successful. Probably also add a few words about OpenAI as organisation to better understand where did this algorithm came from.
 
-## AR/XR
-
-* **Topics proposed by our partner Accenture:**
-    1. Toteuta yksinkertainen AR sovellus. Laitteena voi hyödyntää esim. älypuhelinta tai HoloLens laseilla. Sovelluksessa voidaan keskittyä johonkin rajattuun sovelluksen ominaisuuteen, kuten tuotevisualisointiin tai sisätilaseurantaan.
-    1. Toteuta yksinkertainen VR/XR sovellus. Laitteena voi hyödyntää esim. Varjo XR-3 laseja. Sovelluksessa voidaan keskittyä johonkin rajattuun sovelluksen ominaisuuteen, kuten käyttöliittymään, VR-liikkeeseen tai kollaboraatioon.
-
-## Security
-
-* **Topics proposed by our partner Accenture:**
-
-
-    **1. Security Crawler**
-
-    Toteuta/kehitä työkalu tai skripti (esim. Pythonia hyödyntäen), joka hakee API-rajapintaan tai vastaavaa käyttäen avoimista palveluista/julkisista repositoreista (esim. Github) sinne päätyneitä tietoja jotka, ei tulisi olla julkisia (mm. koodiin kovakoodatut salasanat, käyttäjätunnukset, IP osoitteet tai esimerkiksi salausavaimet). Työkalulla/skriptillä voidaan hakea eri kriteereillä, esimerkiksi yrityksen nimellä, avainsanoilla tai vastaavilla, datamassasta havaintoja ja luoda niistä tietoturva-analyytikolle luettava raportti (CSV/PDF/vast.) löydöksistä jatkotutkimusta varten.
-    
-    
-    **2. Epäilyttävä PDF-skripti**
-
-    Joissakin tapauksissa Kyber hyökkäyksen jälkeen pitää tarkistaa, onko hyökkääjä jättänyt haitallisia tiedostoja jälkeensä tai ansoittanut olemassa olevan tiedoston.
-
-    Jos käytettävissä ei ole kaupallisia tuotteita, pitää tarkastus tehdä omilla tai open source scripteillä.
-
-    Luo epäilyttävä PDF tiedosto ja sekä tarvittava scripti, joka löytää epäilyttävän tiedoston joukosta muita PDF tiedostoja.
-
-    Toteuta tai käytä valmiiksi saatavilla työkaluilla seuraavat scriptit:
-
-    1. Scripti joka upottaa PDF tiedostoon javascriptin joka käynnistyy automaattisesti kun PDF tiedosto avataan.
-
-    Javascriptin tulee tehdä aktiivinen toimi, esim. avata "Hello World" pop up.
-
-    2. Luo / käytä scriptiä jolla voi etsiä isosta massasta PDF tiedostoja ne, joissa on epäilyttäviä toiminnallisuuksia kuten javascriptiä tai OpenAction.
-
-    Listaa epäilyttävät PDF tiedostot ja syy, miksi tiedostot ovat epäilyttäviä ja tarvitsevat jatkotutkintaa.
-
-    Dokumentoi scriptisi kyvykkyydet ja toiminta, sekä se, mitä siitä puuttuu tai mitä pitäisi huomioida vielä scriptin nykyisten kyvykkyyksien lisäksi.
-
-## Azure tai vastaava pilvipalvelu
-
-* **Koneoppiminen:**
-
-    Build a machine learning model with some interesting data related to e.g. your software project assignment with the help of Azure machine learning studio. You can e.g. build a recommendation system with the help of k-means clustering. You can deploy your service as a Web API.
-
-* **Azure Functions:**
-
-    Toteuta jokin itsenäinen ominaisuus Ohjelmistoprojekti II -kurssisi projektin tueksi Azuren pilvifunktiona.
