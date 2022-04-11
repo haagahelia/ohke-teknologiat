@@ -189,7 +189,7 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
         </tr>
         <tr>
             <td>11.-17.4.</td>
-            <td><!--a href="08_seminaari"-->Seminaarien käynnistys<!--/a--></td>
+            <td><a href="08_seminaari">Seminaarien käynnistys</a></td>
             <td>
                 Teams-sessio ti 12.4. klo 12
             </td>
