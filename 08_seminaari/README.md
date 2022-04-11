@@ -11,9 +11,9 @@ Seminaarityön laajuuden on tarkoitus olla noin 20 tuntia työtä.
 
 ## Seminaaritehtävän raportointi ja palauttaminen
 
-Raportoi seminaarityösi seminaariesityksiä ja arviointia varten Teams-tehtävään liitettyyn PowerPoint-esityspohjaan tai vaihtoehtoiseen [Google Sheets -pohjaan](https://docs.google.com/presentation/d/1NkrV-k6aivE7U-yjYlGvtp6rONhOV5gmgHfCuD3bXj8/copy). Palauta tehtävä PDF-muodossa, eli tallenna esitys PowerPointissa tai Google Slides'sa PDF:ksi. 
+Raportoi seminaarityösi esitystä ja arviointia varten raportointiohjeen mukaisesti. Päivitetty raportointiohje julkaistaan seminaarien käynnistysviikolla.
 
-Esityksen lisäksi nauhoita noin 5 minuuttia kestävä video, jossa esittelet työsi teknistä toteutusta esityspohjassa olevan ohjeen mukaisesti. Videolla ei ole tarpeen käsitellä tai näyttää PowerPoint-esitystä, voitte olettaa katsojan jo tuntevan sen sisällön. Videon tekemiseksi suosittelemme [Microsoft Stream](https://web.microsoftstream.com/) -palvelua. Katso myös [ohje tallenteen tekemiseksi MS Streamissa](https://docs.microsoft.com/fi-fi/stream/portal-create-screen-recording).
+Raportin lisäksi nauhoita noin 5 minuuttia kestävä video, jossa esittelet työsi teknistä toteutusta raportointiohjeen mukaisesti. Videolla ei ole tarpeen käsitellä tai näyttää raporttia, vaan voitte olettaa katsojan jo tuntevan sen sisällön. Videon tekemiseksi suosittelemme [Microsoft Stream](https://web.microsoftstream.com/) -palvelua. Katso myös [ohje tallenteen tekemiseksi MS Streamissa](https://docs.microsoft.com/fi-fi/stream/portal-create-screen-recording).
 
 Seminaarityösi arvioidaan tämän palautuksen perusteella. Lisäksi osa opiskelijoista valitaan esittelemään töitään muille kurssin päätteeksi järjestettävässä seminaarissa.
 
