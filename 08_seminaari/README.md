@@ -102,9 +102,9 @@ Tälle sivulle on koottu **esimerkkiaiheita** kurssin seminaaritehtävää varte
 
 * **Järjestelmätestaus:**
 
-    Tutustu [Playwright](https://playwright.dev/):iin, [Robot Framework](https://robotframework.org/):iin, Cucumber:iin tai Selenium Framework:iin ja toteuta valitsemasi työkalun avulla yksinkertainen järjestelmätesti jollekin omalle tai julkiselle palvelulle.
+    Tutustu [Playwright](https://playwright.dev/):iin, [Robot Framework](https://robotframework.org/):iin, [Cypress](https://www.cypress.io/):iin, [Cucumber](https://cucumber.io/):iin tai [Selenium Framework](https://www.selenium.dev/):iin ja toteuta valitsemasi työkalun avulla yksinkertainen järjestelmätesti jollekin omalle tai julkiselle palvelulle.
 
-    Mahdollinen lähde: https://www.theseus.fi/handle/10024/341637
+    Mahdollinen lähde: "Testiautomaation työkalut: Robot Framework vs. Selenium-cucumber", https://www.theseus.fi/handle/10024/341637
 
 
 ## Infra ja automaatiotyökalut
