@@ -2,9 +2,9 @@
 
 Seminaarivaiheessa jokainen opiskelija valitsee kurssin aiheista itseään eniten kiinnostavan ja tekee siihen liittyvän seminaaritehtävän. Seminaaritehtävän voi valita joko opettajien ehdotuksista, tai seminaaritehtävän aihetta voi ehdottaa myös itse. Seminaaritehtävä voi liittyvä läheisesti opiskelijan ohjelmistoprojekti 2-projektiin, ja se on jopa suositeltavaa. 
 
-Saman seminaariaiheen valinneet opiskelijat osallistuvat sen aiheen yhteiseen seminaariin, jossa esitellään, analysoidaan ja kommentoidaan myös muiden opiskelijoiden seminaaritöitä. 
+Saman seminaariaiheen valinneet opiskelijat osallistuvat sen aiheen yhteiseen seminaariin, jossa esitellään, analysoidaan ja kommentoidaan myös muiden opiskelijoiden seminaaritöitä. Olette lämpimästi tervetulleita osallistumaan myös muiden seminaariaiheiden tilaisuuksiin oman seminaarinne ulkopuolella!
 
-Olette lämpimästi tervetulleita osallistumaan myös muiden seminaariaiheiden tilaisuuksiin oman seminaarinne ulkopuolella!
+Emme voi rajallisen aikataulun vuoksi käsitellä seminaareissa kaikkia töitä erikseen, joten pyrimme valitsemaan monipuolisen ja kiinnostavan kokoelman esitettävistä töistä.
 
 Seminaarityön laajuuden on tarkoitus olla noin 20 tuntia työtä.
 
