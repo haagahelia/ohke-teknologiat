@@ -2,9 +2,9 @@
 
 Seminaarivaiheessa jokainen opiskelija valitsee kurssin aiheista itseään eniten kiinnostavan ja tekee siihen liittyvän seminaaritehtävän. Seminaaritehtävän voi valita joko opettajien ehdotuksista, tai seminaaritehtävän aihetta voi ehdottaa myös itse. Seminaaritehtävä voi liittyvä läheisesti opiskelijan ohjelmistoprojekti 2-projektiin, ja se on jopa suositeltavaa. 
 
-Saman seminaariaiheen valinneet opiskelijat osallistuvat sen aiheen yhteiseen seminaariin, jossa esitellään, analysoidaan ja kommentoidaan myös muiden opiskelijoiden seminaaritöitä. 
+Saman seminaariaiheen valinneet opiskelijat osallistuvat sen aiheen yhteiseen seminaariin, jossa esitellään, analysoidaan ja kommentoidaan myös muiden opiskelijoiden seminaaritöitä. Olette lämpimästi tervetulleita osallistumaan myös muiden seminaariaiheiden tilaisuuksiin oman seminaarinne ulkopuolella!
 
-Olette lämpimästi tervetulleita osallistumaan myös muiden seminaariaiheiden tilaisuuksiin oman seminaarinne ulkopuolella!
+Emme voi rajallisen aikataulun vuoksi käsitellä seminaareissa kaikkia töitä erikseen, joten pyrimme valitsemaan monipuolisen ja kiinnostavan kokoelman esitettävistä töistä.
 
 Seminaarityön laajuuden on tarkoitus olla noin 20 tuntia työtä.
 
@@ -59,8 +59,11 @@ Tälle sivulle on koottu **esimerkkiaiheita** kurssin seminaaritehtävää varte
 
 * **Mikrokontrollerin ohjelmointi MicroPythonilla:**
 
-    Kurssilaisille tarjotaan myös mahdollisuus perehtyä ESP32-mikrokontrollerien ohjelmointiin [MicroPython](https://micropython.org/)-kielellä. Mahdollisia projekteja voivat olla esimerkiksi sääasema, peruutustutka, Telegram-bottina toteutettu  liiketunnistin tai nopeustesti-peli.
+    Kurssilaisille tarjotaan myös mahdollisuus perehtyä ESP32-mikrokontrollerien ohjelmointiin [MicroPython](https://micropython.org/)-kielellä. Mahdollisia projekteja voivat olla esimerkiksi sääasema, peruutustutka, Telegram-bottina toteutettu liiketunnistin tai nopeustesti-peli. ESP32-mikrokontrollereita ja erilaisia sensoreita ja toimilaitteita on mahdollisesti lainattavissa Haaga-Helian 3D-labrasta.
 
+* **Data-analytiikkaa tai pelejä Pythonilla**
+
+    Pythonille on saatavilla erilaisia kirjastoja mm. data-analytiikkaan ja peleihin liittyen. Voit ehdottaa  itseäsi kiinnostavaa aihetta.
 
 ## Tietorakenteet ja algoritmit
 
@@ -99,9 +102,9 @@ Tälle sivulle on koottu **esimerkkiaiheita** kurssin seminaaritehtävää varte
 
 * **Järjestelmätestaus:**
 
-    Tutustu [Robot Framework](https://robotframework.org/):iin, Cucumber:iin tai Selenium Framework:iin ja toteuta valitsemasi työkalun avulla yksinkertainen järjestelmätesti jollekin omalle tai julkiselle palvelulle.
+    Tutustu [Playwright](https://playwright.dev/):iin, [Robot Framework](https://robotframework.org/):iin, [Cypress](https://www.cypress.io/):iin, [Cucumber](https://cucumber.io/):iin tai [Selenium Framework](https://www.selenium.dev/):iin ja toteuta valitsemasi työkalun avulla yksinkertainen järjestelmätesti jollekin omalle tai julkiselle palvelulle.
 
-    Mahdollinen lähde: https://www.theseus.fi/handle/10024/341637
+    Mahdollinen lähde: "Testiautomaation työkalut: Robot Framework vs. Selenium-cucumber", https://www.theseus.fi/handle/10024/341637
 
 
 ## Infra ja automaatiotyökalut
@@ -114,6 +117,9 @@ Tälle sivulle on koottu **esimerkkiaiheita** kurssin seminaaritehtävää varte
 
     Rakenna Dockerin ja Docker composen avulla ohjelmistoprojekti 2 -projektistanne konttipohjainen sovellus, joka voidaan deployata Azureen tai AWS:ään.
 
+* **Kubernetes ja OpenShift:**
+
+    Jatka työskentelyä kurssin yksityisessä pilvessä ja perehdy syvemmin Kubernetekseen ja OpenShiftiin. Rakenna sinne useammasta kontista koostuva ratkaisu hyödyntäen oppimiasi hyviä käytäntöjä.
 
 ## ES6, JavaScript, node (+MongoDB)
 
