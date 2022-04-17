@@ -14,7 +14,7 @@ Seminaarityön laajuuden on tarkoitus olla noin 20 tuntia työtä.
 Raportoi seminaarityösi esitystä ja arviointia varten raportointiohjeiden mukaisesti. Raportointiohjeet ja -pohjat alla. Valitse vain yksi muoto, Markdown, Word tai Powerpoint:
 
 * [Ohje & dokupohja wordiin](SeminaarityonRapotointiohjeWord.docx), 
-* [Powerpoint-esityksessä muutama ja kait siitä saisi pohjankin](Ohjelmistokehityksen%20teknologioita%20seminaariraportin%20pohja%201.pptx), 
+* [Powerpoint-esityksessä muutama vinkki sisällöksi ja kait siitä saisi pohjankin](Ohjelmistokehityksen%20teknologioita%20seminaariraportin%20pohja%201.pptx), 
 * [Markdown-pohja, jota suosittelemme](markdown_file1.md). Tekstimuotoisena se pysyy Git-versionhallinnassa kunnossa, jopa usean kehittäjän sitä muokatessa. 
 
 Raportin lisäksi nauhoita noin 5 minuuttia kestävä video, jossa esittelet työsi teknistä toteutusta raportointiohjeen mukaisesti. Videolla ei ole tarpeen käsitellä tai näyttää raporttia, vaan voitte olettaa katsojan jo tuntevan sen sisällön. Videon tekemiseksi suosittelemme [Microsoft Stream](https://web.microsoftstream.com/) -palvelua. Katso myös [ohje tallenteen tekemiseksi MS Streamissa](https://docs.microsoft.com/fi-fi/stream/portal-create-screen-recording).
@@ -24,9 +24,9 @@ Seminaarityösi arvioidaan tämän palautuksen perusteella. Lisäksi osa opiskel
 
 ## Arviointi
 
-Seminaaritöitä arvioidessa katsomme ennen kaikkea sitä, miten hyvin seminaarityössänne on syvennytty kyseiseen seminaariaiheeseen ja löydetty kiinnostavia näkökulmia siihen seminaariaiheeseen liittyen (esim siis tietorakenteiden näkökulmasta). Eli miten hyvin olette osanneet soveltaa nyt kurssin "teoriaosuuksissa" ja harjoituksissa oppimianne asioita omissaa toteutuksissanne.
+Seminaaritöitä arvioidessa katsomme ennen kaikkea sitä, miten hyvin seminaarityössänne on syvennytty kyseiseen seminaariaiheeseen ja löydetty kiinnostavia näkökulmia siihen seminaariaiheeseen liittyen (esim siis tietorakenteiden näkökulmasta). Eli miten hyvin olette osanneet soveltaa nyt kurssin "teoriaosuuksissa" ja harjoituksissa oppimianne asioita omissa toteutuksissanne.
 
-Lisäksi seminaariaiheen haastekerroin vaikuttaa arviointiin. Jos teette haastavuudeltaan suunnilleen samantasoisia asioita kun kurssin perustehtävät ovat olleet, niin se vastaa tavoitearvosanaltaa 3:a. Jos osaatte syventää asiaa jo hieman pidemmälle, puhutaan arvosanoista 4-5.
+Lisäksi seminaariaiheen haastekerroin vaikuttaa arviointiin. Jos teette haastavuudeltaan suunnilleen samantasoisia asioita kun kurssin perustehtävät ovat olleet, niin se vastaa tavoitearvosanaltaan 3:ta. Jos osaatte syventää asiaa jo hieman pidemmälle, puhutaan arvosanoista 4-5.
 
 
 ## Aikataulu
@@ -119,7 +119,7 @@ Tälle sivulle on koottu **esimerkkiaiheita** kurssin seminaaritehtävää varte
 
 * **Docker ja Docker Compose:**
 
-    Rakenna Dockerin ja Docker composen avulla ohjelmistoprojekti 2 -projektistanne konttipohjainen sovellus, joka voidaan deployata Azureen tai AWS:ään.
+    Rakenna Dockerin ja Docker composen avulla ohjelmistoprojekti 2 -projektistanne konttipohjainen sovellus, joka voidaan toimittaa/julkaista ('deploy') Azureen tai AWS:ään.
 
 * **Kubernetes ja OpenShift:**
 
@@ -158,11 +158,11 @@ Koneoppimista ei tällä toteutuksella juuri käsitelty, mutta voit halutessasi 
 
 * **Koneoppimismallin kouluttaminen:**
 
-    Kouluta koneoppimismalli jostain datasta ja laadi sillä ennusteita (esim. keraksella kuvien tunnistamista). Voi liittyä ohjelmistoprojekti 2:seen mieluusti.
+    Kouluta koneoppimismalli jostain datasta ja laadi sillä ennusteita (esimerkiksi Keras-kirjastolla kuvien tunnistamista). Voi liittyä ohjelmistoprojekti 2:seen mieluusti.
     
 * **Koneoppimistutkielma:**
 
-    Laadi tutkielma ja raportti siitä mitä koneoppiminen (ja esim neuroverkot) ovat ja mihin niitä voi hyödyntää. Voit syventyä myös esimerkiksi luonnollisen kielen tulkintaan (NLP) ja sanavektoreihin.
+    Laadi tutkielma ja raportti siitä mitä koneoppiminen (ja esimerkiksi neuroverkot) ovat ja mihin niitä voi hyödyntää. Voit syventyä myös esimerkiksi luonnollisen kielen tulkintaan (NLP) ja sanavektoreihin.
 
 * **Vahvistusoppiminen:**
 
