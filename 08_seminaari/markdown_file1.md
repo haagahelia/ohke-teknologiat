@@ -59,13 +59,14 @@ That quote was from a nice guy. [@Nice Guy]. This syntax doesn't work either.
 
 <hr />
 
-Look into source code for how to add images linked from internet 
+Look into the *Markdown* source code for how to add images linked from internet 
 
 ![Special Result Day 2022](https://pbs.twimg.com/media/FPxeW6CXoAs2GiI?format=png&name=small)
+Well, failed to find Markdown way to add this as tooltip for the image: "Special Result Day 2022"
 
 ...or taken from local images folder 
 
-![Nato nukes are at Russia's border?](images/WhereAreNATONukesjpg.jpg)
+![Are Nato nukes at Russia's border like Kremlin has always claimed?](images/WhereAreNATONukesjpg.jpg)
 
 Note: You can invoke the list of the other files in VS Code when you type ctrl+space or type in dot/"the full stop" character  .
 
