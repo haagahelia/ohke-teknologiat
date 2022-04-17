@@ -24,7 +24,7 @@ Seminaarityösi arvioidaan tämän palautuksen perusteella. Lisäksi osa opiskel
 
 ## Arviointi
 
-Seminaaritöitä arvioidessa katsomme ennen kaikkea sitä, miten hyvin seminaarityössänne on syvennytty kyseiseen seminaariaiheeseen ja löydetty kiinnostavia näkökulmia siihen seminaariaiheeseen liittyen (esim siis tietorakenteiden näkökulmasta). Eli miten hyvin olette osanneet soveltaa nyt kurssin "teoriaosuuksissa" ja harjoituksissa oppimianne asioita omissa toteutuksissanne.
+Seminaaritöitä arvioidessa katsomme ennen kaikkea sitä, miten hyvin seminaarityössänne on syvennytty kyseiseen seminaariaiheeseen ja löydetty kiinnostavia näkökulmia siihen seminaariaiheeseen liittyen (esim. siis tietorakenteiden näkökulmasta). Eli miten hyvin olette osanneet soveltaa nyt kurssin "teoriaosuuksissa" ja harjoituksissa oppimianne asioita omissa toteutuksissanne.
 
 Lisäksi seminaariaiheen haastekerroin vaikuttaa arviointiin. Jos teette haastavuudeltaan suunnilleen samantasoisia asioita kun kurssin perustehtävät ovat olleet, niin se vastaa tavoitearvosanaltaan 3:ta. Jos osaatte syventää asiaa jo hieman pidemmälle, puhutaan arvosanoista 4-5.
 
@@ -86,7 +86,7 @@ Tälle sivulle on koottu **esimerkkiaiheita** kurssin seminaaritehtävää varte
 
 ## Ohjelmistoarkkitehtuurit ja patternit
 
-* **Ohjelmistoprojekti 2 refaktorointi:**
+* **Ohjelmistoprojekti 2 -refaktorointi:**
 
     Refaktoroi ohjelmistoprojekti 2 -projektinne käyttämään mielestäsi optimaalista arkkitehtuuriratkaisua joiltain osin. Kuvaa tämä arkkitehtuuri myös kaaviona.
 
@@ -96,7 +96,7 @@ Tälle sivulle on koottu **esimerkkiaiheita** kurssin seminaaritehtävää varte
 
 * **Mikropalvelu:**
 
-    Mikropalveluihin perustuvan pienen palvelun rakentaminen (esim autentikointipalvelu pyörii omana palvelunaan).
+    Mikropalveluihin perustuvan pienen palvelun rakentaminen (esim. autentikointipalvelu pyörii omana palvelunaan).
 
 ## Testaus
 
@@ -115,7 +115,7 @@ Tälle sivulle on koottu **esimerkkiaiheita** kurssin seminaaritehtävää varte
 
 * **Continuous Integration / Continuous Delivery:**
 
-    Rakenna CI/CD monitorointi ja tuotantoputki ohjelmistoprojekti 2 -projektillenne.
+    Rakenna CI/CD -monitorointi ja tuotantoputki ohjelmistoprojekti 2 -projektillenne.
 
 * **Docker ja Docker Compose:**
 
