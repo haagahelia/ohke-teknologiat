@@ -59,6 +59,16 @@ That quote was from a nice guy. [@Nice Guy]. This syntax doesn't work either.
 
 <hr />
 
+Look into source code for how to add images linked from internet 
+
+![Special Result Day 2022](https://pbs.twimg.com/media/FPxeW6CXoAs2GiI?format=png&name=small)
+
+...or taken from local images folder 
+
+![Nato nukes are at Russia's border?](images/WhereAreNATONukesjpg.jpg)
+
+Note: You can invoke the list of the other files in VS Code when you type ctrl+space or type in dot/"the full stop" character  .
+
 Three ways to write the Horizontal rule:
 <hr />
 
@@ -81,7 +91,7 @@ just keep the part starting with the #
 
 ### Link to second file in same folder
 [Link to the second file](markdown_file2.md)
-Note: You can invoke the list of the other files in VS Code when you type in dot/full stop character  .
+
 
 ## One "official" source for markdown syntax
 
