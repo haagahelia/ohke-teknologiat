@@ -1,6 +1,8 @@
 # DevOps-linkkejä opiskelijoilta ilman suurta tasontarkastusta tai järjestelemistä.
 ### Hyviä linkkejä! Kiitos!
 <hr />
+[Linkki takaisin Infra- ja Automaatio -sivulle](README.md)
+<hr />
 
 * https://www.simplilearn.com/tutorials/devops-tutorial/devops-tools
 * https://www.contino.io/insights/devops-engineer-guide

@@ -443,6 +443,9 @@ Pilvipalvelujen ansiosta kehittäjän työ on monessa kohtaa tehostunut ja kehit
 
 [IaaS, PaaS ja SaaS selitettynä erään monista niitä myyvi firman selittämänä] (https://www.stackscale.com/blog/cloud-service-models/#Graphic_comparison_of_on-premises_IaaS_PaaS_and_SaaS_models) [Esimerkkejä IaaS, PaaS, SaaS] (https://www.stackscale.com/blog/cloud-service-models/) Huomaa, että esimerkiksi Azuresta löytyy eri tasojen palveluita, lähinnä IaaS ja PaaS, sen lisäksi moni yritys hostaa siellä SaaS:ia asiakkaille.
 
+### Muutamia opiskelijoiden keräämiä DevOps-tietolähdelinkkejä
+[Linkki linkkisivulle](DevOps-linkkeja_opiskelijoilta.md)
+
 ## Tehtävät
 
 ### Tehtävä 3.1 (100% kierroksen arvosanasta)
