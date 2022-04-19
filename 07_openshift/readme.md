@@ -164,6 +164,24 @@ Jos kontteja jää "roikkumaan" taustalle, niitä voidaan poistaa komennolla:
 
     docker container rm KONTTI
 
+### Tiedostojen jättäminen imagen ulkopuolelle (dockerignore)
+
+Yllä esitetyssä esimerkissä `COPY . ./` kopioi **kaikki** nykyisen hakemiston tiedostot luotavalle imagelle. Tämä voi olla monessa tapauksessa erittäin epätoivottavaa, koska työhakemisto saattaa sisältää esimerkiksi `.env`-tiedostoja, joissa esiintyy salaisuuksia, tai `node_modules`- tai `target`-hakemistoja, jotka on tarkoitus luoda kontin luonnin yhteydessä osana buildia.
+
+Tiedostoja voidaan jättää imagen ulkopuolelle `.dockerignore`-tiedoston avulla, joka toimii monella tavoin samoin kuin `.gitignore`. Voit lukea tiedostosta lisää Dockerin dokumentaatiosta: https://docs.docker.com/engine/reference/builder/#dockerignore-file.
+
+Tiedosto voi kielestä ja käytetyistä teknologioista riippuen sisältää esim. seuraavia rivejä:
+
+```
+.git
+.vscode
+.gitignore
+.env
+node_modules
+target
+```
+
+`.dockerignore`-tiedostoa luodessasi voi olla hyvä katsoa, mitä projektin `.gitignore`-tiedostossa on jo listattuna.
 
 ## 3. Imagen julkaisu konttirekisterissä
 
