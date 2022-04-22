@@ -1,5 +1,5 @@
 Note: These examples were written with VS Code that has the "Markdown PDF" extension installed. It also
-can be used to preview the markdown output. Right click on the .md file tab and select "Open Preview".
+can be used to preview the markdown output. Right click on the .md file tab and select "Open Preview". Test your Markdown markup also in GitHub.
 
 # Level 1 (=chapter) heading
 
