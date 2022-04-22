@@ -11,7 +11,7 @@ Seminaarityön laajuuden on tarkoitus olla noin 20 tuntia työtä.
 
 ## Seminaaritehtävän raportointi ja palauttaminen
 
-Raportoi seminaarityösi esitystä ja arviointia varten raportointiohjeiden mukaisesti. Raportointiohjeet ja -pohjat alla. Valitse vain yksi muoto, Markdown, Word tai Powerpoint:
+Raportoi seminaarityösi esitystä ja arviointia varten raportointiohjeiden mukaisesti. Raportointiohjeet ja -pohjat alla. Valitse vain yksi muoto, Markdown, Word (=>tallenna PDF:ksi ennen julkaisua) tai Powerpoint (=> PDF):
 
 * [Ohje & dokupohja wordiin](SeminaarityonRapotointiohjeWord.docx), 
 * [Powerpoint-esityksessä muutama vinkki sisällöksi ja kait siitä saisi pohjankin](Ohjelmistokehityksen%20teknologioita%20seminaariraportin%20pohja%201.pptx), 

@@ -91,4 +91,4 @@ just keep the part starting with the #
 
 [CommonMark.org Markdown tutorial in 10 minutes](https://commonmark.org/help/tutorial/)
 
-Though, these are pieces [Markdown syntax did not work](markdown_not_supported_syntax.md) in VS Code markdown preview nor in GitHub version of the Markdown.
+Though, these are pieces [Markdown syntax that did not work](markdown_not_supported_syntax.md) in VS Code markdown preview nor in GitHub version of the Markdown.
