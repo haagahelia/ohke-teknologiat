@@ -17,7 +17,7 @@ Normal text. **Strong text inside double asterisks/stars**
 * Carrot
 * Onion
 
-## Ordered list with just giving all of them: 1. 
+## Ordered list with just by giving all options the ordinal 1.  Easily to shuffle later!
 
 1. ready
 1. steady
@@ -46,29 +46,20 @@ if(true) {
 
 <hr />
 
-% Not all markdown versions support all markup syntax you can find. E.g. this % mark does nothing for me in VS Code that has the
-Markdown PDF installed. 
-
-Also this footnote thing is not working here
-Let's do some footnotes[^note]
-Let's do second footnote[^note]
-
 > Another nice quote
-
-That quote was from a nice guy. [@Nice Guy]. This syntax doesn't work either.
 
 <hr />
 
 Look into the *Markdown* source code for how to add images linked from internet 
 
-![Special Result Day 2022](https://pbs.twimg.com/media/FPxeW6CXoAs2GiI?format=png&name=small)
-Well, failed to find Markdown way to add this as tooltip for the image: "Special Result Day 2022"
+![Alternative text for e.g. people with impaired vision](https://www.kiwi.fi/download/attachments/200048777/Ohjelmistoarkkitehtuuri.png?version=1&modificationDate=1607524001948&api=v2)
 
-...or taken from local images folder 
 
-![Are Nato nukes at Russia's border like Kremlin has always claimed?](images/WhereAreNATONukesjpg.jpg)
+...or taken from local 'images' folder 
 
-Note: You can invoke the list of the other files in VS Code when you type ctrl+space or type in dot/"the full stop" character  .
+![Wikipedia's sample picture of server architecture](images/1200px-Wikimedia_Server_Architecture_(simplified).svg.png)
+
+Note: You can invoke the list of the other files in VS Code when you type ctrl+space or type in dot/"the full stop" charsacter  .
 
 Three ways to write the Horizontal rule:
 <hr />
@@ -100,3 +91,4 @@ just keep the part starting with the #
 
 [CommonMark.org Markdown tutorial in 10 minutes](https://commonmark.org/help/tutorial/)
 
+Though, these are pieces [Markdown syntax did not work](markdown_not_supported_syntax.md) in VS Code markdown preview nor in GitHub version of the Markdown.
