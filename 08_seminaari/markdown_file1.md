@@ -46,10 +46,6 @@ if(true) {
 
 <hr />
 
-> Another nice quote
-
-<hr />
-
 Look into the *Markdown* source code for how to add images linked from internet 
 
 ![Alternative text for e.g. people with impaired vision](https://www.kiwi.fi/download/attachments/200048777/Ohjelmistoarkkitehtuuri.png?version=1&modificationDate=1607524001948&api=v2)
