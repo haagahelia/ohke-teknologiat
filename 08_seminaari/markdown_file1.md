@@ -46,12 +46,12 @@ if(true) {
 
 <hr />
 
-Look into the *Markdown* source code for how to add images linked from internet 
+Look into the *Markdown* source code for how to add images linked from internet, this is the general architecture of the Finnish Finna service: 
 
 ![Alternative text for e.g. people with impaired vision](https://www.kiwi.fi/download/attachments/200048777/Ohjelmistoarkkitehtuuri.png?version=1&modificationDate=1607524001948&api=v2)
 
 
-...or taken from local 'images' folder 
+...or taken from local 'images' folder, like this complicated Wikipedia image of server architectures: 
 
 ![Wikipedia's sample picture of server architecture](images/1200px-Wikimedia_Server_Architecture_(simplified).svg.png)
 
