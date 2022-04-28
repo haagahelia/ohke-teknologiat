@@ -4,7 +4,7 @@ Seminaarivaiheessa jokainen opiskelija valitsee kurssin aiheista itseään enite
 
 Saman seminaariaiheen valinneet opiskelijat osallistuvat sen aiheen yhteiseen seminaariin, jossa esitellään, analysoidaan ja kommentoidaan myös muiden opiskelijoiden seminaaritöitä. Olette lämpimästi tervetulleita osallistumaan myös muiden seminaariaiheiden tilaisuuksiin oman seminaarinne ulkopuolella!
 
-Emme voi rajallisen aikataulun vuoksi käsitellä seminaareissa kaikkia töitä erikseen, joten pyrimme valitsemaan monipuolisen ja kiinnostavan kokoelman esitettävistä töistä.
+Esiteltävät työt valitaan siten, että kokonaisuudesta saadaan monipuolinen ja tasapainoinen, joten työsi mahdollinen valitsematta jääminen ei ole merkki työn laadusta.
 
 Seminaarityön laajuuden on tarkoitus olla noin 20 tuntia työtä.
 
