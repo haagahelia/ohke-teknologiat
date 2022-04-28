@@ -26,7 +26,14 @@ Seminaarityösi arvioidaan tämän palautuksen perusteella. Lisäksi osa opiskel
 
 Seminaaritöitä arvioidessa katsomme ennen kaikkea sitä, miten hyvin seminaarityössänne on syvennytty kyseiseen seminaariaiheeseen ja löydetty kiinnostavia näkökulmia siihen seminaariaiheeseen liittyen (esim. siis tietorakenteiden näkökulmasta). Eli miten hyvin olette osanneet soveltaa nyt kurssin "teoriaosuuksissa" ja harjoituksissa oppimianne asioita omissa toteutuksissanne.
 
-Lisäksi seminaariaiheen haastekerroin vaikuttaa arviointiin. Jos teette haastavuudeltaan suunnilleen samantasoisia asioita kun kurssin perustehtävät ovat olleet, niin se vastaa tavoitearvosanaltaan 3:ta. Jos osaatte syventää asiaa jo hieman pidemmälle, puhutaan arvosanoista 4-5.
+Lisäksi seminaariaiheen haastekerroin vaikuttaa arviointiin. Jos seminaarityö on haastavuudeltaan suunnilleen samantasoinen kuin kurssin viikoittaiset oppitunnit ja tehtävät, työ vastaa tavoitearvosanaltaan 3:a. Jos työssä syvennytään pidemmälle, puhutaan arvosanoista 4-5.
+
+
+### Tutoriaaleihin perustuvat työt
+
+Seminaaritöissä on ajoittain seurattu video- tai tekstimuotoisia tutoriaaleja. Tutoriaalin seuraaminen on hyväksyttävää ja hyvä tapa oppia, ja niiden käyttö on sallittua, etenkin kun tutoriaali syventää kurssilla käsiteltyjä aiheita mielekkäällä tavalla.
+
+Tällaisissa tapauksissa seminaarin raportissa ja videossa ei kannata keskittyä itse tutoriaain lopputuloksen esittelyyn, vaan nimen omaan oppimiesi asioiden esittelyyn. Pyri siis yksilöimään ja esittelemään asioita, joita olet oppinut sekä pohdi mitä olisit voinut tehdä työssä toisin ja miten osaat jatkossa soveltaa oppimaasi mahdollisissa seuraavissa projekteissa.
 
 
 ## Aikataulu
