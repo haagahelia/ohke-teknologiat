@@ -57,7 +57,7 @@ Look into the *Markdown* source code for how to add images linked from internet,
 
 ![Wikipedia's sample picture of server architecture](images/1200px-Wikimedia_Server_Architecture_(simplified).svg.png)
 
-Note: You can invoke the list of the other files in VS Code when you type ctrl+space or type in dot/"the full stop" charsacter  .
+Note: You can invoke the list of the other files in VS Code when you type ctrl+space or type in the dot/"the full stop" character  .
 
 Three ways to write the Horizontal rule:
 <hr />
