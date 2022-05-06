@@ -1,29 +1,31 @@
-Note: These examples were written with VS Code that has the "Markdown PDF" extension installed. It also
+Note 1: These examples were written with VS Code that has the "Markdown PDF" extension installed. It also
 can be used to preview the markdown output. Right click on the .md file tab and select "Open Preview". Test your Markdown markup also in GitHub.
 
-# Level 1 (=chapter) heading
+Note 2: Sometimes you need more whitespace (a space, an empty line between blocks) to get some markdown markup to work
+
+# Level 1 (=chapter) heading, with one hash
 
 Normal text. *Italic text inside asterisk/star* 
 
-## Level 2 (=subchapter) title
+## Level 2 (=subchapter) title, with two hashes (and so on...)
 
 Normal text. **Strong text inside double asterisks/stars**
 
-[Text to show on the link](https://web.microsoftstream.com/) 
+[Text to show on the link](https://www.w3.org/) 
 
-## Bulleted items - unordered list with one start **and a space**
+## Bulleted items - unordered list with one star **and a space**
 
 * Potato
 * Carrot
 * Onion
 
-## Ordered list with just by giving all options the ordinal 1.  Easily to shuffle later!
+## Ordered list with just by giving all options the ordinal 1.  Easy to shuffle later!
 
 1. ready
 1. steady
 1. go!
 
-Inline code examples can be written inside backticks:` (life) => 42`
+Inline code examples can be written inside backticks: `(life) => 42`
 
 ```
 // code blocks with three backticks
