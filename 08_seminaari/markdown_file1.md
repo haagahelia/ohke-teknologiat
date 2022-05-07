@@ -70,9 +70,9 @@ This is how you can create the ...
 
 **Table of Contents**
 
-[Level 1 (=chapter) heading](#level-1-chapter-heading)
+[Level 1 (=chapter) heading](#level-1-chapter-heading-with-one-hash)
 
-[Level 2 (=subchapter) title](#level-2-subchapter-title)
+[Level 2 (=subchapter) title](#level-2-subchapter-title-with-two-hashes-and-so-on)
 
 [Bulleted items - unordered list with one start and a space](#bulleted-items---unordered-list-with-one-start-and-a-space)
 
