@@ -70,9 +70,9 @@ This is how you can create the ...
 
 **Table of Contents**
 
-[Level 1 (=chapter) heading](#level-1-chapter-heading-with-one-hash)
-[Level 2 (=subchapter) title](#level-2-subchapter-title-with-two-hashes-and-so-on)
-[Bulleted items - unordered list with one start and a space](#bulleted-items---unordered-list-with-one-star-and-a-space)
+[Level 1 (=chapter) heading](#level-1-chapter-heading-with-one-hash) <br />
+[Level 2 (=subchapter) title](#level-2-subchapter-title-with-two-hashes-and-so-on) <br />
+[Bulleted items - unordered list with one start and a space](#bulleted-items---unordered-list-with-one-star-and-a-space) <br />
 
 Open the markdown file in GitHub.com and use it to copy the link that you need in creation of the table of contents,
 just keep the part starting with the #
