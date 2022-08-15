@@ -30,7 +30,7 @@ Saman seminaariaiheen valinneet opiskelijat osallistuvat sen aiheen yhteiseen se
 
 Kurssin osallistumisen vahvistaminen edellyttää ensimmäisen ja toisen viikon viikkotehtävien hyväksyttyä suoritusta niiden määräaikaan mennessä. Tehtäviin on saatavissa vinkkejä ja tukea kurssin Teams-kanavalla sekä oppitunneilla.
 
-Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan varmistaa, että työskentely Linuxin ja Pythonin parissa lähtee kaikilla käyntiin, ja että kaikilla on riittävät esitiedot kurssin seuraavia viikkoja varten.
+Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan varmistaa, että työskentely Linuxin ja Pythonin parissa lähtee kaikilla käyntiin. Tarvitset riittävät esitiedot näistä aiheista kurssin seuraavia viikkoja varten.
 
 **Kurssin keskeyttäminen** ei ole Haaga-Helian linjauksia noudattaen mahdollista enää osallistumisen vahvistamisen jälkeen:
 
@@ -51,7 +51,7 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
     </thead>
     <tbody>
         <tr>
-            <td>22.-28.8.</td>
+            <td>Ti 23.8.</td>
             <td>
                 <a href="00_linux/">Kurssin johdanto, ympäristöt ja Linux/Unix-komentorivi</a><br /><br />
                 <a href="00_linux/asennukset.md">Tehtävä 1: kurssin kehitysympäristön asennus</a><br />
@@ -62,7 +62,7 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
             </td>
         </tr>
         <tr>
-            <td>29.8.-4.9.</td>
+            <td>Ti 30.8.</td>
             <td>
                 <a href="01_python/">Python-ohjelmointi</a><br />
                 <ul>
@@ -77,7 +77,7 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
             </td>
         </tr>
         <tr>
-            <td>5.9.-11.9.</td>
+            <td>Ti 6.9.</td>
             <td>
                 <a href="02_testaus/">Testaus</a><br />
                 <ul>
@@ -92,7 +92,7 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
             </td>
         </tr>
         <tr>
-            <td>12.-18.9.</td>
+            <td>Ti 13.9.</td>
             <td>
                 <a href="03_infra_ja_automaatio/">Infra ja automaatio</a><br />
                 <ul>
@@ -105,7 +105,7 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
             </td>
         </tr>
         <tr>
-            <td>19.-25.9.</td>
+            <td>Ti 20.9.</td>
             <td>
                 <a href="04_tietorakenteet_ja_algoritmit/">Tietorakenteet ja algoritmit</a><br />
                 <ul>
@@ -120,7 +120,7 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
             </td>
         </tr>
         <tr>
-            <td>26.9.-2.10.</td>
+            <td>Ti 27.9.</td>
             <td>
                 <a href="05_es6_node/oppitunti1.md">Moderni JavaScript ja funktionaalinen ohjelmointityyli</a><br />
                 <ul>
@@ -135,7 +135,7 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
             </td>
         </tr>
         <tr>
-            <td>3.-9.10.</td>
+            <td>Ti 4.10.</td>
             <td>
                 <a href="05_es6_node/oppitunti2.md">Node.js, npm, Express ja Promiset</a><br />
                 <ul>
@@ -150,7 +150,7 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
             </td>
         </tr>
         <tr>
-            <td>10.-16.10.</td>
+            <td>Ti 11.10.</td>
             <td>
                 <a href="06_ohjelmistoarkkitehtuurit_ja_patternit/">Ohjelmistoarkkitehtuurit ja patternit</a>
             </td>
@@ -171,7 +171,7 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
             </td>
         </tr>
         <tr>
-            <td>31.10.-6.11.</td>
+            <td>Ti 1.11.</td>
             <td>
                 <a href="07_openshift/">Pilvinatiivi ohjelmistokehitys (Docker, Kubernetes, OpenShift...)</a>
             </td>
@@ -180,37 +180,38 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
             </td>
         </tr>
         <tr>
-            <td>7.-13.11.</td>
+            <td>Ti 8.11.</td>
             <td><a href="08_seminaari">Seminaarien käynnistys</a></td>
             <td>
             </td>
         </tr>
         <tr>
             <td>
-                <div>14.-20.11.</div>
-                <div>21.-27.11.</div>
-                <div>28.11.-4.12.</div>
+                <div>Ti 15.11.</div>
+                <div>Ti 22.11.</div>
+                <div>Ti 29.11.</div>
             </td>
             <td>Seminaarityön tekemistä</td>
             <td>
-                <em>Yksilöllistä ohjausta Teamsissa tai sopimuksen mukaan kampuksella tiistaisin</em>
+                <em>Yksilöllistä ohjausta Teamsissa tai sopimuksen mukaan kampuksella</em>
             </td>
         </tr>
         <tr>
             <td>5.-11.12.</td>
-            <td colspan="2">Itsenäisyyspäivä</td>
+            <td>Ti 6.12. itsenäisyyspäivä, ei oppituntia</td>
+            <td>Seminaaritehtävän palautus ke 7.12. klo 22 mennessä.</td>
         </tr>
         <tr>
-            <td>12.-18.12.</td>
+            <td>Ti 13.12.</td>
             <td>Seminaariesitykset</td>
-            <td>Seminaariesitykset ti 13.12.</td>
+            <td></td>
         </tr>
     </tbody>
 </table>
 
 ## Viestintäkanavat
 
-Tällä kurssilla oppitunnit järjestetään MS Teams -palvelussa. Teams tarjoaa myös luontevan kanavan kysyä ja keskustella oppituntien ulkopuolella. Jos jäät jumiin tehtävän kanssa tai et ymmärrä materiaaleja tai tehtävänantoja, kysy rohkeasti vinkkejä Teamsissa. Todennäköisesti samaa ongelmaa pohtii kanssasi myös moni muu, joten lähetäthän sisältöä ja tehtävänantoja koskevat kysymykset yhteiselle kanavalle eikä yksityisviestinä.
+Tällä kurssilla hyödynnetään MS Teams -palvelua. Teams tarjoaa luontevan kanavan kysyä ja keskustella myös oppituntien ulkopuolella. Jos jäät jumiin tehtävän kanssa tai et ymmärrä materiaaleja tai tehtävänantoja, kysy rohkeasti vinkkejä Teamsissa. Todennäköisesti samaa ongelmaa pohtii kanssasi myös moni muu, joten lähetäthän sisältöä ja tehtävänantoja koskevat kysymykset yhteiselle kanavalle eikä yksityisviestinä.
 
 Kurssilla suositellaan käytettävän Teamsin työpöytäsovellusta. Kirjautuminen Teamsiin tapahtuu Haaga-Helian opiskelijatunnuksella.
 
@@ -229,7 +230,7 @@ Ohjelmistojen asentaminen ja käyttäminen eri käyttöjärjestelmillä poikkeaa
 
 Virtuaalikoneeseen tekemäsi asennukset eivät vaikuta tietokoneesi normaaliin käyttöön, ja käyttämällä virtuaalikonetta saat myös vertaistukea muilta opiskelijoilta ja opettajilta.
 
-Mikäli sinulla on valmiiksi käytössäsi Linux tai muu Unix-pohjainen käyttöjärjestelmä, kuten macOS, voit käyttää sitä kurssilla. Myös Raspberry Pi tai etäyhteydellä käytettävät Linux-ympäristöt, kuten [Gitpod](https://gitpod.io/), [GitHub codespaces](https://github.com/features/codespaces), [DigitalOcean](https://www.digitalocean.com/github-students/), sopivat kurssin tarkoituksiin, mutta  niihin pystymme tarjoamaan vain vähäistä käyttötukea.
+Mikäli sinulla on valmiiksi käytössäsi Linux tai muu Unix-pohjainen käyttöjärjestelmä, kuten macOS, voit käyttää sitä kurssilla. Myös Raspberry Pi tai etäyhteydellä käytettävät Linux-ympäristöt, kuten [DigitalOcean](https://www.digitalocean.com/github-students/), [AWS](https://aws.amazon.com/ec2/), [Azure](https://azure.microsoft.com/en-us/services/virtual-machines/), [Gitpod](https://gitpod.io/) ja [GitHub codespaces](https://github.com/features/codespaces) sopivat kurssin tarkoituksiin, mutta niihin pystymme tarjoamaan vain vähäistä käyttötukea.
 
 Lisää ohjeita löydät kurssin [ensimmäisen viikon materiaalista](00_linux).
 

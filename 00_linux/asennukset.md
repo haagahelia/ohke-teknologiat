@@ -4,14 +4,14 @@
 
 Ennen ensimmäistä oppituntia sinun tulee valmistella itsellesi toimiva unix-pohjainen ympäristö, jossa voit kehittää ja suorittaa jatkossa kurssilla kehittämiämme koodeja. 
 
-Mikäli sinulla on jo valmiiksi hyvä Unix-pohjainen ympäristö, kuten macOS, tai olet kiinnostunut esimerkiksi [WSL2](https://docs.microsoft.com/en-us/windows/wsl/install):n, [Docker](https://www.docker.com/):in, [Raspberry Pi](https://www.raspberrypi.org/):n tai [DigitalOcean](https://www.digitalocean.com/github-students/):in käytöstä, voit hyvin käyttää myös niitä, mutta  emme voi luvata niihin käyttötukea.
+Mikäli sinulla on jo valmiiksi hyvä Unix-pohjainen ympäristö, kuten macOS, tai olet kiinnostunut esimerkiksi [WSL2:n](https://docs.microsoft.com/en-us/windows/wsl/install), [Dockerin](https://www.docker.com/), [Raspberry Pin](https://www.raspberrypi.org/), [DigitalOceanin](https://www.digitalocean.com/github-students/, [AWS:n](https://aws.amazon.com/ec2/) tai [Azuren](https://azure.microsoft.com/en-us/services/virtual-machines/) käytöstä, voit hyvin käyttää myös niitä, mutta  emme voi luvata niihin käyttötukea.
 
 
 ## Windows + VirtualBox + Linux
 
-Windows-käyttäjille suosittelemme Oraclen ilmaisen [VirtualBox](https://www.virtualbox.org/)-virtualisointiympäristön sekä [Ubuntu](https://ubuntu.com/desktop)- tai [Xubuntu](https://xubuntu.org/)-käyttöjärjestelmän asentamista. 
+Graafiseen käyttöliittymään tottuneille käyttäjille yksi miellyttävä tie Linuxiin tutustumiseksi on [Ubuntu](https://ubuntu.com/desktop)- tai [Xubuntu](https://xubuntu.org/)-käyttöjärjestelmä graafisella käyttöliittymällä. Ubuntu voidaan asentaa "virtuaalikoneena" Oraclen ilmaisen [VirtualBox](https://www.virtualbox.org/)-virtualisointiympäristön avulla. Linux voidaan asentaa myös tietokoneen pääkäyttöjärjestelmäksi tai "dual boot"-vaihtoehdolla nykyisen käyttöjärjestelmän rinnalle, mutta näitä vaihtoehtoja ei kurssin puolesta suositella.
 
-Virtuaalikoneeseen tekemäsi asennukset eivät vaikuta tietokoneesi normaaliin käyttöön, ja voit tarvittaessa poistaa kaiken kurssilla asentamasi kerralla poistamalla virtuaalikoneen. Kurssin opettajalla on käytössä Ubuntun stabiili LTS-versio 20.04 (Long Term Support), joka on varmuudella toimiva tälle kurssille.
+Virtuaalikoneeseen tekemäsi asennukset eivät vaikuta tietokoneesi normaaliin käyttöön, ja voit tarvittaessa poistaa kaiken kurssilla asentamasi kerralla poistamalla virtuaalikoneen.
 
 > *Using Linux in a virtual machine gives you the option to try Linux within Windows. This step-by-step guide shows you how to install Linux inside Windows using VirtualBox.*
 >
@@ -26,7 +26,7 @@ Mikäli virtuaalikoneen asennuksessa on ongelmia, pyritään pääsääntöisest
 
 # Ohjelmien asentaminen
 
-Kun olet saanut käyttöjärjestelmän asennettua, tarvitset vielä siihen joitakin erillisiä asennuksia, erityisesti Gitin, Node.js:n ja Pythonin. Lisäksi suosittelemme koodieditoriksi VS Codea, mutta saat käyttää myös muita editoreja.
+Kun olet saanut käyttöjärjestelmän käyttökuntoon, tarvitset vielä siihen joitakin erillisiä asennuksia, erityisesti Gitin, Node.js:n ja Pythonin. Lisäksi suosittelemme koodieditoriksi VS Codea, mutta saat käyttää myös muita editoreja.
 
 Seuraavat kohdat käsittelevät tarvittavien ohjelmien asentamista erityisesti Ubuntu-ympäristössä.
 
@@ -66,12 +66,6 @@ Kurssilla käytetään oppimateriaalin ja esimerkkikoodien jakelussa Git-version
 sudo apt install git
 ```
 
-Asennuksen jälkeen voit kloonata tämän repositorion itsellesi (vapaaehtoista):
-
-```shell
-git clone https://github.com/haagahelia/swd4tn023.git
-```
-
 Asennuksen jälkeen Gitille täytyy vielä kertoa sähköpostiosoite ja nimi, joita käytetään tehdessäsi committeja. Nämä tiedot tulevat esim. GitHubin kautta kaikkien saataville, voit itse valita käytätkö oikeaa nimeäsi ja oikeaa sähköpostiosoitettasi. [GitHub tarjoaa myös mahdollisuuden käyttää anonyymiä sähköpostiosoitetta.](https://docs.github.com/en/github/setting-up-and-managing-your-github-user-account/setting-your-commit-email-address)
 
 ```shell
@@ -79,7 +73,13 @@ $ git config --global user.email "you@example.com"
 $ git config --global user.name "Your Name"
 ```
 
-**Huom!** Tehdessäsi kirjautumista vaativia operaatioita GitHubiin komentoriviltä, et voi tietoturvasyistä käyttää tunnistautumisessa käyttäjätunnusta ja salasanaa, vaan joudut luomaan itsellesi "personal access tokenin". Lue ohjeet täältä: https://docs.github.com/articles/creating-a-personal-access-token-for-the-command-line. Tämä ei ole välttämätöntä vielä tässä vaiheessa, mutta se on hyvä huomioida tulevaisuudessa.
+Lopuksi voit kloonata tämän repositorion itsellesi (vapaaehtoista):
+
+```shell
+git clone https://github.com/haagahelia/swd4tn023.git
+```
+
+**Huom!** Tehdessäsi kirjautumista vaativia operaatioita GitHubiin komentoriviltä, et voi tietoturvasyistä käyttää tunnistautumisessa käyttäjätunnusta ja salasanaa, vaan joudut luomaan itsellesi "personal access tokenin". Lue tarkempia ohjeita GitHubin ohjesivuilta: https://docs.github.com/articles/creating-a-personal-access-token-for-the-command-line. Access token ei ole välttämätön vielä tässä vaiheessa, mutta asia on hyvä huomioida tulevaisuudessa.
 
 Jos et halua syöttää käyttäjätunnustasi ja kirjautumistunnustasi (personal access token) joka kerta tehdessäsi kirjautumista vaativia Git-operaatioita, voit asettaa Gitin pitämään kirjautumistietosi muistissa:
 
@@ -87,7 +87,7 @@ Jos et halua syöttää käyttäjätunnustasi ja kirjautumistunnustasi (personal
 $ git config --global credential.helper cache
 ```
 
-Yllä oleva komento pitää tiedot tilapäisessä muistissa, josta ne poistuvat automaattisesti myöhemmin. Vaihtoehtoisesti voit [kirjautua GitHubiin SSH-avaimilla](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) tai asettaa Gitin [tallentamaan salasanan tiedostoon](https://unix.stackexchange.com/questions/379272/storing-username-and-password-in-git), mitä emme suosittele.
+Yllä oleva komento pitää tiedot tilapäisessä muistissa, josta ne poistuvat automaattisesti myöhemmin. Vaihtoehtoisesti voit [kirjautua GitHubiin SSH-avaimilla](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) tai asettaa Gitin [tallentamaan access tokenin tiedostoon](https://unix.stackexchange.com/questions/379272/storing-username-and-password-in-git), mitä emme suosittele.
 
 
 ## Node.js ja npm
