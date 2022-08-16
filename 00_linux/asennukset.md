@@ -4,7 +4,7 @@
 
 Ennen ensimmäistä oppituntia sinun tulee valmistella itsellesi toimiva unix-pohjainen ympäristö, jossa voit kehittää ja suorittaa jatkossa kurssilla kehittämiämme koodeja. 
 
-Mikäli sinulla on jo valmiiksi hyvä Unix-pohjainen ympäristö, kuten macOS, tai olet kiinnostunut esimerkiksi [WSL2:n](https://docs.microsoft.com/en-us/windows/wsl/install), [Dockerin](https://www.docker.com/), [Raspberry Pin](https://www.raspberrypi.org/), [DigitalOceanin](https://www.digitalocean.com/github-students/, [AWS:n](https://aws.amazon.com/ec2/) tai [Azuren](https://azure.microsoft.com/en-us/services/virtual-machines/) käytöstä, voit hyvin käyttää myös niitä, mutta  emme voi luvata niihin käyttötukea.
+Mikäli sinulla on jo valmiiksi hyvä Unix-pohjainen ympäristö, kuten macOS, tai olet kiinnostunut esimerkiksi [WSL2:n](https://docs.microsoft.com/en-us/windows/wsl/install), [Dockerin](https://www.docker.com/), [Raspberry Pin](https://www.raspberrypi.org/), [DigitalOceanin](https://www.digitalocean.com/github-students/), [AWS:n](https://aws.amazon.com/ec2/) tai [Azuren](https://azure.microsoft.com/en-us/services/virtual-machines/) käytöstä, voit hyvin käyttää myös niitä, mutta  emme voi luvata niihin käyttötukea.
 
 
 ## Windows + VirtualBox + Linux
@@ -22,6 +22,11 @@ Hyviä ohjeita asennuksiin löytyy sekä YouTubesta että Googlesta. Toimiviksi 
 Windows-käyttäjänä joudut mahdollisesti [kytkemään päälle Windowsin Hyper-V -ominaisuuden](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v#enable-the-hyper-v-role-through-settings) tai [kytkemään virtualisoinnin päälle tietokoneesi BIOS-asetuksista](https://www.google.com/search?q=enable+virtualization+bios).
 
 Mikäli virtuaalikoneen asennuksessa on ongelmia, pyritään pääsääntöisesti ratkaisemaan ne kurssin yhteisessä Teams-chatissa!
+
+
+## VS Code Remote Development
+
+Kurssilla hyödynnettävä VS Code -editori tukee "etäkehitystä" (remote development), jonka avulla on mahdollista luoda kevyehköjä Linux-pohjaisia kehitysympäristöjä. Myös tämä vaihtoehto voi olla toimiva ratkaisu erillisen Linux-asennuksen sijasta tai lisäksi. Lisätietoja löydät mm. [Visual Studio Code:n ohjeista](https://code.visualstudio.com/docs/remote/containers).
 
 
 # Ohjelmien asentaminen
