@@ -55,7 +55,11 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
             <td>
                 <a href="00_linux/">Kurssin johdanto, ympäristöt ja Linux/Unix-komentorivi</a><br /><br />
                 <a href="00_linux/asennukset.md">Tehtävä 1: kurssin kehitysympäristön asennus</a><br />
-                Tehtävä 2: Linux-komentorivi (ks. Teams)<br />
+                Tehtävä 2: Linux-komentorivi (ks. Teams)<br /><br />
+                <a href="https://web.microsoftstream.com/video/f0e0dc26-379c-4a03-9e6b-f7f42d49f950">📼 Kurssin yleiset asiat</a><br />
+                <a href="https://web.microsoftstream.com/video/41d6925c-4e99-4218-a413-2190b22acbf8">📼 Linux-komennot</a><br />
+                <!--Linux-palomuuri-->
+                <a href="https://web.microsoftstream.com/video/58895df6-7b17-4a51-b448-1b064d3efbf1">📼 GitHub classroom -kotitehtävä</a><br />
             </td>
             <td>
                 Tehtävien DL ma 29.8. klo 22:00
