@@ -2,17 +2,17 @@
 
 Kurssin ensimmäisellä viikolla asennamme kurssilla tarvittavat kehitysympäristöt, tutustumme Linux-käyttöjärjestelmän peruskäyttöön.
 
-Ohjeet kurssille tarvittavan ympäristön asentamiseksi löydät [täältä](asennukset.md). Toivomme että asennat tarvitsemasi ympäristön valmiiksi ennen ensimmäistä oppituntia. Kysy kohtaamistasi ongelmista rohkeasti Teamsissa keskustelukanavalla.
+Ohjeet kurssille tarvittavan ympäristön asentamiseksi löydät [täältä](asennukset.md). Toivomme että asennat tarvitsemasi ympäristön valmiiksi ennen ensimmäistä tapaamista. Kysy kohtaamistasi ongelmista rohkeasti Teamsissa keskustelukanavalla.
 
 ## Luentovideot
 
-1. [Kurssin yleiset asiat](https://web.microsoftstream.com/video/f0e0dc26-379c-4a03-9e6b-f7f42d49f950) *28:34*
-1. [Linux-komennot](https://web.microsoftstream.com/video/41d6925c-4e99-4218-a413-2190b22acbf8) *45:37*
-1. [GitHub classroom -kotitehtävä](https://web.microsoftstream.com/video/58895df6-7b17-4a51-b448-1b064d3efbf1) *17:56*
+1. [**Kurssin yleiset asiat**](https://web.microsoftstream.com/video/f0e0dc26-379c-4a03-9e6b-f7f42d49f950) *28:34*
+1. [**Linux-komennot**](https://web.microsoftstream.com/video/41d6925c-4e99-4218-a413-2190b22acbf8) *45:37*
+1. [**GitHub classroom -kotitehtävä**](https://web.microsoftstream.com/video/58895df6-7b17-4a51-b448-1b064d3efbf1) *17:56*
 
 <!--Todo: video Linux-palomuurista-->
 
-Videoiden katsominen edellyttää kirjautumista MS Stream -palveluun Haaga-Helian tunnuksillasi. Sinun tulee olla myös jäsenenä kurssin Teams-ryhmässä.
+👆 Videoiden katsominen edellyttää kirjautumista MS Stream -palveluun Haaga-Helian tunnuksillasi. Sinun tulee olla myös jäsenenä kurssin Teams-ryhmässä.
 
 
 ## Linuxin ja komentorivin perusteet
