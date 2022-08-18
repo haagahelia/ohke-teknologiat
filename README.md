@@ -56,16 +56,21 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
                 <strong><a href="00_linux/">Kurssin johdanto, ympäristöt ja Linux/Unix-komentorivi</a></strong><br />
                 <br />
                 <strong>Tehtävät:</strong><br />
-                <a href="00_linux/asennukset.md">📥 Kurssin kehitysympäristön asennus</a><br />
-                📥 Linux-komentorivi (ks. Teams)<br />
+                <ul>
+                    <li><a href="00_linux/asennukset.md">📥 Kurssin kehitysympäristön asennus</a></li>
+                    <li>📥 Linux-komentorivi (ks. Teams)</li>
+                </ul>
                 <br />
                 <strong>Videot:</strong><br />
-                <a href="https://web.microsoftstream.com/video/f0e0dc26-379c-4a03-9e6b-f7f42d49f950">📼 Kurssin yleiset asiat</a><br />
-                <a href="https://web.microsoftstream.com/video/41d6925c-4e99-4218-a413-2190b22acbf8">📼 Linux-komennot</a><br />
+                <ul>
+                    <li><a href="https://web.microsoftstream.com/video/f0e0dc26-379c-4a03-9e6b-f7f42d49f950">📼 Kurssin yleiset asiat</a></li>
+                    <li><a href="https://web.microsoftstream.com/video/41d6925c-4e99-4218-a413-2190b22acbf8">📼 Linux-komennot</a></li>
                 <!--Linux-palomuuri-->
-                <a href="https://web.microsoftstream.com/video/58895df6-7b17-4a51-b448-1b064d3efbf1">📼 GitHub classroom -kotitehtävä</a><br />
+                    <li><a href="https://web.microsoftstream.com/video/58895df6-7b17-4a51-b448-1b064d3efbf1">📼 GitHub classroom -kotitehtävä</ali/ul>
+                </ul>
             </td>
             <td>
+                Tapaaminen luokassa ja Teamsissa ti 23.8. klo 8.15 - 10.45<br />
                 Tehtävien DL ma 29.8. klo 22:00
             </td>
         </tr>
@@ -73,11 +78,15 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
             <td>Ti 30.8.</td>
             <td>
                 <strong><a href="01_python/">Python-ohjelmointi</a></strong><br />
+                <strong>Tehtävät:</strong><br />
                 <ul>
-                    <li>Ehto- ja toistorakenteet</li>
-                    <li>Perustietotyypit ja kokoelmat</li>
-                    <li>Tiedostot ja http-pyynnöt</li>
-                    <li><a href="https://web.microsoftstream.com/video/497d7df3-1629-49f9-b460-82c1d479b03d">Video 1</a>, <a href="https://web.microsoftstream.com/video/0f31953b-417b-4669-915d-ca35917bfbc0">video 2</a></li>
+                    <li>📥 Postinumeroiden käsittely (ks. Teams)</li>
+                </ul>
+                <br />
+                <strong>Videot:</strong>
+                <ul>
+                    <li><a href="https://web.microsoftstream.com/video/497d7df3-1629-49f9-b460-82c1d479b03d">📼 Perusrakenteet ja komentorivikäyttö</a></li>
+                    <li><a href="https://web.microsoftstream.com/video/0f31953b-417b-4669-915d-ca35917bfbc0">📼 Tietorakenteet, ehdot ja toisto</a></li>
                 </ul>
             </td>
             <td>
