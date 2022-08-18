@@ -77,7 +77,7 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
         <tr>
             <td>Ti 30.8.</td>
             <td>
-                <strong><a href="01_python/">Python-ohjelmointi</a></strong><br />
+                <strong><a href="01_python/">Python-ohjelmointi</a></strong><br /><br />
                 <strong>Tehtävät:</strong><br />
                 <ul>
                     <li>📥 Postinumeroiden käsittely (ks. Teams)</li>
