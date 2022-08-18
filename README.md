@@ -70,7 +70,7 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
                 </ul>
             </td>
             <td>
-                Tapaaminen luokassa ja Teamsissa ti 23.8. klo 8.15 - 10.45<br />
+                Tapaaminen luokassa ja Teamsissa ti 23.8. klo 8.30 - 10.45<br />
                 Tehtävien DL ma 29.8. klo 22:00
             </td>
         </tr>
