@@ -6,9 +6,9 @@ Ohjeet kurssille tarvittavan ympäristön asentamiseksi löydät [täältä](ase
 
 ## Luentovideot
 
-* [Kurssin yleiset asiat](https://web.microsoftstream.com/video/f0e0dc26-379c-4a03-9e6b-f7f42d49f950)
-* [Linux-komennot](https://web.microsoftstream.com/video/41d6925c-4e99-4218-a413-2190b22acbf8)
-* [GitHub classroom -kotitehtävä](https://web.microsoftstream.com/video/58895df6-7b17-4a51-b448-1b064d3efbf1)
+1. [Kurssin yleiset asiat](https://web.microsoftstream.com/video/f0e0dc26-379c-4a03-9e6b-f7f42d49f950) *28:34*
+1. [Linux-komennot](https://web.microsoftstream.com/video/41d6925c-4e99-4218-a413-2190b22acbf8) *45:37*
+1. [GitHub classroom -kotitehtävä](https://web.microsoftstream.com/video/58895df6-7b17-4a51-b448-1b064d3efbf1) *17:56*
 
 <!--Todo: video Linux-palomuurista-->
 

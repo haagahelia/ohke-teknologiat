@@ -53,9 +53,13 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
         <tr>
             <td>Ti 23.8.</td>
             <td>
-                <a href="00_linux/">Kurssin johdanto, ympäristöt ja Linux/Unix-komentorivi</a><br /><br />
-                <a href="00_linux/asennukset.md">Tehtävä 1: kurssin kehitysympäristön asennus</a><br />
-                Tehtävä 2: Linux-komentorivi (ks. Teams)<br /><br />
+                <strong><a href="00_linux/">Kurssin johdanto, ympäristöt ja Linux/Unix-komentorivi</a></strong><br />
+                <br />
+                <strong>Tehtävät:</strong><br />
+                <a href="00_linux/asennukset.md">📥 Kurssin kehitysympäristön asennus</a><br />
+                📥 Linux-komentorivi (ks. Teams)<br />
+                <br />
+                <strong>Videot:</strong><br />
                 <a href="https://web.microsoftstream.com/video/f0e0dc26-379c-4a03-9e6b-f7f42d49f950">📼 Kurssin yleiset asiat</a><br />
                 <a href="https://web.microsoftstream.com/video/41d6925c-4e99-4218-a413-2190b22acbf8">📼 Linux-komennot</a><br />
                 <!--Linux-palomuuri-->
@@ -68,7 +72,7 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
         <tr>
             <td>Ti 30.8.</td>
             <td>
-                <a href="01_python/">Python-ohjelmointi</a><br />
+                <strong><a href="01_python/">Python-ohjelmointi</a></strong><br />
                 <ul>
                     <li>Ehto- ja toistorakenteet</li>
                     <li>Perustietotyypit ja kokoelmat</li>
@@ -83,7 +87,7 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
         <tr>
             <td>Ti 6.9.</td>
             <td>
-                <a href="02_testaus/">Testaus</a><br />
+                <strong><a href="02_testaus/">Testaus</a></strong><br />
                 <ul>
                     <li>Testauksen tasot</li>
                     <li>Yksikkötestaus</li>
@@ -98,7 +102,7 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
         <tr>
             <td>Ti 13.9.</td>
             <td>
-                <a href="03_infra_ja_automaatio/">Infra ja automaatio</a><br />
+                <strong><a href="03_infra_ja_automaatio/">Infra ja automaatio</a></strong><br />
                 <ul>
                     <li>Continuous integration</li>
                     <li>Git: branch, merge, rebase...</li>
@@ -111,7 +115,7 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
         <tr>
             <td>Ti 20.9.</td>
             <td>
-                <a href="04_tietorakenteet_ja_algoritmit/">Tietorakenteet ja algoritmit</a><br />
+                <strong><a href="04_tietorakenteet_ja_algoritmit/">Tietorakenteet ja algoritmit</a></strong><br />
                 <ul>
                     <li>Lajittelualgoritmit</li>
                     <li>Hakualgoritmit</li>
@@ -126,7 +130,7 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
         <tr>
             <td>Ti 27.9.</td>
             <td>
-                <a href="05_es6_node/oppitunti1.md">Moderni JavaScript ja funktionaalinen ohjelmointityyli</a><br />
+                <strong><a href="05_es6_node/oppitunti1.md">Moderni JavaScript ja funktionaalinen ohjelmointityyli</a></strong><br />
                 <ul>
                     <li>ES6-syntaksit</li>
                     <li>filter, map, reduce</li>
@@ -141,7 +145,7 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
         <tr>
             <td>Ti 4.10.</td>
             <td>
-                <a href="05_es6_node/oppitunti2.md">Node.js, npm, Express ja Promiset</a><br />
+                <strong><a href="05_es6_node/oppitunti2.md">Node.js, npm, Express ja Promiset</a></strong><br />
                 <ul>
                     <li>Express.js</li>
                     <li>Promise</li>
@@ -156,7 +160,7 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
         <tr>
             <td>Ti 11.10.</td>
             <td>
-                <a href="06_ohjelmistoarkkitehtuurit_ja_patternit/">Ohjelmistoarkkitehtuurit ja patternit</a>
+                <strong><a href="06_ohjelmistoarkkitehtuurit_ja_patternit/">Ohjelmistoarkkitehtuurit ja patternit</a></strong>
             </td>
             <td>
                 Tehtävien DL ma 24.10. klo 22:00
@@ -177,7 +181,7 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
         <tr>
             <td>Ti 1.11.</td>
             <td>
-                <a href="07_openshift/">Pilvinatiivi ohjelmistokehitys (Docker, Kubernetes, OpenShift...)</a>
+                <strong><a href="07_openshift/">Pilvinatiivi ohjelmistokehitys (Docker, Kubernetes, OpenShift...)</a></strong>
             </td>
             <td>
                 Tehtävien DL ma 7.11. klo 22:00
@@ -185,7 +189,7 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
         </tr>
         <tr>
             <td>Ti 8.11.</td>
-            <td><a href="08_seminaari">Seminaarien käynnistys</a></td>
+            <td><strong><a href="08_seminaari">Seminaarien käynnistys</a></strong></td>
             <td>
             </td>
         </tr>
@@ -195,7 +199,7 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
                 <div>Ti 22.11.</div>
                 <div>Ti 29.11.</div>
             </td>
-            <td>Seminaarityön tekemistä</td>
+            <td><strong>Seminaarityön tekemistä</strong></td>
             <td>
                 <em>Yksilöllistä ohjausta Teamsissa tai sopimuksen mukaan kampuksella</em>
             </td>
@@ -207,11 +211,12 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
         </tr>
         <tr>
             <td>Ti 13.12.</td>
-            <td>Seminaariesitykset</td>
+            <td><strong>Seminaariesitykset</strong></td>
             <td></td>
         </tr>
     </tbody>
 </table>
+
 
 ## Viestintäkanavat
 
