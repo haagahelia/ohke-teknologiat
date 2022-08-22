@@ -1,7 +1,7 @@
 # Linux process, port/socket and file handle commands
 ## Typically needed in our projects when multiple developers use the same server
 
-# Examples of needs / use cases
+## Examples of needs / use cases
 1. Which ports are being listened to by our server?  *)
 2. In which port is node running?
 3. Which process is running in port :1234?
@@ -10,11 +10,11 @@
 
 *) Remeber that e.g. the lsof command that we use is either 1. the original we got from installed Linux distro image, OR 2. an updated one from e.g. dpkg repositories OR 3. in the worst case, if our server hijacked, a fake version of the tool, possibly hiding the backdoor ports. Thus only uncompromised servers are to be trusted. After a security breech you cannot really fully trust any tool anymore.
 
-# The lsof command
+## The lsof command
 The useful command you should learn is lsof. Name comes from 'list open files'. In Linux everything is modeled as a file. E.g. a printer is a "file", as are the harddrives, or streams/pipes, ports.
 The **lsof** command can do a lot of things: [https://www.tecmint.com/10-lsof-command-examples-in-linux/](https://www.tecmint.com/10-lsof-command-examples-in-linux/) 
 
-# Some commands for finding out which ports are open in the system and which processes are listening to those. And killing that process
+## Some commands for finding out which ports are open in the system and which processes are listening to those. And killing that process
 
 One way to get your own IP address, it's for the WLAN or Ethernet network adapter
 ```shell
