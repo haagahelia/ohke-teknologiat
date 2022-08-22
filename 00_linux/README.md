@@ -1,6 +1,6 @@
 # Kurssin johdanto, ympäristöt ja Linux/Unix-komentorivi
 
-Kurssin ensimmäisellä viikolla asennamme kurssilla tarvittavat kehitysympäristöt, tutustumme Linux-käyttöjärjestelmän peruskäyttöön.
+Kurssin ensimmäisellä viikolla asennamme kurssilla tarvittavat kehitysympäristöt ja tutustumme Linux-käyttöjärjestelmän peruskäyttöön.
 
 Ohjeet kurssille tarvittavan ympäristön asentamiseksi löydät [täältä](asennukset.md). Toivomme että asennat tarvitsemasi ympäristön valmiiksi ennen ensimmäistä tapaamista. Kysy kohtaamistasi ongelmista rohkeasti Teamsissa keskustelukanavalla.
 
@@ -19,6 +19,8 @@ Löydät tämän kurssin omien materiaalien lisäksi netistä lukuisia hyviä vi
 ## Linuxin ja komentorivin perusteet
 
 Linux ja muut Unix-pohjaiset käyttöjärjestelmät, kuten MacOS, ovat kehittäjien keskuudessa paljon käytettyjä. [Stackoverflown 2020 kehittäjillä tekemän vuosittaisen tutkimuksen](https://insights.stackoverflow.com/survey/2020) mukaan Linuxia [on edellisen vuoden aikana käyttänyt 55% kehittäjistä](https://insights.stackoverflow.com/survey/2020#technology-platforms). Yksi syy tälle lienee se, että palvelimia käytetään tyypillisesti ainoastaan etäyhteyksillä, eikä niissä ole näyttöjä, näppäimistöjä tai graafisia käyttöliittymiä.
+
+[![Terminal forever <3](https://www.commitstrip.com/wp-content/uploads/2016/12/Strip-Lignes-de-commande-english650-final-2.jpg)](https://www.commitstrip.com/en/2016/12/22/terminal-forever/?)
 
 Unix-pohjaiset käyttöjärjestelmät tarjoavat paljon työkaluja, jotka helpottavat kehittäjän työtä. Niillä on helppo myös työskennellä komentorivin kautta vahvoilla komennoilla, joilla pystyy esimerkiksi käsittelemään ohjelmistojen lokitiedostoja, ajastamaan komentoja jne. Komentojen toinen vahvuus on se, että ne on helposti ajastettavissa suoritettavaksi automaattisesti, ja eri komentosarjoja voidaan yhdistää skripteiksi.
 
