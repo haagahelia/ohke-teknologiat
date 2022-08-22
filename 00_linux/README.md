@@ -12,8 +12,9 @@ Ohjeet kurssille tarvittavan ympäristön asentamiseksi löydät [täältä](ase
 
 <!--Todo: video Linux-palomuurista-->
 
-👆 Videoiden katsominen edellyttää kirjautumista MS Stream -palveluun Haaga-Helian tunnuksillasi. Sinun tulee olla myös jäsenenä kurssin Teams-ryhmässä.
+👆 Näiden videoiden katsominen edellyttää kirjautumista MS Stream -palveluun Haaga-Helian tunnuksillasi. Sinun tulee olla myös jäsenenä kurssin Teams-ryhmässä.
 
+Löydät tämän kurssin omien materiaalien lisäksi netistä lukuisia hyviä video- ja tekstimuotoisia ohjeita. Halutessasi voit käyttää myös muita materiaaleja ja aloittaa esimerkiksi videosta [15+ Terminal Commands Every Developer Must Know (Web Dev Simplified)](https://youtu.be/CV-ven_rxhw) sekä [Ubuntun komentorivitutoriaalista](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview).
 
 ## Linuxin ja komentorivin perusteet
 
@@ -208,7 +209,7 @@ $ echo $HOME
 export-komennolla voit lisätä PATH-muuttujaan uusia hakemistoja. Alla oleva komento siis sanoo, että uusi `PATH`-ympäristömuuttuja on nykyinen `PATH`-ympäristömuuttujan arvo, ja lisäksi siihen lisätään `/usr/me/uusihakemisto`-polku.
 
 ```shell
-# https://github.com/sindresorhus/guides/blob/main/npm-global-without-sudo.md
+# Katso https://github.com/sindresorhus/guides/blob/main/npm-global-without-sudo.md
 $ export PATH="$PATH:${HOME}/.npm-packages/bin"
 ```
 
@@ -261,7 +262,7 @@ $ mongo
 
 ### Esimerkki: Sanuli ja grep
 
-Sanuli (https://www.sanuli.fi) on uusi kotimainen avoimen lähdekoodin peli, joka on [herättänyt paljon kiinnostusta vuoden 2022 alussa](https://www.is.fi/digitoday/esports/art-2000008531907.html). Tässä yhteydessä kokeilemme oppitunnilla Linuxin komentorivin mahdollisuuksia Sanulin ratkaisemisen avustamisessa. Hyödynnä esimerkissä Kotus-sanalistaa, joka löytyy hakemistosta [04_tietorakenteet_ja_algoritmit/src/kotus-sanalista-v1/](../04_tietorakenteet_ja_algoritmit/src/kotus-sanalista-v1/).
+Sanuli (https://www.sanuli.fi) on uusi kotimainen avoimen lähdekoodin peli, joka on [herättänyt paljon kiinnostusta vuoden 2022 alussa](https://www.is.fi/digitoday/esports/art-2000008531907.html). Tässä kohdassa kokeilemme oppitunnin videotallenteella Linuxin komentorivin mahdollisuuksia Sanulin ratkaisemisen avustamisessa. Hyödynnä esimerkissä Kotus-sanalistaa, joka löytyy hakemistosta [04_tietorakenteet_ja_algoritmit/src/kotus-sanalista-v1/](../04_tietorakenteet_ja_algoritmit/src/kotus-sanalista-v1/).
 
 Sanulin on kehittänyt Jaakko Husso ja se on julkaistu MIT-lisenssillä GitHubissa: https://github.com/Cadiac/sanuli.
 
