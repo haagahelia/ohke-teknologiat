@@ -17,7 +17,7 @@ Virtuaalikoneeseen tekemäsi asennukset eivät vaikuta tietokoneesi normaaliin k
 >
 > https://itsfoss.com/install-linux-in-virtualbox/
 
-Hyviä ohjeita asennuksiin löytyy sekä YouTubesta että Googlesta. Toimiviksi havaittuja ohjeita ovat mm. video ["How to Install Ubuntu 20.04 LTS on VirtualBox in Windows 10"](https://www.youtube.com/watch?v=x5MhydijWmc) ja artikkeli ["Install Linux Inside Windows Using VirtualBox"](https://itsfoss.com/install-linux-in-virtualbox/).
+Hyviä ohjeita asennuksiin löytyy sekä YouTubesta että Googlesta. Toimiviksi havaittuja ohjeita ovat mm. video ["How to Install Ubuntu 20.04 LTS on VirtualBox in Windows 10"](https://www.youtube.com/watch?v=x5MhydijWmc) ja artikkeli ["Install Linux Inside Windows Using VirtualBox"](https://itsfoss.com/install-linux-in-virtualbox/). Ubuntun oma virtuaalikoneen asennusohje löytyy [Ubuntu.com:ista](https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox).
 
 Windows-käyttäjänä joudut mahdollisesti [kytkemään päälle Windowsin Hyper-V -ominaisuuden](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v#enable-the-hyper-v-role-through-settings) tai [kytkemään virtualisoinnin päälle tietokoneesi BIOS-asetuksista](https://www.google.com/search?q=enable+virtualization+bios).
 
