@@ -1,11 +1,21 @@
 # How to use the ufw (Uncomplicated FireWall) command to setup the Linux firewall 
-(same firewall that some might earlier have set up via iptables)
+(same firewall that some might earlier have set up via *iptables*)
 
 **Note 1:** This help ***applies to Ubuntu/Xubuntu linux***. For other systems, like MacOS, or for virtual machines, virtual boxes, cloud environments, etc. things might be different! Then just read this, digest the concepts and apply the skills using different commands where needed. 
 
 **Note 2:** In some virtual or cloud environments you cannot set the firewall from inside the OS, but from the outside host environment.
 
 **Note 3:** Ubuntu (or lighter: Xubuntu) does not have firewall enabled after installation! Thus, your first action should usually be enabling the firewall.
+
+---
+
+*Executive summary:* 
+
+**``sudo ufw enable``** 
+
+(This is enough after installation of Ubuntu/Xubuntu to a non-virtual computer. Checked 2022-08-23) 
+
+---
 
 Ubuntu/Xubuntu already has the ufw program, but in some other systems you might need to install it:
 
