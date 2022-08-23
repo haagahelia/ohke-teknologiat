@@ -9,7 +9,9 @@ Mikäli sinulla on jo valmiiksi hyvä Unix-pohjainen ympäristö, kuten macOS, t
 
 ## Windows + VirtualBox + Linux
 
-Graafiseen käyttöliittymään tottuneille käyttäjille yksi miellyttävä tie Linuxiin tutustumiseksi on [Ubuntu](https://ubuntu.com/desktop)- tai [Xubuntu](https://xubuntu.org/)-käyttöjärjestelmä graafisella käyttöliittymällä. Ubuntu voidaan asentaa "virtuaalikoneena" Oraclen ilmaisen [VirtualBox](https://www.virtualbox.org/)-virtualisointiympäristön avulla. Linux voidaan asentaa myös tietokoneen pääkäyttöjärjestelmäksi tai "dual boot"-vaihtoehdolla nykyisen käyttöjärjestelmän rinnalle, mutta näitä vaihtoehtoja ei kurssin puolesta suositella.
+Graafiseen käyttöliittymään tottuneille käyttäjille yksi miellyttävä tie Linuxiin tutustumiseksi on [Ubuntu](https://ubuntu.com/desktop)- tai [Xubuntu](https://xubuntu.org/)-käyttöjärjestelmä graafisella käyttöliittymällä. Ubuntu voidaan asentaa "virtuaalikoneena" Oraclen ilmaisen [VirtualBox](https://www.virtualbox.org/)-virtualisointiympäristön avulla.
+
+Linux voidaan asentaa myös tietokoneen pääkäyttöjärjestelmäksi, "dual boot"-vaihtoehdolla nykyisen käyttöjärjestelmän rinnalle, tai erilliselle muistitikulle, mutta näitä vaihtoehtoja ei kurssin puolesta suositella niihin liittyvien riskien vuoksi.
 
 Virtuaalikoneeseen tekemäsi asennukset eivät vaikuta tietokoneesi normaaliin käyttöön, ja voit tarvittaessa poistaa kaiken kurssilla asentamasi kerralla poistamalla virtuaalikoneen.
 
