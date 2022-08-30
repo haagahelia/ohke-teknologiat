@@ -8,7 +8,7 @@ Tämän GitHub-repositorion oppimateriaali on tarkoitettu aiheen käsittelyn run
 
 * Lappeenrannan Yliopiston Python 3 –ohjelmointiopas: https://lutpub.lut.fi/handle/10024/162088
 * Pythonin oma "The Python Tutorial": https://docs.python.org/3/tutorial/
-* Mooc.fi:n Ohjelmoinnin perusteet Pythonilla -kurssi: https://python-k20.mooc.fi/
+* Mooc.fi:n Ohjelmoinnin perusteet Pythonilla -kurssi: https://ohjelmointi-22.mooc.fi/
 * Codecademy:n "Learn Python 3" -kurssi: https://www.codecademy.com/courses/learn-python-3/
 
 Lisää hyvä lähteitä löydät hakukoneilla. Jaathan vinkkejä hyvistä materiaaleista myös kurssin Teamsissa!
@@ -599,4 +599,4 @@ Tämän viikon tehtävässä harjoittelemme Pythonin käyttöä postinumeroainei
 
 ## Seminaariaiheita
 
-Python-aiheiset seminaarityöt voivat käsitellä esimerkiksi Pythonin [Django](https://www.djangoproject.com/)- tai [Flask](https://flask.palletsprojects.com/)-sovelluskehysten käyttöönottoa tai Pythonin tietokantaohjelmointiin perehtymistä.
+Python-aiheiset seminaarityöt voivat käsitellä esimerkiksi web-ohjelmointia [Django:n](https://www.djangoproject.com/) tai [Flask:in](https://flask.palletsprojects.com/)avulla, tai peliohjelmointia esimerkiksi [PyGamella](https://github.com/pygame/pygame).
