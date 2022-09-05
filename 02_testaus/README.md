@@ -6,21 +6,18 @@ Aiheen opiskelun jälkeen osaat kirjoittaa Python-funktioillesi yksikkötestit j
 
 # Oppitunnin videot
 
-Videoilla käsitellään edellisen tehtävän malliratkaisua, joten linkit videoihin lisätään tehtävän palautusajan umpeuduttua.
+**[Osa 1: Python-tehtävän malliratkaisu ja orientaatio testaukseen](https://web.microsoftstream.com/video/b54e4927-592c-4406-982f-3bccdc34d76a)** *26:25*
 
-<!--
-**[Osa 1: Python-tehtävän malliratkaisu ja orientaatio testaukseen](https://web.microsoftstream.com/video/8f0d594f-9277-4782-937e-9d215d7cf7c4)** *44:38*
+Tällä videolla käymme läpi postitoimipaikka- ja postinumerot-tehtävien malliratkaisut ja tutustumme testaukseen yleisellä tasolla. Malliratkaisuja käytetään kolmannella videolla esimerkkitapauksena vaikeasti testattavasta koodista.
 
-Tällä videolla käymme läpi postitoimipaikka- ja postinumerot-tehtävien malliratkaisut ja tutustumme testaukseen yleisellä tasolla.
+**[Osa 2: pytest-työkalu](https://web.microsoftstream.com/video/06bc8cbb-15d6-43e6-8990-88629c3f895e)** *47:10*
 
-**[Osa 2: pytest-työkalu](https://web.microsoftstream.com/video/674aaa29-74eb-401f-8251-e6f14df7ae5d)** *45:43*
+Tällä videolla tutustumme Pytest-työkaluun ja yksikkötestien automatisointiin. Esimerkkikoodina käytämme karkausvuosilogiikkaa. Videolla esiintyvät tiedostot löydät [täältä](./src/).
 
-Tällä videolla tutustumme Pytest-työkaluun ja yksikkötestien automatisointiin. 
+**[Osa 3: pytest-mock ja harjoitustehtävän tehtävänanto](https://web.microsoftstream.com/video/d5d74243-e52b-448a-bafd-432491ed5261)** *37:12*
 
-**[Osa 3: pytest-mock ja harjoitustehtävän tehtävänanto](https://web.microsoftstream.com/video/9c438228-0354-49bb-8fb1-1ad03e4222cd)** *33:10*
+Tällä videolla perehdymme koodin testattavuuteen ja refaktoroimme malliratkaisun koodia testauksen mahdollistamiseksi. Sivuamme ulkoisten riippuvuuksien korvaamista testeissä ja käymme läpi viikkotehtävän tehtävänannon.
 
-Tällä videolla harjoittelemme ulkoisten riippuvuuksien korvaamista testeissä ja käymme läpi viikkotehtävän tehtävänannon.
--->
 
 ## Suositeltava oheisvideo: [What is Automated Testing?](https://www.youtube.com/watch?v=Nd31XiSGJLw)
 
