@@ -90,6 +90,7 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
                 </ul>
             </td>
             <td>
+                Tapaaminen luokassa ja Teamsissa ti 30.8. klo 8.30 - 10.45<br />
                 Tehtävien DL ma 5.9. klo 22:00
             </td>
         </tr>
@@ -105,6 +106,7 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
                 </ul>
             </td>
             <td>
+                Tapaaminen luokassa ja Teamsissa ti 6.9. klo 8.30 - 10.45<br />
                 Tehtävien DL ma 12.9. klo 22:00
             </td>
         </tr>
