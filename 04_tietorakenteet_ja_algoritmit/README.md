@@ -7,21 +7,21 @@ kuvaa ratkaistavan ongelman tapauksen, ja algoritmin tulee tuottaa tuloste (outp
 > *Antti Laaksonen, [Tietorakenteet ja algoritmit -kirja](https://github.com/pllk/tirakirja/raw/master/tirakirja.pdf)*
 
 
-<!--# Oppitunnin videot
+# Oppitunnin videot
 
 Videoilla esiintyvät lähdekoodit löydät [täältä](./src/).
 
-**[Osa 1: Johdanto tietorakenteisiin ja algoritmeihin](https://web.microsoftstream.com/video/b9af8942-94fb-46ac-a085-6cb9e57199c4)** *1:00:48*
+**[Osa 1: Johdanto tietorakenteisiin ja algoritmeihin](https://web.microsoftstream.com/video/0dc02d53-0eff-4780-a017-bb79a5c876a2)** *50:13*
 
 Tällä videolla toteutamme yksinkertaisen listoja hyödyntävän toistorakenteen ja perehdymme sen tehokkuuteen.
 
-**[Osa 2: Hajautustaulut, joukot ja asymptoottinen suoritusaika](https://web.microsoftstream.com/video/1967c82b-9d40-4247-9db0-95f5067c026a)** *48:46*
+**[Osa 2: Puolitushaku, asymptoottinen suoritusaika ja hajautustaulut](https://web.microsoftstream.com/video/0b5f8575-c72f-4521-9afc-5290ac54cd75)** *1:03:59*
 
 Tällä videolla perehdymme vertaillen eri tietorakenteisiin sekä niihin liittyvien operaatioiden suoritusaikaan. Opimme arvioimaan oman koodimme suoritusaikaa ja valitsemaan tarpeet huomioiden tehokkaita tietorakenteita ja algoritmeja.
 
-**[Osa 3: Viikon harjoitustehtävän tehtävänanto ja vinkit](https://web.microsoftstream.com/video/7e1e6347-b8c5-4f03-8c92-369591408be4)** *19:18*
+**[Osa 3: Viikon harjoitustehtävän tehtävänanto ja vinkit](https://web.microsoftstream.com/video/bfb30003-ff91-440c-8bb5-e4b982b8bad6)** *8:35*
 
-Viikon harjoitustehtävän tehtävänanto.-->
+Viikon harjoitustehtävän tehtävänanto.
 
 
 ## Tavoitteet
