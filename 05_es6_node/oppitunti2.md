@@ -48,7 +48,7 @@ Tehtävän ratkaisemiseksi oli useita erilaisia lähestymistapoja, ja oppitunnin
 
 # JS-koodin yksikkötestaaminen
 
-Koodin testaamiseksi tarvitsemme testaustyökalun, joka voi olla esimerkiksi [Jest](https://jestjs.io/) tai [Mocha](https://mochajs.org/). Tällä kurssilla on aikaisempina lukukausina käytetty Mochaa, mutta tällä lukukaudella siirrymme Jest:iin.
+Koodin testaamiseksi tarvitsemme testaustyökalun, joka voi olla esimerkiksi [Jest](https://jestjs.io/) tai [Mocha](https://mochajs.org/). Tällä kurssilla on aikaisempina lukukausina käytetty Mochaa, mutta nykyiset esimerkit hyödyntävät Jestiä.
 
 Työkalut kannattaa asentaa npm-paketinhallinnan avulla. Jotta npm käsittelee koodihakemistoamme projektina, tulee se alustaa seuraavalla komennolla:
 
@@ -70,7 +70,7 @@ Testejä varten luodaan uusi kansio "test":
 $ mkdir test
 ```
 
-Package.json-tiedoston `test`-skriptiksi asetetaan `mocha`-komento:
+Package.json-tiedoston `test`-skriptiksi asetetaan `jest`-komento:
 
 ```diff
  "scripts": {
@@ -79,7 +79,7 @@ Package.json-tiedoston `test`-skriptiksi asetetaan `mocha`-komento:
  },
 ```
 
-Nyt testit voidaan suorittaa `npm`-komennon avulla:
+Nyt testit voidaan suorittaa `npm test`-komennon avulla:
 
 ```
 $ npm test
