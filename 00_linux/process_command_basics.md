@@ -40,11 +40,14 @@ kill -9 2344
 ```
 
 <hr />
+
 **Extra:** How to find out which ports are open and listened in your local system, you need the program nmap and the scanned IP address
+
 ```shell
 sudo apt install nmap
 sudo nmap 127.0.0.1         
 ```
+
 ```
 // Output example:
 Nmap scan report for localhost (127.0.0.1)
@@ -54,7 +57,7 @@ PORT   STATE SERVICE
 22/tcp open  ssh
 
 Nmap done: 1 IP address (1 host up) scanned in 0.16 seconds
-
 ```
+
 **Note:** Be careful with address given to nmap, 
 as it's *illegal* to scan other peoples' computers in Finland
