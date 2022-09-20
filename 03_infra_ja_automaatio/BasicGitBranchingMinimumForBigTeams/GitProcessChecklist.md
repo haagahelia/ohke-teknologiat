@@ -34,4 +34,4 @@ product-listAll-add-filtering-juhani-liisa
 
 <hr />
 
-Inspect and Adapt - Use your Sprint Retrospectives to improve also you git process constantly
+* Inspect and Adapt * - Use your Sprint Retrospective meetings to improve also you git process. Constantly
