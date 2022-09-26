@@ -24,9 +24,8 @@ Itseopiskelumateriaalina voit hyödyntää hyviä sivustoja, kuten:
 * https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d
 
 
-# Aikaisemman toteutuksen videot
+# Aiheen videot
 
-Näiden videoiden sisältö poikkeaa hieman kurssin nykyisestä sisällöstä, mutta ne soveltuvat yhä aiheen itsenäiseen opiskeluun.
 
 **[Osa 1: Johdanto ES6-aiheeseen ja oppitunnin tavoitteisiin](https://web.microsoftstream.com/video/4ff9a051-3e45-4e89-a194-a6e68084d55a)** *21:02*
 

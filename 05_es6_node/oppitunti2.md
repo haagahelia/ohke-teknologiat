@@ -3,10 +3,11 @@
 Tällä oppitunnilla jatkamme JavaScript-kielen ja Node.js:n parissa. Tutustumme suosittuun [Express](https://expressjs.com/)-sovelluskehykseen (framework), jonka avulla voimme toteuttaa JavaScript-pohjaisen verkkopalvelun. Lisäksi sivuamme JavaScriptin yksikkötestausta.
 
 
-<!--# Oppitunnin videot
+# Oppitunnin videot
 
-Tämän aiheen videot julkaistaan maanantaina 4.10.2021.
+Tämän aiheen videot julkaistaan tiistaina 4.10.2022.
 
+<!--
 
 **[Osa 1: ES6-tehtävän malliratkaisu sekä Mocha-yksikkötestit](https://web.microsoftstream.com/video/8d5ce190-2bd0-4c8a-84ad-f51b2cbe7f3e)** *52:44*
 
