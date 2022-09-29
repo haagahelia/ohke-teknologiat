@@ -9,19 +9,17 @@ Tämän aiheen videot julkaistaan tiistaina 4.10.2022.
 
 <!--
 
-**[Osa 1: ES6-tehtävän malliratkaisu sekä Mocha-yksikkötestit](https://web.microsoftstream.com/video/8d5ce190-2bd0-4c8a-84ad-f51b2cbe7f3e)** *52:44*
+**[Node.js osa 1/3: malliratkaisu, npm, Jest ](https://web.microsoftstream.com/video/c714b986-1990-478a-a2d8-aef39daeb4bb)** *55:37*
 
-Tällä videolla kerrataan edellisen viikon syntaksit konkreettisen esimerkin avulla. Käymme läpi users & posts -tehtävän malliratkaisun ja perehdymme yksikkötestaukseen Mocha-testaustyökalulla.
+Tällä videolla kerrataan edellisen viikon syntaksit konkreettisen esimerkin avulla. Käymme läpi users & posts -tehtävän malliratkaisun, perehdymme Noden pakettienhallintaan ja teemme yksikkötestejä Jest-testaustyökalulla.
 
-**[Osa 2: Yksikkötestaus, http-pyynnöt ja asynkroninen ohjelmointi](https://web.microsoftstream.com/video/1ef90b63-0b90-4606-a75c-c25ccf13cb61)** *1:05:23*
+**[Node.js osa 2/3: npm, Jest, async/await](https://web.microsoftstream.com/video/631fa660-c0ec-44df-b948-79bd875edf5e)** *48:11*
 
-Tällä videolla käsittelemme yksikkötestausta Mochalla sekä eri tyyppisten arvojen vertailua JavaScriptillä. Asennamme `node-fetch`-kirjaston, jonka avulla voimme tehdä asynkronisia HTTP-pyyntöjä Node.js-koodistamme. Videon esimerkkikoodit: [api.js](./src/blog/api.js), [blog-api.test.js](./src/test/blog-api.test.js).
+Tällä videolla käsittelemme yksikkötestausta Jestillä sekä eri tyyppisten arvojen vertailua JavaScriptillä. Asennamme `node-fetch`-kirjaston, jonka avulla voimme tehdä asynkronisia HTTP-pyyntöjä Node.js-koodistamme. Tämän oppitunnin esimerkkikoodit löytyvät osoitteesta https://github.com/swd1tn002/express-oppitunti-2022.
 
-🚨 **Huom!** Videon esimerkistä poiketen asenna `node-fetch`-kirjastosta versio 2 komennolla `npm install node-fetch@^2`. Versiosta 3 alkaen `node-fetch` [ei tue enää require-funktiota](https://www.npmjs.com/package/node-fetch#loading-and-configuring-the-module). Vaihtoehtoisesti voit käyttää [cross-fetch](https://www.npmjs.com/package/cross-fetch)-pakettia node-fetch'in tilalla.
+**[ Node.js osa 3/3: npm, Jest, Express ](https://web.microsoftstream.com/video/68dfd069-5b72-4484-a6fd-0b3199f803a2)** *32:52*
 
-**[Osa 3: Express](https://web.microsoftstream.com/video/68dfd069-5b72-4484-a6fd-0b3199f803a2)** *32:52*
-
-Tällä videolla asennamme express-kirjaston, jonka avulla toteutamme yksinkertaisen http-palvelun edellisissä videoissa käsitellyn datan tarjoamiseksi web-selaimelle. Käsittelemme videon lopussa myös tämän viikon harjoitustehtävän tehtävänantoa. Videolla luodaan ja muokataan tiedostoa [index.js](./src/index.js).
+Tällä videolla asennamme express-kirjaston, jonka avulla toteutamme yksinkertaisen http-palvelun edellisissä videoissa käsitellyn datan tarjoamiseksi web-selaimelle. Käsittelemme videon lopussa myös tämän viikon harjoitustehtävän tehtävänantoa. Tämän oppitunnin esimerkkikoodit löytyvät osoitteesta https://github.com/swd1tn002/express-oppitunti-2022.
 -->
 
 # ES6-syntaksien kertaus
