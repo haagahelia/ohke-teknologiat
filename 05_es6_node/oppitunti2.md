@@ -5,10 +5,6 @@ Tällä oppitunnilla jatkamme JavaScript-kielen ja Node.js:n parissa. Tutustumme
 
 # Oppitunnin videot
 
-Tämän aiheen videot julkaistaan tiistaina 4.10.2022.
-
-<!--
-
 **[Node.js osa 1/3: malliratkaisu, npm, Jest ](https://web.microsoftstream.com/video/c714b986-1990-478a-a2d8-aef39daeb4bb)** *55:37*
 
 Tällä videolla kerrataan edellisen viikon syntaksit konkreettisen esimerkin avulla. Käymme läpi users & posts -tehtävän malliratkaisun, perehdymme Noden pakettienhallintaan ja teemme yksikkötestejä Jest-testaustyökalulla.
@@ -20,7 +16,7 @@ Tällä videolla käsittelemme yksikkötestausta Jestillä sekä eri tyyppisten 
 **[ Node.js osa 3/3: npm, Jest, Express ](https://web.microsoftstream.com/video/68dfd069-5b72-4484-a6fd-0b3199f803a2)** *32:52*
 
 Tällä videolla asennamme express-kirjaston, jonka avulla toteutamme yksinkertaisen http-palvelun edellisissä videoissa käsitellyn datan tarjoamiseksi web-selaimelle. Käsittelemme videon lopussa myös tämän viikon harjoitustehtävän tehtävänantoa. Tämän oppitunnin esimerkkikoodit löytyvät osoitteesta https://github.com/swd1tn002/express-oppitunti-2022.
--->
+
 
 # ES6-syntaksien kertaus
 
