@@ -13,7 +13,7 @@ Tällä videolla kerrataan edellisen viikon syntaksit konkreettisen esimerkin av
 
 Tällä videolla käsittelemme yksikkötestausta Jestillä sekä eri tyyppisten arvojen vertailua JavaScriptillä. Asennamme `node-fetch`-kirjaston, jonka avulla voimme tehdä asynkronisia HTTP-pyyntöjä Node.js-koodistamme. Tämän oppitunnin esimerkkikoodit löytyvät osoitteesta https://github.com/swd1tn002/express-oppitunti-2022.
 
-**[ Node.js osa 3/3: npm, Jest, Express ](https://web.microsoftstream.com/video/68dfd069-5b72-4484-a6fd-0b3199f803a2)** *32:52*
+**[ Node.js osa 3/3: npm, Jest, Express ](https://web.microsoftstream.com/video/0ba8a483-aaee-41d4-96c2-459d86ef1264)** *29:59*
 
 Tällä videolla asennamme express-kirjaston, jonka avulla toteutamme yksinkertaisen http-palvelun edellisissä videoissa käsitellyn datan tarjoamiseksi web-selaimelle. Käsittelemme videon lopussa myös tämän viikon harjoitustehtävän tehtävänantoa. Tämän oppitunnin esimerkkikoodit löytyvät osoitteesta https://github.com/swd1tn002/express-oppitunti-2022.
 
