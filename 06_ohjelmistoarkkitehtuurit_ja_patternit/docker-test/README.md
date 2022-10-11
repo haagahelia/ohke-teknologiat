@@ -25,7 +25,7 @@ git push
 
 # Then add the docker-compose.yml file to the project root
 
-[01 docker-compose.yml file](.\screenshots\01_docker-compose-yml.png)
+[01 docker-compose.yml file](screenshots/01_docker-compose-yml.png)
 
 You can use e.g. VS Code editor. After the file is ready, run this command e.g. in the VS code Terminal window
 
@@ -38,7 +38,7 @@ It will download the defined two docker images 'zookeeper' and 'kafka' and confi
 The terminal window will keep on showing messages from the (zookeeper service, and more importantly the) Kafka server. But you can split and narrow the Terminal window to the left of the bottom. 
 
 Thus you get more Terminal windows to the right. In a new one run the following topic creation command script with its options.
-[02 kafka_topic_creation_command file](.\screenshots\02_kafka_topic_creation_command.png)
+[02 kafka_topic_creation_command file](screenshots/02_kafka_topic_creation_command.png)
 
 ## Create a Node project for both producer and client processes
 
@@ -59,10 +59,10 @@ npm i node-rdkafka --save
 npm i avsc --save
 ```
 Next we define two runnable index.js files. So two separate processes are born from this administratively single Node project.
-[03 package.json file](.\screenshots\03_package_json_scripts_added.png)
+[03 package.json file](screenshots/03_package_json_scripts_added.png)
 
 ### Time to write the Kafka producer client and then test it
-[04 producer code file](.\screenshots\04_producer_code.png)
+[04 producer code file](screenshots/04_producer_code.png)
 
 ```
 npm run start:producer
@@ -70,7 +70,7 @@ npm run start:producer
 Later you can use Ctrl+C to stop it for editing and restart.
 
 ### Time to write the Kafka consumer client and then test it
-[05 consumer code file](.\screenshots\05_consumer_code.png)
+[05 consumer code file](screenshots/05_consumer_code.png)
 
 ```
 npm run start:consumer
