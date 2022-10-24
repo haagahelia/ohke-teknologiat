@@ -182,9 +182,9 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
             <td colspan="2">Intensiiviviikko</td>
         </tr>
         <tr>
-            <td>24.-30.10.</td>
+            <td>Ti 25.10.</td>
             <td>
-                Mahdollinen vierailijaluento<br />
+                Kafka, Docker-alkeet...<br />
             </td>
             <td>
             </td>
