@@ -141,6 +141,29 @@ Deadline **mielellään** syksyn kurssilla normaaliin tapaan. Mutta varmaan jous
 
 ## Hints for the Kafka-task
 
+1.Docker is quite handy – but you should delete / turn off the old containers before you run docker compose again if you have eg  restarted your computer computer 
+
+2. Delete package-lock.json file and node_modules folder and try to run npm install again. 
+
+3. Sometimes the consumer takes reaaaally long to start produce out the messages it received, so be patient 
+
+4.First, check that the code you are using now really works, and make a copy to your version management system, and then modify it carefully.  
+
+5. For some things you need to restart the console which happens when you restart the computer 
+
+6. C:\somewhere> .\topic_creation_command.sh 
+
+8. At some point you need one oneString() 
+
+9. Renaming everything can help you: taskProducer, taskStream, ja taskConsumer. then answerProducer, answerStrem, answerConsumer 
+
+10. Do everything step by step and print everything out to make sure you have that one part working before moving to the next, then you can comment out the printings 
+
+11. Hint: Some students had to install some Visual Studio (proper, not code) or at least some packages for that. So there were some clashing older tools on their computers?) 
+
+ 
+## Hints for the Kafka-task - in Finnish
+
 Hint: Tuo Docker Desktop on muuten hyödyllinen, sieltä kannatta käydä sammuttamassa ja poistamassa vanhat containerit. Ennenkuin ajaa taas docker-compose -komennon, jos on välillä tehnyt muuta ja mm. käynnistänyt koneen uudelleen. 
 
 Hint: Poistaa package-lock.json tiedoston ja node_modules kansion ja yrittää ajaa npm install uudestaan? Ja varpaatkin ristiin että siitä on apua.
