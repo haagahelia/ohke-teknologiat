@@ -141,25 +141,26 @@ Deadline **mielellään** syksyn kurssilla normaaliin tapaan. Mutta varmaan jous
 
 ## Hints for the Kafka-task
 
-1.Docker is quite handy – but you should delete / turn off the old containers before you run docker compose again if you have eg  restarted your computer computer 
+1. **Most effective solution:** Some students had to install some Visual Studio (proper, not code) and some "Visual Studio Build tools for C++". So that might either sort out some tools or install e.g. some neededed C++ library). That will fix the gyp-node error. 
 
-2. Delete package-lock.json file and node_modules folder and try to run npm install again. 
+1. Docker is quite handy – but you should delete / turn off the old containers before you run docker compose again if you have eg  restarted your computer computer 
 
-3. Sometimes the consumer takes reaaaally long to start produce out the messages it received, so be patient 
+1. Delete package-lock.json file and node_modules folder and try to run npm install again. 
 
-4.First, check that the code you are using now really works, and make a copy to your version management system, and then modify it carefully.  
+1. Sometimes the consumer takes reaaaally long to start produce out the messages it received, so be patient 
 
-5. For some things you need to restart the console which happens when you restart the computer 
+1. First, check that the code you are using now really works, and make a copy to your version management system, and then modify it carefully.  
 
-6. C:\somewhere> .\topic_creation_command.sh 
+1. For some things you need to restart the console which happens when you restart the computer 
 
-8. At some point you need one oneString() 
+1. Topic creation like this C:\somewhere> .\topic_creation_command.sh . Later when you need another topic, create another file and run it too.
 
-9. Renaming everything can help you: taskProducer, taskStream, ja taskConsumer. then answerProducer, answerStrem, answerConsumer 
+1. At some point you need one oneString() 
 
-10. Do everything step by step and print everything out to make sure you have that one part working before moving to the next, then you can comment out the printings 
+1. Renaming everything can help you: taskProducer, taskStream, ja taskConsumer. then answerProducer, answerStrem, answerConsumer 
 
-11. Hint: Some students had to install some Visual Studio (proper, not code) or at least some packages for that. So there were some clashing older tools on their computers?) 
+1. Do everything step by step and print everything out to make sure you have that one part working before moving to the next, then you can comment out the printings 
+
 
  
 ## Hints for the Kafka-task - in Finnish
