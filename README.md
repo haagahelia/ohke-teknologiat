@@ -184,7 +184,7 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
         <tr>
             <td>Ti 25.10.</td>
             <td>
-                Kafka, Docker-alkeet...<br />
+                <strong><a href="06_ohjelmistoarkkitehtuurit_ja_patternit/">Kafka, Docker-alkeet...</a></strong>
             </td>
             <td>
             </td>
