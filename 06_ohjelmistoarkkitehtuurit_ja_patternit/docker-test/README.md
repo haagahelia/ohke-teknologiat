@@ -104,3 +104,37 @@ Then when you create your own code, or make any other changes, copy that code to
 
 Find out how to secure the system with key files or such. Now there is nothing stopping anybody from posting the messages as long as they know IP address and correct port.
 
+## The cybersecurity option - If cannot do the environment installation. Or after finishing the Kafka-system
+
+### English task description first
+If installing Kafka-environment and clients fails, there is purely theoretical option, a PDF report on Kafka-app cyber security. How to secure e.g. the described system with one Kafka-server and two clients residing most likely all on different computers. How to deal with 0. secure installations 1. allow only certain clients to register to the Kafka-server 2. how to secure the connections with encryption
+
+Answer as one freeformat PDF-file, where you cover e.g. some of these aspects in some logical order:
+
+* big picture, short description about the architecture
+* principles, philosophy
+* steps briefly, in theoretical / high abstraction level
+* annotated links to instructions, documentation, tutorial about the security
+* details to take into account, especially those that often fail
+* usual errors you have found developers to make, and fixes to them 
+
+Loaned material is ok, as long as sources are linked. These will not be published in Theseus or other public forum. Thus, you can loan info more freely
+
+Deadline: as soon as possibly in your and project course schedule. 
+
+### Finnish task description of the same
+Jos ei Kafka-työn ympäristö asennu, on tuossa vaihtoehtoinen tehtävä, jossa pysytään ihan teoriaselvityksessä. Miten tietoturvataan esim. tuo annettu kuvio, jossa on Kafka-server ja jossakin vaikka eri paikoissa tai samassa paikassa sijaitsevat Kafka-clientit. Miten hoidetaan 0. tietoturvallinen asennus 1. sallitaan vain tiettyjen clienttien rekisteröityminen Kafka-palvelimille 2. turvataan clientien liikenne serveriin saluksella jne.
+
+Vastaus vapaamuotoisena yhtenä PDF-tiedostona, jossa voi olla mm. seuraavia jossakin loogisessa järjestyksessä:
+
+
+* big picture, lyhyt kuvaus arkkitehtuurista
+* periaatteet
+* askeleet lyhyesti, periaatetasolla
+* linkkejä ohjeisiin ja dokumentaatioon, tutoriaalit
+* huomioitavia yksityiskohtia, jotka usein menevät pieleen
+* tavallisia löytämiänne virheitä 
+
+Lainattu materiaali on ok, kunhan lähde on mainittu. Näitä ei julkaista julkaisuna missään Theseuksessa tai muulla foorumilla. Siksi lainata saa vapaammin.
+
+Deadline **mielellään** syksyn kurssilla normaaliin tapaan. Mutta varmaan joustoa tällä kerralla löytyy
