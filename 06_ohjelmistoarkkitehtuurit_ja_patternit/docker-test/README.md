@@ -138,3 +138,27 @@ Vastaus vapaamuotoisena yhtenä PDF-tiedostona, jossa voi olla mm. seuraavia jos
 Lainattu materiaali on ok, kunhan lähde on mainittu. Näitä ei julkaista julkaisuna missään Theseuksessa tai muulla foorumilla. Siksi lainata saa vapaammin.
 
 Deadline **mielellään** syksyn kurssilla normaaliin tapaan. Mutta varmaan joustoa tällä kerralla löytyy
+
+## Hints for the Kafka-task
+
+Hint: Tuo Docker Desktop on muuten hyödyllinen, sieltä kannatta käydä sammuttamassa ja poistamassa vanhat containerit. Ennenkuin ajaa taas docker-compose -komennon, jos on välillä tehnyt muuta ja mm. käynnistänyt koneen uudelleen. 
+
+Hint: Poistaa package-lock.json tiedoston ja node_modules kansion ja yrittää ajaa npm install uudestaan? Ja varpaatkin ristiin että siitä on apua.
+
+Hint: Välillä muuten consumer:illa kestää tooodella pitkään, ennen kuin se alkaa sylkemään saamiaan viestejä ulos. Eli kärsivällisyyttä odottaessa. Siinä ei välttämättä virhettä, jos ei heti näy mitään. Ketsuppipullon aukeamisessa saattaa kestää hetki.
+
+Hint: Ensiksi nykyinen koodi todistetaan toimivaksi ja sitten siitä kopio versionhallintan, ja varovasti muuttamaan sitä. Joko omaa ideaa kohti tai sitten tekee sen simppelin "matikantehtävätarkistajan". Tarkistaja on simppeli, mutta miten sen Kafka-asiakkuudet ja asynkroonisen tapahtumankäsittelyn saa toimimaan on se haaste.
+
+Hint: Uudelleenkäynnistyshän tarvittiin jossakin vaiheessa olisko ollut se? Ja joihinkin asioihin tarvitaan konsolin uudelleenkäynnistystä, joka tulee samalla kun käynnistää koneen uudelleen. Eli saattoi korjaantua silläkin? Tuliko tuon asennuksen yhteydessä käynnistettyä uudelleen jotakin.
+
+Hint:  C:\somewhere> .\topic_creation_command.sh
+
+Hint: Esitetyn ristiin kytketyn sovelluksen teko meni kuten oletettua (A: luo tehtävän ja lähettää, B: tarkistaa laskutoimituksen ja lähettää vastauksen, A: vastaanottaa vastauksen ja tulostaa sen). Ei isoja kommervenkkejä, ympäristö voi toki joillakin potkia vastaan. Mutta muuten consumeriin lisättiin producer-ominaisuudet kanavalle=topiciin 'answer' ja sitten produceriin consumer-ominaisuudet sille kanavalle.
+ 
+Hint: Yksi .toString( ) tarvitaan loppuvaiheessa.
+ 
+Hint: Kaikkien nimeäminen uudelleen voi helpottaa ymmärtämään ohjelmoidessa ja debugatessa? eli alussa laittaa vaikka taskProducer, taskStream, ja taskConsumer. Sitten answerProducer, answerStrem, answerConsumer?
+ 
+Hint: Kaikki kannattaa tehdä vaiheittain ja tulostella joka vaiheessa varmistaakseen että on saanut seuraavan vaiheen toimimaan. Jos toimii, niin voi kommentoida niitä console.log:eja pois. 
+
+(Hint: Some students had to install some Visual Studio (proper, not code) or at least some packages for that. So there were some clashing older tools on their computers?)
