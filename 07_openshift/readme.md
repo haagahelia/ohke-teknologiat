@@ -1,22 +1,34 @@
-# OpenShift-kokeilut ja esimerkit
+# Dockerin hyödyntäminen paikallisesti sekä pilvessä
 
-Tässä demossa **yritetään** julkaista Python- ja JS-sovelluksia OpenShift-pilvessä sekä konttien että pelkän lähdekoodin avulla. Esimerkkejä ei ole tarkoitus toistaa itse demon aikana.
+Tämän oppitunnin demossa luodaan kontteja Python- ja JS-sovelluksille, joita julkaistaan Docker-konttirekisterissä sekä OpenShift-pilvessä.
 
 Kokonaisuutena pilvipalveluiden infrastruktuuri on erittäin laaja, ja siitä riittäisi asiaa useammaksikin kurssiksi. Tällä oppitunnilla on tarkoitus tutustua terminologiaan ja työvaiheisiin siinä määrin, että aiheiden parissa on mahdollista jatkaa itseopiskelua esimerkiksi seminaarityön puitteissa.
 
 
-## Kurssin yksityinen pilvi
+## Miksi ajaa sovelluksia konteissa?
 
-Kurssilla on käytössä Otaverkon tarjoama OpenShift-ympäristö. Ohjeet käyttäjätunnusten saamiseksi löytyvät kurssin Teams-kanavalta.
+> *"Rakkaalla lapsella on monta nimeä: kontti, säiliö, docker, virtualisointiympäristö, eristetty itsenäinen prosessi… Asian ymmärtämiseksi ei kuitenkaan tarvitse olla koodari tai sysadmin.*
+>
+> *Kontit ovat virtuaalipalvelimia huomattavasti kevyempi ja joustavampi tapa paketoida ja ajaa Windows- ja Linux-sovelluksia. Ne ovat tekniikka sovellusten kehittämiseen, julkaisemiseen ja ylläpitämiseen. Kontit ovat tulleet korvaamaan virtuaalipalvelimet ja Gartnerin arvion mukaan 75 % yrityksistä käyttää vuoden 2022 loppuun mennessä kontteja ohjelmistojen ajamiseen.*
+>
+> *Konttia voi luonnehtia itsenäiseksi ohjelmistoksi, jota voi ajaa joustavasti niin omalla työasemalla, rautapalvelimella, virtuaalipalvelimella tai pilvessä sellaisenaan ilman ohjelmiston koodiin tarvittavia muutoksia. Se toimii kaikissa ympäristöissä samalla tavalla, koska se on eriytetty prosessitasolla ja sillä on oma tiedostojärjestelmä."*
+>
+> Otaverkko. OpenShift palveluna. https://otaverkko.fi/palvelukategoria/openshift/
 
-OpenShift-kirjautuminen onnistuu selaimella osoitteessa https://console-openshift-console.apps.hhocp.otaverkko.fi/. Palveluissamme on ainakin toistaiseksi self-signed sertifikaatit, eli on odotettua, että selain varoittaa epäluotettavasta sertifikaatista. Ensimmäinen työvaihe kirjautumisen jälkeen on tyypillisesti oman projektin luominen.
 
-Konttirekisteri löytyy osoitteesta `default-route-openshift-image-registry.apps.hhocp.otaverkko.fi`. Rekisteri ei ole käytettävissä selaimella, vaan sitä käytetään `docker`-komennon kautta (vaihtoehtoisesti `podman`). Lisätiedot esimerkkeineen ja OAuth-ohjeistuksineen löydät alempaa ja oppitunnin tallenteelta.
 
-Voit tarvittaessa ottaa ssh-yhteyden ympäristömme kuormantasaajaan osoitteella `hhocp.otaverkko.fi`. Kuormantasaajalta löytyy `oc`- ja `kubectl`-komennot, joita voit tarvita mahdollisesti edistyneempien operaatioiden parissa seminaarityössä.
+## Oppitunnin videot
+
+1. [Konttien luonti, käyttäminen ja peruskäsitteet]() *55:31*
+
+2. [Konttien julkaisu konttirekisterissä ja verkkopalveluna]() *50:30*
+
+3. [Konttien hyödyntäminen kehitysympäristössä](https://web.microsoftstream.com/video/81928ca0-8a61-4aea-a495-5e0d8851a8bf) *12:57*
 
 
 ## Missä näitä teknologioita käytetään?
+
+Tällä viikolla käsiteltävät teknologiat ovat yleistyneet hyvin nopeasti, ja kaikki suurimmat pilvipalvelualustat tarjoavat omat palvelunsa niiden käyttämiseksi. Lisätietoa eri pilvialustojen palveuista löydät esimerkiksi seuraavista lähteistä:
 
 Docker-konttirekistereitä (container registry)
 
@@ -35,14 +47,32 @@ Kubernetes-pilviratkaisuja
 * CSC Rahti: https://rahti.csc.fi/
 
 
+## Kurssin yksityinen pilvi
+
+Kurssilla on käytössä [Otaverkon tarjoama OpenShift-ympäristö](https://otaverkko.fi/palvelukategoria/openshift/), eli "yksityinen pilvi". Yksityinen pilvi tarkoittaa tässä sitä, että käyttöömme on varattu skaalautuva alusta, jonne voimme luoda uusia palveluita hyvin joustavasti.
+
+> *"OpenShift on sovelluskehittäjien palvelualusta, joka on ratkaisu sovelluskehitysympäristöjen automatisointiin ja konttien hallintaan. Saat DevOps-tiimisi tarvitsemat työkalut, eikä asiakkaasi tarvitse tehdä ohjelmistoprojekteissasi valintaa laadun ja nopeuden välillä."*
+>
+> Otaverkko. OpenShift palveluna. https://otaverkko.fi/palvelukategoria/openshift/
+
+Ohjeet käyttäjätunnusten saamiseksi löytyvät kurssin Teams-kanavalta.
+
+OpenShift-konsoliin kirjautuminen onnistuu selaimella osoitteessa https://console-openshift-console.apps.hhocp.otaverkko.fi/. Palveluissamme on valitettavasti toistaiseksi self-signed sertifikaatit, eli on odotettua, että selain varoittaa epäluotettavasta sertifikaatista.
+
+Kirjautumisen jälkeen ensimmäinen työvaihe kirjautumisen jälkeen on tyypillisesti oman projektin luominen. Projekti luodaan oppitunnin 2. videolla.
+
+Konttirekisteri löytyy osoitteesta `default-route-openshift-image-registry.apps.hhocp.otaverkko.fi`. Rekisteri ei ole käytettävissä selaimella, vaan sitä käytetään `docker`-komennon kautta (vaihtoehtoisesti `podman`). Lisätiedot esimerkkeineen ja OAuth-ohjeistuksineen löydät alempaa ja oppitunnin tallenteelta.
+
+Voit tarvittaessa ottaa ssh-yhteyden ympäristömme kuormantasaajaan osoitteella `hhocp.otaverkko.fi`. Kuormantasaajalta löytyy `oc`- ja `kubectl`-komennot, joita voit tarvita mahdollisesti edistyneempien operaatioiden parissa seminaarityössä.
+
+
 ## Mikä on kontti?
 
 > *"Containers are a technology based on operating system kernel features that allow the creation of isolated environments sharing a kernel. For example, container features make it possible to have several isolated root filesystems, network stacks and process trees that all use the same kernel. These isolated environments are similar in functionality to lightweight virtual machines, but there are some key differences between virtual machines and containers. The biggest one is that virtual machines always have their own kernels, while containers share the host system's kernel."*
 >
 > https://docs.csc.fi/cloud/rahti/containers/
 
-
-**Käsitteitä:**
+**Seuraavat käsitteet käsitellään oppitunnin videotallenteilla:**
 
 * Image
 * Container
@@ -58,7 +88,7 @@ Kubernetes-pilviratkaisuja
 > https://docs.csc.fi/cloud/rahti/concepts/
 
 
-**Käsitteitä:**
+**Seuraavat käsitteet käsitellään oppitunnin videotallenteilla:**
 
 * Service
 * Pod
@@ -164,6 +194,7 @@ Jos kontteja jää "roikkumaan" taustalle, niitä voidaan poistaa komennolla:
 
     docker container rm KONTTI
 
+
 ### Tiedostojen jättäminen imagen ulkopuolelle (dockerignore)
 
 Yllä esitetyssä esimerkissä `COPY . ./` kopioi **kaikki** nykyisen hakemiston tiedostot luotavalle imagelle. Tämä voi olla monessa tapauksessa erittäin epätoivottavaa, koska työhakemisto saattaa sisältää esimerkiksi `.env`-tiedostoja, joissa esiintyy salaisuuksia, tai `node_modules`- tai `target`-hakemistoja, jotka on tarkoitus luoda kontin luonnin yhteydessä osana buildia.
@@ -181,15 +212,16 @@ node_modules
 target
 ```
 
-`.dockerignore`-tiedostoa luodessasi voi olla hyvä katsoa, mitä projektin `.gitignore`-tiedostossa on jo listattuna.
+Vinkki: `.dockerignore`-tiedostoa luodessasi voi olla hyvä katsoa, mitä projektin `.gitignore`-tiedostossa on jo listattuna.
+
 
 ## 3. Imagen julkaisu konttirekisterissä
 
 Ennen julkaisua imagelle on tarpeen lisätä tagi, joka vastaa sen sijaintia konttirekisterissä: https://docs.docker.com/engine/reference/commandline/tag/. Konttirekisterissä osoite sisältää projektin nimen, joten varmista että olet luonut itsellesi projektin OpenShiftiin ja että käytät samaa nimeä. Projektin nimen jälkeen tuleva imagen nimi on vapaavalintainen.
 
-Kurssin OpenShift-pilven konttirekisteri sijaitsee osoitteessa `default-route-openshift-image-registry.apps.hhocp.otaverkko.fi`. Oppituntiin mennessä kyseistä rekisteriä ei ole kuitenkaan vielä saatu otettua onnistuneesti käyttöön.
+Kurssin OpenShift-pilven konttirekisteri sijaitsee osoitteessa `default-route-openshift-image-registry.apps.hhocp.otaverkko.fi`.
 
-Seuraava esimerkki näyttää miten `login`, `tag` ja `push` toimivat `docker-registry.rahti.csc.fi`-rekisterin kanssa:
+Seuraava esimerkki näyttää miten `login`, `tag` ja `push` toimivat `oauth-openshift.apps.hhocp.otaverkko.fi`-rekisterin kanssa:
 
     # 1. Kirjautuminen konttirekisteriin.
     # Salasanan sijasta käytetään OAuth-tokenia, jonka saat 
@@ -215,7 +247,7 @@ Seuraava esimerkki näyttää miten `login`, `tag` ja `push` toimivat `docker-re
 
 Lisätiedot tästä ratkaisusta löydät osoitteesta https://docs.docker.com/registry/insecure/#deploy-a-plain-http-registry. Asetusten muuttamisen jälkeen Docker tulee käynnistää uudelleen.
 
-🔐 **Huom!** Kirjautumisessa käytetään salasanan sijasta OAuth-tokenia, jonka saat selville osoitteesta https://oauth-openshift.apps.hhocp.otaverkko.fi/oauth/token/request.
+🔐 **Huom!** Kirjautumisessa käytetään salasanan sijasta OAuth-tokenia, jonka saat selville osoitteesta https://oauth-openshift.apps.hhocp.otaverkko.fi/oauth/token/request. Lisätiedot löydät oppitunnin 2. videolta.
 
 
 ## 4. Kontin deployment OpenShiftissä
@@ -267,7 +299,7 @@ Konttien luominen "käsin" ei ole aina, erityisesti pienten esimerkkien kanssa v
 > [Source-to-image. docs.openshift.com](https://docs.openshift.com/container-platform/4.10/openshift_images/using_images/using-s21-images.html)
 
 
-# Tehtävä
+<!--# Tehtävä
 
 Tämä on kurssin viimeinen viikkotehtävä, ja sen saa halutessaan tehdä yksin, parin kanssa tai ryhmässä. Tehtävässä ei ole tarkkaa toiminnallista vaatimusta, joten voitte soveltaa aiheita sen mukaan, oletteko enemmän kiinnostuneita esimerkiksi Dockerista vai Kuberneteksesta. Mikäli teette työn ryhmässä, merkitkään raporttiinne selvästi kaikki tekijät. Mikäli jaoitte työtä eri kirjoittajien kesken, eritelkää kuka teki minkäkin vaiheen.
 
@@ -291,3 +323,4 @@ Kohtuullisen haastava ja edistynyt tehtävän sisältö voisi olla esimerkiksi s
 4. Lisää sovelluksesi projektiin GitHubista suoraan lähdekoodeista [source-to-image -lähestymistavalla](https://docs.openshift.com/container-platform/4.10/openshift_images/using_images/using-s21-images.html)
 
 Raportoi edistymisesi tehtävässä. Huomaa, että kaikkia vaiheita ei tarvitse saada valmiiksi, kunhan osoitat oppineesi eri työvaiheista.
+-->

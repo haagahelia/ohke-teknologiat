@@ -192,7 +192,7 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
         <tr>
             <td>Ti 1.11.</td>
             <td>
-                <strong><a href="07_openshift/">Pilvinatiivi ohjelmistokehitys (Docker, Kubernetes, OpenShift...)</a></strong>
+                <strong><a href="07_openshift/">Dockerin hyödyntäminen paikallisesti sekä pilvessä (Docker, Kubernetes, OpenShift...)</a></strong>
             </td>
             <td>
                 Tehtävien DL ma 7.11. klo 22:00
