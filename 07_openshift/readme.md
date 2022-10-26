@@ -19,9 +19,9 @@ Kokonaisuutena pilvipalveluiden infrastruktuuri on erittäin laaja, ja siitä ri
 
 ## Oppitunnin videot
 
-1. [Konttien luonti, käyttäminen ja peruskäsitteet]() *55:31*
+1. [Konttien luonti, käyttäminen ja peruskäsitteet](https://web.microsoftstream.com/video/a542ef0a-fc3e-41b3-aab8-0e734bc75050) *55:31*
 
-2. [Konttien julkaisu konttirekisterissä ja verkkopalveluna]() *50:30*
+2. [Konttien julkaisu konttirekisterissä ja verkkopalveluna](https://web.microsoftstream.com/video/b0490fff-c024-4882-94ec-a99859d1f620) *50:30*
 
 3. [Konttien hyödyntäminen kehitysympäristössä](https://web.microsoftstream.com/video/81928ca0-8a61-4aea-a495-5e0d8851a8bf) *12:57*
 
