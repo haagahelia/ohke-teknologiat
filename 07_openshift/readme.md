@@ -301,59 +301,63 @@ Konttien luominen "käsin" ei ole aina, erityisesti pienten esimerkkien kanssa v
 
 # Tehtävä
 
-Tämä on kurssin viimeinen viikkotehtävä, ja sen saa halutessaan tehdä yksin, parin kanssa tai ryhmässä. Tehtävässä ei ole tarkkaa toiminnallista vaatimusta, joten voitte soveltaa aiheita sen mukaan, oletteko enemmän kiinnostuneita esimerkiksi Dockerista tai Kuberneteksesta, tai haluatteko kokeilla esimerkiksi oman sovelluksen julkaisua PaaS-palvelussa. Mikäli teette työn ryhmässä, merkitkään raporttiinne selvästi kaikki tekijät. Mikäli jaoitte työtä eri kirjoittajien kesken, eritelkää kuka teki minkäkin vaiheen.
+Tämä on kurssin viimeinen viikkotehtävä, ja sen saa halutessaan tehdä yksin, parin kanssa tai ryhmässä. Tehtävässä ei ole tarkkaa toiminnallista vaatimusta, joten voitte soveltaa aiheita sen mukaan, oletteko enemmän kiinnostuneita esimerkiksi Dockerista tai Kuberneteksesta, tai haluatteko kokeilla esimerkiksi oman sovelluksen julkaisua PaaS-palvelussa. Mikäli teette työn ryhmässä, merkitkää raporttiinne selvästi kaikki tekijät. Mikäli jaoitte työtä eri kirjoittajien kesken, eritelkää kuka teki minkäkin vaiheen.
 
 Tehtävänä on soveltaa yllä ja videoissa käsiteltyjä aiheita oman sovelluksen kanssa esimerkiksi julkaisemalla oma tai ryhmän harjoitustyö konttirekisterissä tai OpenShift-alustalla. Julkaistava sovellus voi olla esimerkiksi jokin tämän kurssin viikkoharjoituksista, ohjelmistoprojekti II:lla kehitettävä projekti tai palvelinohjelmointi- tai fronttikurssin harjoitustyö.
 
 Tehtävää tehdessäsi kirjaa itsellesi ylös eri työvaiheet, käyttämäsi komennot sekä hyödyntämäsi nettilähteet. Oletettavaa on, että kaikki työvaiheet eivät tule onnistumaan ensimmäisellä yrityksellä, joten kirjaa eri välivaiheet ja niistä oppimasi asiat. Kirjaa myös ylös osoitteet, joista julkaisemasi Docker image tai web-palvelu on tarkasteltavissa tehtävän arvioinnin yhteydessä, mikäli sait julkaisun tehtyä valmiiksi.
 
-Palauta lopuksi Teamsiin kirjoittamasi raportti. Raportti voi olla muodoltaan tekstitiedosto (md, txt) tai pdf, eikä sen tarvitse noudattaa erityistä raportointiohjetta. Käyttämänne lähteet tulee kirjata (tutoriaalit, tekniset dokumentit, stack overflow), mutta lähdeviitteet ovat täysin vapaamuotoisia. Kuvankaappausten käyttäminen raportissa voi olla hyvä idea. Jos haluat, voit toteuttaa raportin myös osana GitHub-repositoriota, jolloin riittää, että palautat Teamsiin linkin repositorioosi.
+Palauta lopuksi kirjoittamasi raportti Teamsiin. Raportti voi olla muodoltaan tekstitiedosto (md, txt) tai pdf, eikä sen tarvitse noudattaa erityistä raportointiohjetta. Käytetyt lähteet tulee kirjata (esim. tutoriaalit, tekniset dokumentit, stack overflow), mutta lähdeviitteet ovat täysin vapaamuotoisia. Kuvankaappausten käyttäminen raportissa voi olla hyvä idea. Jos haluat, voit toteuttaa raportin myös osana GitHub-repositoriota, jolloin riittää, että palautat Teamsiin linkin repositorioosi.
 
 ## Arviointi
 
-Tehtävän arviointikriteerit perustuvat tehtävässä opittuihin asioihin. Raportit, joissa opiskelija tai ryhmä selvästi osoittaa oppineensa uusia asioita ja soveltaneensa niitä käytännössä, arvioidaan oletuksena arvosanalla 5.
+Tehtävän arviointi perustuu tehtävässä opittuihin asioihin. Raportit, joissa opiskelija tai ryhmä selvästi osoittaa oppineensa uusia asioita ja soveltaneensa niitä käytännössä, arvioidaan oletuksena arvosanalla 5.
 
 Raportit, joissa on selvästi tehty erilaisia osin satunnaisia kokeiluja, mutta opitut asiat ovat heikosti yksilöitävissä, arvioidaan oletuksena arvosanalla 3.
 
 Huomatkaa, että sovelluksen julkaisun ei tarvitse lopulta onnistua, vaan täydet pisteet voi saada myös tilanteessa, jossa yritys on epäonnistunut, mutta siitä on selvästi opittu ja tehdyt vaiheet on raportoitu asianmukaisesti.
 
-Tehtävän ratkaisusi voi olla laajuudeltaan hyvinkin yksinkertainen, eli sen ei tarvitse tavoitella esimerkiksi tunnilla esitettyjen esimerkkien laajuutta. Voit halutessasi jatkaa aiheen parissa työskentelyä kurssin seminaariosuudessa.
+Tehtävän ratkaisu voi olla teknisesit ja laajuudeltaan hyvinkin yksinkertainen, eli sen ei tarvitse tavoitella esimerkiksi tunnilla esitettyjen esimerkkien laajuutta. Voit halutessasi jatkaa aiheen parissa työskentelyä kurssin seminaariosuudessa.
+
 
 ## Vaihtoehtoisia ideoita tehtävään
 
-Seuraavat ovat vaihtoehtoisia ideoita, joita voit soveltaa vapaasti, ja joista yksi riittää hyvin tähän tehtävään. Jos Ohjelmistoprojekti II -kurssin projektinne ei sovellu tehtävään, voit käyttää siinä muilla kursseilla kehittämiäsi projekteja.
+Seuraavat ovat vaihtoehtoisia ideoita, joita voit soveltaa vapaasti. Jos Ohjelmistoprojekti II -kurssin projektinne ei sovellu tehtävään, voit käyttää sen sijaan muilla kursseilla kehittämiäsi projekteja.
 
 **1. Luo Docker-levykuva Ohjelmistoprojekti II -projektinne backendistä**
 
-Luo tarvittava Dockerfile-tiedosto, joka asentaa ja käynnistää esimerkiksi Node-sovelluksenne. Voit julkaista Docker-levykuvan esimerkiksi [Docker hub](https://hub.docker.com/) -palvelussa, mutta se ei ole välttämätöntä, mikäli pystyt osoittamaan hyvää oppimista jo paikallisessa ympäristössä työskentelyn osalta.
+Luo tarvittava Dockerfile-tiedosto, joka asentaa ja käynnistää esimerkiksi projektikurssinne backend-sovelluksen. Voit julkaista Docker-levykuvan esimerkiksi [Docker hub](https://hub.docker.com/) -palvelussa, mutta se ei ole välttämätöntä, mikäli pystyt osoittamaan hyvää oppimista jo kontin luomisen ja sen paikallisen käytön perusteella.
 
-Selosta raportissa mitä opit eri työvaiheista ja minkälaisia haasteita ohjelman asennukset ja suorittaminen aiheuttivat konttien kanssa. Eroavaisuuksia voi olla esimerkiksi salaisuuksien, kuten salasanojen ja salaisten avainten käsittelyssä.
+Selosta raportissa mitä opit eri työvaiheista ja minkälaisia haasteita kohtasit. Entä miten kehittäisit luomaasi konttia jatkossa?
+
 
 **2. Luo Docker-levykuva Ohjelmistoprojekti II -projektin frontendistä**
 
-Luo tarvittava Dockerfile-tiedosto, joka suorittaa frontend-sovelluksenne riippuvuuksien asennuksen ja buildaamisen. Huomaa, että tuotantokäytössä React-sovellusta ei kannata tarjoilla React-kehityspalvelimen avulla, vaan staattisina tiedostoina esimerkiksi Nginx-palvelimen avulla. Löydät lisätietoja esimerkiksi Google-haulla ["dockerizing react app"](https://www.google.com/search?q=dockerizing+react+app).
+Luo tarvittava Dockerfile-tiedosto, joka suorittaa frontend-sovelluksenne riippuvuuksien asennuksen ja projektin buildaamisen. Huomaa, että tuotantokäytössä React-sovellusta ei kannata tarjoilla React-kehityspalvelimen avulla, vaan staattisina tiedostoina esimerkiksi Nginx-palvelimen avulla. Löydät lisätietoja esimerkiksi Google-haulla ["dockerizing react app"](https://www.google.com/search?q=dockerizing+react+app).
 
 Kuten edellisessä vaihtoehdossa, voit julkaista levykuvan esimerkiksi [Docker hub](https://hub.docker.com/) -palvelussa, mutta se ei ole välttämätöntä.
 
 
 **3. Julkaise Ohjelmistoprojekti II -kurssin backend valitsemassasi PaaS-palvelussa**
 
-Heroku on monelle opiskelijalle tuttu aikaisemmilta kursseilta, mutta sen ilmaisen käytön päättyessä erilaisille vaihtoehtoisille ratkaisuille on kova kysyntä opiskelijoiden keskuudessa. Tässä tehtävävaihtoehdossa tutustu saatavilla oleviin PaaS-palveluihin ja kokeile julkaista sovellus valitsemassasi palvelussa. Tehtävässä ei ole välttämätöntä soveltaa Dockeria, mikäli se ei ole valitun palvelun kannalta mielekästä.
+Heroku on monelle opiskelijalle tuttu aikaisemmilta kursseilta, mutta sen ilmainen käyttö on suurilta osin päättymässä. Näin ollen erilaisille ilmaisille tai edullisille vaihtoehtoisille ratkaisuille on kova kysyntä opiskelijoiden keskuudessa.
 
-[Helsingin yliopiston full stack open](https://fullstackopen.com/en/part3/deploying_app_to_internet#application-to-the-internet) -kurssilla on esitelty Herokulle vaihtoehtoisina palveluina seuraavia:
+Tässä tehtävävaihtoehdossa tutustu saatavilla oleviin vaihtoehtoisiin PaaS-palveluihin ja kokeile julkaista oma sovellus valitsemassasi palvelussa. Tehtävässä ei ole välttämätöntä soveltaa Dockeria, mikäli se ei ole valitun palvelun kannalta mielekästä.
+
+[Helsingin yliopiston full stack open](https://fullstackopen.com/osa3/sovellus_internetiin#sovellus-internetiin) -kurssilla on esitelty Herokulle vaihtoehtoisina palveluina seuraavia:
 
 * [Fly.io](https://fly.io/)
 * [Render.com](https://render.com/)
 
-Kurssin opiskelijat ovat lisäksi ehdottaneet seuraavia palveluita:
+Näissä palveluissa pitäisi olla ilmaiset kokeiluversiot, jotka riittävät tehtävän tekemiseksi. Kurssin opiskelijat ovat lisäksi ehdottaneet seuraavia palveluita:
 
 * [Railway](https://railway.app/)
 * [Replit.com](https://replit.com/)
 * [CodeSandBox](https://codesandbox.io/)
 
-Huomaa, että edellä esitettyjä palveluita ei ole todettu toimiviksi tämän kurssin henkilökunnan toimesta. Näiden lisäksi löytyy lukuisia vaihtoehtoisia pilvialustoja, joten voit hyvin valita palvelun myös näiden listojen ulkopuolelta.
+Näiden lisäksi löytyy lukuisia vaihtoehtoisia pilvialustoja, joten voit hyvin valita palvelun myös näiden listojen ulkopuolelta.
 
-Muista raportoida edistymisesi tehtävässä. Huomaa, että kaikkia vaiheita ei tarvitse saada valmiiksi, kunhan osoitat oppineesi eri työvaiheista.
+Muista raportoida edistymisesi tehtävässä. Huomaa, että kaikkia vaiheita ei tarvitse saada valmiiksi, kunhan osoitat oppineesi eri työvaiheista. Valitsemasi pilvipalvelun valintaperusteet ovat jo itsessään hyvää sisältöä raporttiin.
 
 
 **4. Kontin julkaisu OpenShift-ympäristössä (Docker & Kubernetes)**
@@ -364,4 +368,4 @@ Tunnusten luomisessa voi kestää jopa päiviä, joten viesti kannattaa lähett�
 
 Saatuanne käyttäjätunnuksen ja salasanan, voitte kokeilla kirjautua sisään osoitteessa https://console-openshift-console.apps.hhocp.otaverkko.fi/. Kirjautuminen tapahtuu "IPA Login" -vaihtoehdolla (IPA = Identity, Policy & Audit). 
 
-Tämän OpenShift-ratkaisun kaikki https-sertifikaatit ovat itse allekirjoitettuja (self signed), eli selain tulee vaatimaan sertifikaatin hyväksymistä manuaalisesti, kuten oppitunnin videolla esitellään.
+Huom! Kurssin OpenShift-palvelun kaikki https-sertifikaatit ovat itse allekirjoitettuja (self signed), eli selain tulee vaatimaan sertifikaatin hyväksymistä manuaalisesti, kuten oppitunnin videolla esitellään.
