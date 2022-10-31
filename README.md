@@ -195,6 +195,7 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
                 <strong><a href="07_openshift/">Dockerin hyödyntäminen paikallisesti sekä pilvessä (Docker, Kubernetes, OpenShift...)</a></strong>
             </td>
             <td>
+                Tapaaminen Teamsissa 1.11. klo 8:30 - 10:30<br />
                 Tehtävien DL ma 7.11. klo 22:00
             </td>
         </tr>
