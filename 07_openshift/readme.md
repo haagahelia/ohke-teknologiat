@@ -55,11 +55,11 @@ Kurssilla on käytössä [Otaverkon tarjoama OpenShift-ympäristö](https://otav
 >
 > Otaverkko. OpenShift palveluna. https://otaverkko.fi/palvelukategoria/openshift/
 
-Ohjeet käyttäjätunnusten saamiseksi löytyvät kurssin Teams-kanavalta.
+Ohjeet käyttäjätunnusten saamiseksi löytyvät alempaa tehtävänannon yhteydestä.
 
-OpenShift-konsoliin kirjautuminen onnistuu selaimella osoitteessa https://console-openshift-console.apps.hhocp.otaverkko.fi/. Palveluissamme on valitettavasti toistaiseksi self-signed sertifikaatit, eli on odotettua, että selain varoittaa epäluotettavasta sertifikaatista.
+OpenShift-konsoliin kirjautuminen onnistuu selaimella osoitteessa https://console-openshift-console.apps.hhocp.otaverkko.fi/. Palveluissamme on valitettavasti toistaiseksi [self-signed sertifikaatit](https://en.wikipedia.org/wiki/Self-signed_certificate), eli on odotettua, että selain varoittaa epäluotettavasta sertifikaatista.
 
-Kirjautumisen jälkeen ensimmäinen työvaihe kirjautumisen jälkeen on tyypillisesti oman projektin luominen. Projekti luodaan oppitunnin 2. videolla.
+Kirjautumisen jälkeen ensimmäinen työvaihe kirjautumisen jälkeen on tyypillisesti oman projektin luominen. Projektin luominen esitetään ylempänä oppitunnin 2. videolla.
 
 Konttirekisteri löytyy osoitteesta `default-route-openshift-image-registry.apps.hhocp.otaverkko.fi`. Rekisteri ei ole käytettävissä selaimella, vaan sitä käytetään `docker`-komennon kautta (vaihtoehtoisesti `podman`). Lisätiedot esimerkkeineen ja OAuth-ohjeistuksineen löydät alempaa ja oppitunnin tallenteelta.
 
@@ -134,9 +134,7 @@ Tämän jälkeen palvelimen pitäisi vastata osoitteissa http://localhost:5000 j
 
 ## 2. Dockerfile:n luonti
 
-Dockerfile:n komennot on kuvailtu rivikohtaisesti ohjeessa https://docs.docker.com/language/python/build-images/#create-a-dockerfile-for-python.
-
-Tuloksena syntyy seuraavankaltainen tiedosto:
+Dockerfile:n komennot on kuvailtu rivikohtaisesti ohjeessa https://docs.docker.com/language/python/build-images/#create-a-dockerfile-for-python. Sivuston ohjeita seuraamalla syntyy seuraavanlainen tiedosto:
 
 ```dockerfile
 FROM python:3.8-slim-buster
@@ -154,7 +152,17 @@ EXPOSE 5000
 CMD [ "python", "-m" , "flask", "run", "--host=0.0.0.0"]
 ```
 
-Imagen ("levykuva") luonti onnistuu nyt komennolla:
+Huomaa, että tämä esimerkki käynnistää kontin sisällä Flaskin kehityspalvelimen, ja oikea tuotantosovellus tulisi käynnistää hieman monimutkaisemmin tuotantopalvelimen avulla. Lisää tietoa tuotantokäytöstä löydät [Flaskin dokumentaatiosta](https://flask.palletsprojects.com/en/2.2.x/tutorial/deploy/):
+
+> *"When running publicly rather than in development, you should not use the built-in development server (flask run). The development server is provided by Werkzeug for convenience, but is not designed to be particularly efficient, stable, or secure.*
+>
+> *Instead, use a production WSGI server.*
+>
+> https://flask.palletsprojects.com/en/2.2.x/tutorial/deploy/
+
+### Levykuvan luonti ja kontin käynnistäminen
+
+Docker imagen ("levykuva") luonti onnistuu nyt komennolla:
 
     docker build --tag flask-events .
 
@@ -166,7 +174,7 @@ Image voidaan nyt käynnistää uudessa kontissa seuraavasti:
 
     docker run -it --rm -p 5000:5000 flask-events
 
-Käynnistyskomennossa käytetyt parametrit on selitetty dokumentaatiossa seuraavasti:
+Käynnistyskomennossa käytetyt parametrit on selitetty [dokumentaatiossa](https://docs.docker.com/engine/reference/run/) seuraavasti:
 
 **-it**
 
