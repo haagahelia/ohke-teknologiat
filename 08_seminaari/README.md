@@ -11,7 +11,7 @@ Seminaarityön laajuuden on tarkoitus olla noin 20 tuntia työtä.
 
 ## Seminaaritehtävän raportointi ja palauttaminen
 
-Raportoi seminaarityösi esitystä ja arviointia varten raportointiohjeiden mukaisesti. Raportointiohjeet ja -pohjat alla. Valitse vain yksi muoto, Markdown, Word (=>tallenna PDF:ksi ennen julkaisua) tai Powerpoint (=> PDF):
+Raportoi seminaarityösi esitystä ja arviointia varten raportointiohjeiden mukaisesti. Raportointiohjeet ja -pohjat alla. Valitse vain yksi muoto, Markdown, Word (=> tallenna PDF:ksi ennen julkaisua) tai Powerpoint (=> PDF):
 
 * [Ohje & dokupohja wordiin](SeminaarityonRapotointiohjeWord.docx), 
 * [Powerpoint-esityksessä muutama vinkki sisällöksi ja kait siitä saisi pohjankin](Ohjelmistokehityksen%20teknologioita%20seminaariraportin%20pohja%201.pptx), 
@@ -19,7 +19,7 @@ Raportoi seminaarityösi esitystä ja arviointia varten raportointiohjeiden muka
 
 Raportin lisäksi nauhoita noin 5 minuuttia kestävä video, jossa esittelet työsi teknistä toteutusta raportointiohjeen mukaisesti. Videolla ei ole tarpeen käsitellä tai näyttää raporttia, vaan voitte olettaa katsojan jo tuntevan sen sisällön. Videon tekemiseksi suosittelemme [Microsoft Stream](https://web.microsoftstream.com/) -palvelua. Katso myös [ohje tallenteen tekemiseksi MS Streamissa](https://docs.microsoft.com/fi-fi/stream/portal-create-screen-recording).
 
-Seminaarityösi arvioidaan tämän palautuksen perusteella. Lisäksi osa opiskelijoista valitaan esittelemään töitään muille kurssin päätteeksi järjestettävässä seminaarissa.
+Seminaarityösi arvioidaan tämän palautuksen perusteella. Lisäksi osa opiskelijoista valitaan esittelemään töitään muille kurssin päätteeksi järjestettävässä seminaarissa. Koska kurssi järjestetään yhdistellen eri osallistumistapoja, ei itse seminaaritilaisuuteen osallistuminen ole pakollista. Seminaariesityksellä ei ole myöskään erillistä osuutta arvioinnissa. Mikäli seminaariesityksessä käy ilmi työn kannalta positiivisia asioita, jotka tukevat kirjoitettua raporttia, otamme ne kuitenkin luonnollisesti huomioon kokonaisuuden arvioinnissa.
 
 
 ## Arviointi
@@ -40,11 +40,11 @@ Tutoriaalityön tapauksissa seminaarin raportissa ja videossa ei kannata keskitt
 
 * **Seminaarien käynnistys**
 
-    12.4.2022
+    Ti 8.11.2022
 
 * **Seminaariaiheen ilmoittaminen Teams-kanavalle**
 
-    DL ti 19.4.2022, klo 12 (keskipäivä)
+    DL ti 15.11.2022, klo 12 (keskipäivä)
 
 * **Yksilöllistä seminaarityön ohjausta Teamsissa**
 
@@ -52,11 +52,12 @@ Tutoriaalityön tapauksissa seminaarin raportissa ja videossa ei kannata keskitt
 
 * **Seminaarin raporttien ja videoiden palauttaminen Teamsiin**
 
-    DL 3.5.2022, klo 23.59
+    DL ke 7.12. klo 22
 
 * **Seminaariesitykset**
 
-    10.5.2022, klo 12-15
+    13.12.2022, klo 8:30 - 10:45
+
 
 # Seminaariaiheita
 
@@ -75,6 +76,15 @@ Tälle sivulle on koottu **esimerkkiaiheita** kurssin seminaaritehtävää varte
 * **Data-analytiikkaa tai pelejä Pythonilla**
 
     Pythonille on saatavilla erilaisia kirjastoja mm. data-analytiikkaan ja peleihin liittyen. Voit ehdottaa  itseäsi kiinnostavaa aihetta.
+
+* **Koneoppiminen Pythonilla**
+
+Kouluta esimerkiksi valitsemasi koneoppimismalli jostain datasta ja laadi sillä ennusteita.
+
+* **Tekstintunnistus Pythonilla**
+
+Tekstin tunnistaminen kuvasta (tai videosta) [Tesseract-kirjastolla](https://nanonets.com/blog/ocr-with-tesseract/).
+
 
 ## Tietorakenteet ja algoritmit
 
@@ -95,7 +105,7 @@ Tälle sivulle on koottu **esimerkkiaiheita** kurssin seminaaritehtävää varte
 
 * **Ohjelmistoprojekti 2 -refaktorointi:**
 
-    Refaktoroi ohjelmistoprojekti 2 -projektinne käyttämään mielestäsi optimaalista arkkitehtuuriratkaisua joiltain osin. Kuvaa tämä arkkitehtuuri myös kaaviona.
+    Refaktoroi ohjelmistoprojekti 2 -projektinne käyttämään mielestäsi optimaalista arkkitehtuuriratkaisua joiltain osin. Kuvaa alkuperäinen arkkitehtuuri ja uudistettu ratkaisu myös kaavioina.
 
 * **FRP-ohjelmointi:**
 
@@ -126,13 +136,18 @@ Tälle sivulle on koottu **esimerkkiaiheita** kurssin seminaaritehtävää varte
 
 * **Docker ja Docker Compose:**
 
-    Rakenna Dockerin ja Docker composen avulla ohjelmistoprojekti 2 -projektistanne konttipohjainen sovellus, joka voidaan toimittaa/julkaista ('deploy') Azureen tai AWS:ään.
+    Rakenna Dockerin ja Docker composen avulla ohjelmistoprojekti 2 -projektistanne konttipohjainen sovellus, joka voidaan toimittaa/julkaista (deploy) Azureen tai AWS:ään.
 
 * **Kubernetes ja OpenShift:**
 
     Jatka työskentelyä kurssin yksityisessä pilvessä ja perehdy syvemmin Kubernetekseen ja OpenShiftiin. Rakenna sinne useammasta kontista koostuva ratkaisu hyödyntäen oppimiasi hyviä käytäntöjä.
 
-## ES6, JavaScript, node (+MongoDB)
+
+## TypeScript, ES6, JavaScript, node (+MongoDB)
+
+* **TypeScript**
+
+    Perehdy TypeScript-kieleen ja sen työkaluihin. Toteuta yksinkertainen esimerkkisovellus, jossa sovellat oppimaasi mahdollisimman hyvin.
 
 * **MERN-stack:**
 
@@ -140,7 +155,7 @@ Tälle sivulle on koottu **esimerkkiaiheita** kurssin seminaaritehtävää varte
 
 * **Reaktiivinen ohjelmointi JS:llä** *(ks. ohjelmistoarkkitehtuurit ja patternit)*:
 
-    Tutustu [FRP-ohjelmointiin](https://stackoverflow.com/questions/1028250/what-is-functional-reactive-programming/1030631#1030631) ja tee (tietynlainen) ohjelma RxJS:llä (tai bacon.js:llä). Myös [Node-RED](https://nodered.org/)-ympäristöä voi miettiä tähän vaiheeseen.
+    Tutustu [FRP-ohjelmointiin](https://stackoverflow.com/questions/1028250/what-is-functional-reactive-programming/1030631#1030631) ja tee (tietynlainen) ohjelma esimerkiksi RxJS:llä tai bacon.js:llä. Myös [Node-RED](https://nodered.org/)-ympäristöä voi miettiä tähän vaiheeseen.
 
 * **Paketin julkaisu NPM:ssä:**
 
