@@ -1,6 +1,6 @@
 # Seminaari
 
-Seminaarivaiheessa jokainen opiskelija valitsee kurssin aiheista itseään eniten kiinnostavan ja tekee siihen liittyvän seminaaritehtävän. Seminaaritehtävän voi valita joko opettajien ehdotuksista, tai seminaaritehtävän aihetta voi ehdottaa myös itse. Seminaaritehtävä voi liittyvä läheisesti opiskelijan ohjelmistoprojekti 2-projektiin, ja se on jopa suositeltavaa. 
+Seminaarivaiheessa jokainen opiskelija valitsee kurssin aiheista itseään eniten kiinnostavan ja tekee siihen liittyvän seminaaritehtävän. Seminaaritehtävän voi valita joko opettajien ehdotuksista, tai seminaaritehtävän aihetta voi ehdottaa myös itse. Seminaaritehtävä voi liittyvä läheisesti opiskelijan ohjelmistoprojekti 2 -projektiin, ja se on jopa suositeltavaa. 
 
 Saman seminaariaiheen valinneet opiskelijat osallistuvat sen aiheen yhteiseen seminaariin, jossa esitellään, analysoidaan ja kommentoidaan myös muiden opiskelijoiden seminaaritöitä. Olette lämpimästi tervetulleita osallistumaan myös muiden seminaariaiheiden tilaisuuksiin oman seminaarinne ulkopuolella!
 
@@ -33,7 +33,7 @@ Lisäksi seminaariaiheen haastekerroin vaikuttaa arviointiin. Jos seminaarityö 
 
 Seminaaritöissä on ajoittain seurattu video- tai tekstimuotoisia tutoriaaleja. Tutoriaalin seuraaminen seminaarityössä on hyväksyttävää, etenkin mikäli tutoriaali syventää kurssilla käsiteltyjä aiheita mielekkäällä tavalla. Tuo raportissasi selvästi esiin, mikä osuus työstä on omaa tuotostasi ja mikä perustuu tutoriaalin esimerkkeihin, jotta vältymme turhilta plagiointi- ja vilppiepäilyiltä.
 
-Tutoriaalityön tapauksissa seminaarin raportissa ja videossa ei kannata keskittyä itse tutoriaain lopputuloksen esittelyyn, vaan oppimiesi asioiden esittelyyn. Pyri siis yksilöimään ja esittelemään asioita, joita olet oppinut, sekä pohdi, mitä olisit voinut tehdä työssä toisin ja miten osaat jatkossa soveltaa oppimiasi asioita.
+Tutoriaalityön tapauksissa seminaarin raportissa ja videossa ei kannata keskittyä itse tutoriaalin lopputuloksen esittelyyn, vaan oppimiesi asioiden esittelyyn. Pyri siis yksilöimään ja esittelemään asioita, joita olet oppinut, sekä pohdi, mitä olisit voinut tehdä työssä toisin ja miten osaat jatkossa soveltaa oppimiasi asioita.
 
 
 ## Aikataulu
