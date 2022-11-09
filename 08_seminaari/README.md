@@ -17,7 +17,14 @@ Raportoi seminaarityösi esitystä ja arviointia varten raportointiohjeiden muka
 * [Powerpoint-esityksessä muutama vinkki sisällöksi ja kait siitä saisi pohjankin](Ohjelmistokehityksen%20teknologioita%20seminaariraportin%20pohja%201.pptx), 
 * [Markdown-pohja, jota suosittelemme](markdown_file1.md). Tekstimuotoisena se pysyy Git-versionhallinnassa kunnossa, jopa usean kehittäjän sitä muokatessa. 
 
-Raportin lisäksi nauhoita noin 5 minuuttia kestävä video, jossa esittelet työsi teknistä toteutusta raportointiohjeen mukaisesti. Videolla ei ole tarpeen käsitellä tai näyttää raporttia, vaan voitte olettaa katsojan jo tuntevan sen sisällön. Videon tekemiseksi suosittelemme [Microsoft Stream](https://web.microsoftstream.com/) -palvelua. Katso myös [ohje tallenteen tekemiseksi MS Streamissa](https://docs.microsoft.com/fi-fi/stream/portal-create-screen-recording).
+**Video**
+
+Raportin lisäksi nauhoita noin 5 minuuttia kestävä video, jossa esittelet työsi teknistä toteutusta raportointiohjeen mukaisesti. Videolla ei ole tarpeen käsitellä tai näyttää raporttia, vaan voitte olettaa katsojan jo tuntevan sen sisällön. Videon tekemiseksi suosittelemme [Microsoft Stream](https://web.microsoftstream.com/) -palvelua, jossa sekä videon tallennus että jakaminen onnistuu pelkän selaimen avulla. Katso [ohje tallenteen tekemiseksi MS Streamissa](https://docs.microsoft.com/fi-fi/stream/portal-create-screen-recording). Kurssilla on käytetty hyvin tuloksin myös lukuisia muita videonkaappausratkaisuja joten voit valita itsellesi parhaiten sopivan.
+
+Voit julkaista luomasi videon Microsoft Stream -palvelussa tai valitsemassasi video- tai tiedostonjakopalvelussa, kunhan saat lisättyä raporttiisi suoran linkin lopputulokseesi (YouTube, OneDrive, Google Drive...). Voit myös halutessasi palauttaa videon sellaisenaan tiedostona Teamsin seminaaritehtävään, mikäli Teams ei estä palautusta esim. liian suuren koon vuoksi.
+
+
+**Seminaarin arviointi ja esitykset**
 
 Seminaarityösi arvioidaan tämän palautuksen perusteella. Lisäksi osa opiskelijoista valitaan esittelemään töitään muille kurssin päätteeksi järjestettävässä seminaarissa. Koska kurssi järjestetään yhdistellen eri osallistumistapoja, ei itse seminaaritilaisuuteen osallistuminen ole pakollista. Seminaariesityksellä ei ole myöskään erillistä osuutta arvioinnissa. Mikäli seminaariesityksessä käy ilmi työn kannalta positiivisia asioita, jotka tukevat kirjoitettua raporttia, otamme ne kuitenkin luonnollisesti huomioon kokonaisuuden arvioinnissa.
 
