@@ -50,3 +50,44 @@
 * https://www.thomasmaurer.ch/2019/07/passed-az-400-microsoft-certified-azure-devops-engineer/
 
 
+### Mahdollisesti uusia, käytävä läpi myöhemmin:
+
+https://www.youtube.com/watch?v=9pZ2xmsSDdo
+
+https://niklaswallenius.fi/mika-on-docker/
+
+https://www.tutorialworks.com/linux-for-devops/
+
+https://www.eficode.com/fi/blog/mita-on-devops
+
+https://yrityksille.elisa.fi/ideat/devops-ketteryyden-uusi-maaritelma/
+
+https://www.itewiki.fi/opas/devops/
+
+https://aws.amazon.com/devops/what-is-devops/
+
+https://azure.microsoft.com/en-gb/solutions/devops/tutorial/#understanding
+
+https://www.koulutus.fi/koulutukset/sovelto/az-400-designing-and-implementing-microsoft-devops-solutions-1401372
+
+https://osuva.uwasa.fi/bitstream/handle/10024/13073/TomiKnuuttilaProGradu_300821.pdf?sequence=2&isAllowed=y
+
+https://medium.com/the-programmer/devops-fundamental-for-absolute-beginners-1dde6fecf268
+
+https://www.simplilearn.com/tutorials/devops-tutorial/how-to-become-devops-engineer/
+
+https://www.geeksforgeeks.org/how-to-become-a-devops-engineer-a-complete-roadmap/
+
+https://www.turing.com/blog/programming-and-scripting-languages-devops-engineersshould-learn-in-2022/
+
+https://www.upgrad.com/blog/how-to-become-devops-engineer/
+
+https://www.contino.io/insights/devops-engineer-guide
+
+https://en.wikipedia.org/wiki/DevOps
+
+https://www.eficode.com/fi/blog/mita-on-devops
+
+https://yrityksille.elisa.fi/ideat/devops-ketteryyden-uusi-maaritelma/
+
+https://duunitori.fi/tyopaikat?haku=devops
