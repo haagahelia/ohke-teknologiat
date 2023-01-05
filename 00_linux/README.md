@@ -2,7 +2,8 @@
 
 Kurssin ensimmäisellä viikolla asennamme kurssilla tarvittavat kehitysympäristöt ja tutustumme Linux-käyttöjärjestelmän peruskäyttöön.
 
-Ohjeet kurssille tarvittavan ympäristön asentamiseksi löydät [täältä](asennukset.md). Toivomme että asennat tarvitsemasi ympäristön valmiiksi ennen ensimmäistä tapaamista. Kysy kohtaamistasi ongelmista rohkeasti Teamsissa keskustelukanavalla.
+Ohjeet kurssille tarvittavan ympäristön asentamiseksi löydät [täältä](asennukset.md). Kysy apua ja vinkkejä rohkeasti Teamsissa keskustelukanavalla.
+
 
 ## Luentovideot
 
@@ -15,6 +16,7 @@ Ohjeet kurssille tarvittavan ympäristön asentamiseksi löydät [täältä](ase
 👆 Näiden videoiden katsominen edellyttää kirjautumista MS Stream -palveluun Haaga-Helian tunnuksillasi. Sinun tulee olla myös jäsenenä kurssin Teams-ryhmässä.
 
 Löydät tämän kurssin omien materiaalien lisäksi netistä lukuisia hyviä video- ja tekstimuotoisia ohjeita. Halutessasi voit käyttää myös muita materiaaleja ja aloittaa esimerkiksi videosta [15+ Terminal Commands Every Developer Must Know (Web Dev Simplified)](https://youtu.be/CV-ven_rxhw) sekä [Ubuntun komentorivitutoriaalista](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview).
+
 
 ## Linuxin ja komentorivin perusteet
 
@@ -32,7 +34,6 @@ Komentorivityöskentely on tärkeä taito myös esimerkiksi sulautettujen järje
 Unix-pohjaisten järjestelmien komentorivi on kehittäjille monipuolinen ja voimakas työkalu. Komentorivi mahdollistaa paitsi erilaisten työkalujen nopean asentamisen, tiedostojärjestelmän helpon selaamisen, erilaisten ympäristöjen pystyttämisen jne. Käydään tässä läpi esimerkkien kautta Linux-järjestelmän kehittäjälle hyödyllisiä perusasioita ja komentoja, suurin osa asioista toimii myös muissa Unix-pohjaisissa järjestelmissä.
 
 Alkuun mainittakoon yleisesti, että Linux-komentojen keskeyttäminen tarvittaessa tapahtuu `CTRL + C`:llä. Vielä voimakkaampi yhdistelmä on `CTRL + Z`, joka ei anna processille mahdollisuutta yrittää sulavaa siistiä lopettamista.
-
 
 
 #### Unix-komentoja
@@ -78,7 +79,7 @@ Linuxissa komennon syötteen voi ajaa myös tiedostoon `>` -ohjausmerkillä:
 ```shell
 $ ls -l > tiedosto.txt
 
-# Kahdella >> -merkillä syöte lisätään tiedoston loppuun, kuten 
+# Kahdella >> -merkillä syöte lisätään tiedoston loppuun, kuten
 # tässä käyttäjän kotihakemistossa olevan .bashrc-tiedoston loppuun.
 
 $ echo "export EDITOR='/usr/bin/nano'" >> ~/.bashrc
@@ -162,7 +163,7 @@ $ grep -R "kissa" * # etsi tämän kansion kaikista alikansioista ja tiedostoist
 $ grep -E "koira|kissa" tiedosto.txt # Sovella regex-patternia, eli etsi sekä koiraa, että kissaa.
 ```
 
-Tiedoston lopun voi tulostaa `tail`-komennolla. Tämä komento on erityisen hyödyllinen logitiedostojen seuraamiseen `-f`-vivulla (`--follow`), jolloin se jää seuraamaan tiedostojen päivittymistä ja jatkaa muutosten tulostamista ruudulla. 
+Tiedoston lopun voi tulostaa `tail`-komennolla. Tämä komento on erityisen hyödyllinen logitiedostojen seuraamiseen `-f`-vivulla (`--follow`), jolloin se jää seuraamaan tiedostojen päivittymistä ja jatkaa muutosten tulostamista ruudulla.
 
 `tail`-komennon voi myös putkittaa `grep`:in kanssa ja seurata tiedostossa esimerkiksi vain tietyn patternin mukaisia rivejä, kuten virheitä. Komennosta voi poistua `CTRL + C`:llä.
 
@@ -215,9 +216,9 @@ export-komennolla voit lisätä PATH-muuttujaan uusia hakemistoja. Alla oleva ko
 $ export PATH="$PATH:${HOME}/.npm-packages/bin"
 ```
 
-Processes (`ps`) komennolla voi listata esimerkiksi kaikki kyseisen käyttäjän käynnissä olevat prosessit. Niihin liittyen voi tulostaa `ps`-komennolla monipuolisesti tietoja eri prosesseista, kuten niiden muistin ja prosessorin käyttömäärän. 
+Processes (`ps`) komennolla voi listata esimerkiksi kaikki kyseisen käyttäjän käynnissä olevat prosessit. Niihin liittyen voi tulostaa `ps`-komennolla monipuolisesti tietoja eri prosesseista, kuten niiden muistin ja prosessorin käyttömäärän.
 
-Näiden perusteella voi tehdä johtopäätöksiä, jos joki prosessi (esimerkiksi serveri) on jäänyt jumiin tai esimerkiksi jokin ohjelma ikuiseen silmukkaan. 
+Näiden perusteella voi tehdä johtopäätöksiä, jos joki prosessi (esimerkiksi serveri) on jäänyt jumiin tai esimerkiksi jokin ohjelma ikuiseen silmukkaan.
 
 ```shell
 $ ps axu
@@ -245,11 +246,11 @@ $ whois haaga-helia.fi      # tietoja tunnuksesta (whois pitää asentaa apt:lla
 $ ssh host.jotain.fi        # avataan ssh-etäyhteys etäpalvelimeen
 $ wget https://osoite.fi/kuva.jpeg  # ladataan tiedosto internetistä
 
-# Haetaan curl komennolla rajapinnasta json-tiedosto, 
-# siistitään se kivasti riveittäin pythonin json.tool:illa ja 
-# tulostetaan grepin avulla vain tietyn sanan sisältävät rivit. 
+# Haetaan curl komennolla rajapinnasta json-tiedosto,
+# siistitään se kivasti riveittäin pythonin json.tool:illa ja
+# tulostetaan grepin avulla vain tietyn sanan sisältävät rivit.
 # Komennolle annetaan parametreina lokaaleista ympäristömuuttujista APP_ID ja APP_KEY:
-$ curl https://external.api.yle.fi/v1/programs/items.json?app_id=${APP_ID}\&app_key=${APP_KEY} | python3 -m json.tool | grep '"fi"' 
+$ curl https://external.api.yle.fi/v1/programs/items.json?app_id=${APP_ID}\&app_key=${APP_KEY} | python3 -m json.tool | grep '"fi"'
 ```
 
 Ohjelmistokehittäjä pystyy ajamaan unix-järjestelmissä lukuisia kehitystyöhön liittyviä ohjelmia. Tässä vielä niistä muutamia esimerkkejä:
@@ -268,7 +269,7 @@ Sanuli (https://www.sanuli.fi) on uusi kotimainen avoimen lähdekoodin peli, jok
 
 Sanulin on kehittänyt Jaakko Husso ja se on julkaistu MIT-lisenssillä GitHubissa: https://github.com/Cadiac/sanuli.
 
-Disclaimer: Tämän esimerkin tarkoitus ei ole kannustaa "huijaamaan" Sanulissa, eikä ohjata teitä pelaamaan Sanulia oppitunnin aikana.
+Disclaimer: Tämän esimerkin tarkoitus ei ole kannustaa "huijaamaan" Sanulissa, eikä ohjata teitä pelaamaan Sanulia oppitunnin aikana 👮‍♂️.
 
 
 #### Unix-skriptit ja chron
@@ -280,14 +281,14 @@ $ nano skripti.sh #luodaan skriptitiedosto
 ```
 
 ```bash
-#!/bin/bash #skriptit avataan yleensä tällä kommentilla joka kertoo käytettävän komentorivitulkin 
+#!/bin/bash #skriptit avataan yleensä tällä kommentilla joka kertoo käytettävän komentorivitulkin
 
 # Tulostetaan teksti echo-komennolla
 echo "Skripti käynnistyy"
 
 # Ajetaan kyseisen kansion sisällöstä tiedostoon sellaiset rivit,
 # jotka sisältävät käyttäjän skriptille antaman ensimmäisen parametrin sanan:
-ls -l | grep $1 > tamakansio.txt 
+ls -l | grep $1 > tamakansio.txt
 ```
 
 Edellä luotu skripti voidaan puolestaan suorittaa seuraavasti:
