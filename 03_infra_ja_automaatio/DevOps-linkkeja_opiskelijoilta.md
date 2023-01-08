@@ -91,3 +91,10 @@ https://www.eficode.com/fi/blog/mita-on-devops
 https://yrityksille.elisa.fi/ideat/devops-ketteryyden-uusi-maaritelma/
 
 https://duunitori.fi/tyopaikat?haku=devops
+
+
+https://www.edureka.co/blog/top-10-devops-tools/
+https://www.edureka.co/blog/how-to-become-a-devops-engineer/
+
+https://www.comptia.org/blog/top-skills-for-devops-engineers
+https://www.xenonstack.com/blog/infrastructure-as-code-tools
