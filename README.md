@@ -37,6 +37,10 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
 
 ## Opintojakson oppitunnit ja päivämäärät
 
+
+**Huom!** Tämä sivu päivittyy kurssin edetessä ja kurssi voi muuttua vielä suunnitellusta jopa ohjelmointikielen osalta.
+
+
 <table>
     <thead>
         <tr>
