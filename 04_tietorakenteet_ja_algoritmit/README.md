@@ -28,13 +28,13 @@ Viikon harjoitustehtävän tehtävänanto.
 
 Tällä viikolla ohjelmistokehityksen teknologioita -kurssilla tavoitteena on perehtyä tietorakenteiden ja algoritmien peruskäsitteisiin. Opettelemme arvioimaan karkeasti erilaisten algoritmisten lähestymistapojen soveltuvuutta kohtaamiimme ohjelmointiongelmiin.
 
-Vaikka ohjelmointikielenä esimerkeissä ja tehtävässä esiintyy Python, myös muista yleisimmistä kielistä löytyy vastaavat tietorakenteet samoilla ominaispiirteillä. 
+Vaikka ohjelmointikielenä esimerkeissä ja tehtävässä esiintyy Python, myös muista yleisimmistä kielistä löytyy vastaavat tietorakenteet samoilla ominaispiirteillä.
 
 Tavoitteenamme ei ole oppia laskemaan tai esittämään algoritmiemme tarkkaa tehokkuutta matemaattisilla kaavoilla, vaan käytämme laskukaavoja apuvälineenä ymmärtääksemme, miksi jokin algoritmi suoriutuu samasta tehtävästä tehokkaammin kuin toinen. Emme myöskään harjoittele optimoimaan ohjelmiemme suorituskykyä, vaikka suorituskyky toimiikin tärkeänä mittarina tällä viikolla.
 
 Vaikka osa tietoperustasta voi tuntua matemaattisesti hankalalta, älä lannistu. Aiheen kotitehtävä ei ole matemaattinen, eikä sinun tarvitse osata laskea algoritmien suoritusaikoja itse.
 
-Ohjelmointiongelmien ratkaisemisessa algoritmien lisäksi myös tietorakenteilla on erittäin merkittävä rooli. Tietorakenteiden sisäinen toteutus, esimerkiksi linkitetty lista (LinkedList) tai taulukkolista (ArrayList), vaikuttaa merkittävästi sen soveltuvuuteen erilaisten ongelmien ratkaisemisessa. 
+Ohjelmointiongelmien ratkaisemisessa algoritmien lisäksi myös tietorakenteilla on erittäin merkittävä rooli. Tietorakenteiden sisäinen toteutus, esimerkiksi linkitetty lista (LinkedList) tai taulukkolista (ArrayList), vaikuttaa merkittävästi sen soveltuvuuteen erilaisten ongelmien ratkaisemisessa.
 
 Tallentaessamme itse tietoa ohjelmiimme voimme itse vaikuttaa suuresti siihen, kuinka helposti ja nopeasti tallentamamme tieto on ohjelmakoodissa saatavilla. Vertaa esimerkiksi seuraavia mahdollisia tietorakenteita postinumeroiden ja postitoimipaikkojen tietojen tallentamiseksi:
 
@@ -69,7 +69,7 @@ Jos tarkoituksesi olisi selvittää postinumeroa 74700 vastaava postitoimipaikan
 
 ## Suositeltu oheismateriaali
 
-Tietojenkäsittelyssä sama ongelma voidaan tyypillisesti ratkaista lukemattomilla erilaisilla tavoilla. Onkin olemassa lukuisia tunnettuja algoritmeja esimerkiksi listan arvojen järjestelemiseksi tai yksittäisen arvon etsimiseksi listalta. 
+Tietojenkäsittelyssä sama ongelma voidaan tyypillisesti ratkaista lukemattomilla erilaisilla tavoilla. Onkin olemassa lukuisia tunnettuja algoritmeja esimerkiksi listan arvojen järjestelemiseksi tai yksittäisen arvon etsimiseksi listalta.
 
 Katso seuraavat kolme videota, joka esittelevät ohjelmistokehittäjän perusosaamisen kannalta keskeisiä algoritmeja sekä tietorakenteita. Videoissa tutustut myös iso O -notaatioon, jonka avulla vertailemme algoritmien tehokkuutta eri kokoisilla syötteillä:
 
@@ -131,9 +131,22 @@ https://en.wikipedia.org/wiki/Algorithmic_technique#General_techniques
 
 Tämän oppitunnin tavoitteena on kirjoittaa ohjelma, joka lukee listat suomen- ja englanninkielisistä sanoista ja selvittää, mitkä sanat esiintyvät molemmissa kielissä. Idea on lainattu [Helsingin yliopiston Antti Laaksosen luennolta](https://tira.mooc.fi/syksy-2021/pages/materiaali.html) ja sovellettu omiin tarpeisiimme.
 
-Aineistona käytämme [Kotimaisten kielten tutkimuskeskuksen nykysuomen sanalistaa](http://kaino.kotus.fi/sanat/nykysuomi/) sekä Linuxin sanalistaa `/usr/share/dict/words`. Nykysuomen sanalista [kotus-sanalista-suomi.txt](src/kotus-sanalista-v1/kotus-sanalista-suomi.txt) sisältää 94&nbsp;110 sanaa ja Linux-jakelusta riippuen englanninkielinen sanalista voi sisältää esimerkiksi 102&nbsp;401 sanaa. 
+### Sanakirja-aineistot
+
+Aineistona käytämme [Kotimaisten kielten tutkimuskeskuksen nykysuomen sanalistaa](http://kaino.kotus.fi/sanat/nykysuomi/) sekä Linuxin sanalistaa `/usr/share/dict/words`. Nykysuomen sanalista [kotus-sanalista-suomi.txt](src/kotus-sanalista-v1/kotus-sanalista-suomi.txt) sisältää 94&nbsp;110 sanaa ja Linux-jakelusta riippuen englanninkielinen sanalista voi sisältää esimerkiksi 102&nbsp;401 sanaa.
+
+Mikäli `/usr/share/dict/words`-tiedosto ei ole sinulla esiasennettuna, [voit asentaa sen Debian-ympäristössä komennoilla](https://howtoinstall.co/en/wamerican):
+
+```
+sudo apt update
+sudo apt install wamerican
+```
+
+Mikäli käyttöjärjestelmällesi ei ole saatavilla kyseistä sanakirjaa, voit generoida oman sanakirjatiedoston osoitteessa http://app.aspell.net/create.
 
 Esimerkeissä käytettävä aineisto on riittävän suuri, jotta pystymme huomaamaan merkittäviä eroja erilaisissa tietorakenteissa ja algoritmeissa, joilla yritämme selvittää yhteiset sanat. Nykysuomen sanalista sisältää myös duplikaatteja, minkä vuoksi oppitunnin esimerkeissä näkyy pientä vaihtelua sanojen määrissä: hajautusrakenteita käytettäessä duplikaatit eivät ole mukana, joten niitä käytettäessä sanojen määrä on pienempi kuin esimerkiksi listoilla.
+
+### Listojen vertailu komentorivillä
 
 Ensin voimme kokeilla selvittää yhteisten sanojen määrän komentorivillä Linuxin `comm`-komennolla. Tehokkuussyistä `comm` edellyttää, että sille annettavat syötteet ovat valmiiksi aakkosjärjestyksessä, joten järjestämme ne `sort`-komennolla ja ohjaamme tulokset syötteiksi `<`-operaattorilla:
 
@@ -141,7 +154,7 @@ Ensin voimme kokeilla selvittää yhteisten sanojen määrän komentorivillä Li
 comm -1 -2 <(sort /usr/share/dict/words) <(sort kotus-sanalista-v1/kotus-sanalista-suomi.txt)
 ```
 
-`comm`-komennon tarkemman dokumentaation löydät esimerkiksi täältä: [https://www.ibm.com/docs/en/aix/7.2?topic=c-comm-command](https://www.ibm.com/docs/en/aix/7.2?topic=c-comm-command).
+`comm`-komennon tarkemman dokumentaation löydät [täältä](https://www.gnu.org/software/coreutils/manual/html_node/comm-invocation.html) ja lähdekoodin [GitHubista](https://github.com/coreutils/coreutils/blob/master/src/comm.c).
 
 Jos haluamme selvittää ohjelman suorituksen keston, voimme käyttää Linuxin `time`-komentoa:
 
@@ -192,7 +205,7 @@ if __name__ == '__main__':
 >
 > Antti Laaksonen. [Tietorakenteet ja algoritmit -kirja](https://github.com/pllk/tirakirja/raw/master/tirakirja.pdf)
 
-Koska edellä esitetyssä koodissa käydään aina koko suomenkielinen sanalista läpi, on ulomman toistorakenteen tehokkuus suoraan suhteessa suomenkielisten sanojen määrään (n). Jokaista suomenkielistä sanaa kohden käydään läpi lista englanninkielisiä sanoja `word in english_words` -operaatiolla. Sisäisesti tämä operaatio vertailee etsittävää sanaa kaikkiin englanninkielisen listan sanoihin (m). 
+Koska edellä esitetyssä koodissa käydään aina koko suomenkielinen sanalista läpi, on ulomman toistorakenteen tehokkuus suoraan suhteessa suomenkielisten sanojen määrään (n). Jokaista suomenkielistä sanaa kohden käydään läpi lista englanninkielisiä sanoja `word in english_words` -operaatiolla. Sisäisesti tämä operaatio vertailee etsittävää sanaa kaikkiin englanninkielisen listan sanoihin (m).
 
 Vertailuoperaatioita tehdään siis jopa n * m kappaletta, joka meidän aineistollamme tarkoittaa jopa 10&nbsp;000&nbsp;000&nbsp;000 vertailuoperaatiota.
 
@@ -217,7 +230,7 @@ Linuxin `comm`-komento edellytti, että aineistot ovat aakkosjärjestyksessä. O
 
 Sen sijaan, että kävisimme listan yksi kerrallaan alusta alkaen läpi, voisimme aloittaa etsimisen keskeltä ja rajata etsittävästä aineistosta puolet pois, riippuen siitä, onko etsittävä sana aakkosissa ennen vai jälkeen keskikohdassa olevaa sanaa!
 
-Hakua, jossa puolitamme haettavan aineiston aina keskeltä ja rajaamme seuraavan haun aina puolta pienempään aineistoon kutsutaan puolitushauksi, eli binäärihauksi ([binary search](https://en.wikipedia.org/wiki/Binary_search_algorithm)). 
+Hakua, jossa puolitamme haettavan aineiston aina keskeltä ja rajaamme seuraavan haun aina puolta pienempään aineistoon kutsutaan puolitushauksi, eli binäärihauksi ([binary search](https://en.wikipedia.org/wiki/Binary_search_algorithm)).
 
 Seuraavassa Python-koodissa etsitään sanaa "villa", ja verrataan sitä aineiston keskimmäiseen sanaan:
 
@@ -233,7 +246,7 @@ Koska yllä olevassa esimerkissä etsitty sana `'villa'` on suurempi kuin keskim
 
 Voit katsoa konkreettisen visualisoinnin algoritmin suorituksesta osoitteesta https://www.cs.usfca.edu/~galles/visualization/Search.html tai https://ohjelmointi-19.mooc.fi/osa-7/2-algoritmiikkaa.
 
-Muutetaan vaiheessa 1 kehitettyä sovellusta siten, että puolitamme etsittävän aineiston. Toteutetaan siis oma binäärihaku! 
+Muutetaan vaiheessa 1 kehitettyä sovellusta siten, että puolitamme etsittävän aineiston. Toteutetaan siis oma binäärihaku!
 
 ```python
 """
@@ -286,8 +299,8 @@ if __name__ == '__main__':
 python3 -m cProfile -s calls sanalistat.py
 ```
 
-* Kuinka kauan ohjelman suoritus kestää tällä kertaa? 
-* Onko ero havaittava edelliseen versioon nähden? 
+* Kuinka kauan ohjelman suoritus kestää tällä kertaa?
+* Onko ero havaittava edelliseen versioon nähden?
 * Mikä on puolitushaun aikavaatimus?
 * Mikä on algoritmin kokonaisaikavaatimus nyt?
 * Riittäisikö meille, jos vain toinen sanalista olisi järjestetty?
@@ -307,7 +320,7 @@ Kuinka monta kertaa aineisto voidaan puolittaa, jotta jäljelle jää vielä jot
 1. miljoonan pituinen lista voidaan puolittaa alle 20 kertaa!
 1. miljardin pituinen lista voidaan puolittaa alle 30 kertaa! (1 000 000 000 &lt; 2<sup>30</sup>)
 
-Toisin sanoen, tietty lista voidaan aina puolittaa sen **pituuden kaksikantaisen logaritmin verran kertoja**. 
+Toisin sanoen, tietty lista voidaan aina puolittaa sen **pituuden kaksikantaisen logaritmin verran kertoja**.
 
 > *"logaritmi \[on\] matemaattinen funktio, joka kertoo mihin potenssiin kantaluku on korotettava, jotta saataisiin haluttu luku"*
 >
@@ -494,7 +507,7 @@ Idea suomen- ja englanninkielisten sanalistojen yhteisten sanojen selvittämises
 
 
 
-## Suomenkielisen sanalistan tekijänoikeudet 
+## Suomenkielisen sanalistan tekijänoikeudet
 
     Copyright (C) Kotimaisten kielten tutkimuskeskus 2006
     Kotimaisten kielten tutkimuskeskuksen nykysuomen sanalista, versio 1
