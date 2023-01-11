@@ -8,7 +8,9 @@ Aiheen opiskelun jälkeen osaat kirjoittaa Python-funktioillesi yksikkötestit j
 
 **[Osa 1: Python-tehtävän malliratkaisu ja orientaatio testaukseen](https://web.microsoftstream.com/video/b54e4927-592c-4406-982f-3bccdc34d76a)** *26:25*
 
-Tällä videolla käymme läpi postitoimipaikka- ja postinumerot-tehtävien malliratkaisut ja tutustumme testaukseen yleisellä tasolla. Malliratkaisuja käytetään kolmannella videolla esimerkkitapauksena vaikeasti testattavasta koodista.
+Tällä videolla käymme läpi postitoimipaikka- ja postinumerot-tehtävien malliratkaisut ja tutustumme testaukseen yleisellä tasolla.
+
+🔐 Video avautuu katsottavaksi edellisen tehtävän määräajan päätyttyä.
 
 **[Osa 2: pytest-työkalu](https://web.microsoftstream.com/video/06bc8cbb-15d6-43e6-8990-88629c3f895e)** *47:10*
 
@@ -46,7 +48,7 @@ Mikäli haluat tutustua pytest-työkaluun oppituntia syvällisemmin, suosittelen
 
 # Testauksen käsitteet
 
-<!--Testauksen käsitteistöön kuuluu oleellisena osana eri tasot, joilla erityisesti automatisoitua testausta suoritetaan. 
+<!--Testauksen käsitteistöön kuuluu oleellisena osana eri tasot, joilla erityisesti automatisoitua testausta suoritetaan.
 
 [Jyväskylän Yliopiston Informaatioteknologian tiedekunnan testaussivusto](http://smarteducation.jyu.fi/projektit/systech/Periaatteet/suunnittelun-periaatteet/testaus/testauksen-tasot) kuvaa testauksen tasot selkeänä kokonaisuutena ja kyseisen sivuston määritelmiä noudatetaan myös tällä oppitunnilla.-->
 
@@ -68,7 +70,7 @@ def swap(lista, i, j):
     lista[i], lista[j] = lista[j], lista[i]
 ```
 
-Tämä `swap`-funktio voisi olla yksi yksittäinen yksikkö esimerkiksi lajuttelualgoritmin toteuttavassa Python-moduulissa. Mutta miten tätä funktiota voitaisiin testata? 
+Tämä `swap`-funktio voisi olla yksi yksittäinen yksikkö esimerkiksi lajuttelualgoritmin toteuttavassa Python-moduulissa. Mutta miten tätä funktiota voitaisiin testata?
 
 ### Testitapaus
 
@@ -208,7 +210,7 @@ Ulkoisten riippuvuuksien vaikutuksen minimoimiseksi testit suoritetaan usein eri
 
 # Oman postinumerologiikan testaaminen
 
-Mikäli oma postinumerotehtävän ratkaisusi noudattaa malliratkaisun kaltaista arkkitehtuuria, jossa kaikki logiikka on toteutettu moduulin tasolle, joudut refaktoroimaan koodia testaamisen mahdollistamiseksi. Tämä johtuu siitä, että yksikkötestissä et halua kysyä syötettä käyttäjältä tai antaa ohjelman tulostaa konsoliin, vaan haluat itse ohjelmallisesti tarkistaa oikean lopputuloksen tietyllä syötteellä. 
+Mikäli oma postinumerotehtävän ratkaisusi noudattaa malliratkaisun kaltaista arkkitehtuuria, jossa kaikki logiikka on toteutettu moduulin tasolle, joudut refaktoroimaan koodia testaamisen mahdollistamiseksi. Tämä johtuu siitä, että yksikkötestissä et halua kysyä syötettä käyttäjältä tai antaa ohjelman tulostaa konsoliin, vaan haluat itse ohjelmallisesti tarkistaa oikean lopputuloksen tietyllä syötteellä.
 
 Toinen ongelma alkuperäisessä toteutuksessamme on logiikan toteuttaminen "skriptinä", eli koodina, joka suoritetaan saman tien, mutta joka ei ole hyödynnettävissä muista Python-moduuleista.
 
@@ -410,7 +412,7 @@ Lopulta voimme myös suorittaa koodin ja varmistaa että korjaus tuotti toivotun
 
 Koska edellisissä testeissä käytimme itse luotua keinotekoista dataa, ei testit välttämättä paljasta kaikkia virheitä, jotka ilmenevät rajapinnan oikeassa datassa. Siksi on tärkeää testata myös oman ohjelmamme ja rajapinnan välistä yhteistoimintaa integraatiotestillä.
 
-Integraatiotestit voivat olla luonteeltaan yksikkötestejä monimutkaisempia ja hitaampia, joten niitä suoritetaan tyypillisesti keskitetyssä CI-järjestelmässä (continuous integration) eikä välttämättä vain kehittäjän omalla työasemalla. 
+Integraatiotestit voivat olla luonteeltaan yksikkötestejä monimutkaisempia ja hitaampia, joten niitä suoritetaan tyypillisesti keskitetyssä CI-järjestelmässä (continuous integration) eikä välttämättä vain kehittäjän omalla työasemalla.
 
 Integraatiotestejä voidaan toteuttaa samoilla teknologioilla kuin yksikkötestejä. Käytännössä voisimme toteuttaa integraatiotestin oman Python-sovelluksemme ja JSON-rajapinnan välille kirjoittamalla samankaltaisen testin kuin aikaisemmin, mutta ilman mock-vastausta.
 
@@ -440,7 +442,7 @@ rope==0.17.0
 # ... ja monia muita riippuvuuksia
 ```
 
-Pip mahdollistaa myös useiden riippuvuuksien asentamisen kerralla `requirements.txt` -tiedostojen avulla. Voit lukea lisää näistä tiedostoista [virallisesta dokumentaatiosta](https://pip.pypa.io/en/stable/user_guide/#requirements-files). 
+Pip mahdollistaa myös useiden riippuvuuksien asentamisen kerralla `requirements.txt` -tiedostojen avulla. Voit lukea lisää näistä tiedostoista [virallisesta dokumentaatiosta](https://pip.pypa.io/en/stable/user_guide/#requirements-files).
 
 Tätä omaa projektiamme varten voimme tallentaa riippuvuudet `requirements.txt`-tiedostoon ohjaamalla `freeze`-komennon tulosteet `requirements.txt`-nimiseen tiedostoon:
 

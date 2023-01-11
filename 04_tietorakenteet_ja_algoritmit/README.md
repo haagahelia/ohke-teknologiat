@@ -135,16 +135,18 @@ Tämän oppitunnin tavoitteena on kirjoittaa ohjelma, joka lukee listat suomen- 
 
 Aineistona käytämme [Kotimaisten kielten tutkimuskeskuksen nykysuomen sanalistaa](http://kaino.kotus.fi/sanat/nykysuomi/) sekä Linuxin sanalistaa `/usr/share/dict/words`. Nykysuomen sanalista [kotus-sanalista-suomi.txt](src/kotus-sanalista-v1/kotus-sanalista-suomi.txt) sisältää 94&nbsp;110 sanaa ja Linux-jakelusta riippuen englanninkielinen sanalista voi sisältää esimerkiksi 102&nbsp;401 sanaa.
 
-Mikäli `/usr/share/dict/words`-tiedosto ei ole sinulla esiasennettuna, [voit asentaa sen Debian-ympäristössä komennoilla](https://howtoinstall.co/en/wamerican):
+Nykysuomen sanalistan voit ladata esimerkiksi tästä: [kaikkisanat.txt](https://github.com/hugovk/everyfinnishword/blob/master/kaikkisanat.txt). Sanalistatiedoston on koonnut Hugo van Kemenade ja se löytyy [GitHubista omana projektinaan](https://github.com/hugovk/everyfinnishword).
+
+`/usr/share/dict/words`-tiedosto on joissain Linux-jakeluissa esiasennettuna, mutta jos sitä ei löydy, [voit asentaa sen Debian-ympäristössä näillä komennoilla](https://howtoinstall.co/en/wamerican):
 
 ```
 sudo apt update
 sudo apt install wamerican
 ```
 
-Mikäli käyttöjärjestelmällesi ei ole saatavilla kyseistä sanakirjaa, voit generoida oman sanakirjatiedoston osoitteessa http://app.aspell.net/create.
+Mikäli käyttöjärjestelmällesi ei ole saatavilla tätä sanakirjaa, voit generoida oman sanakirjatiedoston osoitteessa http://app.aspell.net/create.
 
-Esimerkeissä käytettävä aineisto on riittävän suuri, jotta pystymme huomaamaan merkittäviä eroja erilaisissa tietorakenteissa ja algoritmeissa, joilla yritämme selvittää yhteiset sanat. Nykysuomen sanalista sisältää myös duplikaatteja, minkä vuoksi oppitunnin esimerkeissä näkyy pientä vaihtelua sanojen määrissä: hajautusrakenteita käytettäessä duplikaatit eivät ole mukana, joten niitä käytettäessä sanojen määrä on pienempi kuin esimerkiksi listoilla.
+Esimerkeissä käytettävät aineistot ovat riittävän suuria, jotta pystymme huomaamaan merkittäviä eroja erilaisissa tietorakenteissa ja algoritmeissa, joilla yritämme selvittää yhteiset sanat.
 
 ### Listojen vertailu komentorivillä
 
