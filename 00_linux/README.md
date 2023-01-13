@@ -29,14 +29,16 @@ Unix-pohjaiset käyttöjärjestelmät tarjoavat paljon työkaluja, jotka helpott
 Komentorivityöskentely on tärkeä taito myös esimerkiksi sulautettujen järjestelmien ja mikrotietokoneiden yhteydessä.
 
 
-### Unix-pohjaisten järjestelmien komentorivi
+## Unix-pohjaisten järjestelmien komentorivi
 
 Unix-pohjaisten järjestelmien komentorivi on kehittäjille monipuolinen ja voimakas työkalu. Komentorivi mahdollistaa paitsi erilaisten työkalujen nopean asentamisen, tiedostojärjestelmän helpon selaamisen, erilaisten ympäristöjen pystyttämisen jne. Käydään tässä läpi esimerkkien kautta Linux-järjestelmän kehittäjälle hyödyllisiä perusasioita ja komentoja, suurin osa asioista toimii myös muissa Unix-pohjaisissa järjestelmissä.
 
 Alkuun mainittakoon yleisesti, että Linux-komentojen keskeyttäminen tarvittaessa tapahtuu `CTRL + C`:llä. Vielä voimakkaampi yhdistelmä on `CTRL + Z`, joka ei anna processille mahdollisuutta yrittää sulavaa siistiä lopettamista.
 
 
-#### Unix-komentoja
+## Unix-komentoja
+
+### Hakemistot ja navigointi
 
 Print working directory, tulostaa kansion jossa olet.
 
@@ -91,6 +93,8 @@ Manual komennolla (`man`) saa esiin tietyn kommennon ohjeen ja näkee mm. mitä 
 $ man ls
 ```
 
+### Tiedostojen käsittely
+
 Tiedoston sisällön voi tulostaa `cat`-komennolla:
 
 ```shell
@@ -115,14 +119,16 @@ $ cp -R hakemisto /Users/me/toinenhakemisto # kopioi hakemiston toiseen hakemist
 Tiedostoja voi siirtää tai uudelleennimetä `mv`-komennolla:
 
 ```shell
-$ mv teidosto.txt tiedosto.txt
-$ mv tiedosto.txt ../ # siirtää tiedoston hierarkiassa edelliseen kansioon
+$ mv vanhanimi.txt uusinimi.txt
+$ mv tiedosto.txt ../           # siirtää tiedoston hierarkiassa edelliseen kansioon
 ```
+
+Huom! Siirrellessäsi Git-versionhallinnan alla olevia tiedostoja ja hakemistoja suosittelemme käyttämään [`git mv`-komentoa](https://git-scm.com/docs/git-mv), joka huolehtii siitä, että Git pysyy tilanteen tasalla tiedoston muuttuneesta nimestä.
 
 Kansioita voi luoda `mkdir`-komennolla:
 
 ```shell
-$ mkdir hienokansio
+$ mkdir kansion_nimi
 ```
 
 Tiedostoja voi poistaa `rm`-komennolla. `-r` tai `--recursive` -parametrin kanssa voit poistaa kokonaisia kansiorakenteita:
@@ -132,6 +138,9 @@ $ rm tiedosto
 $ rm -r kansiorakenne # jos hakemisto ei ole tyhjä, tarvitset lisäksi f -vivun eli "force"
 $ yes | rm -R kansiorakenne # jotkin unix-järjestelmät kysyvät joka tiedoston kohalla yes-varmistetta, sen voi automatisoida putkittamalla yes-komennon
 ```
+
+Huom! Poistaessasi Git-versionhallinnan alla olevia tiedostoja ja hakemistoja suosittelemme käyttämään [`git rm`-komentoa](https://git-scm.com/docs/git-rm), joka huolehtii siitä, että tiedoston poisto commitoidaan myös versionhallintaan.
+
 
 Tyhjän tiedoston voi luoda `touch` komennolla:
 
@@ -148,6 +157,8 @@ $ vi tiedosto.txt
 $ nano tiedosto.txt
 $ emacs tiedosto.txt
 ```
+
+### Tiedostojen etsiminen ja vertailu
 
 Tiedostoja voi etsiä tiedostonimen perusteella `find`-komennolla. `*`-merkkiä voi käyttää tarkoittamaan, että mitkä tahansa merkit tähden ja seuraavan merkin välillä kelpaa hakuun:
 
@@ -178,9 +189,11 @@ Kahden tiedoston eroavaisuudet voi listata diff komennolla:
 $ diff tiedosto1.txt tiedosto2.txt
 ```
 
-`chmod`-komennolla voi muokata tiedoston tai kansion oikeuksia, eli kenellä on oikeus tehdä tiedostoon minkälaisia muutoksia. Komennolla voi antaa tietylle tiedostolle oikeuksia kolmella eri tasolla: käyttäjä (u), käyttäjäryhmä (g) ja miten muut (o).
+### Tiedostojen oikeudet
 
-Tiedostolle voi antaa omalle käyttäjälleen luku-, suoritus- ja muokkausoikeudet, saman käyttäjäryhmän ihmisille luku- ja suoritusoikeudet ja muille ei mitään oikeuksia (edes tiedoston lukemiseen).
+`chmod`-komennolla voi muokata tiedoston tai kansion oikeuksia, eli kenellä on oikeus tehdä tiedostoon minkälaisia muutoksia. Komennolla voi antaa tietylle tiedostolle oikeuksia kolmella eri tasolla: käyttäjä *(u)*, käyttäjäryhmä *(g)* ja miten muut *(o)*.
+
+Tiedostolle voi antaa omalle käyttäjälleen luku- *(r)*, suoritus- *(w)* ja muokkausoikeudet *(x)*, saman käyttäjäryhmän ihmisille luku- ja suoritusoikeudet ja muille ei mitään oikeuksia.
 
 Oikeudet ilmaistaan tyypillisesti numeerisessa muodossa siten, että kukin oikeus vastaa yhtä bittiä kolmen bitin numerossa `rwx`. Esimerkiksi luku- ja suoritusoikeudet annetaan biteillä `101`, joka vastaa numeroa 5. Tästä komennosta voi lukea lisää vaikka [täältä](https://www.computerhope.com/unix/uchmod.htm).
 
@@ -201,6 +214,8 @@ $ chown mysqlUser mysqlscript.sh
 $ sudo apt install mysql
 ```
 
+### Ympäristömuuttujat
+
 Unix-järjestelmissä voi määritellä ympäristömuuttujia, kuten `PATH` ja `HOME`. Suorittaessasi komentoa, käyttöjärjestelmä etsii sitä yksi kerrallaan `PATH`-muuttujaan lisätyistä hakemistoista. Path-muuttujan nykyisen sisällön voi tulostaa echo-komennon avulla:
 
 ```shell
@@ -216,6 +231,9 @@ export-komennolla voit lisätä PATH-muuttujaan uusia hakemistoja. Alla oleva ko
 $ export PATH="$PATH:${HOME}/.npm-packages/bin"
 ```
 
+
+### Prosessit
+
 Processes (`ps`) komennolla voi listata esimerkiksi kaikki kyseisen käyttäjän käynnissä olevat prosessit. Niihin liittyen voi tulostaa `ps`-komennolla monipuolisesti tietoja eri prosesseista, kuten niiden muistin ja prosessorin käyttömäärän.
 
 Näiden perusteella voi tehdä johtopäätöksiä, jos joki prosessi (esimerkiksi serveri) on jäänyt jumiin tai esimerkiksi jokin ohjelma ikuiseen silmukkaan.
@@ -230,6 +248,9 @@ $ ps axu
 $ kill 1234     # annetaan prosessille mahdollisuus vielä ajaa jotain komentoja
 $ kill -9 1234  # jos prosessi ei vielä edellisellä kuollut, niin tällä lähtee.
 ```
+
+
+### Käyttäjät
 
 Käyttäjiä voi lisätä Linux-järjestelmissä `useradd`-komennolla ja salasana lisätään `passwd`-komennolla
 
@@ -265,7 +286,7 @@ $ mongo
 
 ### Esimerkki: Sanuli ja grep
 
-Sanuli (https://www.sanuli.fi) on uusi kotimainen avoimen lähdekoodin peli, joka on [herättänyt paljon kiinnostusta vuoden 2022 alussa](https://www.is.fi/digitoday/esports/art-2000008531907.html). Tässä kohdassa kokeilemme oppitunnin videotallenteella Linuxin komentorivin mahdollisuuksia Sanulin ratkaisemisen avustamisessa. Hyödynnä esimerkissä Kotus-sanalistaa, joka löytyy hakemistosta [04_tietorakenteet_ja_algoritmit/src/kotus-sanalista-v1/](../04_tietorakenteet_ja_algoritmit/src/kotus-sanalista-v1/).
+Sanuli (https://www.sanuli.fi) on uusi kotimainen avoimen lähdekoodin peli, joka on [herättänyt paljon kiinnostusta vuoden 2022 alussa](https://www.is.fi/digitoday/esports/art-2000008531907.html). Tässä kohdassa kokeilemme oppitunnin videotallenteella Linuxin komentorivin mahdollisuuksia Sanulin ratkaisemisen avustamisessa. Hyödynnä esimerkissä Kotus-sanalistaa, joka löytyy esimerkiksi Git-repositoriosta [https://github.com/hugovk/everyfinnishword](https://github.com/hugovk/everyfinnishword).
 
 Sanulin on kehittänyt Jaakko Husso ja se on julkaistu MIT-lisenssillä GitHubissa: https://github.com/Cadiac/sanuli.
 
@@ -298,7 +319,7 @@ $ chmod u+x skripti.sh # annetaan käyttäjälle suoritusoikeudet skriptiin, muu
 $ ./skripti.sh hello   # ajetaan skripti ja annetaan sille parametrina sana "hello"
 ```
 
-Unix-pohjaisissa järjestelmissä on komentojen ajastuksen mahdollistava [cron-prosessi](https://opensource.com/article/17/11/how-use-cron-linux). `crontab`-komennolla voi määritellä ajastettavia komentojan "ajastustauluun" (cron table). `crontab`-komento luo käyttäjälle ajastustaulutiedoston `/var/spool/cron`-kansioon. Crontaulun ajastussyntaksi seuraa tiettyä kaavaa. *-merkki tarkoittaa, että kyseinen ajanmääre voi olla mitä vain.
+Unix-pohjaisissa järjestelmissä on komentojen ajastuksen mahdollistava [cron-prosessi](https://opensource.com/article/17/11/how-use-cron-linux). `crontab`-komennolla voi määritellä ajastettavia komentoja "ajastustauluun" (cron table). `crontab`-komento luo käyttäjälle ajastustaulutiedoston `/var/spool/cron`-kansioon. Crontaulun ajastussyntaksi seuraa tiettyä kaavaa. \*-merkki tarkoittaa, että kyseinen ajanmääre voi olla mitä vain.
 
 ```shell
 1 2 3 4 5 /polku/komento argumentit_komennolle

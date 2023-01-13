@@ -192,7 +192,9 @@ Lisäksi suosittelemme muuttamaan VS Code:n asetuksista koodin automaattisen muo
 **Huom!** Python-paketit sisältävät suoritettavaa ohjelmakoodia, joten niiden kanssa tulee huomioida tietoturva, aivan kuten muidenkin suoritettavien ohjelmien kanssa. Paketteja ei kannata ladata tuntemattomista lähteistä. Tunnettujen ja laajasti käytettyjen pakettien käyttäminen voi myös olla turvallisempaa kuin heikommin tunnettujen tai vähäisessä käytössä olevien. Lisätietoa pip-pakettienhallinnan turvallisuudesta löydät esimerkiksi artikkelista ["Look before you pip"](https://www.ayrx.me/look-before-you-pip).
 
 
-## Extra: Guest additions sekä leikepöydän käyttö
+-->
+
+## Extra: VirtualBox Guest additions sekä leikepöydän käyttö
 
 Perusasennuksen lisäksi suosittelemme sinua asentamaan VirtualBoxin "guest additions" -lisäosat virtualisoidulle Linux-koneelle. Lisäosien avulla esimerkiksi VirtualBox-ikkunan koon muuttaminen muuttaa automaattisesti virtualisoidun työpöydän resoluutiota ikkunan koon mukaiseksi.
 
@@ -203,7 +205,7 @@ Asennus tapahtuu helpoiten syöttämällä virtuaalikoneeseen virtuaalinen asenn
 Lisää ohjeita löydät [Googlella](https://www.google.com/search?q=virtualbox+install+guest+additions).
 
 Virtuaalikoneen ja "host"-koneen välillä on myös mahdollista synkronoida leikepöytä. Tällöin pystyt kopioimaan ja liittämään tekstiä kätevästi eri järjestelmien välillä. Käynnissä olevan virtuaalikoneen "Devices"-valikosta löytyy kohta "Shared clipboard", jonka avulla voit valita leikepöydän toimintalogiikan haluamaksesi.
--->
+
 
 ## Loppusanat
 
