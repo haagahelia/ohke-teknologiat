@@ -55,7 +55,7 @@ $ cd /home/user/kansionnimi # siirtyy kansioon absoluuttisella polulla
 $ cd ..                     # siirtyy hierarkiassa edelliseen kansioon
 $ cd ../kansionnimi         # siirtyy hierarkiassa edelliseen alikansioon ja sen alla olevaan kansioon
 $ cd ~                      # siirtyy käyttäjän kotikansioon
-$ cd -                      #siirtyy kansioon, jossa olit ennen tätä
+$ cd -                      # siirtyy kansioon, jossa olit ennen tätä
 ```
 
 `ls`-komento listaa kansion tiedostot ja alihakemistot:
@@ -80,14 +80,16 @@ Linuxissa komennon syötteen voi ajaa myös tiedostoon `>` -ohjausmerkillä:
 
 ```shell
 $ ls -l > tiedosto.txt
-
-# Kahdella >> -merkillä syöte lisätään tiedoston loppuun, kuten
-# tässä käyttäjän kotihakemistossa olevan .bashrc-tiedoston loppuun.
-
-$ echo "export EDITOR='/usr/bin/nano'" >> ~/.bashrc
 ```
 
-Manual komennolla (`man`) saa esiin tietyn kommennon ohjeen ja näkee mm. mitä lisävipuja komennolle voi antaa:
+Kahdella `>>` -merkillä syöte lisätään tiedoston loppuun, nykyisen sisällön jälkeen. Tässä esimerkissä määritellään `EDITOR`-niminen muuttuja, joka määrittelee esim. Git-komentojen käyttämän tekstieditorin. `echo`-komennon ja tiedostoon ohjauksen `>>` avulla ympäristömuuttujan asettaminen lisätään käyttäjän kotihakemistossa olevan `.bashrc`-tiedoston loppuun, jolloin se suoritetaan automaattisesti aina uutta komentorivisessiota aloitettaessa:
+
+```shell
+$ export EDITOR='/usr/bin/nano'                     # asettaa muuttujan
+$ echo "export EDITOR='/usr/bin/nano'" >> ~/.bashrc # muuttujan asettaminen lisätään osaksi skriptiä
+```
+
+Manual komennolla (`man`) saa esiin tietyn kommennon ohjeen ja näkee mm. mitä "lisävipuja" komennolle voi antaa:
 
 ```shell
 $ man ls
@@ -267,11 +269,8 @@ $ whois haaga-helia.fi      # tietoja tunnuksesta (whois pitää asentaa apt:lla
 $ ssh host.jotain.fi        # avataan ssh-etäyhteys etäpalvelimeen
 $ wget https://osoite.fi/kuva.jpeg  # ladataan tiedosto internetistä
 
-# Haetaan curl komennolla rajapinnasta json-tiedosto,
-# siistitään se kivasti riveittäin pythonin json.tool:illa ja
-# tulostetaan grepin avulla vain tietyn sanan sisältävät rivit.
-# Komennolle annetaan parametreina lokaaleista ympäristömuuttujista APP_ID ja APP_KEY:
-$ curl https://external.api.yle.fi/v1/programs/items.json?app_id=${APP_ID}\&app_key=${APP_KEY} | python3 -m json.tool | grep '"fi"'
+# Haetaan curl komennolla http-palvelimelta tiedosto ja putkitetaan se `grep`-komennolle:
+$ curl https://raw.githubusercontent.com/harjoitukset/typescript-postalcodes/master/postalcodes.csv | grep -i 'helsinki'
 ```
 
 Ohjelmistokehittäjä pystyy ajamaan unix-järjestelmissä lukuisia kehitystyöhön liittyviä ohjelmia. Tässä vielä niistä muutamia esimerkkejä:
@@ -285,6 +284,8 @@ $ mongo
 ```
 
 ### Esimerkki: Sanuli ja grep
+
+<!-- Esim: cat kaikkisanat.txt | grep '^myy.ä$' | grep -v [oenakiöj] -->
 
 Sanuli (https://www.sanuli.fi) on uusi kotimainen avoimen lähdekoodin peli, joka on [herättänyt paljon kiinnostusta vuoden 2022 alussa](https://www.is.fi/digitoday/esports/art-2000008531907.html). Tässä kohdassa kokeilemme oppitunnin videotallenteella Linuxin komentorivin mahdollisuuksia Sanulin ratkaisemisen avustamisessa. Hyödynnä esimerkissä Kotus-sanalistaa, joka löytyy esimerkiksi Git-repositoriosta [https://github.com/hugovk/everyfinnishword](https://github.com/hugovk/everyfinnishword).
 

@@ -56,11 +56,13 @@ Kokeile Pythonin laskuoperaatioita sivun https://www.pythoncheatsheet.org/#Pytho
 ```python
 # tämä on yksirivinen kommentti
 
-""" tämä on monirivinen merkkijono, joita
-    käytetään pythonissa myös usein kommentteina """
+"""
+Tämä on monirivinen merkkijono, joita
+käytetään Pythonissa myös usein kommentteina.
+"""
 ```
 
-```python
+```
 // tämä ei ole kommentti!
 ```
 
@@ -90,6 +92,7 @@ Kaupungissa Helsinki on 648553 asukasta!
 ```
 
 Huomaa, että yllä muotoiluja sisältävän merkkijonon eteen on laitettu f-kirjain `f''`!
+
 
 ### Tulostaminen
 
@@ -309,7 +312,7 @@ Jos tarkoituksena on käydä läpi kokonaislukuja (vrt. `for (int i=0; i < raja;
 ```python
 >>> for luku in range(5, 10):
 ...     print(luku)
-... 
+...
 5
 6
 7
@@ -410,7 +413,7 @@ Arvojen hakeminen, lisääminen ja korvaaminen toimivat kuten JavaScriptissä:
 >>> # Arvon hakeminen:
 >>> vakiluvut['Helsinki']
 648553
->>> 
+>>>
 >>> # Arvon lisääminen:
 >>> vakiluvut['Turku'] = 186_756
 >>>
@@ -437,7 +440,7 @@ True
 >>> # in tarkistaa vain avaimista:
 >>> 648554 in vakiluvut
 False
->>> 
+>>>
 >>> # voit tehdä tarkistuksen myös suoraan sanakirjan arvoihin
 >>> 648554 in vakiluvut.values()
 True
@@ -456,7 +459,7 @@ Sanakirjan avaimet voidaan käydä läpi yksinkertaisella `for`-toistorakenteell
 ```python
 >>> for avain in vakiluvut:
 ...     print(avain)
-... 
+...
 Helsinki
 Espoo
 Vantaa
@@ -468,7 +471,7 @@ Jos toistossa halutaan käsitellä sekä avaimia että arvoja, kannattaa ne käy
 ```python
 >>> for nimi, luku in vakiluvut.items():
 ...     print(f'{nimi} ({luku})')
-... 
+...
 Helsinki (648554)
 Espoo (285018)
 Vantaa (229593)
@@ -516,15 +519,15 @@ Pythonista löytyy **paljon** perusoperaatioita myös valmiina, eli oman `laske_
 
     >>> import math
     >>> dir(math)
-    ['__doc__', '__loader__', '__name__', '__package__', 
-    '__spec__', 'acos', 'acosh', 'asin', 'asinh', 'atan', 'atan2', 
-    'atanh', 'ceil', 'comb', 'copysign', 'cos', 'cosh', 'degrees', 
-    'dist', 'e', 'erf', 'erfc', 'exp', 'expm1', 'fabs', 
+    ['__doc__', '__loader__', '__name__', '__package__',
+    '__spec__', 'acos', 'acosh', 'asin', 'asinh', 'atan', 'atan2',
+    'atanh', 'ceil', 'comb', 'copysign', 'cos', 'cosh', 'degrees',
+    'dist', 'e', 'erf', 'erfc', 'exp', 'expm1', 'fabs',
     'factorial', 'floor', 'fmod', 'frexp', 'fsum', 'gamma', 'gcd',
-    'hypot', 'inf', 'isclose', 'isfinite', 'isinf', 'isnan', 
-    'isqrt', 'ldexp', 'lgamma', 'log', 'log10', 'log1p', 'log2', 
-    'modf', 'nan', 'perm', 'pi', 'pow', 'prod', 'radians', 
-    'remainder', 'sin', 'sinh', 'sqrt', 'tan', 'tanh', 'tau', 
+    'hypot', 'inf', 'isclose', 'isfinite', 'isinf', 'isnan',
+    'isqrt', 'ldexp', 'lgamma', 'log', 'log10', 'log1p', 'log2',
+    'modf', 'nan', 'perm', 'pi', 'pow', 'prod', 'radians',
+    'remainder', 'sin', 'sinh', 'sqrt', 'tan', 'tanh', 'tau',
     'trunc']
 
 
