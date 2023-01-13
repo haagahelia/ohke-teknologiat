@@ -11,6 +11,8 @@ Mikäli sinulla on valmiiksi käytössäsi Linux tai muu Unix-pohjainen käyttö
 
 Graafiseen käyttöliittymään tottuneille käyttäjille yksi miellyttävä tie Linuxiin tutustumiseksi on [Ubuntu](https://ubuntu.com/desktop)- tai [Xubuntu](https://xubuntu.org/)-käyttöjärjestelmä graafisella käyttöliittymällä. Ubuntu voidaan asentaa "virtuaalikoneena" Oraclen ilmaisen [VirtualBox](https://www.virtualbox.org/)-virtualisointiympäristön avulla esimerkiksi [Ubuntun tutoriaalia seuraamalla](https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox#1-overview).
 
+**Huom!** VirtualBox-version 7 ja Ubuntun version 22.04 automaattisessa asennuksessa (unattended installation) vaikuttaa olevan [bugi](https://askubuntu.com/q/1435918), jonka vuoksi käyttöjärjestelmän virheelliset kieliasetukset estävät terminaalin avaamisen. Suosittelemme, että ette käytä asennuksessa "unattended"-vaihtoehtoa.
+
 > *"VirtualBox is a general purpose virtualiser that is available across Linux, Mac OS and Windows. It’s a great way to experience Ubuntu regardless of your current operating system."*
 >
 > https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox
