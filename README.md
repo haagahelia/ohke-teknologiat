@@ -37,8 +37,9 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
 
 ## Opintojakson oppitunnit ja päivämäärät
 
+**Huom!** Tämä sivu päivittyy kurssin edetessä ja yksittäisten tuntien aiheet voivat vielä muuttua.
 
-**Huom!** Tämä sivu päivittyy kurssin edetessä ja kurssi voi muuttua vielä suunnitellusta jopa ohjelmointikielen osalta.
+Kurssin alkukyselyssä ja ensimmäisellä oppitunnilla käsiteltiin kurssin ohjelmointikielivalintaa. Perinteisesti kurssilla on käytetty pääasiassa **Pythonia**, joka on kurssilla edelleen käytössä videoiden ja tekstimateriaalien muodossa. Alkukyselyssä ilmenneen JavaScriptin suuren suosion myötä pyrimme käsittelemään oppitunneilla kurssin aiheita **JavaScriptiä** ja **TypeScriptiä**. Pyrimme päivittämään tehtäviä siten, että voitte toteuttaa ratkaisunne tehtäviin millä vain näistä kolmesta kielestä.
 
 
 <table>
@@ -77,7 +78,9 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
         <tr>
             <td>Ma 23.1.</td>
             <td>
-                <strong><a href="01_python/">Python-ohjelmointi</a></strong><br /><br />
+                <strong>TypeScript-ohjelmointi</strong> tai<br />
+                <strong><a href="01_python/">Python-ohjelmointi</a></strong><br />
+                <br />
                 <strong>Tehtävät:</strong><br />
                 <ul>
                     <li>📥 Postinumeroiden käsittely (ks. Teams)</li>
@@ -85,8 +88,8 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
                 <br />
                 <strong>Videot:</strong>
                 <ul>
-                    <li><a href="https://web.microsoftstream.com/video/497d7df3-1629-49f9-b460-82c1d479b03d">📼 Perusrakenteet ja komentorivikäyttö</a></li>
-                    <li><a href="https://web.microsoftstream.com/video/0f31953b-417b-4669-915d-ca35917bfbc0">📼 Tietorakenteet, ehdot ja toisto</a></li>
+                    <li><a href="https://web.microsoftstream.com/video/497d7df3-1629-49f9-b460-82c1d479b03d">📼 Pythonin perusrakenteet ja komentorivikäyttö</a></li>
+                    <li><a href="https://web.microsoftstream.com/video/0f31953b-417b-4669-915d-ca35917bfbc0">📼 Pythonin tietorakenteet, ehdot ja toisto</a></li>
                 </ul>
             </td>
             <td>
@@ -97,7 +100,8 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
         <tr>
             <td>Ma 30.1.</td>
             <td>
-                <strong><a href="02_testaus/">Testaus</a></strong><br />
+                <strong>Testaus (Jest)</strong><br />
+                <strong><a href="02_testaus/">Testaus (Pytest)</a></strong><br />
                 <ul>
                     <li>Testauksen tasot</li>
                     <li>Yksikkötestaus</li>
@@ -127,7 +131,8 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
         <tr>
             <td>Ma 13.2.</td>
             <td>
-                <strong><a href="04_tietorakenteet_ja_algoritmit/">Tietorakenteet ja algoritmit</a></strong><br />
+                <strong>Tietorakenteet ja algoritmit</strong><br />
+                TypeScript tai <a href="04_tietorakenteet_ja_algoritmit/">Python</a>
                 <ul>
                     <li>Lajittelualgoritmit</li>
                     <li>Hakualgoritmit</li>
@@ -147,7 +152,7 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
         <tr>
             <td>Ma 27.2.</td>
             <td>
-                <strong><a href="05_es6_node/oppitunti1.md">Moderni JavaScript ja funktionaalinen ohjelmointityyli</a></strong><br />
+                <strong><a href="05_es6_node/oppitunti1.md">Funktionaalinen ohjelmointityyli</a></strong><br />
                 <ul>
                     <li>ES6-syntaksit</li>
                     <li>filter, map, reduce</li>
