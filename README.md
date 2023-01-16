@@ -78,7 +78,7 @@ Kurssin alkukyselyssä ja ensimmäisellä oppitunnilla käsiteltiin kurssin ohje
         <tr>
             <td>Ma 23.1.</td>
             <td>
-                <strong>Kurssin ohjelmointikielet</strong> tai<br />
+                <strong>Kurssin ohjelmointikielet:</strong><br />
                 <strong>TypeScript</strong> tai <strong><a href="01_python/">Python</a></strong><br />
                 <br />
                 <strong>Tehtävät:</strong><br />
@@ -100,7 +100,7 @@ Kurssin alkukyselyssä ja ensimmäisellä oppitunnilla käsiteltiin kurssin ohje
         <tr>
             <td>Ma 30.1.</td>
             <td>
-                <strong>Testaus</strong><br />
+                <strong>Testaus:</strong><br />
                 <strong>Jest</strong> tai <strong><a href="02_testaus/">Pytest</a></strong><br />
                 <ul>
                     <li>Testauksen tasot</li>
@@ -131,7 +131,7 @@ Kurssin alkukyselyssä ja ensimmäisellä oppitunnilla käsiteltiin kurssin ohje
         <tr>
             <td>Ma 13.2.</td>
             <td>
-                <strong>Tietorakenteet ja algoritmit</strong><br />
+                <strong>Tietorakenteet ja algoritmit:</strong><br />
                 <strong>TypeScript</strong> tai <a href="04_tietorakenteet_ja_algoritmit/">Python</a>
                 <ul>
                     <li>Lajittelualgoritmit</li>
