@@ -5,14 +5,14 @@
 >
 > https://github.com/microsoft/TypeScript/
 
-TypeScript on:
+TypeScriptin ominaisuuksia:
 
 - [x] JavaScriptin laajennos
 - [x] Vahvasti tyypitetty kieli
- Suuri osa TypeScriptin "uusista ominaisuuksista" on osa EcmaScriptin seuraavia versioita, "future JavaScript"
+- [x] Sisältää jo etukäteen JavaScriptin tulevia ominaisuuksia: "future JavaScript"
 - [x] MicroSoftin kehittämä
-- [x] Yhteensopiva JavaScriptin ja mm. olemassa olevien NPM-pakettien kanssa
-- [x] Yhteensopiva myös JavaScriptin vanhojen versioiden kanssa
+- [x] Yhteensopiva olemassa olevien JavaScript-sovellusten ja NPM-pakettien kanssa
+- [x] Käännettävissä yhteensopivaksi myös JavaScriptin vanhojen versioiden kanssa
 
 https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
 
@@ -20,12 +20,20 @@ https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
 
 ## Suositellut videot
 
-[Programming with Mosh: TypeScript Tutorial for Beginners](https://www.youtube.com/watch?v=d56mG7DezGs)
+Mikäli opiskelet tämän viikon aiheen itsenäisesti, suosittelemme perehtymään seuraaviin videoihin:
 
-[Fireship: TypeScript - The Basics](https://www.youtube.com/watch?v=ahCwqrYpIuM)
+**[Programming with Mosh: TypeScript Tutorial for Beginners](https://www.youtube.com/watch?v=d56mG7DezGs)**
+
+"TypeScript Tutorial for Beginners. Learn TypeScript to write better large-scale JavaScript apps. This tutorial helps you get started quickly."
+
+**[Fireship: TypeScript - The Basics](https://www.youtube.com/watch?v=ahCwqrYpIuM)**
+
+"TypeScript has forever altered the lives of JavaScript developers. Learn why TS is so awesome and the basic concepts required to be successful using it."
 
 
 ### TypeScriptin asentaminen
+
+TypeScript voidaan asentaa joko globaalisti koko käyttöjärjestelmään tai paikallisesti yksittäiseen projektiin. Globaali asennus [jakaa mielipiteitä](https://github.com/loopbackio/loopback.io/issues/509) ja tämän kurssin esimerkeissä asennus tehdään aina paikallisesti. Paikallisen asennuksen myötä koko projekti asentuu kerralla `npm install`-komennolla ja kaikilla kehittäjillä on käytössään sama versio TypeScriptistä.
 
 > *"TypeScript is available as a package on the npm registry available as "typescript".*
 >
@@ -56,7 +64,7 @@ Asennuksen jälkeen `package.json`-tiedostosi näyttää esim. seuraavalta:
 }
 ```
 
-💡 **Huom!** Monissa esimerkeissä ja lähteissä TypeScript asennetaan globaalisti. Globaali asennus [jakaa mielipiteitä](https://github.com/loopbackio/loopback.io/issues/509) ja tämän kurssin esimerkeissä asennus tehdään aina paikallisesti.
+Kuten yltä huomaat, TypeScript asennetaan development-vaiheen riippuvuudeksi. TypeScriptiä ei tarvita varsinaisessa tuotantoympäristössä lainkaan, koska koodi käännetään ensin JavaScriptiksi, jota suoritetaan sellaisenaan esimerkiksi selaimessa tai Node.js-ympäristössä.
 
 <!--
 JavaScriptin päivämäärien ongelmat
@@ -99,13 +107,20 @@ Etäisyyden lisääminen olemassa olevaan tyyppiin:
 type PlaceWithDistance = Place & { distance: number };
 -->
 
-## Transpilointi
+## Kääntäminen / transpilointi
 
-TypeScript Tooling in 5 minutes: https://www.typescriptlang.org/docs/handbook/typescript-tooling-in-5-minutes.html
+TypeScriptin omissa dokumenteissa käytetään pääsääntöisesti termiä "kääntäminen" (compiling), kun puhutaan TS-koodin muuntamisesta JS-koodiksi. Kääntämiselle tarkoitetaan kuitenkin perinteisesti operaatiota, jossa ihmisen luettava lähdekoodi muunnetaan matalamman abstraktiotason muotoon, joka on tyypillisesti konekielistä ja ihmisen vaikeasti luettavaa. TS-koodi käännetään kuitenkin saman abstraktiotason JavaScript-koodiksi, joten monissa lähteissä tästä käytetään termiä "transpilointi" (transpiling).
 
-TypeScript Playground: https://www.typescriptlang.org/play
+Lue lisää TypeScriptin työkaluista artikkelista [Tooling in 5 minutes](https://www.typescriptlang.org/docs/handbook/typescript-tooling-in-5-minutes.html).
 
-Kokeile transpiloida TS-koodia, jossa esiintyy moderneja ominaisuuksia kuten `async` tai `await`, vanhalle JavaScript-versiolle. [Mitä saat tulokseksi?](https://www.typescriptlang.org/play?target=0#code/MYewdgzgLgBA5gUygVQggThGBeGBDCATzGBgAoBKHAPhgG0BvGASwBMAuGARgBoYw8AWwScA5AEEANs2AJRMAL4BdANxA)
+TypeScript-koodin transpilointia tai kääntämistä voidaan kokeilla kätevästi sivulla [TypeScript Playground](https://www.typescriptlang.org/play).
+
+Transpilointi mahdollistaa viimeisintä syntaksia hyödyntävän TypeScript-koodin muuntamisen yhteensopivaksi myös vanhojen JS-versioiden kanssa. [Kokeile esimerkiksi transpiloida TS-koodia, jossa esiintyy moderneja ominaisuuksia kuten `async` tai `await`](https://www.typescriptlang.org/play?target=0#code/MYewdgzgLgBA5gUygVQggThGBeGBDCATzGBgAoBKHAPhgG0BvGASwBMAuGARgBoYw8AWwScA5AEEANs2AJRMAL4BdANxA).
+
+
+## TypeScript-työkalut
+
+Monet JS-koodin kehittämiseksi käytettävät työkalut soveltuvat myös TS-koodin kehitykseen.
 
 ### Npx
 
@@ -113,54 +128,172 @@ Kokeile transpiloida TS-koodia, jossa esiintyy moderneja ominaisuuksia kuten `as
 >
 > https://docs.npmjs.com/cli/v9/commands/npx
 
+```bash
+$ tsc       # edellyttää TypeScriptin asennusta globaalisti
+$ npx tsc   # suorittaa `tsc`-komennon paikallisesta asennuksesta
+```
+
 ### Ts-node
 
 > *"`ts-node` is a TypeScript execution engine and REPL for Node.js. It JIT transforms TypeScript into JavaScript, enabling you to directly execute TypeScript on Node.js without precompiling. "*
 >
 > https://www.npmjs.com/package/ts-node
 
+`ts-node` mahdollistaa TypeScript-koodin suorittamisen ilman etukäteen tehtävää käännösvaihetta:
+
+```bash
+$ npx ts-node src/skripti.ts
+```
+
 ### Tsc
 
-Jos haluat kääntää kirjoittamasi ohjelman TypeScript-kielestä JavaScriptiksi, onnistuu se `tsc`-komennolla (TypeScript compiler).
+Jos haluat kääntää kirjoittamasi TypeScript-kielisen ohjelman lähdekoodit JavaScriptiksi, onnistuu se `tsc`-komennolla (TypeScript compiler):
 
 ```
 $ npx tsc
 ```
 
-`tsc`-komento kääntää kirjoittamasi TypeScript-tiedostot JavaScript-tiedostoiksi, jotka voidaan suorittaa Node.js:llä aivan kuten mitkä tahansa `.js`-tiedostot:
+`tsc`-komento kääntää kirjoittamasi TypeScript-tiedostot JavaScript-tiedostoiksi, jotka voidaan suorittaa Node.js:llä tai selaimessa aivan kuten mitkä tahansa `.js`-tiedostot:
 
 ```
 $ node helloWorld.js
 ```
 
 
-### Tsconfig
+### Tsconfig.json
+
+> *"The presence of a tsconfig.json file in a directory indicates that the directory is the root of a TypeScript project. The tsconfig.json file specifies the root files and the compiler options required to compile the project"*
+>
+> https://www.typescriptlang.org/docs/handbook/tsconfig-json.html
+
+`tsconfig.json`-asetustiedostoon voidaan määritellä lukuisia kääntäjän toimintaan vaikuttavia asetuksia. Voit luoda itsellesi uuden `tsconfig.json`-tiedoston `tsc`-komennon avulla:
+
+```bash
+$ npx tsc --init
+```
+
+Monet tiedoston asetukset liittyvät kääntäjän tekemiin tarkastuksiin, kuten siihen, sallitaanko funktion parametreissa tai paluuarvoissa puuttuvia tietotyyppejä. Kääntäjän tekemät tarkastukset ja varoitukset ovat  lähtökohtaisesti hyödyllisiä, joten suosittelemme hyödyntämään niitä laajasti. `strict`-asetuksella saadaankin asetettua kerralla monet erilliset asetukset päälle:
 
 > *"The strict flag enables a wide range of type checking behavior that results in stronger guarantees of program correctness. Turning this on is equivalent to enabling all of the strict mode family options, which are outlined below. You can then turn off individual strict mode family checks as needed."*
 >
 > https://www.typescriptlang.org/tsconfig#strict
 
+Minimalistinen mutta toimiva asetustiedosto voi näyttää esimerkiksi tältä:
 
-https://www.contentful.com/blog/what-is-typescript-and-why-should-you-use-it/
+```json
+{
+    "compilerOptions": {
+        "target": "es2016",
+        "rootDir": "./src/",
+        "outDir": "./build/",
+        "esModuleInterop": true,
+        "strict": true,
+    }
+}
+```
+
+<!--https://www.contentful.com/blog/what-is-typescript-and-why-should-you-use-it/-->
 
 
 ## Tyypit
 
-### Valmiit tyypit
+TypeScriptissä on valmiit tyypit `string`, `number` ja `boolean`, jotka vastaavat JavaScriptin arvoja:
 
-https://www.typescriptlang.org/docs/handbook/2/everyday-types.html
+```ts
+// merkkijonot eli 'string'
+let language: string = 'TypeScript';
+
+// 'number' käsittää sekä kokonais- että liukuluvut:
+let wholeNumber: number = 2023;
+let decimalNumber: number = 3.14;
+
+// taulukot voidaan määritellä joko `tyyppi[]` tai `Array<tyyppi>`
+let positive: number[] = [1, 2, 3, 4];
+let negative: Array<number> = [-1, -2, -3, -4];
+```
+
+Tyyppien määrittely tällä tarkkuudella on kuitenkin usein tarpeetonta, koska TypeScript osaa päätellä asiayhteydestä mm. muuttujien sekä funktioiden paluuarvojen tyypit.
+
+> *"For the most part you don’t need to explicitly learn the rules of inference. If you’re starting out, try using fewer type annotations than you think - you might be surprised how few you need for TypeScript to fully understand what’s going on."*
+>
+> https://www.typescriptlang.org/docs/handbook/2/everyday-types.html
+
+Nämä tyypit päätellään automaattisesti, joten tyyppejä ei tarvitse itse erikseen mainita:
+
+```ts
+let language = 'TypeScript';
+
+let wholeNumber = 2023;
+let decimalNumber = 3.14;
+
+let positive = [1, 2, 3, 4];
+let negative = [-1, -2, -3, -4];
+```
 
 ### Funktioiden tyypit
 
+> *"Functions are the primary means of passing data around in JavaScript. TypeScript allows you to specify the types of both the input and output values of functions."*
+>
+> https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#functions
+
+```ts
+// funktioiden parametrien tyypit tulee määritellä eksplisiittisesti:
+function shout(str1: string): string {
+    return str1.toUpperCase() + '!!!';
+}
+```
+
+Yllä paluuaron tyyppi `string` voidaan jättää myös TypeScriptin itse pääteltäväksi.
+
+
+### Any ja unknown
+
+Toisinaan datan tyyppi ei ole tiedossa tai sillä ei ole merkitystä:
+
+```ts
+// `any` tyyppiä voidaan käyttää silloin, kun arvon tyypillä ei ole merkitystä:
+function logAnything(thing: any) {
+    console.log(new Date(), thing);
+}
+
+// usein on kuitenkin parempi käyttää tyyppiä `unknown`:
+function logUnknown(thing: unknown) {
+    console.log(new Date(), thing);
+}
+```
+
+Edellä esitetyistä tyypeistä `any` on siinä mielessä riskialttiimpi, että sen kautta tehtävien operaatioiden osalta TS ei tee tarkastuksia:
+
+```ts
+function doSomething(bar: any) {
+    bar.toUpperCase();  // ei virhe käännettäessä, mutta kaatuu suoritettaessa!
+}
+
+doSomething(1);
+```
+
+`unknown` ei puolestaan salli mahdollisesti virheellisiä operaatioita:
+
+```ts
+function doSomething(bar: unknown) {
+    bar.toUpperCase();  // käännösvirhe!
+}
+
+doSomething(1);
+```
+
+Kun tiedon tyyppi ei ole ennalta tiedossa, voidaan se selvittää ajonaikaisesti ehtorakenteilla ja mm. JavaScriptin `typeof`-operaation avulla.
+
+
 ### Omat tyypit
 
-Muuttujalle erikseen määritetty tyyppi:
+TypeScriptistä on merkittävää hyötyä silloin, kun omassa ohjelmalogiikassa hyödynnetään eri tyyppisiä olioita. Yksinkertaisimmillaan "oliotyyppi" voidaan määritellä suoraan muuttujaan:
 
 ```ts
 let user: { id: number, name: string } = { id: 1, name: 'Alice'};
 ```
 
-Alias-tyyppi:
+Tyypin määritteleminen muuttujaan on kuitenkin usein huono idea, erityisesti siksi, että tyyppiä joudutaan määrittelemään tällöin jokaiseen muuttujaan erikseen. Tyypeille voidaankin määritellä "aliaksia", jotka tekevät niistä uudelleenkäytettäviä:
 
 ```ts
 type User = {
@@ -168,44 +301,63 @@ type User = {
     name: string;
 };
 
-let user: User  = { id: 1, name: 'Alice'};
+let user1: User = { id: 1, name: 'Alice' };
+let user2: User = { id: 2, name: 'Bob' };
 ```
 
-Valinnaiset attribuutit:
+Eri tyypeissä voi olla myös valinnaisia attribuutteja:
 
 ```ts
 type User = {
     id: number;
     name: string;
-    email?: string;
+    email?: string;  // `string` tai `undefined`
 };
 
-let user: User  = { id: 1, name: 'Alice'};
+let user1: User = { id: 1, name: 'Alice' };
+let user2: User = { id: 2, name: 'Bob', email: 'bob@example.com' };
 ```
 
 
-### Union types
+### "Union" (|) ja "intersection" (&)
+
+Uusia tyyppejä voidaan myös luoda yhdistelemällä vakioita tai olemassa olevia tyyppejä:
 
 ```ts
 type Size = 's' | 'm' | 'l';
+
+type Shirt = {
+    size: Size;
+}
+
+let smallShirt = { size: 's' };
 ```
+
+https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types
 
 <!-- narrowing typeof x === y -->
 
-### Intersection types
 
 ```ts
 type Coordinate = { lat: number, lon: number };
 type Address = { street: string, city: string };
 
 type MapMarker = Address & Coordinate;
+
+let haagaHelia: MapMarker = {
+    lat: 60,
+    lon: 24,
+    street: 'Ratapihantie 13',
+    city: 'Helsinki'
+};
 ```
 
 ## Valinnaisia harjoituksia
 
-TypeScript exercises: https://typescript-exercises.github.io/
+Voit tutustua itsenäisesti TypeScriptin tyyppijärjestelmään esimerkiksi sivustolla https://typescript-exercises.github.io/.
 
 
 ## Palautettava tehtävä
 
+Tämän viikon tehtävässä harjoittelemme TypeScriptin käyttöä postinumeroaineiston käsittelyn merkeissä. Katso tarkemmat ohjeet Teamsin tehtävät-välilehdeltä.
 
