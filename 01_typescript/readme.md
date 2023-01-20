@@ -56,7 +56,7 @@ Asennuksen jälkeen `package.json`-tiedostosi näyttää esim. seuraavalta:
 }
 ```
 
-💡 **Huom!** Monissa
+💡 **Huom!** Monissa esimerkeissä ja lähteissä TypeScript asennetaan globaalisti. Globaali asennus [jakaa mielipiteitä](https://github.com/loopbackio/loopback.io/issues/509) ja tämän kurssin esimerkeissä asennus tehdään aina paikallisesti.
 
 <!--
 JavaScriptin päivämäärien ongelmat
