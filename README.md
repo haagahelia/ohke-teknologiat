@@ -79,7 +79,7 @@ Kurssin alkukyselyssä ja ensimmäisellä oppitunnilla käsiteltiin kurssin ohje
             <td>Ma 23.1.</td>
             <td>
                 <strong>Kurssin ohjelmointikielet:</strong><br />
-                <strong>TypeScript</strong> tai <strong><a href="01_python/">Python</a></strong><br />
+                <strong><a href="01_typescript/">TypeScript</a></strong> tai <strong><a href="01_python/">Python</a></strong><br />
                 <br />
                 <strong>Tehtävät:</strong><br />
                 <ul>
