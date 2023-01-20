@@ -1,24 +1,29 @@
 
-https://survey.stackoverflow.co/2022
+# TypeScript
 
-## Suositeltu video
-
-[Programming with Mosh: TypeScript Tutorial for Beginners](https://www.youtube.com/watch?v=d56mG7DezGs)
-
-## Mikä TypeScript on?
 
 > *"TypeScript is a language for application-scale JavaScript. TypeScript adds optional types to JavaScript that support tools for large-scale JavaScript applications for any browser, for any host, on any OS. TypeScript compiles to readable, standards-based JavaScript."*
 >
-> https://github.com/microsoft/TypeScript/
+> https:/,/github.com/microsoft/TypeScript/
 
-* JavaScriptin laajennos
-* Vahvasti tyypitetty kieli
-* Suuri osa TypeScriptin "uusista ominaisuuksista" on osa EcmaScriptin seuraavia versioita
-* MicroSoftin kehittämä
-* Yhteensopiva JavaScriptin ja mm. olemassa olevien NPM-pakettien kanssa
-* Yhteensopiva myös JavaScriptin vanhojen versioiden kanssa
+TypeScript on:
+
+- [x] JavaScriptin laajennos
+- [x] Vahvasti tyypitetty kieli
+ Suuri osa TypeScriptin "uusista ominaisuuksista" on osa EcmaScriptin seuraavia versioita, "future JavaScript"
+- [x] MicroSoftin kehittämä
+- [x] Yhteensopiva JavaScriptin ja mm. olemassa olevien NPM-pakettien kanssa
+- [x] Yhteensopiva myös JavaScriptin vanhojen versioiden kanssa
 
 https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
+
+<!--StackOverflow 2022 developer survey: https://survey.stackoverflow.co/2022-->
+
+## Suositellut videot
+
+[Programming with Mosh: TypeScript Tutorial for Beginners](https://www.youtube.com/watch?v=d56mG7DezGs)
+
+[Fireship: TypeScript - The Basics](https://www.youtube.com/watch?v=ahCwqrYpIuM)
 
 
 ### TypeScriptin asentaminen
@@ -51,6 +56,8 @@ Asennuksen jälkeen `package.json`-tiedostosi näyttää esim. seuraavalta:
   }
 }
 ```
+
+💡 **Huom!** Monissa
 
 <!--
 JavaScriptin päivämäärien ongelmat
@@ -95,10 +102,11 @@ type PlaceWithDistance = Place & { distance: number };
 
 ## Transpilointi
 
-https://www.typescriptlang.org/docs/handbook/typescript-tooling-in-5-minutes.html
+TypeScript Tooling in 5 minutes: https://www.typescriptlang.org/docs/handbook/typescript-tooling-in-5-minutes.html
 
-https://www.typescriptlang.org/play
+TypeScript Playground: https://www.typescriptlang.org/play
 
+Kokeile transpiloida TS-koodia, jossa esiintyy moderneja ominaisuuksia kuten `async` tai `await`, vanhalle JavaScript-versiolle. [Mitä saat tulokseksi?](https://www.typescriptlang.org/play?target=0#code/MYewdgzgLgBA5gUygVQggThGBeGBDCATzGBgAoBKHAPhgG0BvGASwBMAuGARgBoYw8AWwScA5AEEANs2AJRMAL4BdANxA)
 
 ### Npx
 
@@ -147,6 +155,36 @@ https://www.typescriptlang.org/docs/handbook/2/everyday-types.html
 
 ### Omat tyypit
 
+Muuttujalle erikseen määritetty tyyppi:
+
+```ts
+let user: { id: number, name: string } = { id: 1, name: 'Alice'};
+```
+
+Alias-tyyppi:
+
+```ts
+type User = {
+    id: number;
+    name: string;
+};
+
+let user: User  = { id: 1, name: 'Alice'};
+```
+
+Valinnaiset attribuutit:
+
+```ts
+type User = {
+    id: number;
+    name: string;
+    email?: string;
+};
+
+let user: User  = { id: 1, name: 'Alice'};
+```
+
+
 ### Union types
 
 ```ts
@@ -166,7 +204,7 @@ type MapMarker = Address & Coordinate;
 
 ## Valinnaisia harjoituksia
 
-https://typescript-exercises.github.io/
+TypeScript exercises: https://typescript-exercises.github.io/
 
 
 ## Palautettava tehtävä
