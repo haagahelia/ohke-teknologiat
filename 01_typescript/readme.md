@@ -190,12 +190,24 @@ Monet tiedoston asetukset liittyvät kääntäjän tekemiin tarkastuksiin, kuten
 Minimalistinen mutta toimiva asetustiedosto voi näyttää esimerkiksi tältä:
 
 ```json
+/* Visit https://aka.ms/tsconfig to read more about this file */
 {
     "compilerOptions": {
+        /* Set the JavaScript language version for emitted JavaScript
+         * and include compatible library declarations. */
         "target": "es2016",
+
+        /* Specify the root folder within your source files. */
         "rootDir": "./src/",
+
+        /* Specify an output folder for all emitted files. */
         "outDir": "./build/",
+
+        /* Emit additional JavaScript to ease support for importing CommonJS modules.
+         * This enables 'allowSyntheticDefaultImports' for type compatibility. */
         "esModuleInterop": true,
+
+        /* Enable all strict type-checking options. */
         "strict": true,
     }
 }
