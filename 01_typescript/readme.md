@@ -18,6 +18,11 @@ https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
 
 <!--StackOverflow 2022 developer survey: https://survey.stackoverflow.co/2022-->
 
+## Tunnin aihe
+
+Tällä tunnilla perehdymme TypeScriptin ominaisuuksiin ja työkaluihin. Kirjoittamme TS-koodia ilman muita riippuvuuksia, kuten Reactia ja Express:iä, jotta aihe pysyy hieman yksinkertaisempana.
+
+
 ## Suositellut videot
 
 Mikäli opiskelet tämän viikon aiheen itsenäisesti, suosittelemme perehtymään seuraaviin videoihin:
@@ -29,6 +34,10 @@ Mikäli opiskelet tämän viikon aiheen itsenäisesti, suosittelemme perehtymä�
 **[Fireship: TypeScript - The Basics](https://www.youtube.com/watch?v=ahCwqrYpIuM)**
 
 "TypeScript has forever altered the lives of JavaScript developers. Learn why TS is so awesome and the basic concepts required to be successful using it."
+
+**[How to use TypeScript with React... But should you?](https://www.youtube.com/watch?v=ydkQlJhodio)**
+
+"Learn how to setup React with TypeScript. Compare the pros and cons of using TypeScript in an React project."
 
 
 ### TypeScriptin asentaminen
