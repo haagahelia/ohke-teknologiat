@@ -306,6 +306,42 @@ doSomething(1);
 Kun tiedon tyyppi ei ole ennalta tiedossa, voidaan se selvittää ajonaikaisesti ehtorakenteilla ja mm. JavaScriptin `typeof`-operaation avulla.
 
 
+### Taulukot (array)
+
+Taulukot ovat tyypitettyjä siinä missä yksittäiset muuttujat, esim. `string[]` tai `number[]`. Eri tyyppisiä arvoja lisättäessä TS luo "union"-tyyppejä, kuten `(string | number)[]`.
+
+Seuraavat esimerkit näyttävät, miten puuttuviin arvoihin varautuminen voidaan ohittaa (`!`) ja miten tietyn arvon tyyppi voidaan itse määrittää `as`:
+
+```ts
+let faces = ['😀', '🙁'];          // string[]
+let numbers = [7, 100, 42];         // number[]
+
+let all = [...faces, ...numbers];   // (string | number)[]
+
+// `at` saattaa palauttaa merkkijonon, numeron tai `undefined`:
+let something = all.at(-1);         // something: (string | number | undefined)
+
+// huutomerkki `!` kertoo TypeScriptille, että arvo on olemassa:
+let thing = all.at(-1)!;            // thing: (string | number | undefined)
+
+// `as`-avainsanalla voidaan ohittaa tyypin päättely ja kertoa se itse:
+let hundred = all.at(-1) as number; // hundred: number
+
+console.table({ something, thing, hundred });
+```
+
+Vaikka edellä kolmen viimeisen muuttujan tyyppi onkin eri, on niissä luonnollisesti tasan samat arvot, eli taulukon viimeinen numero:
+
+```
+┌───────────┬────────┐
+│  (index)  │ Values │
+├───────────┼────────┤
+│ something │   42   │
+│   thing   │   42   │
+│  hundred  │   42   │
+└───────────┴────────┘
+```
+
 ### Omat tyypit
 
 TypeScriptistä on merkittävää hyötyä silloin, kun omassa ohjelmalogiikassa hyödynnetään eri tyyppisiä olioita. Yksinkertaisimmillaan "oliotyyppi" voidaan määritellä suoraan muuttujaan:
@@ -371,6 +407,58 @@ let haagaHelia: MapMarker = {
     street: 'Ratapihantie 13',
     city: 'Helsinki'
 };
+```
+
+### "Record" ja avain-arvo-pareja sisältävät oliot
+
+JavaScriptissä olioita (object) käytetään usein avain-arvo-pareja sisältävänä map-tietorakenteena. Tämä poikkeaa edellä esitellyistä esimerkeistä siten, että avainten nimet eivät ole ennalta tiedossa, vaikka sekä avainten että arvojen tyypit tiedetäänkin. TypeScript mahdollistaa ns. [index signaturen](https://basarat.gitbook.io/typescript/type-system/index-signatures#declaring-an-index-signature), jolla voidaan määritellä objektin avainten sekä arvojen tyypit:
+
+```ts
+let emojis: { [key: string]: string } = {};
+emojis['smile'] = '🙂';
+emojis['laugh'] = '😄';
+
+
+// objektin kaikki avaimet saadaan array:na JS:n Object.keys-metodilla:
+console.log(Object.keys(emojis));   // [ 'smile', 'laugh' ]
+
+// objektin kaikki arvot saadaan array:na JS:n Object.values-metodilla:
+console.log(Object.values(emojis)); // [ '🙂', '😄' ]
+
+
+// TypeScript ei takaa, että avaimelle löytyy arvoa:
+console.log(emojis['angry']);       // undefined
+
+// avain voidaan tarkastaa `in`-operaatiolla:
+if ('smile' in emojis) {
+    console.log(emojis['smile']);   // 🙂
+}
+
+console.table(emojis); /* ┌─────────┬────────┐
+                          │ (index) │ Values │
+                          ├─────────┼────────┤
+                          │  smile  │  '🙂'  │
+                          │  laugh  │  '😄'  │
+                          └─────────┴────────┘ */
+
+```
+
+TypeScriptin "utility types" -tyypeistä löytyy myös valmis `Record`, jonka avulla objektin avainten ja arvojen tyypit on määritettävissä vielä astetta selkeämmin:
+
+> *Record<Keys, Type>*
+>
+> *"Constructs an object type whose property keys are Keys and whose property values are Type. This utility can be used to map the properties of a type to another type."*
+>
+> https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type
+
+```ts
+let weekdays: Record<string, string> = {};
+weekdays['monday'] = 'maanantai';
+weekdays['tuesday'] = 'tiistai';
+
+console.log(weekdays);              // { monday: 'maanantai', tuesday: 'tiistai' }
+console.log('tuesday' in weekdays); // true
+console.log(weekdays['wednesday']); // undefined
 ```
 
 ## Valinnaisia harjoituksia
