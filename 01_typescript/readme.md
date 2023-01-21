@@ -14,7 +14,7 @@ TypeScriptin ominaisuuksia:
 - [x] Yhteensopiva olemassa olevien JavaScript-sovellusten ja NPM-pakettien kanssa
 - [x] Käännettävissä yhteensopivaksi myös JavaScriptin vanhojen versioiden kanssa
 
-https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
+Lue lisää kielestä esimerkiksi sivulta https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html.
 
 <!--StackOverflow 2022 developer survey: https://survey.stackoverflow.co/2022-->
 
@@ -35,7 +35,7 @@ Mikäli opiskelet tämän viikon aiheen itsenäisesti, suosittelemme perehtymä�
 
 "TypeScript has forever altered the lives of JavaScript developers. Learn why TS is so awesome and the basic concepts required to be successful using it."
 
-**[How to use TypeScript with React... But should you?](https://www.youtube.com/watch?v=ydkQlJhodio)**
+**[Fireship: How to use TypeScript with React... But should you?](https://www.youtube.com/watch?v=ydkQlJhodio)**
 
 "Learn how to setup React with TypeScript. Compare the pros and cons of using TypeScript in an React project."
 
