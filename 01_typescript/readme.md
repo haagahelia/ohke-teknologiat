@@ -189,7 +189,7 @@ Monet tiedoston asetukset liittyvät kääntäjän tekemiin tarkastuksiin, kuten
 
 Minimalistinen mutta toimiva asetustiedosto voi näyttää esimerkiksi tältä:
 
-```json
+```js
 /* Visit https://aka.ms/tsconfig to read more about this file */
 {
     "compilerOptions": {
