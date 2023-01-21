@@ -44,9 +44,7 @@ Mikäli opiskelet tämän viikon aiheen itsenäisesti, suosittelemme perehtymä�
 
 TypeScript voidaan asentaa joko globaalisti koko käyttöjärjestelmään tai paikallisesti yksittäiseen projektiin. Globaali asennus [jakaa mielipiteitä](https://github.com/loopbackio/loopback.io/issues/509) ja tämän kurssin esimerkeissä asennus tehdään aina paikallisesti. Paikallisen asennuksen myötä koko projekti asentuu kerralla `npm install`-komennolla ja kaikilla kehittäjillä on käytössään sama versio TypeScriptistä.
 
-> *"TypeScript is available as a package on the npm registry available as "typescript".*
->
-> *You will need a copy of Node.js as an environment to run the package. Then you use a dependency manager like npm, yarn or pnpm to download TypeScript into your project.*"
+> *"TypeScript is available as a package on the npm registry available as "typescript". You will need a copy of Node.js as an environment to run the package. Then you use a dependency manager like npm, yarn or pnpm to download TypeScript into your project."*
 >
 > ```
 > npm install typescript --save-dev
@@ -55,10 +53,10 @@ TypeScript voidaan asentaa joko globaalisti koko käyttöjärjestelmään tai pa
 > *"You can then run the TypeScript compiler using one of the following commands:*"
 >
 > ```
-> npm run tsc
-> npx tsc
-> yarn tsc
-> pnpm tsc
+> $ npm run tsc
+> $ npx tsc
+> $ yarn tsc
+> $ pnpm tsc
 > ```
 >
 > https://www.typescriptlang.org/download
@@ -138,8 +136,7 @@ Monet JS-koodin kehittämiseksi käytettävät työkalut soveltuvat myös TS-koo
 > https://docs.npmjs.com/cli/v9/commands/npx
 
 ```bash
-$ tsc       # edellyttää TypeScriptin asennusta globaalisti
-$ npx tsc   # suorittaa `tsc`-komennon paikallisesta asennuksesta
+$ npx tsc   # suorittaa `tsc`-komennon, eikä edellytä globaalia asennusta
 ```
 
 ### Ts-node
@@ -151,7 +148,7 @@ $ npx tsc   # suorittaa `tsc`-komennon paikallisesta asennuksesta
 `ts-node` mahdollistaa TypeScript-koodin suorittamisen ilman etukäteen tehtävää käännösvaihetta:
 
 ```bash
-$ npx ts-node src/skripti.ts
+$ npx ts-node src/skripti.ts    # aja ensin `npm install ts-node --save-dev`
 ```
 
 ### Tsc
@@ -287,7 +284,7 @@ Edellä esitetyistä tyypeistä `any` on siinä mielessä riskialttiimpi, että 
 
 ```ts
 function doSomething(bar: any) {
-    bar.toUpperCase();  // ei virhe käännettäessä, mutta kaatuu suoritettaessa!
+    bar.toUpperCase();  // ei virhettä käännettäessä, mutta kaatuu suoritettaessa!
 }
 
 doSomething(1);
@@ -340,6 +337,37 @@ Vaikka edellä kolmen viimeisen muuttujan tyyppi onkin eri, on niissä luonnolli
 │   thing   │   42   │
 │  hundred  │   42   │
 └───────────┴────────┘
+```
+
+
+### Suorituksen aikaiset tyypit (runtime)
+
+Koska TypeScript-koodi käännetään JavaScriptiksi, ei koodia suoritettaessa voida käyttää TypeScriptin tyyppejä. Kaikki tieto TypeScriptin tyypeistä "katoaakin" suoritettaessa ja jäljelle jää vain JavaScriptin tyypit:
+
+```ts
+class Cat {
+    constructor(public name: string) { }
+}
+
+class Car {
+    constructor(public make: string, public model: string) { }
+}
+
+let animal = new Cat('musti');
+let automobile = new Car('VW', 'Beetle');
+let strings = ['apotti', 'sarastia'];
+
+
+// tieto "luokista" katoaa käännettäessä:
+console.log(typeof animal);     // object
+console.log(typeof automobile); // object
+console.log(typeof strings);    // object
+
+
+// tieto JavaScriptin perustyypeistä säilyy:
+console.log(typeof 1);          // number
+console.log(typeof true);       // boolean
+console.log(typeof 'hello');    // string
 ```
 
 ### Omat tyypit
@@ -445,7 +473,7 @@ console.table(emojis); /* ┌─────────┬───────
 
 TypeScriptin "utility types" -tyypeistä löytyy myös valmis `Record`, jonka avulla objektin avainten ja arvojen tyypit on määritettävissä vielä astetta selkeämmin:
 
-> *Record<Keys, Type>*
+> ***Record<Keys, Type>***
 >
 > *"Constructs an object type whose property keys are Keys and whose property values are Type. This utility can be used to map the properties of a type to another type."*
 >
@@ -460,6 +488,18 @@ console.log(weekdays);              // { monday: 'maanantai', tuesday: 'tiistai'
 console.log('tuesday' in weekdays); // true
 console.log(weekdays['wednesday']); // undefined
 ```
+
+### Muita kiinnostavia ominaisuuksia
+
+TypeScript mahdollistaa useita erilaisia käteviä tapoja edistää oman koodin ylläpidettävyyttä, kuten `private` ja `readonly` -attribuutit:
+
+```ts
+const days: readonly string[] = ['ma', 'ti', 'ke', 'to', 'pe', 'la', 'su'];
+days[0] = 'måndag'; // error: "Index signature in type 'readonly string[]' only permits reading."
+```
+
+Näihin voit perehtyä lisää itsenäisesti ajan kanssa.
+
 
 ## Valinnaisia harjoituksia
 
