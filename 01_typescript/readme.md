@@ -10,7 +10,7 @@ TypeScriptin ominaisuuksia:
 - [x] JavaScriptin laajennos
 - [x] Vahvasti tyypitetty kieli
 - [x] Sisältää jo etukäteen JavaScriptin tulevia ominaisuuksia: "future JavaScript"
-- [x] Microsoftin kehittämä
+- [x] Microsoftin kehittämä, [mutta avointa lähdekoodia](https://github.com/microsoft/TypeScript/blob/main/LICENSE.txt)
 - [x] Yhteensopiva olemassa olevien JavaScript-sovellusten ja NPM-pakettien kanssa
 - [x] Käännettävissä yhteensopivaksi myös JavaScriptin vanhojen versioiden kanssa
 
