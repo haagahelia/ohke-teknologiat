@@ -2,7 +2,7 @@
 
 Tervetuloa kurssille!
 
-Ohjelmistokehittäjän työ on suurimmaksi osaksi muuta kuin jonkin tietyn ohjelmointikielen syntaksin suvereenia hallintaa. Tämän kurssin tavoitteena on esitellä ohjelmistokehittäjälle tärkeitä taitoja, työkaluja ja tekniikoita, joita ei suoraan ole tullut esille ohjelmoinnin peruskursseilla tai projektityökursseissa. Kurssi toimii samalla myös tukikurssina ohjelmistoprojekti 2-kurssille, jossa tämän kurssin asioita päästään soveltamaan käytännössä.
+Ohjelmistokehittäjän työ on suurimmaksi osaksi muuta kuin jonkin tietyn ohjelmointikielen syntaksin suvereenia hallintaa. Tämän kurssin tavoitteena on esitellä ohjelmistokehittäjälle tärkeitä taitoja, työkaluja ja tekniikoita, joita ei suoraan ole tullut esille ohjelmoinnin peruskursseilla tai projektityökursseissa. Kurssi toimii samalla myös tukikurssina ohjelmistoprojekti 2 -kurssille, jossa tämän kurssin aiheita päästään soveltamaan käytännössä.
 
 Opettajina kurssilla toimivat Teemu Havulinna ja Juhani Välimäki (etunimi.sukunimi@haaga-helia.fi). Kurssin sisältö perustuu suuresti myös kurssin aikaisemman opettajan, Ohto Rainion, työhön.
 
@@ -35,12 +35,16 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
 > *https://mynet.haaga-helia.fi/group/pakki/toteutukselle-ilmoittautuminen*
 
 
+## Kurssin ohjelmointikielet
+
+Kurssin alkukyselyssä ja ensimmäisellä oppitunnilla käsiteltiin kurssin ohjelmointikielivalintaa. Perinteisesti kurssilla on käytetty pääasiassa **Pythonia**, joka on kurssilla edelleen käytössä videoiden ja tekstimateriaalien muodossa. Alkukyselyssä saatujen vastausten perusteella pyrimme käyttämään oppitunneilla **JavaScriptiä** ja **TypeScriptiä**. Päivitämme mahdollisuuksien mukaan myös tehtäviä siten, että voitte toteuttaa ratkaisunne tehtäviin millä vain näistä kolmesta kielestä.
+
+
 ## Opintojakson oppitunnit ja päivämäärät
 
 **Huom!** Tämä sivu päivittyy kurssin edetessä ja yksittäisten tuntien aiheet voivat vielä muuttua.
 
-Kurssin alkukyselyssä ja ensimmäisellä oppitunnilla käsiteltiin kurssin ohjelmointikielivalintaa. Perinteisesti kurssilla on käytetty pääasiassa **Pythonia**, joka on kurssilla edelleen käytössä videoiden ja tekstimateriaalien muodossa. Alkukyselyssä ilmenneen JavaScriptin suuren suosion myötä pyrimme käsittelemään oppitunneilla kurssin aiheita **JavaScriptiä** ja **TypeScriptiä**. Pyrimme päivittämään tehtäviä siten, että voitte toteuttaa ratkaisunne tehtäviin millä vain näistä kolmesta kielestä.
-
+Oppitunnit pidetään pääsääntöisesti **maanantaisin klo 8.30-10.45 sekä kampuksella luokassa 2004 että ns. Teamsissa**. Yksittäisten oppituntien kohdalta toteutusmuoto selviää varmimmin kurssin Teams-kanavan viesteistä ja ajastetuista kokouksista, jotka näet myös Outlook-kalenterissasi. Kurssin seminaarivaiheessa ei järjestetä ohjattuja tapaamisia, vaan tiedotamme yksilöllisen ohjauksen järjestelyistä seminaarien käynnistystunnilla sekä Teamsissa.
 
 <table>
     <thead>
@@ -86,7 +90,7 @@ Kurssin alkukyselyssä ja ensimmäisellä oppitunnilla käsiteltiin kurssin ohje
                     <li>📥 Postinumeroiden käsittely (ks. Teams)</li>
                 </ul>
                 <br />
-                <strong>Videot:</strong>
+                <strong>Python-videot:</strong>
                 <ul>
                     <li><a href="https://web.microsoftstream.com/video/497d7df3-1629-49f9-b460-82c1d479b03d">📼 Pythonin perusrakenteet ja komentorivikäyttö</a></li>
                     <li><a href="https://web.microsoftstream.com/video/0f31953b-417b-4669-915d-ca35917bfbc0">📼 Pythonin tietorakenteet, ehdot ja toisto</a></li>
