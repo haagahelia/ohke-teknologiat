@@ -239,13 +239,20 @@ Tyyppien määrittely tällä tarkkuudella on kuitenkin usein tarpeetonta, koska
 Nämä tyypit päätellään automaattisesti, joten tyyppejä ei tarvitse itse erikseen mainita:
 
 ```ts
-let language = 'TypeScript';
+let language = 'TypeScript';        // language: string
 
-let wholeNumber = 2023;
-let decimalNumber = 3.14;
+let wholeNumber = 2023;             // wholeNumber: number
+let decimalNumber = 3.14;           // decimalNumber: number
 
-let positive = [1, 2, 3, 4];
-let negative = [-1, -2, -3, -4];
+let positive = [1, 2, 3, 4];        // positive: number[]
+let negative = [-1, -2, -3, -4];    // negative: number[]
+```
+
+Tyypin määritteleminen eksplisiittisesti on välttämätöntöntä erityisesti silloin, kun luot tyhjiä tietorakenteita, joista TS ei pysty päättelemään niiden myöhempää tyyppiä:
+
+```ts
+let empty = [];                     // never[]
+let emptyNumbers: number[] = [];    // number[]
 ```
 
 ### Funktioiden tyypit
@@ -288,6 +295,7 @@ function doSomething(bar: any) {
 }
 
 doSomething(1);
+doSomething('hello');
 ```
 
 `unknown` ei puolestaan salli mahdollisesti virheellisiä operaatioita:
@@ -298,10 +306,24 @@ function doSomething(bar: unknown) {
 }
 
 doSomething(1);
+doSomething('hello');
 ```
 
-Kun tiedon tyyppi ei ole ennalta tiedossa, voidaan se selvittää ajonaikaisesti ehtorakenteilla ja mm. JavaScriptin `typeof`-operaation avulla.
+Kun tiedon tyyppi ei ole ennalta tiedossa, voidaan se selvittää ajonaikaisesti ehtorakenteilla ja mm. JavaScriptin `typeof`-operaation avulla:
 
+```ts
+function doSomething(bar: unknown) {
+    if (typeof bar === 'string') {
+        // TypeScript osaa nyt tunnistaa `bar`-arvon tyypiksi merkkijonon:
+        console.log(bar.toUpperCase());
+    } else {
+        console.log(bar);
+    }
+}
+
+doSomething(0);         // 0
+doSomething('hello');   // 'HELLO'
+```
 
 ### Taulukot (array)
 
@@ -322,9 +344,9 @@ let something = all.at(-1);         // something: (string | number | undefined)
 let thing = all.at(-1)!;            // thing: (string | number | undefined)
 
 // `as`-avainsanalla voidaan ohittaa tyypin päättely ja kertoa se itse:
-let hundred = all.at(-1) as number; // hundred: number
+let answer = all.at(-1) as number;  // answer: number
 
-console.table({ something, thing, hundred });
+console.table({ something, thing, answer });
 ```
 
 Vaikka edellä kolmen viimeisen muuttujan tyyppi onkin eri, on niissä luonnollisesti tasan samat arvot, eli taulukon viimeinen numero:
@@ -335,8 +357,26 @@ Vaikka edellä kolmen viimeisen muuttujan tyyppi onkin eri, on niissä luonnolli
 ├───────────┼────────┤
 │ something │   42   │
 │   thing   │   42   │
-│  hundred  │   42   │
+│  answer   │   42   │
 └───────────┴────────┘
+```
+
+Edellä käytetty `at`-metodi toimii sekä positiivisilla että negatiivisilla indekseillä:
+
+> *"The at() method takes an integer value and returns the item at that index, allowing for positive and negative integers. Negative integers count back from the last item in the array."*
+>
+> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/at
+
+
+### Tuplet (monikko)
+
+TS tukee JavaScriptin taulukoille myös erityistä [tuple-tyyppiä](https://www.typescriptlang.org/docs/handbook/2/objects.html#tuple-types), jossa voidaan ennalta määritellä taulukon pituus ja kunkin eri indeksin tyyppi:
+
+```ts
+type NameAndAge = [string, number];
+
+let alice: NameAndAge = ['Alice', 29];  // ok!
+let bob: NameAndAge = ['Bob', 28, 1];   // käännösvirhe! `Source has 3 element(s) but target allows only 2`
 ```
 
 
@@ -353,7 +393,7 @@ class Car {
     constructor(public make: string, public model: string) { }
 }
 
-let animal = new Cat('musti');
+let animal = new Cat('kisu');
 let automobile = new Car('VW', 'Beetle');
 let strings = ['apotti', 'sarastia'];
 
@@ -396,15 +436,18 @@ Eri tyypeissä voi olla myös valinnaisia attribuutteja:
 type User = {
     id: number;
     name: string;
-    email?: string;  // `string` tai `undefined`
+    email?: string;  // `?` tarkoittaa valinnaista arvoa
 };
 
 let user1: User = { id: 1, name: 'Alice' };
 let user2: User = { id: 2, name: 'Bob', email: 'bob@example.com' };
+
+console.log(user2.email.toLowerCase());   // käännösvirhe, koska email saattaa olla `undefined`
+console.log(user2.email?.toLowerCase());  // JS:n "optional chaining" -> ei virhettä
 ```
 
 
-### "Union" (|) ja "intersection" (&)
+### "Union" (`|`) ja "intersection" (`&`)
 
 Uusia tyyppejä voidaan myös luoda yhdistelemällä vakioita tai olemassa olevia tyyppejä:
 
@@ -436,6 +479,21 @@ let haagaHelia: MapMarker = {
     city: 'Helsinki'
 };
 ```
+
+Eri tyyppien yhdistäminen voi olla kätevää esimerkiksi tietokantoja käytettäessä, kun kaikilla tyypeillä on samat tiedot kuten `id`, `createdAt` ja `updatedAt`:
+
+```ts
+type Entity = {
+    id: number,
+    createdAt: Date,
+    updatedAt: Date,
+    deletedAt?: Date    // undefined if not marked as deleted
+};
+
+type Author = Entity & { name: string };
+type Book = Entity & { title: string, author: Author };
+```
+
 
 ### "Record" ja avain-arvo-pareja sisältävät oliot
 
