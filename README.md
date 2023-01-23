@@ -181,10 +181,6 @@ Oppitunnit pidetään pääsääntöisesti **maanantaisin klo 8.30-10.45 sekä k
                 </ul>
             </td>
             <td>
-                <ul>
-                </ul>
-            </td>
-            <td>
                 Tapaaminen luokassa ja Teamsissa<br />
                 Tehtävien DL su 12.3. klo 22:00
             </td>
