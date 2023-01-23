@@ -53,7 +53,7 @@ TypeScript voidaan asentaa joko globaalisti koko käyttöjärjestelmään tai pa
 > *"You can then run the TypeScript compiler using one of the following commands:*"
 >
 > ```
-> $ npm run tsc
+> $ npm exec tsc
 > $ npx tsc
 > $ yarn tsc
 > $ pnpm tsc
@@ -148,7 +148,11 @@ $ npx tsc   # suorittaa `tsc`-komennon, eikä edellytä globaalia asennusta
 `ts-node` mahdollistaa TypeScript-koodin suorittamisen ilman etukäteen tehtävää käännösvaihetta:
 
 ```bash
-$ npx ts-node src/skripti.ts    # aja ensin `npm install ts-node --save-dev`
+$ npm install ts-node --save-dev    # asentaa ts-noden paikallisesti
+
+$ npx ts-node src/skripti.ts        # suorittaa skriptin `src/skripti.ts`
+
+$ npx ts-node                       # käynnistää ts-noden REPL-tilan
 ```
 
 ### Tsc
