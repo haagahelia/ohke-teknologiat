@@ -104,14 +104,8 @@ Oppitunnit pidetään pääsääntöisesti **maanantaisin klo 8.30-10.45 sekä k
         <tr>
             <td>Ma 30.1.</td>
             <td>
-                <strong>Testaus:</strong><br />
-                <strong>Jest</strong> tai <strong><a href="02_testaus/">Pytest</a></strong><br />
-                <ul>
-                    <li>Testauksen tasot</li>
-                    <li>Yksikkötestaus</li>
-                    <li>Test driven development</li>
-                    <li>Testikattavuus, fixturet, mock:it</li>
-                </ul>
+                <strong>TypeScript ohjelmointi jatkuu:</strong><br />
+                <strong><a href="01_typescript/">Omat tyypit</a></strong> tai <strong>Pythonin luokat</strong><br />
             </td>
             <td>
                 Tapaaminen luokassa ja Teamsissa<br />
@@ -135,13 +129,13 @@ Oppitunnit pidetään pääsääntöisesti **maanantaisin klo 8.30-10.45 sekä k
         <tr>
             <td>Ma 13.2.</td>
             <td>
-                <strong>Tietorakenteet ja algoritmit:</strong><br />
-                <strong>TypeScript</strong> tai <a href="04_tietorakenteet_ja_algoritmit/">Python</a>
+                <strong>Testaus:</strong><br />
+                <strong>Jest</strong> tai <strong><a href="02_testaus/">Pytest</a></strong><br />
                 <ul>
-                    <li>Lajittelualgoritmit</li>
-                    <li>Hakualgoritmit</li>
-                    <li>Algoritmien tehokkuus</li>
-                    <!--li><a href="https://web.microsoftstream.com/video/b9af8942-94fb-46ac-a085-6cb9e57199c4">Video 1</a>, <a href="https://web.microsoftstream.com/video/1967c82b-9d40-4247-9db0-95f5067c026a">video 2</a>, <a href="https://web.microsoftstream.com/video/7e1e6347-b8c5-4f03-8c92-369591408be4">video 3</a></li-->
+                    <li>Testauksen tasot</li>
+                    <li>Yksikkötestaus</li>
+                    <li>Test driven development</li>
+                    <li>Testikattavuus, fixturet, mock:it</li>
                 </ul>
             </td>
             <td>
@@ -156,12 +150,13 @@ Oppitunnit pidetään pääsääntöisesti **maanantaisin klo 8.30-10.45 sekä k
         <tr>
             <td>Ma 27.2.</td>
             <td>
-                <strong><a href="05_es6_node/oppitunti1.md">Funktionaalinen ohjelmointityyli</a></strong><br />
+            <strong>Tietorakenteet ja algoritmit:</strong><br />
+                <strong>TypeScript</strong> tai <a href="04_tietorakenteet_ja_algoritmit/">Python</a>
                 <ul>
-                    <li>ES6-syntaksit</li>
-                    <li>filter, map, reduce</li>
-                    <li>currying</li>
-                    <!--li><a href="https://web.microsoftstream.com/video/4ff9a051-3e45-4e89-a194-a6e68084d55a">Video 1</a>, <a href="https://web.microsoftstream.com/video/7099841a-16d7-44f2-99fe-c37302c4b024">video 2</a>, <a href="https://web.microsoftstream.com/video/94a16d95-45eb-4c69-b69c-d8c70e4c0560">video 3</a></li-->
+                    <li>Lajittelualgoritmit</li>
+                    <li>Hakualgoritmit</li>
+                    <li>Algoritmien tehokkuus</li>
+                    <!--li><a href="https://web.microsoftstream.com/video/b9af8942-94fb-46ac-a085-6cb9e57199c4">Video 1</a>, <a href="https://web.microsoftstream.com/video/1967c82b-9d40-4247-9db0-95f5067c026a">video 2</a>, <a href="https://web.microsoftstream.com/video/7e1e6347-b8c5-4f03-8c92-369591408be4">video 3</a></li-->
                 </ul>
             </td>
             <td>
@@ -172,12 +167,21 @@ Oppitunnit pidetään pääsääntöisesti **maanantaisin klo 8.30-10.45 sekä k
         <tr>
             <td>Ma 6.3.</td>
             <td>
+                <strong><a href="05_es6_node/oppitunti1.md">Funktionaalinen ohjelmointityyli</a></strong><br />
                 <strong><a href="05_es6_node/oppitunti2.md">Node.js, npm, Express ja Promiset</a></strong><br />
                 <ul>
+                    <li>ES6-syntaksit</li>
+                    <li>filter, map, reduce</li>
+                    <li>currying</li>
                     <li>Express.js</li>
                     <li>Promise</li>
                     <li>Async/await</li>
+                    <!--li><a href="https://web.microsoftstream.com/video/4ff9a051-3e45-4e89-a194-a6e68084d55a">Video 1</a>, <a href="https://web.microsoftstream.com/video/7099841a-16d7-44f2-99fe-c37302c4b024">video 2</a>, <a href="https://web.microsoftstream.com/video/94a16d95-45eb-4c69-b69c-d8c70e4c0560">video 3</a></li-->
                     <!--li><a href="https://web.microsoftstream.com/video/8d5ce190-2bd0-4c8a-84ad-f51b2cbe7f3e">Video 1</a>, <a href="https://web.microsoftstream.com/video/1ef90b63-0b90-4606-a75c-c25ccf13cb61">video 2</a>, <a href="https://web.microsoftstream.com/video/68dfd069-5b72-4484-a6fd-0b3199f803a2">video 3</a></li-->
+                </ul>
+            </td>
+            <td>
+                <ul>
                 </ul>
             </td>
             <td>
