@@ -105,7 +105,7 @@ Oppitunnit pidetään pääsääntöisesti **maanantaisin klo 8.30-10.45 sekä k
             <td>Ma 30.1.</td>
             <td>
                 <strong>TypeScript ohjelmointi jatkuu:</strong><br />
-                <strong><a href="01_typescript/">Omat tyypit</a></strong> tai <strong>Pythonin luokat</strong><br />
+                <strong><a href="01_typescript/">Omat tyypit</a></strong> tai <strong><a href="https://docs.python.org/3/tutorial/classes.html">Pythonin luokat</a></strong><br />
             </td>
             <td>
                 Tapaaminen luokassa ja Teamsissa<br />
