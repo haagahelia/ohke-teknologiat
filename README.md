@@ -106,6 +106,11 @@ Oppitunnit pidetään pääsääntöisesti **maanantaisin klo 8.30-10.45 sekä k
             <td>
                 <strong>TypeScript ohjelmointi jatkuu:</strong><br />
                 <strong><a href="01_typescript/">Omat tyypit</a></strong> tai <strong><a href="https://docs.python.org/3/tutorial/classes.html">Pythonin luokat</a></strong><br />
+                <strong>Tehtävät:</strong><br />
+                <br />
+                <ul>
+                    <li>📥 Users & Posts (ks. Teams)</li>
+                </ul>
             </td>
             <td>
                 Tapaaminen luokassa ja Teamsissa<br />
