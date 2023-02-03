@@ -41,7 +41,7 @@ kill -9 2344
 
 <hr />
 ## What about Windows then? How to find out what process is running at port 8888? And lets assume process id found was again 2344
-```
+```shell
 netstat -aof | findstr 8888
 kill 2344
 ```
