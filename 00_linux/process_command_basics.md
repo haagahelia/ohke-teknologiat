@@ -40,7 +40,13 @@ kill -9 2344
 ```
 
 <hr />
+## What about Windows then? How to find out what process is running at port 8888? And lets assume process id found was again 2344
+```
+netstat -aof | findstr 8888
+kill 2344
+```
 
+<hr />
 **Extra:** How to find out which ports are open and listened in your local system, you need the program nmap and the scanned IP address
 
 ```shell
