@@ -120,10 +120,12 @@ Oppitunnit pidetään pääsääntöisesti **maanantaisin klo 8.30-10.45 sekä k
         <tr>
             <td>Ma 6.2.</td>
             <td>
-                <strong><a href="03_infra_ja_automaatio/">Infra ja automaatio</a></strong><br />
+                <strong><a href="05_es6_node/oppitunti2.md">Node.js, npm, Express, Knex ja asynkroonisuus</a></strong><br />
                 <ul>
-                    <li>Continuous integration</li>
-                    <li>Git: branch, merge, rebase...</li>
+                    <li>Node.js, npm</li>
+                    <li>Express</li>
+                    <li>Knex ja yhteys tietokantaan</li>
+                    <li>asynkroonisuuden huomioiminen Node.js backendin teossa</li>
                 </ul>
             </td>
             <td>
@@ -173,7 +175,7 @@ Oppitunnit pidetään pääsääntöisesti **maanantaisin klo 8.30-10.45 sekä k
             <td>Ma 6.3.</td>
             <td>
                 <strong><a href="05_es6_node/oppitunti1.md">Funktionaalinen ohjelmointityyli</a></strong><br />
-                <strong><a href="05_es6_node/oppitunti2.md">Node.js, npm, Express ja Promiset</a></strong><br />
+                <strong><a href="05_es6_node/oppitunti2.md">Promiset</a></strong><br />
                 <ul>
                     <li>ES6-syntaksit</li>
                     <li>filter, map, reduce</li>
@@ -203,6 +205,20 @@ Oppitunnit pidetään pääsääntöisesti **maanantaisin klo 8.30-10.45 sekä k
         <tr>
             <td>20.-26.3.</td>
             <td colspan="2">Intensiiviviikko</td>
+        </tr>
+        <tr>
+            <td>Ma ?.?.</td>
+            <td>
+                <strong><a href="03_infra_ja_automaatio/">Infra ja automaatio</a></strong><br />
+                <ul>
+                    <li>Continuous integration</li>
+                    <li>Git: branch, merge, rebase...</li>
+                </ul>
+            </td>
+            <td>
+                Tapaaminen luokassa ja Teamsissa<br />
+                Tehtävien DL su ?.?. klo 22:00
+            </td>
         </tr>
         <tr>
             <td>Ma 27.3.</td>
