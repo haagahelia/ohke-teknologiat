@@ -122,7 +122,7 @@ Oppitunnit pidetään pääsääntöisesti **maanantaisin klo 8.30-10.45 sekä k
             <td>
                 <strong><a href="05_es6_node/oppitunti2.md">Node.js, npm, Express, Knex ja asynkroonisuus</a></strong><br />
                 <ul>
-                    <li>Node.js, npm</li>
+                    <li>Node.js backend</li>
                     <li>Express</li>
                     <li>Knex ja yhteys tietokantaan</li>
                     <li>asynkroonisuuden huomioiminen Node.js backendin teossa</li>
