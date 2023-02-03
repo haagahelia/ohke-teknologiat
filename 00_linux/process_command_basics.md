@@ -30,7 +30,6 @@ sudo lsof -i TCP:22         // List process listening to *TCP port 22*
 sudo lsof -i TCP:8600-8888  // List all processes listening to a *port between 8600 and 8888*      
 sudo lsof -p 1234           // List all resources that the *process 1234* has open
 sudo lsof -i -u juuuser2    // List all resources used by *user juuuser2*
-
 ```
 Let's assume the line had something like 2344 or 963 in the beginning, indicating the process ID
 
@@ -40,7 +39,9 @@ kill -9 2344
 ```
 
 <hr />
-## What about Windows then? How to find out what process is running at port 8888? And lets assume process id found was again 2344
+
+## What about Windows then? 
+How to find out what process is running at port 8888? And lets assume process id found was again 2344
 ```shell
 netstat -aof | findstr 8888
 kill 2344
