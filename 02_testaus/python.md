@@ -1,4 +1,4 @@
-# Testaus
+# Testaus (Python & Pytest)
 
 Tämän oppitunnin tavoitteena on tutustua testauksen eri tasoihin yksikkötesteistä järjestelmätesteihin ja tutustua testiautomaation käsitteistöön ja työkaluihin.
 
