@@ -137,7 +137,7 @@ Oppitunnit pidetään pääsääntöisesti **maanantaisin klo 8.30-10.45 sekä k
             <td>Ma 13.2.</td>
             <td>
                 <strong>Testaus:</strong><br />
-                <strong>Jest</strong> tai <strong><a href="02_testaus/">Pytest</a></strong><br />
+                <strong><a href="02_testaus/typescript.md">TypeScript</a></strong> tai <strong><a href="02_testaus/python.md">Python</a></strong><br />
                 <ul>
                     <li>Testauksen tasot</li>
                     <li>Yksikkötestaus</li>
