@@ -136,13 +136,13 @@ Oppitunnit pidetään pääsääntöisesti **maanantaisin klo 8.30-10.45 sekä k
         <tr>
             <td>Ma 13.2.</td>
             <td>
-                <strong>Testaus:</strong><br />
-                <strong><a href="02_testaus/typescript.md">TypeScript</a></strong> tai <strong><a href="02_testaus/python.md">Python</a></strong><br />
+                <strong>Tietorakenteet ja algoritmit:</strong><br />
+                <strong><a href="04_tietorakenteet_ja_algoritmit/">TypeScript tai Python</a></strong>
                 <ul>
-                    <li>Testauksen tasot</li>
-                    <li>Yksikkötestaus</li>
-                    <li>Test driven development</li>
-                    <li>Testikattavuus, fixturet, mock:it</li>
+                    <li>Lajittelualgoritmit</li>
+                    <li>Hakualgoritmit</li>
+                    <li>Algoritmien tehokkuus</li>
+                    <!--li><a href="https://web.microsoftstream.com/video/b9af8942-94fb-46ac-a085-6cb9e57199c4">Video 1</a>, <a href="https://web.microsoftstream.com/video/1967c82b-9d40-4247-9db0-95f5067c026a">video 2</a>, <a href="https://web.microsoftstream.com/video/7e1e6347-b8c5-4f03-8c92-369591408be4">video 3</a></li-->
                 </ul>
             </td>
             <td>
@@ -157,13 +157,13 @@ Oppitunnit pidetään pääsääntöisesti **maanantaisin klo 8.30-10.45 sekä k
         <tr>
             <td>Ma 27.2.</td>
             <td>
-            <strong>Tietorakenteet ja algoritmit:</strong><br />
-                <strong>TypeScript</strong> tai <a href="04_tietorakenteet_ja_algoritmit/">Python</a>
+                <strong>Testaus:</strong><br />
+                <strong><a href="02_testaus/typescript.md">TypeScript</a></strong> tai <strong><a href="02_testaus/python.md">Python</a></strong><br />
                 <ul>
-                    <li>Lajittelualgoritmit</li>
-                    <li>Hakualgoritmit</li>
-                    <li>Algoritmien tehokkuus</li>
-                    <!--li><a href="https://web.microsoftstream.com/video/b9af8942-94fb-46ac-a085-6cb9e57199c4">Video 1</a>, <a href="https://web.microsoftstream.com/video/1967c82b-9d40-4247-9db0-95f5067c026a">video 2</a>, <a href="https://web.microsoftstream.com/video/7e1e6347-b8c5-4f03-8c92-369591408be4">video 3</a></li-->
+                    <li>Testauksen tasot</li>
+                    <li>Yksikkötestaus</li>
+                    <li>Test driven development</li>
+                    <li>Testikattavuus, fixturet, mock:it</li>
                 </ul>
             </td>
             <td>

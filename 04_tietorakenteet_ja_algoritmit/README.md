@@ -1,8 +1,7 @@
 # Tietorakenteet ja algoritmit
 
 
-> *Algoritmi (algorithm) on toimintaohje, jota seuraamalla voimme ratkaista jonkin laskennallisen ongelman. Algoritmille annetaan syöte (input), joka
-kuvaa ratkaistavan ongelman tapauksen, ja algoritmin tulee tuottaa tuloste (output), joka on vastaus sille annettuun syötteeseen*
+> *Algoritmi (algorithm) on toimintaohje, jota seuraamalla voimme ratkaista jonkin laskennallisen ongelman. Algoritmille annetaan syöte (input), joka kuvaa ratkaistavan ongelman tapauksen, ja algoritmin tulee tuottaa tuloste (output), joka on vastaus sille annettuun syötteeseen*
 >
 > *Antti Laaksonen, [Tietorakenteet ja algoritmit -kirja](https://github.com/pllk/tirakirja/raw/master/tirakirja.pdf)*
 
@@ -28,7 +27,7 @@ Viikon harjoitustehtävän tehtävänanto.
 
 Tällä viikolla ohjelmistokehityksen teknologioita -kurssilla tavoitteena on perehtyä tietorakenteiden ja algoritmien peruskäsitteisiin. Opettelemme arvioimaan karkeasti erilaisten algoritmisten lähestymistapojen soveltuvuutta kohtaamiimme ohjelmointiongelmiin.
 
-Vaikka ohjelmointikielenä esimerkeissä ja tehtävässä esiintyy Python, myös muista yleisimmistä kielistä löytyy vastaavat tietorakenteet samoilla ominaispiirteillä.
+Ohjelmointikielinä esimerkeissä ja tehtävässä esiintyvät TypeScript ja Python, mutta myös muista yleisimmistä kielistä löytyy vastaavat tietorakenteet samoilla ominaispiirteillä.
 
 Tavoitteenamme ei ole oppia laskemaan tai esittämään algoritmiemme tarkkaa tehokkuutta matemaattisilla kaavoilla, vaan käytämme laskukaavoja apuvälineenä ymmärtääksemme, miksi jokin algoritmi suoriutuu samasta tehtävästä tehokkaammin kuin toinen. Emme myöskään harjoittele optimoimaan ohjelmiemme suorituskykyä, vaikka suorituskyky toimiikin tärkeänä mittarina tällä viikolla.
 
@@ -38,13 +37,13 @@ Ohjelmointiongelmien ratkaisemisessa algoritmien lisäksi myös tietorakenteilla
 
 Tallentaessamme itse tietoa ohjelmiimme voimme itse vaikuttaa suuresti siihen, kuinka helposti ja nopeasti tallentamamme tieto on ohjelmakoodissa saatavilla. Vertaa esimerkiksi seuraavia mahdollisia tietorakenteita postinumeroiden ja postitoimipaikkojen tietojen tallentamiseksi:
 
-```json
-[
-    {"postalCode": "74701", "name": "KIURUVESI"},
-    {"postalCode": "35540", "name": "JUUPAJOKI"},
-    {"postalCode": "74700", "name": "KIURUVESI"},
-    {"postalCode": "73460", "name": "MUURUVESI"}
-]
+```ts
+`79700,Heinävesi
+86240,Pyhänkoski
+97390,Kierinki
+00900,Helsinki
+02760,Espoo
+02140,Espoo`
 ```
 
 ```json
@@ -57,6 +56,15 @@ Tallentaessamme itse tietoa ohjelmiimme voimme itse vaikuttaa suuresti siihen, k
 ```
 
 ```json
+[
+    {"postalCode": "74701", "name": "KIURUVESI"},
+    {"postalCode": "35540", "name": "JUUPAJOKI"},
+    {"postalCode": "74700", "name": "KIURUVESI"},
+    {"postalCode": "73460", "name": "MUURUVESI"}
+]
+```
+
+```json
 {
     "KIURUVESI": ["74701", "74700"],
     "JUUPAJOKI": ["35540"],
@@ -64,7 +72,7 @@ Tallentaessamme itse tietoa ohjelmiimme voimme itse vaikuttaa suuresti siihen, k
 }
 ```
 
-Jos tarkoituksesi olisi selvittää postinumeroa 74700 vastaava postitoimipaikan nimi, mitä sen selvittäminen vaatisi eri tietorakenteilla? Entä mikä tietorakenne olisi myöhemmin helpommin laajennettavissa, jos postinumeroalueita varten halutaan tallentaa toimipaikan nimen lisäksi myös muita tietoja? Olisiko näiden tietorakenteiden hyvät puolet jollain tavoin yhdisteltävissä?
+Jos tarkoituksesi olisi selvittää postinumeroa `74700` vastaava postitoimipaikan nimi, mitä sen selvittäminen vaatisi eri tietorakenteilla? Entä mikä tietorakenne olisi myöhemmin helpommin laajennettavissa, jos postinumeroalueita varten halutaan tallentaa toimipaikan nimen lisäksi myös muita tietoja? Olisiko näiden tietorakenteiden hyvät puolet jollain tavoin yhdisteltävissä?
 
 
 ## Suositeltu oheismateriaali
@@ -107,6 +115,7 @@ Tätä videota vastaava esittely tärkeistä tietorakenteista löytyy myös teks
 * Pakkausalgoritmi?
 * Pelialgoritmit?
 * Kuvanparannusalgoritmit?
+* ...
 
 ## Minkälaisia ongelmanratkaisuperiaatteita eri algoritmit hyödyntävät?
 
@@ -121,6 +130,7 @@ Tätä videota vastaava esittely tärkeistä tietorakenteista löytyy myös teks
 * Mathematical optimization
   * Modeling            <!-- matemaattinen -->
   * Recursion           <!-- liittyy divide and conquer -ajatukseen ja graafien läpikäyntiin: esim. pilkotaan kunnes osataan ratkaista -->
+* ...
 
 https://en.wikipedia.org/wiki/Algorithmic_technique#General_techniques
 
@@ -133,27 +143,28 @@ Tämän oppitunnin tavoitteena on kirjoittaa ohjelma, joka lukee listat suomen- 
 
 ### Sanakirja-aineistot
 
-Aineistona käytämme [Kotimaisten kielten tutkimuskeskuksen nykysuomen sanalistaa](http://kaino.kotus.fi/sanat/nykysuomi/) sekä Linuxin sanalistaa `/usr/share/dict/words`. Nykysuomen sanalista [kotus-sanalista-suomi.txt](src/kotus-sanalista-v1/kotus-sanalista-suomi.txt) sisältää 94&nbsp;110 sanaa ja Linux-jakelusta riippuen englanninkielinen sanalista voi sisältää esimerkiksi 102&nbsp;401 sanaa.
+Aineistona käytämme [Kotimaisten kielten tutkimuskeskuksen nykysuomen sanalistaa](http://kaino.kotus.fi/sanat/nykysuomi/) sekä Linuxin sanalistaa `/usr/share/dict/words`. [Nykysuomen sanalista](https://github.com/hugovk/everyfinnishword/blob/master/kaikkisanat.txt) sisältää noin 94&nbsp;000 sanaa ja Linux-jakelusta riippuen englanninkielinen sanalista sisältää esimerkiksi noin 102&nbsp;000 sanaa.
 
 Nykysuomen sanalistan voit ladata esimerkiksi tästä: [kaikkisanat.txt](https://github.com/hugovk/everyfinnishword/blob/master/kaikkisanat.txt). Sanalistatiedoston on koonnut Hugo van Kemenade ja se löytyy [GitHubista omana projektinaan](https://github.com/hugovk/everyfinnishword).
 
 `/usr/share/dict/words`-tiedosto on joissain Linux-jakeluissa esiasennettuna, mutta jos sitä ei löydy, [voit asentaa sen Debian-ympäristössä näillä komennoilla](https://howtoinstall.co/en/wamerican):
 
-```
-sudo apt update
-sudo apt install wamerican
+```sh
+$ sudo apt update
+$ sudo apt install wamerican
 ```
 
 Mikäli käyttöjärjestelmällesi ei ole saatavilla tätä sanakirjaa, voit generoida oman sanakirjatiedoston osoitteessa http://app.aspell.net/create.
 
 Esimerkeissä käytettävät aineistot ovat riittävän suuria, jotta pystymme huomaamaan merkittäviä eroja erilaisissa tietorakenteissa ja algoritmeissa, joilla yritämme selvittää yhteiset sanat.
 
+
 ### Listojen vertailu komentorivillä
 
-Ensin voimme kokeilla selvittää yhteisten sanojen määrän komentorivillä Linuxin `comm`-komennolla. Tehokkuussyistä `comm` edellyttää, että sille annettavat syötteet ovat valmiiksi aakkosjärjestyksessä, joten järjestämme ne `sort`-komennolla ja ohjaamme tulokset syötteiksi `<`-operaattorilla:
+Ensin voimme kokeilla selvittää yhteisten sanojen määrän komentorivillä Linuxin `comm`-komennolla. `comm`-komento edellyttää, että sille annettavat syötteet ovat valmiiksi aakkosjärjestyksessä, joten järjestämme ne `sort`-komennolla ja ohjaamme tulokset syötteiksi `<`-operaattorilla:
 
-```
-comm -1 -2 <(sort /usr/share/dict/words) <(sort kotus-sanalista-v1/kotus-sanalista-suomi.txt)
+```sh
+$ comm -1 -2 <(sort /usr/share/dict/words) <(sort kotus-sanalista-v1/kotus-sanalista-suomi.txt)
 ```
 
 `comm`-komennon tarkemman dokumentaation löydät [täältä](https://www.gnu.org/software/coreutils/manual/html_node/comm-invocation.html) ja lähdekoodin [GitHubista](https://github.com/coreutils/coreutils/blob/master/src/comm.c).
@@ -171,9 +182,9 @@ sys     0m0,048s
 Tässä tapauksessa yhteisten sanojen selvittäminen kesti noin 0,16 sekuntia (real). Miten käy, jos yritämme toteuttaa oman algoritmin saman tiedon selvittämiseksi?
 
 
-### 1. Oma Python-toteutus: mitkä samat sanat esiintyvät molemmissa kielissä?
+### 1. Oma toteutus: mitkä samat sanat esiintyvät molemmissa kielissä?
 
-Kirjoitetaan Python-skripti, joka lukee kaikki sanat kahdesta tiedostosta listoille. Kun listat on muodostettu, etsitään listalta **A** kaikki sanat, jotka esiintyvät myös listalla **B**! Lopuksi tulostetaan löytyneet sanat:
+Kirjoitetaan skripti, joka lukee kaikki sanat kahdesta tiedostosta listoille. Kun listat on muodostettu, etsitään listalta **A** kaikki sanat, jotka esiintyvät myös listalla **B**! Lopuksi tulostetaan löytyneet sanat:
 
 
 ```python
@@ -195,6 +206,25 @@ if __name__ == '__main__':
     main()
 ```
 
+```ts
+import { readFileSync } from 'fs';
+import path from 'path';
+
+function readWordsFromFile(filename: string): readonly string[] {
+    return readFileSync(filename, 'utf-8')
+        .trim().toLowerCase().split('\n');
+}
+
+const finnish = readWordsFromFile(path.join(__dirname, '..', 'finnish.txt'));
+const english = readWordsFromFile('/usr/share/dict/words');
+
+for (let fi of finnish) {
+    if (english.includes(fi)) {
+        console.log(fi);
+    }
+}
+```
+
 * Kuinka kauan algoritmin suoritus kestää?
 * Mistä kesto johtuu?
 * Mikä on algoritmin kokonaisaikavaatimus tällä hetkellä?
@@ -207,7 +237,7 @@ if __name__ == '__main__':
 >
 > Antti Laaksonen. [Tietorakenteet ja algoritmit -kirja](https://github.com/pllk/tirakirja/raw/master/tirakirja.pdf)
 
-Koska edellä esitetyssä koodissa käydään aina koko suomenkielinen sanalista läpi, on ulomman toistorakenteen tehokkuus suoraan suhteessa suomenkielisten sanojen määrään (n). Jokaista suomenkielistä sanaa kohden käydään läpi lista englanninkielisiä sanoja `word in english_words` -operaatiolla. Sisäisesti tämä operaatio vertailee etsittävää sanaa kaikkiin englanninkielisen listan sanoihin (m).
+Koska edellä esitetyssä koodissa käydään aina koko suomenkielinen sanalista läpi, on ulomman toistorakenteen tehokkuus suoraan suhteessa suomenkielisten sanojen määrään (n). Jokaista suomenkielistä sanaa kohden käydään läpi lista englanninkielisiä sanoja `word in english_words` tai `english.includes(fi)` -operaatiolla. Sisäisesti tämä operaatio vertailee etsittävää sanaa kaikkiin englanninkielisen listan sanoihin (m).
 
 Vertailuoperaatioita tehdään siis jopa n * m kappaletta, joka meidän aineistollamme tarkoittaa jopa 10&nbsp;000&nbsp;000&nbsp;000 vertailuoperaatiota.
 
@@ -226,29 +256,36 @@ $ python3 -m cProfile -s calls sanalistat.py
 
 Yllä olevassa komennossa `-m cProfile` käynnistää profiloijan ja `-s calls` järjestää funktiot niiden suorituskertojen mukaan.
 
+
 ### 2. Miten voimme nopeuttaa algoritmin toimintaa?
 
 Linuxin `comm`-komento edellytti, että aineistot ovat aakkosjärjestyksessä. Olisiko siis järjestyksessä olevien sanojen etsiminen nopeampaa?
 
 Sen sijaan, että kävisimme listan yksi kerrallaan alusta alkaen läpi, voisimme aloittaa etsimisen keskeltä ja rajata etsittävästä aineistosta puolet pois, riippuen siitä, onko etsittävä sana aakkosissa ennen vai jälkeen keskikohdassa olevaa sanaa!
 
-Hakua, jossa puolitamme haettavan aineiston aina keskeltä ja rajaamme seuraavan haun aina puolta pienempään aineistoon kutsutaan puolitushauksi, eli binäärihauksi ([binary search](https://en.wikipedia.org/wiki/Binary_search_algorithm)).
+Hakua, jossa puolitamme haettavan aineiston aina keskeltä ja rajaamme seuraavan haun aina puolta pienempään aineistoon kutsutaan **puolitushauksi**, eli **binäärihauksi** ([binary search](https://en.wikipedia.org/wiki/Binary_search_algorithm)).
 
 Seuraavassa Python-koodissa etsitään sanaa "villa", ja verrataan sitä aineiston keskimmäiseen sanaan:
 
 ```python
 >>> etsittava = "villa"
 >>>
->>> keskikohta = len(finnish_words) // 2 # 47055
+>>> keskikohta = len(finnish_words) // 2    # 47_055
 >>> finnish_words[keskikohta]
 'nimivakuus'
 ```
 
 Koska yllä olevassa esimerkissä etsitty sana `'villa'` on suurempi kuin keskimmäinen sana `'nimivakuus'`, sanat 0-47055 voidaan rajata pois! Tätä voidaan toistaa niin kauan, kunnes olemme löytäneet etsityn sanan, tai puolittaneet aineiston loppuun.
 
-Voit katsoa konkreettisen visualisoinnin algoritmin suorituksesta osoitteesta https://www.cs.usfca.edu/~galles/visualization/Search.html tai https://ohjelmointi-19.mooc.fi/osa-7/2-algoritmiikkaa.
+Voit katsoa konkreettisen visualisoinnin algoritmin suorituksesta esimerkiksi osoitteesta https://www.cs.usfca.edu/~galles/visualization/Search.html tai alla olevasta animaatiosta:
+
+> ![Binary Search by CC BY-SA 4.0. CC BY-SA 4.0](https://upload.wikimedia.org/wikipedia/commons/c/c1/Binary-search-work.gif)
+>
+> *Binary Search by CC BY-SA 4.0. CC BY-SA 4.0. https://commons.wikimedia.org/wiki/File:Binary-search-work.gif*
 
 Muutetaan vaiheessa 1 kehitettyä sovellusta siten, että puolitamme etsittävän aineiston. Toteutetaan siis oma binäärihaku!
+
+#### Puolitushaku Pythonilla
 
 ```python
 """
@@ -298,7 +335,40 @@ if __name__ == '__main__':
 ```
 
 ```bash
-python3 -m cProfile -s calls sanalistat.py
+$ python3 -m cProfile -s calls sanalistat.py
+```
+
+#### Puolitushaku TypeScriptillä
+
+```ts
+function binarySearch(word: string, sortedWords: readonly string[]): boolean {
+    let min = 0;
+    let max = sortedWords.length;
+
+    while (min <= max) {
+        let middleIndex = Math.trunc((min + max) / 2);
+        let middleWord = sortedWords.at(middleIndex)!;
+
+        if (middleWord === word) {
+            return true;
+        }
+        if (word.localeCompare(middleWord) > 0) {
+            // word comes after the middle point
+            min = middleIndex + 1;
+        } else {
+            max = middleIndex - 1;
+        }
+    }
+    return false;
+}
+```
+
+```ts
+for (let fi of finnish) {
+    if (binarySearch(fi, english)) {
+        console.log(fi);
+    }
+}
 ```
 
 * Kuinka kauan ohjelman suoritus kestää tällä kertaa?
@@ -312,7 +382,7 @@ python3 -m cProfile -s calls sanalistat.py
 
 Algoritmimme uudessa versiossa suomenkielinen sanalista käydään edelleen läpi kokonaisuudessaan, eli **n** kertaa. Englanninkielistä sanalistaa puolestaan ei enää käydä läpi kokonaan jokaista suomenkielistä sanaa kohden, vaan sanalistaa puolitetaan, kunnes aineisto on saatu pilkottua loppuun.
 
-Kuinka monta kertaa aineisto voidaan puolittaa, jotta jäljelle jää vielä jotain puolitettavaa?
+**Kuinka monta kertaa aineisto voidaan puolittaa?**
 
 1. kahden pituinen lista voidaan puolittaa kerran (2 == 2<sup>1</sup>)
 1. neljän pituinen lista voidaan puolittaa kaksi kertaa (4 == 2<sup>2</sup>)
@@ -328,7 +398,7 @@ Toisin sanoen, tietty lista voidaan aina puolittaa sen **pituuden kaksikantaisen
 >
 > Logaritmi. Wiktionary. https://fi.wiktionary.org/wiki/logaritmi
 
-Tämä on valtava parannus aikaisempaan lineaariseen hakuun verrattuna, koska nyt yhden sanan hakeminen esimerkiksi 102&nbsp;401 sanan aineistosta vaatii korkeintaan 17 vertailuoperaatiota! Koska etsittäviä sanoja on 94&nbsp;110 kappaletta, vertailuoperaatioita tehdään yhteensä enää alle 1&nbsp;600&nbsp;000 kappaletta.
+Tämä on valtava parannus aikaisempaan lineaariseen hakuun verrattuna, koska nyt yhden sanan hakeminen esimerkiksi 100&nbsp;000 sanan aineistosta vaatii korkeintaan 17 vertailuoperaatiota! Koska etsittäviä sanoja on 94&nbsp;110 kappaletta, vertailuoperaatioita tehdään yhteensä enää alle 1&nbsp;600&nbsp;000 kappaletta.
 
 Seuraava koodiesimerkki havainnollistaa 2-kantaisen logaritmin käyttöä Pythonissa edellä esitetyn tuloksen saamiseksi:
 
@@ -343,10 +413,10 @@ Kääntäen ilmaistuna, 102&nbsp;401 sanan pituinen lista voidaan puolittaa kaht
 
 Algoritmin tehokkuus  | Vertailujen määrä | Suoritusaika
 ----------------------|-------------------|--------
-O(n * log(m))         | ~2 000 000        | ?
+O(n * log2(m))        | ~2 000 000        | ?
 
 
-**Huom!** Oikeassa ohjelmistoprojektissa käyttäisit Pythonin valmista [bisect](https://docs.python.org/3/library/bisect.html)-moduulia, mutta koska haluamme oppia, toteutamme algoritmin itse.
+**Huom!** Oikeassa ohjelmistoprojektissa käyttäisit Pythonin valmista [bisect](https://docs.python.org/3/library/bisect.html)-moduulia. JavaScript-kielen standardikirjastossa ei ole binäärihakua valmiina, mutta seikkailunhaluiset voivat asentaa sellaisen jostain lukuisista [npm-paketeista](https://www.npmjs.com/search?q=binary%20search).
 
 
 ### 3. Miten käytetty tietorakenne vaikuttaa ohjelman nopeuteen?
@@ -355,25 +425,22 @@ Suomenkielisen sanalistan läpikäyntiä voi olla mahdotonta nopeuttaa, koska ha
 
 Olisiko meillä muita tietorakenteita, joita voisimme käyttää listojen sijasta? Mikä tietorakenne olisi nopea hakujen tekemiseen?
 
-Hajautustaulut (sanakirja), toimivat eri periaatteella kuin listat. Listoilla arvot esiintyvät peräkkäin ja esimerkiksi merkkijono `'tie'` voi olla listan missä tahansa indeksissä, riippuen listan muusta sisällöstä. Hajautettavat tietorakenteet toimivat puolestaan eri toimintaperiaatteella. Jokaiselle arvolle lasketaan sijainti tietorakenteessa hajautusfunktion avulla, joten teoriassa arvon löytyminen edellyttää vain yhden arvon tarkastamisen tietorakenteesta: O(1):
+Hajautustaulut (sanakirja), toimivat eri periaatteella kuin listat. Listoilla arvot esiintyvät peräkkäin ja esimerkiksi merkkijono `'tie'` voi olla listan missä tahansa indeksissä. Hajautettavat tietorakenteet toimivat puolestaan eri toimintaperiaatteella. Jokaiselle arvolle lasketaan sijainti tietorakenteessa **hajautusfunktion** avulla, joten teoriassa arvon löytyminen edellyttää vain yhden "indeksin" tarkastamisen tietorakenteesta:
 
 ```python
 >>> hash('python')
 1263623612
+
 >>> hash('java')
 362104960
+
 >>> hash('javascript')
 -2131589936
 ```
 
-Meidän tarvitsee luoda sanakirja vain siitä listasta, josta etsimme sanoja:
+Sanakirjat ja objektit toimivat hajautusperiaatteella, joten kokeillaan muuttaa aineistoa seuraavasti:
 
 ```python
-def read_words(file_path):
-    with open(file_path, encoding='utf-8') as file:
-        return file.read().splitlines()
-
-
 def main():
     finnish_words = read_words('kotus-sanalista-v1/kotus-sanalista-suomi.txt')
     english_words = read_words('/usr/share/dict/words')
@@ -389,20 +456,38 @@ if __name__ == '__main__':
     main()
 ```
 
+```ts
+// see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries
+let englishObject = Object.fromEntries(english.map(w => [w, true]));
+
+for (let fi of finnish) {
+    if (fi in englishObject) {
+        console.log(fi);
+    }
+}
+```
 
 * Kuinka kauan suoritus kestää tällä kertaa?
 * Mistä ero johtuu?
 * Mikä on dict-tietorakenteen `x in dict`-operaation aikavaatimus? https://wiki.python.org/moin/TimeComplexity
 * Sanakirjan muodostaminen: toistorakenne vs. [dict comprehension](https://www.python.org/dev/peps/pep-0274/)
 
-#### Sanakirjatoteutuksen tehokkuuden arviointi
+#### Tehokkuuden arviointi
 
-Sanakirjasta hakeminen vie keskimäärin yhden operaation, vaikka teoreettisesti epätasaisesti jakautuneet sanakirjat voivat vaatia jopa kokonsa verran hakuoperaatiota, mikäli hajautusfunktio toimii tehottomasti. Koska suomenkielisten sanojen läpikäynnin aikavaatimus on edelleen **O(n)**, tulee sanakirjan avulla algoritmin aikavaatimukseksi **O(n * 1)** eli **O(n)**:
+Sanakirjasta tai objektista hakeminen vie keskimäärin yhden operaation. Teoreettisesti epätasaisesti jakautuneet sanakirjat voivat tosin vaatia jopa kokonsa verran hakuoperaatiota, mikäli hajautusfunktio toimii tehottomasti. Koska suomenkielisten sanojen läpikäynnin aikavaatimus on edelleen **O(n)**, mutta englanninkieliset sanat löytyvät vakioajassa, on uuden toteutuksen aikavaatimus **O(n)**:
 
 ```python
 for word in finnish_words:    # O(n) => listan läpikäynti
     if word in english_dict:  # O(1) => sanakirjasta hakeminen
         print(word)
+```
+
+```ts
+for (let fi of finnish) {       // O(n) => taulukon läpikäynti
+    if (fi in englishObject) {  // O(1) => objektista hakeminen
+        console.log(fi);
+    }
+}
 ```
 
 Ohjelman suoritusajan laskeminen ei todellisuudessa ole aivan näin yksinkertaista, ja sanakirjan yhteydessä joudumme huomioimaan myös esimerkiksi sanakirjan muodostamiseen kuluvan ajan:
@@ -413,9 +498,16 @@ Ohjelman suoritusajan laskeminen ei todellisuudessa ole aivan näin yksinkertais
 english_dict = {word: True for word in english_words}
 ```
 
-Arvon lisääminen sanakirjaan vie aikaa saman verran kuin sanakirjasta hakeminen, eli englanninkielisen aineiston koko `m` vaikuttaa samassa suhteessa tarvittavien operaatioiden määrään sanakirjaa muodostettaessa: **O(m)**.
+```ts
+// map-funktio muodostaa jokaiselle sanalle (esim. "hello" ja "word") taulukon:
+// [["hello", true], ["word", true]]. Näistä taulukoista puolestaan muodostetaan
+// objekti muodossa { hello: true, word: true };
+let englishObject = Object.fromEntries(english.map(w => [w, true]));
+```
 
-Näiden muutosten jälkeen ratkaisun tehokkuus on suuruusluokkaa **O(m) + O(n)**, eli lyhyemmin ilmaistuna **O(m + n)**. `m + n` kasvaa lineaarisesti alkioiden määrän mukaan, joten se on toistaiseksi kaikkein tehokkain.
+[Yhden arvon lisääminen vie aikaa saman verran kuin hakeminen](https://stackoverflow.com/q/31091772), eli englanninkielisen aineiston koko `m` vaikuttaa samassa suhteessa tarvittavien operaatioiden määrään sanakirjaa muodostettaessa: **O(m)**.
+
+Näiden muutosten jälkeen ratkaisun tehokkuus on suuruusluokkaa **O(m) + O(n)**, eli lyhyemmin ilmaistuna **O(m + n)**. `m + n` kasvaa lineaarisesti alkioiden määrän mukaan, joten se esitetään tyypillisesti vain yhden muuttujan avulla  **O(n)**. Tämä toteutus on toistaiseksi kaikkein tehokkain.
 
 
 Algoritmin tehokkuus  | Operaatioiden määrä  | Suoritusaika
@@ -433,14 +525,9 @@ Määritellään ongelma uudelleen joukko-opin näkökulmasta: yhden kielen sana
 {'rodeo', 'mafia', 'villa'}
 ```
 
-Joukoiksi muutettuna koodi näyttää esimerkiksi seuraavalta:
+Joukoiksi muutettuna Python-koodi näyttää esimerkiksi seuraavalta:
 
 ```python
-def read_words(file_path):
-    with open(file_path, encoding='utf-8') as file:
-        return file.read().splitlines()
-
-
 def main():
     finnish_words = read_words('kotus-sanalista-v1/kotus-sanalista-suomi.txt')
     english_words = read_words('/usr/share/dict/words')
@@ -452,6 +539,13 @@ def main():
 
 if __name__ == '__main__':
     main()
+```
+
+JavaScript-kielen standardikirjastosta löytyy vastaava [Set-tietorakenne](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set), mutta sille ei valitettavasti ole valmista leikkaus/intersection-operaatiota. Tällainen voidaan kuitenkin tarvittaessa [toteuttaa itse esim. taulukon filter-operaation avulla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#iterating_sets):
+
+```ts
+const englishSet = new Set(english);
+const intersection = finnish.filter(fi => englishSet.has(fi));
 ```
 
 * Mikä on suoritusaika nyt?
@@ -506,7 +600,6 @@ Tämän viikon tehtävissä käsittelemme MyHelsinki Open API -rajapinnan tapaht
 ## Oppitunnin esimerkin idea
 
 Idea suomen- ja englanninkielisten sanalistojen yhteisten sanojen selvittämisestä on lainattu [Helsingin yliopiston Antti Laaksosen luennolta](https://tira.mooc.fi/syksy-2021/pages/materiaali.html) ja sovellettu omiin tarpeisiimme.
-
 
 
 ## Suomenkielisen sanalistan tekijänoikeudet
