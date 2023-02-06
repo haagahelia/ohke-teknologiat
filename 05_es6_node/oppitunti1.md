@@ -44,7 +44,7 @@ Videolla editoitava tiedosto: [events.js](./src/events.js)
 
 ## JavaScriptin ohjelmointityylit
 
-JavaScript on ns. monen paradigman kieli, eli sillä voidaan soveltaa monia erilaisia ohjelmointityylejä. Voit siis soveltaa JavaScriptillä olio-ohjelmointia tai funktionaalista ohjelmointia, tai halutessasi sekoittaa eri tyylejä. Monipuolisuuden heikkoutena JavaScriptillä ei aina ole yhtä vahvoja "parhaita käytäntöjä" kuin joillain yhden paradigman kielillä. 
+JavaScript on ns. monen paradigman kieli, eli sillä voidaan soveltaa monia erilaisia ohjelmointityylejä. Voit siis soveltaa JavaScriptillä olio-ohjelmointia tai funktionaalista ohjelmointia, tai halutessasi sekoittaa eri tyylejä. Monipuolisuuden heikkoutena JavaScriptillä ei aina ole yhtä vahvoja "parhaita käytäntöjä" kuin joillain yhden paradigman kielillä.
 
 Tämän oppitunnin aikana perehdymme erityisesti JavaScriptin funktionaaliseen puoleen: nuolifunktioihin sekä **map**-, **filter**- ja **reduce**-operaatioihin.
 
@@ -70,7 +70,7 @@ Reactin ja muiden erityissyntaksien lisäksi Babel osaa muuntaa JavaScriptin mod
 
 ## Laajennosten ja uusien ominaisuuksien selaintuki
 
-Erityisesti verkkoselaimella käytettävien sovellusten kehittämisessä on huomioitava vaihtelevat suoritusympäristöt, joissa selain joko tukee tai ei tue kirjoittamaasi koodia. Selaintuki on perinteisesti ollut merkittävä ongelma, koska JavaScript on jaeltu selaimille suoritettavaksi sellaisenaan ja eri selainten JavaScript-tuki on ollut vaihtelevaa. 
+Erityisesti verkkoselaimella käytettävien sovellusten kehittämisessä on huomioitava vaihtelevat suoritusympäristöt, joissa selain joko tukee tai ei tue kirjoittamaasi koodia. Selaintuki on perinteisesti ollut merkittävä ongelma, koska JavaScript on jaeltu selaimille suoritettavaksi sellaisenaan ja eri selainten JavaScript-tuki on ollut vaihtelevaa.
 
 Tänä päivänä selainyhteensopivuus ei ole välttämättä merkittävä ongelma, koska selaimelle tarkoitettu koodi usein muunnetaan, eli "transpiloidaan" selainten varmasti tukemaan muotoon. Esimerkiksi seuraavassa koodiesimerkissä hyödynnetään JavaScriptin "object destructuring"-syntaksia, joka ei ole tuettu kaikissa vanhemmissa selaimissa:
 
@@ -252,7 +252,7 @@ Samankaltainen kuin taulukoiden spread-operaatio, mutta olioille sovellettuna:
 ```js
 let person = { hobby: 'Kung-fu', ...names };
 
-// luo uuden olion, jossa on kaikki names-olion attribuutit, 
+// luo uuden olion, jossa on kaikki names-olion attribuutit,
 // ja sen lisäksi hobby-attribuutti.
 
 // sama kuin:
@@ -325,14 +325,14 @@ Eräs JavaScriptin yhteydessä kasvavassa määrin hyödynnetty tekniikka, joka 
 >
 > [Kantor, I. Currying. JavaScript.info](https://javascript.info/currying-partials)
 
-Currying-tekniikalla voimme siis pilkkoa useita parametreja sisältäviä funktioita siten, että yksittäisellä funktiokutsulla sidotaan yksi muuttuja. Funktiot palauttavat uusia funktioita, jotka voidaan ottaa tarvittaessa talteen ja kutsua muualla. 
+Currying-tekniikalla voimme siis pilkkoa useita parametreja sisältäviä funktioita siten, että yksittäisellä funktiokutsulla sidotaan yksi muuttuja. Funktiot palauttavat uusia funktioita, jotka voidaan ottaa tarvittaessa talteen ja kutsua muualla.
 
 Kutsuessamme toista funktiota, ensimmäisessä funktiokutsussa annetut parametrit ovat edelleen voimassa, koska ne ovat saman ["sulkeuman"](https://fi.wikipedia.org/wiki/Sulkeuma_\(ohjelmointi\)) (closure) sisällä:
 
 ```js
 function multiply(a) {
     return function(b) {
-        // tässä funktiossa on voimassa sekä ensin annettu 
+        // tässä funktiossa on voimassa sekä ensin annettu
         // 'a' että tälle funktiolle annettava 'b'.
         return a * b;
     }
@@ -400,14 +400,14 @@ Voit lukea lisää ESLintin komentorivikäytöstä osoitteessa [https://eslint.o
 
 # Tapahtumien käsitteleminen funktionaalisesti
 
-Aiheen videoilla käsittelemme `map`, `filter` ja `reduce` -operaatioita [MyHelsinki Open API](http://open-api.myhelsinki.fi/doc) -rajapinnan tapahtumien avulla. `map`, `filter` ja `reduce` löytyvät suurimmasta osasta ohjelmointikieliä, mukaan lukien Java, Python ja JavaScript. 
+Aiheen videoilla käsittelemme `map`, `filter` ja `reduce` -operaatioita [MyHelsinki Open API](http://open-api.myhelsinki.fi/doc) -rajapinnan tapahtumien avulla. `map`, `filter` ja `reduce` löytyvät suurimmasta osasta ohjelmointikieliä, mukaan lukien Java, Python ja JavaScript.
 
 
 ## Esivalmistelu: staattisen aineiston hakeminen
 
 Linux-pohjaisissa järjestelmissä HTTP-pyyntöjen tekemiseksi komentoriviltä käytetään usein `curl`-komentoa.
 
-> *curl  is  a tool to transfer data from or to a server, 
+> *curl  is  a tool to transfer data from or to a server,
 > using one of the supported protocols [...].
 > The command is designed to work without user interaction.*
 >
@@ -488,8 +488,8 @@ function eventDateComparator(event1, event2) {
     let event1date = event1.event_dates.starting_day || '';
     let event2date = event2.event_dates.starting_day || '';
 
-    // Palauttaa negatiivisen luvun, nollan tai positiivisen luvun 
-    // riippuen merkkijonojen aakkosjärjestyksestä. Tämä toimii, koska 
+    // Palauttaa negatiivisen luvun, nollan tai positiivisen luvun
+    // riippuen merkkijonojen aakkosjärjestyksestä. Tämä toimii, koska
     // starting_day on aina ISO-muotoinen String, esim. "2020-10-16T24:00:00".
     return event1date.localeCompare(event2date);
 }
@@ -619,7 +619,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Defa
 
 
 
-## Map 
+## Map
 
 > *The map() method creates a new array populated with the results of calling a provided function on every element in the calling array.*
 >
@@ -674,7 +674,7 @@ Kokonaislukutaulukon summa voitaisiin laskea reducen avulla esimerkiksi seuraava
 ```js
 let numerot = [1, 2, 3, 4, 5];
 
-let summa = numerot.reduce( (summa, seuraava) => { 
+let summa = numerot.reduce( (summa, seuraava) => {
     return summa + seuraava; // palautetaan aina uusi summa
 }, 0); // alkuarvo summalle on nolla
 
@@ -686,7 +686,7 @@ Sekä `map` että `filter` on toteutettavissa `reduce`:n avulla. Tällöin koott
 
 ```js
 > // map toteutettuna reducen avulla:
-> let tuplattu = [1, 2, 3, 4, 5].reduce((uusiTaulukko, arvo) => { 
+> let tuplattu = [1, 2, 3, 4, 5].reduce((uusiTaulukko, arvo) => {
     uusiTaulukko.push(arvo * 2);
     return uusiTaulukko;
 }, [] );
@@ -700,8 +700,8 @@ Sekä `map` että `filter` on toteutettavissa `reduce`:n avulla. Tällöin koott
 > let suurempiKuinKolme = [1, 2, 3, 4, 5].reduce((uusiTaulukko, arvo) => {
     if (arvo > 3) {
         uusiTaulukko.push(arvo);
-    } 
-    return uusiTaulukko; 
+    }
+    return uusiTaulukko;
 }, [] );
 >
 > console.log(suurempiKuinKolme);
@@ -710,10 +710,123 @@ Sekä `map` että `filter` on toteutettavissa `reduce`:n avulla. Tällöin koott
 
 Reduce on erittäin monikäyttöinen operaatio, ja sen avulla onnistuu luontevasti myös esimerkiksi taulukon arvojen ryhmitteleminen tietyn avaimen mukaan. Voit lukea aiheesta lisää Googlesta hakusanoilla "JavaScript reduce group by" tai [tästä artikkelista](https://learnwithparam.com/blog/how-to-group-by-array-of-objects-using-a-key/).
 
-# Tehtävät
+<!--
+## Map: etäisyyden lisääminen kaikille tapahtumille
 
-Tämän viikon tehtävissä käsittelemme [JSONPlaceholder](https://github.com/typicode/jsonplaceholder)-rajapinnan dataa ja yhdistelemme kahdesta eri JSON-tietorakenteesta löytyviä tietoja map- sekä filter-operaatioiden avulla. Katso tarkemmat ohjeet Teamsin tehtävät-välilehdeltä.
+Meille erityisen hyödyllinen `map`-operaation käyttötapaus voisi olla etäisyyden lisääminen tapahtuman tietoihin. Kaikilla tapahtumilla on koordinaatit, joten meidän tulee vain laskea etäisyys kunkin tapahtuman koordinaattipisteen ja oman pisteemme välillä. Etäisyyden laskeminen on sen verran monimutkainen operaatio, että emme halua toteuttaa sitä omaan koodiimme. Sen sijaan käytämm evalmista `geolib`-kirjastoa:
 
+> *"Library to provide basic geospatial operations like distance calculation, conversion of decimal coordinates to sexagesimal and vice versa, etc."*
+>
+> https://www.npmjs.com/package/geolib
+
+Kirjasto asentuu `npm install`-komennolla seuraavasti:
+
+```
+npm install geolib
+```
+
+Nyt `geolib` voidaan ottaa käyttöön myös omassa koodissa:
+
+```js
+const geolib = require('geolib');
+
+const helsinkiCoordinates = { lat: 60.1733244, lon: 24.9410248 };
+
+let eventsWithDistance = events.map(event => {
+    let eventCoordinates = { lat, lon } = event.location;
+    return {
+        ...event, // "object spread"
+        distance: geolib.getDistance(helsinkiCoordinates, eventCoordinates) // lisätään uusi attribuutti!
+    }
+});
+```
+
+Huomaa, että yllä oleva koodi ei muuta alkuperäistä `events`-taulukkoa eikä sillä olevia olioita, vaan se luo uuden taulukon, joka täytetään kopioilla tapahtumista.
+
+
+### Currying
+
+Yllä olevassa koodiesimerkissä `map`-operaatiolle annettu funktio on sidottu `helsinkiCoordinates`-muuttujaan. Haluaisimme kuitenkin ohjelmassamme todennäköisesti laskea etäisyyksiä monipuolisesti, joten eri etäisyysfunktiot olisi tarpeen sitoa eri muuttujien arvoihin:
+
+```js
+const helsinkiCoordinates = { lat: 60.1733244, lon: 24.9410248 };
+const espooCoordinates = { lat: 60.205491, lon: 24.655900 };
+const rovaniemiCoordinates = { lat: 66.503059, lon: 25.726967 };
+```
+
+Voimme ratkaista ongelman soveltaen currying-tekniikkaa! Ensin lukitsemme koordinaattipisteen ja sen jälkeen kutsumme sisempää funktiota tapahtumaolioiden kanssa!
+
+```js
+function getDistanceTo(point) {
+    return function (event) {
+        return geolib.getDistance(point, event.location);
+    }
+}
+
+// sama kuin:
+let getDistanceTo = (point) => (event) => geolib.getDistance(point, event.location);
+```
+
+Nyt etäisyysfunktioita voidaan luoda kutsumalla `getDistanceTo`-funktioita eri koordinaattipisteillä. Funktio palauttaa aina uuden funktion, jonka sulkeumassa annettu koordinaattipiste on tallessa:
+
+```js
+// etäisyysfunktiot Helsinkiin ja Tukholmaan
+let distanceFuncHelsinki = getDistanceTo(helsinkiCoordinates);
+let distanceFuncStockholm = getDistanceTo(stockholmCoordinates);
+
+// etäisyysfunktioiden hyödyntäminen tapahtuman kanssa:
+let distaceHki = distanceFuncHelsinki(events[0]);
+let distaceSto = distanceFuncStockholm(events[0]);
+
+// etäisyyden lisääminen kaikkiin tapahtumiin!
+let eventsWithCoordinates = events.map(event => ({ ...event, distance: distanceFuncHelsinki(event) }) );
+events.forEach(event => event.distance = distanceFuncHelsinki(event));
+```
+
+**Pohdittavaa**
+
+JavaScriptin taulukoilla on myös `forEach`-funktio, jonka avulla tietty funktio voidaan suorittaa taulukon jokaiselle arvolle. Miten `forEach`-funktion käyttäminen poikkeaa `map`-funktion käyttämisestä seuraavassa esimerkissä? Mitkä ovat niiden vahvuudet ja heikkoudet?
+
+```js
+// map:
+let eventsWithCoordinates = events.map(event => ({ ...event, distance: distanceFuncHelsinki(event) }) );
+
+// forEach:
+events.forEach(event => event.distance = distanceFuncHelsinki(event));
+```
+-->
+<!--
+```js
+function addDistanceTo(coordinates) {
+    return function(event) {
+        return {
+            ...event,
+            distance: geolib.getDistance(coordinates, event.location)
+        }
+    }
+}
+```
+
+Nyt tapahtumille saadaan lisättyä etäisyys Helsingin koordinaateista suoraviivaisesti:
+
+```js
+let addDistanceToHelsinki = addDistanceTo(helsinkiCoordinates);
+let eventsWithDistanceFromHelsinki = events.map(addDistanceToHelsinki);
+```
+-->
+
+<!--
+### Tapahtumien järjestäminen etäisyyden mukaan
+
+Kun tapahtumille on lisätty uusi attribuutti `distance`, voidaan tätä käyttää hyväksi myös tapahtumien järjestämisessä etäisyyden mukaan. Seuraavan koodiesimerkin nuolifunktio vertailee kahta tapahtumaa niiden `distance`-attribuutin mukaan:
+
+```js
+// Jos etäisyys 1 on pienempi kuin etäisyys 2, on tuloksena negatiivinen luku:
+eventsWithDistances.sort((event1, event2) => event1.distance - event2.distance);
+```
+
+Katso lisätietoa järjestämisestä ylempää kodasta "Järjestäminen alkamisajan mukaan".
+-->
 
 ----
 
@@ -722,7 +835,7 @@ Tämän viikon tehtävissä käsittelemme [JSONPlaceholder](https://github.com/t
 ## MyHelsinki Open API
 
 > *"Note that all of the information provided over the API is open data with the exception of image files. When using images, please refer to the license terms included with each image.*"
-> 
+>
 > MyHelsinki Open API. https://open-api.myhelsinki.fi/
 
 MyHelsinki Open API:n aineisto on lisensoitu [Creative Commons BY 4.0](https://open-api.myhelsinki.fi/terms)-lisenssillä. Voit lukea tarkemmat käyttöehdot ositteesta https://open-api.myhelsinki.fi/terms.
