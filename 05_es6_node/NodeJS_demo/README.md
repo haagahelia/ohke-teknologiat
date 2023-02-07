@@ -1,7 +1,7 @@
 # Node.js, Fullstack, MariaDB, Express, Knex, asynchronous code
 
 
-We look at, learn, study and then modify a already working backend project: **idea-case-backend**.
+We look at, learn, study and then modify an already working backend project: **idea-case-backend**.
 
 
 ## Architecture picture
@@ -20,6 +20,8 @@ We look at, learn, study and then modify a already working backend project: **id
 [The README.md of idea-case-backend has a lot of info](https://github.com/valju/idea-case-backend/#readme)
 
 [Description of each file type in the project (PDF)](https://github.com/valju/idea-case-backend/raw/master/BackendDemoProject_ForExample_or_eg_BackendExam.pdf)
+
+[The project repo itself to be cloned](https://github.com/valju/idea-case-backend)
 
 ## Other tech & tool introductions
 
