@@ -1,7 +1,7 @@
 # Node.js, Fullstack, MariaDB, Express, Knex, asynchronous code
 
 
-We look at, learn, study and then modify a already working backend, project: **idea-case-backend**.
+We look at, learn, study and then modify a already working backend project: **idea-case-backend**.
 
 
 ## Architecture picture
@@ -21,13 +21,15 @@ We look at, learn, study and then modify a already working backend, project: **i
 
 [Description of each file type in the project (PDF)](https://github.com/valju/idea-case-backend/raw/master/BackendDemoProject_ForExample_or_eg_BackendExam.pdf)
 
-## Other tech introductions
+## Other tech & tool introductions
 
 [Node.js introduction (PDF)](02_nodejs/NodeJS.pdf)
 
 [Asynchronous code and Promise (PDF)](03_asynchronous_code_promises/AsynchronousCode_Promises.pdf)
 
 [Knex "Query Builder", kind of like an ORM (PDF)](04_knex/Knex.pdf)
+
+[Postman REST API tester hints (PDF)](10_postman/Postman_Hints.pdf)
 
 ## The Node.js modification task
 
