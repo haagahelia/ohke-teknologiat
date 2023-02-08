@@ -9,7 +9,7 @@ We look at, learn, study and then modify an already working backend project: **i
 ![Architecture picture. Full-stack with Node backend](https://github.com/valju/idea-case-backend/raw/master/BackendArchitecturePic_with_DrawIo.png)
 
 ## Database and Database creation
-![Database diagram](https://raw.githubusercontent.com/valju/idea-case-backend/master/Database/DB_Design/DBDiagram_case2019K.png)
+![Database diagram](https://raw.githubusercontent.com/valju/idea-case-backend/master/Database/DB_Design/DBDiagram_idea_case.png)
 
 **Note!** Check out Teams > General > Files for the secrets. Like usernames, passwords, IP addresses, port numbers, your schema name etc.
 
