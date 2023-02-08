@@ -25,7 +25,7 @@ We look at, learn, study and then modify an already working backend project: **i
 
 ## Other tech & tool introductions
 
-[Node.js introduction, Express, middlewares (PDF)](02_nodejs/NodeJS.pdf)
+[Node.js introduction, Express, middleware (PDF)](02_nodejs/NodeJS.pdf)
 
 [Asynchronous code and Promise (PDF)](03_asynchronous_code_promises/AsynchronousCode_Promises.pdf)
 
