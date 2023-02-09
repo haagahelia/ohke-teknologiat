@@ -38,4 +38,5 @@ We look at, learn, study and then modify an already working backend project: **i
 **Note!** Check out Teams > General > Files for the secrets. Like usernames, passwords, IP addresses, port numbers, your schema name etc.
 
 [Finnish course task (PDF)](99_tasks/NodeJS_tehtavat_23k.pdf)
+
 [English course task (PDF)](99_tasks/NodeJS_task.pdf)
