@@ -25,11 +25,15 @@ We look at, learn, study and then modify an already working backend project: **i
 
 ## Other tech & tool introductions
 
-[Node.js introduction, Express, middleware (PDF)](02_nodejs/NodeJS.pdf)
+[Node.js introduction, REST API url principles (PDF)](02_nodejs/NodeJS.pdf)
+
+[Express, middleware (PDF)](02_nodejs/Express_and_middleware.pdf)
+
+[What else could be added to this backend (PDF)](02_nodejs/MoreCouldBeAdded.pdf)
 
 [Asynchronous code and Promise (PDF)](03_asynchronous_code_promises/AsynchronousCode_Promises.pdf)
 
-[Knex "Query Builder", kind of like an ORM (PDF)](04_knex/Knex.pdf)
+[Knex "Query Builder", kind of like an ORM. Database return values (PDF)](04_knex/Knex.pdf)
 
 [Postman REST API tester hints (PDF)](10_postman/Postman_Hints.pdf)
 
