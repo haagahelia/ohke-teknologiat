@@ -137,6 +137,7 @@ Oppitunnit pidetään pääsääntöisesti **maanantaisin klo 8.30-10.45 sekä k
             <td>Ma 13.2.</td>
             <td>
                 <strong>Tietorakenteet ja algoritmit:</strong><br />
+                📣 <strong>Huom! Oppitunti poikkeuksellisesti vain Teamsissa!</strong><br />
                 <strong><a href="04_tietorakenteet_ja_algoritmit/">TypeScript tai Python</a></strong>
                 <ul>
                     <li>Lajittelualgoritmit</li>
@@ -146,7 +147,7 @@ Oppitunnit pidetään pääsääntöisesti **maanantaisin klo 8.30-10.45 sekä k
                 </ul>
             </td>
             <td>
-                Tapaaminen luokassa ja Teamsissa<br />
+                Tapaaminen <del>luokassa ja</del> Teamsissa<br />
                 Tehtävien DL su 26.2. klo 22:00
             </td>
         </tr>
