@@ -46,6 +46,14 @@ if(true) {
 | FIN  | Finland |
 | ABS  | Absurdia |
 
+<details><summary>Summary visible for hideable Details</summary>
+
+Hideable showable text for details.
+
+More text for details.
+
+</details>
+
 <hr />
 
 Look into the *Markdown* source code for how to add images linked from internet, this is the general architecture of the Finnish Finna service: 
