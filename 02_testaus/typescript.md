@@ -361,6 +361,42 @@ Järjestelmätestauksella varmistetaan usein monivaiheisia käyttötapauksia. Te
 Järjestelmätestejä tehdäänkin usein eri työkaluilla kuin yksikkötestejä. Yksi järjestelmätesteissä hyödyllinen testityökalu on kotimaista alkuperää oleva [Robot Framework](https://robotframework.org/), jolla voidaan erilaisten laajennusten kanssa testata verkkosivuja tai vaikka matkapuhelinverkkoja. Robot Frameworkilla on oma kielensä, jolla testitapaukset voivat näyttää esim. tältä: https://github.com/robotframework/WebDemo/blob/master/login_tests/valid_login.robot.
 
 
+## Harjoitus
+
+Miten voisimme testata esimerkiksi seuraavaa funktiota?
+
+```ts
+interface Color {
+    r: number;
+    g: number;
+    b: number;
+}
+
+/**
+ * Takes in a Color object and a percentage value for how much the color
+ * should be lightened or darkened, and returns a new Color object with the
+ * updated R, G, and B values.
+ *
+ * @param color The color object with properties r, g, and b
+ * @param percent The percentage value for how much to lighten or darken the color
+ * @returns A new Color object with the updated R, G, and B values
+ */
+function adjustColorBrightness(color: Color, percent: number): Color {
+    // Convert percent to a decimal value
+    const decimal = percent / 100;
+
+    // Calculate new color values, making sure they don't exceed 255
+    const r = Math.round(Math.min(255, color.r * (1 + decimal)));
+    const g = Math.round(Math.min(255, color.g * (1 + decimal)));
+    const b = Math.round(Math.min(255, color.b * (1 + decimal)));
+
+    // Return a new Color object with the updated R, G, and B values
+    return { r, g, b };
+}
+```
+
+Lähdekoodi: ChatGPT by OpenAI, accessed on 17.2.2023.
+
 <!--
 # Fetch-harjoitus
 
