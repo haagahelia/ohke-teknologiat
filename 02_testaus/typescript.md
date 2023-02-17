@@ -15,12 +15,13 @@ Aiheen opiskelun jälkeen osaat kirjoittaa Python-funktioillesi yksikkötestit j
 >
 > The Startup Lab. [What is Automated Testing?](https://www.youtube.com/watch?v=Nd31XiSGJLw)
 
+&nbsp;
+
 ### [Introduction To Testing In JavaScript With Jest - Web Dev Simplified](https://www.youtube.com/watch?v=FgnxcUQ5vho)
 
 [![Introduction To Testing In JavaScript With Jest - Web Dev Simplified](https://img.youtube.com/vi/FgnxcUQ5vho/mq2.jpg)](https://www.youtube.com/watch?v=FgnxcUQ5vho)
 
 &nbsp;
-
 
 ### [Jest Basics - Web Dev Simplified](https://courses.webdevsimplified.com/view/courses/javascript-simplified-advanced/729109-Testing/2126286-38-Jest-Basics)
 
@@ -61,92 +62,8 @@ Miten tässä moduulissa määritettyä `helloAgent`-funktiota voitaisiin kutsua
 
 Edellisen oppitunnin tehtävässä teidän tuli suodattaa ja lajitella MyHelsinki-rajapinnan tapahtumia.
 
-Oppitunnin aluksi tutustumme tehtävän malliratkaisuun ja kirjoitamme sille yksikkötestejä.
+Oppitunnin aluksi tutustumme tehtävän malliratkaisuun ja sen yksikkötesteihin.
 
-
-## JS-koodin yksikkötestaaminen
-
-Koodin testaamiseksi tarvitsemme testaustyökalun, joka voi olla esimerkiksi [Jest](https://jestjs.io/) tai [Mocha](https://mochajs.org/). [Facebookin kehittämän Jestin](https://github.com/facebook/jest) suosio on erityisesti React-kirjaston myötä noussut niin suureksi, että olemme valinneet tälle kurssille työkaluksi Jest:in.
-
-Seuraavissa vaiheissa seuraamme Jestin dokumentaatiossa [https://jestjs.io/docs/getting-started](https://jestjs.io/docs/getting-started) olevia työvaiheita.
-
-Voit asentaa Jest-työkalun itsellesi komennolla:
-
-```sh
-$ npm install --save-dev jest
-```
-
-### TypeScript-tuki
-
-Jest:in avulla voidaan testata niin "tavallista" JS-koodia, TS-koodia kuin React- ja Express-sovelluksia. Hyödyntääksesi testeissäsi TypeScriptiä ja testataksesi TypeScript-kielistä koodia, tarvitset kääntäjän (preprocessor), joka tulkitsee TypeScript-kieliset lähdekoodit Node.js-suoritusympäristöä varten.
-
-> *"[ts-jest](https://github.com/kulshekhar/ts-jest) is a TypeScript preprocessor with source map support for Jest that lets you use Jest to test projects written in TypeScript."*
->
-> https://jestjs.io/docs/getting-started#via-ts-jest
-
-```sh
-$ npm install --save-dev ts-jest
-```
-
-### Jest:in tyyppimääritykset
-
-> *"You can use type definitions which ships with Jest and will update each time you update Jest. Install the `@jest/globals` package."*
->
-> https://jestjs.io/docs/getting-started#type-definitions
-
-```sh
-$ npm install --save-dev @jest/globals
-```
-
-### Jest config file
-
-> *"By default, Jest can run without any config files, but it will not compile `.ts` files. To make it transpile TypeScript with `ts-jest`, we will need to create a configuration file that will tell Jest to use a `ts-jest` preset."*
->
-> https://kulshekhar.github.io/ts-jest/docs/getting-started/installation/#jest-config-file
-
-Alla on toimivaksi havaittu yksinkertainen konfiguraatio `jest.config.js`, jonka avulla voidaan testata node.js-sovelluksia:
-
-```ts
-/** @type {import('ts-jest').JestConfigWithTsJest} */
-module.exports = {
-  preset: 'ts-jest',
-  testEnvironment: 'node',
-  testPathIgnorePatterns: ['/node_modules/', '/bin/', '/build/', '/.git/'],
-};
-```
-
-Huomaa, että kyseessä on JS-tiedosto eikä TypeScript-tiedosto, koska konfiguraatiota luettaessa Jest ei vielä käytä TypeScript-asetuksia.
-
-### Testien suorittaminen
-
-Jest on nyt asennettu ja konfiguroitu, joten se voidaan suorittaa tutulla `npx`-komennolla:
-
-```sh
-$ npx jest
-```
-
-Testit suoritetaan kuitenkin usein `npm test`-komennolla, joka voidaan määritellä `package.json`-tiedostossa esim. seuraavasti:
-
-```diff
- "scripts": {
-+  "test": "jest"
--  "test": "echo \"Error: no test specified\" && exit 1"
- }
-```
-
-Halutessasi voit määritellä Jest-työkalulle myös lisäpatametreja, kuten `--verbose` ja `--coverage`, joilla saat huomattavasti kattavamman raportin testien suorituksesta:
-
-```
-"scripts": {
-  "test": "jest --verbose --coverage"
-}
-```
-
-Nyt testit voidaan suorittaa `npm test`-komennon avulla:
-
-```
-$ npm test
-```
 
 ## Yksikkötestaus
 
@@ -179,46 +96,150 @@ test('events are sorted in correct order', () => {
 Yllä oleva esimerkki edellyttää, että testiä varten on ennalta luotu tapahtumat `first`, `second` ja `third`. Voit tutustua testin konkreettiseen toteutukseen [aikaisemman tehtävän testeissä](https://github.com/harjoitukset/typescript-sorting-and-filtering/blob/main/src/sorting.test.ts).
 
 
+## JS-koodin yksikkötestaaminen
+
+Koodin testaamiseksi tarvitsemme testaustyökalun, joka voi olla esimerkiksi [Jest](https://jestjs.io/) tai [Mocha](https://mochajs.org/). [Facebookin kehittämän Jestin](https://github.com/facebook/jest) suosio on erityisesti React-kirjaston myötä noussut niin suureksi, että olemme valinneet tälle kurssille työkaluksi Jest:in.
+
+Seuraavissa vaiheissa seuraamme Jestin dokumentaatiossa [https://jestjs.io/docs/getting-started](https://jestjs.io/docs/getting-started) olevia työvaiheita.
+
+Voit asentaa Jest-työkalun itsellesi komennolla:
+
+```sh
+$ npm install --save-dev jest
+```
+
+### TypeScript-tuki
+
+Jest:in avulla voidaan testata niin "tavallista" JS-koodia, TS-koodia kuin React- ja Express-sovelluksia. Hyödyntääksesi testeissäsi TypeScriptiä ja testataksesi TypeScript-kielistä koodia, tarvitset kääntäjän (preprocessor), joka tulkitsee lennossa TypeScript-kieliset lähdekoodit JavaScript-muotoon:
+
+> *"[ts-jest](https://github.com/kulshekhar/ts-jest) is a TypeScript preprocessor with source map support for Jest that lets you use Jest to test projects written in TypeScript."*
+>
+> https://jestjs.io/docs/getting-started#via-ts-jest
+
+`ts-jest` asentuu projektiin kehityksenaikaiseksi riippuvuudeksi seuraavasti:
+
+```sh
+$ npm install --save-dev ts-jest
+```
+
+
+### Jest:in tyyppimääritykset
+
+> *"You can use type definitions which ships with Jest and will update each time you update Jest. Install the `@jest/globals` package."*
+>
+> https://jestjs.io/docs/getting-started#type-definitions
+
+```sh
+$ npm install --save-dev @jest/globals
+```
+
+
+### Jest config file
+
+> *"By default, Jest can run without any config files, but it will not compile `.ts` files. To make it transpile TypeScript with `ts-jest`, we will need to create a configuration file that will tell Jest to use a `ts-jest` preset."*
+>
+> https://kulshekhar.github.io/ts-jest/docs/getting-started/installation/#jest-config-file
+
+Alla on toimivaksi havaittu yksinkertainen konfiguraatio `jest.config.js`, jonka avulla voidaan testata node.js-sovelluksia:
+
+```ts
+/** @type {import('ts-jest').JestConfigWithTsJest} */
+module.exports = {
+  preset: 'ts-jest',
+  testEnvironment: 'node',
+  testPathIgnorePatterns: ['/node_modules/', '/bin/', '/build/', '/.git/'],
+};
+```
+
+Huomaa, että kyseessä on JS-tiedosto eikä TypeScript-tiedosto, koska konfiguraatiota luettaessa Jest ei vielä käytä TypeScript-asetuksia. Ylimmän rivin `@type`-kommentti auttaa editoriasi tarkastamaan, että kirjoittamasi konfiguraatio on sallitun muotoinen.
+
+
+### Testien suorittaminen
+
+Jest on nyt asennettu ja konfiguroitu, joten se voidaan suorittaa tutulla `npx`-komennolla:
+
+```sh
+$ npx jest
+```
+
+Testit suoritetaan usein erillisellä `npm test`-komennolla, joka voidaan määritellä `package.json`-tiedostossa `script`-lohkoon esim. seuraavasti:
+
+```diff
+ "scripts": {
++  "test": "jest"
+-  "test": "echo \"Error: no test specified\" && exit 1"
+ }
+```
+
+Halutessasi voit määritellä Jest-työkalulle myös lisäpatametreja, kuten `--verbose` ja `--coverage`, joilla saat huomattavasti kattavamman raportin testien suorituksesta:
+
+```
+"scripts": {
+  "test": "jest --verbose --coverage"
+}
+```
+
+`--verbose` *"Display individual test results with the test suite hierarchy."* ([jestjs.io](https://jestjs.io/docs/cli))
+
+`--coverage` *"Indicates that test coverage information should be collected and reported in the output."* ([jestjs.io](https://jestjs.io/docs/cli))
+
+Nyt testit voidaan suorittaa `npm test`-komennon avulla ja saamme testeistä kattavan raportin, esimeriksi:
+
+```
+$ npm test
+
+PASS  src/filtering.test.ts
+filtering events
+    ✓ events with no date are excluded
+    ✓ past events are excluded
+    ✓ future events are excluded
+    ✓ events in the range are included
+    ✓ function does not modify the given array
+
+--------------|---------|----------|---------|---------|-------------------
+File          | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
+--------------|---------|----------|---------|---------|-------------------
+All files     |     100 |      100 |     100 |     100 |
+ filtering.ts |     100 |      100 |     100 |     100 |
+--------------|---------|----------|---------|---------|-------------------
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        3.224 s
+```
+
+
 
 ## Testien kattavuus
 
-Testien kattavuutta voidaan mitata lukuisilla eri tavoilla. Tyypillisiä tapoja on mitata testeissä suoritettujen rivien tai vaihtoehtoisten suorituspolkujen määrää.
+Testien kattavuutta voidaan mitata lukuisilla eri tavoilla. Tyypillisiä tapoja on mitata testeissä suoritettujen rivien tai vaihtoehtoisten suorituspolkujen määrää. Edellä olevassa raportissa Jest on tilastoinut lausekkeet, suorituspolut, funktiot ja rivit. Vaikka testaisit ohjelmasi kaikki rivit, on silti mahdollista, että et ole tullut testanneeksi kaikkia suorituspolkuja, mikäli yksittäiset rivit sisältävät itsessään eri suorituspolkuja:
 
-Edellä esitetyn `sortEventsByStartDate`-funktion testejä olisikin kenties syytä laajentaa vielä esim. seuraavilla testitapauksilla:
-
+```ts
+let name = person.names?.first ?? 'anonymous';
 ```
-sorting events by starting date
-  ✓ events are sorted in correct order
-  ✓ sorting handles events with identical dates correctly
-  ✓ sorting an empty array should not throw exceptions
-  ✓ sorting events without dates should not throw exceptions
-  ✓ sorting does not modify the original array
-```
-
-> "*A test suite is a collection of test cases, test suites, or both. It is used to aggregate tests that should be executed together.*"
->
-> Python Software Foundation. Unit testing framework. https://docs.python.org/3/library/unittest.html
-
 
 ### Totuusarvojen vertailu
 
-JavaScriptissä vertailuoperaatiot tehdään usein kolmella merkillä eli `===` tai `!==`. Kolmen merkin vertailuoperaatiot tarkastavat, että vertailtavien arvojen tyyppi on sama. Mikäli tyyppitarkastus jätetään tekemättä, JavaScript vertailee eri tyyppisiä arvoja toisinaan hyvin epäloogisesti.
+JavaScriptissä vertailuoperaatiot tehdään pääsääntöisesti kolmella merkillä eli `===` tai `!==`. Kolmen merkin vertailuoperaatiot tarkastavat, että vertailtavien arvojen tyyppi on sama. Mikäli tyyppitarkastus jätetään tekemättä eli vertaillaan kahdella merkillä `==`, vertailee JavaScript eri tyyppisiä arvoja toisinaan hyvin epäloogisesti.
 
 Voit tutustua aiheeseen syvällisemmin artikkelissa [Equality comparisons and sameness (MDN web docs)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness) tai YouTube-videolla [JavaScript == VS === (Web Dev Simplified)](https://www.youtube.com/watch?v=C5ZVC4HHgIg).
 
 
 ### Vertailu Jest:llä
 
-Jest-testaustyökalussa on oma [expect](https://jestjs.io/docs/expect)-funktionsa, jota voidaan käyttää arvojen vertailemiseksi. `expect` nodattaa suosittua ["BDD"-syntaksia](https://en.wikipedia.org/wiki/Behavior-driven_development), jossa testattavat kutsut ja niihin vertailtavat arvot ketjutetaan metodikutsuilla sillä tavoitteella, että ne muodostaisivat selkeästi luettavia lauseita:
+Jest-testaustyökalussa on oma [expect](https://jestjs.io/docs/expect)-funktionsa, jota voidaan käyttää arvojen vertailemiseksi. `expect` nodattaa suosittua ["BDD"-syntaksia](https://en.wikipedia.org/wiki/Behavior-driven_development), jossa testattavat kutsut ja niihin vertailtavat arvot ketjutetaan metodikutsuilla sillä tavoitteella, että ne muistuttaisivat selkokielisiä lauseita:
 
 ```ts
+import { expect } from '@jest/globals';
+
+
 // https://jestjs.io/docs/getting-started
 test('adds 1 + 2 to equal 3', () => {
     expect(sum(1, 2)).toBe(3);
 });
 ```
 
-Metodikutsujen ketjuttaminen saattaa kuitenkin edellyttää ohjelmointirakenteita, joita kehittäjä ei normaalisti ohjelmakoodissaan käyttäisi, kuten:
+Metodikutsujen ketjuttaminen saattaa kuitenkin helposti edellyttää ohjelmarakenteita, joita kehittäjä ei normaalisti ohjelmakoodissaan käyttäisi, kuten:
 
 ```ts
 // https://jestjs.io/docs/expect#expectnotarraycontainingarray
@@ -231,7 +252,7 @@ it('matches if the actual array does not contain the expected elements', () => {
 });
 ```
 
-Tällä oppitunnilla poikkeamme tyypillisistä Jest-esimerkeistä, ja käytämme Node.js:n standardikirjaston [assert-moduulia](https://nodejs.org/api/assert.html), joka on yhdenmukaisempi mm. JUnit- ja pytest-kirjastojen kanssa:
+Tällä oppitunnilla poikkeamme tyypillisistä Jest-esimerkeistä ja käytämme Node.js:n standardikirjaston [assert-moduulia](https://nodejs.org/api/assert.html), joka on yhdenmukaisempi mm. JUnit- ja pytest-kirjastojen kanssa:
 
 ```ts
 import { strict as assert } from 'node:assert';
@@ -249,6 +270,7 @@ Tällä tunnilla käytämme `assert`-syntaksia, koska sen avulla on luontevampaa
 import { expect } from '@jest/globals';
 import { strict as assert } from 'node:assert';
 
+// ...
 
 // BDD (https://jestjs.io/docs/getting-started):
 expect(sum(1, 2)).toBe(3);
@@ -277,7 +299,11 @@ Taulukoita vertailtaessa JavaScript tutkii, onko kyseessä sama taulukko, mutta 
 false
 ```
 
-Yllä kahden taulukon vertailu tuottaa siis tulokseksi `false`, vaikka taulukoiden sisältö on sama. Jos taulukon sisältöä halutaan vertailla testeissä, voidaan se tehdä esimerkiksi [`assert.deepEqual`](https://nodejs.org/api/assert.html#assertdeepequalactual-expected-message)-metodilla.
+Yllä kahden taulukon vertailu tuottaa siis tulokseksi `false`, vaikka taulukoiden sisältö on sama. Jos taulukon sisältöä halutaan vertailla testeissä, voidaan se tehdä esimerkiksi [`assert.deepEqual`](https://nodejs.org/api/assert.html#assertdeepequalactual-expected-message)-metodilla:
+
+```ts
+assert.deepEqual([1, 2, 3], [1, 1 + 1, 1 + 1 + 1]);
+```
 
 
 ### Olioiden vertailu
@@ -291,28 +317,24 @@ false
 
 Eri kielet toimivat vertailujen osalta eri logiikalla. Esimerkiksi Python vertailee automaattisesti listojen ja sanakirjojen sisältöä, kun taas JavaScript ja Java eivät.
 
-
-### deepEqual
-
-Koska olioiden vertaileminen JavaScriptissä vertailee vain, ovatko oliot samat, joudumme hyödyntämään testeissä erillistä vertailulogiikkaa.
-
-`deepEqual`-metodi vertailee rekursiivisesti sille annettuja arvoja:
+`deepEqual`-metodi vertailee rekursiivisesti myös sille annettuja olioita:
 
 ```js
-assert.deepEqual([1, 2, 3], [1, 1 + 1, 1 + 1 + 1]);
 assert.deepEqual({ language: "JavaScript" }, { language: "Java" + "Script" });
 ```
-
 https://nodejs.org/api/assert.html#assert_assert_deepstrictequal_actual_expected_message
 
 
 ## Yksikkötestauksen haasteet
 
-Ohjelman rakenteesta riippuen sen testaaminen voi olla hyvin hankalaa. Esimerkiksi globaalit muuttujat, ulkoiset riippuvuudet ja "spagettikoodi" vaikeuttavat testausta merkittävästi. Jos testattavassa koodissa tehdään esimerkiksi HTTP-pyyntöjä tai tietokantakyselyjä, näiden operaatioiden tulokset vaikuttavat testien tuloksiin, joten testattavan aineiston muuttuessa myös testien tulokset voivat muuttua, vaikka koodi edelleen toimisi toivotulla tavalla. Oppitunnilla sivuamme myös tällaisten riippuvuuksien korvaamista testikohtaisilla *mock*-toteutuksilla.
+Ohjelman rakenteesta riippuen sen testaaminen voi olla hyvin hankalaa. Esimerkiksi globaalit muuttujat, ulkoiset riippuvuudet ja "spagettikoodi" vaikeuttavat testausta merkittävästi. Jos testattavassa koodissa tehdään esimerkiksi HTTP-pyyntöjä tai tietokantakyselyjä, näiden operaatioiden tulokset vaikuttavat testien tuloksiin, joten testattavan aineiston muuttuessa myös testien tulokset voivat muuttua, vaikka koodi edelleen toimisi toivotulla tavalla.
 
-## Testidata
+Tällaisia riippuvuuksia korvataan tyypillisesti testien aikana testikohtaisilla *mock*-toteutuksilla, joista voit lukea lisää esim. Jest:in dokumentaatiosta: https://jestjs.io/docs/mock-function-api.
 
-## Miten testata koodia, jolla on riippuvuuksia?
+
+<!--## Testidata
+Test fixtures.
+-->
 
 
 ## Integraatiotestaus
