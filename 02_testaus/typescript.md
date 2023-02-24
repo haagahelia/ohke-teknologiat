@@ -322,7 +322,7 @@ Eri kielet toimivat vertailujen osalta eri logiikalla. Esimerkiksi Python vertai
 `deepEqual`-metodi vertailee rekursiivisesti myös sille annettuja olioita:
 
 ```js
-assert.deepEqual({ language: "JavaScript" }, { language: "JavaScript" });
+assert.deepEqual({ language: 'TypeScript' }, { language: 'TypeScript' });
 ```
 https://nodejs.org/api/assert.html#assert_assert_deepstrictequal_actual_expected_message
 
