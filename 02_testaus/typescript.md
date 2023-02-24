@@ -276,7 +276,8 @@ import { strict as assert } from 'node:assert';
 expect(sum(1, 2)).toBe(3);
 
 // Assert:
-assert.equal(sum(1, 2), 3);
+let result = sum(1, 2);
+assert.equal(result, 3);
 ```
 
 ```ts
@@ -284,7 +285,8 @@ assert.equal(sum(1, 2), 3);
 expect('How are you?').toEqual(expect.not.stringContaining('Hello world!'));
 
 // Assert:
-assert.equal('How are you?'.includes('Hello world!'), false);
+let result = 'How are you?'.includes('Hello world!');
+assert.equal(result, false);
 ```
 
 Saat halutessasi käyttää omissa ratkaisuissasi kumpaa tahansa syntaksia.
@@ -299,10 +301,10 @@ Taulukoita vertailtaessa JavaScript tutkii, onko kyseessä sama taulukko, mutta 
 false
 ```
 
-Yllä kahden taulukon vertailu tuottaa siis tulokseksi `false`, vaikka taulukoiden sisältö on sama. Jos taulukon sisältöä halutaan vertailla testeissä, voidaan se tehdä esimerkiksi [`assert.deepEqual`](https://nodejs.org/api/assert.html#assertdeepequalactual-expected-message)-metodilla:
+Yllä kahden taulukon vertailu tuottaa siis tulokseksi `false`, vaikka taulukoiden sisältö olisi sama. Jos taulukon sisältöä halutaan vertailla testeissä, voidaan se tehdä esimerkiksi [`assert.deepEqual`](https://nodejs.org/api/assert.html#assertdeepequalactual-expected-message)-metodilla:
 
 ```ts
-assert.deepEqual([1, 2, 3], [1, 1 + 1, 1 + 1 + 1]);
+assert.deepEqual([1, 2, 3], [1, 2, 3]);
 ```
 
 
@@ -320,7 +322,7 @@ Eri kielet toimivat vertailujen osalta eri logiikalla. Esimerkiksi Python vertai
 `deepEqual`-metodi vertailee rekursiivisesti myös sille annettuja olioita:
 
 ```js
-assert.deepEqual({ language: "JavaScript" }, { language: "Java" + "Script" });
+assert.deepEqual({ language: "JavaScript" }, { language: "JavaScript" });
 ```
 https://nodejs.org/api/assert.html#assert_assert_deepstrictequal_actual_expected_message
 
@@ -396,6 +398,67 @@ function adjustColorBrightness(color: Color, percent: number): Color {
 ```
 
 Lähdekoodi: ChatGPT by OpenAI, accessed on 17.2.2023.
+
+<!--
+```ts
+/** ChatGPT by OpenAI, accessed on 18.2.2023. */
+class Color {
+  constructor(public r: number, public g: number, public b: number) {}
+
+  /**
+   * Adjusts the brightness of the color by the specified percentage.
+   * @param percent The percentage by which to adjust the brightness of the color.
+   * @returns A new Color object with the adjusted brightness.
+   */
+  adjustBrightness(percent: number): Color {
+    const decimal = percent / 100;
+    const r = Math.round(Math.min(255, this.r * (1 + decimal)));
+    const g = Math.round(Math.min(255, this.g * (1 + decimal)));
+    const b = Math.round(Math.min(255, this.b * (1 + decimal)));
+    return new Color(r, g, b);
+  }
+
+  /**
+   * Inverts the color, returning a new Color object with the inverted values.
+   * @returns A new Color object with the inverted values.
+   */
+  invert(): Color {
+    const r = 255 - this.r;
+    const g = 255 - this.g;
+    const b = 255 - this.b;
+    return new Color(r, g, b);
+  }
+
+  /**
+   * Converts the color to a hexadecimal string representation.
+   * @returns A string representing the color in hexadecimal format.
+   */
+  toHex(): string {
+    const r = this.r.toString(16).padStart(2, '0');
+    const g = this.g.toString(16).padStart(2, '0');
+    const b = this.b.toString(16).padStart(2, '0');
+    return `#${r}${g}${b}`;
+  }
+
+  /**
+   * Parses a hexadecimal string representation of a color and returns a new Color object.
+   * @param hexString A string representing the color in hexadecimal format (e.g. "#ff0000").
+   * @returns A new Color object with the parsed values.
+   */
+  static parse(hexString: string): Color {
+    const hexRegex = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i;
+    const matches = hexString.match(hexRegex);
+    if (!matches) {
+      throw new Error('Invalid hexadecimal color string.');
+    }
+    const r = parseInt(matches[1], 16);
+    const g = parseInt(matches[2], 16);
+    const b = parseInt(matches[3], 16);
+    return new Color(r, g, b);
+  }
+}
+```
+-->
 
 <!--
 # Fetch-harjoitus
