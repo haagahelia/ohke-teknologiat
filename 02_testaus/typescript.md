@@ -301,10 +301,16 @@ Taulukoita vertailtaessa JavaScript tutkii, onko kyseessä sama taulukko, mutta 
 false
 ```
 
-Yllä kahden taulukon vertailu tuottaa siis tulokseksi `false`, vaikka taulukoiden sisältö olisi sama. Jos taulukon sisältöä halutaan vertailla testeissä, voidaan se tehdä esimerkiksi [`assert.deepEqual`](https://nodejs.org/api/assert.html#assertdeepequalactual-expected-message)-metodilla:
+Yllä kahden taulukon vertailu tuottaa siis tulokseksi `false`, vaikka taulukoiden sisältö olisi sama.
+
+Jos taulukon sisältöä halutaan vertailla testeissä, voidaan se tehdä esimerkiksi [`assert.deepEqual`](https://nodejs.org/api/assert.html#assertdeepequalactual-expected-message)- tai `expect.toEqual`-metodeilla:
 
 ```ts
+// assert (Node.js):
 assert.deepEqual([1, 2, 3], [1, 2, 3]);
+
+// expect (Jest):
+expect([1, 2, 3]).toEqual([1, 2, 3]);
 ```
 
 
@@ -319,10 +325,14 @@ false
 
 Eri kielet toimivat vertailujen osalta eri logiikalla. Esimerkiksi Python vertailee automaattisesti listojen ja sanakirjojen sisältöä, kun taas JavaScript ja Java eivät.
 
-`deepEqual`-metodi vertailee rekursiivisesti myös sille annettuja olioita:
+`assert.deepEqual()`- sekä `expect().toEqual`-metodit vertailevat rekursiivisesti niille annettuja olioita:
 
 ```js
+// assert (Node.js):
 assert.deepEqual({ language: 'TypeScript' }, { language: 'TypeScript' });
+
+// expect (Jest):
+expect({ language: 'TypeScript' }).toEqual({ language: 'TypeScript' });
 ```
 https://nodejs.org/api/assert.html#assert_assert_deepstrictequal_actual_expected_message
 
