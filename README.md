@@ -44,7 +44,7 @@ Kurssin alkukyselyssä ja ensimmäisellä oppitunnilla käsiteltiin kurssin ohje
 
 **Huom!** Tämä sivu päivittyy kurssin edetessä ja yksittäisten tuntien aiheet voivat vielä muuttua.
 
-Oppitunnit pidetään pääsääntöisesti **maanantaisin klo 8.30-10.45 sekä kampuksella luokassa 2004 että ns. Teamsissa**. Yksittäisten oppituntien kohdalta toteutusmuoto selviää varmimmin kurssin Teams-kanavan viesteistä ja ajastetuista kokouksista, jotka näet myös Outlook-kalenterissasi. Kurssin seminaarivaiheessa ei järjestetä ohjattuja tapaamisia, vaan tiedotamme yksilöllisen ohjauksen järjestelyistä seminaarien käynnistystunnilla sekä Teamsissa.
+Oppitunnit pidetään pääsääntöisesti **maanantaisin klo 8.30-10.45 sekä kampuksella luokassa 2004 että Teamsissa**. Yksittäisten oppituntien kohdalta toteutusmuoto selviää varmimmin kurssin Teams-kanavan viesteistä ja ajastetuista kokouksista, jotka näet myös Outlook-kalenterissasi. Kurssin seminaarivaiheessa ei järjestetä ohjattuja tapaamisia, vaan tiedotamme yksilöllisen ohjauksen järjestelyistä seminaarien käynnistystunnilla sekä Teamsissa.
 
 <table>
     <thead>
@@ -176,17 +176,8 @@ Oppitunnit pidetään pääsääntöisesti **maanantaisin klo 8.30-10.45 sekä k
             <td>Ma 6.3.</td>
             <td>
                 <strong><a href="05_es6_node/oppitunti1.md">Funktionaalinen ohjelmointityyli</a></strong><br />
-                <strong><a href="05_es6_node/oppitunti2.md">Promiset</a></strong><br />
-                <ul>
-                    <li>ES6-syntaksit</li>
-                    <li>filter, map, reduce</li>
-                    <li>currying</li>
-                    <li>Express.js</li>
-                    <li>Promise</li>
-                    <li>Async/await</li>
-                    <!--li><a href="https://web.microsoftstream.com/video/4ff9a051-3e45-4e89-a194-a6e68084d55a">Video 1</a>, <a href="https://web.microsoftstream.com/video/7099841a-16d7-44f2-99fe-c37302c4b024">video 2</a>, <a href="https://web.microsoftstream.com/video/94a16d95-45eb-4c69-b69c-d8c70e4c0560">video 3</a></li-->
-                    <!--li><a href="https://web.microsoftstream.com/video/8d5ce190-2bd0-4c8a-84ad-f51b2cbe7f3e">Video 1</a>, <a href="https://web.microsoftstream.com/video/1ef90b63-0b90-4606-a75c-c25ccf13cb61">video 2</a>, <a href="https://web.microsoftstream.com/video/68dfd069-5b72-4484-a6fd-0b3199f803a2">video 3</a></li-->
-                </ul>
+                <strong><a href="05_es6_node/oppitunti2.md">Promiset</a></strong><br /><br />
+                <a href="https://github.com/ohjelmistokehitys/typescript-async-oppitunti">Esimerkkiprojekti (palindromit ja music app)</a>
             </td>
             <td>
                 Tapaaminen luokassa ja Teamsissa<br />
