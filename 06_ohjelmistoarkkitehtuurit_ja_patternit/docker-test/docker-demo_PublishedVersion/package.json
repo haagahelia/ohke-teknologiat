@@ -1,0 +1,23 @@
+{
+  "name": "docker-demo",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Docker Engine and Docker Compose needed",
+  "main": "index.js",
+  "dependencies": {
+    "kafkajs": "^2.2.4",
+    "uuid": "^9.0.0"
+  },
+  "scripts": {
+    "start:deleteTopics": "node ./admin/deleteTopics.js",
+    "start:createTopics": "node ./admin/createTopics.js",
+    "start:producer": "node ./producer/index.js",
+    "start:consumer": "node ./consumer/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "docker-demo"
+  },
+  "author": "",
+  "license": "ISC"
+}
