@@ -187,7 +187,7 @@ Oppitunnit pidetään pääsääntöisesti **maanantaisin klo 8.30-10.45 sekä k
         <tr>
             <td>Ma 13.3.</td>
             <td>
-                <strong><a href="06_ohjelmistoarkkitehtuurit_ja_patternit/">Ohjelmistoarkkitehtuurit ja patternit</a></strong>
+                <strong><a href="06_ohjelmistoarkkitehtuurit_ja_patternit/SoftwareArchitecturesAndPatterns.pdf">Ohjelmistoarkkitehtuurit ja patternit.</a> <a href="06_ohjelmistoarkkitehtuurit_ja_patternit/ApacheKafka_DistributedEventStreamOrBroker.pdf">Kafka.</a><a href="06_ohjelmistoarkkitehtuurit_ja_patternit/">Muita aihepiirin materiaaleja</a> ((Dockerin alkeita))</strong>
             </td>
             <td>
                 Tapaaminen luokassa ja Teamsissa<br />
@@ -215,7 +215,7 @@ Oppitunnit pidetään pääsääntöisesti **maanantaisin klo 8.30-10.45 sekä k
         <tr>
             <td>Ma 27.3.</td>
             <td>
-                <strong><a href="06_ohjelmistoarkkitehtuurit_ja_patternit/">Kafka, Docker-alkeet...</a></strong>
+                <strong><a href="07_openshift/">Dockerin hyödyntäminen paikallisesti sekä pilvessä (Docker, Kubernetes, OpenShift...)</a></strong>
             </td>
             <td>
                 Tapaaminen luokassa ja Teamsissa<br />
@@ -225,7 +225,7 @@ Oppitunnit pidetään pääsääntöisesti **maanantaisin klo 8.30-10.45 sekä k
         <tr>
             <td>Ma 3.4.</td>
             <td>
-                <strong><a href="07_openshift/">Dockerin hyödyntäminen paikallisesti sekä pilvessä (Docker, Kubernetes, OpenShift...)</a></strong>
+                <strong><a href="07_openshift/">TBD</a></strong>
             </td>
             <td>
                 Tapaaminen Teamsissa<br />
