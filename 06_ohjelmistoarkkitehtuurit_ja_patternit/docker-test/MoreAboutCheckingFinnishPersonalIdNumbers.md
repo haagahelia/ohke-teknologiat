@@ -18,6 +18,6 @@ Finnish personal identity number, e.g. 311208A123X or 010199-1234 can be incorre
 
 1.	The number might have been given, but the person has received a new number and the old is obsolete (database needed)
 
-Minimum version: In this task first check the length and that the very first character (position 1, depending on programming language index 0 or 1) is a digit.
+**Minimum version**: In this task first check the length and that the very first character (position 1, depending on programming language index 0 or 1) is a digit.
 
-Optional version: If you have time later you can practice and implement a full check. The 'database' you can simulate with a list of e.g. three personal identity numbers. Use e.g. 999 for the NNN part to make sure those are not real id numbers. Remember to bother the 'database' only after checking all you can without.
+**Optional version**: If you have time later you can practice and implement a full check. The 'database' you can simulate with a list of e.g. three personal identity numbers. Use e.g. 999 for the NNN part to make sure those are not real id numbers. Remember to bother the 'database' only after checking all you can without it.
