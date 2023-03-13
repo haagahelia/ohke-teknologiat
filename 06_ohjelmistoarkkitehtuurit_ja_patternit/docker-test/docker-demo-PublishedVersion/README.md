@@ -25,7 +25,7 @@ git push
 
 # Then add the docker-compose.yml file to the project root
 
-[01 docker-compose.yml file](.\screenshots\)
+[01 docker-compose.yml file](.\screenshots\). Read and type this to learn the YAML structure and docker compose files a bit.
 
 You can use e.g. VS Code editor. After the file is ready, run this command e.g. in the VS code Terminal window
 
@@ -58,17 +58,17 @@ npm i uuid --save
 ```
 
 Next we define two runnable index.js files. So two separate processes are born from this administratively single Node project.
-[03 package.json file](.\screenshots\)
+[03 package.json file](.\screenshots\). Given also in the [.zip file](..\docker-demo-PublishedVersion.zip).
 
 
 
 ###Creating the Kafka topic(s) = message channels = event 'queues' ###
 
 In Powershell or similar powerful console run the following topic creation command script.
-[topic_creation_command.sh file](.\topic_creation_command.sh). For some reason the command did not work for 
-me in GitBash console. 
+[topic_creation_command.sh file](.\topic_creation_command.sh). Given also in the same [.zip file](..\docker-demo-PublishedVersion.zip). For some reason the command did not work for 
+me in GitBash console but worked from Powershell. 
 
-**OR**: run the following commands (yes, twice! To see that they work)
+**OR**: run the following commands (yes, twice! To see that they work). Given in the same [.zip file](..\docker-demo-PublishedVersion.zip).
 
 ```
 node ./admin/deleteTopics.js
@@ -78,7 +78,7 @@ node ./admin/createTopics.js
 ```
 
 ### Time to write the Kafka producer client and then test it
-[04 producer code file](.\screenshots\)
+[04 producer code file](.\screenshots\). Read this carefully, try to understand as much as possible. Write it to learn the basics of the kafkajs Kafka producer client code.
 
 ```
 npm run start:producer
@@ -86,7 +86,7 @@ npm run start:producer
 Later you can use Ctrl+C to stop it for editing and restart.
 
 ### Time to write the Kafka consumer client and then test it
-[05 consumer code file](.\screenshots\)
+[05 consumer code file](.\screenshots\).  Read this carefully, try to understand as much as possible. Write it to learn the basics of the kafkajs Kafka consumer client code.
 
 ```
 npm run start:consumer
@@ -116,8 +116,14 @@ Might sound complicated, but just read the instructions few times.
 
 ## EXTRAS. More challenge? Make the id checking 'real'. 
 
-First check all the rules and then check against some list (=fake database).
+First check all the rules and then check against some list (=fake database). More about [how you could validate personal id:s](../MoreAboutCheckingFinnishPersonalIdNumbers.md). Is that in optimal order? Remember checking one number faster than string comparisons, checking without 'database server' a lot faster and optimized when database bothering can be avoided.
 
-## EXTRAS. More challenge? Make the id checking 'real'. 
+## EXTRAS. More challenge? DevOps and beyond. 
 
 Complete the started DevOps scripting if you want. Automate everything that can be automated.
+
+In real life you would also most likely have/create two separate Kafka servers or server instances. But one the way to create them is here already.
+
+## EXTRAS. More challenge? Securing the Kafka server. 
+
+How to make 1) only certain allowed clients able to connect to the Kafka server and topic, and 2) make the connection secured so that messages are encrypted. And 3) firewalls etc. settings. Now Kafka is used in basically 'everything goes' -settings.
