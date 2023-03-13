@@ -29,7 +29,7 @@ git push
 
 # Then add the docker-compose.yml file to the project root
 
-[01 docker-compose.yml file](.\screenshots\). Read and type this to learn the YAML structure and docker compose files a bit.
+[01 docker-compose.yml file](./screenshots/). Read and type this to learn the YAML structure and docker compose files a bit.
 
 You can use e.g. VS Code editor. After the file is ready, run this command e.g. in the VS code Terminal window
 
@@ -62,17 +62,17 @@ npm i uuid --save
 ```
 
 Next we define two runnable index.js files. So two separate processes are born from this administratively single Node project.
-[03 package.json file](.\screenshots\). Given also in the [.zip file](..\docker-demo-PublishedVersion.zip).
+[03 package.json file](./screenshots/). Given also in the [.zip file](../docker-demo-PublishedVersion.zip).
 
 
 
 ###Creating the Kafka topic(s) = message channels = event 'queues' ###
 
 In Powershell or similar powerful console run the following topic creation command script.
-[topic_creation_command.sh file](.\topic_creation_command.sh). Given also in the same [.zip file](..\docker-demo-PublishedVersion.zip). For some reason the command did not work for 
+[topic_creation_command.sh file](./topic_creation_command.sh). Given also in the same [.zip file](../docker-demo-PublishedVersion.zip). For some reason the command did not work for 
 me in GitBash console but worked from Powershell. 
 
-**OR**: run the following commands (yes, twice! To see that they work). Given in the same [.zip file](..\docker-demo-PublishedVersion.zip).
+**OR**: run the following commands (yes, twice! To see that they work). Given in the same [.zip file](../docker-demo-PublishedVersion.zip).
 
 ```
 node ./admin/deleteTopics.js
@@ -85,7 +85,7 @@ node ./admin/createTopics.js
 We are using the [kafkajs library](https://www.npmjs.com/package/kafkajs) to [write code](https://kafka.js.org/docs/getting-started) for the Kafka producer and Kafka consumer. And the admin as you already saw. 
 
 ### Time to write the Kafka producer client and then test it
-[04 producer code file](.\screenshots\). Read this carefully, try to understand as much as possible. Write it to learn the basics of the kafkajs Kafka producer client code.
+[04 producer code file](./screenshots/). Read this carefully, try to understand as much as possible. Write it to learn the basics of the kafkajs Kafka producer client code.
 
 ```
 npm run start:producer
@@ -93,7 +93,7 @@ npm run start:producer
 Later you can use Ctrl+C to stop it for editing and restart.
 
 ### Time to write the Kafka consumer client and then test it
-[05 consumer code file](.\screenshots\).  Read this carefully, try to understand as much as possible. Write it to learn the basics of the kafkajs Kafka consumer client code.
+[05 consumer code file](./screenshots/).  Read this carefully, try to understand as much as possible. Write it to learn the basics of the kafkajs Kafka consumer client code.
 
 ```
 npm run start:consumer
