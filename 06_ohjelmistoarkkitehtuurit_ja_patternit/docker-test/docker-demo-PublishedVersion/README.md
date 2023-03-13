@@ -2,9 +2,13 @@
 
 ## First install Docker Engine and Docker Compose to your computer
 
-For Linux or Linux VM in Windows install 1. Docker Engine and 2. Docker Compose (But NOT the Docker Desktop).
+Some of the needed [Docker links and info](../Docker.pdf). 
 
-For Windows and Mac, install the Docker Desktop (Installs also the Docker Engine and Docker Compose) 
+1. For Linux or Linux VM in Windows install 1. Docker Engine and 2. Docker Compose (But NOT the Docker Desktop).
+
+1. For Windows install the Docker Desktop (Installs also the Docker Engine and Docker Compose) 
+
+1. For Mac install the Docker Desktop (Installs also the Docker Engine and Docker Compose) 
 
 * Windows: While installing I selected the recommended "WSL 2" instead of "Hyper-V something". (Might spoil your other VMs though!).
 
@@ -76,6 +80,9 @@ node ./admin/deleteTopics.js
 node ./admin/createTopics.js
 node ./admin/createTopics.js
 ```
+
+## The used Kafka client library: 
+We are using the [kafkajs library](https://www.npmjs.com/package/kafkajs) to [write code](https://kafka.js.org/docs/getting-started) for the Kafka producer and Kafka consumer. And the admin as you already saw. 
 
 ### Time to write the Kafka producer client and then test it
 [04 producer code file](.\screenshots\). Read this carefully, try to understand as much as possible. Write it to learn the basics of the kafkajs Kafka producer client code.
