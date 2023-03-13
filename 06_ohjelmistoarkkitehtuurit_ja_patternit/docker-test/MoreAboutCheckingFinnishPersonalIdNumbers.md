@@ -6,7 +6,7 @@ Finnish personal identity number, e.g. 311208A123X or 010199-1234 can be incorre
 
 1.	Character at position 7 is not one of '+','-','A'
 
-1.	The checksum character at position 11 does not follow the calculated 
+1.	The checksum character at position 11 does not follow the [check character calculation rules](https://maol.fi/materiaalit/kpm/7-luokka/racket-7-lk/1ljl/1-4-jakoj%C3%A4%C3%A4nn%C3%B6s/henkil%C3%B6tunnus/)
 
 1.	The date is not a valid date (not checked by the checksum character!)
 
