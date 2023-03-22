@@ -199,7 +199,7 @@ Oppitunnit pidetään pääsääntöisesti **maanantaisin klo 8.30-10.45 sekä k
             <td colspan="2">Intensiiviviikko</td>
         </tr>
         <tr>
-            <td>Ma ?.?.</td>
+            <td>Ma 27.3.</td>
             <td>
                 <strong><a href="03_infra_ja_automaatio/">Infra ja automaatio</a></strong><br />
                 <ul>
@@ -213,9 +213,10 @@ Oppitunnit pidetään pääsääntöisesti **maanantaisin klo 8.30-10.45 sekä k
             </td>
         </tr>
         <tr>
-            <td>Ma 27.3.</td>
+            <td>Ma 3.4.</td>
             <td>
-                <strong><a href="07_openshift/">Dockerin hyödyntäminen paikallisesti sekä pilvessä (Docker, Kubernetes, OpenShift...)</a></strong>
+                <strong><a href="07_openshift/">Dockerin hyödyntäminen paikallisesti sekä pilvessä (Docker, Kubernetes, OpenShift...)</a></strong><br />
+                <strong><a href="08_seminaari">Seminaarien käynnistys</a></strong>
             </td>
             <td>
                 Tapaaminen luokassa ja Teamsissa<br />
@@ -223,20 +224,9 @@ Oppitunnit pidetään pääsääntöisesti **maanantaisin klo 8.30-10.45 sekä k
             </td>
         </tr>
         <tr>
-            <td>Ma 3.4.</td>
-            <td>
-                <strong><a href="07_openshift/">TBD</a></strong>
-            </td>
-            <td>
-                Tapaaminen Teamsissa<br />
-                Tehtävien DL su 9.4. klo 22:00
-            </td>
-        </tr>
-        <tr>
             <td>Ma 10.4.</td>
-            <td><strong><a href="08_seminaari">Seminaarien käynnistys</a></strong></td>
-            <td>
-            </td>
+            <td>Pääsiäinen</td>
+            <td></td>
         </tr>
         <tr>
             <td>
