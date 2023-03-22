@@ -209,7 +209,7 @@ Oppitunnit pidetään pääsääntöisesti **maanantaisin klo 8.30-10.45 sekä k
             </td>
             <td>
                 Tapaaminen luokassa ja Teamsissa<br />
-                Tehtävien DL su ?.?. klo 22:00
+                Tehtävien DL su 2.4. klo 22:00
             </td>
         </tr>
         <tr>
@@ -219,8 +219,7 @@ Oppitunnit pidetään pääsääntöisesti **maanantaisin klo 8.30-10.45 sekä k
                 <strong><a href="08_seminaari">Seminaarien käynnistys</a></strong>
             </td>
             <td>
-                Tapaaminen luokassa ja Teamsissa<br />
-                Tehtävien DL su 2.4. klo 22:00
+                Tapaaminen luokassa ja Teamsissa
             </td>
         </tr>
         <tr>
