@@ -13,11 +13,11 @@ We look at, learn, study and then modify an already working frontend stub projec
 
 **Note!** Check out Teams > General > Files for the secrets. Like usernames, passwords, IP addresses, port numbers, your schema name etc.
 
-[Database creation (PDF)](../05_es6_node/01_database/CreatingDatabase_for_IdeaCaseBackend.pdf)
+[Database creation (PDF)](../05_es6_node/NodeJS_demo/01_database/CreatingDatabase_for_IdeaCaseBackend.pdf)
 
 [The project repo itself to be cloned](https://github.com/valju/idea-case-backend)
 
-**[More info on the backend and its setup was in this old backend task](https://github.com/haagahelia/swd4tn023/tree/master/05_es6_node/NodeJS_demo)**
+**[More info on the backend and its setup was in this old backend task](../05_es6_node/NodeJS_demo/)**
 
 ## idea-demo-short information
 
