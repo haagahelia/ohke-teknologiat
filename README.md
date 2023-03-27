@@ -201,12 +201,18 @@ Oppitunnit pidetään pääsääntöisesti **maanantaisin klo 8.30-10.45 sekä k
         <tr>
             <td>Ma 27.3.</td>
             <td>
+                <strong><a href="05_frontend/">Frontend-asioita</a></strong><br />
+            </td>
+            <!-- 
+            <td>Ma 27.3.</td>
+            <td>
                 <strong><a href="03_infra_ja_automaatio/">Infra ja automaatio</a></strong><br />
                 <ul>
                     <li>Continuous integration</li>
                     <li>Git: branch, merge, rebase...</li>
                 </ul>
             </td>
+            -->
             <td>
                 Tapaaminen luokassa ja Teamsissa<br />
                 Tehtävien DL su 2.4. klo 22:00
