@@ -15,13 +15,13 @@ We look at, learn, study and then modify an already working frontend stub projec
 
 [Database creation (PDF)](../05_es6_node/NodeJS_demo/01_database/CreatingDatabase_for_IdeaCaseBackend.pdf)
 
-[The project repo itself to be cloned](https://github.com/valju/idea-case-backend)
+[The backend repo to be cloned. (Or use your own old version)](https://github.com/valju/idea-case-backend)
 
 **[More info on the backend and its setup was in this old backend task](../05_es6_node/NodeJS_demo/)**
 
 ## idea-demo-short information
 
-[The README.md of idea-demo-short has important few lines in the beginning, then just generic CRA info](https://github.com/valju/idea-demo-short)
+[Frontend repo to be cloned. The README.md of idea-demo-short has important few lines in the beginning, then just generic CRA info](https://github.com/valju/idea-demo-short)
 
 Clone the front project, npm install, add the .env.local file like told in README.md, and start with npm start.
 
