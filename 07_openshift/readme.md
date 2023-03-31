@@ -1,8 +1,8 @@
 # Dockerin hyödyntäminen paikallisesti sekä pilvessä
 
-Tämän oppitunnin demossa luodaan kontteja Python- ja JS-sovelluksille, joita julkaistaan Docker-konttirekisterissä sekä OpenShift-pilvessä.
+Tämän oppitunnin videotallenteissa luodaan kontteja Python- ja JS-sovelluksille, joita julkaistaan Docker-konttirekisterissä sekä OpenShift-pilvessä.
 
-Kokonaisuutena pilvipalveluiden infrastruktuuri on erittäin laaja, ja siitä riittäisi asiaa useammaksikin kurssiksi. Tällä oppitunnilla on tarkoitus tutustua terminologiaan ja työvaiheisiin siinä määrin, että aiheiden parissa on mahdollista jatkaa itseopiskelua esimerkiksi seminaarityön puitteissa.
+Kokonaisuutena pilvipalveluiden infrastruktuuri on erittäin laaja ja aiheesta riittäisi asiaa useammaksikin kurssiksi. Tällä oppitunnilla on tarkoitus tutustua terminologiaan ja työvaiheisiin siinä määrin, että aiheiden parissa on mahdollista jatkaa itseopiskelua esimerkiksi seminaarityön puitteissa.
 
 
 ## Miksi ajaa sovelluksia konteissa?
@@ -55,15 +55,15 @@ Kurssilla on käytössä [Otaverkon tarjoama OpenShift-ympäristö](https://otav
 >
 > Otaverkko. OpenShift palveluna. https://otaverkko.fi/palvelukategoria/openshift/
 
-Ohjeet käyttäjätunnusten saamiseksi löytyvät alempaa tehtävänannon yhteydestä.
+Voit hyödyntää OpenShiftiä kurssin seminaarivaiheessa. Ohjeet käyttäjätunnusten saamiseksi löytyvät alempaa tältä sivulta.
 
 OpenShift-konsoliin kirjautuminen onnistuu selaimella osoitteessa https://console-openshift-console.apps.hhocp.otaverkko.fi/. Palveluissamme on valitettavasti toistaiseksi [self-signed sertifikaatit](https://en.wikipedia.org/wiki/Self-signed_certificate), eli on odotettua, että selain varoittaa epäluotettavasta sertifikaatista.
 
 Kirjautumisen jälkeen ensimmäinen työvaihe kirjautumisen jälkeen on tyypillisesti oman projektin luominen. Projektin luominen esitetään ylempänä oppitunnin 2. videolla.
 
-Konttirekisteri löytyy osoitteesta `default-route-openshift-image-registry.apps.hhocp.otaverkko.fi`. Rekisteri ei ole käytettävissä selaimella, vaan sitä käytetään `docker`-komennon kautta (vaihtoehtoisesti `podman`). Lisätiedot esimerkkeineen ja OAuth-ohjeistuksineen löydät alempaa ja oppitunnin tallenteelta.
+Konttirekisteri löytyy osoitteesta `default-route-openshift-image-registry.apps.hhocp.otaverkko.fi`. Rekisteri ei ole käytettävissä selaimella, vaan sitä käytetään `docker`-komennon kautta (vaihtoehtoisesti komennolla `podman`). Lisätiedot esimerkkeineen ja OAuth-ohjeistuksineen löydät alempaa ja oppitunnin tallenteelta.
 
-Voit tarvittaessa ottaa ssh-yhteyden ympäristömme kuormantasaajaan osoitteella `hhocp.otaverkko.fi`. Kuormantasaajalta löytyy `oc`- ja `kubectl`-komennot, joita voit tarvita mahdollisesti edistyneempien operaatioiden parissa seminaarityössä.
+💡 Voit tarvittaessa ottaa ssh-yhteyden ympäristömme kuormantasaajaan osoitteella `hhocp.otaverkko.fi`. Kuormantasaajalta löytyy `oc`- ja `kubectl`-komennot, joita voit tarvita mahdollisesti edistyneempien operaatioiden parissa seminaarityössä.
 
 
 ## Mikä on kontti?
@@ -96,7 +96,7 @@ Voit tarvittaessa ottaa ssh-yhteyden ympäristömme kuormantasaajaan osoitteella
 * Volume
 
 
-# Docker-kontti Python-sovellukselle
+# Docker-kontti Python-sovellukselle (videolla käsiteltävä esimerkki)
 
 Tässä esimerkissä jatkokehitämme "sorting and filtering" -tehtävässä kehitettyä logiikkaa ja toteutamme [Flask](https://flask.palletsprojects.com/):in avulla ohjelmallemme http-rajapinnan. Esimerkin lähtötilanne löytyy tiedostosta [upcoming_events.py](https://gist.github.com/swd1tn002/8f2e49c5b416671856d31c40b0d0c521).
 
@@ -166,7 +166,7 @@ Docker imagen ("levykuva") luonti onnistuu nyt komennolla:
 
     docker build --tag flask-events .
 
-Kun image on valmis, se löytyy `image ls`-listauksesta:
+Edellä komennossa piste `.` tarkoittaa, että levykuva luodaan nykyisen hakemiston `Dockerfile`-tiedoston perusteella. `--tag` puolestaan kertoo, millä nimellä haluamme kutsua tätä levykuvaa. Kun levykuva on valmis, se löytyy `image ls`-listauksesta:
 
     docker image ls
 
@@ -225,14 +225,14 @@ Vinkki: `.dockerignore`-tiedostoa luodessasi voi olla hyvä katsoa, mitä projek
 
 ## 3. Imagen julkaisu konttirekisterissä
 
-Ennen julkaisua imagelle on tarpeen lisätä tagi, joka vastaa sen sijaintia konttirekisterissä: https://docs.docker.com/engine/reference/commandline/tag/. Konttirekisterissä osoite sisältää projektin nimen, joten varmista että olet luonut itsellesi projektin OpenShiftiin ja että käytät samaa nimeä. Projektin nimen jälkeen tuleva imagen nimi on vapaavalintainen.
+Ennen julkaisua imagelle on tarpeen lisätä tagi, joka vastaa sen sijaintia konttirekisterissä: https://docs.docker.com/engine/reference/commandline/tag/. Konttirekisterissä osoite sisältää projektin nimen, joten varmista että olet luonut itsellesi projektin OpenShift:iin ja että käytät samaa nimeä. Projektin nimen jälkeen tuleva imagen nimi on vapaasti valittavissa.
 
 Kurssin OpenShift-pilven konttirekisteri sijaitsee osoitteessa `default-route-openshift-image-registry.apps.hhocp.otaverkko.fi`.
 
 Seuraava esimerkki näyttää miten `login`, `tag` ja `push` toimivat `oauth-openshift.apps.hhocp.otaverkko.fi`-rekisterin kanssa:
 
     # 1. Kirjautuminen konttirekisteriin.
-    # Salasanan sijasta käytetään OAuth-tokenia, jonka saat 
+    # Salasanan sijasta käytetään OAuth-tokenia, jonka saat
     # osoitteesta https://oauth-openshift.apps.hhocp.otaverkko.fi/oauth/token/request
     docker login default-route-openshift-image-registry.apps.hhocp.otaverkko.fi
 
@@ -307,7 +307,7 @@ Konttien luominen "käsin" ei ole aina, erityisesti pienten esimerkkien kanssa v
 > [Source-to-image. docs.openshift.com](https://docs.openshift.com/container-platform/4.10/openshift_images/using_images/using-s21-images.html)
 
 
-# Tehtävä
+<!--# Tehtävä
 
 Tämä on kurssin viimeinen viikkotehtävä, ja sen saa halutessaan tehdä yksin, parin kanssa tai ryhmässä. Tehtävässä ei ole tarkkaa toiminnallista vaatimusta, joten voitte soveltaa aiheita sen mukaan, oletteko enemmän kiinnostuneita esimerkiksi Dockerista tai Kuberneteksesta, tai haluatteko kokeilla esimerkiksi oman sovelluksen julkaisua PaaS-palvelussa. Mikäli teette työn ryhmässä, merkitkää raporttiinne selvästi kaikki tekijät. Mikäli jaoitte työtä eri kirjoittajien kesken, eritelkää kuka teki minkäkin vaiheen.
 
@@ -374,6 +374,7 @@ Tätä kurssia varten on luotu OpenShift-ympäristö, jota käsitellään laajas
 
 Tunnusten luomisessa voi kestää jopa päiviä, joten viesti kannattaa lähettää hyvissä ajoin ennen tehtävän varsinaista aloitusta. Tarvittaessa ota opettajiin yhteyttä Teams-kanavalla tunnusten luomiseksi.
 
-Saatuanne käyttäjätunnuksen ja salasanan, voitte kokeilla kirjautua sisään osoitteessa https://console-openshift-console.apps.hhocp.otaverkko.fi/. Kirjautuminen tapahtuu "IPA Login" -vaihtoehdolla (IPA = Identity, Policy & Audit). 
+Saatuanne käyttäjätunnuksen ja salasanan, voitte kokeilla kirjautua sisään osoitteessa https://console-openshift-console.apps.hhocp.otaverkko.fi/. Kirjautuminen tapahtuu "IPA Login" -vaihtoehdolla (IPA = Identity, Policy & Audit).
 
 Huom! Kurssin OpenShift-palvelun kaikki https-sertifikaatit ovat itse allekirjoitettuja (self signed), eli selain tulee vaatimaan sertifikaatin hyväksymistä manuaalisesti, kuten oppitunnin videolla esitellään.
+-->
