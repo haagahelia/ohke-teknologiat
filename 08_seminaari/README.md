@@ -1,6 +1,6 @@
 # Seminaari
 
-Seminaarivaiheessa jokainen opiskelija valitsee kurssin aiheista itseään eniten kiinnostavan ja tekee siihen liittyvän seminaaritehtävän. Seminaaritehtävän voi valita joko opettajien ehdotuksista, tai seminaaritehtävän aihetta voi ehdottaa myös itse. Seminaaritehtävä voi liittyvä läheisesti opiskelijan ohjelmistoprojekti 2 -projektiin, ja se on jopa suositeltavaa. 
+Seminaarivaiheessa jokainen opiskelija valitsee kurssin aiheista itseään eniten kiinnostavan ja tekee siihen liittyvän seminaaritehtävän. Seminaaritehtävän voi valita joko opettajien ehdotuksista, tai seminaaritehtävän aihetta voi ehdottaa myös itse. Seminaaritehtävä voi liittyvä läheisesti opiskelijan ohjelmistoprojekti 2 -projektiin, ja se on jopa suositeltavaa.
 
 Saman seminaariaiheen valinneet opiskelijat osallistuvat sen aiheen yhteiseen seminaariin, jossa esitellään, analysoidaan ja kommentoidaan myös muiden opiskelijoiden seminaaritöitä. Olette lämpimästi tervetulleita osallistumaan myös muiden seminaariaiheiden tilaisuuksiin oman seminaarinne ulkopuolella!
 
@@ -13,9 +13,9 @@ Seminaarityön laajuuden on tarkoitus olla noin 20 tuntia työtä.
 
 Raportoi seminaarityösi esitystä ja arviointia varten raportointiohjeiden mukaisesti. Raportointiohjeet ja -pohjat alla. Valitse vain yksi muoto, Markdown, Word (=> tallenna PDF:ksi ennen julkaisua) tai Powerpoint (=> PDF):
 
-* [Ohje & dokupohja wordiin](SeminaarityonRapotointiohjeWord.docx), 
-* [Powerpoint-esityksessä muutama vinkki sisällöksi ja kait siitä saisi pohjankin](Ohjelmistokehityksen%20teknologioita%20seminaariraportin%20pohja%201.pptx), 
-* [Markdown-pohja, jota suosittelemme](markdown_file1.md). Tekstimuotoisena se pysyy Git-versionhallinnassa kunnossa, jopa usean kehittäjän sitä muokatessa. 
+* [Ohje & dokumenttipohja wordiin](SeminaarityonRapotointiohjeWord.docx),
+* [Powerpoint-esityksessä muutama vinkki sisällöksi ja kait siitä saisi pohjankin](Ohjelmistokehityksen%20teknologioita%20seminaariraportin%20pohja%201.pptx),
+* [Markdown-pohja, jota suosittelemme](markdown_file1.md). Tekstimuotoisena se pysyy Git-versionhallinnassa kunnossa, jopa usean kehittäjän sitä muokatessa.
 
 **Video**
 
@@ -47,23 +47,23 @@ Tutoriaalityön tapauksissa seminaarin raportissa ja videossa ei kannata keskitt
 
 * **Seminaarien käynnistys**
 
-    Ti 8.11.2022
+    Ma 3.4.2023
 
 * **Seminaariaiheen ilmoittaminen Teams-kanavalle**
 
-    DL ti 15.11.2022, klo 12 (keskipäivä)
+    DL to 6.4.2023 klo 12 (keskipäivä)
 
 * **Yksilöllistä seminaarityön ohjausta Teamsissa**
 
-    Opettajat tavoitettavissa Teamsissa. Ota yhteyttä ja sovi videotapaaminen!
+    Opettajat tavoitettavissa Teamsissa 17.4. ja 24.4. Ota yhteyttä ja sovi esim. videotapaaminen!
 
 * **Seminaarin raporttien ja videoiden palauttaminen Teamsiin**
 
-    DL ke 7.12. klo 22
+    DL ke 3.5. klo 22 mennessä.
 
 * **Seminaariesitykset**
 
-    13.12.2022, klo 8:30 - 10:45
+    Ma 8.5.2023, klo 8:30 - 10:45
 
 
 # Seminaariaiheita
@@ -86,11 +86,11 @@ Tälle sivulle on koottu **esimerkkiaiheita** kurssin seminaaritehtävää varte
 
 * **Koneoppiminen Pythonilla**
 
-Kouluta esimerkiksi valitsemasi koneoppimismalli jostain datasta ja laadi sillä ennusteita.
+    Kouluta esimerkiksi valitsemasi koneoppimismalli jostain datasta ja laadi sillä ennusteita.
 
 * **Tekstintunnistus Pythonilla**
 
-Tekstin tunnistaminen kuvasta (tai videosta) [Tesseract-kirjastolla](https://nanonets.com/blog/ocr-with-tesseract/).
+    Tekstin tunnistaminen kuvasta tai videosta esim. [Tesseract-kirjastolla](https://nanonets.com/blog/ocr-with-tesseract/).
 
 
 ## Tietorakenteet ja algoritmit
@@ -120,7 +120,7 @@ Tekstin tunnistaminen kuvasta (tai videosta) [Tesseract-kirjastolla](https://nan
 
 * **Mikropalvelu:**
 
-    Mikropalveluihin perustuvan pienen palvelun rakentaminen (esim. autentikointipalvelu pyörii omana palvelunaan).
+    Mikropalveluihin perustuvan pienen palvelun rakentaminen (esim. autentikointipalvelu pyörii omana palvelunaan). Mahdollisesti hyödyntäen serverless-lähestymistapaa.
 
 ## Testaus
 
@@ -145,16 +145,16 @@ Tekstin tunnistaminen kuvasta (tai videosta) [Tesseract-kirjastolla](https://nan
 
     Rakenna Dockerin ja Docker composen avulla ohjelmistoprojekti 2 -projektistanne konttipohjainen sovellus, joka voidaan toimittaa/julkaista (deploy) Azureen tai AWS:ään.
 
-* **Kubernetes ja OpenShift:**
+* **Docker Swarm, Kubernetes tai OpenShift:**
 
-    Jatka työskentelyä kurssin yksityisessä pilvessä ja perehdy syvemmin Kubernetekseen ja OpenShiftiin. Rakenna sinne useammasta kontista koostuva ratkaisu hyödyntäen oppimiasi hyviä käytäntöjä.
+    Perehdy syvemmin Docker Swarm:iin, Kubernetekseen tai OpenShiftiin. Rakenna useammasta kontista koostuva ratkaisu hyödyntäen oppimiasi hyviä käytäntöjä.
 
 
 ## TypeScript, ES6, JavaScript, node (+MongoDB)
 
 * **TypeScript**
 
-    Perehdy TypeScript-kieleen ja sen työkaluihin. Toteuta yksinkertainen esimerkkisovellus, jossa sovellat oppimaasi mahdollisimman hyvin.
+    Jatka perehtymistä TypeScript-kieleen ja sen työkaluihin. Toteuta yksinkertainen esimerkkisovellus, jossa sovellat oppimaasi mahdollisimman hyvin.
 
 * **MERN-stack:**
 
@@ -162,7 +162,7 @@ Tekstin tunnistaminen kuvasta (tai videosta) [Tesseract-kirjastolla](https://nan
 
 * **Reaktiivinen ohjelmointi JS:llä** *(ks. ohjelmistoarkkitehtuurit ja patternit)*:
 
-    Tutustu [FRP-ohjelmointiin](https://stackoverflow.com/questions/1028250/what-is-functional-reactive-programming/1030631#1030631) ja tee (tietynlainen) ohjelma esimerkiksi RxJS:llä tai bacon.js:llä. Myös [Node-RED](https://nodered.org/)-ympäristöä voi miettiä tähän vaiheeseen.
+    Tutustu [FRP-ohjelmointiin](https://stackoverflow.com/questions/1028250/what-is-functional-reactive-programming/1030631#1030631) ja tee (tietynlainen) ohjelma esimerkiksi RxJS:llä tai bacon.js:llä. Myös [Node-RED](https://nodered.org/)-ympäristöä voi miettiä tähän aiheeseen.
 
 * **Paketin julkaisu NPM:ssä:**
 
@@ -188,13 +188,13 @@ Koneoppimista ei tällä toteutuksella juuri käsitelty, mutta voit halutessasi 
 * **Koneoppimismallin kouluttaminen:**
 
     Kouluta koneoppimismalli jostain datasta ja laadi sillä ennusteita (esimerkiksi Keras-kirjastolla kuvien tunnistamista). Voi liittyä ohjelmistoprojekti 2:seen mieluusti.
-    
+
 * **Koneoppimistutkielma:**
 
     Laadi tutkielma ja raportti siitä mitä koneoppiminen (ja esimerkiksi neuroverkot) ovat ja mihin niitä voi hyödyntää. Voit syventyä myös esimerkiksi luonnollisen kielen tulkintaan (NLP) ja sanavektoreihin.
 
 * **Vahvistusoppiminen:**
 
-    Kouluta vahvistusoppimisella (reinforcement learning) jonkin pelin tekoäly. Tässä esimerkiksi on [youtube-playlista](https://www.youtube.com/playlist?list=PLTWFMbPFsvz3CeozHfeuJIXWAJMkPtAdS), jolla koulutetaan tekoäly pelaamaan Segan Sonic the hedgehog -peliä [Open AI:n](https://openai.com/) ja [Neatin](https://neat-python.readthedocs.io/en/latest/neat_overview.html) avulla. 
+    Kouluta vahvistusoppimisella (reinforcement learning) jonkin pelin tekoäly. Tässä esimerkiksi on [youtube-playlista](https://www.youtube.com/playlist?list=PLTWFMbPFsvz3CeozHfeuJIXWAJMkPtAdS), jolla koulutetaan tekoäly pelaamaan Segan Sonic the hedgehog -peliä [Open AI:n](https://openai.com/) ja [Neatin](https://neat-python.readthedocs.io/en/latest/neat_overview.html) avulla.
 
 
