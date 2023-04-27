@@ -203,7 +203,7 @@ Oppitunnit pidetään pääsääntöisesti **maanantaisin klo 8.30-10.45 sekä k
             <td>
                 <strong><a href="05_frontend/">Frontend-asioita</a></strong><br />
             </td>
-            <!-- 
+            <!--
             <td>Ma 27.3.</td>
             <td>
                 <strong><a href="03_infra_ja_automaatio/">Infra ja automaatio</a></strong><br />
@@ -238,7 +238,7 @@ Oppitunnit pidetään pääsääntöisesti **maanantaisin klo 8.30-10.45 sekä k
                 <div>Ma 17.4.</div>
                 <div>Ma 24.4.</div>
             </td>
-            <td><strong>Seminaarityön tekemistä</strong></td>
+            <td><strong><a href="08_seminaari">Seminaarityön tekemistä</a></strong></td>
             <td>
                 <em>Yksilöllistä ohjausta Teamsissa tai sopimuksen mukaan kampuksella</em>
             </td>
@@ -246,7 +246,10 @@ Oppitunnit pidetään pääsääntöisesti **maanantaisin klo 8.30-10.45 sekä k
         <tr>
             <td>Ma 1.5.</td>
             <td>Vappu</td>
-            <td>Seminaaritehtävän palautus ke 3.5. klo 22 mennessä.</td>
+            <td>
+                Seminaaritehtävän palautus ke 3.5. klo 22 mennessä.<br />
+                <td><strong><a href="08_seminaari">Seminaarityön ohjeet.</a></strong></td>
+            </td>
         </tr>
         <tr>
             <td>Ma 8.5.</td>

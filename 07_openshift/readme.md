@@ -26,6 +26,11 @@ Kokonaisuutena pilvipalveluiden infrastruktuuri on erittäin laaja ja aiheesta r
 3. [Konttien hyödyntäminen kehitysympäristössä](https://web.microsoftstream.com/video/81928ca0-8a61-4aea-a495-5e0d8851a8bf) *12:57*
 
 
+## Suositeltuja videoita
+
+1. [Virtual Machine (VM) vs Docker (IBM Technology)](https://youtu.be/a1M_thDTqmU)
+
+
 ## Missä näitä teknologioita käytetään?
 
 Tällä viikolla käsiteltävät teknologiat ovat yleistyneet hyvin nopeasti, ja kaikki suurimmat pilvipalvelualustat tarjoavat omat palvelunsa niiden käyttämiseksi. Lisätietoa eri pilvialustojen palveuista löydät esimerkiksi seuraavista lähteistä:
@@ -71,6 +76,7 @@ Konttirekisteri löytyy osoitteesta `default-route-openshift-image-registry.apps
 > *"Containers are a technology based on operating system kernel features that allow the creation of isolated environments sharing a kernel. For example, container features make it possible to have several isolated root filesystems, network stacks and process trees that all use the same kernel. These isolated environments are similar in functionality to lightweight virtual machines, but there are some key differences between virtual machines and containers. The biggest one is that virtual machines always have their own kernels, while containers share the host system's kernel."*
 >
 > https://docs.csc.fi/cloud/rahti/containers/
+
 
 **Seuraavat käsitteet käsitellään oppitunnin videotallenteilla:**
 
