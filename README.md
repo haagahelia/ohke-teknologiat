@@ -248,7 +248,7 @@ Oppitunnit pidetään pääsääntöisesti **maanantaisin klo 8.30-10.45 sekä k
             <td>Vappu</td>
             <td>
                 Seminaaritehtävän palautus ke 3.5. klo 22 mennessä.<br />
-                <td><strong><a href="08_seminaari">Seminaarityön ohjeet.</a></strong></td>
+                <strong><a href="08_seminaari">Seminaarityön ohjeet.</a></strong>
             </td>
         </tr>
         <tr>
