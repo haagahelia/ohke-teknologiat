@@ -28,6 +28,8 @@ Kokonaisuutena pilvipalveluiden infrastruktuuri on erittäin laaja ja aiheesta r
 
 ## Suositeltuja videoita
 
+1. [Never install locally (Coderized)](https://youtu.be/J0NuOlA2xDc)
+
 1. [Virtual Machine (VM) vs Docker (IBM Technology)](https://youtu.be/a1M_thDTqmU)
 
 
