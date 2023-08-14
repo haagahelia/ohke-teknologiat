@@ -35,16 +35,11 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
 > *https://mynet.haaga-helia.fi/group/pakki/toteutukselle-ilmoittautuminen*
 
 
-## Kurssin ohjelmointikielet
-
-Kurssin alkukyselyssä ja ensimmäisellä oppitunnilla käsiteltiin kurssin ohjelmointikielivalintaa. Perinteisesti kurssilla on käytetty pääasiassa **Pythonia**, joka on kurssilla edelleen käytössä videoiden ja tekstimateriaalien muodossa. Alkukyselyssä saatujen vastausten perusteella pyrimme käyttämään oppitunneilla **JavaScriptiä** ja **TypeScriptiä**. Päivitämme mahdollisuuksien mukaan myös tehtäviä siten, että voitte toteuttaa ratkaisunne tehtäviin millä vain näistä kolmesta kielestä.
-
-
 ## Opintojakson oppitunnit ja päivämäärät
 
 **Huom!** Tämä sivu päivittyy kurssin edetessä ja yksittäisten tuntien aiheet voivat vielä muuttua.
 
-Oppitunnit pidetään pääsääntöisesti **maanantaisin klo 8.30-10.45 sekä kampuksella luokassa 2004 että Teamsissa**. Yksittäisten oppituntien kohdalta toteutusmuoto selviää varmimmin kurssin Teams-kanavan viesteistä ja ajastetuista kokouksista, jotka näet myös Outlook-kalenterissasi. Kurssin seminaarivaiheessa ei järjestetä ohjattuja tapaamisia, vaan tiedotamme yksilöllisen ohjauksen järjestelyistä seminaarien käynnistystunnilla sekä Teamsissa.
+Oppitunnit pidetään pääsääntöisesti **torstaisin klo 14-16.45**. Yhdistelemme lähi- ja etäopiskelua, joten yksittäisten oppituntien kohdalta toteutusmuoto selviää varmimmin kurssin Teams-kanavan viesteistä ja lukujärjestyksestä. Kurssin seminaarivaiheessa ei järjestetä yhteisiä tapaamisia, vaan tarjoamme yksilöllistä ohjausta etukäteen sovittavina ajankohtina.
 
 <table>
     <thead>
@@ -56,7 +51,7 @@ Oppitunnit pidetään pääsääntöisesti **maanantaisin klo 8.30-10.45 sekä k
     </thead>
     <tbody>
         <tr>
-            <td>Ma 16.1.</td>
+            <td>To 24.8.</td>
             <td>
                 <strong><a href="00_linux/">Kurssin johdanto, ympäristöt ja Linux/Unix-komentorivi</a></strong><br />
                 <br />
@@ -70,17 +65,16 @@ Oppitunnit pidetään pääsääntöisesti **maanantaisin klo 8.30-10.45 sekä k
                 <ul>
                     <li><a href="https://web.microsoftstream.com/video/f0e0dc26-379c-4a03-9e6b-f7f42d49f950">📼 Kurssin yleiset asiat</a></li>
                     <li><a href="https://web.microsoftstream.com/video/41d6925c-4e99-4218-a413-2190b22acbf8">📼 Linux-komennot</a></li>
-                <!--Linux-palomuuri-->
                     <li><a href="https://web.microsoftstream.com/video/58895df6-7b17-4a51-b448-1b064d3efbf1">📼 GitHub classroom -kotitehtävä</ali/ul>
                 </ul>
             </td>
             <td>
                 Tapaaminen luokassa ja Teamsissa<br />
-                Tehtävien DL su 22.1. klo 22:00
+                Tehtävien DL ke 30.8. klo 22:00
             </td>
         </tr>
         <tr>
-            <td>Ma 23.1.</td>
+            <td>To 31.8.</td>
             <td>
                 <strong>Kurssin ohjelmointikielet:</strong><br />
                 <strong><a href="01_typescript/">TypeScript</a></strong> tai <strong><a href="01_python/">Python</a></strong><br />
@@ -98,11 +92,11 @@ Oppitunnit pidetään pääsääntöisesti **maanantaisin klo 8.30-10.45 sekä k
             </td>
             <td>
                 Tapaaminen luokassa ja Teamsissa<br />
-                Tehtävien DL su 29.1. klo 22:00
+                Tehtävien DL ke 6.9. klo 22:00
             </td>
         </tr>
         <tr>
-            <td>Ma 30.1.</td>
+            <td>To 7.9.</td>
             <td>
                 <strong>TypeScript ohjelmointi jatkuu:</strong><br />
                 <strong><a href="01_typescript/">Omat tyypit</a></strong> tai <strong><a href="https://docs.python.org/3/tutorial/classes.html">Pythonin luokat</a></strong><br />
@@ -114,11 +108,11 @@ Oppitunnit pidetään pääsääntöisesti **maanantaisin klo 8.30-10.45 sekä k
             </td>
             <td>
                 Tapaaminen luokassa ja Teamsissa<br />
-                Tehtävien DL su 5.2. klo 22:00
+                Tehtävien DL ke 13.9. klo 22:00
             </td>
         </tr>
         <tr>
-            <td>Ma 6.2.</td>
+            <td>To 14.9.</td>
             <td>
                 <strong><a href="05_es6_node/oppitunti2.md">Node.js, npm, Express, Knex ja asynkroonisuus</a></strong><br />
                 <ul>
@@ -130,11 +124,11 @@ Oppitunnit pidetään pääsääntöisesti **maanantaisin klo 8.30-10.45 sekä k
             </td>
             <td>
                 Tapaaminen luokassa ja Teamsissa<br />
-                Tehtävien DL su 12.2. klo 22:00
+                Tehtävien DL ke 20.9. klo 22:00
             </td>
         </tr>
         <tr>
-            <td>Ma 13.2.</td>
+            <td>To 21.9.</td>
             <td>
                 <strong>Tietorakenteet ja algoritmit:</strong><br />
                 📣 <strong>Huom! Oppitunti poikkeuksellisesti vain Teamsissa!</strong><br />
@@ -147,16 +141,12 @@ Oppitunnit pidetään pääsääntöisesti **maanantaisin klo 8.30-10.45 sekä k
                 </ul>
             </td>
             <td>
-                Tapaaminen <del>luokassa ja</del> Teamsissa<br />
-                Tehtävien DL su 26.2. klo 22:00
+                Tapaaminen luokassa ja Teamsissa<br />
+                Tehtävien DL ke 27.9. klo 22:00
             </td>
         </tr>
         <tr>
-            <td>20.-26.2.</td>
-            <td colspan="2">Talvilomaviikko</td>
-        </tr>
-        <tr>
-            <td>Ma 27.2.</td>
+            <td>To 28.9.</td>
             <td>
                 <strong>Testaus:</strong><br />
                 <strong><a href="02_testaus/typescript.md">TypeScript</a></strong> tai <strong><a href="02_testaus/python.md">Python</a></strong><br />
@@ -169,11 +159,11 @@ Oppitunnit pidetään pääsääntöisesti **maanantaisin klo 8.30-10.45 sekä k
             </td>
             <td>
                 Tapaaminen luokassa ja Teamsissa<br />
-                Tehtävien DL su 5.3. klo 22:00
+                Tehtävien DL ke 4.10. klo 22:00
             </td>
         </tr>
         <tr>
-            <td>Ma 6.3.</td>
+            <td>To 5.10.</td>
             <td>
                 <strong><a href="05_es6_node/oppitunti1.md">Funktionaalinen ohjelmointityyli</a></strong><br />
                 <strong><a href="05_es6_node/oppitunti2.md">Promiset</a></strong><br /><br />
@@ -181,62 +171,50 @@ Oppitunnit pidetään pääsääntöisesti **maanantaisin klo 8.30-10.45 sekä k
             </td>
             <td>
                 Tapaaminen luokassa ja Teamsissa<br />
-                Tehtävien DL su 12.3. klo 22:00
+                Tehtävien DL ke 11.10. klo 22:00
             </td>
         </tr>
         <tr>
-            <td>Ma 13.3.</td>
+            <td>To 12.10.</td>
             <td>
                 <strong><a href="06_ohjelmistoarkkitehtuurit_ja_patternit/SoftwareArchitecturesAndPatterns.pdf">Ohjelmistoarkkitehtuurit ja patternit.</a> <a href="06_ohjelmistoarkkitehtuurit_ja_patternit/ApacheKafka_DistributedEventStreamOrBroker.pdf">Kafka.</a><a href="06_ohjelmistoarkkitehtuurit_ja_patternit/">Muita aihepiirin materiaaleja</a> ((Dockerin alkeita))</strong>
             </td>
             <td>
                 Tapaaminen luokassa ja Teamsissa<br />
-                Tehtävien DL su 26.3. klo 22:00
+                Tehtävien DL ke 25.10. klo 22:00
             </td>
         </tr>
         <tr>
-            <td>20.-26.3.</td>
+            <td>16.-22.10.</td>
             <td colspan="2">Intensiiviviikko</td>
         </tr>
         <tr>
-            <td>Ma 27.3.</td>
+            <td>To 26.10.</td>
             <td>
                 <strong><a href="05_frontend/">Frontend-asioita</a></strong><br />
             </td>
-            <!--
-            <td>Ma 27.3.</td>
-            <td>
-                <strong><a href="03_infra_ja_automaatio/">Infra ja automaatio</a></strong><br />
-                <ul>
-                    <li>Continuous integration</li>
-                    <li>Git: branch, merge, rebase...</li>
-                </ul>
-            </td>
-            -->
             <td>
                 Tapaaminen luokassa ja Teamsissa<br />
-                Tehtävien DL su 2.4. klo 22:00
+                Tehtävien DL ke 1.11. klo 22:00
             </td>
         </tr>
         <tr>
-            <td>Ma 3.4.</td>
+            <td>To 2.11.</td>
             <td>
                 <strong><a href="07_openshift/">Dockerin hyödyntäminen paikallisesti sekä pilvessä (Docker, Kubernetes, OpenShift...)</a></strong><br />
                 <strong><a href="08_seminaari">Seminaarien käynnistys</a></strong>
             </td>
             <td>
-                Tapaaminen luokassa ja Teamsissa
+                Huom! Tapaaminen vain online<br />
+                Tehtävien DL ke 8.11. klo 22:00
             </td>
         </tr>
         <tr>
-            <td>Ma 10.4.</td>
-            <td>Pääsiäinen</td>
-            <td></td>
-        </tr>
-        <tr>
             <td>
-                <div>Ma 17.4.</div>
-                <div>Ma 24.4.</div>
+                <div>To 9.11.</div>
+                <div>To 16.11.</div>
+                <div>To 23.11.</div>
+                <div>To 30.11.</div>
             </td>
             <td><strong><a href="08_seminaari">Seminaarityön tekemistä</a></strong></td>
             <td>
@@ -244,15 +222,15 @@ Oppitunnit pidetään pääsääntöisesti **maanantaisin klo 8.30-10.45 sekä k
             </td>
         </tr>
         <tr>
-            <td>Ma 1.5.</td>
-            <td>Vappu</td>
+            <td>Su 3.12.</td>
+            <td>Seminaarityön deadline</td>
             <td>
-                Seminaaritehtävän palautus ke 3.5. klo 22 mennessä.<br />
+                Seminaaritehtävän palautus su 3.12. klo 22 mennessä.<br />
                 <strong><a href="08_seminaari">Seminaarityön ohjeet.</a></strong>
             </td>
         </tr>
         <tr>
-            <td>Ma 8.5.</td>
+            <td>To 7.12.</td>
             <td><strong>Seminaariesitykset</strong></td>
             <td></td>
         </tr>
@@ -287,7 +265,7 @@ Lisää ohjeita löydät kurssin [ensimmäisen viikon materiaalista](00_linux).
 
 Linux voidaan asentaa myös tietokoneen pääkäyttöjärjestelmäksi tai "dual boot"-vaihtoehdolla nykyisen käyttöjärjestelmän rinnalle, mutta näitä vaihtoehtoja ei kurssin puolesta suositella.
 
-⚠ Kurssin aikana teemme asennuksia Ubuntun `apt`-työkalulla, Pythonin `pip`-työkalulla, Noden `npm`-työkalulla, Dockerilla ja VS Codella. Nämä työkalut lisäävät tietokoneellesi suoritettavaa ohjelmakoodia, jonka yhteydessä tulee aina huomioida myös tietoturva. Asennusten tekeminen erillisessä virtuaalisessa ympäristössä on oiva lisä oman tietokoneesi suojaamiseksi, vaikka olemmekin pyrkineet valitsemaan vain erittäin tunnettuja ja hyvämaineisia ohjelmistoja tälle kurssille.
+⚠ Kurssin aikana teemme asennuksia mm. Ubuntun `apt`-työkalulla, Pythonin `pip`-työkalulla, Noden `npm`-työkalulla, Dockerilla ja VS Codella. Kaikki nämä työkalut lisäävät tietokoneellesi suoritettavaa ohjelmakoodia, jonka yhteydessä tulee aina huomioida myös tietoturva. Asennusten tekeminen erillisessä virtuaalisessa ympäristössä on oiva lisä oman tietokoneesi suojaamiseksi, vaikka olemmekin pyrkineet valitsemaan vain erittäin tunnettuja ja hyvämaineisia ohjelmistoja tälle kurssille.
 
 
 ## Arviointi
@@ -314,4 +292,6 @@ Tämän kurssin materiaali perustuu suurelta osin valmiisiin netistä löytyviin
 
 Ohjelmointiongelmiin löytyy usein valmiita tai osittaisia ratkaisuja ympäri Internetiä niin keskustelupalstoilta kuin tutoriaaleista. Nettilähteiden hyödyntäminen ja niistä mallin ottaminen on sallittua ja kannustettavaa, mutta **et saa vain kopioida ratkaisuja, vaan sinun tulee kirjoittaa koodisi itse ja myös ymmärtää, miten se toimii**. Koska kyseessä on korkeakoulun opintojakso, sinun tulee merkitä lähteet lainatessasi esimerkiksi StackOverflow:sta löytämääsi koodia. Lähdeviitteeksi riittää esimerkiksi verkkosivun osoite kommenttina lainatun koodin yhteydessä, tai käyttämäsi lähteen käyttöehtojen mukainen muu lähdeviite.
 
-Yhteistyö on kurssilla kannustettavaa, mutta yksilötehtävissä kaikkien tulee silti tuottaa omat ratkaisut. Voitte koodata yhdessä ja tehdä toiminnallisesti samanlaisia ratkaisuja, mutta suora kopiointi ei ole sallittua. Merkitkää kaikkiin yhteistyössä tehtyihin tehtäviin niitä työstäneiden opiskelijoiden nimet esimerkiksi lähdekoodin kommentteina.
+Tehtävien vastausten generointi tekoälyn avulla on kiellettyä. Et saa siis käyttää esim. ChatGPT:tä tai GitHub Copilot:ia ratkaistaksesi annetun tehtävän sellaisenaan. Saat kuitenkin hyödyntää näitä palveluita yksittäisten ongelmien ratkaisemiseksi.
+
+Yhteistyö on kurssilla kannustettavaa, mutta **yksilötehtävissä kaikkien tulee silti tuottaa omat ratkaisut**. Voitte koodata yhdessä ja tehdä toiminnallisesti samanlaisia ratkaisuja, mutta suora kopiointi ei ole sallittua. Merkitkää kaikkiin yhteistyössä tehtyihin tehtäviin niitä työstäneiden opiskelijoiden nimet esimerkiksi lähdekoodin kommentteina.
