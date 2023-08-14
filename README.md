@@ -131,7 +131,6 @@ Oppitunnit pidetään pääsääntöisesti **torstaisin klo 14-16.45**. Yhdistel
             <td>To 21.9.</td>
             <td>
                 <strong>Tietorakenteet ja algoritmit:</strong><br />
-                📣 <strong>Huom! Oppitunti poikkeuksellisesti vain Teamsissa!</strong><br />
                 <strong><a href="04_tietorakenteet_ja_algoritmit/">TypeScript tai Python</a></strong>
                 <ul>
                     <li>Lajittelualgoritmit</li>
