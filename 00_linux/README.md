@@ -7,13 +7,11 @@ Ohjeet kurssille tarvittavan ympäristön asentamiseksi löydät [täältä](ase
 
 ## Luentovideot
 
-1. [**Kurssin yleiset asiat**](https://web.microsoftstream.com/video/f0e0dc26-379c-4a03-9e6b-f7f42d49f950) *28:34*
-1. [**Linux-komennot**](https://web.microsoftstream.com/video/41d6925c-4e99-4218-a413-2190b22acbf8) *45:37*
-1. [**GitHub classroom -kotitehtävä**](https://web.microsoftstream.com/video/58895df6-7b17-4a51-b448-1b064d3efbf1) *17:56*
+1. [**Linuxin peruskäytt**](https://youtu.be/HRqHfItALO4)
+1. [**GitHub classroom -tehtävien ohjeistu**](https://youtu.be/9dA17XlzT-w)
+1. [**Kurssin koodausympäristöt (wsl2, Docker, Development containers, Codespace**](https://youtu.be/aC3xj4KXu3g)
 
 <!--Todo: video Linux-palomuurista-->
-
-👆 Näiden videoiden katsominen edellyttää kirjautumista MS Stream -palveluun Haaga-Helian tunnuksillasi. Sinun tulee olla myös jäsenenä kurssin Teams-ryhmässä.
 
 Löydät tämän kurssin omien materiaalien lisäksi netistä lukuisia hyviä video- ja tekstimuotoisia ohjeita. Halutessasi voit käyttää myös muita materiaaleja ja aloittaa esimerkiksi videosta [15+ Terminal Commands Every Developer Must Know (Web Dev Simplified)](https://youtu.be/CV-ven_rxhw) sekä [Ubuntun komentorivitutoriaalista](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview).
 

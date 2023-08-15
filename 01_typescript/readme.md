@@ -345,7 +345,7 @@ let all = [...faces, ...numbers];   // (string | number)[]
 let something = all.at(-1);         // something: (string | number | undefined)
 
 // huutomerkki `!` kertoo TypeScriptille, että arvo on olemassa:
-let thing = all.at(-1)!;            // thing: (string | number | undefined)
+let thing = all.at(-1)!;            // thing: (string | number)
 
 // `as`-avainsanalla voidaan ohittaa tyypin päättely ja kertoa se itse:
 let answer = all.at(-1) as number;  // answer: number
@@ -353,15 +353,15 @@ let answer = all.at(-1) as number;  // answer: number
 console.table({ something, thing, answer });
 ```
 
-Vaikka edellä kolmen viimeisen muuttujan tyyppi onkin eri, on niissä luonnollisesti tasan samat arvot, eli taulukon viimeinen numero:
+Vaikka edellä kolmen viimeisen muuttujan tyypit ovat TypeScriptin näkökulmasta eri, on niissä luonnollisesti tasan sama arvo, eli taulukon viimeinen numero `42`:
 
 ```
 ┌───────────┬────────┐
 │  (index)  │ Values │
 ├───────────┼────────┤
-│ something │   42   │
-│   thing   │   42   │
-│  answer   │   42   │
+│ something │   42   │   // string | number | undefined
+│   thing   │   42   │   // string | number
+│  answer   │   42   │   // number
 └───────────┴────────┘
 ```
 
