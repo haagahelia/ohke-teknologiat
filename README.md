@@ -87,7 +87,6 @@ Oppitunnit pidetään pääsääntöisesti **torstaisin klo 14-16.45**. Yhdistel
                 <ul>
                     <li><a href="https://youtu.be/5Ts75AHEGEI">📼 TypeScriptin asennus, kääntäminen ja ts-node</a></li>
                     <li><a href="https://youtu.be/WfcCsZ0I3sc">📼 tsconfig.json, tyypit, muuttujat, funktiot ja taulukot</a></li>
-                    <li><a href="">📼 </a></li>
                     <!--li><a href="https://web.microsoftstream.com/video/497d7df3-1629-49f9-b460-82c1d479b03d">📼 Pythonin perusrakenteet ja komentorivikäyttö</a></li-->
                     <!--li><a href="https://web.microsoftstream.com/video/0f31953b-417b-4669-915d-ca35917bfbc0">📼 Pythonin tietorakenteet, ehdot ja toisto</a></li-->
                 </ul>
