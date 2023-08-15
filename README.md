@@ -58,14 +58,14 @@ Oppitunnit pidetään pääsääntöisesti **torstaisin klo 14-16.45**. Yhdistel
                 <strong>Tehtävät:</strong><br />
                 <ul>
                     <li><a href="00_linux/asennukset.md">📥 Kurssin kehitysympäristön asennus</a></li>
-                    <li>📥 Linux-komentorivi (ks. Teams)</li>
+                    <li>📥 Linux-komentorivi (Teams ja GitHub classroom)</li>
                 </ul>
                 <br />
                 <strong>Videot:</strong><br />
                 <ul>
-                    <li><a href="https://web.microsoftstream.com/video/f0e0dc26-379c-4a03-9e6b-f7f42d49f950">📼 Kurssin yleiset asiat</a></li>
-                    <li><a href="https://web.microsoftstream.com/video/41d6925c-4e99-4218-a413-2190b22acbf8">📼 Linux-komennot</a></li>
-                    <li><a href="https://web.microsoftstream.com/video/58895df6-7b17-4a51-b448-1b064d3efbf1">📼 GitHub classroom -kotitehtävä</ali/ul>
+                    <li><a href="https://youtu.be/HRqHfItALO4">📼 Linuxin peruskäyttö</a></li>
+                    <li><a href="https://youtu.be/9dA17XlzT-w">📼 GitHub classroom -tehtävien ohjeistus</a></li>
+                    <li><a href="https://youtu.be/aC3xj4KXu3g">📼 Kurssin koodausympäristöt (wsl2, Docker, Development containers, Codespace)</a></li>
                 </ul>
             </td>
             <td>
@@ -76,18 +76,20 @@ Oppitunnit pidetään pääsääntöisesti **torstaisin klo 14-16.45**. Yhdistel
         <tr>
             <td>To 31.8.</td>
             <td>
-                <strong>Kurssin ohjelmointikielet:</strong><br />
-                <strong><a href="01_typescript/">TypeScript</a></strong> tai <strong><a href="01_python/">Python</a></strong><br />
+                <strong><a href="01_typescript/">TypeScript</a></strong><br />
                 <br />
                 <strong>Tehtävät:</strong><br />
                 <ul>
-                    <li>📥 Postinumeroiden käsittely (ks. Teams)</li>
+                    <li>📥 Postinumeroiden käsittely (Teams ja GitHub classroom)</li>
                 </ul>
                 <br />
-                <strong>Python-videot:</strong>
+                <strong>Videot:</strong>
                 <ul>
-                    <li><a href="https://web.microsoftstream.com/video/497d7df3-1629-49f9-b460-82c1d479b03d">📼 Pythonin perusrakenteet ja komentorivikäyttö</a></li>
-                    <li><a href="https://web.microsoftstream.com/video/0f31953b-417b-4669-915d-ca35917bfbc0">📼 Pythonin tietorakenteet, ehdot ja toisto</a></li>
+                    <li><a href="https://youtu.be/5Ts75AHEGEI">📼 TypeScriptin asennus, kääntäminen ja ts-node</a></li>
+                    <li><a href="https://youtu.be/WfcCsZ0I3sc">📼 tsconfig.json, tyypit, muuttujat, funktiot ja taulukot</a></li>
+                    <li><a href="">📼 </a></li>
+                    <!--li><a href="https://web.microsoftstream.com/video/497d7df3-1629-49f9-b460-82c1d479b03d">📼 Pythonin perusrakenteet ja komentorivikäyttö</a></li-->
+                    <!--li><a href="https://web.microsoftstream.com/video/0f31953b-417b-4669-915d-ca35917bfbc0">📼 Pythonin tietorakenteet, ehdot ja toisto</a></li-->
                 </ul>
             </td>
             <td>
@@ -99,11 +101,17 @@ Oppitunnit pidetään pääsääntöisesti **torstaisin klo 14-16.45**. Yhdistel
             <td>To 7.9.</td>
             <td>
                 <strong>TypeScript ohjelmointi jatkuu:</strong><br />
-                <strong><a href="01_typescript/">Omat tyypit</a></strong> tai <strong><a href="https://docs.python.org/3/tutorial/classes.html">Pythonin luokat</a></strong><br />
+                <strong><a href="01_typescript/">Omat tyypit</a></strong><br />
                 <strong>Tehtävät:</strong><br />
                 <br />
                 <ul>
-                    <li>📥 Users & Posts (ks. Teams)</li>
+                    <li>📥 Users & Posts (Teams ja GitHub classroom)</li>
+                </ul>
+                <br />
+                <strong>Videot:</strong>
+                <ul>
+                    <li><a href="https://youtu.be/wjnInaST6Q4">📼 PostalCodes-tehtävän malliratkaisu ja taulukkofunktiot (map, filter...)</a></li>
+                    <li><a href="https://youtu.be/1bU2TbyPBJE">📼 JSON-datan käsittely ja omien tyyppien määrittely</a></li>
                 </ul>
             </td>
             <td>
@@ -130,8 +138,12 @@ Oppitunnit pidetään pääsääntöisesti **torstaisin klo 14-16.45**. Yhdistel
         <tr>
             <td>To 21.9.</td>
             <td>
-                <strong>Tietorakenteet ja algoritmit:</strong><br />
-                <strong><a href="04_tietorakenteet_ja_algoritmit/">TypeScript tai Python</a></strong>
+                <strong><a href="04_tietorakenteet_ja_algoritmit/">Tietorakenteet ja algoritmit</a></strong><br/>
+                <br />
+                <strong>Tehtävät:</strong><br />
+                <ul>
+                    <li>📥 Tapahtumien suodattaminen ja lajittelu (Teams ja GitHub classroom)</li>
+                </ul>
                 <ul>
                     <li>Lajittelualgoritmit</li>
                     <li>Hakualgoritmit</li>
@@ -148,7 +160,7 @@ Oppitunnit pidetään pääsääntöisesti **torstaisin klo 14-16.45**. Yhdistel
             <td>To 28.9.</td>
             <td>
                 <strong>Testaus:</strong><br />
-                <strong><a href="02_testaus/typescript.md">TypeScript</a></strong> tai <strong><a href="02_testaus/python.md">Python</a></strong><br />
+                <strong><a href="02_testaus/typescript.md">TypeScript & Jest</a></strong><br />
                 <ul>
                     <li>Testauksen tasot</li>
                     <li>Yksikkötestaus</li>
@@ -264,7 +276,7 @@ Lisää ohjeita löydät kurssin [ensimmäisen viikon materiaalista](00_linux).
 
 Linux voidaan asentaa myös tietokoneen pääkäyttöjärjestelmäksi tai "dual boot"-vaihtoehdolla nykyisen käyttöjärjestelmän rinnalle, mutta näitä vaihtoehtoja ei kurssin puolesta suositella.
 
-⚠ Kurssin aikana teemme asennuksia mm. Ubuntun `apt`-työkalulla, Pythonin `pip`-työkalulla, Noden `npm`-työkalulla, Dockerilla ja VS Codella. Kaikki nämä työkalut lisäävät tietokoneellesi suoritettavaa ohjelmakoodia, jonka yhteydessä tulee aina huomioida myös tietoturva. Asennusten tekeminen erillisessä virtuaalisessa ympäristössä on oiva lisä oman tietokoneesi suojaamiseksi, vaikka olemmekin pyrkineet valitsemaan vain erittäin tunnettuja ja hyvämaineisia ohjelmistoja tälle kurssille.
+⚠ Kurssin aikana teemme asennuksia mm. Ubuntun `apt`-työkalulla, Noden `npm`-työkalulla, Dockerilla ja VS Codella. Kaikki nämä työkalut lisäävät tietokoneellesi suoritettavaa ohjelmakoodia, jonka yhteydessä tulee aina huomioida myös tietoturva. Asennusten tekeminen erillisessä virtuaalisessa ympäristössä on oiva lisä oman tietokoneesi suojaamiseksi, vaikka olemmekin pyrkineet valitsemaan vain erittäin tunnettuja ja hyvämaineisia ohjelmistoja tälle kurssille.
 
 
 ## Arviointi
