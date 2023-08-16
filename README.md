@@ -110,7 +110,7 @@ Oppitunnit pidetään pääsääntöisesti **torstaisin klo 14-16.45**. Yhdistel
                 <strong>Videot:</strong>
                 <ul>
                     <li><a href="https://youtu.be/wjnInaST6Q4">📼 PostalCodes-tehtävän malliratkaisu ja taulukkofunktiot (map, filter...)</a></li>
-                    <li><a href="https://youtu.be/1bU2TbyPBJE">📼 JSON-datan käsittely ja omien tyyppien määrittely</a></li>
+                    <li><a href="https://youtu.be/f7_vE_lmb5c">📼 JSON-datan käsittely ja omien tyyppien määrittely</a></li>
                 </ul>
             </td>
             <td>
