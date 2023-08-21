@@ -7,7 +7,7 @@ Ohjeet kurssille tarvittavan ympäristön asentamiseksi löydät [täältä](ase
 
 ## Luentovideot
 
-1. [**Linuxin peruskäytt**](https://youtu.be/HRqHfItALO4)
+1. [**Linuxin peruskäyttö**](https://youtu.be/HRqHfItALO4)
 1. [**GitHub classroom -tehtävien ohjeistu**](https://youtu.be/9dA17XlzT-w)
 1. [**Kurssin koodausympäristöt (wsl2, Docker, Development containers, Codespace**](https://youtu.be/aC3xj4KXu3g)
 
