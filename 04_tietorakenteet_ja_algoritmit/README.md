@@ -15,19 +15,15 @@ Vaikka osa tietoperustasta voi tuntua matemaattisesti hankalalta, älä lannistu
 
 ## Oppitunnin videot
 
-Kurssin itseopiskeluvideoilla esimerkkikoodit kirjoitetaan Python-kielellä. Videoilla esiintyvät lähdekoodit löydät [täältä](./src/). Videoiden esimerkkejä vastaavat TypeScript-kieliset esimerkit löytyvät puolestaan omasta repositoriostaan: https://github.com/ohjelmistokehitys/typescript-trak.
+Videoiden esimerkit löydät repositoriostaan: https://github.com/ohjelmistokehitys/typescript-trak.
 
-**[Osa 1: Johdanto tietorakenteisiin ja algoritmeihin (Python)](https://web.microsoftstream.com/video/0dc02d53-0eff-4780-a017-bb79a5c876a2)** *50:13*
+**[Tietorakenteet ja algoritmit osa 1](https://youtu.be/Ff5Ux9x5YBw)** *51 min*
 
 Tällä videolla toteutamme yksinkertaisen listoja hyödyntävän toistorakenteen ja perehdymme sen tehokkuuteen.
 
-**[Osa 2: Puolitushaku, asymptoottinen suoritusaika ja hajautustaulut (Python)](https://web.microsoftstream.com/video/0b5f8575-c72f-4521-9afc-5290ac54cd75)** *1:03:59*
+**[Tietorakenteet ja algoritmit osa 2](https://youtu.be/oLasu45pPAI)** *58 min*
 
 Tällä videolla perehdymme vertaillen eri tietorakenteisiin sekä niihin liittyvien operaatioiden suoritusaikaan. Opimme arvioimaan oman koodimme suoritusaikaa ja valitsemaan tarpeet huomioiden tehokkaita tietorakenteita ja algoritmeja.
-
-**[Osa 3: Viikon harjoitustehtävän tehtävänanto ja vinkit (Python)](https://web.microsoftstream.com/video/bfb30003-ff91-440c-8bb5-e4b982b8bad6)** *8:35*
-
-Viikon harjoitustehtävän tehtävänanto. Huom! Vaikka oheisessa videossa kielenä on Python, suosittelemme tehtävän ratkaisemista TypeScriptillä. TypeScript-tehtävänanto käsitellään oppitunnilla ja se löytyy tunnin jälkeen Teams:in tallenteista.
 
 
 ## Tietorakenteiden ja algoritmien merkitys

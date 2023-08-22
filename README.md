@@ -147,7 +147,12 @@ Oppitunnit pidetään pääsääntöisesti **torstaisin klo 14-16.45**. Yhdistel
                     <li>Lajittelualgoritmit</li>
                     <li>Hakualgoritmit</li>
                     <li>Algoritmien tehokkuus</li>
-                    <!--li><a href="https://web.microsoftstream.com/video/b9af8942-94fb-46ac-a085-6cb9e57199c4">Video 1</a>, <a href="https://web.microsoftstream.com/video/1967c82b-9d40-4247-9db0-95f5067c026a">video 2</a>, <a href="https://web.microsoftstream.com/video/7e1e6347-b8c5-4f03-8c92-369591408be4">video 3</a></li-->
+                </ul>
+                <br />
+                <strong>Videot:</strong>
+                <ul>
+                    <li><a href="https://youtu.be/Ff5Ux9x5YBw">📼 Tietorakenteet ja algoritmit osa 1</a></li>
+                    <li><a href="https://youtu.be/oLasu45pPAI">📼 Tietorakenteet ja algoritmit osa 2</a></li>
                 </ul>
             </td>
             <td>
