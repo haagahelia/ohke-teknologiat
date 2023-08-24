@@ -2,7 +2,7 @@
 
 Tervetuloa kurssille!
 
-Ohjelmistokehittäjän työ on suurimmaksi osaksi muuta kuin jonkin tietyn ohjelmointikielen syntaksin suvereenia hallintaa. Tämän kurssin tavoitteena on esitellä ohjelmistokehittäjälle tärkeitä taitoja, työkaluja ja tekniikoita, joita ei suoraan ole tullut esille ohjelmoinnin peruskursseilla tai projektityökursseissa. Kurssi toimii samalla myös tukikurssina ohjelmistoprojekti 2 -kurssille, jossa tämän kurssin aiheita päästään soveltamaan käytännössä.
+Ohjelmistokehittäjän työ on suurimmaksi osaksi muuta kuin jonkin tietyn ohjelmointikielen syntaksin suvereenia hallintaa. Tämän kurssin tavoitteena on esitellä ohjelmistokehittäjälle tärkeitä taitoja, työkaluja ja tekniikoita, joita ei suoraan ole tullut esille ohjelmoinnin peruskursseilla tai projektityökursseissa. Kurssi toimii samalla myös tukikurssina ohjelmistoprojekti 2 -kurssille, jossa tämän kurssin aiheita päästään soveltamaan osana isompaa projektia.
 
 Opettajina kurssilla toimivat Teemu Havulinna ja Juhani Välimäki (etunimi.sukunimi@haaga-helia.fi). Kurssin sisältö perustuu suuresti myös kurssin aikaisemman opettajan, Ohto Rainion, työhön.
 
@@ -24,7 +24,7 @@ Saman seminaariaiheen valinneet opiskelijat osallistuvat sen aiheen yhteiseen se
 
 ## Kurssin osallistumisen vahvistaminen
 
-**Kurssin osallistumisen vahvistaminen edellyttää ensimmäisen ja toisen viikon viikkotehtävien hyväksyttyä suoritusta niiden määräaikaan mennessä.** Tehtäviin on saatavissa vinkkejä ja tukea kurssin Teams-kanavalla sekä oppitunneilla.
+⚠ **Kurssin osallistumisen vahvistaminen edellyttää ensimmäisen ja toisen viikon viikkotehtävien hyväksyttyä suoritusta niiden määräaikaan mennessä.** Tehtäviin on saatavissa vinkkejä ja tukea kurssin Teams-kanavalla sekä oppitunneilla.
 
 Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan varmistaa, että työskentely kurssin työkaluilla ja ohjelmointikielillä lähtee kaikilla käyntiin. Tarvitset riittävät esitiedot näistä aiheista kurssin seuraavia viikkoja varten.
 
@@ -39,7 +39,11 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
 
 **Huom!** Tämä sivu päivittyy kurssin edetessä ja yksittäisten tuntien aiheet voivat vielä muuttua.
 
-Oppitunnit pidetään pääsääntöisesti **torstaisin klo 14-16.45**. Yhdistelemme lähi- ja etäopiskelua, joten yksittäisten oppituntien kohdalta toteutusmuoto selviää varmimmin kurssin Teams-kanavan viesteistä ja lukujärjestyksestä. Kurssin seminaarivaiheessa ei järjestetä yhteisiä tapaamisia, vaan tarjoamme yksilöllistä ohjausta etukäteen sovittavina ajankohtina.
+Oppitunnit pidetään pääsääntöisesti **torstaisin klo 14-16.45**. Yhdistelemme lähi- ja etäopiskelua, joten yksittäisten oppituntien kohdalta toteutusmuoto selviää varmimmin kurssin Teams-kanavan viesteistä ja lukujärjestyksestä.
+
+**Pyydämme teitä tutustumaan etukäteen kunkin aiheen videoihin ja materiaaleihin, jotta voimme tapaamisissa käyttää aikaa mm. tehtävien parissa.**
+
+Kurssin seminaarivaiheessa ei järjestetä yhteisiä tapaamisia, vaan tarjoamme yksilöllistä ohjausta etukäteen sovittavina ajankohtina.
 
 <table>
     <thead>
@@ -78,7 +82,7 @@ Oppitunnit pidetään pääsääntöisesti **torstaisin klo 14-16.45**. Yhdistel
             <td>
                 <strong><a href="01_typescript/">TypeScript</a></strong><br />
                 <br />
-                <strong>Tehtävät:</strong><br />
+                <strong>Tehtävät:</strong>
                 <ul>
                     <li>📥 Postinumeroiden käsittely (Teams ja GitHub classroom)</li>
                 </ul>
@@ -99,10 +103,10 @@ Oppitunnit pidetään pääsääntöisesti **torstaisin klo 14-16.45**. Yhdistel
         <tr>
             <td>To 7.9.</td>
             <td>
-                <strong>TypeScript ohjelmointi jatkuu:</strong><br />
-                <strong><a href="01_typescript/">Omat tyypit</a></strong><br />
-                <strong>Tehtävät:</strong><br />
+                <strong>TypeScript ohjelmointi jatkuu: <a href="01_typescript/">Omat tyypit</a></strong>
                 <br />
+                <br />
+                <strong>Tehtävät:</strong>
                 <ul>
                     <li>📥 Users & Posts (Teams ja GitHub classroom)</li>
                 </ul>
@@ -275,7 +279,7 @@ Ohjelmistojen asentaminen ja käyttäminen eri käyttöjärjestelmillä poikkeaa
 
 Virtualisoituun ympäristöön tekemäsi asennukset eivät vaikuta tietokoneesi normaaliin käyttöön. Käyttämällä kurssin suositusten mukaisia ympäristöjä saat myös todennäköisemmin vertaistukea muilta opiskelijoilta ja opettajilta.
 
-Mikäli sinulla on valmiiksi käytössäsi Linux tai muu Unix-pohjainen käyttöjärjestelmä, kuten macOS, voit käyttää sitä kurssilla. Myös Raspberry Pi tai etäyhteydellä käytettävät Linux-ympäristöt, kuten [DigitalOcean](https://www.digitalocean.com/github-students/), [AWS](https://aws.amazon.com/ec2/), [Azure](https://azure.microsoft.com/en-us/services/virtual-machines/) sopivat kurssin tarkoituksiin, mutta niihin pystymme tarjoamaan vain vähäistä käyttötukea.
+Mikäli sinulla on valmiiksi käytössäsi Linux tai muu Unix-pohjainen käyttöjärjestelmä, kuten macOS, voit käyttää sitä kurssilla. Myösn esimerkiksi Raspberry Pi tai etäyhteydellä käytettävät Linux-ympäristöt, kuten [DigitalOcean](https://www.digitalocean.com/github-students/), [AWS](https://aws.amazon.com/ec2/), [Azure](https://azure.microsoft.com/en-us/services/virtual-machines/) sopivat kurssin tarkoituksiin, mutta niihin pystymme tarjoamaan vain vähäistä käyttötukea.
 
 Lisää ohjeita löydät kurssin [ensimmäisen viikon materiaalista](00_linux).
 
