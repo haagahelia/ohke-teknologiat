@@ -13,18 +13,32 @@ Ohjeet kurssille tarvittavan ympäristön asentamiseksi löydät [täältä](ase
 
 <!--Todo: video Linux-palomuurista-->
 
-Löydät tämän kurssin omien materiaalien lisäksi netistä lukuisia hyviä video- ja tekstimuotoisia ohjeita. Halutessasi voit käyttää myös muita materiaaleja ja aloittaa esimerkiksi videosta [15+ Terminal Commands Every Developer Must Know (Web Dev Simplified)](https://youtu.be/CV-ven_rxhw) sekä [Ubuntun komentorivitutoriaalista](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview).
+Löydät tämän kurssin omien materiaalien lisäksi netistä lukuisia hyviä video- ja tekstimuotoisia ohjeita. Halutessasi voit käyttää myös muita materiaaleja, esimerkiksi:
+
+**Videot**
+
+* [15+ Terminal Commands Every Developer Must Know (Web Dev Simplified)](https://youtu.be/CV-ven_rxhw)
+* [60 Linux Commands you NEED to know in 10 minutes (NetworkChuck)](https://youtu.be/gd7BXuUQ91w)
+* [Bash in 100 Seconds (Fireship)](https://youtu.be/I4EWvMFj37g)
+* [Command Line Crash Course For Beginners (Traversy Media)](https://youtu.be/uwAqEzhyjtw)
+* [What is Codespaces? (GitHub)](https://www.youtube.com/watch?v=sYJ3CHtT6WM)
+
+**Artikkelit**
+
+* [The Linux command line for beginners (Canonical Ltd)](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview)
+* [Linux Command Cheat Sheet (Guru99)](https://www.guru99.com/linux-commands-cheat-sheet.html)
+* [Top 50+ Linux Commands You MUST Know (DigitalOcean)](https://www.digitalocean.com/community/tutorials/linux-commands)
 
 
 ## Linuxin ja komentorivin perusteet
 
-Linux ja muut Unix-pohjaiset käyttöjärjestelmät, kuten MacOS, ovat kehittäjien keskuudessa paljon käytettyjä. [Stackoverflown 2020 kehittäjillä tekemän vuosittaisen tutkimuksen](https://insights.stackoverflow.com/survey/2020) mukaan Linuxia [on edellisen vuoden aikana käyttänyt 55% kehittäjistä](https://insights.stackoverflow.com/survey/2020#technology-platforms). Yksi syy tälle lienee se, että palvelimia käytetään tyypillisesti ainoastaan etäyhteyksillä, eikä niissä ole näyttöjä, näppäimistöjä tai graafisia käyttöliittymiä.
+Linux ja muut Unix-pohjaiset käyttöjärjestelmät, kuten MacOS, ovat kehittäjien keskuudessa paljon käytettyjä. [StackOverflown 2022 kehittäjillä tekemän vuosittaisen tutkimuksen](https://survey.stackoverflow.co/2022#operating-system) mukaan Linuxia [on edellisen vuoden aikana käyttänyt 40 % kehittäjistä](https://survey.stackoverflow.co/2022#operating-system) ja WSL:ää 15 % kehittäjistä.
 
 [![Terminal forever <3](https://www.commitstrip.com/wp-content/uploads/2016/12/Strip-Lignes-de-commande-english650-final-2.jpg)](https://www.commitstrip.com/en/2016/12/22/terminal-forever/?)
 
-Unix-pohjaiset käyttöjärjestelmät tarjoavat paljon työkaluja, jotka helpottavat kehittäjän työtä. Niillä on helppo myös työskennellä komentorivin kautta vahvoilla komennoilla, joilla pystyy esimerkiksi käsittelemään ohjelmistojen lokitiedostoja, ajastamaan komentoja jne. Komentojen toinen vahvuus on se, että ne on helposti ajastettavissa suoritettavaksi automaattisesti, ja eri komentosarjoja voidaan yhdistää skripteiksi.
+Unix-pohjaiset käyttöjärjestelmät tarjoavat paljon työkaluja, jotka helpottavat kehittäjän työtä. Niillä on helppo myös työskennellä komentorivin kautta vahvoilla komennoilla, joilla pystyy esimerkiksi käsittelemään ohjelmistojen lokitiedostoja, ajastamaan komentoja jne. Komentojen toinen vahvuus on se, että ne on helposti ajastettavissa suoritettavaksi automaattisesti ja eri komentosarjoja voidaan yhdistää skripteiksi. Myös ohjelmistojen ja työkalujen asentaminen sekä päivittäminen on Unix-pohjaisissa ympäristöissä tyypillisesti vaivatonta käyttöjärjestelmien sisäänrakennettujen pakettienhallintajärjestelmien ansiosta.
 
-Komentorivityöskentely on tärkeä taito myös esimerkiksi sulautettujen järjestelmien ja mikrotietokoneiden yhteydessä.
+Komentorivityöskentely on tärkeä taito pilvi-infrastruktuuria käytettäessä ja myös esimerkiksi sulautettujen järjestelmien ja mikrotietokoneiden yhteydessä.
 
 
 ## Unix-pohjaisten järjestelmien komentorivi
@@ -35,6 +49,8 @@ Alkuun mainittakoon yleisesti, että Linux-komentojen keskeyttäminen tarvittaes
 
 
 ## Unix-komentoja
+
+💡 Unix-komentoihin perehtymiseksi löytyy lukuisia oppaita ja tutoriaaleja. Olemme koonneet alle muutamia esimerkkejä, mutta syvällisemmän pohjan komentorivin käyttämiseen saat lukuisista muista lähteistä, joita olemme listanneet sivun yläosaan.
 
 ### Hakemistot ja navigointi
 
