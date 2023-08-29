@@ -4,6 +4,12 @@ Tämän oppitunnin tavoitteena on tutustua testauksen eri tasoihin yksikköteste
 
 Aiheen opiskelun jälkeen osaat kirjoittaa TS/JS-funktioillesi yksikkötestit ja tiedät mistä lähteä liikkeelle, kun sinulle tulee tarve kirjoittaa automatisoituja testejä. Osaat myös huomioida testausnäkökulmaa jäsentäessäsi TS/JS-ohjelmiasi eri moduuleihin ja funktioihin.
 
+## Edellisen toteutuksen videotallenne
+
+### [TypeScript: yksikkötestaus Jest-työkalulla](https://youtu.be/iV7BTxNO0l0) *38:38*
+
+Tällä videolla pohditaan erilaisia lähestymistapoja testaukseen erityisesti testauksen tasojen näkökulmasta. Perehdymme JavaScriptin tapoihin verrata eri tyyppisiä arvoja ja opettelemme vertailemaan taulukoita ja olioita yksikkötestaustyökalujen avulla.
+
 
 ## Suositellut videot
 
@@ -27,42 +33,6 @@ Aiheen opiskelun jälkeen osaat kirjoittaa TS/JS-funktioillesi yksikkötestit ja
 
 <a href="https://courses.webdevsimplified.com/view/courses/javascript-simplified-advanced/729109-Testing/2126286-38-Jest-Basics"><img src="https://d31ezp3r8jwmks.cloudfront.net/uxoz8jjx52plpakesnwh34d3h25x" width="320" height="180"></a>
 
-<!--# Oppitunnin videot
-
-**[Node.js osa 1/3: malliratkaisu, npm, Jest ](https://web.microsoftstream.com/video/c714b986-1990-478a-a2d8-aef39daeb4bb)** *55:37*
-
-Tällä videolla kerrataan edellisen viikon syntaksit konkreettisen esimerkin avulla. Käymme läpi users & posts -tehtävän malliratkaisun, perehdymme Noden pakettienhallintaan ja teemme yksikkötestejä Jest-testaustyökalulla.
-
-**[Node.js osa 2/3: npm, Jest, async/await](https://web.microsoftstream.com/video/631fa660-c0ec-44df-b948-79bd875edf5e)** *48:11*
-
-Tällä videolla käsittelemme yksikkötestausta Jestillä sekä eri tyyppisten arvojen vertailua JavaScriptillä. Asennamme `node-fetch`-kirjaston, jonka avulla voimme tehdä asynkronisia HTTP-pyyntöjä Node.js-koodistamme. Tämän oppitunnin esimerkkikoodit löytyvät osoitteesta https://github.com/swd1tn002/express-oppitunti-2022.
-
-**[ Node.js osa 3/3: npm, Jest, Express ](https://web.microsoftstream.com/video/0ba8a483-aaee-41d4-96c2-459d86ef1264)** *29:59*
-
-Tällä videolla asennamme express-kirjaston, jonka avulla toteutamme yksinkertaisen http-palvelun edellisissä videoissa käsitellyn datan tarjoamiseksi web-selaimelle. Käsittelemme videon lopussa myös tämän viikon harjoitustehtävän tehtävänantoa. Tämän oppitunnin esimerkkikoodit löytyvät osoitteesta https://github.com/swd1tn002/express-oppitunti-2022.
-
-
-## ES6-syntaksien kertaus
-
-Edellisellä oppitunnilla käsittelimme mm. seuraavassa koodiesimerkissä esiintyviä syntakseja:
-
-```js
-function helloAgent({ names }) {
-    let { first, last } = names;
-    console.log(`My name is ${last}, ${first} ${last}`);
-}
-
-module.exports = { helloAgent };
-```
-
-Miten tässä moduulissa määritettyä `helloAgent`-funktiota voitaisiin kutsua toisesta Node.js-moduulista?
--->
-
-## Sorting & Filtering -tehtävän malliratkaisu
-
-Edellisen oppitunnin tehtävässä teidän tuli suodattaa ja lajitella MyHelsinki-rajapinnan tapahtumia.
-
-Oppitunnin aluksi tutustumme tehtävän malliratkaisuun ja sen yksikkötesteihin.
 
 
 ## Yksikkötestaus

@@ -175,6 +175,11 @@ Kurssin seminaarivaiheessa ei järjestetä yhteisiä tapaamisia, vaan tarjoamme 
                     <li>Test driven development</li>
                     <li>Testikattavuus, fixturet, mock:it</li>
                 </ul>
+                <br />
+                    <strong>Videot:</strong>
+                <ul>
+                    <li><a href="https://youtu.be/iV7BTxNO0l0">📼 TypeScript: yksikkötestaus Jest-työkalulla</a></li>
+                </ul>
             </td>
             <td>
                 Tapaaminen luokassa ja Teamsissa<br />
