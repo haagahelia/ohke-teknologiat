@@ -129,7 +129,7 @@ $ npx ts-node                       # käynnistää ts-noden REPL-tilan
 Jos haluat kääntää kirjoittamasi TypeScript-kielisen ohjelman lähdekoodit JavaScript-kielisiksi lähdekoodeiksi, onnistuu se `tsc`-komennolla (TypeScript compiler):
 
 ```
-$ npx tsc                   # kaikki .ts-tiedostot
+$ npx tsc                   # kaikki .ts-tiedostot (edellyttää tsconfig-tiedostoa)
 $ npx tsc helloWorld.ts     # yksi .ts-tiedosto
 ```
 
