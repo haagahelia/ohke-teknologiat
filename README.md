@@ -59,17 +59,17 @@ Kurssin seminaarivaiheessa ei järjestetä yhteisiä tapaamisia, vaan tarjoamme 
             <td>
                 <strong><a href="00_linux/">Kurssin johdanto, ympäristöt ja Linux/Unix-komentorivi</a></strong><br />
                 <br />
-                <strong>Tehtävät:</strong><br />
-                <ul>
-                    <li><a href="00_linux/asennukset.md">📥 Kurssin kehitysympäristön asennus</a></li>
-                    <li>📥 Linux-komentorivi (Teams ja GitHub classroom)</li>
-                </ul>
-                <br />
                 <strong>Videot:</strong><br />
                 <ul>
                     <li><a href="https://youtu.be/HRqHfItALO4">📼 Linuxin peruskäyttö</a></li>
                     <li><a href="https://youtu.be/9dA17XlzT-w">📼 GitHub classroom -tehtävien ohjeistus</a></li>
                     <li><a href="https://youtu.be/aC3xj4KXu3g">📼 Kurssin koodausympäristöt (wsl2, Docker, Development containers, Codespace)</a></li>
+                </ul>
+                <br />
+                <strong>Tehtävät:</strong><br />
+                <ul>
+                    <li><a href="00_linux/asennukset.md">📥 Kurssin kehitysympäristön asennus</a></li>
+                    <li>📥 Linux-komentorivi (Teams ja GitHub classroom)</li>
                 </ul>
             </td>
             <td>
@@ -82,17 +82,17 @@ Kurssin seminaarivaiheessa ei järjestetä yhteisiä tapaamisia, vaan tarjoamme 
             <td>
                 <strong><a href="01_typescript/">TypeScript</a></strong><br />
                 <br />
-                <strong>Tehtävät:</strong>
-                <ul>
-                    <li>📥 Postinumeroiden käsittely (Teams ja GitHub classroom)</li>
-                </ul>
-                <br />
                 <strong>Videot:</strong>
                 <ul>
                     <li><a href="https://youtu.be/5Ts75AHEGEI">📼 TypeScriptin asennus, kääntäminen ja ts-node</a></li>
                     <li><a href="https://youtu.be/WfcCsZ0I3sc">📼 tsconfig.json, tyypit, muuttujat, funktiot ja taulukot</a></li>
                     <!--li><a href="https://web.microsoftstream.com/video/497d7df3-1629-49f9-b460-82c1d479b03d">📼 Pythonin perusrakenteet ja komentorivikäyttö</a></li-->
                     <!--li><a href="https://web.microsoftstream.com/video/0f31953b-417b-4669-915d-ca35917bfbc0">📼 Pythonin tietorakenteet, ehdot ja toisto</a></li-->
+                </ul>
+                <br />
+                <strong>Tehtävät:</strong>
+                <ul>
+                    <li>📥 Postinumeroiden käsittely (Teams ja GitHub classroom)</li>
                 </ul>
             </td>
             <td>
@@ -103,18 +103,17 @@ Kurssin seminaarivaiheessa ei järjestetä yhteisiä tapaamisia, vaan tarjoamme 
         <tr>
             <td>To 7.9.</td>
             <td>
-                <strong>TypeScript ohjelmointi jatkuu: <a href="01_typescript/">Omat tyypit</a></strong>
-                <br />
-                <br />
-                <strong>Tehtävät:</strong>
-                <ul>
-                    <li>📥 Users & Posts (Teams ja GitHub classroom)</li>
-                </ul>
+                <strong>TypeScript ohjelmointi jatkuu: <a href="01_typescript/">Omat tyypit</a></strong><br />
                 <br />
                 <strong>Videot:</strong>
                 <ul>
                     <li><a href="https://youtu.be/wjnInaST6Q4">📼 PostalCodes-tehtävän malliratkaisu ja taulukkofunktiot (map, filter...)</a></li>
                     <li><a href="https://youtu.be/f7_vE_lmb5c">📼 JSON-datan käsittely ja omien tyyppien määrittely</a></li>
+                </ul>
+                <br />
+                <strong>Tehtävät:</strong>
+                <ul>
+                    <li>📥 Users & Posts (Teams ja GitHub classroom)</li>
                 </ul>
             </td>
             <td>
@@ -144,6 +143,12 @@ Kurssin seminaarivaiheessa ei järjestetä yhteisiä tapaamisia, vaan tarjoamme 
             <td>
                 <strong><a href="04_tietorakenteet_ja_algoritmit/">Tietorakenteet ja algoritmit</a></strong><br/>
                 <br />
+                <strong>Videot:</strong>
+                <ul>
+                    <li><a href="https://youtu.be/Ff5Ux9x5YBw">📼 Tietorakenteet ja algoritmit osa 1</a></li>
+                    <li><a href="https://youtu.be/oLasu45pPAI">📼 Tietorakenteet ja algoritmit osa 2</a></li>
+                </ul>
+                <br />
                 <strong>Tehtävät:</strong><br />
                 <ul>
                     <li>📥 Tapahtumien suodattaminen ja lajittelu (Teams ja GitHub classroom)</li>
@@ -152,12 +157,6 @@ Kurssin seminaarivaiheessa ei järjestetä yhteisiä tapaamisia, vaan tarjoamme 
                     <li>Lajittelualgoritmit</li>
                     <li>Hakualgoritmit</li>
                     <li>Algoritmien tehokkuus</li>
-                </ul>
-                <br />
-                <strong>Videot:</strong>
-                <ul>
-                    <li><a href="https://youtu.be/Ff5Ux9x5YBw">📼 Tietorakenteet ja algoritmit osa 1</a></li>
-                    <li><a href="https://youtu.be/oLasu45pPAI">📼 Tietorakenteet ja algoritmit osa 2</a></li>
                 </ul>
             </td>
             <td>
@@ -170,16 +169,15 @@ Kurssin seminaarivaiheessa ei järjestetä yhteisiä tapaamisia, vaan tarjoamme 
             <td>
                 <strong>Testaus:</strong><br />
                 <strong><a href="02_testaus/typescript.md">TypeScript & Jest</a></strong><br />
-                <ul>
-                    <li>Testauksen tasot</li>
-                    <li>Yksikkötestaus</li>
-                    <li>Test driven development</li>
-                    <li>Testikattavuus, fixturet, mock:it</li>
-                </ul>
                 <br />
-                    <strong>Videot:</strong>
+                <strong>Videot:</strong>
                 <ul>
                     <li><a href="https://youtu.be/iV7BTxNO0l0">📼 TypeScript: yksikkötestaus Jest-työkalulla</a></li>
+                </ul>
+                <br />
+                <strong>Tehtävät:</strong><br />
+                <ul>
+                    <li>📥 Teams ja GitHub classroom</li>
                 </ul>
             </td>
             <td>
@@ -203,7 +201,7 @@ Kurssin seminaarivaiheessa ei järjestetä yhteisiä tapaamisia, vaan tarjoamme 
         <tr>
             <td>To 12.10.</td>
             <td>
-                <strong><a href="06_ohjelmistoarkkitehtuurit_ja_patternit/SoftwareArchitecturesAndPatterns.pdf">Ohjelmistoarkkitehtuurit ja patternit.</a> <a href="06_ohjelmistoarkkitehtuurit_ja_patternit/ApacheKafka_DistributedEventStreamOrBroker.pdf">Kafka.</a><a href="06_ohjelmistoarkkitehtuurit_ja_patternit/">Muita aihepiirin materiaaleja</a> ((Dockerin alkeita))</strong>
+                <strong><a href="06_ohjelmistoarkkitehtuurit_ja_patternit/SoftwareArchitecturesAndPatterns.pdf">Ohjelmistoarkkitehtuurit ja patternit.</a> <a href="06_ohjelmistoarkkitehtuurit_ja_patternit/ApacheKafka_DistributedEventStreamOrBroker.pdf">Kafka.</a><a href="06_ohjelmistoarkkitehtuurit_ja_patternit/">Muita aihepiirin materiaaleja</a> (Dockerin alkeita)</strong>
             </td>
             <td>
                 Tapaaminen luokassa ja Teamsissa<br />
