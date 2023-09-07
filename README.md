@@ -126,7 +126,7 @@ Kurssin seminaarivaiheessa ei järjestetä yhteisiä tapaamisia, vaan tarjoamme 
             <td>To 14.9.</td>
             <td>
                 <strong><a href="05_es6_node/REAME.md">Node.js, npm, Express, Knex ja asynkroonisuus</a></strong><br />
-                <p>(Muuttuu, voit katsella etukäteen jos pakko, mutta älä aloita mitään muuta tekemistä kuin oppimista.)<p>
+                <p>(Muuttuu 14.9. mennessä, voit katsella etukäteen jos pakko, mutta älä aloita mitään muuta tekemistä kuin oppimista.)<p>
                 <ul>
                     <li>Node.js backend</li>
                     <li>Express</li>
