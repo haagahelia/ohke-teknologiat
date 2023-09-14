@@ -88,8 +88,8 @@ Some of the interesting ones set to what we want below. (More info if needed: ht
 {
    "compilerOptions": {
      "target": "ES2020", 
-     "module":"NodeNext",
-     "moduleResolution":"NodeNext",
+     "module": "es2020",
+     "moduleResolution": "node",
      "sourceMap": true,
      "outDir": "dist",
 
