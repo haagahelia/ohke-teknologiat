@@ -5,7 +5,7 @@
 Go to GitHub.com ,to your own account and create a new repo 'ts-node-app'.
 - Create the repo private for the time being.
 - Add README.md
-- Use gitignore template: Node as 
+- Use gitignore template: Node 
 
 - clone the repo to some local folder on your computer 
 (Note: repo cannot be inside another repo folder, nor its subfolders)
@@ -44,9 +44,6 @@ creates the **package.json** file:   (removed some extra things)
 
 More info when needed: https://docs.npmjs.com/cli/v10/configuring-npm/package-json 
 
-> touch index.js
-
-If we would like to create the above mentioned starting code for the node app. But we might skip and go to Typescript version.
 
 ## package.json file modifications - ES module support
 
@@ -98,7 +95,7 @@ Some of the interesting ones set to what we want below. (More info if needed: ht
 
      "esModuleInterop":true,
      "strict": true,
-     "skipLibCheck:" true,
+     "skipLibCheck" : true,
      "forceConsistentCasingInFileNames": true,
    },
    "include":["src/**/*"],
@@ -164,7 +161,7 @@ Here is the src/index.js first: Change the file to this, and start giving the mi
 
 
 ```
-import express from 'express';
+import express, {Express} from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import dotenv from 'dotenv';
@@ -172,19 +169,24 @@ import dotenv from 'dotenv';
 import logger from './utils/logger.js';
 import routes from './routes/index.js';
 
-const app = express();
-
-dotenv.config({});
+const app:Express = express();
+const port:number = 3335;
+dotenv.config({});  // Reads the .env values from disk
 
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(`/api`, routes);
+app.use(`/api`, routes );
 
-app.listen(3333, () => {
-  logger.log('info', `Backend starting on port 3333`);
+
+app.listen(port, () => {
+  console.log(`Backend starting on port ${port}`);
+  logger.log('info', `Backend starting on port ${port}`);
 });
 ```
+
+Comment out all lines causing problems first
+
 
 Then file by file copy following folder and named file, and make it work for our case:
 (= remove extras that are not there yet or won't be at all)
