@@ -142,6 +142,8 @@ In package.json scripts we utilize concurrently and give it two scripts to run c
 
 > npm run build 
 
+> npm run serve
+
 index.ts:
 
 ```  
@@ -185,7 +187,9 @@ app.listen(port, () => {
 });
 ```
 
-Comment out all lines causing problems first
+Comment out all lines causing problems first. Then add e.g. the logger and test. Then add routing index from below. Each time comment out what is not implemented yet.
+
+> npm run serve
 
 
 Then file by file copy following folder and named file, and make it work for our case:
