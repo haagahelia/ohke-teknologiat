@@ -125,7 +125,7 @@ Kurssin seminaarivaiheessa ei järjestetä yhteisiä tapaamisia, vaan tarjoamme 
             <td>To 14.9.</td>
             <td>
                 <strong><a href="05_es6_node/NodeJS_demo/README.md">Node.js, npm, Express ja TypeScript</a></strong><br />
-                <p>Demo ja sen jatkaminen tehtäväpalautukseksi: 05_es6_node/NodeJS_demo/0_NodeIntro/README.md<p>
+                <p>Demo ja sen jatkaminen tehtäväpalautukseksi: <a href="05_es6_node/NodeJS_demo/0_NodeIntro/README.md">Demo ja tehtävä</a><p>
                 <ul>
                     <li>Node.js backend</li>
                     <li>Express</li>
