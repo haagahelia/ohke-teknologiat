@@ -202,11 +202,13 @@ Then file by file copy following folder and named file, and make it work for our
 - src/routes/building.ts  (Remove so far all related to DB, db_knex, authenticator, admin, statist, planner. Put some fake data returned) 
 
 # Task this week
-1. Follow the lesson recording on how to make the backend to work for one route to work (no DB yet,
-no authenticatio or roles) and tested.
-1. Using same model, add there src/routes/category.ts   (Category will have id -number and name -string, and optional description -longer string). Make three fake Category routes of your choice. GET, GET (all), POST, PUT, DELETE. (Later they can be made to be real knex+mariadb routes)
-1. Create a PDF containing src/routes/index.ts src/routes/category.ts src/validationHandler/*.ts
-**Note:** You don't need to edit root index, logger, responseHandlers, validate function or so common parts. Only building parts while doing the demo, and then only category related parts.
+1. Follow the lesson recording on how to make the backend to work for one route to work (no DB yet, no authentication or roles) and tested.
+1. You might need to install more modules, e.g. module with types for MySQLError or such.
+1. Using same model, add there src/routes/category.ts   (Category will have id -number and name -string, and optional description -longer string). Make three fake Category routes of your choice. GET, GET (all), POST, PUT, DELETE. (Later they can be made to be real knex+mariadb routes). Make some programming logic, e.g. could 
+check that the POSTed Category's name does not exist already, and that PUTted Category's id exists. Or some other programming you can then test.
+1. Create some validators for the routes, using the existing models
+1. Create a PDF containing src/routes/index.ts src/routes/category.ts src/validationHandler/*.ts  AND some PostMan screens (request & data, result)
+**Note:** You most likely don't need to edit root index, logger, responseHandlers, validate function or so common parts. Only building parts while doing the demo, and then only category related parts.
 
 # TypeScript - What TypeScript features will we use?
 - parameter type, return type, assignment type checking / enforcing
@@ -219,5 +221,5 @@ https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
 # What other things to learn here?
 - Express routing for backend
 - Express validators
-- Express middleware function idea   (req, resp, next)
+- Express middleware function idea   (req, resp, next()) in the request handling chain
 - Logger
