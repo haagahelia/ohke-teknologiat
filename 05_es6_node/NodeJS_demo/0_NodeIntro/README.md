@@ -14,7 +14,7 @@ Go to GitHub.com ,to your own account and create a new repo 'ts-node-app'.
 
 ## Install Node.js if you don't have it yet
 
-(Installing node installs npm and npx too)
+(Installing node to your computer installs npm and npx too)
 
 ## Make the repo folder become a node project
 
@@ -22,7 +22,7 @@ Go to GitHub.com ,to your own account and create a new repo 'ts-node-app'.
 
 (y = yes to everything, don't ask for options)
 
-creates the **package.json** file:   (removed some extra things)
+That creates the **package.json** file:   (Some non-interesting parts are not shown.)
 ```
 {
   "name": "ts-node-app",
@@ -42,35 +42,37 @@ creates the **package.json** file:   (removed some extra things)
 }
 ```
 
-More info when needed: https://docs.npmjs.com/cli/v10/configuring-npm/package-json 
+(( More info when needed: https://docs.npmjs.com/cli/v10/configuring-npm/package-json )) 
 
 
 ## package.json file modifications - ES module support
 
-We want to be able to use ES modules (import/export) instead of the old CommonJS module system (require/module.exports). ((( Though you can set old CommonJS files to work too in settings, and then import some from './olderCode.cjs'  . Notice the .cjs file extension )))
+We want to be able to use ES modules (import/export) instead of the old CommonJS module system (require/module.exports). 
 
-package.json addition:
+package.json addition, put it e.g. after "main" :
 ```
 "type":"module", 
 ```
 
-in .ts code files later
+in .js and .ts code files later
 ```
 import some, {other, third as fourth} from './xyz.js';
 
 // Here 'default import' some and two 'named imports' other and third (third renamed as fourth for our code file)
 
 // Note that file extension .js might be reuired for your own codefiles, depending on settings.
-// And its not the .ts but the output .js
+
+// And note also that in imports we have to use .js even if the file from where to import is written as .ts file. So our imports 'target' the output .js
 ```
 
 
+## Changing project to TypeScript
+
 This is how we would install typescript modules to node project, so that it they will be used only during development time, but not in the built Production version (js, html, css etc. only):
 
-## Changing project to TypeScript
 > npm install typescript --save-dev 
 
-package.json addition:
+package.json addition appears:
 ```
 "devDependencies": {
    "typescript":"^4.9.7"
@@ -79,11 +81,10 @@ package.json addition:
 
 > npx tsc --init
 
-That created the tsconfig.json file. Let's modify it to look like this:
+That tsc --init creats the tsconfig.json file. Let's modify it to look like this:
 
 ### tsconfig.json
 
-Some of the interesting ones set to what we want below. (More info if needed: https://www.typescriptlang.org/tsconfig)
 ```
 {
    "compilerOptions": {
@@ -101,9 +102,12 @@ Some of the interesting ones set to what we want below. (More info if needed: ht
    "include":["src/**/*"],
 }
 ```
-And let's also create the src folder that we remember to put our code there. Output dir 'dist' will be created automatically.
+Some of the interesting ones set to what we want above. (More info if needed: https://www.typescriptlang.org/tsconfig)
 
-## Writing scripts taking care of TypeScript compilation and build deployment
+
+And let's also create the 'src' folder that we remember to put our code there. Output dir 'dist' will be created automatically.
+
+## Writing node app / npm project scripts taking care of TypeScript compilation and JavaScript build deployment
 
 Let's install a helper module rimraf for removing (rm) folder (r) recursively and (f) forcibly 
 
@@ -144,7 +148,7 @@ In package.json scripts we utilize concurrently and give it two scripts to run c
 
 > npm run serve
 
-index.ts:
+A very simple Node index.ts file could look like this:
 
 ```  
 import express, {Express, Request, Response } from "express";
@@ -157,9 +161,11 @@ app.listen(port, () => {
 })
 ```
 
-Then let's start copying, from the following project: https://github.com/haagahelia/Siba_be,
+## Copy the given code files from Teams:
 
-Here is the src/index.js first: Change the file to this, and start giving the missing parts, or comment out initially:
+Then let's start copying from Teams the code files that were originally from the following project: https://github.com/haagahelia/Siba_be,
+
+Here is a similar src/index.js file. But go to Teams and use the files from there. General > Files > NodeJS Session 1
 
 
 ```
@@ -186,7 +192,7 @@ app.listen(port, () => {
   logger.log('info', `Backend starting on port ${port}`);
 });
 ```
-
+## How to add the files from Teams to the project:
 Comment out all lines causing problems first. Then add e.g. the logger and test. Then add routing index from below. Each time comment out what is not implemented yet.
 
 > npm run serve
@@ -202,19 +208,21 @@ Then file by file copy following folder and named file, and make it work for our
 - src/routes/building.ts  (Remove so far all related to DB, db_knex, authenticator, admin, statist, planner. Put some fake data returned) 
 
 # Task this week
-1. Follow the lesson recording on how to make the backend to work for one route to work (no DB yet, no authentication or roles) and tested.
+1. Follow the lesson recording (or the text above) on how to make the backend to work for one route to work (no DB yet, no authentication or roles) and how to test it.
+1. Especially look at the new 37 min video.
 1. You might need to install more modules, e.g. module with types for MySQLError or such.
-1. Using same model, add there src/routes/category.ts   (Category will have id -number and name -string, and optional description -longer string). Make three fake Category routes of your choice. GET, GET (all), POST, PUT, DELETE. (Later they can be made to be real knex+mariadb routes). Make some programming logic, e.g. could 
-check that the POSTed Category's name does not exist already, and that PUTted Category's id exists. Or some other programming you can then test.
+1. Using same model, add there src/routes/category.ts file  (Category will have id -a number and name - a string, and optional description - a longer string). Make three fake Category routes of your choice. GET, GET (all), POST, PUT, DELETE. (Later they can be made to be real knex+mariadb routes). Make some programming logic, e.g. could 
+check that the POSTed Category's name doesn't already exist, and that PUTted Category's id exists. Or some other programming you can then test with PostMan test cases.
 1. Create some validators for the routes, using the existing models
 1. Create a PDF containing src/routes/index.ts src/routes/category.ts src/validationHandler/*.ts  AND some PostMan screens (request & data, result)
-**Note:** You most likely don't need to edit root index, logger, responseHandlers, validate function or so common parts. Only building parts while doing the demo, and then only category related parts.
 
-# TypeScript - What TypeScript features will we use?
+**Note:** You most likely don't need to edit root index, logger, responseHandlers, validate function or so common parts. Only 'building' parts while doing the demo, and then only 'category' related parts.
+
+# TypeScript - What TypeScript features are in use in that kind of project?
 - parameter type, return type, assignment type checking / enforcing
 - member and parameter auto-complete/intellisense while writing the code
 - interface for request body or URL parameter validators
-- more?
+- Generics possibly
 
 https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
 
@@ -223,3 +231,6 @@ https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
 - Express validators
 - Express middleware function idea   (req, resp, next()) in the request handling chain
 - Logger
+- REST API with simplified URLs GET /, GET /:id, ...
+- A bit of PostMan
+- 
