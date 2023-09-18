@@ -221,8 +221,8 @@ check that the POSTed Category's name doesn't already exist, and that PUTted Cat
 # TypeScript - What TypeScript features are in use in that kind of project?
 - parameter type, return type, assignment type checking / enforcing
 - member and parameter auto-complete/intellisense while writing the code
-- interface for request body or URL parameter validators
-- Generics possibly
+- interface for the type itself
+- Generic types <T> used in some functions
 
 https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
 
