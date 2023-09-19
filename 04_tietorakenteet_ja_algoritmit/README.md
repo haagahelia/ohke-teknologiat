@@ -2,7 +2,7 @@
 
 Tällä viikolla ohjelmistokehityksen teknologioita -kurssilla tavoitteena on perehtyä tietorakenteiden ja algoritmien peruskäsitteisiin. Opettelemme arvioimaan karkeasti erilaisten algoritmisten lähestymistapojen soveltuvuutta kohtaamiimme ohjelmointiongelmiin.
 
-Ohjelmointikielinä esimerkeissä ja tehtävässä esiintyvät **TypeScript** ja **Python**, mutta myös muista yleisimmistä kielistä löytyy vastaavat tietorakenteet samoilla ominaispiirteillä.
+Ohjelmointikielinä esimerkeissä ja tehtävässä esiintyvät **TypeScript** ja **JavaScript**, mutta myös muista yleisimmistä kielistä löytyy vastaavat tietorakenteet samoilla ominaispiirteillä.
 
 Tavoitteenamme ei ole oppia laskemaan tai esittämään algoritmiemme tarkkaa tehokkuutta matemaattisilla kaavoilla, vaan käytämme laskukaavoja apuvälineenä ymmärtääksemme, miksi jokin algoritmi suoriutuu samasta tehtävästä tehokkaammin kuin toinen. Emme myöskään harjoittele optimoimaan ohjelmiemme suorituskykyä, vaikka suorituskyky toimiikin tärkeänä mittarina tällä viikolla.
 
@@ -182,28 +182,6 @@ Tässä tapauksessa yhteisten sanojen selvittäminen kesti noin 0,16 sekuntia (r
 
 Kirjoitetaan skripti, joka lukee kaikki sanat kahdesta tiedostosta listoille. Kun listat on muodostettu, etsitään listalta **A** kaikki sanat, jotka esiintyvät myös listalla **B**! Lopuksi tulostetaan löytyneet sanat.
 
-
-**Python:**
-
-```python
-def read_words(file_path):
-    with open(file_path, encoding='utf-8') as file:
-        return file.read().splitlines()
-
-
-def main():
-    finnish_words = read_words('kotus-sanalista-v1/kotus-sanalista-suomi.txt')
-    english_words = read_words('/usr/share/dict/words')
-
-    for word in finnish_words:
-        if word in english_words:
-            print(word)
-
-
-if __name__ == '__main__':
-    main()
-```
-
 **TypeScript:**
 
 ```ts
@@ -228,7 +206,7 @@ for (let fi of finnish) {
 * Kuinka kauan algoritmin suoritus kestää?
 * Mistä kesto johtuu?
 * Mikä on algoritmin kokonaisaikavaatimus tällä hetkellä?
-* Mikä on Pythonin `x in list`-operaation ja JavaScriptin `includes`-metodin aikavaatimus? [https://wiki.python.org/moin/TimeComplexity](https://wiki.python.org/moin/TimeComplexity)
+* Mikä on JavaScriptin `includes`-metodin aikavaatimus? [Complexity of accessing data in an object](https://stackoverflow.com/a/45267146)
 
 
 #### Ratkaisun tehokkuuden arviointi
@@ -244,17 +222,6 @@ Vertailuoperaatioita tehdään siis jopa `n * m` kappaletta, joka meidän aineis
 Algoritmin tehokkuus  | Vertailujen määrä | Suoritusaika
 ----------------------|-------------------|----------
 O(n * m)              | ~10 000 000 000   | ?
-
-
-### Bonus: ohjelman profilointi
-
-Pythonissa on valmiina `cProfile`-niminen moduuli, jonka avulla voimme mitata eri funktioiden suoritusten määrää ja niihin kulunutta aikaa. Seuraavissa vaiheissa hyödynnetään myös profilointia:
-
-```bash
-$ python3 -m cProfile -s calls sanalistat.py
-```
-
-Yllä olevassa komennossa `-m cProfile` käynnistää profiloijan ja `-s calls` järjestää funktiot niiden suorituskertojen mukaan.
 
 
 ### 2. Miten voimme nopeuttaa algoritmin toimintaa?
@@ -274,60 +241,6 @@ Voit katsoa laajemman visualisoinnin algoritmin suorituksesta esimerkiksi osoitt
 
 Muutetaan vaiheessa 1 kehitettyä sovellusta siten, että puolitamme etsittävän aineiston. Toteutetaan siis oma binäärihaku!
 
-#### Puolitushaku Pythonilla
-
-```python
-"""
-Tiedosto binary_search.py
-Tutustu myös valmiiseen toteutukseen https://docs.python.org/3/library/bisect.html
-"""
-def binary_search(word, list_of_words):
-    left = 0
-    right = len(list_of_words) - 1
-
-    while left <= right:
-        middle = (left + right) // 2
-        if list_of_words[middle] < word:
-            left = middle + 1
-        elif list_of_words[middle] > word:
-            right = middle - 1
-        else:
-            return True
-
-    return False
-```
-
-```python
-from binary_search import binary_search
-
-
-def read_words(file_path):
-    with open(file_path, encoding='utf-8') as file:
-        return file.read().splitlines()
-
-
-def main():
-    finnish_words = read_words('kotus-sanalista-v1/kotus-sanalista-suomi.txt')
-    english_words = read_words('/usr/share/dict/words')
-
-    # Järjestetään sanat aakkosjärjestykseen
-    finnish_words.sort()
-    english_words.sort()
-
-    for word in finnish_words:
-        if binary_search(word, english_words):
-            print(word)
-
-
-if __name__ == '__main__':
-    main()
-```
-
-```bash
-$ python3 -m cProfile -s calls sanalistat.py
-```
-
-#### Puolitushaku TypeScriptillä
 
 ```ts
 function binarySearch(word: string, sortedWords: readonly string[]): boolean {
@@ -405,7 +318,7 @@ Algoritmin tehokkuus  | Vertailujen määrä | Suoritusaika
 O(n * log2(m))        | ~2 000 000        | ?
 
 
-**Huom!** Oikeassa ohjelmistoprojektissa käyttäisit Pythonin valmista [bisect](https://docs.python.org/3/library/bisect.html)-moduulia. JavaScript-kielen standardikirjastossa ei ole binäärihakua valmiina, mutta seikkailunhaluiset voivat asentaa sellaisen jostain lukuisista [npm-paketeista](https://www.npmjs.com/search?q=binary%20search).
+**Huom!** JavaScript-kielen standardikirjastossa ei ole binäärihakua valmiina, mutta seikkailunhaluiset voivat asentaa sellaisen jostain lukuisista [npm-paketeista](https://www.npmjs.com/search?q=binary%20search).
 
 
 ### 3. Miten käytetty tietorakenne vaikuttaa ohjelman nopeuteen?
@@ -414,40 +327,7 @@ Suomenkielisen sanalistan läpikäyntiä voi olla mahdotonta nopeuttaa, koska ha
 
 Olisiko meillä muita tietorakenteita, joita voisimme käyttää listojen sijasta? Mikä tietorakenne olisi nopea hakujen tekemiseen?
 
-Hajautustaulut, kuten Pythonin sanakirja, toimivat eri periaatteella kuin listat. Listoilla arvot esiintyvät peräkkäin ja esimerkiksi merkkijono `'tie'` voi olla listan missä tahansa indeksissä. Hajautettavat tietorakenteet toimivat puolestaan siten, että jokaiselle arvolle lasketaan sijainti **hajautusfunktion** avulla. Teoriassa kukin arvovoi olla hajautustaulussa vain yhdessä tietyssä kohdassa, joten on hyvin nopeaa tarkastaa, löytyykö tiettyä arvoa.
-
-Pythonissa hajautusarvot lasketaan valmiilla `hash`-funktiolla:
-
-```python
->>> hash('python')
-1263623612
-
->>> hash('java')
-362104960
-
->>> hash('javascript')
--2131589936
-```
-
-Sanakirjat ja objektit toimivat hajautusperiaatteella, joten kokeillaan muuttaa Python-koodia seuraavasti:
-
-```python
-def main():
-    finnish_words = read_words('kotus-sanalista-v1/kotus-sanalista-suomi.txt')
-    english_words = read_words('/usr/share/dict/words')
-
-    # sanakirjan luominen, dictionary comprehension:
-    english_dict = {word: True for word in english_words}
-
-    for word in finnish_words:
-        if word in english_dict:
-            print(word)
-
-if __name__ == '__main__':
-    main()
-```
-
-Vastaavasti TypeScriptillä:
+Hajautustaulut, kuten JavaScriptin objektit, Javan Map ja Pythonin dict, toimivat eri periaatteella kuin listat. Listoilla arvot esiintyvät peräkkäin ja esimerkiksi merkkijono `'tie'` voi olla listan missä tahansa indeksissä. Hajautettavat tietorakenteet toimivat puolestaan siten, että jokaiselle arvolle lasketaan sijainti **hajautusfunktion** avulla. Teoriassa kukin arvovoi olla hajautustaulussa vain yhdessä tietyssä kohdassa, joten on hyvin nopeaa tarkastaa, löytyykö tiettyä arvoa.
 
 ```ts
 // see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries
@@ -462,8 +342,8 @@ for (let fi of finnish) {
 
 * Kuinka kauan suoritus kestää tällä kertaa?
 * Mistä ero johtuu?
-* Mikä on `word in english_dict`- tai `fi in englishObject`-operaation aikavaatimus? https://wiki.python.org/moin/TimeComplexity, https://stackoverflow.com/q/31091772
-* Sanakirjan muodostaminen tehtiin yllä ns. [dict comprehension](https://www.python.org/dev/peps/pep-0274/)-syntaksilla
+* Mikä on `fi in englishObject`-operaation aikavaatimus?
+* Objektin muodostaminen tehtiin yllä [fromEntries](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries)-metodilla.
 
 
 #### Tehokkuuden arviointi
@@ -471,14 +351,6 @@ for (let fi of finnish) {
 Sanakirjasta tai objektista hakeminen vaatii keskimäärin yhden operaation eli **O(1)**. Teoreettisesti epätasaisesti jakautuneet sanakirjat voivat tosin vaatia jopa kokonsa verran hakuoperaatiota, mikäli hajautusfunktio toimii tehottomasti.
 
 Koska `for`-luupissa suomenkielisten sanojen läpikäynnin aikavaatimus on edelleen **O(n)**, mutta englanninkieliset sanat löytyvät `if`-lohkossa vakioajassa, on uuden toteutuksen aikavaatimus **O(n)**.
-
-**Python**
-
-```python
-for word in finnish_words:    # O(n) => listan läpikäynti
-    if word in english_dict:  # O(1) => sanakirjasta hakeminen
-        print(word)
-```
 
 **TypeScript**
 
@@ -490,17 +362,7 @@ for (let fi of finnish) {       // O(n) => taulukon läpikäynti
 }
 ```
 
-Ohjelman suoritusajan laskeminen ei todellisuudessa ole aivan näin yksinkertaista. Sanakirjan yhteydessä joudumme huomioimaan myös esimerkiksi sanakirjan muodostamiseen kuluvan ajan.
-
-**Python**
-
-```python
-# Dictionary comprehension käy läpi listan english_words, ja asettaa
-# sanakirjaan avaimiksi kaikki sanat, ja niille arvoksi True:
-english_dict = {word: True for word in english_words}
-```
-
-**TypeScript**
+Ohjelman suoritusajan laskeminen ei todellisuudessa ole aivan näin yksinkertaista. Tosiasiassa joudumme huomioimaan myös esimerkiksi `englishObject`-olion muodostamiseen kuluvan ajan.
 
 ```ts
 // map-funktio muodostaa jokaiselle sanalle (esim. "hello" ja "word") taulukon:
@@ -522,30 +384,9 @@ O(n)                  | ~200 000             | ?
 
 ### 4. Ongelman muotoilu toisella tavalla
 
-Määritellään ongelma uudelleen joukko-opin näkökulmasta: yhden kielen sanat on **joukko sanoja**. Kahden kielen yhteiset sanat ovat **kahden joukon leikkaus**. Käyttämällä [Pythonin joukkoja (set)](https://docs.python.org/3/library/stdtypes.html#set-types-set-frozenset), haluttu osajoukko saadaan selville ilman yhtään itse kirjoitettua toisto-, vertailu- tai hakuoperaatiota:
+Määritellään ongelma uudelleen joukko-opin näkökulmasta: yhden kielen sanat on **joukko sanoja**. Kahden kielen yhteiset sanat ovat **kahden joukon leikkaus**.
 
-```python
->>> {'rodeo', 'mafia', 'villa', 'peruna', 'riisi'} & {'rodeo', 'mafia', 'villa', 'potato', 'rice'}
-{'rodeo', 'mafia', 'villa'}
-```
-
-Joukoiksi muutettuna Python-koodi näyttää esimerkiksi seuraavalta:
-
-```python
-def main():
-    finnish_words = read_words('kotus-sanalista-v1/kotus-sanalista-suomi.txt')
-    english_words = read_words('/usr/share/dict/words')
-
-    intersection = set(finnish_words) & set(english_words)
-    for word in intersection:
-        print(word)
-
-
-if __name__ == '__main__':
-    main()
-```
-
-JavaScript-kielen standardikirjastosta löytyy vastaava [Set-tietorakenne](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set), mutta sille ei valitettavasti ole valmista leikkaus/intersection-operaatiota. Tällainen voidaan kuitenkin tarvittaessa [toteuttaa itse esim. taulukon filter-operaation avulla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#iterating_sets):
+JavaScript-kielen standardikirjastosta löytyy [Set-tietorakenne](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set), mutta sille ei valitettavasti ole valmista leikkaus/intersection-operaatiota. Tällainen voidaan kuitenkin tarvittaessa [toteuttaa itse esim. filter-operaation avulla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#iterating_sets):
 
 ```ts
 const englishSet = new Set(english);
@@ -553,7 +394,7 @@ const intersection = finnish.filter(fi => englishSet.has(fi));
 ```
 
 * Mikä on suoritusaika nyt?
-* Mikä on set-tietorakenteen leikkauksen aikavaatimus? https://wiki.python.org/moin/TimeComplexity
+* Mikä on set-tietorakenteen leikkauksen aikavaatimus?
 * Kuinka pärjäämme nyt suhteessa alussa kokeiltuun Linuxin `comm`-komentoon?
 
 
