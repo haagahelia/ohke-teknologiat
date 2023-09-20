@@ -152,16 +152,11 @@ Kurssin seminaarivaiheessa ei järjestetä yhteisiä tapaamisia, vaan tarjoamme 
                 <br />
                 <strong>Tehtävät:</strong><br />
                 <ul>
-                    <li>📥 Tapahtumien suodattaminen ja lajittelu (Teams ja GitHub classroom)</li>
-                </ul>
-                <ul>
-                    <li>Lajittelualgoritmit</li>
-                    <li>Hakualgoritmit</li>
-                    <li>Algoritmien tehokkuus</li>
+                    <li>📥 Users & Posts v2: Filter, Map & Sort (Teams ja GitHub classroom)</li>
                 </ul>
             </td>
             <td>
-                Tapaaminen luokassa ja Teamsissa<br />
+                Viikoittaisessa tapaamisessa työstetään  kurssin tehtäviä ja niihin on saatavilla apua. Varsinainen TRAK-luento on toteutettu kahden videon muodossa.<br />
                 Tehtävien DL ke 27.9. klo 22:00
             </td>
         </tr>

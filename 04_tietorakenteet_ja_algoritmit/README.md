@@ -412,7 +412,7 @@ Mikä olisi tämän ratkaisutavan aikavaatimus? Kannattaisiko jatkokehitys tehd�
 > https://fi.wikipedia.org/wiki/Lajittelualgoritmi
 
 
-"Parhaiden yleiskäyttöisten lajittelualgoritmien asymptoottinen suoritusaika on luokkaa O(n * log n)", mitä se tarkoittaa? Entä onko esim n<sup>2</sup> merkittävästi huonompi suoritusaika?
+*"Parhaiden yleiskäyttöisten lajittelualgoritmien asymptoottinen suoritusaika on luokkaa O(n * log n)"*, mitä se tarkoittaa? Entä onko esim n<sup>2</sup> merkittävästi huonompi suoritusaika?
 
 Seuraava taulukko antaa käsityksen eri operaatioiden määrän suuruusluokista eri aineistojen koolla:
 
@@ -434,10 +434,6 @@ O(n * n)        | ~2 500                | ~16 000 000           | ~10 000 000 00
 1. Mihin tehokkuusluokkaan sijoittuu heikko lajittelualgoritmi?
 
 
-# Tehtävät
-
-Tämän viikon tehtävissä käsittelemme MyHelsinki Open API -rajapinnan tapahtumia, ja suodatamme ja lajittelemme tapahtumia niiden ajankohdan perusteella. Katso tarkemmat ohjeet Teamsin tehtävät-välilehdeltä.
-
 ----
 
 # Lisenssit ja tekijänoikeudet
@@ -449,9 +445,8 @@ Idea suomen- ja englanninkielisten sanalistojen yhteisten sanojen selvittämises
 
 ## Suomenkielisen sanalistan tekijänoikeudet
 
-    Copyright (C) Kotimaisten kielten tutkimuskeskus 2006
-    Kotimaisten kielten tutkimuskeskuksen nykysuomen sanalista, versio 1
-    Julkaistu 15.12.2006
+Copyright (C) Kotimaisten kielten tutkimuskeskus 2006<br />
+Kotimaisten kielten tutkimuskeskuksen nykysuomen sanalista, versio 1<br />
+Julkaistu 15.12.2006
 
-    Sanalista julkaistaan GNU LGPL -lisenssillä.
-    Lisenssiteksti luettavissa osoitteessa http://www.gnu.org/licenses/lgpl.html
+Sanalista julkaistaan GNU LGPL -lisenssillä. Lisenssiteksti luettavissa osoitteessa http://www.gnu.org/licenses/lgpl.html.
