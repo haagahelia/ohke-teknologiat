@@ -184,8 +184,8 @@ Kurssin seminaarivaiheessa ei järjestetä yhteisiä tapaamisia, vaan tarjoamme 
         <tr>
             <td>To 5.10.</td>
             <td>
-                <strong><a href="05_es6_node/oppitunti1.md">Ohjelmointiparadigmat ja -tyylit</a></strong><br />
-                <strong><a href="05_es6_node/oppitunti2.md">Promiset ja asynkronisuus</a></strong><br /><br />
+                <strong>Ohjelmointiparadigmat ja -tyylit</strong><br />
+                <strong>Promiset ja asynkronisuus</strong><br /><br />
                 <a href="https://github.com/ohjelmistokehitys/typescript-async-oppitunti">Esimerkkiprojekti (palindromit ja music app)</a><br />
                 <a href="https://youtu.be/_Im4_3Z1NxQ">YouTube: Node.js is a serious thing now...</a>
             </td>
@@ -226,7 +226,6 @@ Kurssin seminaarivaiheessa ei järjestetä yhteisiä tapaamisia, vaan tarjoamme 
             </td>
             <td>
                 Huom! Tapaaminen vain online<br />
-                Tehtävien DL ke 8.11. klo 22:00
             </td>
         </tr>
         <tr>

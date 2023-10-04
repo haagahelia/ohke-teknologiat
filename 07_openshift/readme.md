@@ -16,21 +16,21 @@ Kokonaisuutena pilvipalveluiden infrastruktuuri on erittäin laaja ja aiheesta r
 > Otaverkko. OpenShift palveluna. https://otaverkko.fi/palvelukategoria/openshift/
 
 
-
-## Oppitunnin videot
-
-1. [Konttien luonti, käyttäminen ja peruskäsitteet](https://web.microsoftstream.com/video/a542ef0a-fc3e-41b3-aab8-0e734bc75050) *55:31*
-
-2. [Konttien julkaisu konttirekisterissä ja verkkopalveluna](https://web.microsoftstream.com/video/b0490fff-c024-4882-94ec-a99859d1f620) *50:30*
-
-3. [Konttien hyödyntäminen kehitysympäristössä](https://web.microsoftstream.com/video/81928ca0-8a61-4aea-a495-5e0d8851a8bf) *12:57*
-
-
 ## Suositeltuja videoita
 
 1. [Never install locally (Coderized)](https://youtu.be/J0NuOlA2xDc)
 
-1. [Virtual Machine (VM) vs Docker (IBM Technology)](https://youtu.be/a1M_thDTqmU)
+2. [Virtual Machine (VM) vs Docker (IBM Technology)](https://youtu.be/a1M_thDTqmU)
+
+
+## Aikaisemman oppitunnin videot
+
+1. [Konttien luonti, käyttäminen ja peruskäsitteet](https://youtu.be/lxUiyu6CAd0) *55:31*
+
+2. [Konttien julkaisu konttirekisterissä ja verkkopalveluna](https://youtu.be/NjpdbVK80HA) *50:30*
+
+3. [Konttien hyödyntäminen kehitysympäristössä](https://youtu.be/vAKPbuXJMBk) *12:57*
+
 
 
 ## Missä näitä teknologioita käytetään?
@@ -313,76 +313,3 @@ Konttien luominen "käsin" ei ole aina, erityisesti pienten esimerkkien kanssa v
 > *"You can use the Red Hat Software Collections images as a foundation for applications that rely on specific runtime environments such as Node.js, Perl, or Python. Special versions of some of these runtime base images are referred to as Source-to-Image (S2I) images. With S2I images, you can insert your code into a base image environment that is ready to run that code."*
 >
 > [Source-to-image. docs.openshift.com](https://docs.openshift.com/container-platform/4.10/openshift_images/using_images/using-s21-images.html)
-
-
-<!--# Tehtävä
-
-Tämä on kurssin viimeinen viikkotehtävä, ja sen saa halutessaan tehdä yksin, parin kanssa tai ryhmässä. Tehtävässä ei ole tarkkaa toiminnallista vaatimusta, joten voitte soveltaa aiheita sen mukaan, oletteko enemmän kiinnostuneita esimerkiksi Dockerista tai Kuberneteksesta, tai haluatteko kokeilla esimerkiksi oman sovelluksen julkaisua PaaS-palvelussa. Mikäli teette työn ryhmässä, merkitkää raporttiinne selvästi kaikki tekijät. Mikäli jaoitte työtä eri kirjoittajien kesken, eritelkää kuka teki minkäkin vaiheen.
-
-Tehtävänä on soveltaa yllä ja videoissa käsiteltyjä aiheita oman sovelluksen kanssa esimerkiksi julkaisemalla oma tai ryhmän harjoitustyö konttirekisterissä tai OpenShift-alustalla. Julkaistava sovellus voi olla esimerkiksi jokin tämän kurssin viikkoharjoituksista, ohjelmistoprojekti II:lla kehitettävä projekti tai palvelinohjelmointi- tai fronttikurssin harjoitustyö.
-
-Tehtävää tehdessäsi kirjaa itsellesi ylös eri työvaiheet, käyttämäsi komennot sekä hyödyntämäsi nettilähteet. Oletettavaa on, että kaikki työvaiheet eivät tule onnistumaan ensimmäisellä yrityksellä, joten kirjaa eri välivaiheet ja niistä oppimasi asiat. Kirjaa myös ylös osoitteet, joista julkaisemasi Docker image tai web-palvelu on tarkasteltavissa tehtävän arvioinnin yhteydessä, mikäli sait julkaisun tehtyä valmiiksi.
-
-Palauta lopuksi kirjoittamasi raportti Teamsiin. Raportti voi olla muodoltaan tekstitiedosto (md, txt) tai pdf, eikä sen tarvitse noudattaa erityistä raportointiohjetta. Käytetyt lähteet tulee kirjata (esim. tutoriaalit, tekniset dokumentit, stack overflow), mutta lähdeviitteet ovat täysin vapaamuotoisia. Kuvankaappausten käyttäminen raportissa voi olla hyvä idea. Jos haluat, voit toteuttaa raportin myös osana GitHub-repositoriota, jolloin riittää, että palautat Teamsiin linkin repositorioosi.
-
-## Arviointi
-
-Tehtävän arviointi perustuu tehtävässä opittuihin asioihin. Raportit, joissa opiskelija tai ryhmä selvästi osoittaa oppineensa uusia asioita ja soveltaneensa niitä käytännössä, arvioidaan oletuksena arvosanalla 5.
-
-Raportit, joissa on selvästi tehty erilaisia osin satunnaisia kokeiluja, mutta opitut asiat ovat heikosti yksilöitävissä, arvioidaan oletuksena arvosanalla 3.
-
-Huomatkaa, että sovelluksen julkaisun ei tarvitse lopulta onnistua, vaan täydet pisteet voi saada myös tilanteessa, jossa yritys on epäonnistunut, mutta siitä on selvästi opittu ja tehdyt vaiheet on raportoitu asianmukaisesti.
-
-Tehtävän ratkaisu voi olla teknisesit ja laajuudeltaan hyvinkin yksinkertainen, eli sen ei tarvitse tavoitella esimerkiksi tunnilla esitettyjen esimerkkien laajuutta. Voit halutessasi jatkaa aiheen parissa työskentelyä kurssin seminaariosuudessa.
-
-
-## Vaihtoehtoisia ideoita tehtävään
-
-Seuraavat ovat vaihtoehtoisia ideoita, joita voit soveltaa vapaasti. Jos Ohjelmistoprojekti II -kurssin projektinne ei sovellu tehtävään, voit käyttää sen sijaan muilla kursseilla kehittämiäsi projekteja.
-
-**1. Luo Docker-levykuva Ohjelmistoprojekti II -projektinne backendistä**
-
-Luo tarvittava Dockerfile-tiedosto, joka asentaa ja käynnistää esimerkiksi projektikurssinne backend-sovelluksen. Voit julkaista Docker-levykuvan esimerkiksi [Docker hub](https://hub.docker.com/) -palvelussa, mutta se ei ole välttämätöntä, mikäli pystyt osoittamaan hyvää oppimista jo kontin luomisen ja sen paikallisen käytön perusteella.
-
-Selosta raportissa mitä opit eri työvaiheista ja minkälaisia haasteita kohtasit. Entä miten kehittäisit luomaasi konttia jatkossa?
-
-
-**2. Luo Docker-levykuva Ohjelmistoprojekti II -projektin frontendistä**
-
-Luo tarvittava Dockerfile-tiedosto, joka suorittaa frontend-sovelluksenne riippuvuuksien asennuksen ja projektin buildaamisen. Huomaa, että tuotantokäytössä React-sovellusta ei kannata tarjoilla React-kehityspalvelimen avulla, vaan staattisina tiedostoina esimerkiksi Nginx-palvelimen avulla. Löydät lisätietoja esimerkiksi Google-haulla ["dockerizing react app"](https://www.google.com/search?q=dockerizing+react+app).
-
-Kuten edellisessä vaihtoehdossa, voit julkaista levykuvan esimerkiksi [Docker hub](https://hub.docker.com/) -palvelussa, mutta se ei ole välttämätöntä.
-
-
-**3. Julkaise Ohjelmistoprojekti II -kurssin backend valitsemassasi PaaS-palvelussa**
-
-Heroku on monelle opiskelijalle tuttu aikaisemmilta kursseilta, mutta sen ilmainen käyttö on suurilta osin päättymässä. Näin ollen erilaisille ilmaisille tai edullisille vaihtoehtoisille ratkaisuille on kova kysyntä opiskelijoiden keskuudessa.
-
-Tässä tehtävävaihtoehdossa tutustu saatavilla oleviin vaihtoehtoisiin PaaS-palveluihin ja kokeile julkaista oma sovellus valitsemassasi palvelussa. Tehtävässä ei ole välttämätöntä soveltaa Dockeria, mikäli se ei ole valitun palvelun kannalta mielekästä.
-
-[Helsingin yliopiston full stack open](https://fullstackopen.com/osa3/sovellus_internetiin#sovellus-internetiin) -kurssilla on esitelty Herokulle vaihtoehtoisina palveluina seuraavia:
-
-* [Fly.io](https://fly.io/)
-* [Render.com](https://render.com/)
-
-Näissä palveluissa pitäisi olla ilmaiset kokeiluversiot, jotka riittävät tehtävän tekemiseksi. Kurssin opiskelijat ovat lisäksi ehdottaneet seuraavia palveluita:
-
-* [Railway](https://railway.app/)
-* [Replit.com](https://replit.com/)
-* [CodeSandBox](https://codesandbox.io/)
-
-Näiden lisäksi löytyy lukuisia vaihtoehtoisia pilvialustoja, joten voit hyvin valita palvelun myös näiden listojen ulkopuolelta.
-
-Muista raportoida edistymisesi tehtävässä. Huomaa, että kaikkia vaiheita ei tarvitse saada valmiiksi, kunhan osoitat oppineesi eri työvaiheista. Valitsemasi pilvipalvelun valintaperusteet ovat jo itsessään hyvää sisältöä raporttiin.
-
-
-**4. Kontin julkaisu OpenShift-ympäristössä (Docker & Kubernetes)**
-
-Tätä kurssia varten on luotu OpenShift-ympäristö, jota käsitellään laajasti oppitunnin 2. videolla. Voitte pyytää tähän ympäristöön käyttäjätunnukset lähettämällä koulun sähköpostiosoitteesta sähköpostiviestin osoitteeseen `support at otaverkko piste fi`. Viestin sisällöksi pitäisi riittää: "Tarvitsen pääsyn Haaga-Helian OpenShiftiin."
-
-Tunnusten luomisessa voi kestää jopa päiviä, joten viesti kannattaa lähettää hyvissä ajoin ennen tehtävän varsinaista aloitusta. Tarvittaessa ota opettajiin yhteyttä Teams-kanavalla tunnusten luomiseksi.
-
-Saatuanne käyttäjätunnuksen ja salasanan, voitte kokeilla kirjautua sisään osoitteessa https://console-openshift-console.apps.hhocp.otaverkko.fi/. Kirjautuminen tapahtuu "IPA Login" -vaihtoehdolla (IPA = Identity, Policy & Audit).
-
-Huom! Kurssin OpenShift-palvelun kaikki https-sertifikaatit ovat itse allekirjoitettuja (self signed), eli selain tulee vaatimaan sertifikaatin hyväksymistä manuaalisesti, kuten oppitunnin videolla esitellään.
--->
