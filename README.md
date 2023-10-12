@@ -201,8 +201,7 @@ Kurssin seminaarivaiheessa ei järjestetä yhteisiä tapaamisia, vaan tarjoamme 
                 <a href="06_ohjelmistoarkkitehtuurit_ja_patternit/SoftwareArchitecturesAndPatterns.pdf">Ohjelmistoarkkitehtuurit ja patternit</a><br />
                 <a href="06_ohjelmistoarkkitehtuurit_ja_patternit/ApacheKafka_DistributedEventStreamOrBroker.pdf">Kafka</a><br />
                 <a href="06_ohjelmistoarkkitehtuurit_ja_patternit/">Muita aihepiirin materiaaleja</a><br />
-                Dockerin alkeita
-                </strong>
+                <a href="https://github.com/haagahelia/ohke-teknologiat/blob/master/06_ohjelmistoarkkitehtuurit_ja_patternit/docker-test/Docker.pdf">Dockerista joku huomio</strong>
             </td>
             <td>
                 Tapaaminen luokassa ja Teamsissa<br />
