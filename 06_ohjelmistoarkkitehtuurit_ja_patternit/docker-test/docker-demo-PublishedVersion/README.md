@@ -67,7 +67,7 @@ Next we define two runnable index.js files. So two separate processes are born f
 
 
 
-###Creating the Kafka topic(s) = message channels = event 'queues' ###
+### Creating the Kafka topic(s) = message channels = event 'queues'
 
 In Powershell or similar powerful console run the following topic creation command script.
 [topic_creation_command.sh file](./topic_creation_command.sh). Given also in the same [.zip file](../docker-demo-PublishedVersion.zip). For some reason the command did not work for 
@@ -101,7 +101,9 @@ npm run start:consumer
 ```
 Later you can use Ctrl+C to stop it for editing and restart. 
 
-**Does everything work? So far you have just read and rewritten same code as given. But even then you learn to look at the structures etc.**
+**Does everything work?** 
+
+**So far you have just read and rewritten same code as given. But even then you learn to look at the structures etc.**
 
 # Now would start your own changes
 
