@@ -197,7 +197,12 @@ Kurssin seminaarivaiheessa ei järjestetä yhteisiä tapaamisia, vaan tarjoamme 
         <tr>
             <td>To 12.10.</td>
             <td>
-                <strong><a href="06_ohjelmistoarkkitehtuurit_ja_patternit/SoftwareArchitecturesAndPatterns.pdf">Ohjelmistoarkkitehtuurit ja patternit.</a> <a href="06_ohjelmistoarkkitehtuurit_ja_patternit/ApacheKafka_DistributedEventStreamOrBroker.pdf">Kafka.</a><a href="06_ohjelmistoarkkitehtuurit_ja_patternit/">Muita aihepiirin materiaaleja</a> (Dockerin alkeita)</strong>
+            <strong>
+                <a href="06_ohjelmistoarkkitehtuurit_ja_patternit/SoftwareArchitecturesAndPatterns.pdf">Ohjelmistoarkkitehtuurit ja patternit</a><br />
+                <a href="06_ohjelmistoarkkitehtuurit_ja_patternit/apacheKafka_DistributedEventStreamOrBroker.pdf">Kafka</a><br />
+                <a href="06_ohjelmistoarkkitehtuurit_ja_patternit/">Muita aihepiirin materiaaleja</a><br />
+                Dockerin alkeita
+                </strong>
             </td>
             <td>
                 Tapaaminen luokassa ja Teamsissa<br />
