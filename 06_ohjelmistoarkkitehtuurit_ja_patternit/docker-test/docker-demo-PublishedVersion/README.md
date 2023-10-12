@@ -121,6 +121,8 @@ Might sound complicated, but just read the instructions few times.
 
 **One PDF file**. Submit there screenshots of working system's console, where messages are sent and received. Then when you create your own code, or make any other changes, copy that code to Word doc and submit it finally as one PDF. If you copy-paste from VS code you'll get the colors and all, when select such paste option in Word.
 
+
+<!-- 
 ## Full points? Make the id checking 'real'. 
 
 First check all the rules and then check against some list (=fake database). More about [how you could validate personal id:s](../MoreAboutCheckingFinnishPersonalIdNumbers.md). Is that in optimal order? Remember checking one number faster than string comparisons, checking without 'database server' a lot faster and optimized when database bothering can be avoided.
@@ -134,3 +136,5 @@ In real life you would also most likely have/create two separate Kafka servers o
 ## EXTRAS. More challenge? Securing the Kafka server. 
 
 How to make 1) only certain allowed clients able to connect to the Kafka server and topic, and 2) make the connection secured so that messages are encrypted. And 3) firewalls etc. settings. Now Kafka is used in basically 'everything goes' -settings.
+
+-->
