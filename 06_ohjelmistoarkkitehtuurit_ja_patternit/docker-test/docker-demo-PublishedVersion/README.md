@@ -122,7 +122,7 @@ Might sound complicated, but just read the instructions few times.
 
 ## What to submit?
 
-**One PDF file**. Submit there screenshots of working system's console, where messages are sent and received. Then when you create your own code, or make any other changes, copy that code to Word doc and submit it finally as one PDF. If you copy-paste from VS code you'll get the colors and all, when select such paste option in Word.
+**One PDF file**. Submit there screenshots of working system's console (both starting situation and the final after code edits), where messages are sent and received. Then when you create your own code, or make any other changes, copy that code to Word doc and submit it finally as one PDF. If you copy-paste from VS code you'll get the colors and all, when select such paste option in Word.
 
 
 <!-- 
