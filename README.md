@@ -200,7 +200,7 @@ Kurssin seminaarivaiheessa ei järjestetä yhteisiä tapaamisia, vaan tarjoamme 
             <strong>
                 <a href="06_ohjelmistoarkkitehtuurit_ja_patternit/SoftwareArchitecturesAndPatterns.pdf">Ohjelmistoarkkitehtuurit ja patternit</a><br />
                 <a href="06_ohjelmistoarkkitehtuurit_ja_patternit/ApacheKafka_DistributedEventStreamOrBroker.pdf">Kafka</a><br />
-                <a href="06_ohjelmistoarkkitehtuurit_ja_patternit/">Muita aihepiirin materiaaleja</a><br />
+                <a href="06_ohjelmistoarkkitehtuurit_ja_patternit/">Muita aihepiirin materiaaleja:</a><br />
                 <a href="https://github.com/haagahelia/ohke-teknologiat/blob/master/06_ohjelmistoarkkitehtuurit_ja_patternit/docker-test/Docker.pdf">Dockerista joku huomio</strong>
             </td>
             <td>
@@ -215,7 +215,7 @@ Kurssin seminaarivaiheessa ei järjestetä yhteisiä tapaamisia, vaan tarjoamme 
         <tr>
             <td>To 26.10.</td>
             <td>
-                <strong><a href="05_frontend/">Frontend-asioita</a></strong><br />
+                <strong><a href="05_es6_node/NodeJS_demo">Node.js backend 2</a></strong><br />
             </td>
             <td>
                 Tapaaminen luokassa ja Teamsissa<br />
