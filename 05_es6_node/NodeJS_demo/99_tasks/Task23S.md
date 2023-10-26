@@ -25,13 +25,12 @@ https://github.com/haagahelia/ohke-teknologiat/tree/master/05_es6_node/NodeJS_de
 1. Now ´npm start´should start the backend. But without Database connection
 1. See the backend logs in 'logs' folder
 
-### Setup database or tunnel to remote database
+### Setup database or tunnel to remote database(from Teacher)
 
-1. Either install MariaDB locally to your computer, or use the given remote database via tunnel. In any case you need to pay attention to server host address, port, usernames, passwords, database/schema names, ...
+1. Either install MariaDB locally to your computer, or use the given remote database via tunnel. In any case you need to pay attention to server host address, port, usernames, passwords, database/schema names, ... see Teams for 'secret info'
 1. This console command in Windows would create a ssh tunnel / port forwarding if you will use remote database:
 ```ssh -f juuser1@128.123.123.45 -L 3308:localhost:3306 -N```
- . The local port in your computer would be 3308, and in the remote computer we would target 3306 where MariaDB database typically exists. **Note**: all info here is incorrect as correct info cannot be published in the github repo. **See Teams for correct information = secrets**. If everything goes correctly this command does not return anything
-    i. to see 
+ . The local port in your computer would thus be 3308, and in the remote computer we would target 3306 where MariaDB database typically exists. **Note**: all info here is incorrect as correct info cannot be published in the github repo. **See Teams for correct information = secrets**. If everything goes correctly this command does not return anything to see. You can run ```ps -a``` to see if ssh process exists, and kill it with ```kill -9 1234``` if the process id was 1234.
 1. Backend .env file must match your database: 
     1. The database server (or tunnel) address, typically localhost
     1. The database server (or tunnel) port, typically 3306, 3308, 3315 or so
