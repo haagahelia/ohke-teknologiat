@@ -215,8 +215,7 @@ Kurssin seminaarivaiheessa ei järjestetä yhteisiä tapaamisia, vaan tarjoamme 
         <tr>
             <td>To 26.10.</td>
             <td>
-                <strong><a href="05_es6_node/NodeJS_demo">Node.js backend 2</a></strong><br />
-
+                <strong><a href="05_es6_node/NodeJS_demo">Node.js backend (lisää)</a></strong><br />
                 <strong><a href="05_es6_node/NodeJS_demo/99_tasks/Task23S.md">Node.js tehtävä 2</a></strong><br />
             </td>
             <td>
