@@ -19,9 +19,9 @@ Raportoi seminaarityösi esitystä ja arviointia varten raportointiohjeiden muka
 
 **Video**
 
-Raportin lisäksi nauhoita noin 5 minuuttia kestävä video, jossa esittelet työsi teknistä toteutusta raportointiohjeen mukaisesti. Videolla ei ole tarpeen käsitellä tai näyttää raporttia, vaan voitte olettaa katsojan jo tuntevan sen sisällön. Videon tekemiseksi suosittelemme [Microsoft Stream](https://web.microsoftstream.com/) -palvelua, jossa sekä videon tallennus että jakaminen onnistuu pelkän selaimen avulla. Katso [ohje tallenteen tekemiseksi MS Streamissa](https://docs.microsoft.com/fi-fi/stream/portal-create-screen-recording). Kurssilla on käytetty hyvin tuloksin myös lukuisia muita videonkaappausratkaisuja joten voit valita itsellesi parhaiten sopivan.
+Raportin lisäksi nauhoita noin 5 minuuttia kestävä video, jossa esittelet työsi teknistä toteutusta raportointiohjeen mukaisesti. Videolla ei ole tarpeen käsitellä tai näyttää raporttia, vaan voitte olettaa katsojan jo tuntevan sen sisällön. Videon tekemiseksi suosittelemme [Microsoft Stream](https://www.microsoft365.com) -palvelua, jossa sekä videon tallennus että jakaminen onnistuu pelkän selaimen avulla. Katso [ohje tallenteen tekemiseksi MS Streamissa](https://support.microsoft.com/en-gb/office/microsoft-stream-screen-recorder-e98d8791-2b82-4dc7-889a-959724e3cbad). Kurssilla on käytetty hyvin tuloksin myös lukuisia muita videonkaappausratkaisuja, joten voit valita itsellesi parhaiten sopivan.
 
-Voit julkaista luomasi videon Microsoft Stream -palvelussa tai valitsemassasi video- tai tiedostonjakopalvelussa, kunhan saat lisättyä raporttiisi suoran linkin lopputulokseesi (YouTube, OneDrive, Google Drive...). Voit myös halutessasi palauttaa videon sellaisenaan tiedostona Teamsin seminaaritehtävään, mikäli Teams ei estä palautusta esim. liian suuren koon vuoksi.
+Voit julkaista luomasi videon edellä mainitussa Microsoft Stream -palvelussa tai valitsemassasi video- tai tiedostonjakopalvelussa, kunhan saat lisättyä raporttiisi suoran linkin lopputulokseesi (YouTube, OneDrive, Google Drive...). Voit myös halutessasi palauttaa videon sellaisenaan tiedostona Teamsin seminaaritehtävään, mikäli Teams ei estä palautusta esim. liian suuren koon vuoksi.
 
 
 **Seminaarin arviointi ja esitykset**
@@ -47,51 +47,48 @@ Tutoriaalityön tapauksissa seminaarin raportissa ja videossa ei kannata keskitt
 
 * **Seminaarien käynnistys**
 
-    Ma 3.4.2023
+    To 2.11.
 
 * **Seminaariaiheen ilmoittaminen Teams-kanavalle**
 
-    DL to 6.4.2023 klo 12 (keskipäivä)
+    DL to 9.11.2023 klo 12 (keskipäivä)
 
 * **Yksilöllistä seminaarityön ohjausta Teamsissa**
 
-    Opettajat tavoitettavissa Teamsissa 17.4. ja 24.4. Ota yhteyttä ja sovi esim. videotapaaminen!
+    Opettajat ovat tavoitettavissa Teamsissa kurssin tapaamisaikoina 9.11., 16.11., 23.11. ja 30.11. Ota yhteyttä ja sovi esim. videotapaaminen!
 
 * **Seminaarin raporttien ja videoiden palauttaminen Teamsiin**
 
-    DL ke 3.5. klo 22 mennessä.
+    DL su 3.12. klo 22 mennessä.
 
 * **Seminaariesitykset**
 
-    Ma 8.5.2023, klo 8:30 - 10:45
+    To 7.12.2023, klo 14-16
 
 
 # Seminaariaiheita
 
 Tälle sivulle on koottu **esimerkkiaiheita** kurssin seminaaritehtävää varten. Voit melko vapaasti jalostaa ideoita vastaamaan omaa vaatimustasoasi ja kiinnostuksen kohteitasi. Lisää oma aiheesi uutena viestinä kyseisen aihealueen Teams-kanavalle.
 
-## Python
 
-* **Web-palvelu Pythonilla:**
+## TypeScript, ES6, JavaScript, node (+MongoDB)
 
-    Python-aiheiset seminaarityöt voivat käsitellä esimerkiksi Pythonin [Django](https://www.djangoproject.com/)- tai [Flask](https://flask.palletsprojects.com/)-sovelluskehysten käyttöönottoa tai Pythonin tietokantaohjelmointiin perehtymistä.
+* **TypeScript**
 
-* **Mikrokontrollerin ohjelmointi MicroPythonilla:**
+    Jatka perehtymistä TypeScript-kieleen ja sen työkaluihin. Toteuta yksinkertainen esimerkkisovellus, jossa sovellat oppimaasi mahdollisimman hyvin.
 
-    Kurssilaisille tarjotaan myös mahdollisuus perehtyä ESP32-mikrokontrollerien ohjelmointiin [MicroPython](https://micropython.org/)-kielellä. Mahdollisia projekteja voivat olla esimerkiksi sääasema, peruutustutka, Telegram-bottina toteutettu liiketunnistin tai nopeustesti-peli. ESP32-mikrokontrollereita ja erilaisia sensoreita ja toimilaitteita on mahdollisesti lainattavissa Haaga-Helian 3D-labrasta.
+* **MERN-stack:**
 
-* **Data-analytiikkaa tai pelejä Pythonilla**
+    MongoDB (+ Mongoose), Express, React, Node. Huom! Toteuta ominaisuuksiensa puolesta pieni sovellus ja keskity opettelemaan jokin uusi tekninen asia, kuten MongoDB:n hyödyntäminen JavaScriptillä.
 
-    Pythonille on saatavilla erilaisia kirjastoja mm. data-analytiikkaan ja peleihin liittyen. Voit ehdottaa  itseäsi kiinnostavaa aihetta.
+* **Reaktiivinen ohjelmointi JS:llä** *(ks. ohjelmistoarkkitehtuurit ja patternit)*:
 
-* **Koneoppiminen Pythonilla**
+    Tutustu [FRP-ohjelmointiin](https://stackoverflow.com/questions/1028250/what-is-functional-reactive-programming/1030631#1030631) ja tee (tietynlainen) ohjelma esimerkiksi RxJS:llä tai bacon.js:llä. Myös [Node-RED](https://nodered.org/)-ympäristöä voi miettiä tähän aiheeseen.
 
-    Kouluta esimerkiksi valitsemasi koneoppimismalli jostain datasta ja laadi sillä ennusteita.
+* **Paketin julkaisu NPM:ssä:**
 
-* **Tekstintunnistus Pythonilla**
-
-    Tekstin tunnistaminen kuvasta tai videosta esim. [Tesseract-kirjastolla](https://nanonets.com/blog/ocr-with-tesseract/).
-
+    Tutustu NPM-palvelun pakettien julkaisemiseen ja julkaise oma pieni paketti. Julkaistava paketti voi olla esimerkiksi asiakaskirjasto MyHelsinki Open API:n tapahtumien hakemiseksi. Asiakaskirjaston ominaisuuksiin voi kuulua erilaiset rajaukset tai järjestämiset päivämäärien mukaan tai vaikka rajaus tapahtumiin, joiden otsikossa tai kuvauksessa esiintyy tietty teksti.
+  
 
 ## Tietorakenteet ja algoritmit
 
@@ -150,24 +147,6 @@ Tälle sivulle on koottu **esimerkkiaiheita** kurssin seminaaritehtävää varte
     Perehdy syvemmin Docker Swarm:iin, Kubernetekseen tai OpenShiftiin. Rakenna useammasta kontista koostuva ratkaisu hyödyntäen oppimiasi hyviä käytäntöjä.
 
 
-## TypeScript, ES6, JavaScript, node (+MongoDB)
-
-* **TypeScript**
-
-    Jatka perehtymistä TypeScript-kieleen ja sen työkaluihin. Toteuta yksinkertainen esimerkkisovellus, jossa sovellat oppimaasi mahdollisimman hyvin.
-
-* **MERN-stack:**
-
-    MongoDB (+ Mongoose), Express, React, Node. Huom! Toteuta ominaisuuksiensa puolesta pieni sovellus ja keskity opettelemaan jokin uusi tekninen asia, kuten MongoDB:n hyödyntäminen JavaScriptillä.
-
-* **Reaktiivinen ohjelmointi JS:llä** *(ks. ohjelmistoarkkitehtuurit ja patternit)*:
-
-    Tutustu [FRP-ohjelmointiin](https://stackoverflow.com/questions/1028250/what-is-functional-reactive-programming/1030631#1030631) ja tee (tietynlainen) ohjelma esimerkiksi RxJS:llä tai bacon.js:llä. Myös [Node-RED](https://nodered.org/)-ympäristöä voi miettiä tähän aiheeseen.
-
-* **Paketin julkaisu NPM:ssä:**
-
-    Tutustu NPM-palvelun pakettien julkaisemiseen ja julkaise oma pieni paketti. Julkaistava paketti voi olla esimerkiksi asiakaskirjasto MyHelsinki Open API:n tapahtumien hakemiseksi. Asiakaskirjaston ominaisuuksiin voi kuulua erilaiset rajaukset tai järjestämiset päivämäärien mukaan tai vaikka rajaus tapahtumiin, joiden otsikossa tai kuvauksessa esiintyy tietty teksti.
-
 
 ## OpenShift tai vastaava pilvipalvelu
 
@@ -179,6 +158,28 @@ Tälle sivulle on koottu **esimerkkiaiheita** kurssin seminaaritehtävää varte
 * **Serverless-funktiot (Azure functions, AWS lambda...):**
 
     Toteuta jokin itsenäinen ominaisuus Ohjelmistoprojekti II -kurssisi projektin tueksi Azuren pilvifunktiona.
+
+## Python
+
+* **Web-palvelu Pythonilla:**
+
+    Python-aiheiset seminaarityöt voivat käsitellä esimerkiksi Pythonin [Django](https://www.djangoproject.com/)- tai [Flask](https://flask.palletsprojects.com/)-sovelluskehysten käyttöönottoa tai Pythonin tietokantaohjelmointiin perehtymistä.
+
+* **Mikrokontrollerin ohjelmointi MicroPythonilla:**
+
+    Kurssilaisille tarjotaan myös mahdollisuus perehtyä ESP32-mikrokontrollerien ohjelmointiin [MicroPython](https://micropython.org/)-kielellä. Mahdollisia projekteja voivat olla esimerkiksi sääasema, peruutustutka, Telegram-bottina toteutettu liiketunnistin tai nopeustesti-peli. ESP32-mikrokontrollereita ja erilaisia sensoreita ja toimilaitteita on mahdollisesti lainattavissa Haaga-Helian 3D-labrasta.
+
+* **Data-analytiikkaa tai pelejä Pythonilla**
+
+    Pythonille on saatavilla erilaisia kirjastoja mm. data-analytiikkaan ja peleihin liittyen. Voit ehdottaa  itseäsi kiinnostavaa aihetta.
+
+* **Koneoppiminen Pythonilla**
+
+    Kouluta esimerkiksi valitsemasi koneoppimismalli jostain datasta ja laadi sillä ennusteita.
+
+* **Tekstintunnistus Pythonilla**
+
+    Tekstin tunnistaminen kuvasta tai videosta esim. [Tesseract-kirjastolla](https://nanonets.com/blog/ocr-with-tesseract/).
 
 
 ## Koneoppiminen
