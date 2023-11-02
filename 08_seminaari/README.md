@@ -77,6 +77,8 @@ Tälle sivulle on koottu **esimerkkiaiheita** kurssin seminaaritehtävää varte
 
     Jatka perehtymistä TypeScript-kieleen ja sen työkaluihin. Toteuta yksinkertainen esimerkkisovellus, jossa sovellat oppimaasi mahdollisimman hyvin.
 
+    Vaihtoehtoisesti voit esimerkiksi ottaa haasteeksi suorittaa esimerkiksi [leetcode.com](https://leetcode.com/)-, [hackerrank.com](https://www.hackerrank.com/) tai [codewars.com](https://www.codewars.com/)-palvelussa tietyn määrään koodaushaasteita ja raportoida tekemäsi haasteet sekä niistä oppimasi asiat.
+
 * **MERN-stack:**
 
     MongoDB (+ Mongoose), Express, React, Node. Huom! Toteuta ominaisuuksiensa puolesta pieni sovellus ja keskity opettelemaan jokin uusi tekninen asia, kuten MongoDB:n hyödyntäminen JavaScriptillä.
@@ -88,7 +90,7 @@ Tälle sivulle on koottu **esimerkkiaiheita** kurssin seminaaritehtävää varte
 * **Paketin julkaisu NPM:ssä:**
 
     Tutustu NPM-palvelun pakettien julkaisemiseen ja julkaise oma pieni paketti. Julkaistava paketti voi olla esimerkiksi asiakaskirjasto MyHelsinki Open API:n tapahtumien hakemiseksi. Asiakaskirjaston ominaisuuksiin voi kuulua erilaiset rajaukset tai järjestämiset päivämäärien mukaan tai vaikka rajaus tapahtumiin, joiden otsikossa tai kuvauksessa esiintyy tietty teksti.
-  
+
 
 ## Tietorakenteet ja algoritmit
 
@@ -118,6 +120,7 @@ Tälle sivulle on koottu **esimerkkiaiheita** kurssin seminaaritehtävää varte
 * **Mikropalvelu:**
 
     Mikropalveluihin perustuvan pienen palvelun rakentaminen (esim. autentikointipalvelu pyörii omana palvelunaan). Mahdollisesti hyödyntäen serverless-lähestymistapaa.
+
 
 ## Testaus
 
