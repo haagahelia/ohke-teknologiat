@@ -13,12 +13,12 @@ Kokonaisuutena pilvipalveluiden infrastruktuuri on erittäin laaja ja aiheesta r
 >
 > *Konttia voi luonnehtia itsenäiseksi ohjelmistoksi, jota voi ajaa joustavasti niin omalla työasemalla, rautapalvelimella, virtuaalipalvelimella tai pilvessä sellaisenaan ilman ohjelmiston koodiin tarvittavia muutoksia. Se toimii kaikissa ympäristöissä samalla tavalla, koska se on eriytetty prosessitasolla ja sillä on oma tiedostojärjestelmä."*
 >
-> Otaverkko. OpenShift palveluna. https://otaverkko.fi/palvelukategoria/openshift/
+> Otaverkko Oy. OpenShift - sovelluskehittäjien palvelualusta palveluna. https://www.itewiki.fi/tarjonta/openshift-sovelluskehittajien-palvelualusta-palveluna
 
 
 ## Suositeltuja videoita
 
-1. [Never install locally (Coderized)](https://youtu.be/J0NuOlA2xDc)
+1. [Never install locally (Coderized)](https://youtu.be/J0NuOlA2xDc) (⭐⭐⭐⭐⭐)
 
 2. [Virtual Machine (VM) vs Docker (IBM Technology)](https://youtu.be/a1M_thDTqmU)
 
@@ -37,7 +37,7 @@ Kokonaisuutena pilvipalveluiden infrastruktuuri on erittäin laaja ja aiheesta r
 
 Tällä viikolla käsiteltävät teknologiat ovat yleistyneet hyvin nopeasti, ja kaikki suurimmat pilvipalvelualustat tarjoavat omat palvelunsa niiden käyttämiseksi. Lisätietoa eri pilvialustojen palveuista löydät esimerkiksi seuraavista lähteistä:
 
-Docker-konttirekistereitä (container registry)
+Docker-konttirekistereitä (container registry):
 
 * Docker hub: https://hub.docker.com/
 * Azure Container Registry: https://azure.microsoft.com/en-us/services/container-registry/
@@ -46,31 +46,12 @@ Docker-konttirekistereitä (container registry)
 * GitHub packages: https://github.com/features/packages
 
 
-Kubernetes-pilviratkaisuja
+Kubernetes-pilviratkaisuja:
 
 * Azure Kubernetes Service: https://azure.microsoft.com/en-us/services/kubernetes-service/
 * Amazon Elastic Kubernetes Service: https://aws.amazon.com/eks/
 * Google Kubernetes Engine: https://cloud.google.com/kubernetes-engine
 * CSC Rahti: https://rahti.csc.fi/
-
-
-## Kurssin yksityinen pilvi
-
-Kurssilla on käytössä [Otaverkon tarjoama OpenShift-ympäristö](https://otaverkko.fi/palvelukategoria/openshift/), eli "yksityinen pilvi". Yksityinen pilvi tarkoittaa tässä sitä, että käyttöömme on varattu skaalautuva alusta, jonne voimme luoda uusia palveluita hyvin joustavasti.
-
-> *"OpenShift on sovelluskehittäjien palvelualusta, joka on ratkaisu sovelluskehitysympäristöjen automatisointiin ja konttien hallintaan. Saat DevOps-tiimisi tarvitsemat työkalut, eikä asiakkaasi tarvitse tehdä ohjelmistoprojekteissasi valintaa laadun ja nopeuden välillä."*
->
-> Otaverkko. OpenShift palveluna. https://otaverkko.fi/palvelukategoria/openshift/
-
-Voit hyödyntää OpenShiftiä kurssin seminaarivaiheessa. Ohjeet käyttäjätunnusten saamiseksi löytyvät alempaa tältä sivulta.
-
-OpenShift-konsoliin kirjautuminen onnistuu selaimella osoitteessa https://console-openshift-console.apps.hhocp.otaverkko.fi/. Palveluissamme on valitettavasti toistaiseksi [self-signed sertifikaatit](https://en.wikipedia.org/wiki/Self-signed_certificate), eli on odotettua, että selain varoittaa epäluotettavasta sertifikaatista.
-
-Kirjautumisen jälkeen ensimmäinen työvaihe kirjautumisen jälkeen on tyypillisesti oman projektin luominen. Projektin luominen esitetään ylempänä oppitunnin 2. videolla.
-
-Konttirekisteri löytyy osoitteesta `default-route-openshift-image-registry.apps.hhocp.otaverkko.fi`. Rekisteri ei ole käytettävissä selaimella, vaan sitä käytetään `docker`-komennon kautta (vaihtoehtoisesti komennolla `podman`). Lisätiedot esimerkkeineen ja OAuth-ohjeistuksineen löydät alempaa ja oppitunnin tallenteelta.
-
-💡 Voit tarvittaessa ottaa ssh-yhteyden ympäristömme kuormantasaajaan osoitteella `hhocp.otaverkko.fi`. Kuormantasaajalta löytyy `oc`- ja `kubectl`-komennot, joita voit tarvita mahdollisesti edistyneempien operaatioiden parissa seminaarityössä.
 
 
 ## Mikä on kontti?
@@ -168,6 +149,7 @@ Huomaa, että tämä esimerkki käynnistää kontin sisällä Flaskin kehityspal
 >
 > https://flask.palletsprojects.com/en/2.2.x/tutorial/deploy/
 
+
 ### Levykuvan luonti ja kontin käynnistäminen
 
 Docker imagen ("levykuva") luonti onnistuu nyt komennolla:
@@ -233,37 +215,22 @@ Vinkki: `.dockerignore`-tiedostoa luodessasi voi olla hyvä katsoa, mitä projek
 
 ## 3. Imagen julkaisu konttirekisterissä
 
-Ennen julkaisua imagelle on tarpeen lisätä tagi, joka vastaa sen sijaintia konttirekisterissä: https://docs.docker.com/engine/reference/commandline/tag/. Konttirekisterissä osoite sisältää projektin nimen, joten varmista että olet luonut itsellesi projektin OpenShift:iin ja että käytät samaa nimeä. Projektin nimen jälkeen tuleva imagen nimi on vapaasti valittavissa.
+Docker-levykuva (image) voidaan julkaista konttirekisterissä `docker`-komennon avulla. Ennen julkaisua imagelle on tarpeen lisätä tagi, joka vastaa sen sijaintia konttirekisterissä: https://docs.docker.com/engine/reference/commandline/tag/. Tagi sisältää siis sekä konttirekisterin osoitteen että projektin nimen, joten tagin syntaksi on erittäin tarkka. Projektin nimen jälkeen tuleva imagen nimi on puolestaan tyypillisesti vapaasti valittavissa.
 
-Kurssin OpenShift-pilven konttirekisteri sijaitsee osoitteessa `default-route-openshift-image-registry.apps.hhocp.otaverkko.fi`.
-
-Seuraava esimerkki näyttää miten `login`, `tag` ja `push` toimivat `oauth-openshift.apps.hhocp.otaverkko.fi`-rekisterin kanssa:
+Seuraava esimerkki näyttää miten `login`, `tag` ja `push` toimivat `registry.example.com`-rekisterin kanssa:
 
     # 1. Kirjautuminen konttirekisteriin.
-    # Salasanan sijasta käytetään OAuth-tokenia, jonka saat
-    # osoitteesta https://oauth-openshift.apps.hhocp.otaverkko.fi/oauth/token/request
-    docker login default-route-openshift-image-registry.apps.hhocp.otaverkko.fi
+    docker login registry.example.com
 
-    # 2. Tagin lisääminen aikaisemmin luodulle imagelle.
+    # 2. Tagin lisääminen aikaisemmin luodulle imagelle. Vanha tagi sisältää vain nimen flask-events.
     # Uudessa tagissa on mukana konttorekisterin URL, projekti ja imagen nimi:
-    docker tag flask-events default-route-openshift-image-registry.apps.hhocp.otaverkko.fi/PROJEKTI/IMAGE:latest
+    docker tag flask-events registry.example.com/PROJEKTI/flask-events:latest
 
     # 3. Julkaisu
-    docker push default-route-openshift-image-registry.apps.hhocp.otaverkko.fi/PROJEKTI/IMAGE:latest
+    docker push registry.example.com/PROJEKTI/flask-events:latest
 
-⚠ **Huom!** Koska konttirekisteri käyttää itse allekirjoitettua sertifikaattia, Docker ei oletuksena suostu muodostamaan siihen yhteyttä. Tämä on saatu kierrettyä oppitunnin esimerkissä lisäämällä tiedostoon `C:\Users\TUNNUS\.docker\daemon.json` uusi attribuutti nimeltä `insecure-registries`:
 
-```json
-{
-    "insecure-registries": [
-        "default-route-openshift-image-registry.apps.hhocp.otaverkko.fi"
-    ]
-}
-```
-
-Lisätiedot tästä ratkaisusta löydät osoitteesta https://docs.docker.com/registry/insecure/#deploy-a-plain-http-registry. Asetusten muuttamisen jälkeen Docker tulee käynnistää uudelleen.
-
-🔐 **Huom!** Kirjautumisessa käytetään salasanan sijasta OAuth-tokenia, jonka saat selville osoitteesta https://oauth-openshift.apps.hhocp.otaverkko.fi/oauth/token/request. Lisätiedot löydät oppitunnin 2. videolta.
+🔐 **Huom!** Kirjautumisessa käytetään salasanan sijasta tyypillisesti OAuth-tokenia, jonka saat tyypillisesti selville konttirekisterin käyttäjäprofiilistasi. Esimerkin löydät oppitunnin 2. videolta.
 
 
 ## 4. Kontin deployment OpenShiftissä
