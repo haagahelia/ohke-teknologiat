@@ -19,7 +19,7 @@ Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat teke
 
 **Seminaarivaiheessa**, kurssin jälkimmäisellä puoliskolla, jokainen opiskelija valitsee kurssin aiheista itseään eniten kiinnostavan ja tekee siihen liittyvän seminaaritehtävän. Seminaaritehtävän voi valita joko opettajien ehdotuksista tai seminaaritehtävän aihetta voi ehdottaa myös itse. Seminaaritehtävä voi liittyvä läheisesti opiskelijan ohjelmistoprojekti 2 -kurssin projektiin.
 
-Saman seminaariaiheen valinneet opiskelijat osallistuvat sen aiheen yhteiseen seminaariin, jossa analysoidaan ja kommentoidaan myös muiden opiskelijoiden seminaaritöitä. Lopuksi järjestetään vielä mahdollinen yhteinen seminaari, jossa valitut työt esitellään kaikille.
+Saman seminaariaiheen valinneet opiskelijat osallistuvat yhteiseen seminaariin, jossa analysoidaan ja kommentoidaan myös muiden opiskelijoiden seminaaritöitä.
 
 
 ## Kurssin osallistumisen vahvistaminen
