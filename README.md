@@ -82,7 +82,7 @@ Tehtävät (DL ke 24.1. klo 22:00):
 
 ### To 28.3. Continuous integration ja continuous delivery
 
-### To 4.4. Seminaarien käynnistys
+### To 4.4. [Seminaarien käynnistys](./08_seminaari)
 
 ### To 11.4., 18.4., 25.4., 2.5. [Seminaarityön tekemistä](./08_seminaari)
 
