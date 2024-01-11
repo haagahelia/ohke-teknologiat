@@ -15,7 +15,7 @@ Opettajina kurssilla toimivat Teemu Havulinna ja Juhani Välimäki (etunimi.suku
 
 ## Kurssin suoritustapa
 
-Kurssin alkupuoliskolla esitellään viikoittain eri aiheita ja opiskelijat tekevät niihin liittyviä harjoitustehtäviä. Jokaisesta esiteltävästä aiheesta on myös mahdollista tehdä laajempi seminaaritehtävä kurssin jälkimmäisellä puoliskolla.
+Kurssin alkupuoliskolla käsitellään lukukausittain vaihtelevia aiheita ja opiskelijat tekevät niihin liittyviä harjoitustehtäviä. Jokaisesta esiteltävästä aiheesta on myös mahdollista tehdä laajempi seminaaritehtävä kurssin jälkimmäisellä puoliskolla.
 
 **Seminaarivaiheessa**, kurssin jälkimmäisellä puoliskolla, jokainen opiskelija valitsee kurssin aiheista itseään eniten kiinnostavan ja tekee siihen liittyvän seminaaritehtävän. Seminaaritehtävän voi valita joko opettajien ehdotuksista tai seminaaritehtävän aihetta voi ehdottaa myös itse. Seminaaritehtävä voi liittyvä läheisesti opiskelijan ohjelmistoprojekti 2 -kurssin projektiin.
 
@@ -37,229 +37,64 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
 
 ## Opintojakson oppitunnit ja päivämäärät
 
-**Huom!** Tämä sivu päivittyy kurssin edetessä ja yksittäisten tuntien aiheet voivat vielä muuttua.
+**Huom!** Tämä sivu päivittyy kurssin edetessä ja sekä aikataulu että sisältö tarkentuvat.
 
 Oppitunnit pidetään pääsääntöisesti **torstaisin klo 14-16.45**. Yhdistelemme lähi- ja etäopiskelua, joten yksittäisten oppituntien kohdalta toteutusmuoto selviää varmimmin kurssin Teams-kanavan viesteistä ja lukujärjestyksestä.
 
-**Pyydämme teitä tutustumaan etukäteen kunkin aiheen videoihin ja materiaaleihin, jotta voimme tapaamisissa käyttää aikaa mm. tehtävien parissa.**
+Toivomme että tutustutte mahdollisuuksien mukaan etukäteen kunkin aiheen videoihin ja materiaaleihin, jotta voimme tapaamisissa käyttää aikaa myös mm. tehtävien parissa.
 
 Kurssin seminaarivaiheessa ei järjestetä yhteisiä tapaamisia, vaan tarjoamme yksilöllistä ohjausta etukäteen sovittavina ajankohtina.
 
-<table>
-    <thead>
-        <tr>
-            <th>Aika</th>
-            <th>Aiheet</th>
-            <th>Aikataulu</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>To 24.8.</td>
-            <td>
-                <strong><a href="00_linux/">Kurssin johdanto, ympäristöt ja Linux/Unix-komentorivi</a></strong><br />
-                <br />
-                <strong>Videot:</strong><br />
-                <ul>
-                    <li><a href="https://youtu.be/HRqHfItALO4">📼 Linuxin peruskäyttö</a></li>
-                    <li><a href="https://youtu.be/9dA17XlzT-w">📼 GitHub classroom -tehtävien ohjeistus</a></li>
-                    <li><a href="https://youtu.be/aC3xj4KXu3g">📼 Kurssin koodausympäristöt (wsl2, Docker, Development containers, Codespace)</a></li>
-                </ul>
-                <br />
-                <strong>Tehtävät:</strong><br />
-                <ul>
-                    <li><a href="00_linux/asennukset.md">📥 Kurssin kehitysympäristön asennus</a></li>
-                    <li>📥 Linux-komentorivi (Teams ja GitHub classroom)</li>
-                </ul>
-            </td>
-            <td>
-                Tapaaminen luokassa ja Teamsissa<br />
-                Tehtävien DL ke 30.8. klo 22:00
-            </td>
-        </tr>
-        <tr>
-            <td>To 31.8.</td>
-            <td>
-                <strong><a href="01_typescript/">TypeScript</a></strong><br />
-                <br />
-                <strong>Videot:</strong>
-                <ul>
-                    <li><a href="https://youtu.be/5Ts75AHEGEI">📼 TypeScriptin asennus, kääntäminen ja ts-node</a></li>
-                    <li><a href="https://youtu.be/WfcCsZ0I3sc">📼 tsconfig.json, tyypit, muuttujat, funktiot ja taulukot</a></li>
-                    <!--li><a href="https://web.microsoftstream.com/video/497d7df3-1629-49f9-b460-82c1d479b03d">📼 Pythonin perusrakenteet ja komentorivikäyttö</a></li-->
-                    <!--li><a href="https://web.microsoftstream.com/video/0f31953b-417b-4669-915d-ca35917bfbc0">📼 Pythonin tietorakenteet, ehdot ja toisto</a></li-->
-                </ul>
-                <br />
-                <strong>Tehtävät:</strong>
-                <ul>
-                    <li>📥 Postinumeroiden käsittely (Teams ja GitHub classroom)</li>
-                </ul>
-            </td>
-            <td>
-                Tapaaminen luokassa ja Teamsissa<br />
-                Tehtävien DL ke 6.9. klo 22:00
-            </td>
-        </tr>
-        <tr>
-            <td>To 7.9.</td>
-            <td>
-                <strong>TypeScript ohjelmointi jatkuu: <a href="01_typescript/">Omat tyypit</a></strong><br />
-                <br />
-                <strong>Videot:</strong>
-                <ul>
-                    <li><a href="https://youtu.be/wjnInaST6Q4">📼 PostalCodes-tehtävän malliratkaisu ja taulukkofunktiot (map, filter...)</a></li>
-                    <li><a href="https://youtu.be/f7_vE_lmb5c">📼 JSON-datan käsittely ja omien tyyppien määrittely</a></li>
-                </ul>
-                <br />
-                <strong>Tehtävät:</strong>
-                <ul>
-                    <li>📥 Users & Posts (Teams ja GitHub classroom)</li>
-                </ul>
-            </td>
-            <td>
-                Tapaaminen luokassa ja Teamsissa<br />
-                Tehtävien DL ke 13.9. klo 22:00
-            </td>
-        </tr>
-        <tr>
-            <td>To 14.9.</td>
-            <td>
-                <strong><a href="05_es6_node/NodeJS_demo/README.md">Node.js, npm, Express ja TypeScript</a></strong><br />
-                <p>Demo ja sen jatkaminen tehtäväpalautukseksi: <a href="05_es6_node/NodeJS_demo/0_NodeIntro/README.md">Demo ja tehtävä</a><p>
-                <ul>
-                    <li>Node.js backend</li>
-                    <li>Express</li>
-                    <li>Express validation</li>
-                    <li>Express middleware</li>
-                    <li>Logger</li>
-                </ul>
-            </td>
-            <td>
-                Tapaaminen luokassa ja Teamsissa<br />
-                Tehtävien DL ke 20.9. klo 22:00
-            </td>
-        </tr>
-        <tr>
-            <td>To 21.9.</td>
-            <td>
-                <strong><a href="04_tietorakenteet_ja_algoritmit/">Tietorakenteet ja algoritmit</a></strong><br/>
-                <br />
-                <strong>Videot:</strong>
-                <ul>
-                    <li><a href="https://youtu.be/Ff5Ux9x5YBw">📼 Tietorakenteet ja algoritmit osa 1</a></li>
-                    <li><a href="https://youtu.be/oLasu45pPAI">📼 Tietorakenteet ja algoritmit osa 2</a></li>
-                </ul>
-                <br />
-                <strong>Tehtävät:</strong><br />
-                <ul>
-                    <li>📥 Users & Posts v2: Filter, Map & Sort (Teams ja GitHub classroom)</li>
-                </ul>
-            </td>
-            <td>
-                Viikoittaisessa tapaamisessa työstetään  kurssin tehtäviä ja niihin on saatavilla apua. Varsinainen TRAK-luento on toteutettu kahden videon muodossa.<br />
-                Tehtävien DL ke 27.9. klo 22:00
-            </td>
-        </tr>
-        <tr>
-            <td>To 28.9.</td>
-            <td>
-                <strong>Testaus:</strong><br />
-                <strong><a href="02_testaus/typescript.md">TypeScript & Jest</a></strong><br />
-                <br />
-                <strong>Videot:</strong>
-                <ul>
-                    <li><a href="https://youtu.be/iV7BTxNO0l0">📼 TypeScript: yksikkötestaus Jest-työkalulla</a></li>
-                </ul>
-                <br />
-                <strong>Tehtävät:</strong><br />
-                <ul>
-                    <li>📥 Teams ja GitHub classroom</li>
-                </ul>
-            </td>
-            <td>
-                Tapaaminen luokassa ja Teamsissa<br />
-                Tehtävien DL ke 4.10. klo 22:00
-            </td>
-        </tr>
-        <tr>
-            <td>To 5.10.</td>
-            <td>
-                <strong>Ohjelmointiparadigmat ja -tyylit</strong><br />
-                <strong>Promiset ja asynkronisuus</strong><br /><br />
-                <a href="https://github.com/ohjelmistokehitys/typescript-async-oppitunti">Esimerkkiprojekti (palindromit ja music app)</a><br />
-                <a href="https://youtu.be/_Im4_3Z1NxQ">YouTube: Node.js is a serious thing now...</a>
-            </td>
-            <td>
-                Tapaaminen luokassa ja Teamsissa<br />
-                Tehtävien DL ke 11.10. klo 22:00
-            </td>
-        </tr>
-        <tr>
-            <td>To 12.10.</td>
-            <td>
-            <strong>
-                <a href="06_ohjelmistoarkkitehtuurit_ja_patternit/SoftwareArchitecturesAndPatterns.pdf">Ohjelmistoarkkitehtuurit ja patternit</a><br />
-                <a href="06_ohjelmistoarkkitehtuurit_ja_patternit/ApacheKafka_DistributedEventStreamOrBroker.pdf">Kafka</a><br />
-                <a href="06_ohjelmistoarkkitehtuurit_ja_patternit/">Muita aihepiirin materiaaleja:</a><br />
-                <a href="https://github.com/haagahelia/ohke-teknologiat/blob/master/06_ohjelmistoarkkitehtuurit_ja_patternit/docker-test/Docker.pdf">Dockerista joku huomio</strong>
-            </td>
-            <td>
-                Tapaaminen luokassa ja Teamsissa<br />
-                Tehtävien DL ke 25.10. klo 22:00
-            </td>
-        </tr>
-        <tr>
-            <td>16.-22.10.</td>
-            <td colspan="2">Intensiiviviikko</td>
-        </tr>
-        <tr>
-            <td>To 26.10.</td>
-            <td>
-                <strong><a href="05_es6_node/NodeJS_demo">Node.js backend (lisää)</a></strong><br />
-                <strong><a href="05_es6_node/NodeJS_demo/99_tasks/Task23S.md">Node.js tehtävä 2</a></strong><br />
-            </td>
-            <td>
-                Tapaaminen luokassa ja Teamsissa<br />
-                Tehtävien DL ke 1.11. klo 22:00
-            </td>
-        </tr>
-        <tr>
-            <td>To 2.11.</td>
-            <td>
-                <strong><a href="07_openshift/">Dockerin hyödyntäminen paikallisesti sekä pilvessä (Docker, Kubernetes, OpenShift...)</a></strong><br />
-                <strong><a href="08_seminaari">Seminaarien käynnistys</a></strong>
-            </td>
-            <td>
-                Huom! Tapaaminen vain online<br />
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div>To 9.11.</div>
-                <div>To 16.11.</div>
-                <div>To 23.11.</div>
-                <div>To 30.11.</div>
-            </td>
-            <td><strong><a href="08_seminaari">Seminaarityön tekemistä</a></strong></td>
-            <td>
-                <em>Yksilöllistä ohjausta Teamsissa tai sopimuksen mukaan kampuksella</em>
-            </td>
-        </tr>
-        <tr>
-            <td>Su 3.12.</td>
-            <td>Seminaarityön deadline</td>
-            <td>
-                Seminaaritehtävän palautus su 3.12. klo 22 mennessä.<br />
-                <strong><a href="08_seminaari">Seminaarityön ohjeet.</a></strong>
-            </td>
-        </tr>
-        <tr>
-            <td>To 7.12.</td>
-            <td><strong>Seminaariesitykset</strong></td>
-            <td></td>
-        </tr>
-    </tbody>
-</table>
+
+## To 18.1. <a href="00_linux/">Kurssin johdanto, ympäristöt ja Linux/Unix-komentorivi</a>
+
+Hybriditapaaminen luokassa ja Teamsissa.
+
+Videot:
+
+* [📼 Linuxin peruskäyttö](https://youtu.be/HRqHfItALO4)
+* [📼 GitHub classroom -tehtävien ohjeistus](https://youtu.be/9dA17XlzT-)
+* [📼 Kurssin koodausympäristöt (wsl2, Docker, Development containers, Codespace)](https://youtu.be/aC3xj4KXu3g)
+
+Tehtävät (DL ke 24.1. klo 22:00):
+
+* [📥 Kurssin kehitysympäristön asennus](00_linux/asennukset.md)
+* 📥 Linux-komentorivi (Teams ja GitHub classroom)
+
+
+## To 25.1. Johdatus Dockeriin ja konttiteknologiaan
+
+## To 1.2. Dockerin levykuvat, "volumet" ja portit
+
+## To 8.2. Yhteydet kontteihin ja levykuvien julkaisu
+
+## To 15.2. Johdatus Docker Compose:n käyttöön
+
+## ~~To 22.2. intensiiviviikko~~
+
+## To 29.2. Konttien skaalaaminen
+
+## To 7.3. Levykuvien kriittinen tarkastelu
+
+## To 14.3. Levykuvien edistynyt käsittely, multi-stage buildit
+
+## ~~To 21.3. intensiiviviikko~~
+
+## To 28.3. Continuous integration ja continuous delivery
+
+## To 4.4. Seminaarien käynnistys
+
+## To 11.4., 18.4., 25.4., 2.5. [Seminaarityön tekemistä](./08_seminaari)
+
+Yksilöllistä ohjausta Teamsissa tai sopimuksen mukaan kampuksella
+
+**Seminaariraportin palautus su 12.5. klo 22 mennessä.**
+
+## ~~To 9.5. Helatorstai~~
+
+## To 16.5. Seminaariesitykset
+
+[Katso seminaarityön ohjeet](./08_seminaari).
 
 
 ## Viestintäkanavat
@@ -283,11 +118,11 @@ Ohjelmistojen asentaminen ja käyttäminen eri käyttöjärjestelmillä poikkeaa
 
 Virtualisoituun ympäristöön tekemäsi asennukset eivät vaikuta tietokoneesi normaaliin käyttöön. Käyttämällä kurssin suositusten mukaisia ympäristöjä saat myös todennäköisemmin vertaistukea muilta opiskelijoilta ja opettajilta.
 
-Mikäli sinulla on valmiiksi käytössäsi Linux tai muu Unix-pohjainen käyttöjärjestelmä, kuten macOS, voit käyttää sitä kurssilla. Myösn esimerkiksi Raspberry Pi tai etäyhteydellä käytettävät Linux-ympäristöt, kuten [DigitalOcean](https://www.digitalocean.com/github-students/), [AWS](https://aws.amazon.com/ec2/), [Azure](https://azure.microsoft.com/en-us/services/virtual-machines/) sopivat kurssin tarkoituksiin, mutta niihin pystymme tarjoamaan vain vähäistä käyttötukea.
+Mikäli sinulla on valmiiksi käytössäsi Linux tai muu Unix-pohjainen käyttöjärjestelmä, kuten macOS, voit käyttää sitä kurssilla. Myös etäyhteydellä käytettävät Linux-ympäristöt, kuten [DigitalOcean](https://www.digitalocean.com/github-students/), [AWS](https://aws.amazon.com/ec2/) tai [Azure](https://azure.microsoft.com/en-us/services/virtual-machines/) voivat sopia kurssin tarkoituksiin, mutta niihin pystymme tarjoamaan vain vähäistä käyttötukea.
 
 Lisää ohjeita löydät kurssin [ensimmäisen viikon materiaalista](00_linux).
 
-Linux voidaan asentaa myös tietokoneen pääkäyttöjärjestelmäksi tai "dual boot"-vaihtoehdolla nykyisen käyttöjärjestelmän rinnalle, mutta näitä vaihtoehtoja ei kurssin puolesta suositella.
+⚠ Linux voidaan asentaa myös tietokoneen pääkäyttöjärjestelmäksi tai "dual boot"-vaihtoehdolla nykyisen käyttöjärjestelmän rinnalle, mutta näitä vaihtoehtoja ei kurssin puolesta suositella.
 
 ⚠ Kurssin aikana teemme asennuksia mm. Ubuntun `apt`-työkalulla, Noden `npm`-työkalulla, Dockerilla ja VS Codella. Kaikki nämä työkalut lisäävät tietokoneellesi suoritettavaa ohjelmakoodia, jonka yhteydessä tulee aina huomioida myös tietoturva. Asennusten tekeminen erillisessä virtuaalisessa ympäristössä on oiva lisä oman tietokoneesi suojaamiseksi, vaikka olemmekin pyrkineet valitsemaan vain erittäin tunnettuja ja hyvämaineisia ohjelmistoja tälle kurssille.
 
@@ -296,7 +131,7 @@ Linux voidaan asentaa myös tietokoneen pääkäyttöjärjestelmäksi tai "dual 
 
 Kurssi arvioidaan asteikolla 0-5. Kurssin arviointi perustuu viikkoaiheiden yhteydessä suoritettuihin tehtäviin (60 % arvosanasta) sekä kurssin toisella puoliskolla tehtävään seminaarityöhön (40 %).
 
-Kunkin yksittäisen viikon tehtävien painoarvo kokonaisarvosanassa on yhtä suuri riippumatta viikon maksimipistemäärästä. Pisteet skaalataan yhteneviksi vasta loppuarvosanaa varten.
+Kunkin tehtävän tai tehtäväkokonaisuuden painoarvo loppuarvioinnissa määräytyy sen laajuuden mukaan suhteessa muihin tehtäviin ja tehtäväkokonaisuuksiin. Pisteet skaalataan yhteneviksi vasta loppuarvosanaa varten.
 
 Yksittäinen palauttamatta jäänyt tai arvosanalla 0 arvioitu osasuoritus ei estä seuraavien suoritusten tekemistä, kunhan kokonaisuutena kurssista muodostuu hyväksytty arvosana. Tämä koskee myös seminaarityötä. Poikkeuksena tähän on kahden ensimmäisen viikon tehtävät, jotka toimivat kurssille osallistumisen vahvistamisessa.
 
