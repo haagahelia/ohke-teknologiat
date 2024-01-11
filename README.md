@@ -46,7 +46,7 @@ Toivomme että tutustutte mahdollisuuksien mukaan etukäteen kunkin aiheen video
 Kurssin seminaarivaiheessa ei järjestetä yhteisiä tapaamisia, vaan tarjoamme yksilöllistä ohjausta etukäteen sovittavina ajankohtina.
 
 
-## To 18.1. <a href="00_linux/">Kurssin johdanto, ympäristöt ja Linux/Unix-komentorivi</a>
+### To 18.1. <a href="00_linux/">Kurssin johdanto, ympäristöt ja Linux/Unix-komentorivi</a>
 
 Hybriditapaaminen luokassa ja Teamsissa.
 
@@ -62,37 +62,37 @@ Tehtävät (DL ke 24.1. klo 22:00):
 * 📥 Linux-komentorivi (Teams ja GitHub classroom)
 
 
-## To 25.1. Johdatus Dockeriin ja konttiteknologiaan
+### To 25.1. Johdatus Dockeriin ja konttiteknologiaan
 
-## To 1.2. Dockerin levykuvat, "volumet" ja portit
+### To 1.2. Dockerin levykuvat, "volumet" ja portit
 
-## To 8.2. Yhteydet kontteihin ja levykuvien julkaisu
+### To 8.2. Yhteydet kontteihin ja levykuvien julkaisu
 
-## To 15.2. Johdatus Docker Compose:n käyttöön
+### To 15.2. Johdatus Docker Compose:n käyttöön
 
-## ~~To 22.2. intensiiviviikko~~
+### ~~To 22.2. intensiiviviikko~~
 
-## To 29.2. Konttien skaalaaminen
+### To 29.2. Konttien skaalaaminen
 
-## To 7.3. Levykuvien kriittinen tarkastelu
+### To 7.3. Levykuvien kriittinen tarkastelu
 
-## To 14.3. Levykuvien edistynyt käsittely, multi-stage buildit
+### To 14.3. Levykuvien edistynyt käsittely, multi-stage buildit
 
-## ~~To 21.3. intensiiviviikko~~
+### ~~To 21.3. intensiiviviikko~~
 
-## To 28.3. Continuous integration ja continuous delivery
+### To 28.3. Continuous integration ja continuous delivery
 
-## To 4.4. Seminaarien käynnistys
+### To 4.4. Seminaarien käynnistys
 
-## To 11.4., 18.4., 25.4., 2.5. [Seminaarityön tekemistä](./08_seminaari)
+### To 11.4., 18.4., 25.4., 2.5. [Seminaarityön tekemistä](./08_seminaari)
 
 Yksilöllistä ohjausta Teamsissa tai sopimuksen mukaan kampuksella
 
 **Seminaariraportin palautus su 12.5. klo 22 mennessä.**
 
-## ~~To 9.5. Helatorstai~~
+### ~~To 9.5. Helatorstai~~
 
-## To 16.5. Seminaariesitykset
+### To 16.5. Seminaariesitykset
 
 [Katso seminaarityön ohjeet](./08_seminaari).
 
