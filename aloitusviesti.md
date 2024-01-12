@@ -30,6 +30,6 @@ Kurssin aloitustapaaminen järjestetään torstaina 18.1. klo 14 alkaen Pasilan 
 Kurssin osallistumisen vahvistaminen edellyttää kurssin Teams-ryhmään liittymistä sekä ensimmäisen ja toisen viikon viikkotehtävien hyväksyttyä suoritusta niiden määräaikaan mennessä. Tehtäviin on saatavissa vinkkejä ja tukea kurssin Teams-kanavalla sekä viikoittaisissa tapaamisissa. Tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan varmistaa, että työskentely lähtee kaikilla hyvin käyntiin.
 
 
-Tervetuloa kurssille!
-Teemu Havulinna ja Juhani Välimäki
+Tervetuloa kurssille!<br />
+Teemu Havulinna ja Juhani Välimäki<br />
 Kurssin opettajat
