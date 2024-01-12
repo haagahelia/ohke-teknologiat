@@ -240,12 +240,14 @@ $ echo $HOME
 ```
 
 
-export-komennolla voit lisätä PATH-muuttujaan uusia hakemistoja. Alla oleva komento siis sanoo, että uusi `PATH`-ympäristömuuttuja on nykyinen `PATH`-ympäristömuuttujan arvo, ja lisäksi siihen lisätään `/usr/me/uusihakemisto`-polku.
+export-komennolla voit lisätä PATH-muuttujaan uusia hakemistoja. Alla oleva komento siis sanoo, että uusi `PATH`-ympäristömuuttuja on nykyinen `PATH`-ympäristömuuttujan arvo, ja lisäksi siihen lisätään käyttäjän kotihakemistossa olevien npm-pakettien sijainti `${HOME}/.npm-packages/bin`-polku.
 
 ```shell
 # Katso https://github.com/sindresorhus/guides/blob/main/npm-global-without-sudo.md
 $ export PATH="$PATH:${HOME}/.npm-packages/bin"
 ```
+
+💡 Huom, yllä oleva esimerkki asettaa muuttujan vain kyseisen istunnon ajaksi. Jos haluat tehdä pysyviä muutoksia PATH-muuttujaan, tutustu yllä olevan esimerkin [alkuperäiseen lähteeseen](https://github.com/sindresorhus/guides/blob/main/npm-global-without-sudo.md).
 
 
 ### Prosessit
