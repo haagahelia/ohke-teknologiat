@@ -22,7 +22,7 @@ Kurssin ohjaus- ja viestintäkanavana käytämme MS Teams -palvelua. Kirjaudu Te
 
 Kurssi alkaa kurssilla käytettävien kehitysympäristöjen ja Linux-komentorivikäytön parissa. Näihin aiheisiin liittyvät videotallenteet löytyvät jo etukäteen kurssin kotisivulta.
 
-Kurssin aloitustapaaminen järjestetään torstaina 18.1. klo 14 alkaen Pasilan kampuksella **luokassa 2003**. Aloitustunnin yleisiä järjestelyjä koskeva osuus striimataan myös samanaikaisesti kurssin Teams-kanavalla.
+Kurssin aloitustapaaminen järjestetään torstaina 18.1. klo 14 alkaen Pasilan kampuksella **luokassa 2003**. Aloitustunnin yleisiä järjestelyjä koskeva osuus striimataan myös samanaikaisesti kurssin Teams-kanavalla. Striimistä tehdään myös tallenne, joka löytyy tapaamisen jälkeen Teams-kanavalta.
 
 
 ## Kurssin osallistumisen vahvistaminen
