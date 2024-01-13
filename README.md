@@ -39,16 +39,13 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
 
 **Huom!** Tämä sivu päivittyy kurssin edetessä ja sekä aikataulu että sisältö tarkentuvat.
 
-Oppitunnit pidetään pääsääntöisesti **torstaisin klo 14-16.45**. Yhdistelemme lähi- ja etäopiskelua, joten yksittäisten oppituntien kohdalta toteutusmuoto selviää varmimmin kurssin Teams-kanavan viesteistä ja lukujärjestyksestä.
+Oppitunnit pidetään pääsääntöisesti **torstaisin klo 14-16.45**. Jos muuta ei ilmoiteta erikseen, kurssin Teams-kanavan viesteissä ja lukujärjestyksessä meillä on viikottainen **hybriditapaaminen luokassa ja Teamsissa**.
 
 Toivomme että tutustutte mahdollisuuksien mukaan etukäteen kunkin aiheen videoihin ja materiaaleihin, jotta voimme tapaamisissa käyttää aikaa myös mm. tehtävien parissa.
 
-Kurssin seminaarivaiheessa ei järjestetä yhteisiä tapaamisia, vaan tarjoamme yksilöllistä ohjausta etukäteen sovittavina ajankohtina.
+<hr />
 
-
-### To 18.1. <a href="00_linux/">Kurssin johdanto, ympäristöt ja Linux/Unix-komentorivi</a>
-
-Hybriditapaaminen luokassa ja Teamsissa.
+<details><summary>To 18.1. <a href="00_linux/">Kurssin johdanto, ympäristöt ja Linux/Unix-komentorivi</a></summary>
 
 Videot:
 
@@ -60,42 +57,50 @@ Tehtävät (DL ke 24.1. klo 22:00):
 
 * [📥 Kurssin kehitysympäristön asennus](00_linux/asennukset.md)
 * 📥 Linux-komentorivi (Teams ja GitHub classroom)
+</details>
 
+<details><summary>To 25.1. DevOps: Johdatus Dockeriin ja konttiteknologiaan, 
 
-### To 25.1. Johdatus Dockeriin ja konttiteknologiaan
+<details><summary>To 1.2. DevOps: Dockerin levykuvat, "volumet" ja portit
 
-### To 1.2. Dockerin levykuvat, "volumet" ja portit
+<details><summary>To 8.2. DevOps: Yhteydet kontteihin ja levykuvien julkaisu, Johdatus Docker Compose:n käyttöön, Continuous integration ja continuous delivery</summary>
+Konttien skaalaaminen, Levykuvien kriittinen tarkastelu, Levykuvien edistynyt käsittely, multi-stage buildit
+</details>
 
-### To 8.2. Yhteydet kontteihin ja levykuvien julkaisu
+<details><summary>To 15.2. TypeScript 
 
-### To 15.2. Johdatus Docker Compose:n käyttöön
+<details><summary>(((To 22.2. intensiiviviikko)))
 
-### ~~To 22.2. intensiiviviikko~~
+<details><summary>To 29.2. TypeScript
 
-### To 29.2. Konttien skaalaaminen
+<details><summary>To 7.3.  Automaattinen testaus
 
-### To 7.3. Levykuvien kriittinen tarkastelu
+<details><summary>To 14.3.  Arkkitehtuurit, mahdollisesti Kafka esimerkkinä hajautetusta arkkitehtuurista
 
-### To 14.3. Levykuvien edistynyt käsittely, multi-stage buildit
+<details><summary>(((To 21.3. intensiiviviikko)))
 
-### ~~To 21.3. intensiiviviikko~~
+<details><summary>To 28.3.  Joku muu aihe, upouusi tai vanhalta toteutukselta
 
-### To 28.3. Continuous integration ja continuous delivery
+<details><summary>To 4.4. [Seminaarien käynnistys](./08_seminaari)</summary>
 
-### To 4.4. [Seminaarien käynnistys](./08_seminaari)
+</details>
 
-### To 11.4., 18.4., 25.4., 2.5. [Seminaarityön tekemistä](./08_seminaari)
+<details><summary> To 11.4. , 18.4., 25.4., 2.5. Seminaarityön tekemistä</summary>
 
-Yksilöllistä ohjausta Teamsissa tai sopimuksen mukaan kampuksella
+[Seminaarityön tekemistä](./08_seminaari)
 
+Yksilöllistä ohjausta Teamsissa tai sopimuksen mukaan kampuksella. Kurssin seminaarivaiheessa ei järjestetä yhteisiä tapaamisia, vaan tarjoamme yksilöllistä ohjausta etukäteen sovittavina ajankohtina.
+</details>
 **Seminaariraportin palautus su 12.5. klo 22 mennessä.**
 
-### ~~To 9.5. Helatorstai~~
+<details><summary>(((To 9.5. Helatorstai)))
 
-### To 16.5. Seminaariesitykset
+<details><summary>To 16.5. Seminaariesitykset</summary>
 
 [Katso seminaarityön ohjeet](./08_seminaari).
+</details>
 
+<hr />
 
 ## Viestintäkanavat
 
