@@ -69,7 +69,7 @@ Konttien skaalaaminen, Levykuvien kriittinen tarkastelu, Levykuvien edistynyt k�
 
 <details><summary><strong>To 15.2. TypeScript</strong></summary></details>
 
-<details><summary><strong><del>To 22.2. intensiiviviikko</del></strong></summary></details>
+<strong><del>To 22.2. intensiiviviikko</del></strong>
 
 <details><summary><strong>To 29.2. TypeScript</strong></summary></details>
 
@@ -77,7 +77,7 @@ Konttien skaalaaminen, Levykuvien kriittinen tarkastelu, Levykuvien edistynyt k�
 
 <details><summary><strong>To 14.3.  Arkkitehtuurit, mahdollisesti Kafka esimerkkinä hajautetusta arkkitehtuurista</strong></summary></details>
 
-<details><summary><strong><del>To 21.3. intensiiviviikko</del></strong></summary></details>
+<strong><del>To 21.3. intensiiviviikko</del>
 
 <details><summary><strong>To 28.3.  Joku muu aihe, upouusi tai vanhalta toteutukselta</strong></summary></details>
 
@@ -94,7 +94,7 @@ Yksilöllistä ohjausta Teamsissa tai sopimuksen mukaan kampuksella. Kurssin sem
 
 **Seminaariraportin palautus su 12.5. klo 22 mennessä.**
 
-<details><summary><strong><del>To 9.5. Helatorstai</del></strong></summary></details>
+<del>To 9.5. Helatorstai</del></strong>
 
 <details><summary><strong>To 16.5. Seminaariesitykset</strong></summary>
 
