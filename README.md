@@ -45,7 +45,7 @@ Toivomme että tutustutte mahdollisuuksien mukaan etukäteen kunkin aiheen video
 
 <hr />
 
-<details><summary>To 18.1. <a href="00_linux/">Kurssin johdanto, ympäristöt ja Linux/Unix-komentorivi</a></summary>
+<strong>To 18.1. <a href="00_linux/">Kurssin johdanto, ympäristöt ja Linux/Unix-komentorivi</a></strong>
 
 Videot:
 
@@ -57,47 +57,49 @@ Tehtävät (DL ke 24.1. klo 22:00):
 
 * [📥 Kurssin kehitysympäristön asennus](00_linux/asennukset.md)
 * 📥 Linux-komentorivi (Teams ja GitHub classroom)
-</details>
 
-<details><summary>To 25.1. DevOps: Johdatus Dockeriin ja konttiteknologiaan, 
+<details><summary><strong>To 25.1. DevOps: Johdatus Dockeriin ja konttiteknologiaan</strong></summary></details>
 
-<details><summary>To 1.2. DevOps: Dockerin levykuvat, "volumet" ja portit
+<details><summary><strong>To 1.2. DevOps: Dockerin levykuvat, "volumet" ja portit</strong></summary></details>
 
-<details><summary>To 8.2. DevOps: Yhteydet kontteihin ja levykuvien julkaisu, Johdatus Docker Compose:n käyttöön, Continuous integration ja continuous delivery</summary>
+<details><summary><strong>To 8.2. DevOps: Yhteydet kontteihin ja levykuvien julkaisu, Johdatus Docker Compose:n käyttöön, Continuous integration ja continuous delivery</strong></summary>
+  
 Konttien skaalaaminen, Levykuvien kriittinen tarkastelu, Levykuvien edistynyt käsittely, multi-stage buildit
 </details>
 
-<details><summary>To 15.2. TypeScript 
+<details><summary><strong>To 15.2. TypeScript</strong></summary></details>
 
-<details><summary>(((To 22.2. intensiiviviikko)))
+<details><summary><strong><del>To 22.2. intensiiviviikko</del></strong></summary></details>
 
-<details><summary>To 29.2. TypeScript
+<details><summary><strong>To 29.2. TypeScript</strong></summary></details>
 
-<details><summary>To 7.3.  Automaattinen testaus
+<details><summary><strong>To 7.3.  Automaattinen testaus</strong></summary></details>
 
-<details><summary>To 14.3.  Arkkitehtuurit, mahdollisesti Kafka esimerkkinä hajautetusta arkkitehtuurista
+<details><summary><strong>To 14.3.  Arkkitehtuurit, mahdollisesti Kafka esimerkkinä hajautetusta arkkitehtuurista</strong></summary></details>
 
-<details><summary>(((To 21.3. intensiiviviikko)))
+<details><summary><strong><del>To 21.3. intensiiviviikko</del></strong></summary></details>
 
-<details><summary>To 28.3.  Joku muu aihe, upouusi tai vanhalta toteutukselta
+<details><summary><strong>To 28.3.  Joku muu aihe, upouusi tai vanhalta toteutukselta</strong></summary></details>
 
-<details><summary>To 4.4. [Seminaarien käynnistys](./08_seminaari)</summary>
+<details><summary><strong>To 4.4. <a href="./08_seminaari">Seminaarien käynnistys</a></strong></summary>
 
 </details>
 
-<details><summary> To 11.4. , 18.4., 25.4., 2.5. Seminaarityön tekemistä</summary>
+<details><summary><strong>To 11.4. , 18.4., 25.4., 2.5. Seminaarityön tekemistä</summary>
 
 [Seminaarityön tekemistä](./08_seminaari)
 
 Yksilöllistä ohjausta Teamsissa tai sopimuksen mukaan kampuksella. Kurssin seminaarivaiheessa ei järjestetä yhteisiä tapaamisia, vaan tarjoamme yksilöllistä ohjausta etukäteen sovittavina ajankohtina.
 </details>
+
 **Seminaariraportin palautus su 12.5. klo 22 mennessä.**
 
-<details><summary>(((To 9.5. Helatorstai)))
+<details><summary><strong><del>To 9.5. Helatorstai</del></strong></summary></details>
 
-<details><summary>To 16.5. Seminaariesitykset</summary>
+<details><summary><strong>To 16.5. Seminaariesitykset</strong></summary>
 
 [Katso seminaarityön ohjeet](./08_seminaari).
+
 </details>
 
 <hr />
