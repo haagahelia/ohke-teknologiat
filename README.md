@@ -63,23 +63,23 @@ Tehtävät (DL ke 24.1. klo 22:00):
 <details><summary><strong>To 1.2. DevOps: Dockerin levykuvat, "volumet" ja portit</strong></summary></details>
 
 <details><summary><strong>To 8.2. DevOps: Yhteydet kontteihin ja levykuvien julkaisu, Johdatus Docker Compose:n käyttöön, Continuous integration ja continuous delivery</strong></summary>
-  
+
 Konttien skaalaaminen, Levykuvien kriittinen tarkastelu, Levykuvien edistynyt käsittely, multi-stage buildit
 </details>
 
-<details><summary><strong>To 15.2. TypeScript</strong></summary></details>
+<details><summary><strong>To 15.2. Aihe valitaan kurssin edetessä</strong></summary></details>
 
 <strong><del>To 22.2. intensiiviviikko</del></strong>
 
-<details><summary><strong>To 29.2. TypeScript</strong></summary></details>
+<details><summary><strong>To 29.2. Aihe valitaan kurssin edetessä</strong></summary></details>
 
-<details><summary><strong>To 7.3.  Automaattinen testaus</strong></summary></details>
+<details><summary><strong>To 7.3.  Aihe valitaan kurssin edetessä</strong></summary></details>
 
 <details><summary><strong>To 14.3.  Arkkitehtuurit, mahdollisesti Kafka esimerkkinä hajautetusta arkkitehtuurista</strong></summary></details>
 
 <strong><del>To 21.3. intensiiviviikko</del>
 
-<details><summary><strong>To 28.3.  Joku muu aihe, upouusi tai vanhalta toteutukselta</strong></summary></details>
+<details><summary><strong>To 28.3. Aihe valitaan kurssin edetessä</strong></summary></details>
 
 <details><summary><strong>To 4.4. <a href="./08_seminaari">Seminaarien käynnistys</a></strong></summary>
 
