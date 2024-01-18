@@ -58,13 +58,24 @@ Tehtävät (DL ke 24.1. klo 22:00):
 * [📥 Kurssin kehitysympäristön asennus](00_linux/asennukset.md)
 * 📥 Linux-komentorivi (Teams ja GitHub classroom)
 
-<details><summary><strong>To 25.1. DevOps: Johdatus Dockeriin ja konttiteknologiaan</strong></summary></details>
+<details><strong><summary>To 25.1. DevOps: Johdatus Dockeriin ja konttiteknologiaan</strong></summary>
 
-<details><summary><strong>To 1.2. DevOps: Dockerin levykuvat, "volumet" ja portit</strong></summary></details>
+Ei ole välttämätöntä, mutta jos haluat kurkata jo ennakolta, käytämme Eficoden ja Helsingin yliopiston yhteistyönä syntynyttä [DevOps with Docker](https://devopswithdocker.com/) -kurssia. 
+
+Eficode on erikoistunut rakentamaan DevOpsia asiakkaille. He ovat useina kertoina tuoneet meille Softalaan projekteja.
+
+</details>
+
+<details><summary><strong>To 1.2. DevOps: Dockerin levykuvat, "volumet" ja portit</strong></summary>
+[DevOps with Docker](https://devopswithdocker.com/)
+</details>
 
 <details><summary><strong>To 8.2. DevOps: Yhteydet kontteihin ja levykuvien julkaisu, Johdatus Docker Compose:n käyttöön, Continuous integration ja continuous delivery</strong></summary>
 
 Konttien skaalaaminen, Levykuvien kriittinen tarkastelu, Levykuvien edistynyt käsittely, multi-stage buildit
+
+[DevOps with Docker](https://devopswithdocker.com/)
+
 </details>
 
 <details><summary><strong>To 15.2. Aihe valitaan kurssin edetessä</strong></summary></details>
