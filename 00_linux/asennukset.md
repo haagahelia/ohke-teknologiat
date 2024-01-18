@@ -4,26 +4,26 @@
 
 Kurssilla tarvitset toimivaa Unix-pohjaista ympäristöä, jossa voit harjoitella mm. komentorivin käyttöä sekä DevOps-taitoja.
 
-Mikäli sinulla on valmiiksi käytössäsi Linux tai muu Unix-pohjainen käyttöjärjestelmä, kuten macOS, voit käyttää sitä kurssilla. Myös Raspberry Pi tai etäyhteydellä käytettävät Linux-ympäristöt, kuten [DigitalOcean](https://www.digitalocean.com/github-students/), [AWS](https://aws.amazon.com/ec2/), [Azure](https://azure.microsoft.com/en-us/services/virtual-machines/) sopivat kurssin tarkoituksiin, mutta niihin pystymme tarjoamaan vain vähäistä käyttötukea.
+Mikäli sinulla on valmiiksi käytössäsi Linux tai muu Unix-pohjainen käyttöjärjestelmä, kuten macOS, voit käyttää sitä kurssilla. Myös etäyhteydellä käytettävät Linux-ympäristöt, kuten [DigitalOcean](https://www.digitalocean.com/github-students/), [AWS](https://aws.amazon.com/ec2/), [Azure](https://azure.microsoft.com/en-us/services/virtual-machines/) voivat sopia kurssin tarkoituksiin, mutta niihin pystymme tarjoamaan vain vähäistä käyttötukea.
 
 
 ## Windows + VirtualBox + Linux
 
-Graafiseen käyttöliittymään tottuneille käyttäjille yksi miellyttävä tie Linuxiin tutustumiseksi on [Ubuntu](https://ubuntu.com/desktop)- tai [Xubuntu](https://xubuntu.org/)-käyttöjärjestelmä graafisella käyttöliittymällä. Ubuntu voidaan asentaa "virtuaalikoneena" Oraclen ilmaisen [VirtualBox](https://www.virtualbox.org/)-virtualisointiympäristön avulla esimerkiksi [Ubuntun tutoriaalia seuraamalla](https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox#1-overview).
+Graafiseen käyttöliittymään tottuneille käyttäjille yksi miellyttävä tie Linuxiin tutustumiseksi on [Ubuntu](https://ubuntu.com/desktop)- tai [Xubuntu](https://xubuntu.org/)-käyttöjärjestelmä graafisella käyttöliittymällä. Ubuntu voidaan asentaa ns. virtuaalikoneena Oraclen ilmaisen [VirtualBox](https://www.virtualbox.org/)-virtualisointiympäristön avulla esimerkiksi [Ubuntun tutoriaalia seuraamalla](https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox#1-overview).
 
-**Huom!** VirtualBox-version 7 ja Ubuntun version 22.04 automaattisessa asennuksessa (unattended installation) vaikuttaa olevan [bugi](https://askubuntu.com/q/1435918), jonka vuoksi käyttöjärjestelmän virheelliset kieliasetukset estävät terminaalin avaamisen. Suosittelemme, että ette käytä asennuksessa "unattended"-vaihtoehtoa.
+**Huom!** VirtualBox-version 7 ja Ubuntun version 22.04 automaattisessa asennuksessa (unattended installation) vaikuttaa olevan [bugi](https://askubuntu.com/q/1435918), jonka vuoksi käyttöjärjestelmän virheelliset kieliasetukset estävät terminaalin avaamisen. Suosittelemme, että **ette käytä** asennuksessa "*unattended*"-vaihtoehtoa.
 
 > *"VirtualBox is a general purpose virtualiser that is available across Linux, Mac OS and Windows. It’s a great way to experience Ubuntu regardless of your current operating system."*
 >
 > https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox
 
-💡 Linux voidaan asentaa myös tietokoneen pääkäyttöjärjestelmäksi tai "dual boot"-vaihtoehdolla nykyisen käyttöjärjestelmän rinnalle, mutta näitä vaihtoehtoja ei kurssin puolesta suositella niihin liittyvien riskien vuoksi.
-
 Virtuaalikoneeseen tekemäsi asennukset eivät vaikuta tietokoneesi normaaliin käyttöön, ja voit tarvittaessa poistaa kaiken kurssilla asentamasi kerralla poistamalla virtuaalikoneen. Hyviä ohjeita asennuksiin löytyy sekä YouTubesta että Googlesta. Jaa myös löytämäsi hyvät ohjeet muille Teamsissa!
 
-Windows-käyttäjänä joudut mahdollisesti [kytkemään päälle Windowsin Hyper-V -ominaisuuden](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v#enable-the-hyper-v-role-through-settings) tai [kytkemään virtualisoinnin päälle tietokoneesi BIOS-asetuksista](https://www.google.com/search?q=enable+virtualization+bios).
-
 Mikäli virtuaalikoneen asennuksessa on ongelmia, pyritään pääsääntöisesti ratkaisemaan ne kurssin yhteisessä Teams-chatissa!
+
+💡 *Linux voidaan asentaa myös tietokoneen pääkäyttöjärjestelmäksi tai "dual boot"-vaihtoehdolla nykyisen käyttöjärjestelmän rinnalle, mutta näitä vaihtoehtoja ei kurssin puolesta suositella niihin liittyvien riskien vuoksi.*
+
+💡 *Windows-käyttäjänä joudut mahdollisesti [kytkemään päälle Windowsin Hyper-V -ominaisuuden](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v#enable-the-hyper-v-role-through-settings) tai [kytkemään virtualisoinnin päälle tietokoneesi BIOS-asetuksista](https://www.google.com/search?q=enable+virtualization+bios).*
 
 
 ### Linux-palvelimet kurssin Debian
@@ -31,12 +31,16 @@ Mikäli virtuaalikoneen asennuksessa on ongelmia, pyritään pääsääntöisest
 Haaga-Helian Linux-palvelimet kurssilla käytetään Debian-käyttöjärjestelmää VirtualBox-alustalla, mikä sopii hyvin myös tälle kurssille. Edellä mainittu Ubuntu itse asiassa perustuu juuri Debianiin. Asennusohjeet Debianin asentamiseksi löydät Tero Karvisen kotisivulta https://terokarvinen.com/2021/install-debian-on-virtualbox/.
 
 
+## Windows + WSL2
+
+Mikäli et kaipaa graafista käyttöliittymää, voit asentaa Linuxin Windowsin yhteyteen *Windows Subsystem for Linux (WSL)* -ratkaisulla. Tarkempia asennusohjeita tähän löytyy mm. Microsoftin asennusohjeista https://learn.microsoft.com/en-us/windows/wsl/install. Myös WSL:n suhteen suosittelemme etsimään hyviä asennus- ja käyttöoppaita hakukoneilla.
+
 
 ## VS Code Remote Development
 
 Kurssilla hyödynnettävä VS Code -editori tukee "etäkehitystä" (remote development), jonka avulla on mahdollista luoda kevyitä Linux-pohjaisia kehitysympäristöjä. Myös tämä vaihtoehto voi olla toimiva ratkaisu erillisen Linux-asennuksen sijasta tai sellaisen lisäksi. Lisätietoja löydät mm. [Visual Studio Code:n ohjeista](https://code.visualstudio.com/docs/remote/containers).
 
-Uutena vaihtoehtona GitHub tarjoaa ilmaiseksi rajatun määrän käyttöaikaa [Codespaces-palveluun](https://github.com/features/codespaces). Codespaces on edistynyt pilvipohjainen Linux- ja VS Code -kehitysympäristö, jonka avulla pääset nopeasti liikkeelle eri teknologioiden harjoittelussa.
+Uutena vaihtoehtona GitHub tarjoaa ilmaiseksi rajatun määrän käyttöaikaa [Codespaces-palveluun](https://github.com/features/codespaces). Codespaces on edistynyt pilvipohjainen Linux- ja VS Code -kehitysympäristö, jonka avulla pääset nopeasti liikkeelle eri teknologioiden harjoittelussa:
 
 > *"A codespace is a development environment that's hosted in the cloud. You can customize your project for GitHub Codespaces by configuring dev container files to your repository (often known as Configuration-as-Code), which creates a repeatable codespace configuration for all users of your project."*
 >
@@ -45,16 +49,18 @@ Uutena vaihtoehtona GitHub tarjoaa ilmaiseksi rajatun määrän käyttöaikaa [C
 
 # Ohjelmien asentaminen
 
-Kun olet saanut kehitysympäristösi käyttökuntoon, tarvitset vielä siihen joitakin erillisiä asennuksia. Suosittelemme asentamaan aluksi ainakin Gitin, Node.js:n ja Pythonin. Suosittelemme kurssilla koodieditoriksi VS Codea, mutta saat käyttää myös muita editoreja.
+Tarvitset kurssilla Linux-ympäristössäsi erillisiä asennuksia. Suosittelemme asentamaan aluksi ainakin Gitin, Node.js:n ja Pythonin. Suosittelemme kurssilla koodieditoriksi VS Codea, mutta saat käyttää myös muita editoreja.
 
-Seuraavat kohdat käsittelevät tarvittavien ohjelmien asentamista erityisesti Ubuntu-ympäristössä.
+Seuraavat kohdat käsittelevät tarvittavien ohjelmien asentamista erityisesti graafisessa Ubuntu-ympäristössä. Kaikkia ohjelmia ei ole tarpeen asentaa etukäteen, vaan voit palata tälle sivulle kurssin edetessä.
 
 
 ## Komentorivin avaaminen
 
-Ubuntussa useat paketit ja ohjelmat asennetaan komentorivityökaluilla. Komentorivin saat auki Ubuntun valikosta nimellä "Terminal", tai näppäinyhdistelmällä `CTRL + ALT + T`.
+Ubuntussa useat paketit ja ohjelmat asennetaan komentorivityökaluilla. Komentorivin saat auki Ubuntun graafisessa käyttöliittymässä valikosta nimellä "Terminal", tai näppäinyhdistelmällä `CTRL + ALT + T`. Mikäli käytät komentorivipohjaista Linux-järjestelmää esimerkiksi WSL:n tai Codespacen avulla, terminaali on ensisijainen käyttöliittymäsi eikä sitä avata erikseen.
 
-Mikäli komentorivin käyttö tuottaa ongelmia, hyvä tutoriaali komentorivin käytöstä löytyy osoitteessa https://ubuntu.com/tutorials/command-line-for-beginners. Voit myös aina kysyä neuvoa kurssin opettajilta ja muilta opiskelijoilta kurssin Teams-kanavilla!
+Mikäli komentorivin käyttö tuottaa ongelmia, Ubuntun tutoriaali komentorivin käytöstä löytyy osoitteessa https://ubuntu.com/tutorials/command-line-for-beginners. Myös Mozilla on julkaissut hyvän "Command line crash course" -oppaan komentoriviin perehtymiseksi, ja se löytyy osoitteesta https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line.
+
+Voit myös aina kysyä neuvoa kurssin opettajilta ja muilta opiskelijoilta kurssin Teams-kanavilla!
 
 
 ## APT (Advanced Package Tool)
@@ -86,7 +92,7 @@ APT:in avulla sovellusten asennus tapahtuu kirjoittamalla komento muodossa:
 
     apt install ohjelma
 
-Koska ohjelmien asennus vaatii pääkäyttäjäoikeudet, ei normaalilla käyttäjätunnuksella voida suoraan tehdä asennuksia. Yksittäisiä komentoja saa suoritettua pääkäyttäjäoikeuksilla [`sudo`-komennon avulla](https://wiki.ubuntu-fi.org/Sudo). Käytännössä tulet siis tekemään asennukset seuraavasti:
+Koska ohjelmien asennus vaatii pääkäyttäjäoikeudet, ei normaalilla käyttäjätunnuksella voida suoraan tehdä asennuksia. Yksittäisiä komentoja saa suoritettua pääkäyttäjäoikeuksilla [`sudo`-komennon avulla](https://wiki.ubuntu-fi.org/Sudo). Tyypillisesti tulet siis tekemään asennukset seuraavasti:
 
     sudo apt install ohjelma
 
@@ -112,7 +118,7 @@ $ git config --global user.name "Your Name"
 Lopuksi voit kloonata tämän repositorion itsellesi (vapaaehtoista):
 
 ```bash
-$ git clone https://github.com/haagahelia/swd4tn023.git
+$ git clone https://github.com/haagahelia/ohke-teknologiat.git
 ```
 
 ⚠ **Huom!** Tehdessäsi kirjautumista vaativia operaatioita GitHubiin komentoriviltä, et voi tietoturvasyistä käyttää tunnistautumisessa käyttäjätunnusta ja salasanaa, vaan joudut luomaan itsellesi "personal access tokenin". Lue tarkempia ohjeita GitHubin ohjesivuilta: https://docs.github.com/articles/creating-a-personal-access-token-for-the-command-line. Access token ei ole välttämätön vielä tässä vaiheessa, mutta asia on hyvä huomioida tulevaisuudessa.
@@ -160,45 +166,14 @@ sudo apt install python3-pip
 
 ## Visual Studio Code
 
-Viimeisenä asennuksena suosittelemme asentamaan Visual Studio Code -kehitysympäristön. Se löytyy ilmaiseksi helpoiten Ubuntun ohjelmistokaupasta. Ohjelmistokaupan voit avata painamalla Windows-painiketta ja kirjoittamalla hakukenttään "Ubuntu Software". Etsi hakukentän avulla "Visual Studio Code" ja valitse "install".
+Viimeisenä asennuksena suosittelemme asentamaan Visual Studio Code -kehitysympäristön. Mikäli käytät Ubuntun työpöytäversiota, VS Code löytyy helpoiten (ilmaiseksi) "Ubuntu Software"-ohjelmistokaupasta. Ohjelmistokaupan voit avata Ubuntussa painamalla näppäimistön Windows-painiketta ja kirjoittamalla hakukenttään "Ubuntu Software". Etsi hakukentän avulla "Visual Studio Code" ja valitse "install".
 
 Visual Studio Code voidaan asentaa Linuxiin myös [lukuisilla muilla tavoilla](https://code.visualstudio.com/docs/setup/linux).
 
 
-<!--### VS Coden laajennokset ja asetukset
-
-Tulemme käyttämään VS Codessa ainakin seuraavia laajennoksia, jotka voit asentaa etukäteen tai tarpeen mukaan:
-
-1. `Python`-tuki VS Codelle
-
-    https://marketplace.visualstudio.com/items?itemName=ms-python.python
-
-1. `Pylint` koodin tarkistus
-
-     `pip3 install pylint`
-
-1. `Rope` refaktorointi
-
-     `pip3 install rope`
-
-1. `autopep8` koodin muotoilu
-
-    `pip3 install autopep8`
-
-Huomaa, että pip-asennukset ovat käyttäjäkohtaisia, eli niitä ei tehdä `sudo`-komennon avulla.
-
-Lisäksi suosittelemme muuttamaan VS Code:n asetuksista koodin automaattisen muotoilun päälle tallennettaessa ja liitettäessä koodia seuraavasti:
-
-> Avaa "User settings". Etsi hakukentän avulla valinnat `Format on save` sekä `Format on paste` ja aseta rastit molempiin ruutuihin.
-
-**Huom!** Python-paketit sisältävät suoritettavaa ohjelmakoodia, joten niiden kanssa tulee huomioida tietoturva, aivan kuten muidenkin suoritettavien ohjelmien kanssa. Paketteja ei kannata ladata tuntemattomista lähteistä. Tunnettujen ja laajasti käytettyjen pakettien käyttäminen voi myös olla turvallisempaa kuin heikommin tunnettujen tai vähäisessä käytössä olevien. Lisätietoa pip-pakettienhallinnan turvallisuudesta löydät esimerkiksi artikkelista ["Look before you pip"](https://www.ayrx.me/look-before-you-pip).
-
-
--->
-
 ## Extra: VirtualBox Guest additions sekä leikepöydän käyttö
 
-Perusasennuksen lisäksi suosittelemme sinua asentamaan VirtualBoxin "guest additions" -lisäosat virtualisoidulle Linux-koneelle. Lisäosien avulla esimerkiksi VirtualBox-ikkunan koon muuttaminen muuttaa automaattisesti virtualisoidun työpöydän resoluutiota ikkunan koon mukaiseksi.
+Mikäli käytät VirtualBoxia, suosittelemme sinua asentamaan VirtualBoxin "guest additions" -lisäosat virtualisoidulle Linux-koneelle. Lisäosien avulla esimerkiksi VirtualBox-ikkunan koon muuttaminen muuttaa automaattisesti virtualisoidun työpöydän resoluutiota ikkunan koon mukaiseksi.
 
 Asennus tapahtuu helpoiten syöttämällä virtuaalikoneeseen virtuaalinen asennus CD virtuaalikoneen ollessa käynnissä:
 

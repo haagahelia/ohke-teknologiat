@@ -11,8 +11,6 @@ Ohjeet kurssille tarvittavan ympäristön asentamiseksi löydät [täältä](ase
 1. [**GitHub classroom -tehtävien ohjeistus**](https://youtu.be/9dA17XlzT-w)
 1. [**Kurssin koodausympäristöt (wsl2, Docker, Development containers, Codespace)**](https://youtu.be/aC3xj4KXu3g)
 
-<!--Todo: video Linux-palomuurista-->
-
 Löydät tämän kurssin omien materiaalien lisäksi netistä lukuisia hyviä video- ja tekstimuotoisia ohjeita. Halutessasi voit käyttää myös muita materiaaleja, esimerkiksi:
 
 **Videot**
@@ -26,6 +24,7 @@ Löydät tämän kurssin omien materiaalien lisäksi netistä lukuisia hyviä vi
 **Artikkelit**
 
 * [The Linux command line for beginners (Canonical Ltd)](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview)
+* [Command line crash course (Mozilla)](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line)
 * [Linux Command Cheat Sheet (Guru99)](https://www.guru99.com/linux-commands-cheat-sheet.html)
 * [Top 50+ Linux Commands You MUST Know (DigitalOcean)](https://www.digitalocean.com/community/tutorials/linux-commands)
 
@@ -38,7 +37,11 @@ Linux ja muut Unix-pohjaiset käyttöjärjestelmät, kuten MacOS, ovat kehittäj
 
 Unix-pohjaiset käyttöjärjestelmät tarjoavat paljon työkaluja, jotka helpottavat kehittäjän työtä. Niillä on helppo myös työskennellä komentorivin kautta vahvoilla komennoilla, joilla pystyy esimerkiksi käsittelemään ohjelmistojen lokitiedostoja, ajastamaan komentoja jne. Komentojen toinen vahvuus on se, että ne on helposti ajastettavissa suoritettavaksi automaattisesti ja eri komentosarjoja voidaan yhdistää skripteiksi. Myös ohjelmistojen ja työkalujen asentaminen sekä päivittäminen on Unix-pohjaisissa ympäristöissä tyypillisesti vaivatonta käyttöjärjestelmien sisäänrakennettujen pakettienhallintajärjestelmien ansiosta.
 
-Komentorivityöskentely on tärkeä taito pilvi-infrastruktuuria käytettäessä ja myös esimerkiksi sulautettujen järjestelmien ja mikrotietokoneiden yhteydessä.
+Komentorivityöskentely on tärkeä taito pilvi-infrastruktuuria käytettäessä ja automatisoitaessa. Myös Docker:in käyttö edellyttää vähintään peruskomentojen hallitsemista.
+
+> *"This year, Docker is the top-used other tool amongst all respondents (53%) rising from its second place spot last year."*
+>
+> StackOverflow 2023 Developer Survey. https://survey.stackoverflow.co/2023
 
 
 ## Unix-pohjaisten järjestelmien komentorivi
@@ -51,6 +54,7 @@ Alkuun mainittakoon yleisesti, että Linux-komentojen keskeyttäminen tarvittaes
 ## Unix-komentoja
 
 💡 Unix-komentoihin perehtymiseksi löytyy lukuisia oppaita ja tutoriaaleja. Olemme koonneet alle muutamia esimerkkejä, mutta syvällisemmän pohjan komentorivin käyttämiseen saat lukuisista muista lähteistä, joita olemme listanneet sivun yläosaan.
+
 
 ### Hakemistot ja navigointi
 
