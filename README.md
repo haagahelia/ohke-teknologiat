@@ -50,7 +50,7 @@ Toivomme että tutustutte mahdollisuuksien mukaan etukäteen kunkin aiheen video
 Videot:
 
 * [📼 Linuxin peruskäyttö](https://youtu.be/HRqHfItALO4)
-* [📼 GitHub classroom -tehtävien ohjeistus](https://youtu.be/9dA17XlzT-)
+* [📼 GitHub classroom -tehtävien ohjeistus](https://youtu.be/9dA17XlzT-w)
 * [📼 Kurssin koodausympäristöt (wsl2, Docker, Development containers, Codespace)](https://youtu.be/aC3xj4KXu3g)
 
 Tehtävät (DL ke 24.1. klo 22:00):
