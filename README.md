@@ -97,7 +97,7 @@ Konttien skaalaaminen, Levykuvien kriittinen tarkastelu, Levykuvien edistynyt k�
 
 </details>
 
-<details><summary><strong>To 11.4. , 18.4., 25.4., 2.5. Seminaarityön tekemistä</summary>
+<details><summary><strong>To 11.4. , 18.4., 25.4., 2.5. Seminaarityön tekemistä</strong></summary>
 
 [Seminaarityön tekemistä](./08_seminaari)
 
@@ -106,7 +106,7 @@ Yksilöllistä ohjausta Teamsissa tai sopimuksen mukaan kampuksella. Kurssin sem
 
 **Seminaariraportin palautus su 12.5. klo 22 mennessä.**
 
-<del>To 9.5. Helatorstai</del></strong>
+<strong><del>To 9.5. Helatorstai</del></strong>
 
 <details><summary><strong>To 16.5. Seminaariesitykset</strong></summary>
 
