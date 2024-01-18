@@ -67,6 +67,7 @@ Eficode on erikoistunut rakentamaan DevOpsia asiakkaille. He ovat useina kertoin
 </details>
 
 <details><summary><strong>To 1.2. DevOps: Dockerin levykuvat, "volumet" ja portit</strong></summary>
+
 [DevOps with Docker](https://devopswithdocker.com/)
 </details>
 
