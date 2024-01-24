@@ -68,24 +68,32 @@ Suositellut videot: [Never install locally (Coderized)](https://youtu.be/J0NuOlA
 Käytämme Eficoden ja Helsingin yliopiston yhteistyönä syntynyttä [DevOps with Docker](https://devopswithdocker.com/) -kurssia. Ainakin sen alkua.
 
 Itsenäisen, mutta tuetun työskentelyn vaiheet:
-1. Asenna Docker: https://devopswithdocker.com/getting-started 
-1. [Introduction to Part 1](https://devopswithdocker.com/part-1/) 
-1. [Definitions and basic concepts](https://devopswithdocker.com/part-1/section-1) Tehtävät 1.1-1.2 
-1. [Running and stopping containers](https://devopswithdocker.com/part-1/section-2) Tehtävät 1.3-1.4
-1. [In-depth dive to images](https://devopswithdocker.com/part-1/section-3) Tehtävät 1.5-1.8
+
+0. [Asenna Docker](https://devopswithdocker.com/getting-started) ja  [Introduction to Part 1](https://devopswithdocker.com/part-1/) 
+1. [Definitions and basic concepts](https://devopswithdocker.com/part-1/section-1), Tehtävät 1.1-1.2 
+1. [Running and stopping containers](https://devopswithdocker.com/part-1/section-2), Tehtävät 1.3-1.4
+1. [In-depth dive to images](https://devopswithdocker.com/part-1/section-3), Tehtävät 1.5-1.8
 
 </details>
 
-<details><summary><strong>To 1.2. DevOps: Docker imaget, "volumet" ja portit</strong></summary>
+<details><summary><strong>To 1.2. DevOps: Docker "volumet" ja portit</strong></summary>
 
-[DevOps with Docker](https://devopswithdocker.com/)
+Tuetun työskentelyn vaiheet:
+
+4. [Defining start conditions for the container](https://devopswithdocker.com/part-1/section-4) 
+5. [Interacting with the container via volumes and ports](https://devopswithdocker.com/part-1/section-5), Tehtävät 1.9-1.10
+6. [Utilizing tools from the Registry](https://devopswithdocker.com/part-1/section-6), 
+7. [Summary](https://devopswithdocker.com/part-1/section-7) 
+
 </details>
 
 <details><summary><strong>To 8.2. DevOps: Yhteydet kontteihin ja levykuvien julkaisu, Johdatus Docker Compose:n käyttöön, Continuous integration ja continuous delivery</strong></summary>
 
-Konttien skaalaaminen, Levykuvien kriittinen tarkastelu, Levykuvien edistynyt käsittely, multi-stage buildit
+Week 3, [Part 2](https://devopswithdocker.com/part-2/)
 
-[DevOps with Docker](https://devopswithdocker.com/)
+1. [Migrating to Docker Compose](https://devopswithdocker.com/part-2/section-1), Tehtävät 2.1-2.3
+1. [Docker networking](https://devopswithdocker.com/part-2/section-2), Tehtävät 2.4-2.5
+1. more?
 
 </details>
 
