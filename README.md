@@ -62,13 +62,13 @@ Tehtävät (DL ke 24.1. klo 22:00):
 
 Käytämme Eficoden ja Helsingin yliopiston yhteistyönä syntynyttä [DevOps with Docker](https://devopswithdocker.com/) -kurssia. Ainakin sen alkua.
 
-Keskustellaan yhdessä termien ja kuvien avulla käsitteitä, jotta itse kurssin suorittaminen sujuu jouhevammin:
+Keskustellaan yhdessä termien ja kuvien avulla käsitteistä, jotta itse kurssin suorittaminen sujuu jouhevammin:
 Tiimin [DevOpsin tavoitetila periaatekuvana](01_docker/DockerCaseExample.pdf) ja [Dockerin keskeisiä käsitteitä](01_docker/DockerConceptsAndVocabulary.pdf) sanoiksi puettuina.
 
 Suositellut videot: [Never install locally (Coderized)](https://youtu.be/J0NuOlA2xDc) ja [Virtual Machine (VM) vs Docker (IBM Technology)](https://youtu.be/a1M_thDTqmU) <br />
 Docker cheatsheettejä: [CLI cheat sheet pdf](https://docs.docker.com/get-started/docker_cheatsheet.pdf), toinen, mm [docker concepts](https://extremeautomation.io/cheatsheets/docker-cheatsheet/), kolmas [cheatsheet poikineen](https://dockerlabs.collabnix.com/docker/cheatsheet/).
 
-Itsenäisen, mutta tuetun työskentelyn vaiheet:
+Tuetun työskentelyn vaiheet 1:
 
 0. [Asenna Docker](https://devopswithdocker.com/getting-started) ja  [Introduction to Part 1](https://devopswithdocker.com/part-1/) 
 1. [Definitions and basic concepts](https://devopswithdocker.com/part-1/section-1), Tehtävät 1.1-1.2 
@@ -79,7 +79,7 @@ Itsenäisen, mutta tuetun työskentelyn vaiheet:
 
 <details><summary><strong>To 1.2. DevOps: Docker "volumet" ja portit</strong></summary>
 
-Tuetun työskentelyn vaiheet:
+Tuetun työskentelyn vaiheet 2:
 
 4. [Defining start conditions for the container](https://devopswithdocker.com/part-1/section-4) 
 5. [Interacting with the container via volumes and ports](https://devopswithdocker.com/part-1/section-5), Tehtävät 1.9-1.10
@@ -90,7 +90,7 @@ Tuetun työskentelyn vaiheet:
 
 <details><summary><strong>To 8.2. DevOps: Yhteydet kontteihin ja levykuvien julkaisu, Johdatus Docker Compose:n käyttöön, Continuous integration ja continuous delivery</strong></summary>
 
-Week 3, [Part 2](https://devopswithdocker.com/part-2/)
+Tuetun työskentelyn vaiheet 3: [Part 2](https://devopswithdocker.com/part-2/)
 
 1. [Migrating to Docker Compose](https://devopswithdocker.com/part-2/section-1), Tehtävät 2.1-2.3
 1. [Docker networking](https://devopswithdocker.com/part-2/section-2), Tehtävät 2.4-2.5
