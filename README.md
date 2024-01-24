@@ -58,15 +58,25 @@ Tehtävät (DL ke 24.1. klo 22:00):
 * [📥 Kurssin kehitysympäristön asennus](00_linux/asennukset.md)
 * 📥 Linux-komentorivi (Teams ja GitHub classroom)
 
-<details><strong><summary>To 25.1. DevOps: Johdatus Dockeriin ja konttiteknologiaan</strong></summary>
+<details><strong><summary>To 25.1. DevOps: Johdatus konttiteknologiaan, containers, images</strong></summary>
 
-Ei ole välttämätöntä, mutta jos haluat kurkata jo ennakolta, käytämme Eficoden ja Helsingin yliopiston yhteistyönä syntynyttä [DevOps with Docker](https://devopswithdocker.com/) -kurssia. 
+Keskustellaan yhdessä termien ja kuvien avulla käsitteitä, jotta itse kurssin suorittaminen sujuu jouhevammin:
+Tiimin [DevOpsin tavoitetila periaatekuvana](01_docker/DockerCaseExample.pdf) ja [Dockerin keskeisiä käsitteitä](01_docker/DockerConceptsAndVocabulary.pdf) sanoiksi puettuina.
 
-Eficode on erikoistunut rakentamaan DevOpsia asiakkaille. He ovat useina kertoina tuoneet meille Softalaan projekteja.
+Suositellut videot: [Never install locally (Coderized)](https://youtu.be/J0NuOlA2xDc) ja [Virtual Machine (VM) vs Docker (IBM Technology)](https://youtu.be/a1M_thDTqmU)
+
+Käytämme Eficoden ja Helsingin yliopiston yhteistyönä syntynyttä [DevOps with Docker](https://devopswithdocker.com/) -kurssia. Ainakin sen alkua.
+
+Itsenäisen, mutta tuetun työskentelyn vaiheet:
+1. Asenna Docker: https://devopswithdocker.com/getting-started 
+1. [Introduction to Part 1](https://devopswithdocker.com/part-1/) 
+1. [Definitions and basic concepts](https://devopswithdocker.com/part-1/section-1) Tehtävät 1.1-1.2 
+1. [Running and stopping containers](https://devopswithdocker.com/part-1/section-2) Tehtävät 1.3-1.4
+1. [In-depth dive to images](https://devopswithdocker.com/part-1/section-3) Tehtävät 1.5-1.8
 
 </details>
 
-<details><summary><strong>To 1.2. DevOps: Dockerin levykuvat, "volumet" ja portit</strong></summary>
+<details><summary><strong>To 1.2. DevOps: Docker imaget, "volumet" ja portit</strong></summary>
 
 [DevOps with Docker](https://devopswithdocker.com/)
 </details>
