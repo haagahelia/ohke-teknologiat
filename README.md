@@ -60,12 +60,13 @@ Tehtävät (DL ke 24.1. klo 22:00):
 
 <details><strong><summary>To 25.1. DevOps: Johdatus konttiteknologiaan, containers, images</strong></summary>
 
+Käytämme Eficoden ja Helsingin yliopiston yhteistyönä syntynyttä [DevOps with Docker](https://devopswithdocker.com/) -kurssia. Ainakin sen alkua.
+
 Keskustellaan yhdessä termien ja kuvien avulla käsitteitä, jotta itse kurssin suorittaminen sujuu jouhevammin:
 Tiimin [DevOpsin tavoitetila periaatekuvana](01_docker/DockerCaseExample.pdf) ja [Dockerin keskeisiä käsitteitä](01_docker/DockerConceptsAndVocabulary.pdf) sanoiksi puettuina.
 
-Suositellut videot: [Never install locally (Coderized)](https://youtu.be/J0NuOlA2xDc) ja [Virtual Machine (VM) vs Docker (IBM Technology)](https://youtu.be/a1M_thDTqmU)
-
-Käytämme Eficoden ja Helsingin yliopiston yhteistyönä syntynyttä [DevOps with Docker](https://devopswithdocker.com/) -kurssia. Ainakin sen alkua.
+Suositellut videot: [Never install locally (Coderized)](https://youtu.be/J0NuOlA2xDc) ja [Virtual Machine (VM) vs Docker (IBM Technology)](https://youtu.be/a1M_thDTqmU) <br />
+Docker cheatsheettejä: [CLI cheat sheet pdf](https://docs.docker.com/get-started/docker_cheatsheet.pdf), toinen, mm [docker concepts](https://extremeautomation.io/cheatsheets/docker-cheatsheet/), kolmas [cheatsheet poikineen](https://dockerlabs.collabnix.com/docker/cheatsheet/).
 
 Itsenäisen, mutta tuetun työskentelyn vaiheet:
 
@@ -82,7 +83,7 @@ Tuetun työskentelyn vaiheet:
 
 4. [Defining start conditions for the container](https://devopswithdocker.com/part-1/section-4) 
 5. [Interacting with the container via volumes and ports](https://devopswithdocker.com/part-1/section-5), Tehtävät 1.9-1.10
-6. [Utilizing tools from the Registry](https://devopswithdocker.com/part-1/section-6), 
+6. [Utilizing tools from the Registry](https://devopswithdocker.com/part-1/section-6), Tehtävät 1.11-1.16
 7. [Summary](https://devopswithdocker.com/part-1/section-7) 
 
 </details>
@@ -93,7 +94,8 @@ Week 3, [Part 2](https://devopswithdocker.com/part-2/)
 
 1. [Migrating to Docker Compose](https://devopswithdocker.com/part-2/section-1), Tehtävät 2.1-2.3
 1. [Docker networking](https://devopswithdocker.com/part-2/section-2), Tehtävät 2.4-2.5
-1. more?
+1. [Volumes in action](https://devopswithdocker.com/part-2/section-3), Tehtävät 2.6-2.10
+1. No more?
 
 </details>
 
