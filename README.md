@@ -65,7 +65,7 @@ Tehtävät (DL ke 24.1. klo 22:00):
 Käytämme Eficoden ja Helsingin yliopiston yhteistyönä syntynyttä [DevOps with Docker](https://devopswithdocker.com/) -kurssia. Ainakin sen alkua.
 
 Keskustellaan yhdessä termien ja kuvien avulla käsitteistä, jotta itse docker-opiskelun suorittaminen sujuu jouhevammin:
-Tiimin [DevOpsin tavoitetila periaatekuvana](01_docker/DockerCaseExample.pdf) ja [Dockerin keskeisiä käsitteitä](01_docker/DockerConceptsAndVocabulary.pdf) sanoiksi puettuina.
+Tiimin [DevOpsin tavoitetila periaatekuvana](01_docker/DockerCaseExample.pdf) ja [Dockerin keskeisiä käsitteitä](01_docker/DockerConceptsAndVocabulary.pdf) sanoiksi puettuina ja kuvina.
 
 Suositellut videot: [Never install locally (Coderized)](https://youtu.be/J0NuOlA2xDc) ja [Virtual Machine (VM) vs Docker (IBM Technology)](https://youtu.be/a1M_thDTqmU) <br />
 Docker cheatsheettejä: [CLI cheat sheet pdf](https://docs.docker.com/get-started/docker_cheatsheet.pdf), toinen, mm [docker concepts](https://extremeautomation.io/cheatsheets/docker-cheatsheet/), kolmas [cheatsheet poikineen](https://dockerlabs.collabnix.com/docker/cheatsheet/).
