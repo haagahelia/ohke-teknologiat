@@ -68,6 +68,8 @@ Tiimin [DevOpsin tavoitetila periaatekuvana](01_docker/DockerCaseExample.pdf) ja
 Suositellut videot: [Never install locally (Coderized)](https://youtu.be/J0NuOlA2xDc) ja [Virtual Machine (VM) vs Docker (IBM Technology)](https://youtu.be/a1M_thDTqmU) <br />
 Docker cheatsheettejä: [CLI cheat sheet pdf](https://docs.docker.com/get-started/docker_cheatsheet.pdf), toinen, mm [docker concepts](https://extremeautomation.io/cheatsheets/docker-cheatsheet/), kolmas [cheatsheet poikineen](https://dockerlabs.collabnix.com/docker/cheatsheet/).
 
+Dockerin laaja ohjeisto [docs.docker.com](https://docs.docker.com/)
+
 Tuetun työskentelyn vaiheet 1:
 
 0. [Asenna Docker](https://devopswithdocker.com/getting-started) ja  [Introduction to Part 1](https://devopswithdocker.com/part-1/) 
