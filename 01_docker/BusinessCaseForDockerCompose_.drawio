@@ -1,0 +1,99 @@
+<mxfile host="app.diagrams.net" modified="2024-01-23T08:23:28.163Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="K-SUmVFCr4GvHZCozLsc" version="22.1.21" type="device">
+  <diagram name="Page-1" id="IDyL27DXPiaBVKyzC-F6">
+    <mxGraphModel dx="2074" dy="1179" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="fQaYO53DZ5WKYQM4YWXY-22" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.875;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.13;exitY=0.77;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="fQaYO53DZ5WKYQM4YWXY-3" target="fQaYO53DZ5WKYQM4YWXY-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="730" y="290" as="sourcePoint" />
+            <mxPoint x="580" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fQaYO53DZ5WKYQM4YWXY-24" value="node modules: React, express, vite, ..." style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="fQaYO53DZ5WKYQM4YWXY-22">
+          <mxGeometry x="-0.0185" relative="1" as="geometry">
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fQaYO53DZ5WKYQM4YWXY-1" value="&lt;b&gt;GitHub&lt;br&gt;&lt;/b&gt;remote repo&lt;br&gt;server" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="10" width="190" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="fQaYO53DZ5WKYQM4YWXY-2" value="&lt;b&gt;Docker Hub&lt;/b&gt;&lt;br&gt;docker image repository" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="20" width="210" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="fQaYO53DZ5WKYQM4YWXY-3" value="&lt;b&gt;npmjs&lt;/b&gt;, &lt;br&gt;npm module &lt;br&gt;registry" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="850" y="150" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="fQaYO53DZ5WKYQM4YWXY-4" value="&lt;b&gt;CSC Cloud&lt;/b&gt;&lt;br&gt;Linux VMs as our publication env&lt;br&gt;&lt;br&gt;backend (node, express, mysql driver) : 3001&lt;br&gt;&lt;br&gt;database (e.g. MariaDB) : 330&lt;br&gt;&lt;br&gt;frontend (e.g. npm build output published on nginx server)&lt;br&gt;&lt;br&gt;at least nginx server port open in firewall" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="200" width="440" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="fQaYO53DZ5WKYQM4YWXY-8" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="30" y="240" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="fQaYO53DZ5WKYQM4YWXY-5" value="" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="fQaYO53DZ5WKYQM4YWXY-8">
+          <mxGeometry x="20" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fQaYO53DZ5WKYQM4YWXY-7" value="" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="fQaYO53DZ5WKYQM4YWXY-8">
+          <mxGeometry y="60" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="fQaYO53DZ5WKYQM4YWXY-13" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="400" y="490" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="fQaYO53DZ5WKYQM4YWXY-14" value="" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="fQaYO53DZ5WKYQM4YWXY-13">
+          <mxGeometry x="20" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fQaYO53DZ5WKYQM4YWXY-15" value="" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="fQaYO53DZ5WKYQM4YWXY-13">
+          <mxGeometry y="60" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="fQaYO53DZ5WKYQM4YWXY-20" value="testing e.g. whole app via browser" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.55;entryY=0.95;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="fQaYO53DZ5WKYQM4YWXY-14" target="fQaYO53DZ5WKYQM4YWXY-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="510" y="420" as="sourcePoint" />
+            <mxPoint x="560" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fQaYO53DZ5WKYQM4YWXY-30" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.31;exitY=0.8;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.789;entryY=0.195;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="fQaYO53DZ5WKYQM4YWXY-2" target="fQaYO53DZ5WKYQM4YWXY-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="600" as="sourcePoint" />
+            <mxPoint x="500" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fQaYO53DZ5WKYQM4YWXY-31" value="docker images: node, mariadb, nginx" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="fQaYO53DZ5WKYQM4YWXY-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fQaYO53DZ5WKYQM4YWXY-32" value="Source" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="fQaYO53DZ5WKYQM4YWXY-30">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fQaYO53DZ5WKYQM4YWXY-34" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.55;exitY=0.95;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.4;entryY=0.1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="fQaYO53DZ5WKYQM4YWXY-1" target="fQaYO53DZ5WKYQM4YWXY-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="627" y="117" as="sourcePoint" />
+            <mxPoint x="410" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fQaYO53DZ5WKYQM4YWXY-35" value="source code, scripts, SQL, &lt;br&gt;other assets like pics, docker files" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="fQaYO53DZ5WKYQM4YWXY-34">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-1" y="-29" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fQaYO53DZ5WKYQM4YWXY-40" value="&lt;b&gt;Developer&#39;s computer:&lt;br&gt;&lt;/b&gt;IDE, source, code,&lt;br&gt;possibly locally&lt;br&gt;running dev env&lt;br&gt;of the system,&lt;br&gt;ssh tunnels? Putty and&lt;br&gt;WinSCP for taking&lt;br&gt;ssh connections or&lt;br&gt;moving files on remote computer" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;spacingTop=0;spacing=12;" connectable="0" vertex="1" parent="1">
+          <mxGeometry x="110.00140556802558" y="389.999033857066" as="geometry">
+            <mxPoint x="5" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fQaYO53DZ5WKYQM4YWXY-41" value="&lt;b&gt;Tester&#39;s computer:&lt;br&gt;&lt;/b&gt;could be just with browser.&lt;br&gt;&lt;br&gt;(could of course have also test tools&lt;br&gt;for e.g. backend, like PostMan)" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;spacingTop=0;spacing=12;" connectable="0" vertex="1" parent="1">
+          <mxGeometry x="470.0014055680256" y="629.999033857066" as="geometry">
+            <mxPoint x="5" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fQaYO53DZ5WKYQM4YWXY-42" value="d" style="endArrow=classic;html=1;rounded=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.13;entryY=0.77;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="fQaYO53DZ5WKYQM4YWXY-5" target="fQaYO53DZ5WKYQM4YWXY-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="435" y="115" as="sourcePoint" />
+            <mxPoint x="438" y="262" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fQaYO53DZ5WKYQM4YWXY-43" value="&lt;b&gt;git add, commit, push:&lt;/b&gt;&lt;br&gt;-source code, scripts, SQL, &lt;br&gt;other assets like pics, docker files" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="fQaYO53DZ5WKYQM4YWXY-42">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
