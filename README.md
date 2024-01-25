@@ -58,6 +58,8 @@ Tehtävät (DL ke 24.1. klo 22:00):
 * [📥 Kurssin kehitysympäristön asennus](00_linux/asennukset.md)
 * 📥 Linux-komentorivi (Teams ja GitHub classroom)
 
+<hr />
+
 <details><strong><summary>To 25.1. DevOps: Johdatus konttiteknologiaan, containers, images</strong></summary>
 
 Käytämme Eficoden ja Helsingin yliopiston yhteistyönä syntynyttä [DevOps with Docker](https://devopswithdocker.com/) -kurssia. Ainakin sen alkua.
@@ -77,6 +79,7 @@ Tuetun työskentelyn vaiheet 1:
 1. [Running and stopping containers](https://devopswithdocker.com/part-1/section-2), Tehtävät 1.3-1.4
 1. [In-depth dive to images](https://devopswithdocker.com/part-1/section-3), Tehtävät 1.5-1.8
 
+<hr />
 </details>
 
 <details><summary><strong>To 1.2. DevOps: Docker "volumet" ja portit</strong></summary>
@@ -88,6 +91,7 @@ Tuetun työskentelyn vaiheet 2:
 6. [Utilizing tools from the Registry](https://devopswithdocker.com/part-1/section-6), Tehtävät 1.11-1.16
 7. [Summary](https://devopswithdocker.com/part-1/section-7) 
 
+<hr />
 </details>
 
 <details><summary><strong>To 8.2. DevOps: Yhteydet kontteihin ja levykuvien julkaisu, Johdatus Docker Compose:n käyttöön, Continuous integration ja continuous delivery</strong></summary>
@@ -99,6 +103,7 @@ Tuetun työskentelyn vaiheet 3: [Part 2](https://devopswithdocker.com/part-2/)
 1. [Volumes in action](https://devopswithdocker.com/part-2/section-3), Tehtävät 2.6-2.10
 1. No more?
 
+<hr />
 </details>
 
 <details><summary><strong>To 15.2. Aihe valitaan kurssin edetessä</strong></summary></details>
