@@ -116,7 +116,7 @@ Tuetun työskentelyn vaiheet 3: [Part 2](https://devopswithdocker.com/part-2/)
 
 <details><summary><strong>To 14.3.  Arkkitehtuurit, mahdollisesti Kafka esimerkkinä hajautetusta arkkitehtuurista</strong></summary></details>
 
-<strong><del>To 21.3. intensiiviviikko</del>
+<strong><del>To 21.3. intensiiviviikko</del></strong>
 
 <details><summary><strong>To 28.3. Aihe valitaan kurssin edetessä</strong></summary></details>
 
