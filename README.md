@@ -60,7 +60,7 @@ Tehtävät (DL ke 24.1. klo 22:00):
 
 <hr />
 
-<strong><summary>To 25.1. DevOps: Johdatus konttiteknologiaan, containers, images</strong>
+<strong>To 25.1. DevOps: Johdatus konttiteknologiaan, containers, images</strong>
 
 Käytämme Eficoden ja Helsingin yliopiston yhteistyönä syntynyttä [DevOps with Docker](https://devopswithdocker.com/) -kurssia. Ainakin sen alkua.
 
