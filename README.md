@@ -97,7 +97,7 @@ Tehtävä *DevOps with Docker part 1b* löytyy Teamsista ja GitHub classroomista
 
 <hr />
 
-<details><summary><strong>To 8.2. DevOps: Yhteydet kontteihin ja levykuvien julkaisu, Johdatus Docker Compose:n käyttöön, Continuous integration ja continuous delivery</strong></summary>
+<strong>To 8.2. DevOps: Yhteydet kontteihin ja levykuvien julkaisu, Johdatus Docker Compose:n käyttöön, Continuous integration ja continuous delivery</strong>
 
 Tuetun työskentelyn vaiheet 3: [Part 2](https://devopswithdocker.com/part-2/)
 
@@ -114,7 +114,6 @@ Tuetun työskentelyn vaiheet 3: [Part 2](https://devopswithdocker.com/part-2/)
 Näistä molemmista aukeaa monivalintatehtävä/quiz torstaina. Sillä voi korvata viikon Docker-tehtävän
 
 <hr />
-</details>
 
 <details><summary><strong>To 15.2. Aihe valitaan kurssin edetessä</strong></summary></details>
 
