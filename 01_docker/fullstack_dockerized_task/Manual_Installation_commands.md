@@ -17,13 +17,13 @@ with the DB container! Either inside docker engine, or outside, via the host com
 
 ## Architecture picture
 
-[New with local DB](https://github.com/valju/docs_backend_design/blob/master/BackendArchitecturePic_with_DrawIo_LocalDB_WithMoreDetails.drawio.png)
+![New with local DB](https://github.com/valju/docs_backend_design/blob/master/BackendArchitecturePic_with_DrawIo_LocalDB_WithMoreDetails.drawio.png)
 
 [Older with SSH tunnel](https://github.com/valju/docs_backend_design/blob/master/BackendArchitecturePic_with_DrawIo_WithMoreDetails.png)
 
 ## Concept picture of the dockerized architecture - Don't take this literally
 
-[dockerize architecture ideas](https://github.com/valju/docs_backend_design/blob/master/BackendArchitecturePic_with_DrawIo_LocalDB_WithMoreDetails.drawio.png)
+![dockerize architecture ideas](https://github.com/valju/docs_backend_design/blob/master/BackendArchitecturePic_with_DrawIo_LocalDB_WithMoreDetails.drawio.png)
 
 But no need to e.g. make this automatically build. Just by running your docker/docker-compose files
 
@@ -301,7 +301,8 @@ sudo cp -r ~/Siba23/siba-fe/dist/* /var/www/html/
 lynx http://localhost:80
 ```
 
-[What the deployed React app files might include (picture)](deployed_files_from_vite_react_app_after_npm_build.png)
+What the deployed React app files might include (picture)
+![What the deployed React app files might include (picture)](deployed_files_from_vite_react_app_after_npm_build.png)
 
 ### 26. POSSIBLY NEEDED: If the access rights for the public / www / others are not enough then possible to adjust them:
 
