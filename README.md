@@ -116,13 +116,27 @@ Näistä molemmista aukeaa monivalintatehtävä/quiz torstaina. Sillä voi korva
 <hr />
 
 <details><summary><strong>To 15.2. Full-stack sovelluksen kontitus / tai vastaava tieto teoriassa</strong></summary>
-Viimeinen Docker-osuus. Ei uutta asiaa, mutta joko...
+
+Viimeinen Docker-osuus. Ei uutta opiskeltavaa asiaa, mutta joko...
 
 a. Full-stack -sovelluksen dockerointi/kontitus [Täältä sovelluksen lähtötiedot ja kaikkia komentoja, joita tarvittiin manuaalisessa asentamisessa](01_docker/fullstack_dockerized_task/Manual_Installation_commands.md) 
 
 TAI
 
-b. Monivalintatehtäviä dockerista (tasolle docker-composen perusteet ja esim. docker network). Muutamia materiaalilinkkejä ja videolinkkejä annetaan ja sitten testi osaamsesta. Ihan perusymmärrystä haetaan. Sellaista että olette työhaastattelussa tai ekassa työpaikassa kärryillä siitä mitä dockerilla voi saada aikaan. Materiaalilinkit ilmestyvät ensin, ja monivalinta viimeistään perjantaina. Koko kurssin viikkotyömäärä on 8-9h, joten valmistaudu huolella ensin.
+b. Monivalintatehtäviä dockerista (tasolle docker-composen pelkät perusteet ja esim. docker network:in pelkät perusteet). Muutamia materiaalilinkkejä ja videolinkkejä annetaan ja sitten testi osaamsesta. Ihan perusymmärrystä haetaan. Sellaista että olette työhaastattelussa tai ekassa työpaikassa kärryillä siitä mitä dockerilla voi saada aikaan. Materiaalilinkit ilmestyvät ensin, ja monivalinta viimeistään perjantaina. Koko kurssin viikkotyömäärä on 8-9h, joten valmistaudu huolella ensin se max 7-8h.
+
+Monivalinta: Edellisten Docker-materiaalinen tueksi tai sijaan tästä (allaolevat yht 2,5h)
+
+* [you need to learn Docker RIGHT NOW // Docker Containers 101](https://www.youtube.com/watch?v=eGz9DS-aIeY) (23 mins)
+ 
+* [Docker Crash Course for Absolute Beginners](https://www.youtube.com/watch?v=pg19Z8LL06w) (1h 07mins)
+ 
+* [Docker Compose will BLOW your MIND](https://www.youtube.com/watch?v=DM65_JyGxCo) (16 mins)
+ 
+* [Docker networking is CRAZY (you NEED to learn it)](https://www.youtube.com/watch?v=bKFMS5C4CG0) (39 mins)
+
+Monivalintatehtävät perustuvat siis näissä tai alussa linkattujen materiaalien keskeisiin asioihin. Sellaisiin, joiden ymmärtäminen / osaaminen on
+auttanut kontituksessa. Joku yksityiskohtakin voidaan kysyä sieltä täältä. Mutta täyteen 5p ei vaadita täysiä monivalintapisteitä.
 
 </details>
 
