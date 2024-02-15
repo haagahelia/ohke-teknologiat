@@ -1,9 +1,9 @@
 
 # Commands and settings used in manual installation of a Full-stack system
 
-* While dockerization / containerization of the system there are of course changes.
+* While dockerizing / containerizing the system there are of course changes to those.
 
-* Not all steps or users or installations are needed. 
+* Not all steps or users or installations are needed at all. 
 
 * On the other hand, e.g. separation of backend and DB to different containers instead of same 
 server machine means the backend container must somehow connected
