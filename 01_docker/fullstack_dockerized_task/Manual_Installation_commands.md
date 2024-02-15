@@ -19,11 +19,11 @@ with the DB container! Either inside docker engine, or outside, via the host com
 
 ![New with local DB](https://github.com/valju/docs_backend_design/blob/master/BackendArchitecturePic_with_DrawIo_LocalDB_WithMoreDetails.drawio.png)
 
-[Older with SSH tunnel](https://github.com/valju/docs_backend_design/blob/master/BackendArchitecturePic_with_DrawIo_WithMoreDetails.png)
+[Older pic with SSH tunnel, obsolete for other parts](https://github.com/valju/docs_backend_design/blob/master/BackendArchitecturePic_with_DrawIo_WithMoreDetails.png)
 
 ## Concept picture of the dockerized architecture - Don't take this literally
 
-![dockerize architecture ideas](https://github.com/valju/docs_backend_design/blob/master/BackendArchitecturePic_with_DrawIo_LocalDB_WithMoreDetails.drawio.png)
+![dockerize architecture ideas](../BusinessCaseForDockerCompose.png)
 
 But no need to e.g. make this automatically build. Just by running your docker/docker-compose files
 
