@@ -115,7 +115,16 @@ Näistä molemmista aukeaa monivalintatehtävä/quiz torstaina. Sillä voi korva
 
 <hr />
 
-<details><summary><strong>To 15.2. Aihe valitaan kurssin edetessä</strong></summary></details>
+<details><summary><strong>To 15.2. Aihe valitaan kurssin edetessä</strong></summary>
+Viimeinen Docker-osuus. Ei uutta asiaa, mutta joko...
+
+a. Full-stack -sovelluksen dockerointi/kontitus [Täältä sovelluksen lähtötiedot ja kaikkia komentoja, joita tarvittiin manuaalisessa asentamisessa](01_docker/fullstack_dockerized_task/Manual_Installation_commands.md) 
+
+TAI
+
+b. Monivalintatehtäviä dockerista (tasolle docker-composen perusteet ja esim. docker network). Muutamia materiaalilinkkejä ja videolinkkejä annetaan ja sitten testi osaamsesta. Ihan perusymmärrystä haetaan. Sellaista että olette työhaastattelussa tai ekassa työpaikassa kärryillä siitä mitä dockerilla voi saada aikaan. Materiaalilinkit ilmestyvät ensin, ja monivalinta viimeistään perjantaina. Koko kurssin viikkotyömäärä on 8-9h, joten valmistaudu huolella ensin.
+
+</details>
 
 <strong><del>To 22.2. intensiiviviikko</del></strong>
 
