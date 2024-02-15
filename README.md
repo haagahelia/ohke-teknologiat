@@ -115,7 +115,7 @@ Näistä molemmista aukeaa monivalintatehtävä/quiz torstaina. Sillä voi korva
 
 <hr />
 
-<details><summary><strong>To 15.2. Aihe valitaan kurssin edetessä</strong></summary>
+<details><summary><strong>To 15.2. Full-stack sovelluksen kontitus / tai vastaava tieto teoriassa</strong></summary>
 Viimeinen Docker-osuus. Ei uutta asiaa, mutta joko...
 
 a. Full-stack -sovelluksen dockerointi/kontitus [Täältä sovelluksen lähtötiedot ja kaikkia komentoja, joita tarvittiin manuaalisessa asentamisessa](01_docker/fullstack_dockerized_task/Manual_Installation_commands.md) 
