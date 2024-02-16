@@ -142,15 +142,23 @@ auttanut kontituksessa. Joku yksityiskohtakin voidaan kysyä sieltä täältä. 
 
 <strong><del>To 22.2. intensiiviviikko</del></strong>
 
-<details><summary><strong>To 29.2. Aihe valitaan kurssin edetessä</strong></summary></details>
+<details><summary><strong>To 29.2. TypeScript-kielen perusteet ja työkalut</strong></summary>
 
-<details><summary><strong>To 7.3.  Aihe valitaan kurssin edetessä</strong></summary></details>
+[Tunnin muistiinpanot](./01_typescript)
 
-<details><summary><strong>To 14.3.  Arkkitehtuurit, mahdollisesti Kafka esimerkkinä hajautetusta arkkitehtuurista</strong></summary></details>
+</details>
+<!-- Teemu -->
+
+<details><summary><strong>To 7.3. JS/TS edistyneet ominaisuudet</strong></summary></details>
+<!-- Juhani -->
+
+<details><summary><strong>To 14.3. JS/TS-koodin yksikkötestaus</strong></summary></details>
+<!-- Teemu -->
 
 <strong><del>To 21.3. intensiiviviikko</del></strong>
 
-<details><summary><strong>To 28.3. Aihe valitaan kurssin edetessä</strong></summary></details>
+<details><summary><strong>To 28.3. Node.js backend -arkkitehtuuri</strong></summary></details>
+<!-- Juhani -->
 
 <details><summary><strong>To 4.4. <a href="./08_seminaari">Seminaarien käynnistys</a></strong></summary>
 
