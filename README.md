@@ -146,19 +146,16 @@ auttanut kontituksessa. Joku yksityiskohtakin voidaan kysyä sieltä täältä. 
 
 [Tunnin muistiinpanot](./01_typescript)
 
-</details>
-<!-- Teemu -->
+</details><!-- Teemu -->
 
-<details><summary><strong>To 7.3. JS/TS edistyneet ominaisuudet</strong></summary></details>
-<!-- Juhani -->
 
-<details><summary><strong>To 14.3. JS/TS-koodin yksikkötestaus</strong></summary></details>
-<!-- Teemu -->
+<details><summary><strong>To 7.3. JS/TS edistyneet ominaisuudet</strong></summary></details><!-- Juhani -->
+
+<details><summary><strong>To 14.3. JS/TS-koodin yksikkötestaus</strong></summary></details><!-- Teemu -->
 
 <strong><del>To 21.3. intensiiviviikko</del></strong>
 
-<details><summary><strong>To 28.3. Node.js backend -arkkitehtuuri</strong></summary></details>
-<!-- Juhani -->
+<details><summary><strong>To 28.3. Node.js backend -arkkitehtuuri</strong></summary></details><!-- Juhani -->
 
 <details><summary><strong>To 4.4. <a href="./08_seminaari">Seminaarien käynnistys</a></strong></summary>
 
