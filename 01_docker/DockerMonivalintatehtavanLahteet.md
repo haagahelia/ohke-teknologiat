@@ -6,6 +6,8 @@ Tehtävä löytyy Teamsistä. Joko jo tai pian. Kysy jos ei päivässä ala näk
 
 ## Materiaalilinkkejä
 
+Käsitteitä hieman avattuna tässä [kalvosetissä](DockerConceptsAndVocabulary.pdf).
+
 Suositellut alkuvideot: [Never install locally (Coderized)](https://youtu.be/J0NuOlA2xDc) ja [Virtual Machine (VM) vs Docker (IBM Technology)](https://youtu.be/a1M_thDTqmU) <br />
 
 Monivalinta: Hyviä videoita (allaolevat yht hieman alle 2h)
