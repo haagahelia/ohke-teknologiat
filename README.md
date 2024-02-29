@@ -45,7 +45,7 @@ Toivomme että tutustutte mahdollisuuksien mukaan etukäteen kunkin aiheen video
 
 <hr />
 
-<strong>To 18.1. <a href="00_linux/">Kurssin johdanto, ympäristöt ja Linux/Unix-komentorivi</a></strong>
+<details><summary><strong>To 18.1. <a href="00_linux/">Kurssin johdanto, ympäristöt ja Linux/Unix-komentorivi</a></strong></summary>
 
 Videot:
 
@@ -59,8 +59,9 @@ Tehtävät (DL ke 24.1. klo 22:00):
 * 📥 Linux-komentorivi (Teams ja GitHub classroom)
 
 <hr />
+</details>
 
-<strong>To 25.1. DevOps: Johdatus konttiteknologiaan, containers, images</strong>
+<details><summary><strong>To 25.1. DevOps: Johdatus konttiteknologiaan, containers, images</strong></summary>
 
 Käytämme Eficoden ja Helsingin yliopiston yhteistyönä syntynyttä [DevOps with Docker](https://devopswithdocker.com/) -kurssia. Ainakin sen alkua.
 
@@ -83,8 +84,9 @@ Tehtävä *DevOps with Docker part 1a* löytyy Teamsista ja GitHub classroomista
 
 
 <hr />
+</details>
 
-<strong>To 1.2. DevOps: Docker "volumet" ja portit</strong>
+<details><summary><strong>To 1.2. DevOps: Docker "volumet" ja portit</strong></summary>
 
 Tuetun työskentelyn vaiheet 2:
 
@@ -96,8 +98,9 @@ Tuetun työskentelyn vaiheet 2:
 Tehtävä *DevOps with Docker part 1b* löytyy Teamsista ja GitHub classroomista. DL ke 7.1. klo 22:00.
 
 <hr />
+</details>
 
-<strong>To 8.2. DevOps: Yhteydet kontteihin ja levykuvien julkaisu, Johdatus Docker Compose:n käyttöön, Continuous integration ja continuous delivery</strong>
+<details><summary><strong>To 8.2. DevOps: Yhteydet kontteihin ja levykuvien julkaisu, Johdatus Docker Compose:n käyttöön, Continuous integration ja continuous delivery</strong></summary>
 
 Tuetun työskentelyn vaiheet 3: [Part 2](https://devopswithdocker.com/part-2/)
 
@@ -114,12 +117,13 @@ Tuetun työskentelyn vaiheet 3: [Part 2](https://devopswithdocker.com/part-2/)
 Näistä molemmista aukeaa monivalintatehtävä/quiz torstaina. Sillä voi korvata viikon Docker-tehtävän
 
 <hr />
+</details>
 
 <details><summary><strong>To 15.2. Full-stack sovelluksen kontitus / tai vastaava tieto teoriassa</strong></summary>
 
 Viimeinen Docker-osuus. Ei uutta opiskeltavaa asiaa, mutta joko...
 
-a. Full-stack -sovelluksen dockerointi/kontitus [Täältä sovelluksen lähtötiedot ja kaikkia komentoja, joita tarvittiin manuaalisessa asentamisessa](01_docker/fullstack_dockerized_task/Manual_Installation_commands.md) 
+a. Full-stack -sovelluksen dockerointi/kontitus [Täältä sovelluksen lähtötiedot ja kaikkia komentoja, joita tarvittiin manuaalisessa asentamisessa](01_docker/fullstack_dockerized_task/Manual_Installation_commands.md)
 
 TAI
 
@@ -133,12 +137,15 @@ Docker-monivalintatehtävien [materiaalit](01_docker/DockerMonivalintatehtavanLa
 
 <strong><del>To 22.2. intensiiviviikko</del></strong>
 
-<details><summary><strong>To 29.2. TypeScript-kielen perusteet ja työkalut</strong></summary>
+<strong>To 29.2. TypeScript-kielen perusteet ja työkalut</strong>
 
-[Tunnin muistiinpanot](./01_typescript)
+[Oppitunnin muistiinpanot](./01_typescript)
 
-</details><!-- Teemu -->
+Lisämateriaalina suosittelemme perehtymään lukuun "TypeScriptin perusteet" [typescript-ohjelmointi.github.io](https://typescript-ohjelmointi.github.io/)-sivustolla.
 
+Tehtävä GitHub classroomissa, DL ke 6.3. klo 22.
+
+<hr />
 
 <details><summary><strong>To 7.3. JS/TS edistyneet ominaisuudet</strong></summary></details><!-- Juhani -->
 
