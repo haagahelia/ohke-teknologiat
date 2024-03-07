@@ -147,7 +147,13 @@ Tehtävä GitHub classroomissa, DL ke 6.3. klo 22.
 
 <hr />
 
-<details><summary><strong>To 7.3. JS/TS edistyneet ominaisuudet</strong></summary></details><!-- Juhani -->
+<strong>To 7.3. JS/TS edistyneet ominaisuudet</strong>
+
+[JavaScripti/ECMAScriptin ominaisuuksista (käytetään TypeScriptissä)](https://github.com/valju/JS_ES_Features/blob/master/ES_advanced/ES_advanced_or_tricky_features.md)
+
+Tehtävä GitHub classroomissa, DL ke 13.3. kli 22.
+
+<hr />
 
 <details><summary><strong>To 14.3. JS/TS-koodin yksikkötestaus</strong></summary></details><!-- Teemu -->
 
