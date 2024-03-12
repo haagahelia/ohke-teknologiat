@@ -137,7 +137,7 @@ Docker-monivalintatehtävien [materiaalit](01_docker/DockerMonivalintatehtavanLa
 
 <strong><del>To 22.2. intensiiviviikko</del></strong>
 
-<strong>To 29.2. TypeScript-kielen perusteet ja työkalut</strong>
+<details><summary><strong>To 29.2. TypeScript-kielen perusteet ja työkalut</strong></summary>
 
 [Oppitunnin muistiinpanot](./01_typescript)
 
@@ -146,16 +146,24 @@ Lisämateriaalina suosittelemme perehtymään lukuun "TypeScriptin perusteet" [t
 Tehtävä GitHub classroomissa, DL ke 6.3. klo 22.
 
 <hr />
+</details>
 
-<strong>To 7.3. JS/TS edistyneet ominaisuudet</strong>
+<details><summary><strong>To 7.3. JS/TS edistyneet ominaisuudet</strong></summary>
 
 [JavaScripti/ECMAScriptin ominaisuuksista (käytetään TypeScriptissä)](https://github.com/valju/JS_ES_Features/blob/master/ES_advanced/ES_advanced_or_tricky_features.md)
 
-Tehtävä GitHub classroomissa, DL ke 13.3. kli 22.
+Tehtävä GitHub classroomissa, DL ke 13.3. klo 22.
 
 <hr />
+</details>
 
-<details><summary><strong>To 14.3. JS/TS-koodin yksikkötestaus</strong></summary></details><!-- Teemu -->
+<strong>To 14.3. JS/TS-koodin yksikkötestaus</strong> <!-- Teemu -->
+
+[Oppitunnin muistiinpanot](./02_testaus/typescript.md).
+
+Tehtävä GitHub classroomissa, DL ke 27.3. klo 22.
+
+<hr />
 
 <strong><del>To 21.3. intensiiviviikko</del></strong>
 
