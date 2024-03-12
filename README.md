@@ -208,6 +208,11 @@ Lisää ohjeita löydät kurssin [ensimmäisen viikon materiaalista](00_linux).
 ⚠ Kurssin aikana teemme asennuksia mm. Ubuntun `apt`-työkalulla, Noden `npm`-työkalulla, Dockerilla ja VS Codella. Kaikki nämä työkalut lisäävät tietokoneellesi suoritettavaa ohjelmakoodia, jonka yhteydessä tulee aina huomioida myös tietoturva. Asennusten tekeminen erillisessä virtuaalisessa ympäristössä on oiva lisä oman tietokoneesi suojaamiseksi, vaikka olemmekin pyrkineet valitsemaan vain erittäin tunnettuja ja hyvämaineisia ohjelmistoja tälle kurssille.
 
 
+## Kurssin tehtävät
+
+Kurssilla tehdään viikoittaisia tehtäviä, joiden arvioinnissa hyödynnetään mm. [GitHub classroom -palvelua](https://classroom.github.com/) sekä MS Teamsia. Sekä kurssin Classroom-tehtäväpalautukset että MS Teams -ryhmä poistetaan vaaditun säilytysajan päätyttyä. Jos haluat säilyttää kurssilla työstämäsi tehtävien ratkaisut pidempään, [teethän repositorioistasi kopiot omalle käyttäjätunnuksellesi GitHubissa](https://www.google.com/search?q=git+clone+and+push+to+new+repo). Vaihtoehtoisesti voit säilyttää tehtäviesi ratkaisut paikallisesti omilla laitteillasi.
+
+
 ## Arviointi
 
 Kurssi arvioidaan asteikolla 0-5. Kurssin arviointi perustuu viikkoaiheiden yhteydessä suoritettuihin tehtäviin (60 % arvosanasta) sekä kurssin toisella puoliskolla tehtävään seminaarityöhön (40 %).
