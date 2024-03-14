@@ -188,11 +188,12 @@ Testien kattavuutta voidaan mitata lukuisilla eri tavoilla. Tyypillisiä tapoja 
 let name = person.names?.first ?? 'anonymous';
 ```
 
-### Totuusarvojen vertailu
+
+### Erilaisten arvojen vertailu
 
 JavaScriptissä vertailuoperaatiot tehdään pääsääntöisesti kolmella merkillä eli `===` tai `!==`. Kolmen merkin vertailuoperaatiot tarkastavat, että vertailtavien arvojen tyyppi on sama. Mikäli tyyppitarkastus jätetään tekemättä eli vertaillaan kahdella merkillä `==`, vertailee JavaScript eri tyyppisiä arvoja toisinaan hyvin epäloogisesti.
 
-Voit tutustua aiheeseen syvällisemmin artikkelissa [Equality comparisons and sameness (MDN web docs)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness) tai YouTube-videolla [JavaScript == VS === (Web Dev Simplified)](https://www.youtube.com/watch?v=C5ZVC4HHgIg).
+Voit tutustua aiheeseen syvällisemmin artikkelissa [Equality comparisons and sameness (MDN web docs)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness) tai YouTube-videolla [JavaScript == VS === (Web Dev Simplified)](https://www.youtube.com/watch?v=C5ZVC4HHgIg). Myös tämä [JavaScript-Equality-Table](https://dorey.github.io/JavaScript-Equality-Table/)-taulukko havainnollistaa erinomaisesti eri arvojen käyttäytymistä `===`-, `==`- ja `if`-operaatioissa.
 
 
 ### Vertailu Jest:llä
