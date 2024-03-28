@@ -157,7 +157,7 @@ Tehtävä GitHub classroomissa, DL ke 13.3. klo 22.
 <hr />
 </details>
 
-<strong>To 14.3. JS/TS-koodin yksikkötestaus</strong> <!-- Teemu -->
+<strong>To 14.3. JS/TS-koodin yksikkötestaus</strong>
 
 [Oppitunnin muistiinpanot](./02_testaus/typescript.md).
 
@@ -166,8 +166,11 @@ Tehtävä GitHub classroomissa, DL ke 27.3. klo 22.
 <hr />
 
 <strong><del>To 21.3. intensiiviviikko</del></strong>
+<hr />
 
-<details><summary><strong>To 28.3. Node.js backend -arkkitehtuuri</strong></summary></details><!-- Juhani -->
+<details><summary><strong>To 28.3. Node.js backend -arkkitehtuuri</strong></summary></details>
+
+<hr />
 
 <details><summary><strong>To 4.4. <a href="./08_seminaari">Seminaarien käynnistys</a></strong></summary>
 
