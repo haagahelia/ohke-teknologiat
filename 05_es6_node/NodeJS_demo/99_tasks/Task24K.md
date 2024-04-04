@@ -1,12 +1,17 @@
-# Install the model backend - Siba and add few features to it - following given models
+# Install the model backend - Siba and add few features to it
 
-You will get a ready full-stack architecture, with Node.js backend written with TypeScript using MariaDB RDBMS. After setting all up you try to follow the model and implement few backend features that:
+## Following given models
+
+You will get a ready full-stack architecture, with Node.js backend written with TypeScript using MariaDB RDBMS. After setting all up you try to follow the model and implement few backend features have following benefits:
 
 * include security in form of login request created JWT token that needs to be provided in future request
-* include input validation
+    * token based authentication and authorization, 
+    * token expiration check
+    * role-based method-level authorization
+* include input parameter and data validation created in modular manner
 * use Knex library to run DB operations (programmed with TypeScript)
 
-Generic information will be here: 
+Generic information about the case database and used technologies will be here: 
 
 https://github.com/haagahelia/ohke-teknologiat/tree/master/05_es6_node/NodeJS_demo
 
@@ -14,8 +19,12 @@ https://github.com/haagahelia/ohke-teknologiat/tree/master/05_es6_node/NodeJS_de
 
 - Docker
 - git
-- VS Code with REST Client   add-on
+- VS Code 
+    - with REST Client add-on
 - Locally most likely: Nodejs, TypeScript, Nodemon, ...
+- Possibly MariaDB RDBMS installed locally if:
+    - Dockerized version will not work
+    - Teacher has not given a remote database to be used with SSH tunnel
 
 ## Create the workspace folder
 
