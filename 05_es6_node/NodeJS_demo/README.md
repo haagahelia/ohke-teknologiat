@@ -25,7 +25,7 @@ just use your case scripts instead. Steps could be the same.
 [Database creation (PDF)](01_database/CreatingDatabase_for_IdeaCaseBackend.pdf)
 -->
 
-## idea-case-backend information
+## A bit similar demo backend information
 
 [The README.md of idea-case-backend has a lot of info](https://github.com/valju/idea-case-backend/#readme)
 
