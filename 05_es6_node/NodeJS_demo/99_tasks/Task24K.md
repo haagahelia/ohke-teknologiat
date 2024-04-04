@@ -141,6 +141,8 @@ features themselves get more non-trivial from validation and DB operation point 
 
 **See the given PDF example about analyzing one Program route in Teams**
 
+See the Files tabs.
+
 That should give an idea how much code is needed per one new route.
 
 1. add a new file ```src/routes/logEvent.ts```
