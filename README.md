@@ -145,7 +145,6 @@ Lisämateriaalina suosittelemme perehtymään lukuun "TypeScriptin perusteet" [t
 
 Tehtävä GitHub classroomissa, DL ke 6.3. klo 22.
 
-<hr />
 </details>
 
 <details><summary><strong>To 7.3. JS/TS edistyneet ominaisuudet</strong></summary>
@@ -154,33 +153,35 @@ Tehtävä GitHub classroomissa, DL ke 6.3. klo 22.
 
 Tehtävä GitHub classroomissa, DL ke 13.3. klo 22.
 
-<hr />
 </details>
 
-<strong>To 14.3. JS/TS-koodin yksikkötestaus</strong>
+<details><summary><strong>To 14.3. JS/TS-koodin yksikkötestaus</strong></summary>
 
 [Oppitunnin muistiinpanot](./02_testaus/typescript.md).
 
 Tehtävä GitHub classroomissa, DL ke 27.3. klo 22.
 
 <hr />
+</details>
 
 <strong><del>To 21.3. intensiiviviikko</del></strong>
-<hr />
 
 <details><summary><strong>To 28.3. Node.js backend -arkkitehtuuri</strong></summary></details>
 
+<details><summary><strong>To 4.4. Seminaarien käynnistys</strong></summary>
+
+[Seminaarityön ohjeistus](./08_seminaari)
+
 <hr />
-
-<details><summary><strong>To 4.4. <a href="./08_seminaari">Seminaarien käynnistys</a></strong></summary>
-
 </details>
 
 <details><summary><strong>To 11.4. , 18.4., 25.4., 2.5. Seminaarityön tekemistä</strong></summary>
 
-[Seminaarityön tekemistä](./08_seminaari)
+[Seminaarityön ohjeistus](./08_seminaari)
 
 Yksilöllistä ohjausta Teamsissa tai sopimuksen mukaan kampuksella. Kurssin seminaarivaiheessa ei järjestetä yhteisiä tapaamisia, vaan tarjoamme yksilöllistä ohjausta etukäteen sovittavina ajankohtina.
+
+<hr />
 </details>
 
 **Seminaariraportin palautus su 12.5. klo 22 mennessä.**
