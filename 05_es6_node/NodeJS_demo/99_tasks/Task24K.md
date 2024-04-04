@@ -124,11 +124,14 @@ Make sure to use the "Run (whole) SQL Script" command and not e.g. run (one) SQL
 Well once someone has run it for that database, or for that docker volume, and there is data in log_event table, then no need to do again.
 
 
-### The additions to write and test in the backend code
+# The additions to write and test in the backend code = real task
 
-You will be adding API end point and routing for most/some of these features: (learning makes faster soon)
+You will be adding an API end-point for most/some of these features: 
 
-* what are the database logged events there are all in all? (don't mix it with the logs file and e.g. app.log) Easy feature as it needs maybe login, but no input in the request for the query. Database: casedb, Table: log_event
+(first one is simple so that there your learn the end-point basics. Then
+features themselves get more non-trivial from validation and DB operation point of view)
+
+* what are the database logged events there are all in all? (Hope you won't confuse the logEvent concept with the logs file and e.g. app.log) Easy feature as it needs maybe login, but no input in the request for the query. Database: casedb, Table: log_event
 
 * what rows there are about room id ```1025```? (hard-coded in the request) 
 
@@ -136,12 +139,16 @@ You will be adding API end point and routing for most/some of these features: (l
 
 * what warnings there are that are from given date? Either use the date part of datetime and match it to given date OR use some time difference function
 
+**See the given PDF example about analyzing one Program route in Teams**
+
+That should give an idea how much code is needed per one new route.
+
 1. add a new file ```src/routes/logEvent.ts```
 1. add routing ```'/logEvent'``` to that file, in file ```src/routes/index.ts```
-1. following the models in e.g. in Subject related route and validation code...
+1. following the models in e.g. in Program related route and validation code...
 1. add the suggested/required new log_event routes ONE by ONE.
     1. add the endpoint and routing to it
-        1. the database operation should be always started by doing something easy that works, and then making it more specific. E.g. first list everything, and only after that works put there WHERE conditions.
+        1. the database operation development should be always started by doing something easy that works, and then making it more specific. E.g. first list everything, and only after that works put there WHERE conditions.
     1. add the REST client test(s) for it
     1. add validation components to validationHandler folder, new file ```logEvent.ts``` IF needed by that endpoint (e.g. mere 'GET all' does not need any input, just URL = no input validation)
     1. if added validation, test it again. Try to make it fail and show the logs!
