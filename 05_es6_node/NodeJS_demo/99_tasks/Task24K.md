@@ -35,7 +35,8 @@ https://github.com/haagahelia/ohke-teknologiat/tree/master/05_es6_node/NodeJS_de
 1. Go to the workspace folder 'Siba'
 1. Clone there the backend project repo: https://github.com/haagahelia/Siba_be
 1. You will not get the node_modules, so you will need to move to that folder and: ```npm install```
-1. Also the .env files are not in repo, so create/copy the given files to backend repo root
+1. Also the .env files are not in repo, so create/copy the given files to backend repo root.
+    - Backend needs all other info than the MARIADB_ROOT_PASSWORD but having that does not harm other than security a bit
 1. You can also run the: ```npm audit fix```   , if there would be any recent vulnerabilities.
 1. Now ```npm start``` should start the backend. But still without Database connection
 1. See the backend logs in the 'logs' folder
@@ -44,26 +45,45 @@ https://github.com/haagahelia/ohke-teknologiat/tree/master/05_es6_node/NodeJS_de
 
 For simplicity and avoiding too many environment probs we only use one .env file. See Teams > Files for that.
 
-After this weekly task you can create multiple .env files etc. using this info https://docs.docker.com/compose/environment-variables/set-environment-variables/ .  But now let's go a bit nonsecure demo way.
+After this weekly task you can create multiple .env files etc. using this info https://docs.docker.com/compose/environment-variables/set-environment-variables/ .  But now let's go a bit non-secure demo way.
 
-**Database installation options**
+## Database installation options
 
-Either a) install MariaDB locally to your computer, or b) use the dockerized version, or c) use the given remote database (if needed and teacher has created) via tunnel. In any case you'll need to pay attention to e.g. server host address, ports, usernames, passwords, database/schema names, ... see Teams and Files tab for possible 'secret info' that might be later given if needed
+Either 
 
-### Setup database or tunnel to remote database(from Teacher)
+a) install MariaDB locally to your computer  (localhost), or 
 
-#### option a) Install latest (Not RC nor Beta version) version of MariaDB locally.
+b) use the dockerized version of DB without dockerizing backend (localhost still from backend point of view, need to expose the port from docker to host machine), or 
 
-Write down all info about root user and passwords, ports etc. Run the ```createSchemaAndUsers.sql``` via e.g. DBeaver.
+c) use the given remote database (if needed and teacher has created) via tunnel. In any case you'll need to pay attention to e.g. server host address, ports, usernames, passwords, database/schema names, ... see Teams and Files tab for possible 'secret info' that might be later given if needed.
 
-#### option b) Use the dockerized version of database (or backend and database)
+- Setup database or tunnel to remote database(from Teacher)
+    - Let's see if this needed for someone for whom dockerized DB did not work and too much time spent on this case otherwise.
 
-Have the .env file correctly in backend folder, and run the command ```docker-compose -f docker-compose-db.yaml up```
+### Database option a) Install latest 10.X (Not RC nor Beta version) version of MariaDB locally.
 
-#### option c) Tunnel creation (let's see if any need this time. Not created yet)
+Write down all info about root user and passwords, ports etc. Run the ```createSchemaAndUsers.sql``` and then ```00__CreateAllDB.sql``` via e.g. DBeaver.
+
+Make sure to use the "Run (whole) SQL Script" command and not e.g. run (one) SQL statement.
+
+[Instructions on how to make a 'cold file installation' of MariaDB, Windows version, but Mac/Linux would be pretty similar, or even same?](https://github.com/haagahelia/linux-servers-etc/blob/main/mariadb_installation_local_pc.md)
+
+### Database option b) Use the dockerized version of database (or backend and database)
+
+Have the .env file correctly written and located in backend folder, and run the command ```docker-compose -f docker-compose-db.yaml up```
+
+Currently the .env for local DB and dockerized DB might be exactly same? As long as the backend is NOT dockerized. Check from teacher for any doubts in env settings!
+
+### Database option c) Tunnel creation (let's see if any need this time. Not created yet)
+
 1. This console command in Windows would create a ssh tunnel / port forwarding if you will use remote database:
-```ssh -f juuser1@123.123.123.45 -L 3308:localhost:3306 -N```
- . The local port in your computer would thus be 3308, and in the remote computer we would target 3306 where MariaDB database typically exists. **Note**: all info here is incorrect as correct info cannot be published in the github repo. **See Teams for correct information = secrets**. If everything goes correctly this command does not return anything to see. You can run ```ps -a``` to see if ssh process exists, and kill it with ```kill -9 1234``` if the process id was 1234.
+    - ```ssh -f juuser1@123.123.123.45 -L 3308:localhost:3306 -N```
+    - The local port in your computer would thus be 3308, 
+    - and in the remote computer we would target 3306 where MariaDB database typically exists. 
+    - **Note**: all info here is incorrect as correct info cannot be published in the github repo. 
+    - **See Teams for correct information = secrets**. 
+    - If everything goes correctly this command does not return anything to see. 
+    - You can run ```ps -a``` to see if ssh process exists, and kill it with ```kill -9 1234``` if the process id was 1234.
 
 1. Backend .env file must match your database: 
     1. The database server (or tunnel) address, typically localhost, could be mariadb_service if connecting from dockerized backend service created also with docker compose
