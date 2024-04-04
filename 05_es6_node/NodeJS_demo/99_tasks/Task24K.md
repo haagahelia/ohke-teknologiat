@@ -131,13 +131,13 @@ You will be adding an API end-point for most/some of these features:
 (first one is simple so that there your learn the end-point basics. Then
 features themselves get more non-trivial from validation and DB operation point of view)
 
-* what are the database logged events there are all in all? (Hope you won't confuse the logEvent concept with the logs file and e.g. app.log) Easy feature as it needs maybe login, but no input in the request for the query. Database: casedb, Table: log_event
+* What are the database logged events there are all in all? (Hope you won't confuse the logEvent concept with the logs file and e.g. app.log) Easy feature as it needs maybe login, but no input in the request for the query. Database: casedb, Table: log_event
 
-* what rows there are about room id ```1025```? (hard-coded in the request) 
+* What rows there are about room id ```1025```? (hard-coded in the request) 
 
-* what rows there are that are mentioning something you give in the request. = request should include, in body or URL 'searchText' and if the ```LIKE %``` matches, those rows are returned.
+* What rows there are that are mentioning something you give in the request. = request should include, in body JSON data or URL :searchText parameter. If the ```LIKE %``` matches, those rows are returned.
 
-* what warnings there are that are from given date? Either use the date part of datetime and match it to given date OR use some time difference function
+* What warnings there are that are from given date (given in POST JSON data or URL parameter)? Either use the date part of datetime and match it to given date OR use some time difference function
 
 **See the given PDF example about analyzing one Program route in Teams**
 
@@ -157,7 +157,11 @@ That should give an idea how much code is needed per one new route.
 Express-validator is a library that can be used to validate the data coming from the frontend or other client:
 https://express-validator.github.io/docs/
 
-New validation ideas could contain e.g. ```.isEmail()``` or ```.contains("-")``` 
+New express-validator validation ideas could contain e.g.: 
+ - ```.isEmail()```   (currently the email allows test values: admin etc. But just for making dev testing faster)
+ - ```.contains("-")```
+ - ```.isDate()```
+ - ```.isISO8601```
 
 ## NOTE THESE
 
@@ -168,7 +172,7 @@ and ```[roleChecker, validate]```
 
 * Also define what roles are able to run that feature so you can test role-based-authorization you define
 
-* Possible needed new TypeScript types can go to the ```types\custom.ts```
+* The possibly needed new TypeScript types can go to the ```types\custom.ts```
 
 * And most IMPORTANTLY use the ```logs\app.log``` from the beginning. Take screenshots when get interesting errors and fixed operation success messages there!
 
