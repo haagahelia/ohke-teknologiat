@@ -154,7 +154,7 @@ That should give an idea how much code is needed per one new route.
     1. if added validation, test it again. Try to make it fail and show the logs!
 
 #### ---- EXPRESS VALIDATOR ----
-Express-validator is a library that can be used to validate the data coming from the frontend or other client:
+Express-validator is a library that can be used to validate the data coming from the frontend or other client (like that REST Client extension):
 https://express-validator.github.io/docs/
 
 New express-validator validation ideas could contain e.g.: 
@@ -176,9 +176,11 @@ and ```[roleChecker, validate]```
 
 * And most IMPORTANTLY use the ```logs\app.log``` from the beginning. Take screenshots when get interesting errors and fixed operation success messages there!
 
-# ------------------------------------
+# -------------------------------------------------
 
-### ((( Install the frontend  (Possible but not really needed for the task) Skip if no extra time!  )))
+### EXTRA: (Totally extra, just if feel like finding out what the Frontend does currently) 
+
+#### Install the frontend  (Possible but not really needed for the task) Skip if no extra time!  )))
 
 1. Go to the workspace folder 'Siba'
 1. Clone there the frontend project repo: https://github.com/haagahelia/siba-fe
