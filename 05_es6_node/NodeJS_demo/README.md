@@ -53,7 +53,7 @@ just use your case scripts instead. Steps could be the same.
 
 **Note!** Check out Teams > General > Files for the secrets. Like usernames, passwords, IP addresses, port numbers, your schema name etc.
 
-[Finnish course task (PDF)](99_tasks/Task24K.md)
+[Finnish course task](99_tasks/Task24K.md)
 
 <!--
 [English course task (PDF)](99_tasks/NodeJS_task.pdf)
