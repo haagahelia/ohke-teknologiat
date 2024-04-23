@@ -166,7 +166,11 @@ Tehtävä GitHub classroomissa, DL ke 27.3. klo 22.
 
 <strong><del>To 21.3. intensiiviviikko</del></strong>
 
-<details><summary><strong>To 28.3. Node.js backend -arkkitehtuuri</strong></summary></details>
+<details><summary><strong>To 28.3. Node.js backend -arkkitehtuuri</strong></summary>
+Tehtävä Teamsissä, DL su 14.4. klo 22.
+
+<hr />
+</details>
 
 <details><summary><strong>To 4.4. Seminaarien käynnistys</strong></summary>
 

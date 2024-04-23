@@ -41,7 +41,7 @@ just use your case scripts instead. Steps could be the same.
 
 [Express, middleware (PDF)](02_nodejs/Express_and_middleware.pdf)
 
-[What else could be added to this backend (PDF)](02_nodejs/MoreCouldBeAdded.pdf)
+[What else can be added to backend projects (PDF)](02_nodejs/MoreBackendFeaturesAndTech.pdf)
 
 [Asynchronous code and Promise (PDF)](03_asynchronous_code_promises/AsynchronousCode_Promises.pdf)
 
