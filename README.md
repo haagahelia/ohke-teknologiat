@@ -45,7 +45,7 @@ Toivomme että tutustutte mahdollisuuksien mukaan etukäteen kunkin aiheen video
 
 <hr />
 
-<details><summary><strong>To 18.1. <a href="00_linux/">Kurssin johdanto, ympäristöt ja Linux/Unix-komentorivi</a></strong></summary>
+<details><summary><strong>To 22.8. <a href="00_linux/">Kurssin johdanto, ympäristöt ja Linux/Unix-komentorivi</a></strong></summary>
 
 Videot:
 
@@ -53,7 +53,7 @@ Videot:
 * [📼 GitHub classroom -tehtävien ohjeistus](https://youtu.be/9dA17XlzT-w)
 * [📼 Kurssin koodausympäristöt (wsl2, Docker, Development containers, Codespace)](https://youtu.be/aC3xj4KXu3g)
 
-Tehtävät (DL ke 24.1. klo 22:00):
+Tehtävät (DL ke 28.8. klo 22:00):
 
 * [📥 Kurssin kehitysympäristön asennus](00_linux/asennukset.md)
 * 📥 Linux-komentorivi (Teams ja GitHub classroom)
@@ -61,7 +61,7 @@ Tehtävät (DL ke 24.1. klo 22:00):
 <hr />
 </details>
 
-<details><summary><strong>To 25.1. DevOps: Johdatus konttiteknologiaan, containers, images</strong></summary>
+<details><summary><strong>To 29.8. DevOps: Johdatus konttiteknologiaan, containers, images</strong></summary>
 
 Käytämme Eficoden ja Helsingin yliopiston yhteistyönä syntynyttä [DevOps with Docker](https://devopswithdocker.com/) -kurssia. Ainakin sen alkua.
 
@@ -80,13 +80,13 @@ Tuetun työskentelyn vaiheet 1:
 1. [Running and stopping containers](https://devopswithdocker.com/part-1/section-2), Tehtävät 1.3-1.4
 1. [In-depth dive to images](https://devopswithdocker.com/part-1/section-3), Tehtävät 1.5-1.8
 
-Tehtävä *DevOps with Docker part 1a* löytyy Teamsista ja GitHub classroomista. DL ke 31.1. klo 22:00.
+Tehtävä *DevOps with Docker part 1a* löytyy Teamsista ja GitHub classroomista. DL ke 4.9. klo 22:00.
 
 
 <hr />
 </details>
 
-<details><summary><strong>To 1.2. DevOps: Docker "volumet" ja portit</strong></summary>
+<details><summary><strong>To 5.9. DevOps: Docker "volumet" ja portit</strong></summary>
 
 Tuetun työskentelyn vaiheet 2:
 
@@ -95,12 +95,12 @@ Tuetun työskentelyn vaiheet 2:
 6. [Utilizing tools from the Registry](https://devopswithdocker.com/part-1/section-6), Tehtävät 1.11-1.14
 7. [Summary](https://devopswithdocker.com/part-1/section-7)
 
-Tehtävä *DevOps with Docker part 1b* löytyy Teamsista ja GitHub classroomista. DL ke 7.1. klo 22:00.
+Tehtävä *DevOps with Docker part 1b* löytyy Teamsista ja GitHub classroomista. DL ke 11.9. klo 22:00.
 
 <hr />
 </details>
 
-<details><summary><strong>To 8.2. DevOps: Yhteydet kontteihin ja levykuvien julkaisu, Johdatus Docker Compose:n käyttöön, Continuous integration ja continuous delivery</strong></summary>
+<details><summary><strong>To 12.9. DevOps: Yhteydet kontteihin ja levykuvien julkaisu, Johdatus Docker Compose:n käyttöön, Continuous integration ja continuous delivery</strong></summary>
 
 Tuetun työskentelyn vaiheet 3: [Part 2](https://devopswithdocker.com/part-2/)
 
@@ -119,7 +119,7 @@ Näistä molemmista aukeaa monivalintatehtävä/quiz torstaina. Sillä voi korva
 <hr />
 </details>
 
-<details><summary><strong>To 15.2. Full-stack sovelluksen kontitus / tai vastaava tieto teoriassa</strong></summary>
+<details><summary><strong>To 19.9. Full-stack sovelluksen kontitus / tai vastaava tieto teoriassa</strong></summary>
 
 Viimeinen Docker-osuus. Ei uutta opiskeltavaa asiaa, mutta joko...
 
@@ -135,51 +135,56 @@ Docker-monivalintatehtävien [materiaalit](01_docker/DockerMonivalintatehtavanLa
 
 </details>
 
-<strong><del>To 22.2. intensiiviviikko</del></strong>
+<!-- <strong><del>To 22.2. intensiiviviikko</del></strong> -->
 
-<details><summary><strong>To 29.2. TypeScript-kielen perusteet ja työkalut</strong></summary>
+<details><summary><strong>To 26.9. TypeScript-kielen perusteet ja työkalut</strong></summary>
 
 [Oppitunnin muistiinpanot](./01_typescript)
 
 Lisämateriaalina suosittelemme perehtymään lukuun "TypeScriptin perusteet" [typescript-ohjelmointi.github.io](https://typescript-ohjelmointi.github.io/)-sivustolla.
 
-Tehtävä GitHub classroomissa, DL ke 6.3. klo 22.
+Tehtävä GitHub classroomissa, DL ke 2.10. klo 22.
 
 </details>
 
-<details><summary><strong>To 7.3. JS/TS edistyneet ominaisuudet</strong></summary>
+<details><summary><strong>To 3.10. JS/TS edistyneet ominaisuudet</strong></summary>
 
 [JavaScripti/ECMAScriptin ominaisuuksista (käytetään TypeScriptissä)](https://github.com/valju/JS_ES_Features/blob/master/ES_advanced/ES_advanced_or_tricky_features.md)
 
-Tehtävä GitHub classroomissa, DL ke 13.3. klo 22.
+Tehtävä GitHub classroomissa, DL ke 9.10. klo 22.
 
 </details>
 
-<details><summary><strong>To 14.3. JS/TS-koodin yksikkötestaus</strong></summary>
+<details><summary><strong>To 10.10. JS/TS-koodin yksikkötestaus</strong></summary>
 
 [Oppitunnin muistiinpanot](./02_testaus/typescript.md).
 
-Tehtävä GitHub classroomissa, DL ke 27.3. klo 22.
+Tehtävä GitHub classroomissa, DL ke 23.10. klo 22.
 
 <hr />
 </details>
 
-<strong><del>To 21.3. intensiiviviikko</del></strong>
+<br />
+<strong><del>To 17.10. intensiiviviikko</del></strong>
 
-<details><summary><strong>To 28.3. Node.js backend -arkkitehtuuri</strong></summary>
-Tehtävä Teamsissä, DL su 14.4. klo 22.
+<br />
+
+<details><summary><strong>To 24.10. Node.js backend -arkkitehtuuri</strong></summary>
+Tehtävä Teamsissä, DL ke 30.10. klo 22.
+
+<!-- Merkkaa keltaisella lisäykset/muutokset, tai kirjoita palautuksen alkuun lista parannuksista. -->
 
 <hr />
 </details>
 
-<details><summary><strong>To 4.4. Seminaarien käynnistys</strong></summary>
+<details><summary><strong>To 31.10. Seminaarien käynnistys</strong></summary>
 
 [Seminaarityön ohjeistus](./08_seminaari)
 
 <hr />
 </details>
 
-<details><summary><strong>To 11.4. , 18.4., 25.4., 2.5. Seminaarityön tekemistä</strong></summary>
+<details><summary><strong>To 7.11., 14.11., 21.11., 28.11. Seminaarityön tekemistä</strong></summary>
 
 [Seminaarityön ohjeistus](./08_seminaari)
 
@@ -188,14 +193,20 @@ Yksilöllistä ohjausta Teamsissa tai sopimuksen mukaan kampuksella. Kurssin sem
 <hr />
 </details>
 
-**Seminaariraportin palautus su 12.5. klo 22 mennessä.**
+**Seminaariraportin palautus su 1.12. klo 22 mennessä.**
 
-<strong><del>To 9.5. Helatorstai</del></strong>
+<!-- <strong><del>To 9.5. Helatorstai</del></strong> -->
 
-<details><summary><strong>To 16.5. Seminaariesitykset</strong></summary>
+<details><summary><strong>To 5.12. Seminaariesitykset</strong></summary>
 
 [Katso seminaarityön ohjeet](./08_seminaari).
 
+</details>
+
+<hr />
+
+
+<details><summary><strong>(To 12.12. Loput Seminaariesitykset tai joku kokoava esitys kurssista)</strong></summary>
 </details>
 
 <hr />

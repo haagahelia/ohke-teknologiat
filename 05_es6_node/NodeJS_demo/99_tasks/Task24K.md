@@ -72,7 +72,7 @@ Have the .env file correctly written and located in backend folder, and run the 
 
 Currently the .env for local DB and dockerized DB might be exactly same? As long as the backend is NOT dockerized. Check from teacher for any doubts in env settings!
 
-### Database option c) Tunnel creation (let's see if any need this time. Not created yet)
+### Database option c) Tunnel creation (Ask teacher if a nor b work. Not created yet)
 
 1. This console command in Windows would create a ssh tunnel / port forwarding if you will use remote database:
     - ```ssh -f juuser1@123.123.123.45 -L 3308:localhost:3306 -N```
