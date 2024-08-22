@@ -45,7 +45,7 @@ Toivomme että tutustutte mahdollisuuksien mukaan etukäteen kunkin aiheen video
 
 <hr />
 
-<details><summary><strong>To 22.8. <a href="00_linux/">Kurssin johdanto, ympäristöt ja Linux/Unix-komentorivi</a></strong></summary>
+<!--details><summary--><strong>To 22.8. <a href="00_linux/">Kurssin johdanto, ympäristöt ja Linux/Unix-komentorivi</a></strong><!--/summary-->
 
 Videot:
 
@@ -59,7 +59,11 @@ Tehtävät (DL ke 28.8. klo 22:00):
 * 📥 Linux-komentorivi (Teams ja GitHub classroom)
 
 <hr />
-</details>
+<!--/details-->
+
+<strong>Seuraavien aiheiden osalta aikataulu ja järjestys ovat suuntaa-antavia</strong>
+
+<hr>
 
 <details><summary><strong>To 29.8. DevOps: Johdatus konttiteknologiaan, containers, images</strong></summary>
 
