@@ -45,7 +45,7 @@ Toivomme että tutustutte mahdollisuuksien mukaan etukäteen kunkin aiheen video
 
 <hr />
 
-<!--details><summary--><strong>To 22.8. <a href="00_linux/">Kurssin johdanto, ympäristöt ja Linux/Unix-komentorivi</a></strong><!--/summary-->
+<details><summary><strong>To 22.8. <a href="00_linux/">Kurssin johdanto, ympäristöt ja Linux/Unix-komentorivi</a></strong></summary>
 
 Videot:
 
@@ -59,27 +59,23 @@ Tehtävät (DL ke 28.8. klo 22:00):
 * 📥 Linux-komentorivi (Teams ja GitHub classroom)
 
 <hr />
-<!--/details-->
+</details>
 
-<strong>Seuraavien aiheiden osalta aikataulu ja järjestys ovat suuntaa-antavia</strong>
 
-<hr>
-
-<details><summary><strong>To 29.8. DevOps: Johdatus konttiteknologiaan, containers, images</strong></summary>
-
-Käytämme Eficoden ja Helsingin yliopiston yhteistyönä syntynyttä [DevOps with Docker](https://devopswithdocker.com/) -kurssia. Ainakin sen alkua.
+<!--details><summary--><strong>To 29.8. DevOps: Johdatus konttiteknologiaan, containers, images</strong><!--/summary-->
 
 Keskustellaan yhdessä termien ja kuvien avulla käsitteistä, jotta itse docker-opiskelun suorittaminen sujuu jouhevammin:
 Tiimin [DevOpsin tavoitetila periaatekuvana](01_docker/DockerCaseExample.pdf) ja [Dockerin keskeisiä käsitteitä](01_docker/DockerConceptsAndVocabulary.pdf) sanoiksi puettuina ja kuvina.
 
-Suositellut videot: [Never install locally (Coderized)](https://youtu.be/J0NuOlA2xDc) ja [Virtual Machine (VM) vs Docker (IBM Technology)](https://youtu.be/a1M_thDTqmU) <br />
-Docker cheatsheettejä: [CLI cheat sheet pdf](https://docs.docker.com/get-started/docker_cheatsheet.pdf), toinen, mm [docker concepts](https://extremeautomation.io/cheatsheets/docker-cheatsheet/), kolmas [cheatsheet poikineen](https://dockerlabs.collabnix.com/docker/cheatsheet/).
+Suositellut videot: [Never install locally (Coderized)](https://youtu.be/J0NuOlA2xDc) ja [Virtual Machine (VM) vs Docker (IBM Technology)](https://youtu.be/a1M_thDTqmU).
 
-Dockerin laaja ohjeisto [docs.docker.com](https://docs.docker.com/)
+Docker cheatsheettejä: [CLI cheat sheet pdf](https://docs.docker.com/get-started/docker_cheatsheet.pdf), [docker concepts](https://extremeautomation.io/cheatsheets/docker-cheatsheet/), [cheatsheet poikineen](https://dockerlabs.collabnix.com/docker/cheatsheet/).
 
-Tuetun työskentelyn vaiheet 1:
+Dockerin laaja ohjeisto [docs.docker.com](https://docs.docker.com/).
 
-0. [Asenna Docker](https://devopswithdocker.com/getting-started) ja  [Introduction to Part 1](https://devopswithdocker.com/part-1/)
+Käytämme Eficoden ja Helsingin yliopiston yhteistyönä syntynyttä [DevOps with Docker](https://devopswithdocker.com/) -kurssia:
+
+0. [Getting started](https://devopswithdocker.com/getting-started) ja  [Introduction to Part 1](https://devopswithdocker.com/part-1/)
 1. [Definitions and basic concepts](https://devopswithdocker.com/part-1/section-1), Tehtävät 1.1-1.2
 1. [Running and stopping containers](https://devopswithdocker.com/part-1/section-2), Tehtävät 1.3-1.4
 1. [In-depth dive to images](https://devopswithdocker.com/part-1/section-3), Tehtävät 1.5-1.8
@@ -88,7 +84,7 @@ Tehtävä *DevOps with Docker part 1a* löytyy Teamsista ja GitHub classroomista
 
 
 <hr />
-</details>
+<!--/details-->
 
 <details><summary><strong>To 5.9. DevOps: Docker "volumet" ja portit</strong></summary>
 
@@ -103,6 +99,10 @@ Tehtävä *DevOps with Docker part 1b* löytyy Teamsista ja GitHub classroomista
 
 <hr />
 </details>
+
+<strong>Seuraavien aiheiden osalta aikataulu ja järjestys ovat suuntaa-antavia</strong>
+
+<hr>
 
 <details><summary><strong>To 12.9. DevOps: Yhteydet kontteihin ja levykuvien julkaisu, Johdatus Docker Compose:n käyttöön, Continuous integration ja continuous delivery</strong></summary>
 
