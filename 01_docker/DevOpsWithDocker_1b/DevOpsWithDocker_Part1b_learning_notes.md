@@ -7,7 +7,7 @@ to dockerized version of the installation = docker should be only thing you inst
 https://devopswithdocker.com/part-1/section-4/
 ==============================================
  
-- manual commands for testing first => 
+- manual commands for testing first => **No need to run**, just read them!
 - Dockerfile  (FROM, WORKDIR, COPY, RUN, RUN, RUN, EXPOSE, CMD/ENTRYPOINT)
 - ENTRYPOINT + CMD
  
@@ -43,9 +43,9 @@ https://docs.docker.com/reference/dockerfile/     Dockerfile reference
 
 - Most changing content later in Dockerfile to have more permanent layers to the top for faster caching.
 
-- Remember RUN means running commands to build/while building the image i.e. 'docker build- ...
+- Remember RUN means RUNNING commands to build / while building the **image** i.e. 'docker build- ...
 
-   - ... whereas CMD / ENTRYPOINT is the definition of the command to run at 'docker run', while starting the container
+   - ... whereas CMD / ENTRYPOINT is the definition of the command(s) that WOULD BE run at 'docker run', later, while starting the **container**
 
 - ENTRYPOINT vs CMD can be confusing:
 
