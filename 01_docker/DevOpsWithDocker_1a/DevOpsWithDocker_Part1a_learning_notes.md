@@ -1,5 +1,8 @@
 # DevOps with Docker - Learning notes of Part 1a, sections 4-6
 
+(Example learning notes you could do to 1. stay awake/focus 2. process the issues 3. possibly have
+something to go back to to recap the issues)
+
 Docker documentation! https://docs.docker.com/
 Docker Desktop > Learning Center   
      - look at e.g. containers and then lower part of view
@@ -62,6 +65,7 @@ Juhani thought these could be listed as benefits too, agree?
 6. Version controlled Docker scripts that are easy to edit with editor
 7. Size of storage, as all is in scripts, software binary images downloaded from docker hub, (or compiled from your source code) and only your scripts, sources and other assets need to be stored.
 8. Latest version of someone else's work (e.g. MariaDB) pulled always if you so wish
+9. Put more learning on generic DevOps skills instead of (possibly changing) installation and configuration procedures of (possibly changing) tools.
 
 
 Virtual Machines vs Containers
@@ -190,8 +194,8 @@ COPY hello.sh .
 ```
 docker diff container_a
 docker logs container_a
-docker image ps
-docker container ps
+docker image ls
+docker container ls          -a
 ```
 
 https://linux.die.net/man/1/touch
@@ -204,6 +208,7 @@ Ex. 1.7-1.8
 https://docs.docker.com/reference/dockerfile/#entrypoint
 
 ===================== Linux command parameter flags =============
+
 Teemu's example from the board, these are all the same:
 
 ```

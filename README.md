@@ -62,7 +62,8 @@ Tehtävät (DL ke 28.8. klo 22:00):
 </details>
 
 
-<!--details><summary--><strong>To 29.8. DevOps: Johdatus konttiteknologiaan, containers, images</strong><!--/summary-->
+<!--details><summary--><strong>To 29.8. DevOps: Johdatus konttiteknologiaan, containers, images</strong> 
+<!-- /summary -->
 
 Keskustellaan yhdessä termien ja kuvien avulla käsitteistä, jotta itse docker-opiskelun suorittaminen sujuu jouhevammin:
 Tiimin [DevOpsin tavoitetila periaatekuvana](01_docker/DockerCaseExample.pdf) ja [Dockerin keskeisiä käsitteitä](01_docker/DockerConceptsAndVocabulary.pdf) sanoiksi puettuina ja kuvina.
@@ -75,10 +76,12 @@ Dockerin laaja ohjeisto [docs.docker.com](https://docs.docker.com/).
 
 Käytämme Eficoden ja Helsingin yliopiston yhteistyönä syntynyttä [DevOps with Docker](https://devopswithdocker.com/) -kurssia:
 
-0. [Getting started](https://devopswithdocker.com/getting-started) ja  [Introduction to Part 1](https://devopswithdocker.com/part-1/)
+0. [(Getting started)](https://devopswithdocker.com/getting-started) ja  [(Introduction to Part 1)](https://devopswithdocker.com/part-1/)
 1. [Definitions and basic concepts](https://devopswithdocker.com/part-1/section-1), Tehtävät 1.1-1.2
 1. [Running and stopping containers](https://devopswithdocker.com/part-1/section-2), Tehtävät 1.3-1.4
 1. [In-depth dive to images](https://devopswithdocker.com/part-1/section-3), Tehtävät 1.5-1.8
+
+[Example of learning notes for the part 1a](01_docker/DevOpsWithDocker_1a/DevOpsWithDocker_Part1a_learning_notes.md)
 
 Tehtävä *DevOps with Docker part 1a* löytyy Teamsista ja GitHub classroomista. DL ke 4.9. klo 22:00.
 
@@ -86,7 +89,8 @@ Tehtävä *DevOps with Docker part 1a* löytyy Teamsista ja GitHub classroomista
 <hr />
 <!--/details-->
 
-<details><summary><strong>To 5.9. DevOps: Docker "volumet" ja portit</strong></summary>
+<!--details><summary--><strong>To 5.9. DevOps: Docker "volumet" ja portit</strong>
+<!-- /summary -->
 
 Tuetun työskentelyn vaiheet 2:
 
@@ -95,10 +99,14 @@ Tuetun työskentelyn vaiheet 2:
 6. [Utilizing tools from the Registry](https://devopswithdocker.com/part-1/section-6), Tehtävät 1.11-1.14
 7. [Summary](https://devopswithdocker.com/part-1/section-7)
 
+[Summary for the part 1b](01_docker/DevOpsWithDocker_1b/DevOpsWithDocker_Part1b_learning_notes.md)<br />
+&nbsp; &nbsp;[Docker Volumes](01_docker/DevOpsWithDocker_1b/DockerVolumes/)<br />
+&nbsp; &nbsp;[Docker Ports](01_docker/DevOpsWithDocker_1b/DockerPorts/)<br />
+
 Tehtävä *DevOps with Docker part 1b* löytyy Teamsista ja GitHub classroomista. DL ke 11.9. klo 22:00.
 
 <hr />
-</details>
+<!--/details-->
 
 <strong>Seuraavien aiheiden osalta aikataulu ja järjestys ovat suuntaa-antavia</strong>
 
