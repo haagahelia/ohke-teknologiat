@@ -1,5 +1,9 @@
 # DevOps with Docker - Summary of Part 1b, sections 4-6
- 
+
+**NOTE:** Especially in these sections the material contains a lot of local installation commands,
+but those are just for reading. No need to install any of the tools locally, finally all leads 
+to dockerized version of the installation = docker should be only thing you install.
+
 https://devopswithdocker.com/part-1/section-4/
 ==============================================
  
