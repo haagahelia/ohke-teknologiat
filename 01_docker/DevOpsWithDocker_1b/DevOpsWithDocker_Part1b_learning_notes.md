@@ -21,7 +21,7 @@ https://devopswithdocker.com/part-1/section-5
 https://devopswithdocker.com/part-1/section-6
 =============================================
  
-- dockerizing existing projects from e.g. github repos (hopefully with informative README files)
+- dockerizing existing projects from e.g. github repos (hopefully with informative and up-to-date README files)
 - publishing own images to Docker Hub.   Consisting of: 
 
    1. some other ready-made docker image as the first layer, like node:latest  or nginx 
@@ -37,7 +37,7 @@ https://docs.docker.com/reference/dockerfile/     Dockerfile reference
 
 ### Random notes from the pages listed above: (in order of appearance)
 
-- We go a bit backwards to run manual commands first, then see how to do them in Dockerfile
+- We go a bit 'backwards' to run manual commands first, then see how to do them in Dockerfile
 
 - ... At some point, you may have noticed that sudo is not installed either, but since we are root (inside docker containers) we don't need it ...
 

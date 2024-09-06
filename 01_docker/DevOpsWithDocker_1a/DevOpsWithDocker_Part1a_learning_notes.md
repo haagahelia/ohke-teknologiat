@@ -1,7 +1,10 @@
-# DevOps with Docker - Learning notes of Part 1a, sections 4-6
+# DevOps with Docker - Learning notes of Part 1a, sections 1-3
 
-(Example learning notes you could do to 1. stay awake/focus 2. process the issues 3. possibly have
-something to go back to to recap the issues)
+Example for learning notes that you could do to: 
+1. stay awake/focus 
+2. process the issues
+3. organize your thoughts in manner meaningful to you 
+3. possibly have something to go back to to recap the issues (but not necessarily)
 
 Docker documentation! https://docs.docker.com/
 Docker Desktop > Learning Center   
@@ -32,13 +35,13 @@ Course forums! (HYY)  ???
 Parts 1a and 1b combined
 ========================
 
-- Run containerized applications
-- Containerize applications
-- Utilize volumes
-- Use port mapping 
-- Share your own containers publicly 
+- Run containerized applications 1a
+- Containerize applications 1a, 1b,
+- Utilize volumes 1b
+- Use port mapping 1b
+- Share your own docker images publicly 1b
 
-https://devopswithdocker.com/part-1/section-1
+## https://devopswithdocker.com/part-1/section-1
 
 
 DevOps: release, configuring, and monitoring done by developers
@@ -61,6 +64,7 @@ Containerization benefits
 4. Scaling by running more and more containers (load balancing traffic)
 
 Juhani thought these could be listed as benefits too, agree?
+
 5. Scripts can be maintained and taken to next project, updated, improved, dev automated/integrated even more!
 6. Version controlled Docker scripts that are easy to edit with editor
 7. Size of storage, as all is in scripts, software binary images downloaded from docker hub, (or compiled from your source code) and only your scripts, sources and other assets need to be stored.
@@ -99,15 +103,16 @@ docker system prune     => does it remove volumes?
 - those teach you more and more about docker
    => so try to enjoy learning each new needed command
 
-Task 1.1
-========
+### Ex 1.1
+
 - How to find out how to "start 3 containers in detached mode"? Find out now?
-Task 1.2
-========
+
+### Ex 1.2
+
 - no probs
 
 
-https://devopswithdocker.com/part-1/section-2
+## https://devopswithdocker.com/part-1/section-2
 
 $ docker run ubuntu
   Unable to find image 'ubuntu:latest' locally
@@ -129,8 +134,7 @@ https://docs.docker.com/reference/cli/docker/container/pause/
 
 "looper"   Notice that you can name many things in docker, including images! Looper is just a name for a container that the course materials create based on Ubuntu.
 
-Ex 1.3.
-=======
+### Ex 1.3
 
 devopsdockeruh/simple-web-service:ubuntu   What is devopsdockeruh ?
 
@@ -138,8 +142,7 @@ devopsdockeruh/simple-web-service:ubuntu   What is devopsdockeruh ?
 
 Nonmatching host platform: M1/M2 Mac. "WARNING: The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested" Docker Desktop for Mac employs a possibly slower emulator
 
-Ex 1.4.
-=======
+### Ex 1.4
 
 What is sh?       (The command interpreter in that Ubuntu image/container. For executing shell scripts. Similar to e.g. bash command. Can be either 1. called 
 from another process or 2. is used to interprete your console commands)  
@@ -154,7 +157,7 @@ https://www.unix.com/man-page/linux/1/sh/
 
 docker exec
 
-https://devopswithdocker.com/part-1/section-3
+## https://devopswithdocker.com/part-1/section-3
 
 docker search hello-world
 "Official images are curated and reviewed by Docker, Inc. and are usually actively maintained by the authors. "
@@ -169,8 +172,8 @@ click on the version of the image to see the: Dockerfile,  where       FROM ubun
 registry/organisation/image:tag
 image   => registry will default to 'Docker hub', organisation to 'library' and tag to 'latest'
 
-Ex 1.5 - 1.6
-============
+### Ex 1.5 - 1.6
+
 - No probs, just need to remember or recap also previous part commands to get these done
 
 "Dockerfile is simply a file that contains the build instructions for an image"
@@ -202,10 +205,20 @@ https://linux.die.net/man/1/touch
 
 We will not use docker commit (we do not play directly with the image binaries, but want to keep our work always in scripts, Dockerfile for instance)
 
-Ex. 1.7-1.8
-===========
+### Ex 1.7-1.8
+
 - Entrypoint as a new issue
 https://docs.docker.com/reference/dockerfile/#entrypoint
+
+- You kind of need to know e.g. that:
+  - ENTRYPOINT is "executed" first, then CMD
+  - if no ENTRYPOINT given, default ENTRYPOINT runs the shell interpreter "/bin/sh -c"
+  - docker run command later would have as last part, the command, or CMD
+
+  ``` docker run hello-world pwd ```       =>   CMD ["pwd"]  => "bin/sh -c pwd"
+
+Hint: Use the docs.docker.com references, e.g. CLI reference, docker container run, study the
+command options parameters etc.  
 
 ===================== Linux command parameter flags =============
 
