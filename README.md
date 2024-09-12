@@ -108,11 +108,8 @@ Tehtävä *DevOps with Docker part 1b* löytyy Teamsista ja GitHub classroomista
 <hr />
 <!--/details-->
 
-<strong>Seuraavien aiheiden osalta aikataulu ja järjestys ovat suuntaa-antavia</strong>
 
-<hr>
-
-<details><summary><strong>To 12.9. DevOps: Yhteydet kontteihin ja levykuvien julkaisu, Johdatus Docker Compose:n käyttöön, Continuous integration ja continuous delivery</strong></summary>
+<strong>To 12.9. DevOps: Johdatus Docker Compose:n käyttöön</strong>
 
 Tuetun työskentelyn vaiheet 3: [Part 2](https://devopswithdocker.com/part-2/)
 
@@ -129,12 +126,15 @@ Tuetun työskentelyn vaiheet 3: [Part 2](https://devopswithdocker.com/part-2/)
 Näistä molemmista aukeaa monivalintatehtävä/quiz torstaina. Sillä voi korvata viikon Docker-tehtävän
 
 <hr />
-</details>
 
-<details><summary><strong>To 19.9. Full-stack sovelluksen kontitus / tai vastaava tieto teoriassa</strong></summary>
 
-Viimeinen Docker-osuus. Ei uutta opiskeltavaa asiaa, mutta joko...
 
+
+<strong>To 19.9. Kubernetes-vierailijaluento</strong>
+
+Saamme kampukselle vierailijan SUSE:lta [(https://www.suse.com/)](https://www.suse.com/) kertomaan Kubernetesistä [(https://kubernetes.io/)](https://kubernetes.io/).
+
+<!--
 a. Full-stack -sovelluksen dockerointi/kontitus [Täältä sovelluksen lähtötiedot ja kaikkia komentoja, joita tarvittiin manuaalisessa asentamisessa](01_docker/fullstack_dockerized_task/Manual_Installation_commands.md)
 
 TAI
@@ -144,8 +144,11 @@ b. Monivalintatehtäviä dockerista (tasolle docker-composen pelkät perusteet j
 Monivalintatehtävät perustuvat siis näissä tai alussa linkattujen materiaalien keskeisiin asioihin. Sellaisiin, joiden ymmärtäminen / osaaminen on auttanut kontituksessa. Joku yksityiskohtakin voidaan kysyä sieltä täältä. Mutta täyteen 5p ei vaadita täysiä monivalintapisteitä.
 
 Docker-monivalintatehtävien [materiaalit](01_docker/DockerMonivalintatehtavanLahteet.md)
+-->
 
-</details>
+<strong>Seuraavien aiheiden osalta aikataulu ja järjestys ovat suuntaa-antavia</strong>
+<hr>
+
 
 <!-- <strong><del>To 22.2. intensiiviviikko</del></strong> -->
 
