@@ -129,7 +129,7 @@ Monivalintatehtäviä dockerista (tasolle docker-composen pelkät perusteet ja e
 
 Monivalintatehtävät perustuvat siis näissä tai alussa linkattujen materiaalien keskeisiin asioihin. Sellaisiin, joiden ymmärtäminen / osaaminen on auttanut kontituksessa. Joku yksityiskohtakin voidaan kysyä sieltä täältä. Mutta täyteen 5p ei vaadita täysiä monivalintapisteitä.
 
-Docker-monivalintatehtävien [materiaalit](01_docker/DockerMonivalintatehtavanLahteet.md)
+Docker-monivalintatehtäviä varten tutustu DevOps with Docker -kurssin osiin 1 ja 2 sekä jatka näistä [materiaaleista](01_docker/DockerMonivalintatehtavanLahteet.md)
 <hr />
 <!--/details-->
 
