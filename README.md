@@ -117,6 +117,7 @@ Tuetun työskentelyn vaiheet 3: [Part 2](https://devopswithdocker.com/part-2/)
 2. [Docker networking](https://devopswithdocker.com/part-2/section-2), Tehtävät 2.4-2.5
 
 Tästä lähtien jää lisämateriaaliksi:
+
 3. ( [Volumes in action](https://devopswithdocker.com/part-2/section-3) )
 4. ( [Containers in development](https://devopswithdocker.com/part-2/section-4) )
 
