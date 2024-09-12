@@ -109,7 +109,7 @@ Tehtävä *DevOps with Docker part 1b* löytyy Teamsista ja GitHub classroomista
 <!--/details-->
 
 
-<strong>To 12.9. DevOps: Johdatus Docker Compose:n käyttöön</strong>
+<!--details><summary--><strong>To 12.9. DevOps: Johdatus Docker Compose:n käyttöön</strong><!-- /summary --> 
 
 Tuetun työskentelyn vaiheet 3: [Part 2](https://devopswithdocker.com/part-2/)
 
@@ -118,15 +118,17 @@ Tuetun työskentelyn vaiheet 3: [Part 2](https://devopswithdocker.com/part-2/)
 1. [Volumes in action](https://devopswithdocker.com/part-2/section-3), Tehtävät 2.6-2.10
 1. No more?
 
-<strong>Ohjelmistoarkkitehtuureista</strong>
+Tehtävävaihtoehdot: 1. DevOpsWithDocker -tehtävät 2a   TAI    2. Docker-monivalinta   (Molemmat ovat Teamsissä)
 
-* [Ohjelmistoarkkitehtuurit ja -patternit (engl. PDF)](06_ohjelmistoarkkitehtuurit_ja_patternit/SoftwareArchitecturesAndPatterns.pdf)
-* [Ketterän dokumentoinnin periaatteet (engl. PDF)](06_ohjelmistoarkkitehtuurit_ja_patternit/documentation_principles_for_sw_projects.pdf)
+(Toki voi tehdä molemmat jos haluaa tehdä bonustehtävänä)
 
-Näistä molemmista aukeaa monivalintatehtävä/quiz torstaina. Sillä voi korvata viikon Docker-tehtävän
+Monivalintatehtäviä dockerista (tasolle docker-composen pelkät perusteet ja esim. docker network:in pelkät perusteet). Muutamia materiaalilinkkejä ja videolinkkejä annettu ja sitten testi osaamsesta. Ihan perusymmärrystä haetaan. Sellaista että olette työhaastattelussa tai ekassa työpaikassa kärryillä siitä mitä dockerilla voi saada aikaan. Koko kurssin viikkotyömäärä on 8-9h, joten valmistaudu huolella ensin se max 7-8h.
 
+Monivalintatehtävät perustuvat siis näissä tai alussa linkattujen materiaalien keskeisiin asioihin. Sellaisiin, joiden ymmärtäminen / osaaminen on auttanut kontituksessa. Joku yksityiskohtakin voidaan kysyä sieltä täältä. Mutta täyteen 5p ei vaadita täysiä monivalintapisteitä.
+
+Docker-monivalintatehtävien [materiaalit](01_docker/DockerMonivalintatehtavanLahteet.md)
 <hr />
-
+<!--/details-->
 
 
 
@@ -146,7 +148,17 @@ Monivalintatehtävät perustuvat siis näissä tai alussa linkattujen materiaali
 Docker-monivalintatehtävien [materiaalit](01_docker/DockerMonivalintatehtavanLahteet.md)
 -->
 
+---
+
 <strong>Seuraavien aiheiden osalta aikataulu ja järjestys ovat suuntaa-antavia</strong>
+
+<strong>Ohjelmistoarkkitehtuureista</strong>
+
+* [Ohjelmistoarkkitehtuurit ja -patternit (engl. PDF)](06_ohjelmistoarkkitehtuurit_ja_patternit/SoftwareArchitecturesAndPatterns.pdf)
+* [Ketterän dokumentoinnin periaatteet (engl. PDF)](06_ohjelmistoarkkitehtuurit_ja_patternit/documentation_principles_for_sw_projects.pdf)
+
+Näistä molemmista aukeaa monivalintatehtävä/quiz torstaina. Sillä voi korvata viikon Docker-tehtävän
+
 <hr>
 
 
