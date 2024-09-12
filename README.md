@@ -115,8 +115,11 @@ Tuetun työskentelyn vaiheet 3: [Part 2](https://devopswithdocker.com/part-2/)
 
 1. [Migrating to Docker Compose](https://devopswithdocker.com/part-2/section-1), Tehtävät 2.1-2.3
 1. [Docker networking](https://devopswithdocker.com/part-2/section-2), Tehtävät 2.4-2.5
-1. [Volumes in action](https://devopswithdocker.com/part-2/section-3), Tehtävät 2.6-2.10
+
+(
+1. [Volumes in action](https://devopswithdocker.com/part-2/section-3)
 1. No more?
+)
 
 Tehtävävaihtoehdot: 1. DevOpsWithDocker -tehtävät 2a   TAI    2. Docker-monivalinta   (Molemmat ovat Teamsissä)
 
