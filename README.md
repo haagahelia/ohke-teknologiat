@@ -114,11 +114,11 @@ Tehtävä *DevOps with Docker part 1b* löytyy Teamsista ja GitHub classroomista
 Tuetun työskentelyn vaiheet 3: [Part 2](https://devopswithdocker.com/part-2/)
 
 1. [Migrating to Docker Compose](https://devopswithdocker.com/part-2/section-1), Tehtävät 2.1-2.3
-1. [Docker networking](https://devopswithdocker.com/part-2/section-2), Tehtävät 2.4-2.5
+2. [Docker networking](https://devopswithdocker.com/part-2/section-2), Tehtävät 2.4-2.5
 
 Tästä lähtien jää lisämateriaaliksi:
-1. ( [Volumes in action](https://devopswithdocker.com/part-2/section-3) )
-1. ( [Containers in development](https://devopswithdocker.com/part-2/section-4) )
+3. ( [Volumes in action](https://devopswithdocker.com/part-2/section-3) )
+4. ( [Containers in development](https://devopswithdocker.com/part-2/section-4) )
 
 Tehtävävaihtoehdot: 1. DevOpsWithDocker -tehtävät 2a   TAI    2. Docker-monivalinta   (Molemmat ovat Teamsissä)
 
