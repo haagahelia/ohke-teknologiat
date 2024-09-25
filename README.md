@@ -151,18 +151,7 @@ Monivalintatehtävät perustuvat siis näissä tai alussa linkattujen materiaali
 Docker-monivalintatehtävien [materiaalit](01_docker/DockerMonivalintatehtavanLahteet.md)
 -->
 
----
 
-<strong>Seuraavien aiheiden osalta aikataulu ja järjestys ovat suuntaa-antavia</strong>
-
-<strong>Ohjelmistoarkkitehtuureista</strong>
-
-* [Ohjelmistoarkkitehtuurit ja -patternit (engl. PDF)](06_ohjelmistoarkkitehtuurit_ja_patternit/SoftwareArchitecturesAndPatterns.pdf)
-* [Ketterän dokumentoinnin periaatteet (engl. PDF)](06_ohjelmistoarkkitehtuurit_ja_patternit/documentation_principles_for_sw_projects.pdf)
-
-Näistä molemmista aukeaa monivalintatehtävä/quiz torstaina. Sillä voi korvata viikon Docker-tehtävän
-
-<hr>
 
 
 <!-- <strong><del>To 22.2. intensiiviviikko</del></strong> -->
@@ -176,6 +165,20 @@ Lisämateriaalina suosittelemme perehtymään lukuun "TypeScriptin perusteet" [t
 Tehtävä GitHub classroomissa, DL ke 2.10. klo 22.
 
 </details>
+
+
+<strong>Seuraavien aiheiden osalta aikataulu ja järjestys ovat suuntaa-antavia</strong>
+
+<strong>Ohjelmistoarkkitehtuureista</strong>
+
+* [Ohjelmistoarkkitehtuurit ja -patternit (engl. PDF)](06_ohjelmistoarkkitehtuurit_ja_patternit/SoftwareArchitecturesAndPatterns.pdf)
+* [Ketterän dokumentoinnin periaatteet (engl. PDF)](06_ohjelmistoarkkitehtuurit_ja_patternit/documentation_principles_for_sw_projects.pdf)
+
+Näistä molemmista aukeaa monivalintatehtävä/quiz torstaina. Sillä voi korvata viikon Docker-tehtävän
+
+<hr>
+
+
 
 <details><summary><strong>To 3.10. JS/TS edistyneet ominaisuudet</strong></summary>
 
