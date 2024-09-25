@@ -158,6 +158,8 @@ Docker-monivalintatehtävien [materiaalit](01_docker/DockerMonivalintatehtavanLa
 
 <details><summary><strong>To 26.9. TypeScript-kielen perusteet ja työkalut</strong></summary>
 
+Vierailuluento peliohjelmoinnista.
+
 [Oppitunnin muistiinpanot](./01_typescript)
 
 Lisämateriaalina suosittelemme perehtymään lukuun "TypeScriptin perusteet" [typescript-ohjelmointi.github.io](https://typescript-ohjelmointi.github.io/)-sivustolla.
