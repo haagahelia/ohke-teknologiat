@@ -169,6 +169,8 @@ Tehtävä GitHub classroomissa, DL ke 2.10. klo 22.
 </details>
 
 
+<hr />
+
 <strong>Seuraavien aiheiden osalta aikataulu ja järjestys ovat suuntaa-antavia</strong>
 
 <strong>Ohjelmistoarkkitehtuureista</strong>
