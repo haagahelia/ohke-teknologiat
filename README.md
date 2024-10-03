@@ -173,9 +173,7 @@ Tehtävä GitHub classroomissa, DL ke 2.10. klo 22.
 
 <details><summary><strong>To 3.10. JS/TS edistyneet ominaisuudet</strong></summary>
 
-[TypeScript projekteista](https://github.com/valju/JS_ES_Features/blob/master/TS_basics/TypeScript_usage_understood.pdf)
-
-sieltä löytyi mm. seuraavat linkit
+[TypeScript-projektin luonnista](https://github.com/valju/JS_ES_Features/blob/master/TS_basics/TypeScript_usage_understood.pdf) ... Samasta materiaalista löytyy mm. seuraavat linkit
 
 [JavaScripti/ECMAScriptin ominaisuuksista (käytetään TypeScriptissä)](https://github.com/valju/JS_ES_Features/blob/master/ES_advanced/ES_advanced_or_tricky_features.md)
 
