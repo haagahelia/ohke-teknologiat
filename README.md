@@ -171,7 +171,9 @@ Tehtävä GitHub classroomissa, DL ke 2.10. klo 22.
 
 <hr />
 
-<details><summary><strong>To 3.10. JS/TS edistyneet ominaisuudet</strong></summary>
+<!-- <details><summary> -->
+
+<strong>To 3.10. JS/TS edistyneet ominaisuudet</strong> <!-- </summary> -->
 
 [TypeScript-projektin luonnista](https://github.com/valju/JS_ES_Features/blob/master/TS_basics/TypeScript_usage_understood.pdf) ... Samasta materiaalista löytyy mm. seuraavat linkit
 
@@ -181,7 +183,7 @@ Tehtävä GitHub classroomissa, DL ke 2.10. klo 22.
 
 Tehtävä GitHub classroomissa, DL ke 9.10. klo 22.
 
-</details>
+<!-- </details> -->
 
 <details><summary><strong>To 10.10. JS/TS-koodin yksikkötestaus</strong></summary>
 
@@ -197,7 +199,7 @@ Tehtävä GitHub classroomissa, DL ke 23.10. klo 22.
 
 <br />
 
-<!-- >
+<!-- 
 <strong>Seuraavien aiheiden osalta aikataulu ja järjestys ovat suuntaa-antavia</strong>
 
 <strong>Ohjelmistoarkkitehtuureista</strong>
