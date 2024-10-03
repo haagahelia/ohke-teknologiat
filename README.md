@@ -177,7 +177,7 @@ Tehtävä GitHub classroomissa, DL ke 2.10. klo 22.
 
 [TypeScript-projektin luonnista](https://github.com/valju/JS_ES_Features/blob/master/TS_basics/TypeScript_usage_understood.pdf) ... Samasta materiaalista löytyy mm. seuraavat linkit
 
-[JavaScripti/ECMAScriptin ominaisuuksista (käytetään TypeScriptissä)](https://github.com/valju/JS_ES_Features/blob/master/ES_advanced/ES_advanced_or_tricky_features.md)
+[JavaScriptin/ECMAScriptin ominaisuuksista (käytetään TypeScriptissä)](https://github.com/valju/JS_ES_Features/blob/master/ES_advanced/ES_advanced_or_tricky_features.md)
 
 [TypeScriptin ominaisuuksia, joita käytettiin eräässä Softala-projektissa 2023-2024](https://github.com/valju/JS_ES_Features/blob/master/TS_basics/TS_in_a_fullstack_project.md)
 
