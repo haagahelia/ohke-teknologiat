@@ -1,14 +1,28 @@
-# Install the model backend - Siba and add few features to it
+# Learn and add few features to the model backend - Siba
+
+1. **Follow given models** - All coding can be done by reading old code, and doing similar code! You don't have to invent
+any new wheels. (Good way inboard a lot of new developers)
+1. Install the **Needed tools** (unless you already have everything installed)
+1. **Fork** the working Siba backend repo (= create your own detached copy of the repo)
+1. Make the Siba backend **run** (you'll need to add the given .env file)
+1. Install and make the **REST Client VS Code add-on** work and **test the backend** with it (you'll need to add a settings.json file)
+1. When all ready-made seems to work, add the described **database table** with **scripts also** for the **test data** etc.
+1. Add first **new route** to the backend routing and implement the code behind it. Basically easiest is always "GET all", e.g. GET /product/    = **L**  = List
+1. Add **first API test case** for that route and test it
+1. Add **more test cases**, failing ones and successful ones, still for that one new route.
+1. Add **second route**, e.g. GET one by id,  or:   GET /product/:id     = **R**   = Read
+1. Add **input data validators** and test them with your previous and now added new REST client test cases (ok and fail cases again!)
+1. (NEXT WEEK!  Add authentication and role-based method level authorization)
 
 ## Follow given models
 
-You are given a ready full-stack architecture, with Node.js backend written with TypeScript using MariaDB RDBMS. After setting all up you try to follow the model and implement few backend features, finally having the following benefits:
+You are given a ready full-stack architecture, with **Node.js & Express** backend written with **TypeScript** using MariaDB **RDBMS** with help of the **knex library**. After setting all up you try to follow the model and implement few backend features, finally having e.g. the following benefits:
 
 * include security in form of login request created JWT token that needs to be provided in future request
-    * token based authentication and authorization, 
-    * token expiration check
-    * role-based method-level authorization
-* include input parameter and data validation created in a modular manner
+    * **token-based authentication** and **authorization**, 
+    * **token expiration** check
+    * **role-based method-level authorization**
+* include input parameter and **data validation** created in a modular manner
 * use Knex library to generate SQL and run DB operations (programmed with TypeScript)
 
 Generic information about the case database and used technologies will be here: 
@@ -27,7 +41,8 @@ https://github.com/haagahelia/ohke-teknologiat/tree/master/05_es6_node/NodeJS_de
     - Teacher has not given a remote database to be used with SSH tunnel
 - DBeaver community edition. Zip downloaded and extracted to e.g. c:\users\Joe\dbeaver folder. This to see whether the tables and data created.
 
-## Create the workspace folder
+## Fork the Siba backend repo
+### Create the workspace folder
 
 1. Create the root root folder ('Workspace folder') 'Siba'. Somewhere that is not under any git repo folder (repo folders cannot be under other repo folders)
 
