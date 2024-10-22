@@ -215,9 +215,7 @@ Näistä molemmista aukeaa monivalintatehtävä/quiz torstaina. Sillä voi korva
 
 
 <details><summary><strong>To 24.10. Node.js backend -arkkitehtuuri</strong></summary>
-Tehtävä Teamsissä, DL ke 30.10. klo 22.
-
-<!-- Merkkaa keltaisella lisäykset/muutokset, tai kirjoita palautuksen alkuun lista parannuksista. -->
+Tehtävä tulee Teamsiin, DL ke 30.10. klo 22.
 
 <hr />
 </details>
@@ -237,6 +235,7 @@ Yksilöllistä ohjausta Teamsissa tai sopimuksen mukaan kampuksella. Kurssin sem
 
 <hr />
 </details>
+
 
 **Seminaariraportin palautus su 1.12. klo 22 mennessä.**
 
@@ -318,3 +317,5 @@ Ohjelmointiongelmiin löytyy usein valmiita tai osittaisia ratkaisuja ympäri In
 Tehtävien vastausten generointi tekoälyn avulla on kiellettyä. Et saa siis käyttää esim. ChatGPT:tä tai GitHub Copilot:ia ratkaistaksesi annetun tehtävän sellaisenaan. Saat kuitenkin hyödyntää näitä palveluita yksittäisten ongelmien ratkaisemiseksi.
 
 Yhteistyö on kurssilla kannustettavaa, mutta **yksilötehtävissä kaikkien tulee silti tuottaa omat ratkaisut**. Voitte koodata yhdessä ja tehdä toiminnallisesti samanlaisia ratkaisuja, mutta suora kopiointi ei ole sallittua. Merkitkää kaikkiin yhteistyössä tehtyihin tehtäviin niitä työstäneiden opiskelijoiden nimet esimerkiksi lähdekoodin kommentteina.
+
+<!-- Merkkaa keltaisella lisäykset/muutokset, tai kirjoita palautuksen alkuun lista parannuksista. -->
