@@ -133,6 +133,12 @@ Write down all info about root user and passwords, ports etc.
 
 So just calm down and think through and make sure you have all details correctly.
 
+## Testing whether the database + backend combo works
+
+There is one data fetching route that does not need login:   something like this, fix the details to match your port etc.  
+
+http://localhost:1111/api/subject               (GET route to list all subjects from DB via backend. Here replace 1111 with your backend port)
+
 ## Install DBeaver Community Edition to ( 1. create DB, 2. insert and ) 3. view the inserted or changed data in the tables
 
 (Skip if no time and database seems to work and give data)
@@ -232,18 +238,28 @@ New express-validator validation ideas could contain e.g.:
 
 ### EXTRA: (Totally extra, just if feel like finding out what the Frontend does currently) 
 
-#### Install the frontend  (Possible but not really needed for the task) Skip if no extra time!  )))
+## Install the frontend  (Possible but not really needed for the task) Skip if no extra time!  )))
 
+### a) Docker option
+
+Do pretty much same as with the dockerized backend
 1. Go to the workspace folder 'Siba'
-1. Clone there the frontend project repo: https://github.com/haagahelia/siba-fe
+1. Fork there the frontend project repo: https://github.com/haagahelia/siba-fe
+1. The .env file is not in repo, so create/copy that given file to frontend repo root
+1. and with logout/login you can use e.g. email: "admin", password: "admin" to log in.
+1. Run the correct docker-compose up with the correct docker-compose script file 
+
+### b) Manual option
+1. Go to the workspace folder 'Siba'
+1. Fork there the frontend project repo: https://github.com/haagahelia/siba-fe
 1. You will not get the node_modules, so you will need to move to that folder and: ```npm install```
-1. Also the .env file is not in repo, so create/copy that given file contents to frontend repo root
+1. Also the .env file is not in repo, so create/copy that given file to frontend repo root
 1. You can also run the: ```npm audit fix```   , if there would be any recent vulnerabilities.
 1. ```npm start``` would start the application 
 1. and with logout/login you can use e.g. email: "admin", password: "admin" to log in.
-1. 
 
-(using the running frontend)
+
+(using the running frontend, again check the correct ports etc. from .env files and so on)
 - http://localhost:8753/subject
 - if want to login: http://localhost:8753/login
 and admin   -   admin
