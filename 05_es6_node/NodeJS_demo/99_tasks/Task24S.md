@@ -1,12 +1,15 @@
 # Learn and add few features to the model backend - Siba
 
+## The steps as a list first. After the list more details of each
+
 1. **Follow given models** - All coding can be done by reading old code, and doing similar code! You don't have to invent
 any new wheels. (Good way inboard a lot of new developers)
+1. Think twice before adding new files. You only add new files at some steps. In other steps you just add lines to existing files.
 1. Install the **Needed tools** (unless you already have everything installed)
-1. **Fork** the working Siba backend repo (= create your own detached copy of the repo)
+1. **Fork** the working Siba backend repo (= create your own detached copy of the repo). Or copy the contents to a separate new repo without the .git folder.
 1. Make the Siba backend **run** (you'll need to add the given .env file)
-1. Install and make the **REST Client VS Code add-on** work and **test the backend** with it (you'll need to add a settings.json file)
-1. When all ready-made seems to work, add the described **database table** with **scripts also** for the **test data** etc.
+1. Install and make the **REST Client VS Code extension** work and **test the backend** with it (you'll need to add the given settings.json file)
+1. When all ready-made seems to work, add the instructed **database table** with **scripts also** for the **test data** etc.
 1. Add first **new route** to the backend routing and implement the code behind it. Basically easiest is always "GET all", e.g. GET /product/    = **L**  = List
 1. Add **first API test case** for that route and test it
 1. Add **more test cases**, failing ones and successful ones, still for that one new route.
@@ -23,9 +26,9 @@ You are given a ready full-stack architecture, with **Node.js & Express** backen
     * **token expiration** check
     * **role-based method-level authorization**
 * include input parameter and **data validation** created in a modular manner
-* use Knex library to generate SQL and run DB operations (programmed with TypeScript)
+* use the Knex library to **generate SQL and run DB operations based on your TypeScript code**
 
-Generic information about the case database and used technologies will be here: 
+Generic information about the used technologies, architecture etc. will be here: 
 
 https://github.com/haagahelia/ohke-teknologiat/tree/master/05_es6_node/NodeJS_demo
 
@@ -34,7 +37,7 @@ https://github.com/haagahelia/ohke-teknologiat/tree/master/05_es6_node/NodeJS_de
 - Docker
 - git
 - VS Code 
-    - with REST Client add-on
+    - with REST Client extension
 - Locally for development and running local version of Node most likely: Nodejs, TypeScript, Nodemon, ...
 - Possibly MariaDB RDBMS installed locally but only IF:
     - Dockerized version will not work
@@ -109,9 +112,9 @@ Currently the .env for local DB and dockerized DB might be exactly same? As long
 
 So just calm down and think through and make sure you have all details correctly.
 
-### Install DBeaver to ( 1. create DB, 2. insert and ) 3. read the data in the tables
+### Install DBeaver Community Edition to ( 1. create DB, 2. insert and ) 3. view the inserted or changed data in the tables
 
-Also for DBeaver it's possible to do the cold-file installation. Just download the community edition zip file and extract to some folder. And start the .exe application.
+Also for DBeaver it's possible to do the cold-file installation. Just download the **zip file** and extract to some folder. E.g. c/users/susanne/dbeaver. And start the .exe application.
 
 [More info about database connection set up and how to use DBeaver here, page 11 or so](https://github.com/haagahelia/ohke-teknologiat/blob/master/05_es6_node/NodeJS_demo/01_database/CreatingDatabase_for_IdeaCaseBackend.pdf)
 
@@ -121,7 +124,7 @@ Make sure to use the "Run (whole) SQL Script" command and not e.g. run (one) SQL
 
 ### Set up the VS Code REST client
 
-1. Add the 'REST Client' add-on to VS Code
+1. Add the 'REST Client' extension to VS Code
 1. Create a '.vscode' settings folder to the Siba root root folder. (In file explorer, or e.g. in console/shell/terminal: ```mkdir .vscode```)
     - But then open that Siba root root folder as project in VS Code, and not the Siba_be backend project folder (Which has that .vscode folder where the settings.json will later go).
     - there might be also inner .vscode folders.
