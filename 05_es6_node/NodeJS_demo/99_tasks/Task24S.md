@@ -206,52 +206,15 @@ See the Files tabs.
 
 That should give an idea how much code is needed per one new route.
 
-1. add a new file ```src/routes/logEvent.ts```
-1. add routing ```'/logEvent'``` to that file, in file ```src/routes/index.ts```
+1. add a new file ```src/routes/city.ts```
+1. add routing ```'/city'``` to that file, in file ```src/routes/index.ts```
 1. following the models in e.g. in Program related route and validation code...
-1. add the suggested/required new log_event routes ONE by ONE.
+1. add the suggested/required new routes from above ONE by ONE.
     1. add the endpoint and routing to it
-        1. the database operation development should be always started by doing something easy that works, and then making it more specific. E.g. first list everything, and only after that works put there WHERE conditions.
+        1. the database operation development should be always started by doing something easy that works, and then making it more specific. E.g. first list everything, and only after that tested and works put there the WHERE conditions.
     1. add the REST client test(s) for it
-    1. add validation components to validationHandler folder, new file ```logEvent.ts``` IF needed by that endpoint (e.g. mere 'GET all' does not need any input, just URL = no input validation)
+    1. add validation components to validationHandler folder, new file ```city.ts``` IF needed by that endpoint (e.g. mere 'GET all' does not need any input, just URL = no input validation)
     1. if added validation, test it again. Try to make it fail and show the logs!
-
-
-<!-- 
-# Old task about log tables
-
-You will be adding an API end-point for most/some of these features: 
-
-(first one is simple so that there your learn the end-point basics. Then
-features themselves get more non-trivial from validation and DB operation point of view)
-
-* What are the database logged events there are all in all? (Hope you won't confuse the logEvent concept with the logs file and e.g. app.log) Easy feature as it needs maybe login, but no input in the request for the query. Database: casedb, Table: log_event
-
-* What rows there are about room id ```1025```? (hard-coded in the request) 
-
-* What rows there are that are mentioning something you give in the request. = request should include, in body JSON data or URL :searchText parameter. If the ```LIKE %``` matches, those rows are returned.
-
-* What warnings there are that are from given date (given in POST JSON data or URL parameter)? Either use the date part of datetime and match it to given date OR use some time difference function
-
-**See the given PDF example about analyzing one Program route in Teams**
-
-See the Files tabs.
-
-That should give an idea how much code is needed per one new route.
-
-1. add a new file ```src/routes/logEvent.ts```
-1. add routing ```'/logEvent'``` to that file, in file ```src/routes/index.ts```
-1. following the models in e.g. in Program related route and validation code...
-1. add the suggested/required new log_event routes ONE by ONE.
-    1. add the endpoint and routing to it
-        1. the database operation development should be always started by doing something easy that works, and then making it more specific. E.g. first list everything, and only after that works put there WHERE conditions.
-    1. add the REST client test(s) for it
-    1. add validation components to validationHandler folder, new file ```logEvent.ts``` IF needed by that endpoint (e.g. mere 'GET all' does not need any input, just URL = no input validation)
-    1. if added validation, test it again. Try to make it fail and show the logs!
-
--->
-
-
 
 
 #### ---- EXPRESS VALIDATOR ----
@@ -289,3 +252,40 @@ in the dialog press "Pick Allocation"
 - http://localhost:8753/subject
 - then to Program results and press "Reset allocation",
 "Start allocation".
+
+
+
+
+<!-- 
+# Old task about log tables
+
+You will be adding an API end-point for most/some of these features: 
+
+(first one is simple so that there your learn the end-point basics. Then
+features themselves get more non-trivial from validation and DB operation point of view)
+
+* What are the database logged events there are all in all? (Hope you won't confuse the logEvent concept with the logs file and e.g. app.log) Easy feature as it needs maybe login, but no input in the request for the query. Database: casedb, Table: log_event
+
+* What rows there are about room id ```1025```? (hard-coded in the request) 
+
+* What rows there are that are mentioning something you give in the request. = request should include, in body JSON data or URL :searchText parameter. If the ```LIKE %``` matches, those rows are returned.
+
+* What warnings there are that are from given date (given in POST JSON data or URL parameter)? Either use the date part of datetime and match it to given date OR use some time difference function
+
+**See the given PDF example about analyzing one Program route in Teams**
+
+See the Files tabs.
+
+That should give an idea how much code is needed per one new route.
+
+1. add a new file ```src/routes/logEvent.ts```
+1. add routing ```'/logEvent'``` to that file, in file ```src/routes/index.ts```
+1. following the models in e.g. in Program related route and validation code...
+1. add the suggested/required new log_event routes ONE by ONE.
+    1. add the endpoint and routing to it
+        1. the database operation development should be always started by doing something easy that works, and then making it more specific. E.g. first list everything, and only after that works put there WHERE conditions.
+    1. add the REST client test(s) for it
+    1. add validation components to validationHandler folder, new file ```logEvent.ts``` IF needed by that endpoint (e.g. mere 'GET all' does not need any input, just URL = no input validation)
+    1. if added validation, test it again. Try to make it fail and show the logs!
+
+-->
