@@ -57,6 +57,10 @@ You can e.g. look at the architecture pic and write down what are e.g. backend, 
 
 1. Create the root root folder ('Workspace folder') 'Siba'. Somewhere that is not under any git repo folder (repo folders cannot be under other repo folders)
 
+**Note:** Running docker for database creation asks for "File sharing permission". That is for the docker to access the 000_createAllDb.sql that is needed for creating the database container.
+
+**Note2:** For someone running WSL the name property needed to be removed from the docker-compose file. It's the name for the project and not 100% necessary. Docker will use some other name for it then. Name cannot hava more than small letters and - and _
+
 ### Fork the backend - option a) Docker - preferred
 
 1. Go to the workspace folder 'Siba'
