@@ -6,8 +6,8 @@
 any new wheels. (Good way inboard a lot of new developers)
 1. Think twice before adding new files. You only add new files at some steps. In other steps you just add lines to existing files.
 1. Install the **Needed tools** (unless you already have everything installed)
-1. **Fork** the working Siba backend repo (= create your own detached copy of the repo). Or copy the contents to a separate new repo without the .git folder.
-1. Make the **database created and run** (you'll need to add the given .env file)
+1. **Fork** the working Siba backend repo (= create your own detached copy of the repo) (and then clone your own repo to laptop). Or copy the contents to a separate new repo without the .git folder.
+1. Make the **database** get **created and run** (you'll need to add the given .env file)
 1. Make the Siba **backend run** (needs that same .env file)
 1. Install and make the **REST Client VS Code extension** work and **test the backend** with it (you'll need to add the given settings.json file)
 1. When all ready-made seems to work, add the instructed **database table** with **scripts also** for the **test data** etc.
@@ -51,7 +51,8 @@ You can e.g. look at the architecture pic and write down what are e.g. backend, 
     - Teacher has not given a remote database to be used with SSH tunnel
 - DBeaver Community edition. Zip downloaded and extracted to e.g. c:\users\joe\dbeaver folder. This to see whether the tables and data created.
 
-## Fork the Siba backend repo
+## Fork the Siba backend repo and then clone your forked repo to laptop
+
 ### Create the workspace folder
 
 1. Create the root root folder ('Workspace folder') 'Siba'. Somewhere that is not under any git repo folder (repo folders cannot be under other repo folders)
@@ -62,6 +63,7 @@ You can e.g. look at the architecture pic and write down what are e.g. backend, 
 1. Fork/Copy there the backend project repo: https://github.com/haagahelia/Siba_be 
 1. The .env files are not in repo, so create/copy the given file to backend repo root.
     - Backend needs all other info than the MARIADB_ROOT_PASSWORD but having that does not harm other than security a bit
+1. You will not get the node_modules, so you will need to move to that folder and: ```npm install```
 1. Look at the docker compose files
 1. Run the command ```docker-compose -f <write here the correct file name> up```
 1. Test the backend by opening localhost:1111 where you replace 1111 with the real backend port. Should give a very very short error page telling "Cannot get /" or "Hello world" something like that. That means backend runs and routing works.
@@ -205,6 +207,10 @@ Hint: You can always start with minimal version, e.g start with just few propert
 * What rows there are that are mentioning something you give in the request. = request should include, in body JSON data or URL :searchText parameter. If the ```LIKE %``` matches, those rows are returned.
 
 * Which cities were established before the date you give in the request? (Date given in POST JSON data or URL parameter)?
+
+* How to add a new City to the system (to DB via Backend)
+
+* Extra: How to edit a City (existing in DB already)
 
 **See the given PDF example about analyzing one Program route in Teams**
 
