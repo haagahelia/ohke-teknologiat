@@ -47,23 +47,23 @@ Tutoriaalityön tapauksissa seminaarin raportissa ja videossa ei kannata keskitt
 
 * **Seminaarien käynnistys**
 
-    To 4.4.
+    To 7.11.
 
 * **Seminaariaiheen ilmoittaminen Teams-kanavalle**
 
-    DL to 11.4. klo 12 (keskipäivä)
+    DL to 14.11. klo 12 (keskipäivä)
 
 * **Yksilöllistä seminaarityön ohjausta Teamsissa**
 
-    Opettajat ovat tavoitettavissa Teamsissa kurssin tapaamisaikoina To 11.4., 18.4., 25.4. ja 2.5. Ota yhteyttä ja sovi esim. videotapaaminen!
+    Opettajat ovat tavoitettavissa Teamsissa kurssin tapaamisaikoina 14.11., 21.11. ja 28.11. Ota yhteyttä ja sovi esim. videotapaaminen!
 
 * **Seminaarin raporttien ja videoiden palauttaminen Teamsiin**
 
-    DL su 12.5. klo 22 mennessä.
+    DL su 1.12. klo 22 mennessä.
 
 * **Seminaariesitykset**
 
-    To 16.5.2024, klo 14-16
+    To 5.12. klo 14-16
 
 
 # Seminaariaiheita
