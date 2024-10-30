@@ -62,7 +62,7 @@ Tehtävät (DL ke 28.8. klo 22:00):
 </details>
 
 
-<!--details><summary--><strong>To 29.8. DevOps: Johdatus konttiteknologiaan, containers, images</strong> 
+<!--details><summary--><strong>To 29.8. DevOps: Johdatus konttiteknologiaan, containers, images</strong>
 <!-- /summary -->
 
 Keskustellaan yhdessä termien ja kuvien avulla käsitteistä, jotta itse docker-opiskelun suorittaminen sujuu jouhevammin:
@@ -109,7 +109,7 @@ Tehtävä *DevOps with Docker part 1b* löytyy Teamsista ja GitHub classroomista
 <!--/details-->
 
 
-<!--details><summary--><strong>To 12.9. DevOps: Johdatus Docker Compose:n käyttöön</strong><!-- /summary --> 
+<!--details><summary--><strong>To 12.9. DevOps: Johdatus Docker Compose:n käyttöön</strong><!-- /summary -->
 
 Tuetun työskentelyn vaiheet 3: [Part 2](https://devopswithdocker.com/part-2/)
 
@@ -199,7 +199,7 @@ Tehtävä GitHub classroomissa, DL ke 23.10. klo 22.
 
 <br />
 
-<!-- 
+<!--
 <strong>Seuraavien aiheiden osalta aikataulu ja järjestys ovat suuntaa-antavia</strong>
 
 <strong>Ohjelmistoarkkitehtuureista</strong>
@@ -220,14 +220,22 @@ Tehtävä tulee Teamsiin, DL ke 30.10. klo 22.
 <hr />
 </details>
 
-<details><summary><strong>To 31.10. Seminaarien käynnistys</strong></summary>
+<details><summary><strong>To 31.10. Microsoft AI Summit Finland</strong></summary>
+
+Suosittelemme osallistumaan itsenäisesti [Microsoft AI Summit Finland](https://info.microsoft.com/WE-COPM365-CNTNT-FY25-08Aug-26-Microsoft-Copilot-Tour-SREVM45717_Catalog-Display-Page.html)-etätapahtumaan.
+
+<hr />
+</details>
+
+<details><summary><strong>To 7.11. Seminaarien käynnistys</strong></summary>
 
 [Seminaarityön ohjeistus](./08_seminaari)
 
 <hr />
 </details>
 
-<details><summary><strong>To 7.11., 14.11., 21.11., 28.11. Seminaarityön tekemistä</strong></summary>
+
+<details><summary><strong>To 14.11., 21.11., 28.11. Seminaarityön tekemistä</strong></summary>
 
 [Seminaarityön ohjeistus](./08_seminaari)
 
@@ -250,7 +258,7 @@ Yksilöllistä ohjausta Teamsissa tai sopimuksen mukaan kampuksella. Kurssin sem
 <hr />
 
 
-<details><summary><strong>(To 12.12. Loput Seminaariesitykset tai joku kokoava esitys kurssista)</strong></summary>
+<details><summary><strong>(To 12.12. Loput Seminaariesitykset tai mahdollinen kokoava esitys kurssista)</strong></summary>
 </details>
 
 <hr />
