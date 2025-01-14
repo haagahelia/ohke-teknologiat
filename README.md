@@ -15,7 +15,9 @@ Opettajina kurssilla toimivat Teemu Havulinna ja Juhani Välimäki (etunimi.suku
 
 ## Kurssin suoritustapa
 
-Kurssin alkupuoliskolla käsitellään lukukausittain vaihtelevia aiheita ja opiskelijat tekevät niihin liittyviä harjoitustehtäviä. Jokaisesta esiteltävästä aiheesta on myös mahdollista tehdä laajempi seminaaritehtävä kurssin jälkimmäisellä puoliskolla.
+Kurssista on käynnissä sekä contact- että virtual-toteutukset. Kummallakin toteutuksella on samat käytännön järjestelyt tehtävineen ja aikatauluineen. Molempien toteutusten opiskelijat voivat valita osallistuvatko tunneille läsnä, etänä vai opiskelevatko omaan tahtiin.
+
+**Kurssin alkupuoliskolla** käsitellään lukukausittain vaihtelevia aiheita ja opiskelijat tekevät niihin liittyviä harjoitustehtäviä. Jokaisesta esiteltävästä aiheesta on myös mahdollista tehdä laajempi seminaaritehtävä kurssin jälkimmäisellä puoliskolla.
 
 **Seminaarivaiheessa**, kurssin jälkimmäisellä puoliskolla, jokainen opiskelija valitsee kurssin aiheista itseään eniten kiinnostavan ja tekee siihen liittyvän seminaaritehtävän. Seminaaritehtävän voi valita joko opettajien ehdotuksista tai seminaaritehtävän aihetta voi ehdottaa myös itse. Seminaaritehtävä voi liittyvä läheisesti opiskelijan ohjelmistoprojekti 2 -kurssin projektiin.
 
@@ -35,17 +37,19 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
 > *https://mynet.haaga-helia.fi/group/pakki/toteutukselle-ilmoittautuminen*
 
 
-## Opintojakson oppitunnit ja päivämäärät
+## Opintojakson oppitunnit
 
 **Huom!** Tämä sivu päivittyy kurssin edetessä ja sekä aikataulu että sisältö tarkentuvat.
 
-Oppitunnit pidetään pääsääntöisesti **torstaisin klo 14-16.45**. Jos muuta ei ilmoiteta erikseen, kurssin Teams-kanavan viesteissä ja lukujärjestyksessä meillä on viikottainen **hybriditapaaminen luokassa ja Teamsissa**.
+Oppitunnit pidetään pääsääntöisesti **hybridimuodossa torstaisin klo 14-16.45** sekä luokassa että Teamsissa.
+
+
+## Aikataulu
 
 Toivomme että tutustutte mahdollisuuksien mukaan etukäteen kunkin aiheen videoihin ja materiaaleihin, jotta voimme tapaamisissa käyttää aikaa myös mm. tehtävien parissa.
 
-<hr />
 
-<details><summary><strong>To 22.8. <a href="00_linux/">Kurssin johdanto, ympäristöt ja Linux/Unix-komentorivi</a></strong></summary>
+<strong>To 16.1. <a href="00_linux/">Kurssin johdanto, ympäristöt ja Linux/Unix-komentorivi</a></strong>
 
 Videot:
 
@@ -53,17 +57,15 @@ Videot:
 * [📼 GitHub classroom -tehtävien ohjeistus](https://youtu.be/9dA17XlzT-w)
 * [📼 Kurssin koodausympäristöt (wsl2, Docker, Development containers, Codespace)](https://youtu.be/aC3xj4KXu3g)
 
-Tehtävät (DL ke 28.8. klo 22:00):
+Tehtävät (DL ke 22.1. klo 22:00):
 
 * [📥 Kurssin kehitysympäristön asennus](00_linux/asennukset.md)
 * 📥 Linux-komentorivi (Teams ja GitHub classroom)
 
 <hr />
-</details>
 
 
-<!--details><summary--><strong>To 29.8. DevOps: Johdatus konttiteknologiaan, containers, images</strong>
-<!-- /summary -->
+<details><summary><strong>To 23.1. DevOps: Johdatus konttiteknologiaan, containers, images</strong></summary>
 
 Keskustellaan yhdessä termien ja kuvien avulla käsitteistä, jotta itse docker-opiskelun suorittaminen sujuu jouhevammin:
 Tiimin [DevOpsin tavoitetila periaatekuvana](01_docker/DockerCaseExample.pdf) ja [Dockerin keskeisiä käsitteitä](01_docker/DockerConceptsAndVocabulary.pdf) sanoiksi puettuina ja kuvina.
@@ -83,16 +85,16 @@ Käytämme Eficoden ja Helsingin yliopiston yhteistyönä syntynyttä [DevOps wi
 
 [Example of learning notes for the part 1a](01_docker/DevOpsWithDocker_1a/DevOpsWithDocker_Part1a_learning_notes.md)
 
-Tehtävä *DevOps with Docker part 1a* löytyy Teamsista ja GitHub classroomista. DL ke 4.9. klo 22:00.
+Tehtävä *DevOps with Docker part 1a* löytyy Teamsista ja GitHub classroomista. DL ke 29.1. klo 22:00.
 
+
+</details>
 
 <hr />
-<!--/details-->
 
-<!--details><summary--><strong>To 5.9. DevOps: Docker "volumet" ja portit</strong>
-<!-- /summary -->
+<details><summary><strong>To 30.1. DevOps: Docker "volumet" ja portit</strong></summary>
 
-Tuetun työskentelyn vaiheet 2:
+Dockerin käsittely jatkuu:
 
 4. [Defining start conditions for the container](https://devopswithdocker.com/part-1/section-4)
 5. [Interacting with the container via volumes and ports](https://devopswithdocker.com/part-1/section-5), Tehtävät 1.9-1.10
@@ -103,15 +105,15 @@ Tuetun työskentelyn vaiheet 2:
 &nbsp; &nbsp;[Docker Volumes](01_docker/DevOpsWithDocker_1b/DockerVolumes/)<br />
 &nbsp; &nbsp;[Docker Ports](01_docker/DevOpsWithDocker_1b/DockerPorts/)<br />
 
-Tehtävä *DevOps with Docker part 1b* löytyy Teamsista ja GitHub classroomista. DL ke 11.9. klo 22:00.
+Tehtävä *DevOps with Docker part 1b* löytyy Teamsista ja GitHub classroomista. DL ke 5.2. klo 22:00.
+
+</details>
 
 <hr />
-<!--/details-->
 
+<details><summary><strong>To 6.2. DevOps: Johdatus Docker Compose:n käyttöön</strong></summary>
 
-<!--details><summary--><strong>To 12.9. DevOps: Johdatus Docker Compose:n käyttöön</strong><!-- /summary -->
-
-Tuetun työskentelyn vaiheet 3: [Part 2](https://devopswithdocker.com/part-2/)
+Dockerin käsittely jatkuu: [DevOps with Docker part 2](https://devopswithdocker.com/part-2/)
 
 1. [Migrating to Docker Compose](https://devopswithdocker.com/part-2/section-1), Tehtävät 2.1-2.3
 2. [Docker networking](https://devopswithdocker.com/part-2/section-2), Tehtävät 2.4-2.5
@@ -121,7 +123,7 @@ Tästä lähtien jää lisämateriaaliksi:
 3. ( [Volumes in action](https://devopswithdocker.com/part-2/section-3) )
 4. ( [Containers in development](https://devopswithdocker.com/part-2/section-4) )
 
-Tehtävävaihtoehdot: 1. DevOpsWithDocker -tehtävät 2a   TAI    2. Docker-monivalinta   (Molemmat ovat Teamsissä)
+<!--Tehtävävaihtoehdot: 1. DevOpsWithDocker -tehtävät 2a   TAI    2. Docker-monivalinta   (Molemmat ovat Teamsissä)
 
 (Toki voi tehdä molemmat jos haluaa tehdä bonustehtävänä)
 
@@ -130,16 +132,18 @@ Monivalintatehtäviä dockerista (tasolle docker-composen pelkät perusteet ja e
 Monivalintatehtävät perustuvat siis näissä tai alussa linkattujen materiaalien keskeisiin asioihin. Sellaisiin, joiden ymmärtäminen / osaaminen on auttanut kontituksessa. Joku yksityiskohtakin voidaan kysyä sieltä täältä. Mutta täyteen 5p ei vaadita täysiä monivalintapisteitä.
 
 Docker-monivalintatehtäviä varten tutustu DevOps with Docker -kurssin osiin 1 ja 2 sekä jatka näistä [materiaaleista](01_docker/DockerMonivalintatehtavanLahteet.md)
+-->
+
+<-/details>
+
 <hr />
-<!--/details-->
 
+<!--
 
-
-<strong>To 19.9. Kubernetes-vierailijaluento</strong>
+<strong> Kubernetes-vierailijaluento</strong>
 
 Saamme kampukselle vierailijan SUSE:lta [(https://www.suse.com/)](https://www.suse.com/) kertomaan Kubernetesistä [(https://kubernetes.io/)](https://kubernetes.io/).
 
-<!--
 a. Full-stack -sovelluksen dockerointi/kontitus [Täältä sovelluksen lähtötiedot ja kaikkia komentoja, joita tarvittiin manuaalisessa asentamisessa](01_docker/fullstack_dockerized_task/Manual_Installation_commands.md)
 
 TAI
@@ -152,28 +156,20 @@ Docker-monivalintatehtävien [materiaalit](01_docker/DockerMonivalintatehtavanLa
 -->
 
 
-
-
-<!-- <strong><del>To 22.2. intensiiviviikko</del></strong> -->
-
-<details><summary><strong>To 26.9. TypeScript-kielen perusteet ja työkalut</strong></summary>
-
-Vierailuluento peliohjelmoinnista.
+<details><summary><strong>To 13.2. TypeScript-kielen perusteet ja työkalut</strong></summary>
 
 [Oppitunnin muistiinpanot](./01_typescript)
 
 Lisämateriaalina suosittelemme perehtymään lukuun "TypeScriptin perusteet" [typescript-ohjelmointi.github.io](https://typescript-ohjelmointi.github.io/)-sivustolla.
 
-Tehtävä GitHub classroomissa, DL ke 2.10. klo 22.
+Tehtävä GitHub classroomissa, DL ke 26.2. klo 22.
 
 </details>
 
 
 <hr />
 
-<!-- <details><summary> -->
-
-<strong>To 3.10. JS/TS edistyneet ominaisuudet</strong> <!-- </summary> -->
+<details><summary><strong>To 27.2. JS/TS edistyneet ominaisuudet</strong></summary>
 
 [TypeScript-projektin luonnista](https://github.com/valju/JS_ES_Features/blob/master/TS_basics/TypeScript_usage_understood.pdf) ... Samasta materiaalista löytyy mm. seuraavat linkit
 
@@ -181,23 +177,18 @@ Tehtävä GitHub classroomissa, DL ke 2.10. klo 22.
 
 [TypeScriptin ominaisuuksia, joita käytettiin eräässä Softala-projektissa 2023-2024](https://github.com/valju/JS_ES_Features/blob/master/TS_basics/TS_in_a_fullstack_project.md)
 
-Tehtävä GitHub classroomissa, DL ke 9.10. klo 22.
+Tehtävä GitHub classroomissa, DL ke 5.3. klo 22.
+</details>
 
-<!-- </details> -->
 
-<details><summary><strong>To 10.10. JS/TS-koodin yksikkötestaus</strong></summary>
+<details><summary><strong>To 6.3. Testaus</strong></summary>
 
 [Oppitunnin muistiinpanot](./02_testaus/typescript.md).
 
-Tehtävä GitHub classroomissa, DL ke 23.10. klo 22.
-
-<hr />
+Tehtävä GitHub classroomissa, DL ke 12.3. klo 22.
 </details>
 
-<br />
-<strong><del>To 17.10. intensiiviviikko</del></strong>
-
-<br />
+<hr />
 
 <!--
 <strong>Seuraavien aiheiden osalta aikataulu ja järjestys ovat suuntaa-antavia</strong>
@@ -214,42 +205,40 @@ Näistä molemmista aukeaa monivalintatehtävä/quiz torstaina. Sillä voi korva
 
 
 
-<details><summary><strong>To 24.10. Node.js backend -arkkitehtuuri</strong></summary>
-Tehtävä tulee Teamsiin, DL ke 30.10. klo 22.
+<details><summary><strong>To 13.3. Node.js backend -arkkitehtuuri</strong></summary>
 
-<hr />
+Tehtävä tulee Teamsiin, DL ke 26.3. klo 22.
 </details>
 
-<details><summary><strong>To 31.10. Microsoft AI Summit Finland</strong></summary>
+<hr />
 
-Suosittelemme osallistumaan itsenäisesti [Microsoft AI Summit Finland](https://info.microsoft.com/WE-COPM365-CNTNT-FY25-08Aug-26-Microsoft-Copilot-Tour-SREVM45717_Catalog-Display-Page.html)-etätapahtumaan.
+<strong><del>To 20.3. intensiiviviikko</del></strong>
 
 <hr />
-</details>
 
-<details><summary><strong>To 7.11. Seminaarien käynnistys</strong></summary>
+<details><summary><strong>To 27.3. Seminaarien käynnistys</strong></summary>
 
 [Seminaarityön ohjeistus](./08_seminaari)
 
-<hr />
 </details>
 
+<hr />
 
-<details><summary><strong>To 14.11., 21.11., 28.11. Seminaarityön tekemistä</strong></summary>
+<details><summary><strong>To 3., 10., 17. ja 24.4. Seminaarityön tekemistä</strong></summary>
 
 [Seminaarityön ohjeistus](./08_seminaari)
 
 Yksilöllistä ohjausta Teamsissa tai sopimuksen mukaan kampuksella. Kurssin seminaarivaiheessa ei järjestetä yhteisiä tapaamisia, vaan tarjoamme yksilöllistä ohjausta etukäteen sovittavina ajankohtina.
-
-<hr />
 </details>
 
+<hr />
 
-**Seminaariraportin palautus su 1.12. klo 22 mennessä.**
+
+**Seminaariraportin palautus su 4.5. klo 22 mennessä.**
 
 <!-- <strong><del>To 9.5. Helatorstai</del></strong> -->
 
-<details><summary><strong>To 5.12. Seminaariesitykset</strong></summary>
+<details><summary><strong>To 8.5. Seminaariesitykset</strong></summary>
 
 [Katso seminaarityön ohjeet](./08_seminaari).
 
@@ -258,10 +247,9 @@ Yksilöllistä ohjausta Teamsissa tai sopimuksen mukaan kampuksella. Kurssin sem
 <hr />
 
 
-<details><summary><strong>(To 12.12. Loput Seminaariesitykset tai mahdollinen kokoava esitys kurssista)</strong></summary>
+<details><summary><em>To 15.5. Loput Seminaariesitykset tai mahdollinen kokoava esitys kurssista</em></summary>
 </details>
 
-<hr />
 
 ## Viestintäkanavat
 
@@ -280,9 +268,9 @@ Liittymisohje kurssin Teams-ryhmään löytyy sähköpostitse lähetetystä tied
 
 Kurssilla käytetään lukuisia eri teknologioita ja työkaluja, joten joudut mahdollisesti tekemään tietokoneellesi lukuisia erilaisia asennuksia.
 
-Ohjelmistojen asentaminen ja käyttäminen eri käyttöjärjestelmillä poikkeaa toisistaan merkittävästi, minkä lisäksi saman ohjelmiston eri versiot toimivat joskus hyvin eri tavoilla. Asennus- ja yhteensopivuusongelmien minimoimiseksi kurssilla suositellaan vahvasti oman erillisen [Linux-virtuaalikoneen](https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox#1-overview), [WSL2-ympäristön](https://learn.microsoft.com/en-us/windows/wsl/install), [Docker-konttien](https://docs.docker.com/language/nodejs/develop/) tai [GitHub codespacen](https://github.com/features/codespaces) käyttöä kurssin tehtäviä tehdessäsi.
+Ohjelmistojen asentaminen ja käyttäminen eri käyttöjärjestelmillä poikkeaa toisistaan merkittävästi, minkä lisäksi saman ohjelmiston eri versiot toimivat joskus hyvin eri tavoilla. Asennus- ja yhteensopivuusongelmien minimoimiseksi kurssilla suositellaan vahvasti esimerkiksi [WSL2-ympäristön](https://learn.microsoft.com/en-us/windows/wsl/install), [Docker-konttien](https://docs.docker.com/language/nodejs/develop/), [GitHub codespacen](https://github.com/features/codespaces) tai oman erillisen [Linux-virtuaalikoneen](https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox#1-overview) käyttöä kurssin tehtäviä tehdessäsi.
 
-Virtualisoituun ympäristöön tekemäsi asennukset eivät vaikuta tietokoneesi normaaliin käyttöön. Käyttämällä kurssin suositusten mukaisia ympäristöjä saat myös todennäköisemmin vertaistukea muilta opiskelijoilta ja opettajilta.
+Virtualisoituun ympäristöön tekemäsi asennukset eivät parhaassa tapauksessa vaikuta tietokoneesi normaaliin käyttöön. Käyttämällä kurssin suositusten mukaisia ympäristöjä saat myös todennäköisemmin vertaistukea muilta opiskelijoilta ja opettajilta.
 
 Mikäli sinulla on valmiiksi käytössäsi Linux tai muu Unix-pohjainen käyttöjärjestelmä, kuten macOS, voit käyttää sitä kurssilla. Myös etäyhteydellä käytettävät Linux-ympäristöt, kuten [DigitalOcean](https://www.digitalocean.com/github-students/), [AWS](https://aws.amazon.com/ec2/) tai [Azure](https://azure.microsoft.com/en-us/services/virtual-machines/) voivat sopia kurssin tarkoituksiin, mutta niihin pystymme tarjoamaan vain vähäistä käyttötukea.
 
@@ -295,7 +283,9 @@ Lisää ohjeita löydät kurssin [ensimmäisen viikon materiaalista](00_linux).
 
 ## Kurssin tehtävät
 
-Kurssilla tehdään viikoittaisia tehtäviä, joiden arvioinnissa hyödynnetään mm. [GitHub classroom -palvelua](https://classroom.github.com/) sekä MS Teamsia. Sekä kurssin Classroom-tehtäväpalautukset että MS Teams -ryhmä poistetaan vaaditun säilytysajan päätyttyä. Jos haluat säilyttää kurssilla työstämäsi tehtävien ratkaisut pidempään, [teethän repositorioistasi kopiot omalle käyttäjätunnuksellesi GitHubissa](https://www.google.com/search?q=git+clone+and+push+to+new+repo). Vaihtoehtoisesti voit säilyttää tehtäviesi ratkaisut paikallisesti omilla laitteillasi.
+Kurssilla tehdään viikoittaisia tehtäviä, joiden arvioinnissa hyödynnetään mm. [GitHub classroom -palvelua](https://classroom.github.com/) sekä MS Teamsia.
+
+Sekä kurssin Classroom-tehtäväpalautukset että MS Teams -ryhmä poistetaan vaaditun säilytysajan päätyttyä. Jos haluat säilyttää kurssilla työstämäsi tehtävien ratkaisut pidempään, [teethän repositorioistasi kopiot omalle käyttäjätunnuksellesi GitHubissa](https://www.google.com/search?q=git+clone+and+push+to+new+repo). Vaihtoehtoisesti voit säilyttää tehtäviesi ratkaisut paikallisesti omilla laitteillasi.
 
 
 ## Arviointi
@@ -304,7 +294,7 @@ Kurssi arvioidaan asteikolla 0-5. Kurssin arviointi perustuu viikkoaiheiden yhte
 
 Kunkin tehtävän tai tehtäväkokonaisuuden painoarvo loppuarvioinnissa määräytyy sen laajuuden mukaan suhteessa muihin tehtäviin ja tehtäväkokonaisuuksiin. Pisteet skaalataan yhteneviksi vasta loppuarvosanaa varten.
 
-Yksittäinen palauttamatta jäänyt tai arvosanalla 0 arvioitu osasuoritus ei estä seuraavien suoritusten tekemistä, kunhan kokonaisuutena kurssista muodostuu hyväksytty arvosana. Tämä koskee myös seminaarityötä. Poikkeuksena tähän on kahden ensimmäisen viikon tehtävät, jotka toimivat kurssille osallistumisen vahvistamisessa.
+Yksittäinen palauttamatta jäänyt tai arvosanalla 0 arvioitu osasuoritus ei estä seuraavien suoritusten tekemistä, kunhan kokonaisuutena kurssista muodostuu hyväksytty arvosana. Tämä koskee myös seminaarityötä. **Poikkeuksena** tähän on kahden ensimmäisen viikon tehtävät, jotka toimivat kurssille osallistumisen vahvistamisessa.
 
 
 ### Kurssin keskeyttäminen
@@ -325,5 +315,3 @@ Ohjelmointiongelmiin löytyy usein valmiita tai osittaisia ratkaisuja ympäri In
 Tehtävien vastausten generointi tekoälyn avulla on kiellettyä. Et saa siis käyttää esim. ChatGPT:tä tai GitHub Copilot:ia ratkaistaksesi annetun tehtävän sellaisenaan. Saat kuitenkin hyödyntää näitä palveluita yksittäisten ongelmien ratkaisemiseksi.
 
 Yhteistyö on kurssilla kannustettavaa, mutta **yksilötehtävissä kaikkien tulee silti tuottaa omat ratkaisut**. Voitte koodata yhdessä ja tehdä toiminnallisesti samanlaisia ratkaisuja, mutta suora kopiointi ei ole sallittua. Merkitkää kaikkiin yhteistyössä tehtyihin tehtäviin niitä työstäneiden opiskelijoiden nimet esimerkiksi lähdekoodin kommentteina.
-
-<!-- Merkkaa keltaisella lisäykset/muutokset, tai kirjoita palautuksen alkuun lista parannuksista. -->
