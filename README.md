@@ -134,7 +134,7 @@ Monivalintatehtävät perustuvat siis näissä tai alussa linkattujen materiaali
 Docker-monivalintatehtäviä varten tutustu DevOps with Docker -kurssin osiin 1 ja 2 sekä jatka näistä [materiaaleista](01_docker/DockerMonivalintatehtavanLahteet.md)
 -->
 
-<-/details>
+</details>
 
 <hr />
 
