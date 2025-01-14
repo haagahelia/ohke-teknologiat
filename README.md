@@ -123,6 +123,9 @@ Tästä lähtien jää lisämateriaaliksi:
 3. ( [Volumes in action](https://devopswithdocker.com/part-2/section-3) )
 4. ( [Containers in development](https://devopswithdocker.com/part-2/section-4) )
 
+
+Tehtävän DL ke 12.2. klo 22:00.
+
 <!--Tehtävävaihtoehdot: 1. DevOpsWithDocker -tehtävät 2a   TAI    2. Docker-monivalinta   (Molemmat ovat Teamsissä)
 
 (Toki voi tehdä molemmat jos haluaa tehdä bonustehtävänä)
@@ -166,6 +169,7 @@ Tehtävä GitHub classroomissa, DL ke 26.2. klo 22.
 
 </details>
 
+<strong><del>To 20.2. talvilomaviikko</del></strong>
 
 <hr />
 
@@ -180,6 +184,7 @@ Tehtävä GitHub classroomissa, DL ke 26.2. klo 22.
 Tehtävä GitHub classroomissa, DL ke 5.3. klo 22.
 </details>
 
+<hr />
 
 <details><summary><strong>To 6.3. Testaus</strong></summary>
 
@@ -234,7 +239,7 @@ Yksilöllistä ohjausta Teamsissa tai sopimuksen mukaan kampuksella. Kurssin sem
 <hr />
 
 
-**Seminaariraportin palautus su 4.5. klo 22 mennessä.**
+**📥 Seminaariraportin palautus su 4.5. klo 22 mennessä.**
 
 <!-- <strong><del>To 9.5. Helatorstai</del></strong> -->
 
