@@ -20,17 +20,14 @@ Multiple Steps! Start early and reserve at least three sessions!
 - Learning takes time and maybe you need to ask for help,
 - Then doing task and related troubleshooting and asking help takes time!
 
-=> Don't rush => don't panic either. 
-=> Understandable, but complicated new concepts and terms! 
-=> Trust your slow and steady research work!
+* => Don't rush
+* => Don't panic either. 
+* => Understandable, but complicated new concepts and terms! 
+* => Trust your slow and steady research work!
 
-Write your own notes at all times. In docker you do only very
-little new lines of scripts, but to know and understand the concepts
-and definitions is the key!
-
-TODO
-====
-Course forums! (HYY)  ???
+Write your own notes at all times. In docker usage you do only very
+few new lines of scripts, but the key is to know and to understand the concepts
+and meanings!
 
 Parts 1a and 1b combined
 ========================
@@ -52,7 +49,7 @@ Container
 
 "Package of software" 
 
-[often: Running Linux os + the libs/bin app needs (often parts of that Linux release) + the needed application starting in a way someone defined it ]
+[often: Running Linux os + the libs/bin app needs (often parts of that Linux release) + the needed application starting in a way someone defined it, with your possible changes or configurations ]
 
 "App and all its dependencies packed together"
 
