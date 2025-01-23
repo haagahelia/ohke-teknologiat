@@ -48,8 +48,8 @@ Oppitunnit pidetään pääsääntöisesti **hybridimuodossa torstaisin klo 14-1
 
 Toivomme että tutustutte mahdollisuuksien mukaan etukäteen kunkin aiheen videoihin ja materiaaleihin, jotta voimme tapaamisissa käyttää aikaa myös mm. tehtävien parissa.
 
-
-<strong>To 16.1. <a href="00_linux/">Kurssin johdanto, ympäristöt ja Linux/Unix-komentorivi</a></strong>
+<details>
+<summary><strong>To 16.1. <a href="00_linux/">Kurssin johdanto, ympäristöt ja Linux/Unix-komentorivi</a></strong></summary>
 
 Videot:
 
@@ -61,11 +61,12 @@ Tehtävät (DL ke 22.1. klo 22:00):
 
 * [📥 Kurssin kehitysympäristön asennus](00_linux/asennukset.md)
 * 📥 Linux-komentorivi (Teams ja GitHub classroom)
+</details>
 
 <hr />
 
 
-<details><summary><strong>To 23.1. DevOps: Johdatus konttiteknologiaan, containers, images</strong></summary>
+<strong>To 23.1. DevOps: Johdatus konttiteknologiaan, containers, images</strong>
 
 Keskustellaan yhdessä termien ja kuvien avulla käsitteistä, jotta itse docker-opiskelun suorittaminen sujuu jouhevammin:
 Tiimin [DevOpsin tavoitetila periaatekuvana](01_docker/DockerCaseExample.pdf) ja [Dockerin keskeisiä käsitteitä](01_docker/DockerConceptsAndVocabulary.pdf) sanoiksi puettuina ja kuvina.
@@ -87,8 +88,6 @@ Käytämme Eficoden ja Helsingin yliopiston yhteistyönä syntynyttä [DevOps wi
 
 Tehtävä *DevOps with Docker part 1a* löytyy Teamsista ja GitHub classroomista. DL ke 29.1. klo 22:00.
 
-
-</details>
 
 <hr />
 
