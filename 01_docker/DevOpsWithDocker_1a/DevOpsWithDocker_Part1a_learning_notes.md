@@ -29,14 +29,12 @@ Write your own notes at all times. In docker usage you do only very
 few new lines of scripts, but the key is to know and to understand the concepts
 and meanings!
 
-Parts 1a and 1b combined
-========================
+Part 1a
+=======
 
-- Run containerized applications 1a
-- Containerize applications 1a, 1b,
-- Utilize volumes 1b
-- Use port mapping 1b
-- Share your own docker images publicly 1b
+- Create images (```docker build ... ```, Dockerfile)
+- Run containerized applications (```docker run ... ```)
+- Containerize applications 
 
 ## https://devopswithdocker.com/part-1/section-1
 

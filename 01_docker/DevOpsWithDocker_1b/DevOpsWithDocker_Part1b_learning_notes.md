@@ -4,6 +4,14 @@
 but those are just for reading. No need to install any of the tools locally, finally all leads 
 to dockerized version of the installation = docker should be only thing you install.
 
+Part 1b
+=======
+
+- Containerize applications (continues)
+- Utilize Volumes
+- Use Port mappings
+- Share your own docker images publicly (Docker Hub)
+
 https://devopswithdocker.com/part-1/section-4/
 ==============================================
  
