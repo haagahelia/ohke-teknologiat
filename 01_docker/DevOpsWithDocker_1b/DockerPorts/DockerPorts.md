@@ -16,6 +16,7 @@ https://docs.docker.com/reference/dockerfile/#expose
 (Dockerfile can only EXPOSE, not publish/map ports, as it's about building one image, not orchestration of many containers)
 
 https://docs.docker.com/reference/compose-file/services/
+
 https://docs.docker.com/reference/compose-file/services/#ports
 (Docker Compose then is about inter-container orchestration, here publishing ports possible)
 

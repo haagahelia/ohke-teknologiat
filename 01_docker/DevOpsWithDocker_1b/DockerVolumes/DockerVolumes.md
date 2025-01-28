@@ -8,15 +8,15 @@ All of them persist the data directory
 
 1. **Host Volume**: host computer directory mapped to container directory
 
-```/my_laptop/some_folder/:/home/node/app```
+```/my_laptop/some_folder/:/home/node/container_folder```
 
 2. **Anonymous Volume**: only container directory referenced
 
-```/home/node/app```
+```/home/node/container_folder```
 
 3. **Named Volume**: like anonymous, but given name allows for sharing the volume between containers. RECOMMENDED WAY
 
-```my_volume:/home/node/app```        
+```my_volume:/home/node/container_folder```        
 
 ---
 
