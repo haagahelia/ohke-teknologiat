@@ -1,6 +1,7 @@
 # Some useful Docker status and information commands
 
-Learn these! And please suggest more! Good to test what all of these do:
+Learn these! Good to test what all of these do.
+And please suggest more!
 
 ```
 docker --version
