@@ -10,6 +10,8 @@
 
 https://docs.docker.com/get-started/docker-concepts/running-containers/publishing-ports/
 
+https://docs.docker.com/reference/cli/docker/container/run/#publish
+
 https://docs.docker.com/reference/cli/docker/container/port/
 
 https://docs.docker.com/reference/dockerfile 
