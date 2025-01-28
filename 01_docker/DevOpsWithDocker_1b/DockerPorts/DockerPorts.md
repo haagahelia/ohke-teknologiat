@@ -12,6 +12,8 @@ https://docs.docker.com/get-started/docker-concepts/running-containers/publishin
 
 https://docs.docker.com/reference/cli/docker/container/port/
 
+https://docs.docker.com/reference/dockerfile 
+
 https://docs.docker.com/reference/dockerfile/#expose    
 (Dockerfile can only EXPOSE, not publish/map ports, as it's about building one image, not orchestration of many containers)
 
