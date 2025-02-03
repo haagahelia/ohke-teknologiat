@@ -110,55 +110,8 @@ Tehtävä *DevOps with Docker part 1b* löytyy Teamsista ja GitHub classroomista
 
 <hr />
 
-<details><summary><strong>To 6.2. DevOps: Johdatus Docker Compose:n käyttöön</strong></summary>
 
-Dockerin käsittely jatkuu: [DevOps with Docker part 2](https://devopswithdocker.com/part-2/)
-
-1. [Migrating to Docker Compose](https://devopswithdocker.com/part-2/section-1), Tehtävät 2.1-2.3
-2. [Docker networking](https://devopswithdocker.com/part-2/section-2), Tehtävät 2.4-2.5
-
-Tästä lähtien jää lisämateriaaliksi:
-
-3. ( [Volumes in action](https://devopswithdocker.com/part-2/section-3) )
-4. ( [Containers in development](https://devopswithdocker.com/part-2/section-4) )
-
-
-Tehtävän DL ke 12.2. klo 22:00.
-
-<!--Tehtävävaihtoehdot: 1. DevOpsWithDocker -tehtävät 2a   TAI    2. Docker-monivalinta   (Molemmat ovat Teamsissä)
-
-(Toki voi tehdä molemmat jos haluaa tehdä bonustehtävänä)
-
-Monivalintatehtäviä dockerista (tasolle docker-composen pelkät perusteet ja esim. docker network:in pelkät perusteet). Muutamia materiaalilinkkejä ja videolinkkejä annettu ja sitten testi osaamsesta. Ihan perusymmärrystä haetaan. Sellaista että olette työhaastattelussa tai ekassa työpaikassa kärryillä siitä mitä dockerilla voi saada aikaan. Koko kurssin viikkotyömäärä on 8-9h, joten valmistaudu huolella ensin se max 7-8h.
-
-Monivalintatehtävät perustuvat siis näissä tai alussa linkattujen materiaalien keskeisiin asioihin. Sellaisiin, joiden ymmärtäminen / osaaminen on auttanut kontituksessa. Joku yksityiskohtakin voidaan kysyä sieltä täältä. Mutta täyteen 5p ei vaadita täysiä monivalintapisteitä.
-
-Docker-monivalintatehtäviä varten tutustu DevOps with Docker -kurssin osiin 1 ja 2 sekä jatka näistä [materiaaleista](01_docker/DockerMonivalintatehtavanLahteet.md)
--->
-
-</details>
-
-<hr />
-
-<!--
-
-<strong> Kubernetes-vierailijaluento</strong>
-
-Saamme kampukselle vierailijan SUSE:lta [(https://www.suse.com/)](https://www.suse.com/) kertomaan Kubernetesistä [(https://kubernetes.io/)](https://kubernetes.io/).
-
-a. Full-stack -sovelluksen dockerointi/kontitus [Täältä sovelluksen lähtötiedot ja kaikkia komentoja, joita tarvittiin manuaalisessa asentamisessa](01_docker/fullstack_dockerized_task/Manual_Installation_commands.md)
-
-TAI
-
-b. Monivalintatehtäviä dockerista (tasolle docker-composen pelkät perusteet ja esim. docker network:in pelkät perusteet). Muutamia materiaalilinkkejä ja videolinkkejä annetaan ja sitten testi osaamsesta. Ihan perusymmärrystä haetaan. Sellaista että olette työhaastattelussa tai ekassa työpaikassa kärryillä siitä mitä dockerilla voi saada aikaan. Materiaalilinkit ilmestyvät ensin, ja monivalinta viimeistään perjantaina. Koko kurssin viikkotyömäärä on 8-9h, joten valmistaudu huolella ensin se max 7-8h.
-
-Monivalintatehtävät perustuvat siis näissä tai alussa linkattujen materiaalien keskeisiin asioihin. Sellaisiin, joiden ymmärtäminen / osaaminen on auttanut kontituksessa. Joku yksityiskohtakin voidaan kysyä sieltä täältä. Mutta täyteen 5p ei vaadita täysiä monivalintapisteitä.
-
-Docker-monivalintatehtävien [materiaalit](01_docker/DockerMonivalintatehtavanLahteet.md)
--->
-
-
-<details><summary><strong>To 13.2. TypeScript-kielen perusteet ja työkalut</strong></summary>
+<details><summary><strong>To 6.2. TypeScript-kielen perusteet ja työkalut</strong></summary>
 
 [Oppitunnin muistiinpanot](./01_typescript)
 
@@ -167,6 +120,20 @@ Lisämateriaalina suosittelemme perehtymään lukuun "TypeScriptin perusteet" [t
 Tehtävä GitHub classroomissa, DL ke 26.2. klo 22.
 
 </details>
+
+
+<hr />
+
+
+<details><summary><strong>To 13.2. DevOps ja TypeScript</strong></summary>
+
+Dockerin sekä TypeScriptin käsittely jatkuu.
+
+</details>
+
+
+<hr />
+
 
 <strong><del>To 20.2. talvilomaviikko</del></strong>
 

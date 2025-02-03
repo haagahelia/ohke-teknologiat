@@ -1,4 +1,3 @@
-
 # TypeScript
 
 > *"TypeScript is a language for application-scale JavaScript. TypeScript adds optional types to JavaScript that support tools for large-scale JavaScript applications for any browser, for any host, on any OS. TypeScript compiles to readable, standards-based JavaScript."*
@@ -16,7 +15,6 @@ TypeScriptin ominaisuuksia:
 
 Lue lisää kielestä esimerkiksi sivulta https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html.
 
-<!--StackOverflow 2022 developer survey: https://survey.stackoverflow.co/2022-->
 
 ## Tunnin aihe
 
@@ -43,9 +41,12 @@ Mikäli opiskelet tämän viikon aiheen itsenäisesti, suosittelemme perehtymä�
 
 *Spoiler alert: älä aloita opettelemalla TypeScriptin "teoriaa", vaan aloita kirjoittamalla JavaScriptiä TS-tiedostoon.*
 
+
 ## TypeScriptin asentaminen
 
-TypeScript voidaan asentaa joko globaalisti koko käyttöjärjestelmään tai paikallisesti yksittäiseen projektiin. Globaali asennus [jakaa mielipiteitä](https://github.com/loopbackio/loopback.io/issues/509) ja tämän kurssin esimerkeissä asennus tehdään aina paikallisesti. Paikallisen asennuksen etuina koko projekti riippuvuuksineen asentuu kerralla yhdellä komennolla (`npm install`) ja kaikilla kehittäjillä on käytössään sama versio TypeScriptistä. Paikallisen asennuksen haittapuolena joudut kirjoittamaan `tsc`-komennon sijasta `npx tsc` ([npx -- execute npm package binaries](https://www.npmjs.com/package/npx)).
+TypeScript voidaan asentaa joko globaalisti koko käyttöjärjestelmään tai paikallisesti yksittäiseen projektiin. Globaali asennus [jakaa mielipiteitä](https://github.com/loopbackio/loopback.io/issues/509) ja tämän kurssin esimerkeissä asennus tehdään aina paikallisesti. Paikallisen asennuksen etuina koko projekti riippuvuuksineen asentuu kerralla yhdellä komennolla (`npm install`) ja kaikilla kehittäjillä on käytössään sama versio TypeScriptistä. Myös mm. suositut [Vite-](https://vite.dev/) ja [Expo-työkalut](https://expo.dev/) asentavat TypeScriptin paikallisesti kuhunkin projektiin.
+
+Paikallisen asennuksen seurauksena joudut kirjoittamaan `tsc`-komennon sijasta `npx tsc`, kun haluat käyttää TypeScript-kääntäjää komentorivillä ([npx -- execute npm package binaries](https://www.npmjs.com/package/npx)).
 
 > *"TypeScript is available as a package on the npm registry available as "typescript". You will need a copy of Node.js as an environment to run the package. Then you use a dependency manager like npm, yarn or pnpm to download TypeScript into your project."*
 >
