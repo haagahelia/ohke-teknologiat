@@ -66,7 +66,7 @@ Tehtävät (DL ke 22.1. klo 22:00):
 <hr />
 
 
-<strong>To 23.1. DevOps: Johdatus konttiteknologiaan, containers, images</strong>
+<details><summary><strong>To 23.1. DevOps: Johdatus konttiteknologiaan, containers, images</strong></summary>
 
 Keskustellaan yhdessä termien ja kuvien avulla käsitteistä, jotta itse docker-opiskelun suorittaminen sujuu jouhevammin:
 Tiimin [DevOpsin tavoitetila periaatekuvana](01_docker/DockerCaseExample.pdf) ja [Dockerin keskeisiä käsitteitä](01_docker/DockerConceptsAndVocabulary.pdf) sanoiksi puettuina ja kuvina.
@@ -88,6 +88,7 @@ Käytämme Eficoden ja Helsingin yliopiston yhteistyönä syntynyttä [DevOps wi
 
 Tehtävä *DevOps with Docker part 1a* löytyy Teamsista ja GitHub classroomista. DL ke 29.1. klo 22:00.
 
+</details>
 
 <hr />
 
@@ -152,11 +153,9 @@ Tehtävä GitHub classroomissa, DL ke 5.3. klo 22.
 
 <hr />
 
-<details><summary><strong>To 6.3. Testaus</strong></summary>
+<details><summary><strong>To 6.3. Node.js backend -arkkitehtuuri</strong></summary>
 
-[Oppitunnin muistiinpanot](./02_testaus/typescript.md).
-
-Tehtävä GitHub classroomissa, DL ke 12.3. klo 22.
+Tehtävä Teamsissa, DL ke 12.3. klo 22.
 </details>
 
 <hr />
@@ -176,9 +175,15 @@ Näistä molemmista aukeaa monivalintatehtävä/quiz torstaina. Sillä voi korva
 
 
 
-<details><summary><strong>To 13.3. Node.js backend -arkkitehtuuri</strong></summary>
+<details><summary><strong>To 13.3. Testaus</strong></summary>
 
-Tehtävä tulee Teamsiin, DL ke 26.3. klo 22.
+Oppimateriaalit:
+
+* Playwright: https://playwright.dev/
+* Getting started: https://playwright.dev/docs/intro
+
+
+Tehtävän DL ke 26.3. klo 22.
 </details>
 
 <hr />
