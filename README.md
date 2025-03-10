@@ -155,7 +155,7 @@ Tehtävä GitHub classroomissa, DL ke 5.3. klo 22.
 
 <details><summary><strong>To 6.3. Node.js backend -arkkitehtuuri</strong></summary>
 
-Tehtävä Teamsissa, DL ke 12.3. klo 22.
+Asennustehtävä 1 ja Luku- ja analysointitehtävä 2 Teamsissa, DL ke 12.3. klo 22.
 </details>
 
 <hr />
@@ -175,13 +175,9 @@ Näistä molemmista aukeaa monivalintatehtävä/quiz torstaina. Sillä voi korva
 
 
 
-<details><summary><strong>To 13.3. Testaus</strong></summary>
+<details><summary><strong>To 13.3. Node.js backend -arkkitehtuuri</strong></summary>
 
-Oppimateriaalit:
-
-* Playwright: https://playwright.dev/
-* Getting started: https://playwright.dev/docs/intro
-
+Ohjelmointitehtävä 3: Tietokantaan yksi lisätaulu, sille testidataa, muutama REST API end point, testejä 
 
 Tehtävän DL ke 26.3. klo 22.
 </details>
@@ -192,7 +188,20 @@ Tehtävän DL ke 26.3. klo 22.
 
 <hr />
 
-<details><summary><strong>To 27.3. Seminaarien käynnistys</strong></summary>
+<details><summary><strong>To 27.3. Testaus</strong></summary>
+
+Oppimateriaalit:
+
+* Playwright: https://playwright.dev/
+* Getting started: https://playwright.dev/docs/intro
+
+
+Tehtävän DL ke 2.4. klo 22.
+</details>
+
+<hr />
+
+<details><summary><strong>To 3.4. Seminaarien käynnistys</strong></summary>
 
 [Seminaarityön ohjeistus](./08_seminaari)
 
@@ -200,7 +209,7 @@ Tehtävän DL ke 26.3. klo 22.
 
 <hr />
 
-<details><summary><strong>To 3., 10., 17. ja 24.4. Seminaarityön tekemistä</strong></summary>
+<details><summary><strong>To 10., 17. ja 24.4. Seminaarityön tekemistä</strong></summary>
 
 [Seminaarityön ohjeistus](./08_seminaari)
 
