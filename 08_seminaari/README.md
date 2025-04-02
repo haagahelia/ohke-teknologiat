@@ -1,6 +1,6 @@
 # Seminaari
 
-Seminaarivaiheessa jokainen opiskelija valitsee kurssin aiheista itseään eniten kiinnostavan ja tekee siihen liittyvän seminaaritehtävän. Seminaaritehtävän voi valita joko opettajien ehdotuksista, tai seminaaritehtävän aihetta voi ehdottaa myös itse. Seminaaritehtävä voi liittyvä läheisesti opiskelijan ohjelmistoprojekti 2 -projektiin, ja se on jopa suositeltavaa.
+Seminaarivaiheessa jokainen opiskelija valitsee kurssin aiheista itseään eniten kiinnostavan ja tekee siihen liittyvän seminaaritehtävän. Seminaaritehtävän voi valita joko alta löytyvistä ehdotuksista, tai seminaaritehtävän aihetta voi ehdottaa myös itse. Seminaaritehtävä voi liittyvä läheisesti opiskelijan ohjelmistoprojekti 2 -projektiin, ja se on jopa suositeltavaa.
 
 Saman seminaariaiheen valinneet opiskelijat osallistuvat sen aiheen yhteiseen seminaariin, jossa esitellään, analysoidaan ja kommentoidaan myös muiden opiskelijoiden seminaaritöitä. Olette lämpimästi tervetulleita osallistumaan myös muiden seminaariaiheiden tilaisuuksiin oman seminaarinne ulkopuolella!
 
@@ -13,9 +13,9 @@ Seminaarityön laajuuden on tarkoitus olla noin 20 tuntia työtä.
 
 Raportoi seminaarityösi esitystä ja arviointia varten raportointiohjeiden mukaisesti. Raportointiohjeet ja -pohjat alla. Valitse vain yksi muoto, Markdown, Word (=> tallenna PDF:ksi ennen julkaisua) tai Powerpoint (=> PDF):
 
+* [Markdown-pohja, jota suosittelemme](markdown_file1.md). Tekstimuotoisena se pysyy Git-versionhallinnassa kunnossa, jopa usean kehittäjän sitä muokatessa.
 * [Ohje & dokumenttipohja wordiin](SeminaarityonRapotointiohjeWord.docx),
 * [Powerpoint-esityksessä muutama vinkki sisällöksi ja kait siitä saisi pohjankin](Ohjelmistokehityksen%20teknologioita%20seminaariraportin%20pohja%201.pptx),
-* [Markdown-pohja, jota suosittelemme](markdown_file1.md). Tekstimuotoisena se pysyy Git-versionhallinnassa kunnossa, jopa usean kehittäjän sitä muokatessa.
 
 **Video**
 
@@ -43,27 +43,15 @@ Seminaaritöissä on ajoittain seurattu video- tai tekstimuotoisia tutoriaaleja.
 Tutoriaalityön tapauksissa seminaarin raportissa ja videossa ei kannata keskittyä itse tutoriaalin lopputuloksen esittelyyn, vaan oppimiesi asioiden esittelyyn. Pyri siis yksilöimään ja esittelemään asioita, joita olet oppinut, sekä pohdi, mitä olisit voinut tehdä työssä toisin ja miten osaat jatkossa soveltaa oppimiasi asioita.
 
 
-## Aikataulu
+## Seminaarin vaiheet
 
-* **Seminaarien käynnistys**
+1. Seminaarien ohjeistus oppitunnilla
+2. Seminaariaiheen ilmoittaminen Teams-kanavalle
+3. Seminaarityön tekoa ja tarvittaessa ohjausta Teamsissa
+4. Seminaarin raporttien ja videoiden palauttaminen Teamsiin
+5. Seminaariesitykset
 
-    To 7.11.
-
-* **Seminaariaiheen ilmoittaminen Teams-kanavalle**
-
-    DL to 14.11. klo 12 (keskipäivä)
-
-* **Yksilöllistä seminaarityön ohjausta Teamsissa**
-
-    Opettajat ovat tavoitettavissa Teamsissa kurssin tapaamisaikoina 14.11., 21.11. ja 28.11. Ota yhteyttä ja sovi esim. videotapaaminen!
-
-* **Seminaarin raporttien ja videoiden palauttaminen Teamsiin**
-
-    DL su 1.12. klo 22 mennessä.
-
-* **Seminaariesitykset**
-
-    To 5.12. klo 14-16
+Tarkemmat päivämäärät löydät kurssin GitHubin etusivulta sekä palautusten osalta Teamsista.
 
 
 # Seminaariaiheita
@@ -71,7 +59,11 @@ Tutoriaalityön tapauksissa seminaarin raportissa ja videossa ei kannata keskitt
 Tälle sivulle on koottu **esimerkkiaiheita** kurssin seminaaritehtävää varten. Voit melko vapaasti jalostaa ideoita vastaamaan omaa vaatimustasoasi ja kiinnostuksen kohteitasi. Lisää oma aiheesi uutena viestinä kyseisen aihealueen Teams-kanavalle.
 
 
-## TypeScript, ES6, JavaScript, node (+MongoDB)
+## TypeScript, ES6, JavaScript, Node.js, Next.js, MongoDB...
+
+* **Next.js**
+
+    Perehdy Next.js:ään ja sen tarjoamiin mahdollisuuksiin. Selvitä esimerkiksi, miten Next.js:n avulla voidaan toteuttaa server-side rendering ja mitä etuja se tuo verrattuna perinteiseen React-sovellukseen. Toteuta yksinkertainen esimerkkisovellus, jossa hyödynnät valitsemiasi Next.js:n ominaisuuksia.
 
 * **TypeScript**
 
@@ -82,10 +74,6 @@ Tälle sivulle on koottu **esimerkkiaiheita** kurssin seminaaritehtävää varte
 * **MERN-stack:**
 
     MongoDB (+ Mongoose), Express, React, Node. Huom! Toteuta ominaisuuksiensa puolesta pieni sovellus ja keskity opettelemaan jokin uusi tekninen asia, kuten MongoDB:n hyödyntäminen JavaScriptillä.
-
-* **Reaktiivinen ohjelmointi JS:llä** *(ks. ohjelmistoarkkitehtuurit ja patternit)*:
-
-    Tutustu [FRP-ohjelmointiin](https://stackoverflow.com/questions/1028250/what-is-functional-reactive-programming/1030631#1030631) ja tee (tietynlainen) ohjelma esimerkiksi RxJS:llä tai bacon.js:llä. Myös [Node-RED](https://nodered.org/)-ympäristöä voi miettiä tähän aiheeseen.
 
 * **Paketin julkaisu NPM:ssä:**
 
@@ -109,17 +97,13 @@ Tälle sivulle on koottu **esimerkkiaiheita** kurssin seminaaritehtävää varte
 
 ## Ohjelmistoarkkitehtuurit ja patternit
 
+* **Serverless-arkkitehtuuri:**
+
+    Perehdy serverless-ratkaisuihin ja toteuta sekä julkaise jokin pieni serverless-ratkaisu. Voit hyödyntää esimerkiksi Cloudflare Workersia, AWS Lambdaa tai Azure Functionsia. Toteutuksessa voit käyttää valitsemastasi alustasta riippuen esimerkiksi Node.js:ää tai Pythonia.
+
 * **Ohjelmistoprojekti 2 -refaktorointi:**
 
     Refaktoroi ohjelmistoprojekti 2 -projektinne käyttämään mielestäsi optimaalista arkkitehtuuriratkaisua joiltain osin. Kuvaa alkuperäinen arkkitehtuuri ja uudistettu ratkaisu myös kaavioina.
-
-* **FRP-ohjelmointi:**
-
-    Tutustu [FRP-ohjelmointiin](https://stackoverflow.com/questions/1028250/what-is-functional-reactive-programming/1030631#1030631) ja tee (tietynlainen) ohjelma RxJS:llä (tai bacon.js:llä). Myös [Node-RED](https://nodered.org/)-ympäristöä voi miettiä tähän vaiheeseen.
-
-* **Mikropalvelu:**
-
-    Mikropalveluihin perustuvan pienen palvelun rakentaminen (esim. autentikointipalvelu pyörii omana palvelunaan). Mahdollisesti hyödyntäen serverless-lähestymistapaa.
 
 
 ## Testaus
@@ -132,14 +116,12 @@ Tälle sivulle on koottu **esimerkkiaiheita** kurssin seminaaritehtävää varte
 
     Tutustu [Playwright](https://playwright.dev/):iin, [Robot Framework](https://robotframework.org/):iin, [Cypress](https://www.cypress.io/):iin, [Cucumber](https://cucumber.io/):iin tai [Selenium Framework](https://www.selenium.dev/):iin ja toteuta valitsemasi työkalun avulla yksinkertainen järjestelmätesti jollekin omalle tai julkiselle palvelulle.
 
-    Mahdollinen lähde: "Testiautomaation työkalut: Robot Framework vs. Selenium-cucumber", https://www.theseus.fi/handle/10024/341637
-
 
 ## Infra ja automaatiotyökalut
 
 * **Continuous Integration / Continuous Delivery:**
 
-    Rakenna CI/CD -monitorointi ja tuotantoputki ohjelmistoprojekti 2 -projektillenne.
+    Rakenna CI/CD -tuotantoputki ohjelmistoprojekti 2 -projektillenne.
 
 * **Docker ja Docker Compose:**
 
@@ -155,12 +137,8 @@ Tälle sivulle on koottu **esimerkkiaiheita** kurssin seminaaritehtävää varte
 
 * **Docker, Kubernetes yms:**
 
-    Jatka kurssin OpenShift-kokeiluja rakentamalla monipuolisempi pilviympäristö, joka koostuu esimerkiksi useammista konteista ja continuous integration -ratkaisusta.
+    Rakenna pilviympäristö, joka koostuu esimerkiksi useammista konteista ja continuous integration -ratkaisusta. Voit hyödyntää esimerkiksi OpenShiftia tai AWS:ää. CSC:n OpenShift ympäristö (Rahti) on käytettävissä ilmaiseksi ja sen käytöstä voit kysyä lisätietoja opettajilta.
 
-
-* **Serverless-funktiot (Azure functions, AWS lambda...):**
-
-    Toteuta jokin itsenäinen ominaisuus Ohjelmistoprojekti II -kurssisi projektin tueksi Azuren pilvifunktiona.
 
 ## Python
 
@@ -187,7 +165,7 @@ Tälle sivulle on koottu **esimerkkiaiheita** kurssin seminaaritehtävää varte
 
 ## Koneoppiminen
 
-Koneoppimista ei tällä toteutuksella juuri käsitelty, mutta voit halutessasi perehtyä aiheeseen itsenäisesti seminaariosuudessa.
+Koneoppimista ei tällä toteutuksella käsitelty, mutta voit halutessasi perehtyä aiheeseen itsenäisesti seminaariosuudessa.
 
 * **Koneoppimismallin kouluttaminen:**
 
