@@ -4,7 +4,7 @@ Tervetuloa kurssille!
 
 Ohjelmistokehittäjän työ on suurimmaksi osaksi muuta kuin jonkin tietyn ohjelmointikielen syntaksin suvereenia hallintaa. Tämän kurssin tavoitteena on esitellä ohjelmistokehittäjälle tärkeitä taitoja, työkaluja ja tekniikoita, joita ei suoraan ole tullut esille ohjelmoinnin peruskursseilla tai projektityökursseissa. Kurssi toimii samalla myös tukikurssina ohjelmistoprojekti 2 -kurssille, jossa tämän kurssin aiheita päästään soveltamaan osana isompaa projektia.
 
-Opettajina kurssilla toimivat Teemu Havulinna ja Juhani Välimäki (etunimi.sukunimi@haaga-helia.fi). Kurssin sisältö perustuu suuresti myös kurssin aikaisemman opettajan, Ohto Rainion, työhön.
+Opettajina kurssilla toimivat Teemu Havulinna ja Ismo Harjunmaa (etunimi.sukunimi@haaga-helia.fi). Kurssin sisältö perustuu suuresti myös Ohto Rainion sekä Juhani Välimäen työhön.
 
 
 ## Linkit
@@ -15,11 +15,11 @@ Opettajina kurssilla toimivat Teemu Havulinna ja Juhani Välimäki (etunimi.suku
 
 ## Kurssin suoritustapa
 
-Kurssista on käynnissä sekä contact- että virtual-toteutukset. Kummallakin toteutuksella on samat käytännön järjestelyt tehtävineen ja aikatauluineen. Molempien toteutusten opiskelijat voivat valita osallistuvatko tunneille läsnä, etänä vai opiskelevatko omaan tahtiin.
+Kurssista on käynnissä sekä contact- että virtual-toteutukset. Kummallakin toteutuksella on samat käytännön järjestelyt tehtävineen ja aikatauluineen. Molempien toteutusten opiskelijat voivat valita osallistuvatko tunneille läsnä, etänä vai opiskelevatko omaan tahtiin. Suosittelemme vahvasti osallistumaan oppitunneille.
 
 **Kurssin alkupuoliskolla** käsitellään lukukausittain vaihtelevia aiheita ja opiskelijat tekevät niihin liittyviä harjoitustehtäviä. Jokaisesta esiteltävästä aiheesta on myös mahdollista tehdä laajempi seminaaritehtävä kurssin jälkimmäisellä puoliskolla.
 
-**Seminaarivaiheessa**, kurssin jälkimmäisellä puoliskolla, jokainen opiskelija valitsee kurssin aiheista itseään eniten kiinnostavan ja tekee siihen liittyvän seminaaritehtävän. Seminaaritehtävän voi valita joko opettajien ehdotuksista tai seminaaritehtävän aihetta voi ehdottaa myös itse. Seminaaritehtävä voi liittyvä läheisesti opiskelijan ohjelmistoprojekti 2 -kurssin projektiin.
+**Seminaarivaiheessa**, kurssin jälkimmäisellä puoliskolla, jokainen opiskelija valitsee kurssin aiheista itseään eniten kiinnostavan ja tekee siihen liittyvän seminaaritehtävän. Seminaaritehtävän voi valita joko opettajien ehdotuksista tai aihetta voi ehdottaa myös itse. Seminaaritehtävä voi liittyvä läheisesti opiskelijan ohjelmistoprojekti 2 -kurssin projektiin.
 
 Saman seminaariaiheen valinneet opiskelijat osallistuvat yhteiseen seminaariin, jossa analysoidaan ja kommentoidaan myös muiden opiskelijoiden seminaaritöitä.
 
@@ -30,210 +30,132 @@ Saman seminaariaiheen valinneet opiskelijat osallistuvat yhteiseen seminaariin, 
 
 Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan varmistaa, että työskentely kurssin työkaluilla ja ohjelmointikielillä lähtee kaikilla käyntiin. Tarvitset riittävät esitiedot näistä aiheista kurssin seuraavia viikkoja varten.
 
-**Kurssin keskeyttäminen** ei ole Haaga-Helian linjauksia noudattaen mahdollista enää osallistumisen vahvistamisen jälkeen:
-
-> *"Opettaja poistaa opetuksen alussa toteutukselta opiskelijat, jotka eivät osallistu ensimmäiseen opetuskertaan tai ilmoita poissaolostaan. Opiskelijoita ei enää myöhemmin poisteta toteutukselta, vaan kaikille annetaan arvosana hylätty-kiitettävä."*
->
-> *https://mynet.haaga-helia.fi/group/pakki/toteutukselle-ilmoittautuminen*
 
 
-## Opintojakson oppitunnit
-
-**Huom!** Tämä sivu päivittyy kurssin edetessä ja sekä aikataulu että sisältö tarkentuvat.
-
-Oppitunnit pidetään pääsääntöisesti **hybridimuodossa torstaisin klo 14-16.45** sekä luokassa että Teamsissa.
 
 
 ## Aikataulu
 
+**Huom!** Tämä sivu päivittyy kurssin edetessä ja sekä aikataulu että sisältö tarkentuvat.
+
+Oppitunnit pidetään pääsääntöisesti **hybridimuodossa torstaisin klo 11-13.45** sekä luokassa että Teamsissa. Kurssin tehtävät palautetaan pääsääntöisesti **viikoittain keskiviikkoisin klo 22:00 mennessä**. Tehtäviin on saatavissa vinkkjeä ja tukea sekä oppitunneille että Teams-kanavalla.
+
 Toivomme että tutustutte mahdollisuuksien mukaan etukäteen kunkin aiheen videoihin ja materiaaleihin, jotta voimme tapaamisissa käyttää aikaa myös mm. tehtävien parissa.
 
-<details>
-<summary><strong>To 16.1. <a href="00_linux/">Kurssin johdanto, ympäristöt ja Linux/Unix-komentorivi</a></strong></summary>
-
-Videot:
-
-* [📼 Linuxin peruskäyttö](https://youtu.be/HRqHfItALO4)
-* [📼 GitHub classroom -tehtävien ohjeistus](https://youtu.be/9dA17XlzT-w)
-* [📼 Kurssin koodausympäristöt (wsl2, Docker, Development containers, Codespace)](https://youtu.be/aC3xj4KXu3g)
-
-Tehtävät (DL ke 22.1. klo 22:00):
-
-* [📥 Kurssin kehitysympäristön asennus](00_linux/asennukset.md)
-* 📥 Linux-komentorivi (Teams ja GitHub classroom)
-</details>
-
-<hr />
 
 
-<details><summary><strong>To 23.1. DevOps: Johdatus konttiteknologiaan, containers, images</strong></summary>
-
-Keskustellaan yhdessä termien ja kuvien avulla käsitteistä, jotta itse docker-opiskelun suorittaminen sujuu jouhevammin:
-Tiimin [DevOpsin tavoitetila periaatekuvana](01_docker/DockerCaseExample.pdf) ja [Dockerin keskeisiä käsitteitä](01_docker/DockerConceptsAndVocabulary.pdf) sanoiksi puettuina ja kuvina.
-
-Suositellut videot: [Never install locally (Coderized)](https://youtu.be/J0NuOlA2xDc) ja [Virtual Machine (VM) vs Docker (IBM Technology)](https://youtu.be/a1M_thDTqmU).
-
-Docker cheatsheettejä: [CLI cheat sheet pdf](https://docs.docker.com/get-started/docker_cheatsheet.pdf), [docker concepts](https://extremeautomation.io/cheatsheets/docker-cheatsheet/), [cheatsheet poikineen](https://dockerlabs.collabnix.com/docker/cheatsheet/).
-
-Dockerin laaja ohjeisto [docs.docker.com](https://docs.docker.com/).
-
-Käytämme Eficoden ja Helsingin yliopiston yhteistyönä syntynyttä [DevOps with Docker](https://devopswithdocker.com/) -kurssia:
-
-0. [(Getting started)](https://devopswithdocker.com/getting-started) ja  [(Introduction to Part 1)](https://devopswithdocker.com/part-1/)
-1. [Definitions and basic concepts](https://devopswithdocker.com/part-1/section-1), Tehtävät 1.1-1.2
-1. [Running and stopping containers](https://devopswithdocker.com/part-1/section-2), Tehtävät 1.3-1.4
-1. [In-depth dive to images](https://devopswithdocker.com/part-1/section-3), Tehtävät 1.5-1.8
-
-[Example of learning notes for the part 1a](01_docker/DevOpsWithDocker_1a/DevOpsWithDocker_Part1a_learning_notes.md)
-
-Tehtävä *DevOps with Docker part 1a* löytyy Teamsista ja GitHub classroomista. DL ke 29.1. klo 22:00.
-
-</details>
-
-<hr />
-
-<details><summary><strong>To 30.1. DevOps: Docker "volumet" ja portit</strong></summary>
-
-Dockerin käsittely jatkuu:
-
-4. [Defining start conditions for the container](https://devopswithdocker.com/part-1/section-4)
-5. [Interacting with the container via volumes and ports](https://devopswithdocker.com/part-1/section-5), Tehtävät 1.9-1.10
-6. [Utilizing tools from the Registry](https://devopswithdocker.com/part-1/section-6), Tehtävät 1.11-1.14
-7. [Summary](https://devopswithdocker.com/part-1/section-7)
-
-[Summary for the part 1b](01_docker/DevOpsWithDocker_1b/DevOpsWithDocker_Part1b_learning_notes.md)<br />
-&nbsp; &nbsp;[Docker Volumes](01_docker/DevOpsWithDocker_1b/DockerVolumes/)<br />
-&nbsp; &nbsp;[Docker Ports](01_docker/DevOpsWithDocker_1b/DockerPorts/)<br />
-
-Tehtävä *DevOps with Docker part 1b* löytyy Teamsista ja GitHub classroomista. DL ke 5.2. klo 22:00.
-
-</details>
-
-<hr />
-
-
-<details><summary><strong>To 6.2. TypeScript-kielen perusteet ja työkalut</strong></summary>
+### To 21.8. TypeScript-kielen perusteet ja työkalut
 
 [Oppitunnin muistiinpanot](./01_typescript)
 
 Lisämateriaalina suosittelemme perehtymään lukuun "TypeScriptin perusteet" [typescript-ohjelmointi.github.io](https://typescript-ohjelmointi.github.io/)-sivustolla.
 
-Tehtävä GitHub classroomissa, DL ke 26.2. klo 22.
+Tehtävä GitHub classroomissa.
 
-</details>
+<hr />
+
+
+### To 28.8. Tyyppien määrittely
+
+TypeScriptin käsittely jatkuu.
+
+* Type ja interface
+* Union-tyypit
+* Intersection-tyypit
+
+<hr />
+
+
+### To 4.9. JS/TS edistyneet ominaisuudet
+
+* Geneeriset tyypit
+* Keys ja Mapped types
+
+<hr />
+
+
+### To 11.9. Serverless-ratkaisut
+
+<hr />
+
+
+### To 18.9. Node.js, npm ja koodin paketoiminen
 
 
 <hr />
 
 
-<details><summary><strong>To 13.2. DevOps ja TypeScript</strong></summary>
+### To 25.9. Erilaiset ohjelmointirajapinnat
 
-Dockerin sekä TypeScriptin käsittely jatkuu.
-
-</details>
+* REST
+* GraphQL
+* WebSocket
+* MQTT
+* Webhooks
+* gRPC
 
 
 <hr />
 
 
-<strong><del>To 20.2. talvilomaviikko</del></strong>
+### To 2.10.
+
 
 <hr />
 
-<details><summary><strong>To 27.2. JS/TS edistyneet ominaisuudet</strong></summary>
-
-[TypeScript-projektin luonnista](https://github.com/valju/JS_ES_Features/blob/master/TS_basics/TypeScript_usage_understood.pdf) ... Samasta materiaalista löytyy mm. seuraavat linkit
-
-[JavaScriptin/ECMAScriptin ominaisuuksista (käytetään TypeScriptissä)](https://github.com/valju/JS_ES_Features/blob/master/ES_advanced/ES_advanced_or_tricky_features.md)
-
-[TypeScriptin ominaisuuksia, joita käytettiin eräässä Softala-projektissa 2023-2024](https://github.com/valju/JS_ES_Features/blob/master/TS_basics/TS_in_a_fullstack_project.md)
-
-Tehtävä GitHub classroomissa, DL ke 5.3. klo 22.
-</details>
-
-<hr />
-
-<details><summary><strong>To 6.3. Node.js backend -arkkitehtuuri</strong></summary>
-
-Asennustehtävä 1 ja Luku- ja analysointitehtävä 2 Teamsissa, DL ke 12.3. klo 22.
-</details>
-
-<hr />
-
-<!--
-<strong>Seuraavien aiheiden osalta aikataulu ja järjestys ovat suuntaa-antavia</strong>
-
-<strong>Ohjelmistoarkkitehtuureista</strong>
-
-* [Ohjelmistoarkkitehtuurit ja -patternit (engl. PDF)](06_ohjelmistoarkkitehtuurit_ja_patternit/SoftwareArchitecturesAndPatterns.pdf)
-* [Ketterän dokumentoinnin periaatteet (engl. PDF)](06_ohjelmistoarkkitehtuurit_ja_patternit/documentation_principles_for_sw_projects.pdf)
-
-Näistä molemmista aukeaa monivalintatehtävä/quiz torstaina. Sillä voi korvata viikon Docker-tehtävän
-
-<hr>
--->
 
 
-
-<details><summary><strong>To 13.3. Node.js backend -arkkitehtuuri</strong></summary>
-
-Ohjelmointitehtävä 3: Tietokantaan yksi lisätaulu, sille testidataa, muutama REST API end point, testejä 
-
-Tehtävän DL ke 26.3. klo 22.
-</details>
-
-<hr />
-
-<strong><del>To 20.3. intensiiviviikko</del></strong>
-
-<hr />
-
-<details><summary><strong>To 27.3. Testaus</strong></summary>
-
-Oppimateriaalit:
+### To 9.10. Testaus
 
 * Playwright: https://playwright.dev/
 * Getting started: https://playwright.dev/docs/intro
 
+<hr />
 
-Tehtävän DL ke 2.4. klo 22.
-</details>
+
+### To 16.10. Intensiiviviikko, ei oppituntia
 
 <hr />
 
-<details><summary><strong>To 3.4. Seminaarien käynnistys</strong></summary>
+
+
+### To 23.10.
+
+<hr />
+
+
+### To 30.10. (poikkeava luokkatila)
+
+<hr />
+
+### To 6.11. Seminaarien käynnistys
 
 [Seminaarityön ohjeistus](./08_seminaari)
 
-</details>
-
 <hr />
 
-<details><summary><strong>To 10., 17. ja 24.4. Seminaarityön tekemistä</strong></summary>
+### To 13.11., 20.11. ja 27.11. Seminaarityön tekemistä
 
 [Seminaarityön ohjeistus](./08_seminaari)
 
 Yksilöllistä ohjausta Teamsissa tai sopimuksen mukaan kampuksella. Kurssin seminaarivaiheessa ei järjestetä yhteisiä tapaamisia, vaan tarjoamme yksilöllistä ohjausta etukäteen sovittavina ajankohtina.
-</details>
+
 
 <hr />
 
 
-**📥 Seminaariraportin palautus su 4.5. klo 22 mennessä.**
+**📥 Seminaariraportin palautus su 30.11. klo 22 mennessä.**
 
-<!-- <strong><del>To 9.5. Helatorstai</del></strong> -->
 
-<details><summary><strong>To 8.5. Seminaariesitykset</strong></summary>
+### To 4.12. Seminaariesitykset
 
 [Katso seminaarityön ohjeet](./08_seminaari).
 
-</details>
-
 <hr />
 
 
-<details><summary><em>To 15.5. Loput Seminaariesitykset tai mahdollinen kokoava esitys kurssista</em></summary>
-</details>
+<summary><em>To 11.12. Loput Seminaariesitykset tai varakerta</em></summary>
+
 
 
 ## Viestintäkanavat
@@ -251,7 +173,7 @@ Liittymisohje kurssin Teams-ryhmään löytyy sähköpostitse lähetetystä tied
 
 ## Työkalut
 
-Kurssilla käytetään lukuisia eri teknologioita ja työkaluja, joten joudut mahdollisesti tekemään tietokoneellesi lukuisia erilaisia asennuksia.
+Kurssilla käytetään lukuisia eri teknologioita ja työkaluja, joten joudut mahdollisesti tekemään erilaisia asennuksia.
 
 Ohjelmistojen asentaminen ja käyttäminen eri käyttöjärjestelmillä poikkeaa toisistaan merkittävästi, minkä lisäksi saman ohjelmiston eri versiot toimivat joskus hyvin eri tavoilla. Asennus- ja yhteensopivuusongelmien minimoimiseksi kurssilla suositellaan vahvasti esimerkiksi [WSL2-ympäristön](https://learn.microsoft.com/en-us/windows/wsl/install), [Docker-konttien](https://docs.docker.com/language/nodejs/develop/), [GitHub codespacen](https://github.com/features/codespaces) tai oman erillisen [Linux-virtuaalikoneen](https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox#1-overview) käyttöä kurssin tehtäviä tehdessäsi.
 
@@ -284,11 +206,7 @@ Yksittäinen palauttamatta jäänyt tai arvosanalla 0 arvioitu osasuoritus ei es
 
 ### Kurssin keskeyttäminen
 
-Kurssin keskeyttäminen ei ole Haaga-Helian linjauksia noudattaen mahdollista enää kahden ensimmäisen viikon jälkeen:
-
-> *"Opettaja poistaa opetuksen alussa toteutukselta opiskelijat, jotka eivät osallistu ensimmäiseen opetuskertaan tai ilmoita poissaolostaan. Opiskelijoita ei enää myöhemmin poisteta toteutukselta, vaan kaikille annetaan arvosana hylätty-kiitettävä."*
->
-> https://mynet.haaga-helia.fi/group/pakki/toteutukselle-ilmoittautuminen
+Kurssin keskeyttäminen tai kurssilta poistuminen osallistumisen hyväksymisen jälkeen ei ole Haaga-Helian linjauksia noudattaen mahdollista.
 
 
 ## Lähteiden käyttäminen ja yksilötyöskentely
