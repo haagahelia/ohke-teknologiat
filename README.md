@@ -32,8 +32,6 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
 
 
 
-
-
 ## Aikataulu
 
 **Huom!** Tämä sivu päivittyy kurssin edetessä ja sekä aikataulu että sisältö tarkentuvat.
@@ -52,7 +50,6 @@ Lisämateriaalina suosittelemme perehtymään lukuun "TypeScriptin perusteet" [t
 
 Tehtävä GitHub classroomissa.
 
-<hr />
 
 
 ### To 28.8. Tyyppien määrittely
@@ -63,7 +60,6 @@ TypeScriptin käsittely jatkuu.
 * Union-tyypit
 * Intersection-tyypit
 
-<hr />
 
 
 ### To 4.9. JS/TS edistyneet ominaisuudet
@@ -71,18 +67,14 @@ TypeScriptin käsittely jatkuu.
 * Geneeriset tyypit
 * Keys ja Mapped types
 
-<hr />
 
 
 ### To 11.9. Serverless-ratkaisut
 
-<hr />
 
 
 ### To 18.9. Node.js, npm ja koodin paketoiminen
 
-
-<hr />
 
 
 ### To 25.9. Erilaiset ohjelmointirajapinnat
@@ -95,13 +87,8 @@ TypeScriptin käsittely jatkuu.
 * gRPC
 
 
-<hr />
 
-
-### To 2.10.
-
-
-<hr />
+### To 2.10. TBD
 
 
 
@@ -110,29 +97,25 @@ TypeScriptin käsittely jatkuu.
 * Playwright: https://playwright.dev/
 * Getting started: https://playwright.dev/docs/intro
 
-<hr />
 
 
 ### To 16.10. Intensiiviviikko, ei oppituntia
 
-<hr />
+
+
+### To 23.10. TBD
 
 
 
-### To 23.10.
-
-<hr />
+### To 30.10. TBD (huom. poikkeava luokkatila)
 
 
-### To 30.10. (poikkeava luokkatila)
-
-<hr />
 
 ### To 6.11. Seminaarien käynnistys
 
 [Seminaarityön ohjeistus](./08_seminaari)
 
-<hr />
+
 
 ### To 13.11., 20.11. ja 27.11. Seminaarityön tekemistä
 
@@ -140,21 +123,17 @@ TypeScriptin käsittely jatkuu.
 
 Yksilöllistä ohjausta Teamsissa tai sopimuksen mukaan kampuksella. Kurssin seminaarivaiheessa ei järjestetä yhteisiä tapaamisia, vaan tarjoamme yksilöllistä ohjausta etukäteen sovittavina ajankohtina.
 
+📥 Seminaariraportin **palautus su 30.11. klo 22 mennessä**.
 
-<hr />
-
-
-**📥 Seminaariraportin palautus su 30.11. klo 22 mennessä.**
 
 
 ### To 4.12. Seminaariesitykset
 
 [Katso seminaarityön ohjeet](./08_seminaari).
 
-<hr />
 
 
-<summary><em>To 11.12. Loput Seminaariesitykset tai varakerta</em></summary>
+### To 11.12. Loput Seminaariesitykset tai varakerta
 
 
 
