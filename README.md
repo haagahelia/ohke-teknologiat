@@ -41,15 +41,13 @@ Oppitunnit pidetään pääsääntöisesti **hybridimuodossa torstaisin klo 11-1
 Toivomme että tutustutte mahdollisuuksien mukaan etukäteen kunkin aiheen videoihin ja materiaaleihin, jotta voimme tapaamisissa käyttää aikaa myös mm. tehtävien parissa.
 
 
-
 ### To 21.8. TypeScript-kielen perusteet ja työkalut
 
-[Oppitunnin muistiinpanot](./01_typescript)
+[Oppitunnin muistiinpanot](./typescript)
 
 Lisämateriaalina suosittelemme perehtymään lukuun "TypeScriptin perusteet" [typescript-ohjelmointi.github.io](https://typescript-ohjelmointi.github.io/)-sivustolla.
 
 Tehtävä GitHub classroomissa.
-
 
 
 ### To 28.8. Tyyppien määrittely
@@ -60,6 +58,7 @@ TypeScriptin käsittely jatkuu.
 * Union-tyypit
 * Intersection-tyypit
 
+Tehtävä GitHub classroomissa.
 
 
 ### To 4.9. JS/TS edistyneet ominaisuudet
@@ -68,16 +67,21 @@ TypeScriptin käsittely jatkuu.
 * Keys ja Mapped types
 
 
-
-### To 11.9. Serverless-ratkaisut
-
-
-
-### To 18.9. Node.js, npm ja koodin paketoiminen
+### To 11.9. Datan visualisointi
 
 
 
-### To 25.9. Erilaiset ohjelmointirajapinnat
+### To 18.9. Serverless-ratkaisut
+
+* https://developers.cloudflare.com/workers/
+* https://hono.dev/
+
+
+### To 25.9. Node.js, npm ja koodin paketoiminen
+
+
+
+### To 2.10. Erilaiset ohjelmointirajapinnat
 
 * REST
 * GraphQL
@@ -85,10 +89,6 @@ TypeScriptin käsittely jatkuu.
 * MQTT
 * Webhooks
 * gRPC
-
-
-
-### To 2.10. TBD
 
 
 
@@ -113,13 +113,13 @@ TypeScriptin käsittely jatkuu.
 
 ### To 6.11. Seminaarien käynnistys
 
-[Seminaarityön ohjeistus](./08_seminaari)
+[Seminaarityön ohjeistus](./seminaari)
 
 
 
 ### To 13.11., 20.11. ja 27.11. Seminaarityön tekemistä
 
-[Seminaarityön ohjeistus](./08_seminaari)
+[Seminaarityön ohjeistus](./seminaari)
 
 Yksilöllistä ohjausta Teamsissa tai sopimuksen mukaan kampuksella. Kurssin seminaarivaiheessa ei järjestetä yhteisiä tapaamisia, vaan tarjoamme yksilöllistä ohjausta etukäteen sovittavina ajankohtina.
 
@@ -129,7 +129,7 @@ Yksilöllistä ohjausta Teamsissa tai sopimuksen mukaan kampuksella. Kurssin sem
 
 ### To 4.12. Seminaariesitykset
 
-[Katso seminaarityön ohjeet](./08_seminaari).
+[Katso seminaarityön ohjeet](./seminaari).
 
 
 
