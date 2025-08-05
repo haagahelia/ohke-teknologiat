@@ -26,7 +26,9 @@ Saman seminaariaiheen valinneet opiskelijat osallistuvat yhteiseen seminaariin, 
 
 ## Kurssin osallistumisen vahvistaminen
 
-⚠ **Kurssin osallistumisen vahvistaminen edellyttää ensimmäisen ja toisen viikon viikkotehtävien hyväksyttyä suoritusta niiden määräaikaan mennessä.** Tehtäviin on saatavissa vinkkejä ja tukea kurssin Teams-kanavalla sekä oppitunneilla.
+
+> [!IMPORTANT]
+> Kurssin osallistumisen vahvistaminen edellyttää ensimmäisen ja toisen viikon viikkotehtävien hyväksyttyä suoritusta niiden määräaikaan mennessä. Tehtäviin on saatavissa vinkkejä ja tukea kurssin Teams-kanavalla sekä oppitunneilla.
 
 Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan varmistaa, että työskentely kurssin työkaluilla ja ohjelmointikielillä lähtee kaikilla käyntiin. Tarvitset riittävät esitiedot näistä aiheista kurssin seuraavia viikkoja varten.
 
@@ -36,29 +38,25 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
 
 **Huom!** Tämä sivu päivittyy kurssin edetessä ja sekä aikataulu että sisältö tarkentuvat.
 
-Oppitunnit pidetään pääsääntöisesti **hybridimuodossa torstaisin klo 11-13.45** sekä luokassa että Teamsissa. Kurssin tehtävät palautetaan pääsääntöisesti **viikoittain keskiviikkoisin klo 22:00 mennessä**. Tehtäviin on saatavissa vinkkjeä ja tukea sekä oppitunneille että Teams-kanavalla.
+Oppitunnit pidetään pääsääntöisesti **hybridimuodossa torstaisin klo 11-13.45** sekä luokassa että Teamsissa. Kurssin tehtävät palautetaan pääsääntöisesti **viikoittain keskiviikkoisin klo 22 mennessä**. Tehtäviin on saatavissa vinkkjeä ja tukea sekä oppitunneille että Teams-kanavalla.
 
 Toivomme että tutustutte mahdollisuuksien mukaan etukäteen kunkin aiheen videoihin ja materiaaleihin, jotta voimme tapaamisissa käyttää aikaa myös mm. tehtävien parissa.
 
 
 ### To 21.8. TypeScript-kielen perusteet ja työkalut
 
-[Oppitunnin muistiinpanot](./typescript)
-
-Lisämateriaalina suosittelemme perehtymään lukuun "TypeScriptin perusteet" [typescript-ohjelmointi.github.io](https://typescript-ohjelmointi.github.io/)-sivustolla.
-
-Tehtävä GitHub classroomissa.
+* [Oppitunnin muistiinpanot](./typescript)
+* Lisämateriaalina suosittelemme perehtymään lukuun "TypeScriptin perusteet" [typescript-ohjelmointi.github.io](https://typescript-ohjelmointi.github.io/)-sivustolla.
+* Tehtävä GitHub classroomissa.
 
 
 ### To 28.8. Tyyppien määrittely
 
-TypeScriptin käsittely jatkuu.
-
+* TypeScriptin käsittely jatkuu.
 * Type ja interface
 * Union-tyypit
 * Intersection-tyypit
-
-Tehtävä GitHub classroomissa.
+* Tehtävä GitHub classroomissa.
 
 
 ### To 4.9. JS/TS edistyneet ominaisuudet
@@ -113,23 +111,21 @@ Tehtävä GitHub classroomissa.
 
 ### To 6.11. Seminaarien käynnistys
 
-[Seminaarityön ohjeistus](./seminaari)
+* [Seminaarityön ohjeistus](./seminaari)
 
 
 
 ### To 13.11., 20.11. ja 27.11. Seminaarityön tekemistä
 
-[Seminaarityön ohjeistus](./seminaari)
-
-Yksilöllistä ohjausta Teamsissa tai sopimuksen mukaan kampuksella. Kurssin seminaarivaiheessa ei järjestetä yhteisiä tapaamisia, vaan tarjoamme yksilöllistä ohjausta etukäteen sovittavina ajankohtina.
-
-📥 Seminaariraportin **palautus su 30.11. klo 22 mennessä**.
+* [Seminaarityön ohjeistus](./seminaari)
+* Yksilöllistä ohjausta Teamsissa tai sopimuksen mukaan kampuksella. Kurssin seminaarivaiheessa ei järjestetä yhteisiä tapaamisia, vaan tarjoamme yksilöllistä ohjausta etukäteen sovittavina ajankohtina.
+* 📥 Seminaariraportin **palautus su 30.11. klo 22 mennessä**.
 
 
 
 ### To 4.12. Seminaariesitykset
 
-[Katso seminaarityön ohjeet](./seminaari).
+* [Katso seminaarityön ohjeet](./seminaari).
 
 
 
