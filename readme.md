@@ -69,24 +69,26 @@ Toivomme että tutustutte mahdollisuuksien mukaan etukäteen kunkin aiheen video
 
 
 
-### To 18.9. Serverless-ratkaisut
+### To 18.9. Erilaiset ohjelmointirajapinnat
 
-* https://developers.cloudflare.com/workers/
-* https://hono.dev/
-
-
-### To 25.9. Node.js, npm ja koodin paketoiminen
-
-
-
-### To 2.10. Erilaiset ohjelmointirajapinnat
-
-* REST
+* [What is GraphQL? (Digitransit)](https://digitransit.fi/en/developers/apis/1-routing-api/0-graphql/)
+* [High-frequency positioning (Digitransit)](https://digitransit.fi/en/developers/apis/5-realtime-api/vehicle-positions/high-frequency-positioning/)
+* (REST)
 * GraphQL
 * WebSocket
 * MQTT
 * Webhooks
 * gRPC
+
+
+### To 25.9. Node.js, npm ja pakettien julkaiseminen
+
+
+
+### To 2.10. Serverless-ratkaisut
+
+* https://developers.cloudflare.com/workers/
+* https://hono.dev/
 
 
 
@@ -146,7 +148,7 @@ Liittymisohje kurssin Teams-ryhmään löytyy sähköpostitse lähetetystä tied
 * [Teams-lataussivu](https://teams.microsoft.com/downloads)
 
 
-## Työkalut
+## Työkalut ja asennukset
 
 Kurssilla käytetään lukuisia eri teknologioita ja työkaluja, joten joudut mahdollisesti tekemään erilaisia asennuksia.
 
@@ -154,13 +156,10 @@ Ohjelmistojen asentaminen ja käyttäminen eri käyttöjärjestelmillä poikkeaa
 
 Virtualisoituun ympäristöön tekemäsi asennukset eivät parhaassa tapauksessa vaikuta tietokoneesi normaaliin käyttöön. Käyttämällä kurssin suositusten mukaisia ympäristöjä saat myös todennäköisemmin vertaistukea muilta opiskelijoilta ja opettajilta.
 
-Mikäli sinulla on valmiiksi käytössäsi Linux tai muu Unix-pohjainen käyttöjärjestelmä, kuten macOS, voit käyttää sitä kurssilla. Myös etäyhteydellä käytettävät Linux-ympäristöt, kuten [DigitalOcean](https://www.digitalocean.com/github-students/), [AWS](https://aws.amazon.com/ec2/) tai [Azure](https://azure.microsoft.com/en-us/services/virtual-machines/) voivat sopia kurssin tarkoituksiin, mutta niihin pystymme tarjoamaan vain vähäistä käyttötukea.
-
-Lisää ohjeita löydät kurssin [ensimmäisen viikon materiaalista](00_linux).
-
-⚠ Linux voidaan asentaa myös tietokoneen pääkäyttöjärjestelmäksi tai "dual boot"-vaihtoehdolla nykyisen käyttöjärjestelmän rinnalle, mutta näitä vaihtoehtoja ei kurssin puolesta suositella.
-
-⚠ Kurssin aikana teemme asennuksia mm. Ubuntun `apt`-työkalulla, Noden `npm`-työkalulla, Dockerilla ja VS Codella. Kaikki nämä työkalut lisäävät tietokoneellesi suoritettavaa ohjelmakoodia, jonka yhteydessä tulee aina huomioida myös tietoturva. Asennusten tekeminen erillisessä virtuaalisessa ympäristössä on oiva lisä oman tietokoneesi suojaamiseksi, vaikka olemmekin pyrkineet valitsemaan vain erittäin tunnettuja ja hyvämaineisia ohjelmistoja tälle kurssille.
+> [!WARNING]
+> Kurssin aikana teemme asennuksia mm. Ubuntun `apt`-työkalulla, Noden `npm`-työkalulla, Dockerilla ja VS Codella. Kaikki nämä työkalut lisäävät tietokoneellesi suoritettavaa ohjelmakoodia, jonka yhteydessä tulee aina huomioida myös tietoturva. Ole tarkkana ja asenna vain luotettavista lähteistä peräisin olevia ohjelmistoja. Älä asenna ohjelmistoja, joita et tunne tai joiden tarkoituksesta et ole varma. Tarvittaessa kysy neuvoa kurssin Teams-kanavalla tai tapaamisissa.
+>
+> Asennusten tekeminen erillisessä virtuaalisessa ympäristössä on oiva lisä oman tietokoneesi suojaamiseksi, mutta se ei yksin ratkaise tietoturvaongelmia.
 
 
 ## Kurssin tehtävät
@@ -174,9 +173,9 @@ Sekä kurssin Classroom-tehtäväpalautukset että MS Teams -ryhmä poistetaan v
 
 Kurssi arvioidaan asteikolla 0-5. Kurssin arviointi perustuu viikkoaiheiden yhteydessä suoritettuihin tehtäviin (60 % arvosanasta) sekä kurssin toisella puoliskolla tehtävään seminaarityöhön (40 %).
 
-Kunkin tehtävän tai tehtäväkokonaisuuden painoarvo loppuarvioinnissa määräytyy sen laajuuden mukaan suhteessa muihin tehtäviin ja tehtäväkokonaisuuksiin. Pisteet skaalataan yhteneviksi vasta loppuarvosanaa varten.
+Kunkin viikon tehtävien painoarvo loppuarvioinnissa on lähtökohtaisesti yhtä suuri, mutta mahdollisten laajempien tehtävien painotusta voidaan nostaa. Pisteet skaalataan yhteneviksi vasta loppuarvosanaa varten.
 
-Yksittäinen palauttamatta jäänyt tai arvosanalla 0 arvioitu osasuoritus ei estä seuraavien suoritusten tekemistä, kunhan kokonaisuutena kurssista muodostuu hyväksytty arvosana. Tämä koskee myös seminaarityötä. **Poikkeuksena** tähän on kahden ensimmäisen viikon tehtävät, jotka toimivat kurssille osallistumisen vahvistamisessa.
+Yksittäinen palauttamatta jäänyt tai arvosanalla 0 arvioitu osasuoritus ei estä seuraavien suoritusten tekemistä, kunhan kokonaisuutena kurssista muodostuu hyväksytty arvosana. Tämä koskee myös seminaarityötä. **Poikkeuksena** tähän on tehtävät, jotka toimivat kurssille osallistumisen vahvistamisessa.
 
 
 ### Kurssin keskeyttäminen
