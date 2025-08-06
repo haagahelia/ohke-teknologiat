@@ -44,9 +44,11 @@ Mikäli opiskelet tämän viikon aiheen itsenäisesti, suosittelemme perehtymä�
 
 ## TypeScriptin asentaminen
 
-TypeScript voidaan asentaa joko globaalisti koko käyttöjärjestelmään tai paikallisesti yksittäiseen projektiin. Globaali asennus [jakaa mielipiteitä](https://github.com/loopbackio/loopback.io/issues/509) ja tämän kurssin esimerkeissä asennus tehdään aina paikallisesti. Paikallisen asennuksen etuina koko projekti riippuvuuksineen asentuu kerralla yhdellä komennolla (`npm install`) ja kaikilla kehittäjillä on käytössään sama versio TypeScriptistä. Myös mm. suositut [Vite-](https://vite.dev/) ja [Expo-työkalut](https://expo.dev/) asentavat TypeScriptin paikallisesti kuhunkin projektiin.
+TypeScript voidaan asentaa joko globaalisti koko käyttöjärjestelmään tai paikallisesti yksittäiseen projektiin. Globaali asennus [jakaa mielipiteitä](https://github.com/loopbackio/loopback.io/issues/509) ja tämän kurssin esimerkeissä asennus tehdään aina paikallisesti.
 
-Paikallisen asennuksen seurauksena joudut kirjoittamaan `tsc`-komennon sijasta `npx tsc`, kun haluat käyttää TypeScript-kääntäjää komentorivillä ([npx -- execute npm package binaries](https://www.npmjs.com/package/npx)).
+Paikallisen asennuksen etuina koko projekti riippuvuuksineen asentuu kerralla yhdellä komennolla (`npm install`) ja kaikilla kehittäjillä on käytössään sama versio TypeScriptistä. Myös mm. suositut [Vite-](https://vite.dev/) ja [Expo-työkalut](https://expo.dev/) asentavat TypeScriptin paikallisesti kuhunkin projektiin.
+
+Paikallisen asennuksen jälkeen `tsc`-kääntäjää voidaan käyttää komennolla `npx tsc` ([npx -- execute npm package binaries](https://www.npmjs.com/package/npx)).
 
 > *"TypeScript is available as a package on the npm registry available as "typescript". You will need a copy of Node.js as an environment to run the package. Then you use a dependency manager like npm, yarn or pnpm to download TypeScript into your project."*
 >
@@ -57,10 +59,10 @@ Paikallisen asennuksen seurauksena joudut kirjoittamaan `tsc`-komennon sijasta `
 > *"You can then run the TypeScript compiler using one of the following commands:*"
 >
 > ```
-> $ npm exec tsc
-> $ npx tsc
-> $ yarn tsc
-> $ pnpm tsc
+> npm exec tsc
+> npx tsc
+> yarn tsc
+> pnpm tsc
 > ```
 >
 > https://www.typescriptlang.org/download
@@ -96,14 +98,14 @@ Koska TypeScript ja JavaScript ovat osittain sama asia, monet JS-koodin kehittä
 
 ### Npx
 
-Jos et asentanut [TypeScript-pakettia](https://www.npmjs.com/package/typescript) globaalisti, täytyy se suorittaa paikallisen projektin `node_modules`-hakemistosta. Tämä onnistuu joko komennolla `npm exec tsc` tai lyhyemmin `npx`-komennon avulla:
+Jos et asentanut [TypeScript-pakettia](https://www.npmjs.com/package/typescript) globaalisti, se suoritetaan paikallisen projektin `node_modules`-hakemistosta. Tämä onnistuu joko komennolla `npm exec tsc` tai lyhyemmin `npx`-komennon avulla:
 
 > *"\[npx\] command allows you to run an arbitrary command from an npm package (either one installed locally, or fetched remotely), in a similar context as running it via `npm run`.*"
 >
 > https://docs.npmjs.com/cli/v9/commands/npx
 
 ```bash
-$ npx tsc   # suorittaa `tsc`-komennon, eikä edellytä globaalia asennusta
+npx tsc   # suorittaa `tsc`-komennon, eikä edellytä globaalia asennusta
 ```
 
 `npx`-komennon pitäisi löytyä sinulta valmiiksi, jos sinulla on `npm` asennettuna.
@@ -111,33 +113,50 @@ $ npx tsc   # suorittaa `tsc`-komennon, eikä edellytä globaalia asennusta
 
 ### Ts-node
 
-> *"`ts-node` is a TypeScript execution engine and REPL for Node.js. It JIT transforms TypeScript into JavaScript, enabling you to directly execute TypeScript on Node.js without precompiling. "*
+> *"`ts-node` is a TypeScript execution engine and REPL for Node.js. It JIT transforms TypeScript into JavaScript, enabling you to directly execute TypeScript on Node.js without precompiling."*
 >
 > https://www.npmjs.com/package/ts-node
 
-`ts-node` mahdollistaa TypeScript-koodin suorittamisen ilman etukäteen tehtävää käännösvaihetta:
 
 ```bash
-$ npm install ts-node --save-dev    # asentaa ts-noden paikallisesti
+npm install ts-node --save-dev    # asentaa ts-noden paikallisesti
 
-$ npx ts-node src/skripti.ts        # suorittaa skriptin `src/skripti.ts`
+npx ts-node src/skripti.ts        # suorittaa skriptin `src/skripti.ts`
 
-$ npx ts-node                       # käynnistää ts-noden REPL-tilan
+npx ts-node                       # käynnistää ts-noden REPL-tilan
 ```
+
+`ts-node` mahdollistaa TypeScript-koodin suorittamisen ilman etukäteen tehtävää käännösvaihetta. Se on suosittu ja yksinkertainen työkalu, mutta sille on viime vuosien aikana tullut myös paljon kilpailijoita, kuten [tsx](https://www.npmjs.com/package/tsx). [Node.js:n viimeisimmät versiot tukevat osittain TypeScriptiä](https://nodejs.org/api/typescript.html), mutta toistaiseksi tyyppien tarkastamisen, eri moduulijärjestelmien ja `tsconfig.json`-tiedoston tuen vuoksi on suositeltavaa käyttää työkaluja kuten `ts-node` tai `tsx`.
+
+
+### Tsx
+
+> *"tsx stands for TypeScript Execute and it's a Node.js enhancement to run TypeScript.*
+>
+> *For starters, think of tsx as an alias to node and use it the same way."*
+>
+> https://tsx.is/
+
+```bash
+# https://nodejs.org/api/typescript.html
+npm install --save-dev tsx
+npx tsx your-file.ts 
+```
+
 
 ### Tsc
 
-Jos haluat kääntää kirjoittamasi TypeScript-kielisen ohjelman lähdekoodit JavaScript-kielisiksi lähdekoodeiksi, onnistuu se `tsc`-komennolla (TypeScript compiler):
+Kun haluat kääntää kirjoittamasi TypeScript-kielisen ohjelman lähdekoodit JavaScript-kielisiksi lähdekoodeiksi, onnistuu se `tsc`-komennolla (TypeScript compiler):
 
-```
-$ npx tsc                   # kaikki .ts-tiedostot (edellyttää tsconfig-tiedostoa)
-$ npx tsc helloWorld.ts     # yksi .ts-tiedosto
+```bash
+npx tsc                   # kaikki .ts-tiedostot (edellyttää tsconfig-tiedostoa)
+npx tsc helloWorld.ts     # yksi .ts-tiedosto
 ```
 
 `tsc`-komento kääntää kirjoittamasi TypeScript-tiedostot JavaScript-tiedostoiksi, jotka voidaan suorittaa Node.js:llä tai selaimessa aivan kuten mitkä tahansa `.js`-tiedostot:
 
-```
-$ node helloWorld.js
+```bash
+node helloWorld.js
 ```
 
 
@@ -152,8 +171,9 @@ TypeScript-kääntäjä sekä työkalut, kuten `ts-node`, tukevat lukuisia TS-ko
 `tsconfig.json`-asetustiedostoon voidaan määritellä lukuisia kääntäjän toimintaan vaikuttavia asetuksia. Voit luoda itsellesi uuden `tsconfig.json`-tiedoston `tsc`-komennon avulla:
 
 ```bash
-$ npx tsc --init
-
+npx tsc --init
+```
+```
 Created a new tsconfig.json with:
 
   target: es2016
