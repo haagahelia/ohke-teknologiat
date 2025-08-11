@@ -9,7 +9,7 @@ Opettajina kurssilla toimivat Teemu Havulinna ja Ismo Harjunmaa (etunimi.sukunim
 
 ## Linkit
 
-* [Opintojaksokuvaus](https://opinto-opas.haaga-helia.fi/course_unit/SOF009AS3A)
+* [Opintojaksokuvaus](https://opinto-opas.haaga-helia.fi/course/SOF009AS3A)
 * [Teams](https://teams.microsoft.com/)
 
 
@@ -69,7 +69,11 @@ Toivomme että tutustutte mahdollisuuksien mukaan etukäteen kunkin aiheen video
 
 
 
-### To 18.9. Erilaiset ohjelmointirajapinnat
+### To 18.9. Node.js, npm ja pakettien julkaiseminen
+
+
+
+### To 25.9. Erilaiset ohjelmointirajapinnat
 
 * [What is GraphQL? (Digitransit)](https://digitransit.fi/en/developers/apis/1-routing-api/0-graphql/)
 * [High-frequency positioning (Digitransit)](https://digitransit.fi/en/developers/apis/5-realtime-api/vehicle-positions/high-frequency-positioning/)
@@ -81,14 +85,13 @@ Toivomme että tutustutte mahdollisuuksien mukaan etukäteen kunkin aiheen video
 * gRPC
 
 
-### To 25.9. Node.js, npm ja pakettien julkaiseminen
-
-
 
 ### To 2.10. Serverless-ratkaisut
 
 * https://developers.cloudflare.com/workers/
 * https://hono.dev/
+* https://chanfana.pages.dev/examples-and-recipes
+* [Learn Cloudflare Workers 101 - Full Course for Beginners (Cloudflare Developers at YouTube)](https://youtu.be/H7Qe96fqg1M)
 
 
 
