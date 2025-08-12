@@ -45,19 +45,19 @@ Toivomme että tutustutte mahdollisuuksien mukaan etukäteen kunkin aiheen video
 
 ### To 21.8. TypeScript-kielen perusteet ja työkalut
 
+* [TypeScript Tooling in 5 minutes](https://www.typescriptlang.org/docs/handbook/typescript-tooling-in-5-minutes.html)
+* [TypeScript for JavaScript Programmers](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
+* [Intro to the TSConfig Reference](https://www.typescriptlang.org/tsconfig/)
 * [Oppitunnin muistiinpanot](./typescript)
-* Lisämateriaalina suosittelemme perehtymään lukuun "TypeScriptin perusteet" [typescript-ohjelmointi.github.io](https://typescript-ohjelmointi.github.io/)-sivustolla.
+* ["TypeScriptin perusteet" (typescript-ohjelmointi.github.io)](https://typescript-ohjelmointi.github.io/)-sivustolla.
 * Tehtävä GitHub classroomissa.
 
 
 ### To 28.8. Tyyppien määrittely
 
 * TypeScriptin käsittely jatkuu.
-* Type ja interface
-* Union-tyypit
-* Intersection-tyypit
-* Tehtävä GitHub classroomissa.
-
+* [Everyday Types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)
+* [Creating Types from Types](https://www.typescriptlang.org/docs/handbook/2/types-from-types.html)
 
 ### To 4.9. JS/TS edistyneet ominaisuudet
 
