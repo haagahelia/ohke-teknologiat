@@ -65,7 +65,7 @@ Toivomme että tutustutte mahdollisuuksien mukaan etukäteen kunkin aiheen video
 * Keys ja Mapped types
 
 
-### To 11.9. Datan visualisointi
+### To 11.9. Datan visualisointi: Chart.JS ja Plotly
 
 
 
@@ -106,7 +106,7 @@ Toivomme että tutustutte mahdollisuuksien mukaan etukäteen kunkin aiheen video
 
 
 
-### To 23.10. Datan visualisointi: Chart.JS ja Plotly
+### To 23.10. API:en käyttö ja dokumentointi: OpenAPI
 
 
 
