@@ -106,7 +106,7 @@ Toivomme että tutustutte mahdollisuuksien mukaan etukäteen kunkin aiheen video
 
 
 
-### To 23.10. Data visualisointi: Chart.JS ja Plotly
+### To 23.10. Datan visualisointi: Chart.JS ja Plotly
 
 
 
