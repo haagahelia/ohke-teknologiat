@@ -106,9 +106,11 @@ Toivomme että tutustutte mahdollisuuksien mukaan etukäteen kunkin aiheen video
 
 
 
-### To 23.10. API:en käyttö ja dokumentointi: OpenAPI
+### To 23.10. HTTP API:en käyttö ja dokumentointi: OpenAPI
 
-
+* https://www.openapis.org/what-is-openapi
+* https://swagger.io/specification/
+* [Swagger UI Tutorial for REST API Developers](https://youtu.be/GxAu8UjLfbM)
 
 ### To 30.10. Seminaarien käynnistys (huom. poikkeava luokkatila)
 
