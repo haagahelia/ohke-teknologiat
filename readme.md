@@ -112,15 +112,11 @@ Toivomme että tutustutte mahdollisuuksien mukaan etukäteen kunkin aiheen video
 
 ### To 30.10. Seminaarien käynnistys (huom. poikkeava luokkatila)
 
-
-
-### To 6.11., 13.11. ja 20.11. Seminaarien käynnistys
-
 * [Seminaarityön ohjeistus](./seminaari)
 
 
 
-### To 13.11., 20.11. ja 27.11. Seminaarityön tekemistä
+### To 6.11., 13.11. ja 20.11. Seminaarityön tekemistä
 
 * [Seminaarityön ohjeistus](./seminaari)
 * Yksilöllistä ohjausta Teamsissa tai sopimuksen mukaan kampuksella. Kurssin seminaarivaiheessa ei järjestetä yhteisiä tapaamisia, vaan tarjoamme yksilöllistä ohjausta etukäteen sovittavina ajankohtina.
