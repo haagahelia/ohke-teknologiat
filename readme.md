@@ -110,7 +110,8 @@ Toivomme että tutustutte mahdollisuuksien mukaan etukäteen kunkin aiheen video
 
 * https://www.openapis.org/what-is-openapi
 * https://swagger.io/specification/
-* [Swagger UI Tutorial for REST API Developers](https://youtu.be/GxAu8UjLfbM)
+* [Swagger UI Tutorial for REST API Developers (Spring Boot)](https://youtu.be/GxAu8UjLfbM)
+* [Swagger API documentation tutorial for beginners (JS&TS)](https://youtu.be/dhMlXoTD3mQ)
 
 ### To 30.10. Seminaarien käynnistys (huom. poikkeava luokkatila)
 
