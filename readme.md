@@ -110,11 +110,11 @@ Toivomme että tutustutte mahdollisuuksien mukaan etukäteen kunkin aiheen video
 
 
 
-### To 30.10. TBD (huom. poikkeava luokkatila)
+### To 30.10. Seminaarien käynnistys (huom. poikkeava luokkatila)
 
 
 
-### To 6.11. Seminaarien käynnistys
+### To 6.11., 13.11. ja 20.11. Seminaarien käynnistys
 
 * [Seminaarityön ohjeistus](./seminaari)
 
@@ -124,17 +124,17 @@ Toivomme että tutustutte mahdollisuuksien mukaan etukäteen kunkin aiheen video
 
 * [Seminaarityön ohjeistus](./seminaari)
 * Yksilöllistä ohjausta Teamsissa tai sopimuksen mukaan kampuksella. Kurssin seminaarivaiheessa ei järjestetä yhteisiä tapaamisia, vaan tarjoamme yksilöllistä ohjausta etukäteen sovittavina ajankohtina.
-* 📥 Seminaariraportin **palautus su 30.11. klo 22 mennessä**.
+* 📥 Seminaariraportin **palautus su 23.11. klo 22 mennessä**.
 
 
 
-### To 4.12. Seminaariesitykset
+### To 27.11. Seminaariesitykset
 
 * [Katso seminaarityön ohjeet](./seminaari).
 
 
 
-### To 11.12. Loput Seminaariesitykset tai varakerta
+### To 4.12. Loput Seminaariesitykset tai varakerta
 
 
 
