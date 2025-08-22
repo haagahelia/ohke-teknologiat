@@ -58,12 +58,8 @@ More text for details.
 
 Look into the *Markdown* source code for how to add images linked from internet, this is the general architecture of the Finnish Finna service: 
 
-![Alternative text for e.g. people with impaired vision](https://www.kiwi.fi/download/attachments/200048777/Ohjelmistoarkkitehtuuri.png?version=1&modificationDate=1607524001948&api=v2)
+![Alternative text for e.g. people with impaired vision](./images/azure-architecture-example.drawio.svg)
 
-
-...or taken from local 'images' folder, like this complicated Wikipedia image of server architectures: 
-
-![Wikipedia's sample picture of server architecture](images/1200px-Wikimedia_Server_Architecture_(simplified).svg.png)
 
 Note: You can invoke the list of the other files in VS Code when you type ctrl+space or type in the dot/"the full stop" character  .
 

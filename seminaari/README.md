@@ -1,12 +1,12 @@
 # Seminaari
 
-Seminaarivaiheessa jokainen opiskelija valitsee kurssin aiheista itseään eniten kiinnostavan ja tekee siihen liittyvän seminaaritehtävän. Seminaaritehtävän voi valita joko alta löytyvistä ehdotuksista, tai seminaaritehtävän aihetta voi ehdottaa myös itse. Seminaaritehtävä voi liittyvä läheisesti opiskelijan ohjelmistoprojekti 2 -projektiin, ja se on jopa suositeltavaa.
+Seminaarivaiheessa jokainen opiskelija valitsee omasta näkökulmastaan kiinnostavimman ohjelmistokehitykseen liittyvän aiheen ja laatii siihen liittyvän seminaaritehtävän. Vaihtoehtoja ovat joko [alla listatut ehdotukset](#Seminaariaiheita) tai täysin oma aihe, joka kuitenkin kannattaa varmistaa opettajilta. Kannattaa huomioida, että seminaaritehtävä voi tukea hyvin ohjelmistoprojekti 2:ta – itse asiassa se on jopa suositeltavaa!
 
-Saman seminaariaiheen valinneet opiskelijat osallistuvat sen aiheen yhteiseen seminaariin, jossa esitellään, analysoidaan ja kommentoidaan myös muiden opiskelijoiden seminaaritöitä. Olette lämpimästi tervetulleita osallistumaan myös muiden seminaariaiheiden tilaisuuksiin oman seminaarinne ulkopuolella!
+Opiskelijat, jotka valitsevat saman aihepiirin, osallistuvat yhteiseen seminaaritilaisuuteen, jossa esitellään, analysoidaan ja kommentoidaan muiden opiskelijoiden seminaaritöitä. Kannustamme myös osallistumaan muiden aihepiirien seminaareihin oman seminaarityön ulkopuolella!
 
-Esiteltävät työt valitaan siten, että kokonaisuudesta saadaan monipuolinen ja tasapainoinen, joten työsi mahdollinen valitsematta jääminen ei ole merkki työn laadusta.
+Esiteltävät työt valitaan siten, että kokonaisuudesta saadaan monipuolinen ja tasapainoinen. Joten jos työsi ei valikoidukaan esitettäväksi, se ei millään tavalla heijasta työn laatua.
 
-Seminaarityön laajuuden on tarkoitus olla noin 20 tuntia työtä.
+Seminaarityön laajuus on suurinpiirtein 20 tuntia.
 
 
 ## Seminaaritehtävän raportointi ja palauttaminen
@@ -14,8 +14,7 @@ Seminaarityön laajuuden on tarkoitus olla noin 20 tuntia työtä.
 Raportoi seminaarityösi esitystä ja arviointia varten raportointiohjeiden mukaisesti. Raportointiohjeet ja -pohjat alla. Valitse vain yksi muoto, Markdown, Word (=> tallenna PDF:ksi ennen julkaisua) tai Powerpoint (=> PDF):
 
 * [Markdown-pohja, jota suosittelemme](markdown_file1.md). Tekstimuotoisena se pysyy Git-versionhallinnassa kunnossa, jopa usean kehittäjän sitä muokatessa.
-* [Ohje & dokumenttipohja wordiin](SeminaarityonRapotointiohjeWord.docx),
-* [Powerpoint-esityksessä muutama vinkki sisällöksi ja kait siitä saisi pohjankin](Ohjelmistokehityksen%20teknologioita%20seminaariraportin%20pohja%201.pptx),
+
 
 **Video**
 
