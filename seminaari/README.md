@@ -11,16 +11,18 @@ Seminaarityön laajuus on suurinpiirtein 20 tuntia.
 
 ## Seminaaritehtävän raportointi ja palauttaminen
 
-Raportoi seminaarityösi esitystä ja arviointia varten raportointiohjeiden mukaisesti. Raportointiohjeet ja -pohjat alla. Valitse vain yksi muoto, Markdown, Word (=> tallenna PDF:ksi ennen julkaisua) tai Powerpoint (=> PDF):
+Raportoi seminaarityösi esitystä ja arviointia varten markdown tai GitHub Pages -muodossa. Jos käytät markdown -tapaa, nimeä tiedosto esimerkiksi seminaarityo.md tai seminaari_raportti.md ja laita tiedosto omaan GitHub-repositorioosi ja palauta linkki. Tee lähdeviittaukset asiallisesti noudattaen [kirjaston ohjeita](https://libguides.haaga-helia.fi/lahdeviittaamisen-tueksi).
 
 * [Markdown-pohja, jota suosittelemme](markdown_file1.md). Tekstimuotoisena se pysyy Git-versionhallinnassa kunnossa, jopa usean kehittäjän sitä muokatessa.
 
 
-**Video**
+**Nauhoita näytöntallennusvideo**
 
 Raportin lisäksi nauhoita noin 5 minuuttia kestävä video, jossa esittelet työsi teknistä toteutusta raportointiohjeen mukaisesti. Videolla ei ole tarpeen käsitellä tai näyttää raporttia, vaan voitte olettaa katsojan jo tuntevan sen sisällön. Videon tekemiseksi suosittelemme [Microsoft Stream](https://stream.office.com) -palvelua, jossa sekä videon tallennus että jakaminen onnistuu pelkän selaimen avulla. Katso [ohje tallenteen tekemiseksi MS Streamissa](https://support.microsoft.com/en-gb/office/microsoft-stream-screen-recorder-e98d8791-2b82-4dc7-889a-959724e3cbad). Kurssilla on käytetty hyvin tuloksin myös lukuisia muita videonkaappausratkaisuja, joten voit valita itsellesi parhaiten sopivan.
 
 Voit julkaista luomasi videon edellä mainitussa Microsoft Stream -palvelussa tai valitsemassasi video- tai tiedostonjakopalvelussa, kunhan saat lisättyä raporttiisi suoran linkin lopputulokseesi (YouTube, OneDrive, Google Drive...). Voit myös halutessasi palauttaa videon sellaisenaan tiedostona Teamsin seminaaritehtävään, mikäli Teams ei estä palautusta esim. liian suuren koon vuoksi.
+
+Muista lisätä katseluoikeudet joko "ohjelmistokehityksen teknologioita" Teams-ryhmälle tai vain opettajille.
 
 
 **Seminaarin arviointi ja esitykset**
