@@ -82,7 +82,7 @@ Open the markdown file in GitHub.com and use it to copy the link that you need i
 just keep the part starting with the #
 
 ### Link to second file in same folder
-[Link to the second file](markdown_file2.md)
+[Link to the second file](README.md)
 
 
 ## One "official" source for markdown syntax
@@ -90,5 +90,3 @@ just keep the part starting with the #
 [CommonMark.org Markdown in 60 seconds](https://commonmark.org/help/)
 
 [CommonMark.org Markdown tutorial in 10 minutes](https://commonmark.org/help/tutorial/)
-
-Though, these are pieces [Markdown syntax that did not work](markdown_not_supported_syntax.md) in VS Code markdown preview nor in GitHub version of the Markdown.
