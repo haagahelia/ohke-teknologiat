@@ -11,7 +11,7 @@ Seminaarityön laajuus on suurinpiirtein 20 tuntia.
 
 ## Seminaaritehtävän raportointi ja palauttaminen
 
-Raportoi seminaarityösi esitystä ja arviointia varten markdown tai GitHub Pages -muodossa. Jos käytät markdown -tapaa, nimeä tiedosto esimerkiksi seminaarityo.md tai seminaari_raportti.md ja laita tiedosto omaan GitHub-repositorioosi ja palauta linkki. Tee lähdeviittaukset asiallisesti noudattaen [kirjaston ohjeita](https://libguides.haaga-helia.fi/lahdeviittaamisen-tueksi).
+Raportoi seminaarityösi esitystä ja arviointia varten markdown tai GitHub Pages -muodossa. Jos käytät markdown -tapaa, nimeä tiedosto esimerkiksi seminaarityo.md tai seminaari_raportti.md ja laita tiedosto omaan GitHub-repositorioosi ja palauta linkki. Tee lähdeviittaukset asiallisesti noudattaen [kirjaston ohjeita](https://libguides.haaga-helia.fi/lahdeviittaamisen-tueksi/tekstiviitteet-ja-lahdeluettelo).
 
 * [Markdown-pohja, jota suosittelemme](markdown_file1.md). Tekstimuotoisena se pysyy Git-versionhallinnassa kunnossa, jopa usean kehittäjän sitä muokatessa.
 
