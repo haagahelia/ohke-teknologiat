@@ -56,6 +56,7 @@ More text for details.
 
 <hr />
 
+```mermaid
 classDiagram
     Animal <|-- Duck
     Animal <|-- Fish
@@ -64,7 +65,7 @@ classDiagram
     Animal : +String gender
     Animal: +isMammal()
     Animal: +mate()
-
+```
 <hr />
 
 Look into the *Markdown* source code for how to add images linked from internet, this is the general architecture of the Finnish Finna service: 
