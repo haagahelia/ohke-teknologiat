@@ -55,9 +55,8 @@ More text for details.
 </details>
 
 <hr />
-#Drawing diagrams in _Markdown_
 
-You can check more information of diagrams and maps from [GitHub documentation](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams). Here is one basic example of class diagram done using Mermaid-syntax:
+Note 1: You can check more information of diagrams and maps from [GitHub documentation](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams). Here is one basic example of class diagram done using Mermaid-syntax:
 
 ```mermaid
 classDiagram
