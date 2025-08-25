@@ -56,6 +56,17 @@ More text for details.
 
 <hr />
 
+classDiagram
+    Animal <|-- Duck
+    Animal <|-- Fish
+    Animal <|-- Zebra
+    Animal : +int legs
+    Animal : +String gender
+    Animal: +isMammal()
+    Animal: +mate()
+
+<hr />
+
 Look into the *Markdown* source code for how to add images linked from internet, this is the general architecture of the Finnish Finna service: 
 
 ![Alternative text for e.g. people with impaired vision](./images/azure-architecture-example.drawio.svg)
