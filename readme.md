@@ -53,16 +53,21 @@ Toivomme että tutustutte mahdollisuuksien mukaan etukäteen kunkin aiheen video
 * Tehtävä GitHub classroomissa.
 
 
-### To 28.8. Tyyppien määrittely
+### To 28.8. TypeScript jatkuu: tyyppien määrittely
 
 * TypeScriptin käsittely jatkuu.
 * [Everyday Types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)
 * [Creating Types from Types](https://www.typescriptlang.org/docs/handbook/2/types-from-types.html)
+* Tehtävä GitHub classroomissa.
 
-### To 4.9. JS/TS edistyneet ominaisuudet
+
+### To 4.9. TypeScriptin edistyneet ominaisuudet
 
 * Geneeriset tyypit
 * Keys ja Mapped types
+* Jest-testaus
+* Express-palvelin
+* Tehtävä GitHub classroomissa.
 
 
 ### To 11.9. Datan visualisointi: Chart.JS ja Plotly
