@@ -67,6 +67,10 @@ Toivomme että tutustutte mahdollisuuksien mukaan etukäteen kunkin aiheen video
 
 ### To 11.9. Datan visualisointi: Chart.JS ja Plotly
 
+* Kattava [opas](https://www.chartjs.org/docs/latest/) Chart.js:n käytöstä.
+* Yksinkertaisempi [esittely](https://www.w3schools.com/ai/ai_chartjs.asp) Chart.js:n kaaviotyypeistä ja käyttötavasta.
+* [Esimerkkejä ja ohjeita](https://plotly.com/python/) interaktiivisten kaavioiden luomiseen Pythonilla.
+* [Video-opastus](https://www.youtube.com/watch?v=_b2KXL0wHQg) Plotlyn työvälineisiin.
 
 
 ### To 18.9. Node.js, npm ja pakettien julkaiseminen
