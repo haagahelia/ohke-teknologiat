@@ -45,24 +45,35 @@ Toivomme että tutustutte mahdollisuuksien mukaan etukäteen kunkin aiheen video
 
 ### To 21.8. TypeScript-kielen perusteet ja työkalut
 
+* [Oppitunnin muistiinpanot](./typescript/1_johdanto.md)
+
 * [TypeScript Tooling in 5 minutes](https://www.typescriptlang.org/docs/handbook/typescript-tooling-in-5-minutes.html)
 * [TypeScript for JavaScript Programmers](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
 * [Intro to the TSConfig Reference](https://www.typescriptlang.org/tsconfig/)
-* [Oppitunnin muistiinpanot](./typescript)
 * ["TypeScriptin perusteet" (typescript-ohjelmointi.github.io)](https://typescript-ohjelmointi.github.io/)-sivustolla.
 * Tehtävä GitHub classroomissa.
 
 
-### To 28.8. Tyyppien määrittely
+### To 28.8. TypeScript jatkuu: tyyppien määrittely
+
+* [Oppitunnin muistiinpanot](./typescript/2_tyypit.md)
 
 * TypeScriptin käsittely jatkuu.
 * [Everyday Types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)
 * [Creating Types from Types](https://www.typescriptlang.org/docs/handbook/2/types-from-types.html)
+* Tehtävä GitHub classroomissa.
 
-### To 4.9. JS/TS edistyneet ominaisuudet
+
+### To 4.9. TypeScriptin edistyneet ominaisuudet
+
+* [Oppitunnin muistiinpanot](./typescript/3_soveltaminen.md)
+* [Oppitunnin koodirepositorio](https://github.com/ohjelmistokehitys/ts-oppitunti-2025)
 
 * Geneeriset tyypit
 * Keys ja Mapped types
+* Jest-testaus
+* Express-palvelin
+* Tehtävä GitHub classroomissa.
 
 
 ### To 11.9. Datan visualisointi: Chart.JS ja Plotly
