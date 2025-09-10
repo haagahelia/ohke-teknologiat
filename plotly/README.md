@@ -32,3 +32,87 @@ Shinylive-palvelin toimii ainoastaan **staattisena tiedostopalvelimena**, eikä 
 
 * [Shinylive: Shiny + WebAssembly – Shiny for Python - Posit](https://shiny.posit.co/py/get-started/shinylive.html)
 * [How to Run Shiny for Python Apps Without a Python Server](https://www.appsilon.com/post/shiny-for-python-shinylive)
+
+
+Loistavaa! Teen sinulle nyt **yksityiskohtaisen ohjeistuksen opiskelijoille**, jossa käydään läpi askel askeleelta, miten tehtävä voidaan tehdä: CSV-datan lukemisesta Shiny + Plotly -kaavion tekemiseen.
+
+---
+
+# Tehtävän ohjeistus: Väestökaavioiden tekeminen Shinyllä ja Plotlyllä
+
+### **Tavoite**
+
+Tehtävänä on tehdä interaktiivinen Python-Shiny-sovellus, jossa käyttäjä voi valita maan ja nähdä sen väestön kehityksen vuosien yli Plotly-kuvaajana.
+
+CSV-datana käytetään tiedostoa GM-population-dataset (gm_pop.csv), jossa sarakkeet ovat:
+
+```
+geo;name;1800;1801;1802;...;2100
+afg;Afghanistan;3280000;3280000;3280000;...
+```
+
+---
+
+## **Vaihe 1: Tuo tarvittavat kirjastot**
+
+```python
+import pandas as pd
+import plotly.express as px
+from shiny import App, ui, render
+```
+
+* `pandas` → datan käsittely
+* `plotly.express` → kaavioiden piirtäminen
+* `shiny` → interaktiivinen web-sovellus
+
+---
+
+## **Vaihe 2: Lue CSV ja tarkista data**
+
+```python
+# Huom: CSV:n erotin on puolipiste
+df = pd.read_csv("data.csv", sep=";")
+
+# Tarkista sarakkeet ja muutama rivi
+print(df.columns[:10])
+print(df.head())
+```
+
+Tarkista, että ensimmäiset sarakkeet ovat `"geo"`, `"name"` ja sen jälkeen vuosiluvut.
+
+---
+
+## **Vaihe 3: Etsi vuosikolumnit ja muunna pitkäksi muodoksi**
+
+```python
+import re
+
+# Valitse sarakkeet, jotka ovat nelinumeroisia vuosia
+year_columns = [row for row in dff if re.fullmatch(r"\d{4}", row)]
+print(year_columns)
+```
+
+---
+
+## **Vaihe 4: Tee Shiny-käyttöliittymä**
+
+```python
+with ui.layout_columns():
+    ...
+    @render_plotly
+    def plot_pop():
+        infile = Path(__file__).parent / "gm_pop.csv"
+        df = pandas.read_csv(infile, sep=";")
+        dff = df[df["name"] == input.country()]
+        year_columns = [row for row in dff if re.fullmatch(r"\d{4}", row)]
+        df_long = dff.melt(
+            id_vars=["geo", "name"],   # nämä pysyvät riveillä
+            value_vars=year_columns,   # nämä sarakkeet muutetaan riveiksi
+            var_name="year", 
+            value_name="population"
+        )
+        return px.scatter(df_long, x=year_columns, y="population", title=f"{input.country()} - Väestönmäärä")
+```
+
+* `ui.input_select` → alasvetovalikko maiden valitsemiseen
+* `ui.output_ui` → paikka, johon kaavio renderöidään
