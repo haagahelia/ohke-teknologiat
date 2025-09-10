@@ -17,7 +17,7 @@ def gapminder():
 
 
 
-ui.page_opts(title="Filling layout", fillable=True)
+ui.page_opts(title="Valtion statistiikka", fillable=False)
 
 ui.input_select(
     "country",
