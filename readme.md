@@ -86,6 +86,9 @@ Toivomme että tutustutte mahdollisuuksien mukaan etukäteen kunkin aiheen video
 
 ### To 18.9. Node.js, npm ja pakettien julkaiseminen
 
+* [Oppitunnin esimerkkiprojekti (GitHub)](https://github.com/ohjelmistokehitys/time-tools/)
+* [Oppitunnin esimerkkiprojekti (npm)](https://www.npmjs.com/package/@ohjelmistokehitys/time-tools)
+* [Npm docs: Packages and modules](https://docs.npmjs.com/packages-and-modules)
 
 
 ### To 25.9. Erilaiset ohjelmointirajapinnat
