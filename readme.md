@@ -95,13 +95,17 @@ Toivomme että tutustutte mahdollisuuksien mukaan etukäteen kunkin aiheen video
 
 * [What is GraphQL? (Digitransit)](https://digitransit.fi/en/developers/apis/1-routing-api/0-graphql/)
 * [High-frequency positioning (Digitransit)](https://digitransit.fi/en/developers/apis/5-realtime-api/vehicle-positions/high-frequency-positioning/)
-* (REST)
-* GraphQL
-* WebSocket
-* MQTT
-* Webhooks
-* gRPC
+* REST, GraphQL, WebSocket, MQTT, Webhooks
 
+Harjoitukset:
+
+* https://github.com/ohjelmistokehitys/async-music-webapp
+* https://github.com/ohjelmistokehitys/graphql-routeplanner
+
+Videot:
+
+* [GraphQL Explained in 100 Seconds](https://www.youtube.com/watch?v=eIQh02xuVw4) by Fireship *2:22*
+* [GraphQL Client Tutorial With Fetch](https://www.youtube.com/watch?v=0ZJI4cBS4JM) by Web Dev Simplified *15:37*
 
 
 ### To 2.10. Serverless-ratkaisut
