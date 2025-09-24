@@ -172,14 +172,12 @@ Liittymisohje kurssin Teams-ryhmään löytyy sähköpostitse lähetetystä tied
 
 Kurssilla käytetään lukuisia eri teknologioita ja työkaluja, joten joudut mahdollisesti tekemään erilaisia asennuksia.
 
-Ohjelmistojen asentaminen ja käyttäminen eri käyttöjärjestelmillä poikkeaa toisistaan merkittävästi, minkä lisäksi saman ohjelmiston eri versiot toimivat joskus hyvin eri tavoilla. Asennus- ja yhteensopivuusongelmien minimoimiseksi kurssilla suositellaan vahvasti esimerkiksi [WSL2-ympäristön](https://learn.microsoft.com/en-us/windows/wsl/install), [Docker-konttien](https://docs.docker.com/language/nodejs/develop/), [GitHub codespacen](https://github.com/features/codespaces) tai oman erillisen [Linux-virtuaalikoneen](https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox#1-overview) käyttöä kurssin tehtäviä tehdessäsi.
+Ohjelmistojen asentaminen ja käyttäminen eri käyttöjärjestelmillä poikkeaa toisistaan merkittävästi, minkä lisäksi saman ohjelmiston eri versiot toimivat joskus hyvin eri tavoilla. Asennus- ja yhteensopivuusongelmien minimoimiseksi kurssilla suositellaan vahvasti esimerkiksi [Docker-konttien](https://docs.docker.com/language/nodejs/develop/), [GitHub codespacen](https://github.com/features/codespaces), [WSL2-ympäristön](https://learn.microsoft.com/en-us/windows/wsl/install) tai oman erillisen [Linux-virtuaalikoneen](https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox#1-overview) käyttöä kurssin tehtäviä tehdessäsi.
 
-Virtualisoituun ympäristöön tekemäsi asennukset eivät parhaassa tapauksessa vaikuta tietokoneesi normaaliin käyttöön. Käyttämällä kurssin suositusten mukaisia ympäristöjä saat myös todennäköisemmin vertaistukea muilta opiskelijoilta ja opettajilta.
+Kontitettuun tai virtualisoituun ympäristöön tekemäsi asennukset eivät parhaassa tapauksessa vaikuta tietokoneesi normaaliin käyttöön. Käyttämällä kurssin suositusten mukaisia ympäristöjä saat myös todennäköisemmin vertaistukea muilta opiskelijoilta ja opettajilta.
 
 > [!WARNING]
 > Kurssin aikana teemme asennuksia mm. Ubuntun `apt`-työkalulla, Noden `npm`-työkalulla, Dockerilla ja VS Codella. Kaikki nämä työkalut lisäävät tietokoneellesi suoritettavaa ohjelmakoodia, jonka yhteydessä tulee aina huomioida myös tietoturva. Ole tarkkana ja asenna vain luotettavista lähteistä peräisin olevia ohjelmistoja. Älä asenna ohjelmistoja, joita et tunne tai joiden tarkoituksesta et ole varma. Tarvittaessa kysy neuvoa kurssin Teams-kanavalla tai tapaamisissa.
->
-> Asennusten tekeminen erillisessä virtuaalisessa ympäristössä on oiva lisä oman tietokoneesi suojaamiseksi, mutta se ei yksin ratkaise tietoturvaongelmia.
 
 
 ## Kurssin tehtävät
@@ -187,6 +185,8 @@ Virtualisoituun ympäristöön tekemäsi asennukset eivät parhaassa tapauksessa
 Kurssilla tehdään viikoittaisia tehtäviä, joiden arvioinnissa hyödynnetään mm. [GitHub classroom -palvelua](https://classroom.github.com/) sekä MS Teamsia.
 
 Sekä kurssin Classroom-tehtäväpalautukset että MS Teams -ryhmä poistetaan vaaditun säilytysajan päätyttyä. Jos haluat säilyttää kurssilla työstämäsi tehtävien ratkaisut pidempään, [teethän repositorioistasi kopiot omalle käyttäjätunnuksellesi GitHubissa](https://www.google.com/search?q=git+clone+and+push+to+new+repo). Vaihtoehtoisesti voit säilyttää tehtäviesi ratkaisut paikallisesti omilla laitteillasi.
+
+**Tehtävät tulee palauttaa määräaikaan mennessä**, jotta kaikki pysyvät samassa tahdissa ja työskentely etenee sujuvasti. Jos et pysty palauttamaan tehtävää ajoissa [ylivoimaisen esteen](https://fi.wikipedia.org/wiki/Force_majeure) vuoksi, olethan opettajiin yhteydessä etukäteen.
 
 
 ## Arviointi
