@@ -1,74 +1,83 @@
 # Seminaari
 
-Seminaarivaiheessa jokainen opiskelija valitsee omasta näkökulmastaan kiinnostavimman ohjelmistokehitykseen liittyvän aiheen ja laatii siihen liittyvän seminaaritehtävän. Vaihtoehtoja ovat joko [alla listatut ehdotukset](#Seminaariaiheita) tai täysin oma aihe, joka kuitenkin kannattaa varmistaa opettajilta. Kannattaa huomioida, että seminaaritehtävä voi tukea hyvin ohjelmistoprojekti 2:ta – itse asiassa se on jopa suositeltavaa!
+Seminaarivaiheessa jokainen opiskelija valitsee omasta näkökulmastaan kiinnostavimman ohjelmistokehitykseen liittyvän aiheen ja laatii siihen liittyvän itsenäisen seminaaritehtävän. 
 
-Opiskelijat, jotka valitsevat saman aihepiirin, osallistuvat yhteiseen seminaaritilaisuuteen, jossa esitellään, analysoidaan ja kommentoidaan muiden opiskelijoiden seminaaritöitä. Kannustamme myös osallistumaan muiden aihepiirien seminaareihin oman seminaarityön ulkopuolella!
+Vaihtoehtoja ovat joko [alla listatut ehdotukset](#Seminaariaiheita) tai täysin oma aihe, joka kuitenkin kannattaa varmistaa opettajilta. Kannattaa huomioida, että seminaaritehtävä voi tukea hyvin ohjelmistoprojekti 2:ta – itse asiassa se on jopa suositeltavaa!
 
-Esiteltävät työt valitaan siten, että kokonaisuudesta saadaan monipuolinen ja tasapainoinen. Joten jos työsi ei valikoidukaan esitettäväksi, se ei millään tavalla heijasta työn laatua.
+Opiskelijat, jotka valitsevat saman aihepiirin, osallistuvat yhteiseen seminaaritilaisuuteen, jossa esitellään, analysoidaan ja kommentoidaan muiden opiskelijoiden seminaaritöitä. Kannustamme myös osallistumaan muiden aihepiirien seminaareihin oman seminaarityön ulkopuolella. Esiteltävät työt valitaan siten, että kokonaisuudesta saadaan monipuolinen ja tasapainoinen. Joten jos työsi ei valikoidu esitettäväksi, se ei millään tavalla heijasta työn laatua.
 
-Seminaarityön laajuus on suurinpiirtein 20 tuntia.
+Koska kurssi järjestetään yhdistellen eri osallistumistapoja, ei itse seminaaritilaisuuteen osallistuminen ole pakollista. Seminaariesityksellä ei ole myöskään erillistä osuutta arvioinnissa, paitsi jos esityksessä käy ilmi työn kannalta uusia positiivisia seikkoja, jotka eivät ole tulleet esiin työn raportissa.
+
+Seminaarityön laajuus on noin 20 tuntia työtä.
+
+
+## Seminaarin vaiheet
+
+1. Seminaarien ohjeistus oppitunnilla
+2. Oman seminaariaiheen ilmoittaminen Teams-kanavalle
+3. Seminaarityön tekoa ja tarvittaessa ohjausta Teamsissa
+4. Seminaarin raporttien ja videoiden palauttaminen Teamsiin
+5. Seminaariesitykset
+
+Tarkemmat päivämäärät löydät kurssin GitHubin etusivulta sekä palautettavien tehtävien osalta Teamsista.
 
 
 ## Seminaaritehtävän raportointi ja palauttaminen
 
-Raportoi seminaarityösi esitystä ja arviointia varten markdown tai GitHub Pages -muodossa. Jos käytät markdown -tapaa, nimeä tiedosto esimerkiksi seminaarityo.md tai seminaari_raportti.md ja laita tiedosto omaan GitHub-repositorioosi ja palauta linkki. Tee lähdeviittaukset asiallisesti noudattaen [kirjaston ohjeita](https://libguides.haaga-helia.fi/lahdeviittaamisen-tueksi/tekstiviitteet-ja-lahdeluettelo).
-Tee työstäsi UML-kaavio. Kaavio voidaan tehdä suoraan markdown:iin. GitHubin Markdown-renderöinti tukee seuraavia UML-kaaviotyyppejä [Mermaid](https://github.com/mermaid-js/mermaid)-syntaksilla:
-- Luokkakaaviot (class diagrams)
-- Sekvenssikaaviot (sequence diagrams)
-- Tilakaaviot (state diagrams)
-- Toimintakaaviot (activity diagrams)
-- Entiteetti-suhdekaaviot (ER diagrams)
-- Gantt-kaaviot
-- Virtauskaaviot (flowcharts)
+Seminaarityösi arvioidaan palautuksen perusteella. Palautus koostuu kolmesta osasta:
 
-* [Markdown-pohja, jota suosittelemme](markdown_file1.md). Tekstimuotoisena se pysyy Git-versionhallinnassa kunnossa, jopa usean kehittäjän sitä muokatessa.
+1. kirjallisesta raportista, joka toteutetaan mieluiten markdown-muodossa osaksi git-repositoriota
+2. lähdekoodista git-repositoriossa (palautetaan linkki repositorioon)
+3. lyhyestä ruuduntallennusvideosta, jossa esittelet työsi teknistä toteutusta käytännössä.
 
 
-**Nauhoita näytöntallennusvideo**
+**Kirjallinen raportti**
 
-Raportin lisäksi nauhoita noin 5 minuuttia kestävä video, jossa esittelet työsi teknistä toteutusta raportointiohjeen mukaisesti. Videolla ei ole tarpeen käsitellä tai näyttää raporttia, vaan voitte olettaa katsojan jo tuntevan sen sisällön. Videon tekemiseksi suosittelemme [Microsoft Stream](https://stream.office.com) -palvelua, jossa sekä videon tallennus että jakaminen onnistuu pelkän selaimen avulla. Katso [ohje tallenteen tekemiseksi MS Streamissa](https://support.microsoft.com/en-gb/office/microsoft-stream-screen-recorder-e98d8791-2b82-4dc7-889a-959724e3cbad). Kurssilla on käytetty hyvin tuloksin myös lukuisia muita videonkaappausratkaisuja, joten voit valita itsellesi parhaiten sopivan.
+Raportoi tekemäsi seminaarityön tavoitteet, toteutus, valitsemasi teknologiat, oppimasi asiat ja mahdolliset jatkokehitysideat kirjallisesti. Raportin muodon suhteen voit käyttää omaa harkintaasi, mutta tyypillisesti Markdown-muotoiset readme-tiedostot toimivat tässä tarkoituksessa hyvin. Vaihtoehtoisesti voit käyttää Haaga-Helian tarjoamia Word- tai PowerPoint-raportointipohjia.
 
-Voit julkaista luomasi videon edellä mainitussa Microsoft Stream -palvelussa tai valitsemassasi video- tai tiedostonjakopalvelussa, kunhan saat lisättyä raporttiisi suoran linkin lopputulokseesi (YouTube, OneDrive, Google Drive...). Voit myös halutessasi palauttaa videon sellaisenaan tiedostona Teamsin seminaaritehtävään, mikäli Teams ei estä palautusta esim. liian suuren koon vuoksi.
+Kirjaa käyttämäsi lähteet asianmukaisesti sekä raporttiin että tarpeen mukaan myös lähdekoodiin. Erityisesti toisaalta lainatut osuudet koodista tulee merkitä selkeästi.
 
-Muista lisätä katseluoikeudet joko "ohjelmistokehityksen teknologioita" Teams-ryhmälle tai vain opettajille.
+Valitsemastasi aiheesta riippuen raportin sisältö voi vaihdella paljonkin ja voit aina kysyä tarkempia ohjeita opettajilta. Suosittelemme käyttämään raportissa tilanteen mukaan sekä kuvankaappauksia että erilaisia kaavioita, joita voit toteuttaa esimerkiksi [Mermaid](https://mermaid.js.org/)-syntaksilla suoraan markdown-tiedostoon.
 
 
-**Seminaarin arviointi ja esitykset**
+**Lähdekoodi git-repositoriossa**
 
-Seminaarityösi arvioidaan tämän palautuksen perusteella. Lisäksi osa opiskelijoista valitaan esittelemään töitään muille kurssin päätteeksi järjestettävässä seminaarissa. Koska kurssi järjestetään yhdistellen eri osallistumistapoja, ei itse seminaaritilaisuuteen osallistuminen ole pakollista. Seminaariesityksellä ei ole myöskään erillistä osuutta arvioinnissa. Mikäli seminaariesityksessä käy ilmi työn kannalta positiivisia asioita, jotka tukevat kirjoitettua raporttia, otamme ne kuitenkin luonnollisesti huomioon kokonaisuuden arvioinnissa.
+Tallenna seminaarityösi lähdekoodi julkiseen tai yksityiseen git-repositorioon. Jos teet repositoriosta yksityisen, lisää opettajille katseluoikeudet (tunnukset `Ismo-HH` ja `swd1tn002`). Seminaarityön palautuksen yhteydessä riittää, että palautat linkin kyseiseen repositorioon.
+
+
+**Ruuduntallennusvideo**
+
+Raportin  ja lähdekoodin lisäksi nauhoita noin 5 minuuttia kestävä video, jossa esittelet työsi teknistä toteutusta raportointiohjeen mukaisesti. Videolla ei ole tarpeen käsitellä tai näyttää raporttia, vaan voitte olettaa katsojan jo tuntevan sen sisällön.
+
+Videon tarkoitus on havainnollistaa tekemääsi työtä käytännössä, koska ohjaajien ei ole mahdollista luoda itselleen kaikista töistä toimivaa ympäristöä projekteihin tutustumiseksi. Videolla voit esimerkiksi näyttää, miten toteuttamasi sovellus toimii, miten koodisi on jäsennelty tai miten jokin keskeinen algoritmi toimii käytännössä.
+
+Videon tekemiseksi voit käyttää esimerkiksi Haaga-Helian Microsoft-tililläsi [Clipchamp-palvelua](https://m365.cloud.microsoft/launch/Clipchamp/), jossa sekä videon tallennus että jakaminen onnistuu pelkän selaimen avulla. Katso [ohje tallenteen tekemiseksi Microsoftin tukisivulta](https://support.microsoft.com/en-gb/office/microsoft-clipchamp-screen-recorder-e98d8791-2b82-4dc7-889a-959724e3cbad). Kurssilla on käytetty hyvin tuloksin myös lukuisia muita videonkaappausratkaisuja, joten voit valita itsellesi parhaiten sopivan.
+
+Voit julkaista luomasi videon Clipchamp-palvelussa tai valitsemassasi video- tai tiedostonjakopalvelussa, kunhan saat lisättyä raporttiisi suoran linkin lopputulokseesi (YouTube, OneDrive, Google Drive...). Voit myös halutessasi palauttaa videon sellaisenaan tiedostona Teamsin seminaaritehtävään, mikäli Teams ei estä palautusta esim. liian suuren koon vuoksi.
+
+Käytitpä mitä palvelua hyvänsä, varmista että opettajat saavat linkin kautta katseluoikeuden videoosi.
 
 
 ## Arviointi
 
-Seminaaritöitä arvioidessa katsomme ennen kaikkea sitä, miten hyvin seminaarityössänne on syvennytty kyseiseen seminaariaiheeseen ja löydetty kiinnostavia näkökulmia siihen seminaariaiheeseen liittyen (esim. siis tietorakenteiden näkökulmasta). Eli miten hyvin olette osanneet soveltaa nyt kurssin "teoriaosuuksissa" ja harjoituksissa oppimianne asioita omissa toteutuksissanne.
+Seminaaritöitä arvioidessa katsomme ennen kaikkea sitä, miten hyvin seminaarityössänne on syvennytty valittuun seminaariaiheeseen ja kuinka paljon siitä on opittu uutta. Tarkoituksena on siis syventää ja soveltaa kurssin aikaisemmissa vaiheissa käsiteltyjä tai kurssin sisältöön muuten soveltuvia aiheita, ei vain toistaa tavanomaisia esimerkkejä. Pyri siis raportissasi ja videossasi yksilöimään ja esittelemään asioita, joita olet oppinut, sekä pohdi, mitä olisit voinut tehdä työssä toisin ja miten osaat jatkossa soveltaa oppimiasi asioita.
 
 Lisäksi seminaariaiheen haastekerroin vaikuttaa arviointiin. Jos seminaarityö on haastavuudeltaan suunnilleen samantasoinen kuin kurssin viikoittaiset oppitunnit ja tehtävät, työn tavoitearvosana on noin 3. Jos työssä syvennytään pidemmälle, puhutaan arvosanoista 4-5.
 
 
 ### Tutoriaaleihin perustuvat työt
 
-Seminaaritöissä on ajoittain seurattu video- tai tekstimuotoisia tutoriaaleja. Tutoriaalin seuraaminen seminaarityössä on hyväksyttävää, etenkin mikäli tutoriaali syventää kurssilla käsiteltyjä aiheita mielekkäällä tavalla. Tuo raportissasi selvästi esiin, mikä osuus työstä on omaa tuotostasi ja mikä perustuu tutoriaalin esimerkkeihin, jotta vältymme turhilta plagiointi- ja vilppiepäilyiltä.
+Seminaaritöissä on ajoittain seurattu video- tai tekstimuotoisia tutoriaaleja. Tutoriaalin seuraaminen seminaarityössä on hyväksyttävää, etenkin mikäli tutoriaali syventää kurssilla käsiteltyjä aiheita mielekkäällä tavalla. Tuo kuitenkin raportissasi selvästi esiin, mikä osuus työstä on omaa tuotostasi ja mikä perustuu tutoriaalin esimerkkeihin, jotta vältymme turhilta plagiointi- ja vilppiepäilyiltä.
 
-Tutoriaalityön tapauksissa seminaarin raportissa ja videossa ei kannata keskittyä itse tutoriaalin lopputuloksen esittelyyn, vaan oppimiesi asioiden esittelyyn. Pyri siis yksilöimään ja esittelemään asioita, joita olet oppinut, sekä pohdi, mitä olisit voinut tehdä työssä toisin ja miten osaat jatkossa soveltaa oppimiasi asioita.
-
-
-## Seminaarin vaiheet
-
-1. Seminaarien ohjeistus oppitunnilla
-2. Seminaariaiheen ilmoittaminen Teams-kanavalle
-3. Seminaarityön tekoa ja tarvittaessa ohjausta Teamsissa
-4. Seminaarin raporttien ja videoiden palauttaminen Teamsiin
-5. Seminaariesitykset
-
-Tarkemmat päivämäärät löydät kurssin GitHubin etusivulta sekä palautusten osalta Teamsista.
+Tutoriaalityön tapauksissa seminaarin raportissa ja videossa ei kannata keskittyä itse tutoriaalin lopputuloksen esittelyyn, vaan oppimiesi asioiden esittelyyn.
 
 
-# Seminaariaiheita
+## Seminaariaiheita
 
 Tälle sivulle on koottu **esimerkkiaiheita** kurssin seminaaritehtävää varten. Voit melko vapaasti jalostaa ideoita vastaamaan omaa vaatimustasoasi ja kiinnostuksen kohteitasi. Lisää oma aiheesi uutena viestinä kyseisen aihealueen Teams-kanavalle.
 
 
-## TypeScript, ES6, JavaScript, Node.js, Next.js, MongoDB...
+### TypeScript, ES6, JavaScript, Node.js, Next.js, MongoDB...
 
 * **Next.js**
 
@@ -89,7 +98,7 @@ Tälle sivulle on koottu **esimerkkiaiheita** kurssin seminaaritehtävää varte
     Tutustu NPM-palvelun pakettien julkaisemiseen ja julkaise oma pieni paketti. Julkaistava paketti voi olla esimerkiksi asiakaskirjasto MyHelsinki Open API:n tapahtumien hakemiseksi. Asiakaskirjaston ominaisuuksiin voi kuulua erilaiset rajaukset tai järjestämiset päivämäärien mukaan tai vaikka rajaus tapahtumiin, joiden otsikossa tai kuvauksessa esiintyy tietty teksti.
 
 
-## Tietorakenteet ja algoritmit
+### Tietorakenteet ja algoritmit
 
 * **Tunnetun algoritmin toteuttaminen:**
 
@@ -104,7 +113,7 @@ Tälle sivulle on koottu **esimerkkiaiheita** kurssin seminaaritehtävää varte
     Huom! Kokonaista peliä ja sen käyttöliittymää ei tarvitse välttämättä toteuttaa. Riittää, että algoritmi on jollain tavoin todennettavissa toimivaksi.
 
 
-## Ohjelmistoarkkitehtuurit ja patternit
+### Ohjelmistoarkkitehtuurit ja patternit
 
 * **Serverless-arkkitehtuuri:**
 
@@ -115,7 +124,7 @@ Tälle sivulle on koottu **esimerkkiaiheita** kurssin seminaaritehtävää varte
     Refaktoroi ohjelmistoprojekti 2 -projektinne käyttämään mielestäsi optimaalista arkkitehtuuriratkaisua joiltain osin. Kuvaa alkuperäinen arkkitehtuuri ja uudistettu ratkaisu myös kaavioina.
 
 
-## Testaus
+### Testaus
 
 * **Yksikkötestaus:**
 
@@ -126,7 +135,7 @@ Tälle sivulle on koottu **esimerkkiaiheita** kurssin seminaaritehtävää varte
     Tutustu [Playwright](https://playwright.dev/):iin, [Robot Framework](https://robotframework.org/):iin, [Cypress](https://www.cypress.io/):iin, [Cucumber](https://cucumber.io/):iin tai [Selenium Framework](https://www.selenium.dev/):iin ja toteuta valitsemasi työkalun avulla yksinkertainen järjestelmätesti jollekin omalle tai julkiselle palvelulle.
 
 
-## Infra ja automaatiotyökalut
+### Infra ja automaatiotyökalut
 
 * **Continuous Integration / Continuous Delivery:**
 
@@ -142,14 +151,14 @@ Tälle sivulle on koottu **esimerkkiaiheita** kurssin seminaaritehtävää varte
 
 
 
-## OpenShift tai vastaava pilvipalvelu
+### OpenShift tai vastaava pilvipalvelu
 
 * **Docker, Kubernetes yms:**
 
     Rakenna pilviympäristö, joka koostuu esimerkiksi useammista konteista ja continuous integration -ratkaisusta. Voit hyödyntää esimerkiksi OpenShiftia tai AWS:ää. CSC:n OpenShift ympäristö (Rahti) on käytettävissä ilmaiseksi ja sen käytöstä voit kysyä lisätietoja opettajilta.
 
 
-## Python
+### Python
 
 * **Web-palvelu Pythonilla:**
 
@@ -172,7 +181,7 @@ Tälle sivulle on koottu **esimerkkiaiheita** kurssin seminaaritehtävää varte
     Tekstin tunnistaminen kuvasta tai videosta esim. [Tesseract-kirjastolla](https://nanonets.com/blog/ocr-with-tesseract/).
 
 
-## Koneoppiminen
+### Koneoppiminen
 
 Koneoppimista ei tällä toteutuksella käsitelty, mutta voit halutessasi perehtyä aiheeseen itsenäisesti seminaariosuudessa.
 
@@ -187,5 +196,3 @@ Koneoppimista ei tällä toteutuksella käsitelty, mutta voit halutessasi pereht
 * **Vahvistusoppiminen:**
 
     Kouluta vahvistusoppimisella (reinforcement learning) jonkin pelin tekoäly. Tässä esimerkiksi on [youtube-playlista](https://www.youtube.com/playlist?list=PLTWFMbPFsvz3CeozHfeuJIXWAJMkPtAdS), jolla koulutetaan tekoäly pelaamaan Segan Sonic the hedgehog -peliä [Open AI:n](https://openai.com/) ja [Neatin](https://neat-python.readthedocs.io/en/latest/neat_overview.html) avulla.
-
-
