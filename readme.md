@@ -128,20 +128,17 @@ Videot:
 
 
 
-### To 23.10. HTTP API:en käyttö ja dokumentointi: OpenAPI
+### To 23.10. HTTP API:en käyttö ja dokumentointi (OpenAPI) ja seminaarien käynnistys
 
 * https://www.openapis.org/what-is-openapi
 * https://swagger.io/specification/
 * [Swagger UI Tutorial for REST API Developers (Spring Boot)](https://youtu.be/GxAu8UjLfbM)
 * [Swagger API documentation tutorial for beginners (JS&TS)](https://youtu.be/dhMlXoTD3mQ)
-
-### To 30.10. Seminaarien käynnistys (huom. poikkeava luokkatila 5007)
-
 * [Seminaarityön ohjeistus](./seminaari)
 
 
 
-### To 6.11., 13.11. ja 20.11. Seminaarityön tekemistä
+### To 30.10., 6.11., 13.11. ja 20.11. Seminaarityön tekemistä
 
 * [Seminaarityön ohjeistus](./seminaari)
 * Yksilöllistä ohjausta Teamsissa tai sopimuksen mukaan kampuksella. Kurssin seminaarivaiheessa ei järjestetä yhteisiä tapaamisia, vaan tarjoamme yksilöllistä ohjausta etukäteen sovittavina ajankohtina.
