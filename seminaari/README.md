@@ -37,7 +37,7 @@ Raportoi tekemäsi seminaarityön tavoitteet, toteutus, valitsemasi teknologiat,
 
 Kirjaa käyttämäsi lähteet asianmukaisesti sekä raporttiin että tarpeen mukaan myös lähdekoodiin. Erityisesti toisaalta lainatut osuudet koodista tulee merkitä selkeästi.
 
-Valitsemastasi aiheesta riippuen raportin sisältö voi vaihdella paljonkin ja voit aina kysyä tarkempia ohjeita opettajilta. Suosittelemme käyttämään raportissa tilanteen mukaan sekä kuvankaappauksia että erilaisia kaavioita, joita voit toteuttaa esimerkiksi [Mermaid](https://mermaid.js.org/)-syntaksilla suoraan markdown-tiedostoon.
+Valitsemastasi aiheesta riippuen raportin sisältö voi vaihdella paljonkin ja voit aina kysyä tarkempia ohjeita opettajilta. Suosittelemme käyttämään raportissa tilanteen mukaan sekä kuvankaappauksia että erilaisia kaavioita [(katso esimerkki)](./images/azure-architecture-example.drawio.svg). Kaaviot on mahdollista toteuttaa esimerkiksi [Mermaid](https://mermaid.js.org/)-syntaksilla suoraan markdown-tiedostoon.
 
 
 **Lähdekoodi git-repositoriossa**
