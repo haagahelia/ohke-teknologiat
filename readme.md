@@ -15,7 +15,7 @@ Opettajina kurssilla toimivat Teemu Havulinna ja Ismo Harjunmaa (etunimi.sukunim
 
 ## Kurssin suoritustapa
 
-Kurssista on käynnissä sekä contact- että virtual-toteutukset. Kummallakin toteutuksella on samat käytännön järjestelyt tehtävineen ja aikatauluineen. Molempien toteutusten opiskelijat voivat valita osallistuvatko tunneille läsnä, etänä vai opiskelevatko omaan tahtiin. Suosittelemme vahvasti osallistumaan oppitunneille.
+Kurssista on käynnissä sekä contact- että virtual-toteutukset. Kummallakin toteutuksella on samat käytännön järjestelyt tehtävineen ja aikatauluineen. Molempien toteutusten opiskelijat voivat valita osallistuvatko tunneille läsnä, etänä vai opiskelevatko omaan tahtiin. Suosittelemme vahvasti osallistumaan oppitunneille ja keskustelemaan aktiivisesti kurssin aiheista Teams-ryhmässä.
 
 **Kurssin alkupuoliskolla** käsitellään lukukausittain vaihtelevia aiheita ja opiskelijat tekevät niihin liittyviä harjoitustehtäviä. Jokaisesta esiteltävästä aiheesta on myös mahdollista tehdä laajempi seminaaritehtävä kurssin jälkimmäisellä puoliskolla.
 
@@ -38,12 +38,12 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
 
 **Huom!** Tämä sivu päivittyy kurssin edetessä ja sekä aikataulu että sisältö tarkentuvat.
 
-Oppitunnit pidetään pääsääntöisesti **hybridimuodossa torstaisin klo 11-13.45** sekä luokassa että Teamsissa. Kurssin tehtävät palautetaan pääsääntöisesti **viikoittain keskiviikkoisin klo 22 mennessä**. Tehtäviin on saatavissa vinkkjeä ja tukea sekä oppitunneille että Teams-kanavalla.
+Oppitunnit pidetään pääsääntöisesti **hybridimuodossa maanantaisin klo 8.30-10.45** sekä luokassa että Teamsissa. Kurssin tehtävät palautetaan pääsääntöisesti **seuraavaa oppituntia edeltävänä iltana klo 22 mennessä**. Tehtäviin on saatavissa vinkkjeä ja tukea sekä oppitunneille että Teams-kanavalla.
 
 Toivomme että tutustutte mahdollisuuksien mukaan etukäteen kunkin aiheen videoihin ja materiaaleihin, jotta voimme tapaamisissa käyttää aikaa myös mm. tehtävien parissa.
 
 
-### To 21.8. TypeScript-kielen perusteet ja työkalut
+### Ma 12.1. TypeScript-kielen perusteet ja työkalut
 
 * [Oppitunnin muistiinpanot](./typescript/1_johdanto.md)
 
@@ -54,7 +54,7 @@ Toivomme että tutustutte mahdollisuuksien mukaan etukäteen kunkin aiheen video
 * Tehtävä GitHub classroomissa.
 
 
-### To 28.8. TypeScript jatkuu: tyyppien määrittely
+### Ma 19.1. TypeScript jatkuu: tyyppien määrittely
 
 * [Oppitunnin muistiinpanot](./typescript/2_tyypit.md)
 
@@ -64,7 +64,7 @@ Toivomme että tutustutte mahdollisuuksien mukaan etukäteen kunkin aiheen video
 * Tehtävä GitHub classroomissa.
 
 
-### To 4.9. TypeScriptin edistyneet ominaisuudet
+### Ma 26.1.TypeScriptin edistyneet ominaisuudet
 
 * [Oppitunnin muistiinpanot](./typescript/3_soveltaminen.md)
 * [Oppitunnin koodirepositorio](https://github.com/ohjelmistokehitys/ts-oppitunti-2025)
@@ -76,7 +76,7 @@ Toivomme että tutustutte mahdollisuuksien mukaan etukäteen kunkin aiheen video
 * Tehtävä GitHub classroomissa.
 
 
-### To 11.9. Datan visualisointi: Chart.JS ja Plotly
+### Ma 2.2. Datan visualisointi: Chart.JS ja Plotly
 
 * Kattava [opas](https://www.chartjs.org/docs/latest/) Chart.js:n käytöstä.
 * Yksinkertaisempi [esittely](https://www.w3schools.com/ai/ai_chartjs.asp) Chart.js:n kaaviotyypeistä ja käyttötavasta.
@@ -84,14 +84,17 @@ Toivomme että tutustutte mahdollisuuksien mukaan etukäteen kunkin aiheen video
 * [Video-opastus](https://www.youtube.com/watch?v=_b2KXL0wHQg) Plotlyn työvälineisiin.
 
 
-### To 18.9. Node.js, npm ja pakettien julkaiseminen
+### Ma 9.2. Node.js, npm ja pakettien julkaiseminen
 
 * [Oppitunnin esimerkkiprojekti (GitHub)](https://github.com/ohjelmistokehitys/time-tools/)
 * [Oppitunnin esimerkkiprojekti (npm)](https://www.npmjs.com/package/@ohjelmistokehitys/time-tools)
 * [Npm docs: Packages and modules](https://docs.npmjs.com/packages-and-modules)
 
 
-### To 25.9. Erilaiset ohjelmointirajapinnat
+### Talvilomaviikko, ei oppituntia
+
+
+### Ma 23.2. Erilaiset ohjelmointirajapinnat
 
 * [What is GraphQL? (Digitransit)](https://digitransit.fi/en/developers/apis/1-routing-api/0-graphql/)
 * [High-frequency positioning (Digitransit)](https://digitransit.fi/en/developers/apis/5-realtime-api/vehicle-positions/high-frequency-positioning/)
@@ -108,7 +111,7 @@ Videot:
 * [GraphQL Client Tutorial With Fetch](https://www.youtube.com/watch?v=0ZJI4cBS4JM) by Web Dev Simplified *15:37*
 
 
-### To 2.10. Serverless-ratkaisut
+### Ma 2.3. Serverless-ratkaisut
 
 * https://developers.cloudflare.com/workers/
 * https://hono.dev/
@@ -116,19 +119,16 @@ Videot:
 * [Learn Cloudflare Workers 101 - Full Course for Beginners (Cloudflare Developers at YouTube)](https://youtu.be/H7Qe96fqg1M)
 
 
-
-### To 9.10. Testaus
+### Ma 9.3. Testaus
 
 * Playwright: https://playwright.dev/
 * Getting started: https://playwright.dev/docs/intro
 
 
-
-### To 16.10. Intensiiviviikko, ei oppituntia
-
+### Intensiiviviikko, ei oppituntia
 
 
-### To 23.10. HTTP API:en käyttö ja dokumentointi (OpenAPI) ja seminaarien käynnistys
+### Ma 23.3. HTTP API:en käyttö ja dokumentointi (OpenAPI) ja seminaarien käynnistys
 
 * https://www.openapis.org/what-is-openapi
 * https://swagger.io/specification/
@@ -138,21 +138,21 @@ Videot:
 
 
 
-### To 30.10., 6.11., 13.11. ja 20.11. Seminaarityön tekemistä
+### Ma 30.3.,  13.4,  20.4. ja 27.4. Seminaarityön tekemistä
 
 * [Seminaarityön ohjeistus](./seminaari)
 * Yksilöllistä ohjausta Teamsissa tai sopimuksen mukaan kampuksella. Kurssin seminaarivaiheessa ei järjestetä yhteisiä tapaamisia, vaan tarjoamme yksilöllistä ohjausta etukäteen sovittavina ajankohtina.
-* 📥 Seminaariraportin **palautus su 23.11. klo 22 mennessä**.
+* 📥 Seminaariraportin **palautus ma 27.4. klo 22 mennessä**.
 
 
 
-### To 27.11. Seminaariesitykset
+### Ma 4.5.. Seminaariesitykset
 
 * [Katso seminaarityön ohjeet](./seminaari).
 
 
 
-### To 4.12. Loput Seminaariesitykset tai varakerta
+### Ma 11.5. Loput Seminaariesitykset tai varakerta
 
 
 
