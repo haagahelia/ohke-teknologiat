@@ -18,7 +18,7 @@ Lue lisää kielestä esimerkiksi sivulta https://www.typescriptlang.org/docs/ha
 
 ## Tunnin aihe
 
-Tällä tunnilla perehdymme TypeScriptin ominaisuuksiin ja työkaluihin. Kirjoittamme TS-koodia ilman muita riippuvuuksia, kuten Reactia ja Express:iä, jotta aihe pysyy hieman yksinkertaisempana.
+Tällä tunnilla perehdymme TypeScriptin ominaisuuksiin ja työkaluihin. Kirjoittamme TS-koodia aluksi ilman riippuvuuksia, kuten Reactia ja Express:iä, jotta perusasiat eivät huku eri kirjastojen ja työkalujen ominaisuuksien alle.
 
 
 ## Suositellut videot
@@ -159,7 +159,6 @@ npx tsc helloWorld.ts     # yksi .ts-tiedosto
 node helloWorld.js
 ```
 
-
 ### Tsconfig.json
 
 TypeScript-kääntäjä sekä työkalut, kuten `ts-node`, tukevat lukuisia TS-koodin kääntämiseen liittyviä asetuksia. Nämä asetukset voidaan antaa komentoriviparametreina, mutta tyypillisesti niitä on niin paljon, että ne kannattaa tallentaa erilliseen asetustiedostoon.
@@ -220,6 +219,15 @@ Minimalistinen mutta toimiva asetustiedosto voi näyttää esimerkiksi tältä:
 ```
 
 <!--https://www.contentful.com/blog/what-is-typescript-and-why-should-you-use-it/-->
+
+
+### Bun, Deno, Yarn, pnpm ja muut vaihtoehtoiset työkalut
+
+Viime vuosina on julkaistu useita Node.js:n kanssa kilpailevia JavaScript- ja TypeScript-suoritusympäristöjä, kuten [Deno](https://deno.land/) ja [Bun](https://bun.sh/). Useimmat uudet ympäristöt tukevat TypeScriptiä joko natiivisti tai erillisten laajennosten avulla.
+
+Vaikka vaihtoehtoiset ratkaisut tarjoavat useita mielenkiintoisia ominaisuuksia sekä laadullisia parannuksia niin tietoturvan kuin suorituskyvyn osalta, on Node.js:n asema yhä vahva. Suositut JS-kirjastot niin selain- kuin palvelinpuolella on rakennettu ensisijaisesti Node.js:n ympäristöön. Lisäksi Node.js on laajasti käytössä eri tutoriaaleissa ja eri pavelinymäristöissä.
+
+Pakettienhallinnan osalta Node.js:n [npm](https://www.npmjs.com/) on vakiintunut de facto -standardiksi, jota myös monet muut ympäristöt tukevat. Myös npm:lle on saatavilla useita vaihtoehtoisia työkaluja, kuten [Yarn](https://yarnpkg.com/) ja [pnpm](https://pnpm.io/).
 
 
 ## Perustyypit
