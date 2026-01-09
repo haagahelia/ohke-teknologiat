@@ -4,13 +4,13 @@
 >
 > https://github.com/microsoft/TypeScript/
 
-TypeScriptin ominaisuuksia:
+TypeScriptin piirteitä:
 
 - [x] JavaScriptin laajennos
 - [x] Vahvasti tyypitetty kieli
-- [x] Sisältää jo etukäteen JavaScriptin tulevia ominaisuuksia: "future JavaScript"
 - [x] Microsoftin kehittämä, [mutta avointa lähdekoodia](https://github.com/microsoft/TypeScript/blob/main/LICENSE.txt)
 - [x] Yhteensopiva olemassa olevien JavaScript-sovellusten ja NPM-pakettien kanssa
+- [x] Sisältää jo etukäteen JavaScriptin tulevia ominaisuuksia: "future JavaScript"
 - [x] Käännettävissä yhteensopivaksi myös JavaScriptin vanhojen versioiden kanssa
 
 Lue lisää kielestä esimerkiksi sivulta https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html.
@@ -42,9 +42,16 @@ Mikäli opiskelet tämän viikon aiheen itsenäisesti, suosittelemme perehtymä�
 *Spoiler alert: älä aloita opettelemalla TypeScriptin "teoriaa", vaan aloita kirjoittamalla JavaScriptiä TS-tiedostoon.*
 
 
+## Elokuva
+
+**[TypeScript Origins: The Documentary (YouTube, kesto 1:21:35) ](https://www.youtube.com/watch?v=U6s2pdxebSo)**
+
+*The documentary features core contributors and community members like Anders Hejlsberg, Steve Lucco, Luke Hoban, Daniel Rosenwasser, Ryan Cavanaugh, Amanda Silver, Matt Pocock, Josh Goldberg & many more! It also covers adoption stories and insights from JetBrains, Xata, AG_Grid, Deno, Visual Studio Code and Tech at Bloomberg.*
+
+
 ## TypeScriptin asentaminen
 
-TypeScript voidaan asentaa joko globaalisti koko käyttöjärjestelmään tai paikallisesti yksittäiseen projektiin. Globaali asennus [jakaa mielipiteitä](https://github.com/loopbackio/loopback.io/issues/509) ja tämän kurssin esimerkeissä asennus tehdään aina paikallisesti.
+TypeScript voidaan asentaa joko globaalisti koko käyttöjärjestelmään tai paikallisesti yksittäiseen projektiin. Globaali asennus [jakaa mielipiteitä](https://github.com/loopbackio/loopback.io/issues/509) ja myös TypeScriptin omissa ohjeissa asennusta tehdään eri tavoilla ([globaalisti](https://www.typescriptlang.org/docs/handbook/typescript-tooling-in-5-minutes.html#installing-typescript) ja [paikallisesti](https://github.com/microsoft/TypeScript/?tab=readme-ov-file#installing)). Tämän kurssin esimerkeissä asennus tehdään aina paikallisesti yksittäiseen projektiin.
 
 Paikallisen asennuksen etuina koko projekti riippuvuuksineen asentuu kerralla yhdellä komennolla (`npm install`) ja kaikilla kehittäjillä on käytössään sama versio TypeScriptistä. Myös mm. suositut [Vite-](https://vite.dev/) ja [Expo-työkalut](https://expo.dev/) asentavat TypeScriptin paikallisesti kuhunkin projektiin.
 
@@ -95,6 +102,14 @@ Transpilointi mahdollistaa viimeisintä syntaksia hyödyntävän TypeScript-kood
 
 Koska TypeScript ja JavaScript ovat osittain sama asia, monet JS-koodin kehittämiseksi käytettävät työkalut soveltuvat myös TS-koodin kehitykseen. Esimerkiksi VS Code sekä Node.js ja npm toimivat hyvin yhteen TypeScript-projektien kanssa.
 
+Node.js:n uusimmat versiot tukevat *periaatteessa* TypeScript-koodin suorittamista suoraan, mutta merkittävillä rajoituksilla. Esimerkiksi `tsconfig.json`-tiedoston asetuksia ei tueta ja oletuksena koodissa saa olla vain sellaisia ominaisuuksia, jotka voidaan yksinkertaisesti poistaa:
+
+> *"By default Node.js will execute TypeScript files that contains only erasable TypeScript syntax. Node.js will replace TypeScript syntax with whitespace, and no type checking is performed."*
+>
+> https://nodejs.org/docs/v24.12.0/api/typescript.html#type-stripping
+
+Node.js:n dokumentaation artikkeli [Running TypeScript Natively](https://nodejs.org/en/learn/typescript/run-natively) tarjoaa lisätietoja TypeScript-koodin suorittamisesta Node.js:ssä. Käytännössä edistyneemmän TypeScript-koodin suorittamiseksi on kaksi lähestymistapaa: joko kääntää koodi JavaScriptiksi etukäteen TypeScript-kääntäjällä (ahead-of-time) tai käyttää työkaluja, jotka kääntävät TypeScriptiä samalla kun sitä suoritetaan (just-in-time).
+
 
 ### Npx
 
@@ -111,22 +126,15 @@ npx tsc   # suorittaa `tsc`-komennon, eikä edellytä globaalia asennusta
 `npx`-komennon pitäisi löytyä sinulta valmiiksi, jos sinulla on `npm` asennettuna.
 
 
-### Ts-node
+### Tsc (TypeScript compiler)
 
-> *"`ts-node` is a TypeScript execution engine and REPL for Node.js. It JIT transforms TypeScript into JavaScript, enabling you to directly execute TypeScript on Node.js without precompiling."*
->
-> https://www.npmjs.com/package/ts-node
+**Tsc** on TypeScript-kääntäjä, joka tarkastaa TypeScript-lähdekoodisi virheiden varalta sekä kääntää koodisi standardin mukaiseksi JavaScriptiksi. Kun siis haluat kääntää kirjoittamasi ohjelman TypeScript-kielestä JavaScriptiksi, onnistuu se `npx`- ja `tsc`-komennoilla:
 
-
-```bash
-npm install ts-node --save-dev    # asentaa ts-noden paikallisesti
-
-npx ts-node src/skripti.ts        # suorittaa skriptin `src/skripti.ts`
-
-npx ts-node                       # käynnistää ts-noden REPL-tilan
+```sh
+npx tsc
 ```
 
-`ts-node` mahdollistaa TypeScript-koodin suorittamisen ilman etukäteen tehtävää käännösvaihetta. Se on suosittu ja yksinkertainen työkalu, mutta sille on viime vuosien aikana tullut myös paljon kilpailijoita, kuten [tsx](https://www.npmjs.com/package/tsx). [Node.js:n viimeisimmät versiot tukevat osittain TypeScriptiä](https://nodejs.org/api/typescript.html), mutta toistaiseksi tyyppien tarkastamisen, eri moduulijärjestelmien ja `tsconfig.json`-tiedoston tuen vuoksi on suositeltavaa käyttää työkaluja kuten `ts-node` tai `tsx`.
+Jos kääntäminen onnistuu, syntyy tuloksena JavaScript-tiedostoja, jotka voidaan suorittaa Node.js:llä tai muissa JavaScript-ympäristöissä ilman TypeScriptiä. Jos koodissa on virheitä, `tsc`-kääntäjä ilmoittaa niistä ja käännös ei onnistu ennen kuin virheet on korjattu.
 
 
 ### Tsx
@@ -144,30 +152,33 @@ npx tsx your-file.ts
 ```
 
 
-### Tsc
+### Ts-node
 
-Kun haluat kääntää kirjoittamasi TypeScript-kielisen ohjelman lähdekoodit JavaScript-kielisiksi lähdekoodeiksi, onnistuu se `tsc`-komennolla (TypeScript compiler):
+> *"`ts-node` is a TypeScript execution engine and REPL for Node.js. It JIT transforms TypeScript into JavaScript, enabling you to directly execute TypeScript on Node.js without precompiling."*
+>
+> https://www.npmjs.com/package/ts-node
 
-```bash
-npx tsc                   # kaikki .ts-tiedostot (edellyttää tsconfig-tiedostoa)
-npx tsc helloWorld.ts     # yksi .ts-tiedosto
-```
-
-`tsc`-komento kääntää kirjoittamasi TypeScript-tiedostot JavaScript-tiedostoiksi, jotka voidaan suorittaa Node.js:llä tai selaimessa aivan kuten mitkä tahansa `.js`-tiedostot:
 
 ```bash
-node helloWorld.js
+npm install ts-node --save-dev    # asentaa ts-noden paikallisesti
+
+npx ts-node src/skripti.ts        # suorittaa skriptin `src/skripti.ts`
+
+npx ts-node                       # käynnistää ts-noden REPL-tilan
 ```
+
+`ts-node` mahdollistaa TypeScript-koodin suorittamisen ilman etukäteen tehtävää käännösvaihetta. Se on suosittu ja yksinkertainen työkalu, mutta sille on viime vuosien aikana tullut myös paljon kilpailijoita, kuten [tsx](https://www.npmjs.com/package/tsx).
+
 
 ### Tsconfig.json
 
-TypeScript-kääntäjä sekä työkalut, kuten `ts-node`, tukevat lukuisia TS-koodin kääntämiseen liittyviä asetuksia. Nämä asetukset voidaan antaa komentoriviparametreina, mutta tyypillisesti niitä on niin paljon, että ne kannattaa tallentaa erilliseen asetustiedostoon.
+TypeScript-kääntäjä sekä työkalut, kuten `tsx` ja `ts-node`, tukevat lukuisia TS-koodin kääntämiseen liittyviä asetuksia. Nämä asetukset voidaan antaa komentoriviparametreina, mutta tyypillisesti niitä on niin paljon, että ne kannattaa tallentaa erilliseen asetustiedostoon.
 
 > *"The presence of a tsconfig.json file in a directory indicates that the directory is the root of a TypeScript project. The tsconfig.json file specifies the root files and the compiler options required to compile the project"*
 >
 > https://www.typescriptlang.org/docs/handbook/tsconfig-json.html
 
-`tsconfig.json`-asetustiedostoon voidaan määritellä lukuisia kääntäjän toimintaan vaikuttavia asetuksia. Voit luoda itsellesi uuden `tsconfig.json`-tiedoston `tsc`-komennon avulla:
+`tsconfig.json`-asetustiedostoon voidaan määritellä lukuisia kääntäjän toimintaan vaikuttavia asetuksia. Voit luoda itsellesi uuden `tsconfig.json`-tiedoston `tsc`-komennon avulla `--init`-parametrilla:
 
 ```bash
 npx tsc --init
@@ -192,15 +203,17 @@ Monet tiedoston asetukset liittyvät kääntäjän tekemiin tarkastuksiin, kuten
 >
 > https://www.typescriptlang.org/tsconfig#strict
 
-Minimalistinen mutta toimiva asetustiedosto voi näyttää esimerkiksi tältä:
+Asetustiedosto voi näyttää esimerkiksi tältä:
 
 ```js
 /* Visit https://aka.ms/tsconfig to read more about this file */
 {
     "compilerOptions": {
-        /* Set the JavaScript language version for emitted JavaScript
-         * and include compatible library declarations. */
-        "target": "es2016",
+        /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+        "target": "es2024",
+
+        /* Specify what module code is generated. */
+        "module": "nodenext",
 
         /* Specify the root folder within your source files. */
         "rootDir": "./src/",
@@ -208,17 +221,26 @@ Minimalistinen mutta toimiva asetustiedosto voi näyttää esimerkiksi tältä:
         /* Specify an output folder for all emitted files. */
         "outDir": "./build/",
 
-        /* Emit additional JavaScript to ease support for importing CommonJS modules.
-         * This enables 'allowSyntheticDefaultImports' for type compatibility. */
+        /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */
         "esModuleInterop": true,
 
         /* Enable all strict type-checking options. */
         "strict": true,
-    }
+
+        /* see https://www.typescriptlang.org/docs/handbook/modules/theory.html#module-resolution */
+        "moduleResolution": "nodenext",
+
+    },
+    "exclude": [
+        "node_modules",
+        "build"
+    ]
 }
 ```
 
-<!--https://www.contentful.com/blog/what-is-typescript-and-why-should-you-use-it/-->
+Projektinhallintatyökalut, kuten [Vite](https://vite.dev/) ja [Expo](https://expo.dev/), luovat tyypillisesti automaattisesti sopivan `tsconfig.json`-tiedoston projektin juureen, joten sinun ei välttämättä tarvitse luoda tai muokata sitä itse.
+
+Eri asetukset riippuvat merkittävästi siitä, millaisessa ympäristössä sovellustasi ajetaan. Esimerkiksi selainpohjaisessa React-sovelluksessa voi olla aivan erilaiset vaatimukset kuin Node.js-palvelimella ajettavassa Express-sovelluksessa tai npm-pakettina jaettavassa kirjastossa.
 
 
 ### Bun, Deno, Yarn, pnpm ja muut vaihtoehtoiset työkalut
@@ -247,13 +269,13 @@ let positive: number[] = [1, 2, 3, 4];
 let negative: Array<number> = [-1, -2, -3, -4];
 ```
 
-Tyyppien määrittely tällä tarkkuudella on kuitenkin usein turhaa, koska TypeScript osaa päätellä asiayhteydestä mm. muuttujien sekä funktioiden paluuarvojen tyypit.
+Tyyppien määrittely tällä tarkkuudella on usein turhaa, koska TypeScript osaa päätellä asiayhteydestä mm. muuttujien sekä funktioiden paluuarvojen tyypit.
 
 > *"For the most part you don’t need to explicitly learn the rules of inference. If you’re starting out, try using fewer type annotations than you think - you might be surprised how few you need for TypeScript to fully understand what’s going on."*
 >
 > https://www.typescriptlang.org/docs/handbook/2/everyday-types.html
 
-Ilman yllä esitettyä vapaaehtoista tyyppien määrittelyä koodi näyttääkin JavaScriptiltä, joskin kääntäjä päättelee tyypit ja osaa huomioida ne myöhemmin näitä muuttujia käytettäessä:
+Ilman yllä esitettyä vapaaehtoista tyyppien määrittelyä koodi näyttääkin JavaScriptiltä. Kääntäjä päättelee tyypit automaattisesti ja se osaa huomioida ne myöhemmin näitä muuttujia käytettäessä:
 
 ```ts
 let language = 'TypeScript';        // language: string
@@ -268,8 +290,8 @@ let negative = [-1, -2, -3, -4];    // negative: number[]
 Tyypin määritteleminen eksplisiittisesti on välttämätöntöntä erityisesti silloin, kun luot tyhjiä tietorakenteita, joista TS ei pysty päättelemään niiden myöhempää tyyppiä:
 
 ```ts
-let empty = [];                     // never[] -> tähän ei voida lisätä arvoja, koska tyyppiä ei tiedetä
-let numbers: number[] = [];         // number[] -> tähän voidaan jatkossa lisätä vain numeroita
+let empty = [];                     // tyyppiä ei tässä vaiheessa vielä tiedetä
+let numbers: number[] = [];         // number[] -> tyhjälle taulukolle määritellään tyyppi
 ```
 
 ### Funktioiden tyypit
@@ -280,12 +302,12 @@ let numbers: number[] = [];         // number[] -> tähän voidaan jatkossa lis�
 
 ```ts
 // funktion parametrille ja paluuarvolle määritellään tyypit:
-function shout(str1: string): string {
-    return str1.toUpperCase() + '!!!';
+function shout(text: string): string {
+    return text.toUpperCase() + '!!!';
 }
 ```
 
-TypeScript ei osaa päätellä parametrin tyyppiä, joten sen määritteleminen on tarpeen. Sen sijaan yllä **paluuaron tyyppi** `string` voidaan päätellä automaattisesti `return`-lausekkeessa olevasta tyypistä, eikä sitä tarvitse välttämättä kirjoittaa itse.
+TypeScript ei osaa päätellä parametrien tyyppiä, joten niiden tyyppien määritteleminen on <abbr title="pun intended">tyypillisesti</abbr> tarpeen. **Paluuarvon tyyppi** voidaan kuitenkin päätellä usein automaattisesti `return`-lausekkeessa olevasta tyypistä, eikä sitä tarvitse välttämättä kirjoittaa itse.
 
 
 ### Any ja unknown
@@ -344,13 +366,11 @@ doSomething('hello');   // 'HELLO'
 
 ### Taulukot (array)
 
-Taulukot ovat tyypitettyjä siinä missä yksittäiset muuttujat, esim. `string[]` tai `number[]`. Eri tyyppisiä arvoja lisättäessä TS luo "union"-tyyppejä, kuten `(string | number)[]`.
-
-Seuraavat esimerkit näyttävät, miten puuttuviin arvoihin varautuminen voidaan ohittaa (`!`) ja miten tietyn arvon tyyppi voidaan itse määrittää `as`:
+Myös kokoelmat ovat tyypitettyjä, esim. `string[]` tai `number[]`. Seuraavat esimerkit näyttävät, miten puuttuviin arvoihin varautuminen voidaan ohittaa (`!`) ja miten tietyn arvon tyyppi voidaan itse määrittää `as`:
 
 ```ts
 let faces = ['😀', '🙁'];          // string[]
-let numbers = [7, 100, 42];         // number[]
+let numbers = [1337, 67, 42];       // number[]
 
 let all = [...faces, ...numbers];   // (string | number)[]
 

@@ -71,7 +71,7 @@ Toivomme että tutustutte mahdollisuuksien mukaan etukäteen kunkin aiheen video
 
 * Geneeriset tyypit
 * Keys ja Mapped types
-* Jest-testaus
+* Vitest-testaus
 * Express-palvelin
 * Tehtävä GitHub classroomissa.
 
