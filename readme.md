@@ -46,12 +46,17 @@ Toivomme että tutustutte mahdollisuuksien mukaan etukäteen kunkin aiheen video
 ### Ma 12.1. TypeScript-kielen perusteet ja työkalut
 
 * [Oppitunnin muistiinpanot](./typescript/1_johdanto.md)
+* Video 1: TypeScript kielen perusteet ja työkalut: https://youtu.be/2PGkgIbiGtk
+* Video 2: Ensimmäinen tehtävä: https://youtu.be/U09JcX2cWKU
+
+Muut materiaalit:
 
 * [TypeScript Tooling in 5 minutes](https://www.typescriptlang.org/docs/handbook/typescript-tooling-in-5-minutes.html)
 * [TypeScript for JavaScript Programmers](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
 * [Intro to the TSConfig Reference](https://www.typescriptlang.org/tsconfig/)
 * ["TypeScriptin perusteet" (typescript-ohjelmointi.github.io)](https://typescript-ohjelmointi.github.io/)-sivustolla.
-* Tehtävä GitHub classroomissa.
+
+Tehtävä GitHub classroomissa (dl 18.1. klo 22).
 
 
 ### Ma 19.1. TypeScript jatkuu: tyyppien määrittely
