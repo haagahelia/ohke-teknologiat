@@ -72,7 +72,7 @@ Tehtävä GitHub classroomissa (dl 18.1. klo 22).
 ### Ma 26.1.TypeScriptin edistyneet ominaisuudet
 
 * [Oppitunnin muistiinpanot](./typescript/3_soveltaminen.md)
-* [Oppitunnin koodirepositorio](https://github.com/ohjelmistokehitys/ts-oppitunti-2025)
+* [Oppitunnin koodirepositorio](https://github.com/ohjelmistokehitys/ts-tunnit-2026-01)
 
 * Geneeriset tyypit
 * Keys ja Mapped types
