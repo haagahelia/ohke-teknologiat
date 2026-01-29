@@ -91,9 +91,16 @@ Tehtävä GitHub classroomissa (dl 18.1. klo 22).
 
 ### Ma 9.2. Node.js, npm ja pakettien julkaiseminen
 
-* [Oppitunnin esimerkkiprojekti (GitHub)](https://github.com/ohjelmistokehitys/time-tools/)
-* [Oppitunnin esimerkkiprojekti (npm)](https://www.npmjs.com/package/@ohjelmistokehitys/time-tools)
-* [Npm docs: Packages and modules](https://docs.npmjs.com/packages-and-modules)
+Oppitunnin videotallenteet:
+
+* Osa 1: https://youtu.be/pxcgBd__NGU
+* Osa 2: https://youtu.be/RrGMxOF5Gos
+
+Oheismateriaalit:
+
+* Esimerkki (GitHub): https://github.com/ohjelmistokehitys/time-tools/
+* Esimerkki (npm): https://www.npmjs.com/package/@ohjelmistokehitys/time-tools
+* Packages and modules (Npm docs): https://docs.npmjs.com/packages-and-modules
 
 
 ### Talvilomaviikko, ei oppituntia
