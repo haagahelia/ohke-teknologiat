@@ -87,6 +87,8 @@ Tehtävä GitHub classroomissa (dl 18.1. klo 22).
 * Yksinkertaisempi [esittely](https://www.w3schools.com/ai/ai_chartjs.asp) Chart.js:n kaaviotyypeistä ja käyttötavasta.
 * [Esimerkkejä ja ohjeita](https://plotly.com/python/) interaktiivisten kaavioiden luomiseen Pythonilla.
 * [Video-opastus](https://www.youtube.com/watch?v=_b2KXL0wHQg) Plotlyn työvälineisiin.
+Plotlystä ei tullut tehtäviä, mutta voit tutustua [plotly-kansion](./plotly) sisältöön, jossa on esimerkki
+valtioiden data esittämisestä
 
 
 ### Ma 9.2. Node.js, npm ja pakettien julkaiseminen
