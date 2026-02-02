@@ -71,6 +71,9 @@ from shiny import App, ui, render
 
 ```python
 # Huom: CSV:n erotin on puolipiste
+from pathlib import Path
+
+infile = Path(__file__).parent / "data.csv"
 df = pd.read_csv("data.csv", sep=";")
 
 # Tarkista sarakkeet ja muutama rivi
@@ -101,7 +104,7 @@ with ui.layout_columns():
     ...
     @render_plotly
     def plot_pop():
-        infile = Path(__file__).parent / "gm_pop.csv"
+        infile = Path(__file__).parent / "data.csv"
         df = pandas.read_csv(infile, sep=";")
         dff = df[df["name"] == input.country()]
         year_columns = [row for row in dff if re.fullmatch(r"\d{4}", row)]
