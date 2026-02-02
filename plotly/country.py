@@ -36,7 +36,7 @@ with ui.layout_columns():
     
     @render_plotly
     def plot2():
-        infile = Path(__file__).parent / "gm_pop.csv"
+        infile = Path(__file__).parent / "data.csv"
         df = pandas.read_csv(infile, sep=";")
         dff = df[df["name"] == input.country()]
         year_columns = [row for row in dff if re.fullmatch(r"\d{4}", row)]
@@ -52,11 +52,6 @@ with ui.layout_columns():
     def plot3():
         dff = gapminder()[gapminder()["country"] == input.country()]
         return px.line(dff, x="year", y="lifeExp", title=f"{input.country()} - Eliniän odote")
-
-#    @render_plotly
-#    def plot4():
-#        return px.choropleth(dat(), locations="iso_alpha", color="lifeExp",
-#                      hover_name="country")
 
 with ui.navset_card_underline():
 
