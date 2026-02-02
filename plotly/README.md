@@ -58,12 +58,14 @@ afg;Afghanistan;3280000;3280000;3280000;...
 ```python
 import pandas as pd
 import plotly.express as px
-from shiny import App, ui, render
+from shiny.express import render, input, ui
+from shinywidgets import render_plotly
+from shiny import reactive
 ```
 
 * `pandas` → datan käsittely
 * `plotly.express` → kaavioiden piirtäminen
-* `shiny` → interaktiivinen web-sovellus
+* `shiny` → interaktiivinen web-sovellus johon plottereita voidaan piirtää
 
 ---
 
