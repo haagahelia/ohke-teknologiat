@@ -7,8 +7,8 @@ Posit yhtiön rakentama Shinylive sivusto mahdollistaa **Shiny for Python** -sov
 **Editori-näkymässä** voidaan muokata Python-koodia ja toisessa ikkunan ruudussa **esikatselu/ajettava sovellus** päivittyy automaattisesti, kun teet muutoksia. Tämä “live”-kokemus tekee koodin testaamisesta ja visualisoinnin tarkastelusta helppoa ja sujuvaa.
 
 Jaettavia linkkejä voi käyttää esimerkiksi opetusmateriaaleissa, GitHub Gist -integraation kautta tai muissa tilanteissa, joissa koodi halutaan jakaa tai esitellä kevyesti.
-* **Editor-URL**: Sisältää koodin ja editorin — ideaalinen yhteistyöhön tai koodin muokkaamiseen yhdessä.
-* **App-URL**: Näyttää vain toimivan sovelluksen ilman editoria — esimerkiksi projektin jakamiseen käyttäjille.
+* **Editor-URL**: Sisältää koodin ja editorin, voidaan käyttää kehittäjien koodin muokkaamiseen yhdessä.
+* **App-URL**: Näyttää vain toimivan sovelluksen ilman editoria.
 
 ## Staattinen deploy – ilman palvelinta
 
@@ -18,7 +18,7 @@ Shinylive-palvelin toimii ainoastaan **staattisena tiedostopalvelimena**, eikä 
 
 * *Ei asennuksia*: Pythonia tai Shinyä ei tarvitse asentaa omalle koneelle.
 * *Vaivaton jakaminen*: Sovellus toimii vain URL\:stä, ilman palvelininfrastruktuuria.
-* *Helppo skaalautuvuus*: Sovellus skaalautuu käytännössä rajatta, koska palvelin ei kuormitu — laskenta tapahtuu käyttäjän selaimessa.
+* *Helppo skaalautuvuus*: Sovellus skaalautuu käytännössä rajatta, koska palvelin ei kuormitu, koska laskenta tapahtuu käyttäjän selaimessa.
 * *Parempi tietoturva*: API\:t ja koodi eivät ole palvelimella, vaan ajettuna selaimessa, jolloin riski haavoittuvuuksiin on vähäisempi.
 
 ## Rajoitukset
@@ -33,9 +33,6 @@ Shinylive-palvelin toimii ainoastaan **staattisena tiedostopalvelimena**, eikä 
 * [Shinylive: Shiny + WebAssembly – Shiny for Python - Posit](https://shiny.posit.co/py/get-started/shinylive.html)
 * [How to Run Shiny for Python Apps Without a Python Server](https://www.appsilon.com/post/shiny-for-python-shinylive)
 
-
-Loistavaa! Teen sinulle nyt **yksityiskohtaisen ohjeistuksen opiskelijoille**, jossa käydään läpi askel askeleelta, miten tehtävä voidaan tehdä: CSV-datan lukemisesta Shiny + Plotly -kaavion tekemiseen.
-
 ---
 
 # Tehtävän ohjeistus: Väestökaavioiden tekeminen Shinyllä ja Plotlyllä
@@ -44,7 +41,7 @@ Loistavaa! Teen sinulle nyt **yksityiskohtaisen ohjeistuksen opiskelijoille**, j
 
 Tehtävänä on tehdä interaktiivinen Python-Shiny-sovellus, jossa käyttäjä voi valita maan ja nähdä sen väestön kehityksen vuosien yli Plotly-kuvaajana.
 
-CSV-datana käytetään tiedostoa GM-population-dataset (gm_pop.csv), jossa sarakkeet ovat:
+CSV-datana käytetään tiedostoa GM-population-dataset (data.csv), jossa sarakkeet ovat:
 
 ```
 geo;name;1800;1801;1802;...;2100
@@ -121,3 +118,6 @@ with ui.layout_columns():
 
 * `ui.input_select` → alasvetovalikko maiden valitsemiseen
 * `ui.output_ui` → paikka, johon kaavio renderöidään
+
+---
+Sivun tekemisessä on hyödynnetty OpenAI:n ChatGPT 4.5 kielimallia
