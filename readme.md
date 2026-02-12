@@ -108,7 +108,20 @@ Oheismateriaalit:
 ### Talvilomaviikko, ei oppituntia
 
 
-### Ma 23.2. Erilaiset ohjelmointirajapinnat
+### Ma 23.2. Serverless-ratkaisut
+
+* What is serverless computing? Eri yritysten määritelmiä:
+    * [Cloudflare](https://www.cloudflare.com/learning/serverless/what-is-serverless/)
+    * [RedHat](https://www.redhat.com/en/topics/cloud-native-apps/what-is-serverless)
+    * [AWS](https://aws.amazon.com/what-is/serverless-computing/)
+    * [IBM](https://www.ibm.com/think/topics/serverless)
+    * ...
+* https://developers.cloudflare.com/workers/
+* https://hono.dev/
+* [Learn Cloudflare Workers 101 - Full Course for Beginners (Cloudflare Developers at YouTube)](https://youtu.be/H7Qe96fqg1M)
+
+
+### Ma 2.3. Erilaiset ohjelmointirajapinnat
 
 * [What is GraphQL? (Digitransit)](https://digitransit.fi/en/developers/apis/1-routing-api/0-graphql/)
 * [High-frequency positioning (Digitransit)](https://digitransit.fi/en/developers/apis/5-realtime-api/vehicle-positions/high-frequency-positioning/)
@@ -123,15 +136,6 @@ Videot:
 
 * [GraphQL Explained in 100 Seconds](https://www.youtube.com/watch?v=eIQh02xuVw4) by Fireship *2:22*
 * [GraphQL Client Tutorial With Fetch](https://www.youtube.com/watch?v=0ZJI4cBS4JM) by Web Dev Simplified *15:37*
-
-
-### Ma 2.3. Serverless-ratkaisut
-
-* https://developers.cloudflare.com/workers/
-* https://hono.dev/
-* https://chanfana.pages.dev/examples-and-recipes
-* [Learn Cloudflare Workers 101 - Full Course for Beginners (Cloudflare Developers at YouTube)](https://youtu.be/H7Qe96fqg1M)
-
 
 ### Ma 9.3. Testaus
 
