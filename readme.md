@@ -139,6 +139,7 @@ Videot:
 
 ### Ma 9.3. Testaus
 
+* Playwright-osion tallenne: https://www.youtube.com/watch?v=tq_eA7xry9I
 * Playwright: https://playwright.dev/
 * Getting started: https://playwright.dev/docs/intro
 
@@ -158,7 +159,7 @@ Videot:
 
 ### Ma 30.3.,  13.4,  20.4. ja 27.4. Seminaarityön tekemistä
 
-* [Seminaarityön ohjeistus](./seminaari)
+* [Seminaarityön ohjeet](./seminaari)
 * Yksilöllistä ohjausta Teamsissa tai sopimuksen mukaan kampuksella. Kurssin seminaarivaiheessa ei järjestetä yhteisiä tapaamisia, vaan tarjoamme yksilöllistä ohjausta etukäteen sovittavina ajankohtina.
 * 📥 Seminaariraportin **palautus ma 27.4. klo 22 mennessä**.
 
