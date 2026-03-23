@@ -165,7 +165,7 @@ Videot:
 
 
 
-### Ma 4.5.. Seminaaritilaisuus
+### Ma 4.5. Seminaaritilaisuus
 
 * [Katso seminaarityön ohjeet](./seminaari).
 
