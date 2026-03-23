@@ -10,6 +10,9 @@ Koska kurssi järjestetään yhdistellen eri osallistumistapoja, ei itse seminaa
 
 Seminaarityön laajuus on noin 20 tuntia työtä.
 
+> [!NOTE]  
+> Mikäli seminaaritilaisuuden osallistujamäärä jää pieneksi, voidaan tilaisuudessa katsoa myös videotallenteita. Tällöin osallistujilta kysytään etukäteen lupaa videon katsomiseen.
+
 
 ## Seminaarin vaiheet
 
@@ -31,7 +34,7 @@ Seminaarityösi arvioidaan palautuksen perusteella. Palautus koostuu kolmesta os
 3. lyhyestä ruuduntallennusvideosta, jossa esittelet työsi teknistä toteutusta käytännössä.
 
 
-**Kirjallinen raportti**
+### 1. Kirjallinen raportti
 
 Raportoi tekemäsi seminaarityön tavoitteet, toteutus, valitsemasi teknologiat, oppimasi asiat ja mahdolliset jatkokehitysideat kirjallisesti. Raportin muodon suhteen voit käyttää omaa harkintaasi, mutta tyypillisesti Markdown-muotoiset readme-tiedostot toimivat tässä tarkoituksessa hyvin. Vaihtoehtoisesti voit käyttää Haaga-Helian tarjoamia Word- tai PowerPoint-raportointipohjia.
 
@@ -40,12 +43,12 @@ Kirjaa käyttämäsi lähteet asianmukaisesti sekä raporttiin että tarpeen muk
 Valitsemastasi aiheesta riippuen raportin sisältö voi vaihdella paljonkin ja voit aina kysyä tarkempia ohjeita opettajilta. Suosittelemme käyttämään raportissa tilanteen mukaan sekä kuvankaappauksia että erilaisia kaavioita [(katso esimerkki)](./images/azure-architecture-example.drawio.svg). Kaaviot on mahdollista toteuttaa esimerkiksi [Mermaid](https://mermaid.js.org/)-syntaksilla suoraan markdown-tiedostoon.
 
 
-**Lähdekoodi git-repositoriossa**
+### 2. Lähdekoodi git-repositoriossa
 
 Tallenna seminaarityösi lähdekoodi julkiseen tai yksityiseen git-repositorioon. Jos teet repositoriosta yksityisen, lisää opettajille katseluoikeudet (tunnukset `Ismo-HH` ja `swd1tn002`). Seminaarityön palautuksen yhteydessä riittää, että palautat linkin kyseiseen repositorioon.
 
 
-**Ruuduntallennusvideo**
+### 3. Ruuduntallennusvideo
 
 Raportin  ja lähdekoodin lisäksi nauhoita noin 5 minuuttia kestävä video, jossa esittelet työsi teknistä toteutusta raportointiohjeen mukaisesti. Videolla ei ole tarpeen käsitellä tai näyttää raporttia, vaan voitte olettaa katsojan jo tuntevan sen sisällön.
 
@@ -53,7 +56,7 @@ Videon tarkoitus on havainnollistaa tekemääsi työtä käytännössä, koska o
 
 Videon tekemiseksi voit käyttää esimerkiksi Haaga-Helian Microsoft-tililläsi [Clipchamp-palvelua](https://m365.cloud.microsoft/launch/Clipchamp/), jossa sekä videon tallennus että jakaminen onnistuu pelkän selaimen avulla. Katso [ohje tallenteen tekemiseksi Microsoftin tukisivulta](https://support.microsoft.com/en-gb/office/microsoft-clipchamp-screen-recorder-e98d8791-2b82-4dc7-889a-959724e3cbad). Kurssilla on käytetty hyvin tuloksin myös lukuisia muita videonkaappausratkaisuja, joten voit valita itsellesi parhaiten sopivan.
 
-Voit julkaista luomasi videon Clipchamp-palvelussa tai valitsemassasi video- tai tiedostonjakopalvelussa, kunhan saat lisättyä raporttiisi suoran linkin lopputulokseesi (YouTube, OneDrive, Google Drive...). Voit myös halutessasi palauttaa videon sellaisenaan tiedostona Teamsin seminaaritehtävään, mikäli Teams ei estä palautusta esim. liian suuren koon vuoksi.
+Voit julkaista luomasi videon Clipchamp-palvelussa tai valitsemassasi video- tai tiedostonjakopalvelussa, kunhan saat lisättyä raporttiisi suoran linkin lopputulokseesi (YouTube, OneDrive, Google Drive...). Voit myös halutessasi palauttaa videon sellaisenaan tiedostona seminaaritehtävään, mikäli jätjestelmä ei estä palautusta esim. liian suuren koon vuoksi.
 
 Käytitpä mitä palvelua hyvänsä, varmista että opettajat saavat linkin kautta katseluoikeuden videoosi.
 
@@ -77,6 +80,21 @@ Tutoriaalityön tapauksissa seminaarin raportissa ja videossa ei kannata keskitt
 Tälle sivulle on koottu **esimerkkiaiheita** kurssin seminaaritehtävää varten. Voit melko vapaasti jalostaa ideoita vastaamaan omaa vaatimustasoasi ja kiinnostuksen kohteitasi. Lisää oma aiheesi uutena viestinä kyseisen aihealueen Teams-kanavalle.
 
 
+### Tekoälyagentit ja automaatiotyökalut
+
+> [!WARNING]  
+> Tekoälyagentit ja automaatiotyökalut, voivat aiheuttaa merkittäviä turvallisuusriskejä. On tärkeää ymmärtää, että nämä agentit ja työkalut voivat altistua erilaisille hyökkäyksille, kuten tietojenkalastelulle, haittaohjelmille ja tietomurroille. Jos valitset tällaisen aiheen, perehdy huolellisesti tekoälyagenttien turvallisuusnäkökulmiin ja pohdi myös raportissasi, miten huomioit näitä riskejä.
+>
+> [Personal AI Agents like OpenClaw Are a Security Nightmare, blogs.cisco.com](https://blogs.cisco.com/ai/personal-ai-agents-like-openclaw-are-a-security-nightmare)
+
+* **OpenClaw tai vastaava tekoälyagentti:**
+
+    Perehdy [OpenClaw](https://openclaw.ai/)- tai vastaavan tekoälyagentin toimintaan ja toteuta oma agentti, joka kykenee suorittamaan jonkin tietyn tehtävän. Tästä aiheesta löytyy runsaasti videoita ja esimerkkejä esimerkiksi YouTubesta.
+
+* **N8N tai vastaava automaatiotyökalu:**
+
+    Tutustu [N8N](https://n8n.io/):n tai vastaavaan automaatiotyökaluun ja toteuta sen avulla automatisoitu työnkulku, joka suorittaa jonkin hyödyllisen tehtävän.
+
 ### TypeScript, ES6, JavaScript, Node.js, Next.js, MongoDB...
 
 * **Next.js**
@@ -92,10 +110,6 @@ Tälle sivulle on koottu **esimerkkiaiheita** kurssin seminaaritehtävää varte
 * **MERN-stack:**
 
     MongoDB (+ Mongoose), Express, React, Node. Huom! Toteuta ominaisuuksiensa puolesta pieni sovellus ja keskity opettelemaan jokin uusi tekninen asia, kuten MongoDB:n hyödyntäminen JavaScriptillä.
-
-* **Paketin julkaisu NPM:ssä:**
-
-    Tutustu NPM-palvelun pakettien julkaisemiseen ja julkaise oma pieni paketti. Julkaistava paketti voi olla esimerkiksi asiakaskirjasto MyHelsinki Open API:n tapahtumien hakemiseksi. Asiakaskirjaston ominaisuuksiin voi kuulua erilaiset rajaukset tai järjestämiset päivämäärien mukaan tai vaikka rajaus tapahtumiin, joiden otsikossa tai kuvauksessa esiintyy tietty teksti.
 
 
 ### Tietorakenteet ja algoritmit
@@ -115,20 +129,16 @@ Tälle sivulle on koottu **esimerkkiaiheita** kurssin seminaaritehtävää varte
 
 ### Ohjelmistoarkkitehtuurit ja patternit
 
-* **Serverless-arkkitehtuuri:**
-
-    Perehdy serverless-ratkaisuihin ja toteuta sekä julkaise jokin pieni serverless-ratkaisu. Voit hyödyntää esimerkiksi Cloudflare Workersia, AWS Lambdaa tai Azure Functionsia. Toteutuksessa voit käyttää valitsemastasi alustasta riippuen esimerkiksi Node.js:ää tai Pythonia.
-
 * **Ohjelmistoprojekti 2 -refaktorointi:**
 
-    Refaktoroi ohjelmistoprojekti 2 -projektinne käyttämään mielestäsi optimaalista arkkitehtuuriratkaisua joiltain osin. Kuvaa alkuperäinen arkkitehtuuri ja uudistettu ratkaisu myös kaavioina.
+    Refaktoroi ohjelmistoprojekti 2 -projektinne käyttämään mielestäsi optimaalista arkkitehtuuriratkaisua joiltain osin. Kuvaa alkuperäinen arkkitehtuuri ja uudistettu ratkaisu myös kaavioina. Olisiko esimerkiksi serverless-ratkaisu sopiva jollekin osalle projektianne?
 
 
 ### Testaus
 
-* **Yksikkötestaus:**
+* **Soveltava yksikkötestaus:**
 
-    Testaa jokin osa ohjelmistoprojekti II -kurssin projektistanne yksikkötesteillä.
+    Testaa jokin osa ohjelmistoprojekti II -kurssin projektistanne yksikkötesteillä. Testauksessa voit soveltaa esimerkiksi mock-toteutuksia, fixtureja, parametrisoituja testejä tai muita edistyneempiä testauksen tekniikoita, joihin ei tällä kurssilla vielä perehdytty.
 
 * **Järjestelmätestaus:**
 
@@ -139,7 +149,7 @@ Tälle sivulle on koottu **esimerkkiaiheita** kurssin seminaaritehtävää varte
 
 * **Continuous Integration / Continuous Delivery:**
 
-    Rakenna CI/CD -tuotantoputki ohjelmistoprojekti 2 -projektillenne.
+    Rakenna CI/CD -tuotantoputki esimerkiksi ohjelmistoprojekti 2 -projektillenne.
 
 * **Docker ja Docker Compose:**
 
@@ -187,7 +197,7 @@ Koneoppimista ei tällä toteutuksella käsitelty, mutta voit halutessasi pereht
 
 * **Koneoppimismallin kouluttaminen:**
 
-    Kouluta koneoppimismalli jostain datasta ja laadi sillä ennusteita (esimerkiksi Keras-kirjastolla kuvien tunnistamista). Voi liittyä ohjelmistoprojekti 2:seen mieluusti.
+    Kouluta koneoppimismalli jostain datasta ja laadi sillä ennusteita (esimerkiksi Keras-kirjastolla kuvien tunnistamista). Voi mieluusti liittyä ohjelmistoprojekti 2:seen.
 
 * **Koneoppimistutkielma:**
 
