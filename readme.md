@@ -74,6 +74,8 @@ Tehtävä GitHub classroomissa (dl 18.1. klo 22).
 * [Oppitunnin muistiinpanot](./typescript/3_soveltaminen.md)
 * [Oppitunnin koodirepositorio](https://github.com/ohjelmistokehitys/ts-tunnit-2026-01)
 
+* [Oppitunnin videotallenne](https://youtu.be/OpVrzdhquNE)
+
 * Geneeriset tyypit
 * Keys ja Mapped types
 * Vitest-testaus
