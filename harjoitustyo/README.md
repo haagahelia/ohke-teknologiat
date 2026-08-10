@@ -1,33 +1,33 @@
-# Seminaari
+# Harjoitustyö
 
-Seminaarivaiheessa jokainen opiskelija valitsee omasta näkökulmastaan kiinnostavimman ohjelmistokehitykseen liittyvän aiheen ja laatii siihen liittyvän itsenäisen seminaaritehtävän. 
+Harjoitustyövaiheessa jokainen opiskelija valitsee omasta näkökulmastaan kiinnostavimman ohjelmistokehitykseen liittyvän aiheen ja laatii siihen liittyvän itsenäisen harjoitustyötehtävän.
 
-Vaihtoehtoja ovat joko [alla listatut ehdotukset](#Seminaariaiheita) tai täysin oma aihe, joka kuitenkin kannattaa varmistaa opettajilta. Kannattaa huomioida, että seminaaritehtävä voi tukea hyvin ohjelmistoprojekti 2:ta – itse asiassa se on jopa suositeltavaa!
+Vaihtoehtoja ovat joko [alla listatut ehdotukset](#Harjoitustyöaiheita) tai täysin oma aihe, joka kuitenkin kannattaa varmistaa opettajilta. Kannattaa huomioida, että harjoitustyötehtävä voi tukea hyvin ohjelmistoprojekti 2:ta – itse asiassa se on jopa suositeltavaa!
 
-Opiskelijat, jotka valitsevat saman aihepiirin, osallistuvat yhteiseen seminaaritilaisuuteen, jossa esitellään, analysoidaan ja kommentoidaan muiden opiskelijoiden seminaaritöitä. Kannustamme myös osallistumaan muiden aihepiirien seminaareihin oman seminaarityön ulkopuolella. Esiteltävät työt valitaan siten, että kokonaisuudesta saadaan monipuolinen ja tasapainoinen. Joten jos työsi ei valikoidu esitettäväksi, se ei millään tavalla heijasta työn laatua.
+Opiskelijat, jotka valitsevat saman aihepiirin, osallistuvat yhteiseen harjoitustyötilaisuuteen, jossa esitellään, analysoidaan ja kommentoidaan muiden opiskelijoiden harjoitustyöitä. Kannustamme myös osallistumaan muiden aihepiirien harjoitustyöihin oman harjoitustyön ulkopuolella. Esiteltävät työt valitaan siten, että kokonaisuudesta saadaan monipuolinen ja tasapainoinen. Joten jos työsi ei valikoidu esitettäväksi, se ei millään tavalla heijasta työn laatua.
 
-Koska kurssi järjestetään yhdistellen eri osallistumistapoja, ei itse seminaaritilaisuuteen osallistuminen ole pakollista. Seminaariesityksellä ei ole myöskään erillistä osuutta arvioinnissa, paitsi jos esityksessä käy ilmi työn kannalta uusia positiivisia seikkoja, jotka eivät ole tulleet esiin työn raportissa.
+Koska kurssi järjestetään yhdistellen eri osallistumistapoja, ei itse harjoitustyötilaisuuteen osallistuminen ole pakollista. Harjoitustyöesityksellä ei ole myöskään erillistä osuutta arvioinnissa, paitsi jos esityksessä käy ilmi työn kannalta uusia positiivisia seikkoja, jotka eivät ole tulleet esiin työn raportissa.
 
-Seminaarityön laajuus on noin 20 tuntia työtä.
+Harjoitustyön laajuus on noin 20 tuntia työtä.
 
-> [!NOTE]  
-> Mikäli seminaaritilaisuuden osallistujamäärä jää pieneksi, voidaan tilaisuudessa katsoa myös videotallenteita. Tällöin osallistujilta kysytään etukäteen lupaa videon katsomiseen.
+> [!NOTE]
+> Mikäli harjoitustyötilaisuuden osallistujamäärä jää pieneksi, voidaan tilaisuudessa katsoa myös videotallenteita. Tällöin osallistujilta kysytään etukäteen lupaa videon katsomiseen.
 
 
-## Seminaarin vaiheet
+## Harjoitustyön vaiheet
 
-1. Seminaarien ohjeistus oppitunnilla
-2. Oman seminaariaiheen ilmoittaminen Teams-kanavalle
-3. Seminaarityön tekoa ja tarvittaessa ohjausta Teamsissa
-4. Seminaarin raporttien ja videoiden palauttaminen Teamsiin
-5. Seminaariesitykset
+1. Harjoitustyön ohjeistus oppitunnilla
+2. Oman harjoitustyöaiheen ilmoittaminen Teams-kanavalle
+3. Harjoitustyön tekoa ja tarvittaessa ohjausta Teamsissa
+4. Harjoitustyön raporttien ja videoiden palauttaminen Teamsiin
+5. Harjoitustyöesitykset
 
 Tarkemmat päivämäärät löydät kurssin GitHubin etusivulta sekä palautettavien tehtävien osalta Teamsista.
 
 
-## Seminaaritehtävän raportointi ja palauttaminen
+## Harjoitustyön raportointi ja palauttaminen
 
-Seminaarityösi arvioidaan palautuksen perusteella. Palautus koostuu kolmesta osasta:
+Harjoitustyösi arvioidaan palautuksen perusteella. Palautus koostuu kolmesta osasta:
 
 1. kirjallisesta raportista, joka toteutetaan mieluiten markdown-muodossa osaksi git-repositoriota
 2. lähdekoodista git-repositoriossa (palautetaan linkki repositorioon)
@@ -36,7 +36,7 @@ Seminaarityösi arvioidaan palautuksen perusteella. Palautus koostuu kolmesta os
 
 ### 1. Kirjallinen raportti
 
-Raportoi tekemäsi seminaarityön tavoitteet, toteutus, valitsemasi teknologiat, oppimasi asiat ja mahdolliset jatkokehitysideat kirjallisesti. Raportin muodon suhteen voit käyttää omaa harkintaasi, mutta tyypillisesti Markdown-muotoiset readme-tiedostot toimivat tässä tarkoituksessa hyvin. Vaihtoehtoisesti voit käyttää Haaga-Helian tarjoamia Word- tai PowerPoint-raportointipohjia.
+Raportoi tekemäsi harjoitustyön tavoitteet, toteutus, valitsemasi teknologiat, oppimasi asiat ja mahdolliset jatkokehitysideat kirjallisesti. Raportin muodon suhteen voit käyttää omaa harkintaasi, mutta tyypillisesti Markdown-muotoiset readme-tiedostot toimivat tässä tarkoituksessa hyvin. Vaihtoehtoisesti voit käyttää Haaga-Helian tarjoamia Word- tai PowerPoint-raportointipohjia.
 
 Kirjaa käyttämäsi lähteet asianmukaisesti sekä raporttiin että tarpeen mukaan myös lähdekoodiin. Erityisesti toisaalta lainatut osuudet koodista tulee merkitä selkeästi.
 
@@ -45,7 +45,7 @@ Valitsemastasi aiheesta riippuen raportin sisältö voi vaihdella paljonkin ja v
 
 ### 2. Lähdekoodi git-repositoriossa
 
-Tallenna seminaarityösi lähdekoodi julkiseen tai yksityiseen git-repositorioon. Jos teet repositoriosta yksityisen, lisää opettajille katseluoikeudet (tunnukset `Ismo-HH` ja `swd1tn002`). Seminaarityön palautuksen yhteydessä riittää, että palautat linkin kyseiseen repositorioon.
+Tallenna harjoitustyösi lähdekoodi julkiseen tai yksityiseen git-repositorioon. Jos teet repositoriosta yksityisen, lisää opettajille katseluoikeudet (tunnukset `Ismo-HH` ja `swd1tn002`). Harjoitustyön palautuksen yhteydessä riittää, että palautat linkin kyseiseen repositorioon.
 
 
 ### 3. Ruuduntallennusvideo
@@ -56,33 +56,33 @@ Videon tarkoitus on havainnollistaa tekemääsi työtä käytännössä, koska o
 
 Videon tekemiseksi voit käyttää esimerkiksi Haaga-Helian Microsoft-tililläsi [Clipchamp-palvelua](https://m365.cloud.microsoft/launch/Clipchamp/), jossa sekä videon tallennus että jakaminen onnistuu pelkän selaimen avulla. Katso [ohje tallenteen tekemiseksi Microsoftin tukisivulta](https://support.microsoft.com/en-gb/office/microsoft-clipchamp-screen-recorder-e98d8791-2b82-4dc7-889a-959724e3cbad). Kurssilla on käytetty hyvin tuloksin myös lukuisia muita videonkaappausratkaisuja, joten voit valita itsellesi parhaiten sopivan.
 
-Voit julkaista luomasi videon Clipchamp-palvelussa tai valitsemassasi video- tai tiedostonjakopalvelussa, kunhan saat lisättyä raporttiisi suoran linkin lopputulokseesi (YouTube, OneDrive, Google Drive...). Voit myös halutessasi palauttaa videon sellaisenaan tiedostona seminaaritehtävään, mikäli jätjestelmä ei estä palautusta esim. liian suuren koon vuoksi.
+Voit julkaista luomasi videon Clipchamp-palvelussa tai valitsemassasi video- tai tiedostonjakopalvelussa, kunhan saat lisättyä raporttiisi suoran linkin lopputulokseesi (YouTube, OneDrive, Google Drive...). Voit myös halutessasi palauttaa videon sellaisenaan tiedostona harjoitustyötehtävään, mikäli jätjestelmä ei estä palautusta esim. liian suuren koon vuoksi.
 
 Käytitpä mitä palvelua hyvänsä, varmista että opettajat saavat linkin kautta katseluoikeuden videoosi.
 
 
 ## Arviointi
 
-Seminaaritöitä arvioidessa katsomme ennen kaikkea sitä, miten hyvin seminaarityössänne on syvennytty valittuun seminaariaiheeseen ja kuinka paljon siitä on opittu uutta. Tarkoituksena on siis syventää ja soveltaa kurssin aikaisemmissa vaiheissa käsiteltyjä tai kurssin sisältöön muuten soveltuvia aiheita, ei vain toistaa tavanomaisia esimerkkejä. Pyri siis raportissasi ja videossasi yksilöimään ja esittelemään asioita, joita olet oppinut, sekä pohdi, mitä olisit voinut tehdä työssä toisin ja miten osaat jatkossa soveltaa oppimiasi asioita.
+Harjoitustöitä arvioidessa katsomme ennen kaikkea sitä, miten hyvin harjoitustyössäsi on syvennytty valittuun harjoitustyöaiheeseen ja kuinka paljon siitä on opittu uutta. Tarkoituksena on siis syventää ja soveltaa kurssin aikaisemmissa vaiheissa käsiteltyjä tai kurssin sisältöön muuten soveltuvia aiheita, ei vain toistaa tavanomaisia esimerkkejä. Pyri siis raportissasi ja videossasi yksilöimään ja esittelemään asioita, joita olet oppinut, sekä pohdi, mitä olisit voinut tehdä työssä toisin ja miten osaat jatkossa soveltaa oppimiasi asioita.
 
-Lisäksi seminaariaiheen haastekerroin vaikuttaa arviointiin. Jos seminaarityö on haastavuudeltaan suunnilleen samantasoinen kuin kurssin viikoittaiset oppitunnit ja tehtävät, työn tavoitearvosana on noin 3. Jos työssä syvennytään pidemmälle, puhutaan arvosanoista 4-5.
+Lisäksi harjoitustyöaiheen haastekerroin vaikuttaa arviointiin. Jos harjoitustyö on haastavuudeltaan suunnilleen samantasoinen kuin kurssin viikoittaiset oppitunnit ja tehtävät, työn tavoitearvosana on noin 3. Jos työssä syvennytään pidemmälle, puhutaan arvosanoista 4-5.
 
 
 ### Tutoriaaleihin perustuvat työt
 
-Seminaaritöissä on ajoittain seurattu video- tai tekstimuotoisia tutoriaaleja. Tutoriaalin seuraaminen seminaarityössä on hyväksyttävää, etenkin mikäli tutoriaali syventää kurssilla käsiteltyjä aiheita mielekkäällä tavalla. Tuo kuitenkin raportissasi selvästi esiin, mikä osuus työstä on omaa tuotostasi ja mikä perustuu tutoriaalin esimerkkeihin, jotta vältymme turhilta plagiointi- ja vilppiepäilyiltä.
+Harjoitustöissä on ajoittain seurattu video- tai tekstimuotoisia tutoriaaleja. Tutoriaalin seuraaminen harjoitustyössä on hyväksyttävää, etenkin mikäli tutoriaali syventää kurssilla käsiteltyjä aiheita mielekkäällä tavalla. Tuo kuitenkin raportissasi selvästi esiin, mikä osuus työstä on omaa tuotostasi ja mikä perustuu tutoriaalin esimerkkeihin, jotta vältymme turhilta plagiointi- ja vilppiepäilyiltä.
 
-Tutoriaalityön tapauksissa seminaarin raportissa ja videossa ei kannata keskittyä itse tutoriaalin lopputuloksen esittelyyn, vaan oppimiesi asioiden esittelyyn.
+Tutoriaalityön tapauksissa harjoitustyön raportissa ja videossa ei kannata keskittyä itse tutoriaalin lopputuloksen esittelyyn, vaan oppimiesi asioiden esittelyyn.
 
 
-## Seminaariaiheita
+## Harjoitustyöaiheita
 
-Tälle sivulle on koottu **esimerkkiaiheita** kurssin seminaaritehtävää varten. Voit melko vapaasti jalostaa ideoita vastaamaan omaa vaatimustasoasi ja kiinnostuksen kohteitasi. Lisää oma aiheesi uutena viestinä kyseisen aihealueen Teams-kanavalle.
+Tälle sivulle on koottu **esimerkkiaiheita** kurssin harjoitustyötä varten. Voit melko vapaasti jalostaa ideoita vastaamaan omaa vaatimustasoasi ja kiinnostuksen kohteitasi. Lisää oma aiheesi uutena viestinä kyseisen aihealueen Teams-kanavalle.
 
 
 ### Tekoälyagentit ja automaatiotyökalut
 
-> [!WARNING]  
+> [!WARNING]
 > Tekoälyagentit ja automaatiotyökalut, voivat aiheuttaa merkittäviä turvallisuusriskejä. On tärkeää ymmärtää, että nämä agentit ja työkalut voivat altistua erilaisille hyökkäyksille, kuten tietojenkalastelulle, haittaohjelmille ja tietomurroille. Jos valitset tällaisen aiheen, perehdy huolellisesti tekoälyagenttien turvallisuusnäkökulmiin ja pohdi myös raportissasi, miten huomioit näitä riskejä.
 >
 > [Personal AI Agents like OpenClaw Are a Security Nightmare, blogs.cisco.com](https://blogs.cisco.com/ai/personal-ai-agents-like-openclaw-are-a-security-nightmare)
@@ -172,7 +172,7 @@ Tälle sivulle on koottu **esimerkkiaiheita** kurssin seminaaritehtävää varte
 
 * **Web-palvelu Pythonilla:**
 
-    Python-aiheiset seminaarityöt voivat käsitellä esimerkiksi Pythonin [Django](https://www.djangoproject.com/)- tai [Flask](https://flask.palletsprojects.com/)-sovelluskehysten käyttöönottoa tai Pythonin tietokantaohjelmointiin perehtymistä.
+    Python-aiheiset harjoitustyöt voivat käsitellä esimerkiksi Pythonin [Django](https://www.djangoproject.com/)- tai [Flask](https://flask.palletsprojects.com/)-sovelluskehysten käyttöönottoa tai Pythonin tietokantaohjelmointiin perehtymistä.
 
 * **Mikrokontrollerin ohjelmointi MicroPythonilla:**
 
@@ -193,7 +193,7 @@ Tälle sivulle on koottu **esimerkkiaiheita** kurssin seminaaritehtävää varte
 
 ### Koneoppiminen
 
-Koneoppimista ei tällä toteutuksella käsitelty, mutta voit halutessasi perehtyä aiheeseen itsenäisesti seminaariosuudessa.
+Koneoppimista ei tällä toteutuksella käsitelty, mutta voit halutessasi perehtyä aiheeseen itsenäisesti harjoitustyöosuudessa.
 
 * **Koneoppimismallin kouluttaminen:**
 

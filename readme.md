@@ -15,17 +15,16 @@ Opettajina kurssilla toimivat Teemu Havulinna ja Ismo Harjunmaa (etunimi.sukunim
 
 ## Kurssin suoritustapa
 
-Kurssista on käynnissä sekä contact- että virtual-toteutukset. Kummallakin toteutuksella on samat käytännön järjestelyt tehtävineen ja aikatauluineen. Molempien toteutusten opiskelijat voivat valita osallistuvatko tunneille läsnä, etänä vai opiskelevatko omaan tahtiin. Suosittelemme vahvasti osallistumaan oppitunneille ja keskustelemaan aktiivisesti kurssin aiheista Teams-ryhmässä.
+Syksyllä 2026 kurssi järjestetään virtuaalisena. Kurssi on mahdollista suorittaa täysin itsenäisesti, mutta voit halutessasi osallistua myös Teamsissa pidettäville oppitunneille. Oppitunneilla käydään läpi kurssin aiheita ja tehtäviä, mutta niillä ei ole pakollista osallistumista. Oppitunneilla on mahdollista kysyä neuvoja ja vinkkejä tehtävien tekemiseen sekä keskustella kurssin aiheista muiden opiskelijoiden kanssa.
 
-**Kurssin alkupuoliskolla** käsitellään lukukausittain vaihtelevia aiheita ja opiskelijat tekevät niihin liittyviä harjoitustehtäviä. Jokaisesta esiteltävästä aiheesta on myös mahdollista tehdä laajempi seminaaritehtävä kurssin jälkimmäisellä puoliskolla.
+<!--Kurssista on käynnissä sekä contact- että virtual-toteutukset. Kummallakin toteutuksella on samat käytännön järjestelyt tehtävineen ja aikatauluineen. Molempien toteutusten opiskelijat voivat valita osallistuvatko tunneille läsnä, etänä vai opiskelevatko omaan tahtiin. Suosittelemme vahvasti osallistumaan oppitunneille ja keskustelemaan aktiivisesti kurssin aiheista Teams-ryhmässä.-->
 
-**Seminaarivaiheessa**, kurssin jälkimmäisellä puoliskolla, jokainen opiskelija valitsee kurssin aiheista itseään eniten kiinnostavan ja tekee siihen liittyvän seminaaritehtävän. Seminaaritehtävän voi valita joko opettajien ehdotuksista tai aihetta voi ehdottaa myös itse. Seminaaritehtävä voi liittyvä läheisesti opiskelijan ohjelmistoprojekti 2 -kurssin projektiin.
+**Kurssin alkupuoliskolla** käsitellään lukukausittain vaihtelevia aiheita ja opiskelijat tekevät niihin liittyviä harjoitustehtäviä. Jokaisesta esiteltävästä aiheesta on myös mahdollista tehdä laajempi harjoitustyö kurssin jälkimmäisellä puoliskolla.
 
-Saman seminaariaiheen valinneet opiskelijat osallistuvat yhteiseen seminaariin, jossa analysoidaan ja kommentoidaan myös muiden opiskelijoiden seminaaritöitä.
+**Harjoitustyövaiheessa**, kurssin jälkimmäisellä puoliskolla, jokainen opiskelija valitsee kurssin aiheista itseään eniten kiinnostavan ja tekee siihen liittyvän harjoitustyön. Harjoitustyön voi valita joko opettajien ehdotuksista tai aihetta voi ehdottaa myös itse. Harjoitustyö voi liittyvä läheisesti opiskelijan ohjelmistoprojekti 2 -kurssin projektiin.
 
 
 ## Kurssin osallistumisen vahvistaminen
-
 
 > [!IMPORTANT]
 > Kurssin osallistumisen vahvistaminen edellyttää ensimmäisen ja toisen viikon viikkotehtävien hyväksyttyä suoritusta niiden määräaikaan mennessä. Tehtäviin on saatavissa vinkkejä ja tukea kurssin Teams-kanavalla sekä oppitunneilla.
@@ -38,12 +37,12 @@ Ensimmäisten tehtävien ei ole tarkoitus karsia ketään pois kurssilta, vaan v
 
 **Huom!** Tämä sivu päivittyy kurssin edetessä ja sekä aikataulu että sisältö tarkentuvat.
 
-Oppitunnit pidetään pääsääntöisesti **hybridimuodossa maanantaisin klo 8.30-10.45** sekä luokassa että Teamsissa. Kurssin tehtävät palautetaan pääsääntöisesti **seuraavaa oppituntia edeltävänä iltana klo 22 mennessä**. Tehtäviin on saatavissa vinkkjeä ja tukea sekä oppitunneille että Teams-kanavalla.
+<!--Oppitunnit pidetään pääsääntöisesti **hybridimuodossa maanantaisin klo 8.30-10.45** sekä luokassa että Teamsissa. Kurssin tehtävät palautetaan pääsääntöisesti **seuraavaa oppituntia edeltävänä iltana klo 22 mennessä**. Tehtäviin on saatavissa vinkkjeä ja tukea sekä oppitunneille että Teams-kanavalla.-->
 
 Toivomme että tutustutte mahdollisuuksien mukaan etukäteen kunkin aiheen videoihin ja materiaaleihin, jotta voimme tapaamisissa käyttää aikaa myös mm. tehtävien parissa.
 
 
-### Ma 12.1. TypeScript-kielen perusteet ja työkalut
+### Viikko 1: TypeScript-kielen perusteet ja työkalut
 
 * [Oppitunnin muistiinpanot](./typescript/1_johdanto.md)
 * Video 1: TypeScript kielen perusteet ja työkalut: https://youtu.be/2PGkgIbiGtk
@@ -59,7 +58,7 @@ Muut materiaalit:
 Tehtävä GitHub classroomissa (dl 18.1. klo 22).
 
 
-### Ma 19.1. TypeScript jatkuu: tyyppien määrittely
+### Viikko 2: TypeScript jatkuu: tyyppien määrittely
 
 * [Oppitunnin muistiinpanot](./typescript/2_tyypit.md)
 
@@ -69,7 +68,7 @@ Tehtävä GitHub classroomissa (dl 18.1. klo 22).
 * Tehtävä GitHub classroomissa.
 
 
-### Ma 26.1.TypeScriptin edistyneet ominaisuudet
+### Viikko 3: TypeScriptin edistyneet ominaisuudet
 
 * [Oppitunnin muistiinpanot](./typescript/3_soveltaminen.md)
 * [Oppitunnin koodirepositorio](https://github.com/ohjelmistokehitys/ts-tunnit-2026-01)
@@ -83,7 +82,7 @@ Tehtävä GitHub classroomissa (dl 18.1. klo 22).
 * Tehtävä GitHub classroomissa.
 
 
-### Ma 2.2. Datan visualisointi: Chart.JS ja Plotly
+### Viikko 4: Datan visualisointi: Chart.JS ja Plotly
 
 * Kattava [opas](https://www.chartjs.org/docs/latest/) Chart.js:n käytöstä.
 * Yksinkertaisempi [esittely](https://www.w3schools.com/ai/ai_chartjs.asp) Chart.js:n kaaviotyypeistä ja käyttötavasta.
@@ -93,7 +92,7 @@ Plotlystä ei tullut tehtäviä, mutta voit tutustua [plotly-kansion](./plotly) 
 valtioiden data esittämisestä
 
 
-### Ma 9.2. Node.js, npm ja pakettien julkaiseminen
+### Viikko 5: Node.js, npm ja pakettien julkaiseminen
 
 Oppitunnin videotallenteet:
 
@@ -107,10 +106,7 @@ Oheismateriaalit:
 * Packages and modules (Npm docs): https://docs.npmjs.com/packages-and-modules
 
 
-### Talvilomaviikko, ei oppituntia
-
-
-### Ma 23.2. Serverless-ratkaisut
+### Viikko 6: Serverless-ratkaisut
 
 * What is serverless computing? Eri yritysten määritelmiä:
     * [Cloudflare](https://www.cloudflare.com/learning/serverless/what-is-serverless/)
@@ -123,7 +119,7 @@ Oheismateriaalit:
 * [Learn Cloudflare Workers 101 - Full Course for Beginners (Cloudflare Developers at YouTube)](https://youtu.be/H7Qe96fqg1M)
 
 
-### Ma 2.3. Erilaiset ohjelmointirajapinnat
+### Viikko 7: Erilaiset ohjelmointirajapinnat
 
 * [What is GraphQL? (Digitransit)](https://digitransit.fi/en/developers/apis/1-routing-api/0-graphql/)
 * [High-frequency positioning (Digitransit)](https://digitransit.fi/en/developers/apis/5-realtime-api/vehicle-positions/high-frequency-positioning/)
@@ -139,41 +135,38 @@ Videot:
 * [GraphQL Explained in 100 Seconds](https://www.youtube.com/watch?v=eIQh02xuVw4) by Fireship *2:22*
 * [GraphQL Client Tutorial With Fetch](https://www.youtube.com/watch?v=0ZJI4cBS4JM) by Web Dev Simplified *15:37*
 
-### Ma 9.3. Testaus
+### Viikko 8: Testaus
 
 * Playwright-osion tallenne: https://www.youtube.com/watch?v=tq_eA7xry9I
 * Playwright: https://playwright.dev/
 * Getting started: https://playwright.dev/docs/intro
 
 
-### Intensiiviviikko, ei oppituntia
-
-
-### Ma 23.3. HTTP API:en käyttö ja dokumentointi (OpenAPI) ja seminaarien käynnistys
+### Viikko 9: HTTP API:en käyttö ja dokumentointi (OpenAPI) ja harjoitustyön käynnistys
 
 * https://www.openapis.org/what-is-openapi
 * https://swagger.io/specification/
 * [Swagger UI Tutorial for REST API Developers (Spring Boot)](https://youtu.be/GxAu8UjLfbM)
 * [Swagger API documentation tutorial for beginners (JS&TS)](https://youtu.be/dhMlXoTD3mQ)
-* [Seminaarityön ohjeistus](./seminaari)
+* [Harjoitustyön ohjeistus](./harjoitustyo)
 
 
 
-### Ma 30.3.,  13.4,  20.4. ja 27.4. Seminaarityön tekemistä
+### Viikko 10: Harjoitustyön tekemistä
 
-* [Seminaarityön ohjeet](./seminaari)
-* Yksilöllistä ohjausta Teamsissa tai sopimuksen mukaan kampuksella. Kurssin seminaarivaiheessa ei järjestetä yhteisiä tapaamisia, vaan tarjoamme yksilöllistä ohjausta etukäteen sovittavina ajankohtina.
-* 📥 Seminaariraportin **palautus ma 27.4. klo 22 mennessä**.
-
-
-
-### Ma 4.5. Seminaaritilaisuus
-
-* [Katso seminaarityön ohjeet](./seminaari).
+* [Harjoitustyön ohjeet](./harjoitustyo)
+* Yksilöllistä ohjausta Teamsissa tai sopimuksen mukaan kampuksella. Kurssin harjoitustyövaiheessa ei järjestetä yhteisiä tapaamisia, vaan tarjoamme yksilöllistä ohjausta etukäteen sovittavina ajankohtina.
+* 📥 Harjoitustyöraportin **palautus ma 27.4. klo 22 mennessä**.
 
 
 
-### Ma 11.5. Loput Seminaariesitykset tai varakerta
+### Viikko 11: Harjoitustyötilaisuus
+
+* [Katso harjoitustyön ohjeet](./harjoitustyo).
+
+
+
+### Viikko 12: Loput Harjoitustyöesitykset tai varakerta
 
 
 
@@ -204,20 +197,20 @@ Kontitettuun tai virtualisoituun ympäristöön tekemäsi asennukset eivät parh
 
 ## Kurssin tehtävät
 
-Kurssilla tehdään viikoittaisia tehtäviä, joiden arvioinnissa hyödynnetään mm. [GitHub classroom -palvelua](https://classroom.github.com/) sekä MS Teamsia.
+Kurssilla tehdään viikoittaisia tehtäviä, joiden arvioinnissa hyödynnetään mm. GitHub actionsia sekä MS Teamsia.
 
-Sekä kurssin Classroom-tehtäväpalautukset että MS Teams -ryhmä poistetaan vaaditun säilytysajan päätyttyä. Jos haluat säilyttää kurssilla työstämäsi tehtävien ratkaisut pidempään, [teethän repositorioistasi kopiot omalle käyttäjätunnuksellesi GitHubissa](https://www.google.com/search?q=git+clone+and+push+to+new+repo). Vaihtoehtoisesti voit säilyttää tehtäviesi ratkaisut paikallisesti omilla laitteillasi.
+Sekä kurssin GitHub-tehtäväpalautukset että MS Teams -ryhmä poistetaan vaaditun säilytysajan päätyttyä. Jos haluat säilyttää kurssilla työstämäsi tehtävien ratkaisut pidempään, [teethän repositorioistasi kopiot omalle käyttäjätunnuksellesi GitHubissa](https://www.google.com/search?q=git+clone+and+push+to+new+repo). Vaihtoehtoisesti voit säilyttää tehtäviesi ratkaisut paikallisesti omilla laitteillasi.
 
 **Tehtävät tulee palauttaa määräaikaan mennessä**, jotta kaikki pysyvät samassa tahdissa ja työskentely etenee sujuvasti. Jos et pysty palauttamaan tehtävää ajoissa [ylivoimaisen esteen](https://fi.wikipedia.org/wiki/Force_majeure) vuoksi, olethan opettajiin yhteydessä etukäteen.
 
 
 ## Arviointi
 
-Kurssi arvioidaan asteikolla 0-5. Kurssin arviointi perustuu viikkoaiheiden yhteydessä suoritettuihin tehtäviin (60 % arvosanasta) sekä kurssin toisella puoliskolla tehtävään seminaarityöhön (40 %).
+Kurssi arvioidaan asteikolla 0-5. Kurssin arviointi perustuu viikkoaiheiden yhteydessä suoritettuihin tehtäviin (60 % arvosanasta) sekä kurssin toisella puoliskolla tehtävään harjoitustyöhön (40 %).
 
 Kunkin viikon tehtävien painoarvo loppuarvioinnissa on lähtökohtaisesti yhtä suuri, mutta mahdollisten laajempien tehtävien painotusta voidaan nostaa. Pisteet skaalataan yhteneviksi vasta loppuarvosanaa varten.
 
-Yksittäinen palauttamatta jäänyt tai arvosanalla 0 arvioitu osasuoritus ei estä seuraavien suoritusten tekemistä, kunhan kokonaisuutena kurssista muodostuu hyväksytty arvosana. Tämä koskee myös seminaarityötä. **Poikkeuksena** tähän on tehtävät, jotka toimivat kurssille osallistumisen vahvistamisessa.
+Yksittäinen palauttamatta jäänyt tai arvosanalla 0 arvioitu osasuoritus ei estä seuraavien suoritusten tekemistä, kunhan kokonaisuutena kurssista muodostuu hyväksytty arvosana. Tämä koskee myös harjoitustyötä. **Poikkeuksena** tähän on tehtävät, jotka toimivat kurssille osallistumisen vahvistamisessa.
 
 
 ### Kurssin keskeyttäminen
