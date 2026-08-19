@@ -45,8 +45,8 @@ Toivomme että tutustutte mahdollisuuksien mukaan etukäteen kunkin aiheen video
 ### Viikko 1: TypeScript-kielen perusteet ja työkalut
 
 * [Oppitunnin muistiinpanot](./typescript/1_johdanto.md)
-* Video 1: TypeScript kielen perusteet ja työkalut: https://youtu.be/2PGkgIbiGtk
-* Video 2: Ensimmäinen tehtävä: https://youtu.be/U09JcX2cWKU
+<!--* Video 1: TypeScript kielen perusteet ja työkalut: https://youtu.be/2PGkgIbiGtk
+* Video 2: Ensimmäinen tehtävä: https://youtu.be/U09JcX2cWKU-->
 
 Muut materiaalit:
 
@@ -54,8 +54,6 @@ Muut materiaalit:
 * [TypeScript for JavaScript Programmers](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
 * [Intro to the TSConfig Reference](https://www.typescriptlang.org/tsconfig/)
 * ["TypeScriptin perusteet" (typescript-ohjelmointi.github.io)](https://typescript-ohjelmointi.github.io/)-sivustolla.
-
-Tehtävä GitHub classroomissa (dl 18.1. klo 22).
 
 
 ### Viikko 2: TypeScript jatkuu: tyyppien määrittely
@@ -65,7 +63,7 @@ Tehtävä GitHub classroomissa (dl 18.1. klo 22).
 * TypeScriptin käsittely jatkuu.
 * [Everyday Types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)
 * [Creating Types from Types](https://www.typescriptlang.org/docs/handbook/2/types-from-types.html)
-* Tehtävä GitHub classroomissa.
+
 
 
 ### Viikko 3: TypeScriptin edistyneet ominaisuudet
@@ -79,7 +77,6 @@ Tehtävä GitHub classroomissa (dl 18.1. klo 22).
 * Keys ja Mapped types
 * Vitest-testaus
 * Express-palvelin
-* Tehtävä GitHub classroomissa.
 
 
 ### Viikko 4: Datan visualisointi: Chart.JS ja Plotly
@@ -197,7 +194,7 @@ Kontitettuun tai virtualisoituun ympäristöön tekemäsi asennukset eivät parh
 
 ## Kurssin tehtävät
 
-Kurssilla tehdään viikoittaisia tehtäviä, joiden arvioinnissa hyödynnetään mm. GitHub actionsia sekä MS Teamsia.
+Kurssilla tehdään viikoittaisia tehtäviä, joiden arvioinnissa hyödynnetään mm. GitHub actionsia.
 
 Sekä kurssin GitHub-tehtäväpalautukset että MS Teams -ryhmä poistetaan vaaditun säilytysajan päätyttyä. Jos haluat säilyttää kurssilla työstämäsi tehtävien ratkaisut pidempään, [teethän repositorioistasi kopiot omalle käyttäjätunnuksellesi GitHubissa](https://www.google.com/search?q=git+clone+and+push+to+new+repo). Vaihtoehtoisesti voit säilyttää tehtäviesi ratkaisut paikallisesti omilla laitteillasi.
 
