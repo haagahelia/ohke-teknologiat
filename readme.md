@@ -105,6 +105,10 @@ Oheismateriaalit:
 
 ### Viikko 6: Serverless-ratkaisut
 
+Oppitunnin videotallenne:
+
+* https://youtu.be/7d5863uIoCI
+
 * What is serverless computing? Eri yritysten määritelmiä:
     * [Cloudflare](https://www.cloudflare.com/learning/serverless/what-is-serverless/)
     * [RedHat](https://www.redhat.com/en/topics/cloud-native-apps/what-is-serverless)
