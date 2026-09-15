@@ -120,11 +120,16 @@ Oppitunnin videotallenne:
 * [Learn Cloudflare Workers 101 - Full Course for Beginners (Cloudflare Developers at YouTube)](https://youtu.be/H7Qe96fqg1M)
 
 
-### Viikko 7: Erilaiset ohjelmointirajapinnat
+### Viikko 7: Erilaiset ohjelmointirajapinnat (REST, GraphQL, WebSocket, MQTT)
+
+Oppitunnin videotallenne:
+
+* https://youtu.be/h2o9t456H_g
+
+Linkit:
 
 * [What is GraphQL? (Digitransit)](https://digitransit.fi/en/developers/apis/1-routing-api/0-graphql/)
 * [High-frequency positioning (Digitransit)](https://digitransit.fi/en/developers/apis/5-realtime-api/vehicle-positions/high-frequency-positioning/)
-* REST, GraphQL, WebSocket, MQTT, Webhooks
 
 Harjoitukset:
 
