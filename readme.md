@@ -143,7 +143,14 @@ Videot:
 
 ### Viikko 8: Testaus
 
-* Playwright-osion tallenne: https://www.youtube.com/watch?v=tq_eA7xry9I
+Oppituntien videotallenteet:
+
+* Vitest-video: https://youtu.be/9LC2FD75gkU
+* Playwright-video: https://youtu.be/tq_eA7xry9I
+
+Linkit:
+
+* Vitest: https://vitest.dev/
 * Playwright: https://playwright.dev/
 * Getting started: https://playwright.dev/docs/intro
 
