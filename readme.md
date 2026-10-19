@@ -169,7 +169,6 @@ Linkit:
 
 * [Harjoitustyön ohjeet](./harjoitustyo)
 * Yksilöllistä ohjausta Teamsissa tai sopimuksen mukaan kampuksella. Kurssin harjoitustyövaiheessa ei järjestetä yhteisiä tapaamisia, vaan tarjoamme yksilöllistä ohjausta etukäteen sovittavina ajankohtina.
-* 📥 Harjoitustyöraportin **palautus ma 27.4. klo 22 mennessä**.
 
 
 
